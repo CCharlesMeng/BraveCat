@@ -239,7 +239,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  flex-wrap: wrap;
+  gap: 7px 12px;
   padding: 7px 12px;
   border-bottom: 1px solid rgba(99, 96, 78, 0.16);
   background: rgba(135, 155, 112, 0.12);
@@ -247,19 +248,43 @@ button:focus-visible {
   font-size: 0.62rem;
 }
 
-.developer-clock span {
+.developer-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.developer-clock span,
+.developer-clock label {
   margin-right: 3px;
   color: var(--ink-soft);
   font-weight: 700;
 }
 
-.developer-clock button {
+.developer-clock button,
+.developer-clock input {
   padding: 4px 8px;
   border: 1px solid rgba(90, 103, 73, 0.28);
   border-radius: 999px;
   background: rgba(255, 252, 241, 0.72);
-  cursor: pointer;
+  color: var(--ink);
+  font: inherit;
   font-size: 0.6rem;
+}
+
+.developer-clock button {
+  cursor: pointer;
+}
+
+.developer-clock button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.developer-clock input {
+  width: 58px;
+  border-radius: 8px;
 }
 
 main {
@@ -970,6 +995,88 @@ main {
   margin-left: 5px;
   color: #78836b;
   font-size: 0.61rem;
+}
+
+.purchase-confirmation {
+  margin-bottom: 14px;
+  padding: 15px;
+  border: 1px solid rgba(90, 103, 73, 0.32);
+  border-radius: 17px;
+  background: rgba(226, 234, 213, 0.58);
+}
+
+.purchase-confirmation:focus {
+  outline: 3px solid rgba(102, 125, 78, 0.35);
+  outline-offset: 2px;
+}
+
+.purchase-confirmation > p:first-child {
+  color: #68775a;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.purchase-confirmation h3 {
+  margin-top: 4px;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+}
+
+.purchase-confirmation > p:not(:first-child) {
+  margin-top: 7px;
+  color: var(--ink-soft);
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.purchase-wish-select {
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.purchase-wish-select select {
+  max-width: min(190px, 66%);
+}
+
+.purchase-confirmation-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.purchase-confirmation-actions button {
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid rgba(90, 103, 73, 0.38);
+  border-radius: 999px;
+  background: #dce5ce;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 650;
+}
+
+.purchase-confirmation-actions button:first-child {
+  background: rgba(255, 252, 241, 0.78);
+}
+
+.purchase-confirmation-actions button:disabled {
+  cursor: default;
+  opacity: 0.52;
+}
+
+.shop-notice {
+  margin: 0 0 14px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: rgba(135, 155, 112, 0.12);
+  color: #627052;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.66rem;
+  line-height: 1.55;
 }
 
 .postcard-list {

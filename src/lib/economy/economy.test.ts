@@ -80,6 +80,27 @@ describe('Economy', () => {
     expect(result.windowsillTreats).toBe(0)
   })
 
+  it('开发补给可以连续增加共享小鱼干且不结算窗台', () => {
+    const economy = createEconomy({
+      treats: 5,
+      windowsillTreats: 7,
+    })
+
+    const firstGrant = reduceEconomy(economy, {
+      type: 'treatsGranted',
+      amount: 24,
+    })
+    const secondGrant = reduceEconomy(firstGrant, {
+      type: 'treatsGranted',
+      amount: 24,
+    })
+
+    expect(secondGrant).toEqual({
+      ...economy,
+      treats: 53,
+    })
+  })
+
   it('现实时间倒退时不扣除也不额外生成小鱼干', () => {
     const economy = createEconomy()
 
@@ -130,6 +151,7 @@ describe('Economy', () => {
       itemId: 'fish-biscuit',
       itemKind: 'snack',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result.ownedItems['fish-biscuit']).toBe(0)
@@ -152,6 +174,7 @@ describe('Economy', () => {
       itemId: 'fish-biscuit',
       itemKind: 'snack',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result).toBe(economy)
@@ -171,6 +194,7 @@ describe('Economy', () => {
       itemId: 'ticket-paris',
       itemKind: 'wish',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result).toBe(economy)
@@ -188,6 +212,7 @@ describe('Economy', () => {
       itemKind: 'wish',
       wishDestinationId: 'france-paris-eiffel-tower',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result.packs['first-cat']).toEqual([
@@ -235,6 +260,24 @@ describe('Economy', () => {
       itemId: 'small-camera',
       itemKind: 'toy',
       capacity: 3,
+      packLocked: false,
+    })
+
+    expect(result).toBe(economy)
+  })
+
+  it('小猫旅行途中会锁定行囊', () => {
+    const economy = createEconomy({
+      ownedItems: { 'fish-biscuit': 1 },
+    })
+
+    const result = reduceEconomy(economy, {
+      type: 'itemAddedToPack',
+      catId: 'first-cat',
+      itemId: 'fish-biscuit',
+      itemKind: 'snack',
+      capacity: 3,
+      packLocked: true,
     })
 
     expect(result).toBe(economy)
