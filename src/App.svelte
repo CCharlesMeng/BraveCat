@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   import {
     reduceEconomy,
     type EconomyAction,
+    type PackItemRejectionReason,
   } from './lib/economy'
   import type { ItemDefinition } from './lib/assets'
   import {
@@ -28,6 +29,12 @@
   } from './lib/postcards'
   import { createIndexedDbSaveStore } from './lib/save'
   import { selectTripContent } from './lib/selection'
+  import {
+    beginPurchaseChoice,
+    confirmPurchasedItemInPack,
+    keepPurchasedItemAtHome,
+    type PendingPurchase,
+  } from './lib/shop'
   import { createClock } from './lib/time'
   import {
     createSeededRandom,
@@ -133,6 +140,10 @@
   let persistenceNotice = $state('')
   let transferNotice = $state('')
   let developmentGrantAmount = $state(24)
+  let pendingPurchase = $state<PendingPurchase | null>(null)
+  let purchaseFlowBusy = $state(false)
+  let purchaseConfirmationElement = $state<HTMLElement | null>(null)
+  let shopNotice = $state('')
   let selectedWishDestinationId = $state<DestinationId>(
     STARTER_DESTINATIONS[0].id,
   )
@@ -187,9 +198,37 @@
   const findItem = (itemId: string) => STARTER_ITEMS.find(
     ({ id }) => id === itemId,
   )
+  const pendingPurchaseItem = $derived(
+    pendingPurchase ? findItem(pendingPurchase.itemId) ?? null : null,
+  )
   const findDestination = (destinationId?: string) => (
     STARTER_CATALOG.destinations.find(({ id }) => id === destinationId)
   )
+  const describePackRejection = (
+    reason: PackItemRejectionReason | undefined,
+    itemName: string,
+  ) => {
+    switch (reason) {
+      case 'pack-locked':
+        return `${catName}正在旅行，${itemName}先留在家里。`
+      case 'capacity-reached':
+        return `行囊已经满了，${itemName}先留在家里。`
+      case 'duplicate-item':
+        return `行囊里已经有${itemName}了，新买的这件先留在家里。`
+      case 'wish-already-packed':
+        return `行囊里已经有一张心愿车票，${itemName}先留在家里。`
+      case 'wish-destination-required':
+        return `还没有选好心愿地，${itemName}先留在家里。`
+      case 'item-not-owned':
+        return `家里没有找到${itemName}，行囊没有变化。`
+      default:
+        return `${itemName}没有放进行囊，已经留在家里。`
+    }
+  }
+  const announceShopOutcome = (message: string) => {
+    shopNotice = message
+    activityNotice = message
+  }
 
   const saveGame = async () => {
     try {
@@ -313,6 +352,8 @@
       })
       gameNow = now
       game = advanceGame(imported, settledEconomy, now)
+      pendingPurchase = null
+      shopNotice = ''
       await saveGame()
       transferNotice = '完整存档已经恢复。'
     } catch (error) {
@@ -427,14 +468,94 @@
   }
 
   const purchaseItem = async (item: ItemDefinition) => {
-    const purchased = await applyEconomy({
-      type: 'itemPurchased',
-      itemId: item.id,
-      price: item.price,
-    })
-    activityNotice = purchased
-      ? `${item.name}已经收进家里。`
-      : `还差一些小鱼干，先看看别的吧。`
+    if (purchaseFlowBusy) return
+    if (pendingPurchase) {
+      announceShopOutcome('先决定刚买下的物品放在哪里吧。')
+      return
+    }
+
+    purchaseFlowBusy = true
+    try {
+      shopNotice = ''
+      const result = beginPurchaseChoice(
+        { game, pendingPurchase },
+        item,
+      )
+      if (result.status !== 'awaiting-choice') {
+        announceShopOutcome(result.status === 'purchase-rejected'
+          ? '还差一些小鱼干，先看看别的吧。'
+          : '先决定刚买下的物品放在哪里吧。')
+        return
+      }
+
+      game = result.state.game
+      await saveGame()
+      pendingPurchase = result.state.pendingPurchase
+      activityNotice = `${item.name}已经买下。要放进行囊吗？`
+    } finally {
+      purchaseFlowBusy = false
+    }
+
+    await tick()
+    purchaseConfirmationElement?.focus()
+  }
+
+  const leavePurchasedItemAtHome = async () => {
+    if (purchaseFlowBusy || !pendingPurchaseItem) return
+
+    purchaseFlowBusy = true
+    try {
+      const itemName = pendingPurchaseItem.name
+      const result = keepPurchasedItemAtHome({
+        game,
+        pendingPurchase,
+      })
+      game = result.state.game
+      pendingPurchase = result.state.pendingPurchase
+      await saveGame()
+      announceShopOutcome(`${itemName}已经留在家里。`)
+    } finally {
+      purchaseFlowBusy = false
+    }
+  }
+
+  const packPurchasedItem = async () => {
+    if (purchaseFlowBusy || !pendingPurchaseItem) return
+
+    purchaseFlowBusy = true
+    try {
+      const item = pendingPurchaseItem
+      const result = confirmPurchasedItemInPack(
+        { game, pendingPurchase },
+        {
+          catId: PRIMARY_CAT_ID,
+          capacity: PACK_CAPACITY,
+          packLocked: isPackLocked,
+          wishDestinationId: item.kind === 'wish'
+            ? selectedWishDestinationId
+            : undefined,
+        },
+      )
+      pendingPurchase = result.state.pendingPurchase
+      if (result.status === 'packed') {
+        const now = clock.now()
+        gameNow = now
+        game = advanceGame(
+          result.state.game,
+          result.state.game.economy,
+          now,
+        )
+        announceShopOutcome(`${item.name}已经放进行囊。`)
+      } else {
+        game = result.state.game
+        announceShopOutcome(
+          describePackRejection(result.reason, item.name),
+        )
+      }
+      await saveGame()
+    } finally {
+      purchaseFlowBusy = false
+    }
   }
 
   const addItemToPack = async (item: ItemDefinition) => {
@@ -447,6 +568,7 @@
         ? selectedWishDestinationId
         : undefined,
       capacity: PACK_CAPACITY,
+      packLocked: isPackLocked,
     })
     activityNotice = added
       ? `${item.name}已经放进行囊。`
@@ -713,6 +835,62 @@
     {#if activeDrawer === 'shop'}
       <div class="drawer-content">
         <p class="drawer-intro">基础物品一直都在，不用赶时间。</p>
+        {#if pendingPurchaseItem}
+          <section
+            class="purchase-confirmation"
+            aria-labelledby="purchase-confirmation-title"
+            aria-live="polite"
+            tabindex="-1"
+            bind:this={purchaseConfirmationElement}
+          >
+            <p>已经买下</p>
+            <h3 id="purchase-confirmation-title">
+              {pendingPurchaseItem.name}放在哪里？
+            </h3>
+            <p id="purchase-confirmation-copy">
+              购买已经完成。现在放进行囊，或先留在家里。
+            </p>
+            {#if pendingPurchaseItem.kind === 'wish'}
+              <label class="wish-select purchase-wish-select">
+                <span>心愿地</span>
+                <select
+                  required
+                  bind:value={selectedWishDestinationId}
+                  aria-describedby="purchase-confirmation-copy"
+                >
+                  {#each STARTER_CATALOG.destinations as destination}
+                    <option value={destination.id}>
+                      {destination.name}
+                    </option>
+                  {/each}
+                </select>
+              </label>
+            {/if}
+            <div
+              class="purchase-confirmation-actions"
+              role="group"
+              aria-label={`${pendingPurchaseItem.name}的去向`}
+            >
+              <button
+                type="button"
+                disabled={purchaseFlowBusy}
+                onclick={leavePurchasedItemAtHome}
+              >
+                先留在家里
+              </button>
+              <button
+                type="button"
+                disabled={purchaseFlowBusy}
+                onclick={packPurchasedItem}
+              >
+                放进行囊
+              </button>
+            </div>
+          </section>
+        {/if}
+        {#if shopNotice}
+          <p class="shop-notice" role="status">{shopNotice}</p>
+        {/if}
         <ul class="item-list" aria-label="小铺物品">
           {#each STARTER_ITEMS as item}
             <li class="item-card">
@@ -730,13 +908,19 @@
               <button
                 class="item-action"
                 type="button"
-                disabled={treats < item.price}
+                disabled={treats < item.price
+                  || purchaseFlowBusy
+                  || pendingPurchase !== null}
                 aria-label={`购买${item.name}，需要 ${item.price} 条小鱼干`}
                 onclick={() => purchaseItem(item)}
               >
-                {treats >= item.price
-                  ? `${item.price} 🐟`
-                  : `还差 ${item.price - treats}`}
+                {purchaseFlowBusy
+                  ? '购买中…'
+                  : pendingPurchase
+                    ? '请先选择'
+                    : treats >= item.price
+                      ? `${item.price} 🐟`
+                      : `还差 ${item.price - treats}`}
               </button>
             </li>
           {/each}
