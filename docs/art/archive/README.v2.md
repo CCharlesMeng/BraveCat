@@ -6,7 +6,7 @@ This directory is the canonical cross-batch inventory. Raw generation outputs an
 - Approved Portraits: **1** (6 poses)
 - Landmark candidates: **25 destinations / 61 active scenes**
 - Landmark visual review: **approved**
-- Minho composite review: **approved**
+- Minho composite review: **partial — 13 v3 additions approved / prior 48 pending renewed review**
 - Landmark rights review: **review-complete-not-cleared**
 - Landmark shipping status: **blocked; rights review completed with open global and destination gates**
 

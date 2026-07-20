@@ -7,7 +7,7 @@ import {
   type RandomSource,
   type TripRhythm,
 } from '../itinerary'
-import type { DestinationId, PortraitId } from '../ids'
+import type { CatId, DestinationId, PortraitId } from '../ids'
 import type { PlanTrip, PlannedTrip } from '../planTrip'
 
 export const createSeededRandom = (seed: number): RandomSource => {
@@ -56,6 +56,7 @@ export interface TravelLifecycle {
 
 export interface TravelLifecycleConfig {
   catalog: AssetCatalog
+  travelerCatId: CatId
   portraitId: PortraitId
   destinations: readonly ItineraryDestination[]
   rhythm: TripRhythm
@@ -83,6 +84,7 @@ export const createTravelLifecycle = (
         packedItemIds: input.pack.map(({ itemId }) => itemId),
         wishDestinationId: input.wishDestinationId,
         rhythm: config.rhythm,
+        travelerCatId: config.travelerCatId,
         portraitId: config.portraitId,
         catalog: config.catalog,
       }, random)

@@ -14,6 +14,13 @@ import {
 } from './index'
 
 const catalog: AssetCatalog = {
+  sceneSetRevision: 'scenes-r1',
+  sceneRevisions: {
+    'kyoto-day': 'kyoto-day-r1',
+  },
+  portraitSetRevisions: {
+    minho: 'portraits-r1',
+  },
   destinations: [
     {
       id: 'kyoto',
@@ -74,6 +81,7 @@ const pack: readonly PackedItem[] = [
 
 const makeLifecycle = (randomValue = 0.5) => createTravelLifecycle({
   catalog,
+  travelerCatId: 'minho',
   portraitId: 'minho',
   destinations,
   rhythm,
@@ -188,10 +196,42 @@ describe('Travel lifecycle', () => {
         content: {
           postcards: [
             {
-              sceneVariantId: 'kyoto-day',
-              portraitId: 'minho',
-              pose: 'gaze',
-              note: '风很轻，我在这里坐了一会儿。',
+              recipe: {
+                recipeVersion: 1,
+                travelerCatId: 'minho',
+                scene: {
+                  id: 'kyoto-day',
+                  revision: 'kyoto-day-r1',
+                },
+                portrait: {
+                  id: 'minho',
+                  setRevision: 'portraits-r1',
+                },
+                composition: {
+                  id: 'kyoto-day--default',
+                  x: 0.2,
+                  y: 0.8,
+                  scale: 0.3,
+                  flip: false,
+                },
+                pose: 'gaze',
+                layers: [
+                  {
+                    id: 'scene',
+                    kind: 'scene',
+                    src: '/scenes/kyoto-day.png',
+                  },
+                  {
+                    id: 'portrait',
+                    kind: 'portrait',
+                    src: '/portraits/minho/gaze.png',
+                  },
+                ],
+                copy: {
+                  id: 'postcard-note-1',
+                  text: '风很轻，我在这里坐了一会儿。',
+                },
+              },
             },
           ],
         },

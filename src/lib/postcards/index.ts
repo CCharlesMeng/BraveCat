@@ -55,41 +55,24 @@ export const createInitialPostcardState = (): PostcardState => ({
 })
 
 export const resolvePostcardComposition = (
-  catalog: AssetCatalog,
+  _catalog: AssetCatalog,
   postcard: ReceivedPostcard,
 ): PostcardComposition => {
-  const destination = catalog.destinations.find(
-    ({ id }) => id === postcard.destinationId,
-  )
-  const scene = destination?.sceneVariants.find(
-    ({ id }) => id === postcard.sceneVariantId,
-  )
-  if (!scene) {
-    throw new RangeError(`素材目录缺少场景：${postcard.sceneVariantId}`)
-  }
-
-  const portrait = catalog.portraits.find(
-    ({ id }) => id === postcard.portraitId,
-  )
-  if (!portrait) {
-    throw new RangeError(`素材目录缺少形象：${postcard.portraitId}`)
-  }
-  if (scene.compositionSlot.pose !== postcard.pose) {
-    throw new RangeError(`场景与明信片姿势不兼容：${postcard.sceneVariantId}`)
-  }
+  const { recipe } = postcard
+  const [sceneLayer, portraitLayer] = recipe.layers
 
   return {
     scene: {
-      src: scene.imageSrc,
+      src: sceneLayer.src,
     },
     portrait: {
-      src: portrait.poses[postcard.pose],
-      anchorX: scene.compositionSlot.x,
-      anchorY: scene.compositionSlot.y,
-      heightScale: scene.compositionSlot.scale,
-      flip: scene.compositionSlot.flip,
+      src: portraitLayer.src,
+      anchorX: recipe.composition.x,
+      anchorY: recipe.composition.y,
+      heightScale: recipe.composition.scale,
+      flip: recipe.composition.flip,
     },
-    note: postcard.note,
+    note: recipe.copy.text,
     postmarkDate: new Date(postcard.revealAt).toISOString().slice(0, 10),
   }
 }

@@ -9,6 +9,14 @@ import {
 } from './starterCatalog'
 
 const validCatalog = (): AssetCatalog => ({
+  sceneSetRevision: 'scenes-r1',
+  sceneRevisions: {
+    'paris-day': 'paris-day-r1',
+    'paris-dawn': 'paris-dawn-r1',
+  },
+  portraitSetRevisions: {
+    minho: 'portraits-r1',
+  },
   destinations: [
     {
       id: 'paris',

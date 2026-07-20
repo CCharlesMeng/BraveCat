@@ -4,6 +4,13 @@ import type { AssetCatalog } from '../assets'
 import type { Itinerary } from '../itinerary'
 
 const catalog: AssetCatalog = {
+  sceneSetRevision: 'scenes-r1',
+  sceneRevisions: {
+    'paris-day': 'paris-day-r1',
+  },
+  portraitSetRevisions: {
+    'my-cat': 'portraits-r1',
+  },
   destinations: [
     {
       id: 'paris',
@@ -59,16 +66,53 @@ describe('Selection', () => {
     }
 
     const content = selectTripContent(
-      { itinerary, portraitId: 'my-cat', catalog },
+      {
+        itinerary,
+        travelerCatId: 'cat-1',
+        portraitId: 'my-cat',
+        catalog,
+      },
       () => 0,
     )
 
     expect(content.postcards).toEqual([
       {
-        sceneVariantId: 'paris-day',
-        portraitId: 'my-cat',
-        pose: 'gaze',
-        note: '风很轻。',
+        recipe: {
+          recipeVersion: 1,
+          travelerCatId: 'cat-1',
+          scene: {
+            id: 'paris-day',
+            revision: 'paris-day-r1',
+          },
+          portrait: {
+            id: 'my-cat',
+            setRevision: 'portraits-r1',
+          },
+          composition: {
+            id: 'paris-day--default',
+            x: 0.2,
+            y: 0.8,
+            scale: 0.3,
+            flip: false,
+          },
+          pose: 'gaze',
+          layers: [
+            {
+              id: 'scene',
+              kind: 'scene',
+              src: '/scenes/paris-day.png',
+            },
+            {
+              id: 'portrait',
+              kind: 'portrait',
+              src: '/portraits/gaze.png',
+            },
+          ],
+          copy: {
+            id: 'postcard-note-1',
+            text: '风很轻。',
+          },
+        },
       },
     ])
   })

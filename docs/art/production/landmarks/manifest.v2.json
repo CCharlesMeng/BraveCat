@@ -3,7 +3,7 @@
   "manifestKind": "landmark-production",
   "catalogId": "miaoyouji-landmarks-production-v2-2026-07-20",
   "generatedAt": "2026-07-20",
-  "status": "visual-composite-and-rights-reviewed-not-cleared-runtime-integrated",
+  "status": "visual-and-rights-reviewed-composite-partial-not-cleared-runtime-integrated",
   "shippingEligible": false,
   "source": {
     "candidateManifest": {
@@ -22,7 +22,8 @@
     },
     "approvedArchive": {
       "path": "docs/art/archive/asset-archive.v2.json",
-      "sha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3"
+      "sha256": "8ddc043ba9a3c457a6babdc943af9d3570afea5ddcee839165f73ce0160f34f9",
+      "compositeReview": "partial-v3-13-approved-prior-48-pending-re-review"
     },
     "rightsReview": {
       "reviews": [
@@ -42,14 +43,16 @@
     },
     "compositeQa": {
       "path": "docs/art/reviews/landmarks/composites/manifest.v2.json",
-      "sha256": "c7bfc32ee0dd21150702b5524192fae60681c94e0134b0747b64b410f41a54f9",
-      "compositeSetSha256": "feaed47f16f4b9fb7a458b1afa8cb3a5fc6f62cfe69167ac6dec4041ea2bd135"
+      "sha256": "132e1f3e11b9be791533dd82e18430dea00dd35936e8c959e2f13f7e20068e37",
+      "compositeSetSha256": "feaed47f16f4b9fb7a458b1afa8cb3a5fc6f62cfe69167ac6dec4041ea2bd135",
+      "reviewDecision": "partial"
     },
     "compositeApproval": {
       "path": "docs/art/reviews/landmarks/composites/approval.v2.json",
-      "sha256": "ec1a2fe690ed1b15610f752986ed4dc549d4f8d0c6bbec0f71fd82fc54fe2481",
+      "sha256": "24c14b4ba13be9bc516cd20c6805791dec8171d90ec7bc3e28af5487c5a20f1f",
       "reviewer": "user",
-      "reviewedAt": "2026-07-20"
+      "reviewedAt": "2026-07-20",
+      "decision": "partial"
     }
   },
   "scope": {
@@ -98,10 +101,16 @@
         }
       }
     },
-    "finalRealPortraitCompositeReview": "approved",
+    "finalRealPortraitCompositeReview": {
+      "decision": "partial",
+      "approvedSceneCount": 13,
+      "pendingSceneCount": 48,
+      "pendingReason": "The prior approval covered different Portrait bytes; sheets 1-3 require renewed review."
+    },
     "shippingApproval": "blocked-pending-remaining-gates"
   },
   "remainingGates": [
+    "re-review-prior-48-composites-after-portrait-byte-change",
     "global-provenance-remediation",
     "destination-specific-rights-remediation",
     "qualified-counsel-or-permission-for-high-and-blocked-destinations",
@@ -282,7 +291,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-beijing-forbidden-city-corner-tower--golden-hour",
@@ -346,7 +355,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -420,7 +429,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "japan-kyoto-fushimi-inari-taisha--golden-hour",
@@ -484,7 +493,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "japan-kyoto-fushimi-inari-taisha--companion-rare",
@@ -557,7 +566,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -631,7 +640,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "singapore-singapore-merlion--golden-hour",
@@ -695,7 +704,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "singapore-singapore-merlion--companion-rare",
@@ -768,7 +777,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -842,7 +851,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "australia-sydney-opera-house--golden-hour",
@@ -906,7 +915,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "australia-sydney-opera-house--companion-rare",
@@ -979,7 +988,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1053,7 +1062,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "france-paris-eiffel-tower--golden-hour",
@@ -1117,7 +1126,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1191,7 +1200,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "united-kingdom-london-tower-bridge--golden-hour",
@@ -1255,7 +1264,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1329,7 +1338,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "italy-rome-colosseum--golden-hour",
@@ -1393,7 +1402,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1467,7 +1476,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "egypt-giza-pyramids--golden-hour",
@@ -1531,7 +1540,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "egypt-giza-pyramids--companion-rare",
@@ -1604,7 +1613,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1678,7 +1687,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "united-states-new-york-brooklyn-bridge--golden-hour",
@@ -1742,7 +1751,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1816,7 +1825,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "peru-cusco-machu-picchu--golden-hour",
@@ -1880,7 +1889,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -1954,7 +1963,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-beijing-mutianyu-great-wall--golden-hour",
@@ -2018,7 +2027,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2092,7 +2101,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-shanghai-the-bund--golden-hour",
@@ -2156,7 +2165,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2230,7 +2239,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-xian-giant-wild-goose-pagoda--golden-hour",
@@ -2294,7 +2303,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2368,7 +2377,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-guilin-elephant-trunk-hill--golden-hour",
@@ -2432,7 +2441,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-guilin-elephant-trunk-hill--companion-rare",
@@ -2505,7 +2514,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2579,7 +2588,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-dongguan-xiliubeipo-village--golden-hour",
@@ -2643,7 +2652,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2717,7 +2726,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour",
@@ -2781,7 +2790,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -2855,7 +2864,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "india-agra-taj-mahal--golden-hour",
@@ -2919,7 +2928,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "india-agra-taj-mahal--companion-rare",
@@ -2992,7 +3001,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -3066,7 +3075,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "turkey-istanbul-hagia-sophia--golden-hour",
@@ -3130,7 +3139,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "turkey-istanbul-hagia-sophia--companion-rare",
@@ -3203,7 +3212,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -3277,7 +3286,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour",
@@ -3341,7 +3350,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },
@@ -3415,7 +3424,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "south-africa-cape-town-table-mountain--golden-hour",
@@ -3479,7 +3488,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         },
         {
           "id": "south-africa-cape-town-table-mountain--companion-rare",
@@ -3552,7 +3561,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "approved"
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change"
         }
       ]
     },

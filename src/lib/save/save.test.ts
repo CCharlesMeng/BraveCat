@@ -1,6 +1,10 @@
 import 'fake-indexeddb/auto'
 import { describe, expect, it } from 'vitest'
-import { createInitialGameState, type GameState } from '../game'
+import {
+  createInitialGameState,
+  isGameState,
+  type GameState,
+} from '../game'
 import { createIndexedDbSaveStore } from './index'
 
 describe('Save', () => {
@@ -32,7 +36,7 @@ describe('Save', () => {
     await store.save(current)
 
     await expect(store.import({
-      schemaVersion: 1,
+      schemaVersion: 2,
       exportedAt: 2_000,
       state: { treats: '很多' },
     })).rejects.toThrow('存档内容不完整或已损坏')
@@ -54,6 +58,10 @@ describe('Save', () => {
           state: {
             treats: (document.state as { fish: number }).fish,
           },
+        }),
+        1: (document) => ({
+          ...document,
+          schemaVersion: 2,
         }),
       },
     })
@@ -92,10 +100,42 @@ describe('Save', () => {
           tripId: 'trip',
           destinationId: 'paris',
           revealAt: 2_000,
-          sceneVariantId: 'paris-day',
-          portraitId: 'minho',
-          pose: 'gaze',
-          note: '今天的风很轻。',
+          recipe: {
+            recipeVersion: 1,
+            travelerCatId: 'minho',
+            scene: {
+              id: 'paris-day',
+              revision: 'scenes-r1',
+            },
+            portrait: {
+              id: 'minho',
+              setRevision: 'portraits-r1',
+            },
+            composition: {
+              id: 'paris-day--default',
+              x: 0.2,
+              y: 0.8,
+              scale: 0.3,
+              flip: false,
+            },
+            pose: 'gaze',
+            layers: [
+              {
+                id: 'scene',
+                kind: 'scene',
+                src: '/scenes/paris-day.png',
+              },
+              {
+                id: 'portrait',
+                kind: 'portrait',
+                src: '/portraits/minho/gaze.png',
+              },
+            ],
+            copy: {
+              id: 'postcard-note-1',
+              text: '今天的风很轻。',
+            },
+          },
           isRead: false,
         }],
       },
@@ -106,13 +146,14 @@ describe('Save', () => {
     )
     const target = createIndexedDbSaveStore<GameState>(
       `bravecat-test-${crypto.randomUUID()}`,
+      { validateState: isGameState },
     )
 
     const json = JSON.stringify(source.export(state))
     const imported = await target.import(JSON.parse(json))
 
     expect(JSON.parse(json)).toMatchObject({
-      schemaVersion: 1,
+      schemaVersion: 2,
       exportedAt: 5_000,
     })
     expect(imported).toEqual(state)

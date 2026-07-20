@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "reviewKind": "landmark-minho-composite-qa",
   "generatedAt": "2026-07-20",
-  "status": "approved",
+  "status": "partial-human-review",
   "shippingEligible": false,
   "sourceArchive": "docs/art/archive/asset-archive.v2.json",
   "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
@@ -350,9 +350,15 @@
     }
   ],
   "review": {
-    "decision": "approved",
+    "decision": "partial",
     "reviewer": "user",
     "reviewedAt": "2026-07-20",
+    "approvedSceneCount": 13,
+    "approvedSheets": [
+      "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png"
+    ],
+    "pendingSceneCount": 48,
+    "pendingReason": "The prior approval covered different Portrait bytes; sheets 1-3 require renewed review.",
     "checks": [
       "portrait-grounding",
       "portrait-scale",
@@ -361,5 +367,5 @@
       "pose-and-flip-fit"
     ]
   },
-  "remainingGate": "shipping-rights-review"
+  "remainingGate": "prior-48-composite-re-review-and-shipping-rights-review"
 }

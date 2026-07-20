@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Itinerary } from '../itinerary'
-import type { TripContent } from '../selection'
+import type { PostcardRecipe, TripContent } from '../selection'
 import {
   createInitialPostcardState,
   reducePostcards,
@@ -18,19 +18,79 @@ const itinerary: Itinerary = {
   ],
 }
 
+const firstRecipe: PostcardRecipe = {
+  recipeVersion: 1,
+  travelerCatId: 'minho',
+  scene: {
+    id: 'paris-day',
+    revision: 'scenes-r1',
+  },
+  portrait: {
+    id: 'minho',
+    setRevision: 'portraits-r1',
+  },
+  composition: {
+    id: 'paris-day--default',
+    x: 0.2,
+    y: 0.8,
+    scale: 0.3,
+    flip: false,
+  },
+  pose: 'gaze',
+  layers: [
+    {
+      id: 'scene',
+      kind: 'scene',
+      src: '/scenes/paris-day.png',
+    },
+    {
+      id: 'portrait',
+      kind: 'portrait',
+      src: '/portraits/minho/gaze.png',
+    },
+  ],
+  copy: {
+    id: 'postcard-note-1',
+    text: '风从铁塔旁边绕过去。',
+  },
+}
+
+const secondRecipe: PostcardRecipe = {
+  ...firstRecipe,
+  scene: {
+    id: 'paris-dawn',
+    revision: 'scenes-r1',
+  },
+  composition: {
+    ...firstRecipe.composition,
+    id: 'paris-dawn--default',
+  },
+  pose: 'sit',
+  layers: [
+    {
+      id: 'scene',
+      kind: 'scene',
+      src: '/scenes/paris-dawn.png',
+    },
+    {
+      id: 'portrait',
+      kind: 'portrait',
+      src: '/portraits/minho/sit.png',
+    },
+  ],
+  copy: {
+    id: 'postcard-note-2',
+    text: '天亮的时候，桥边很安静。',
+  },
+}
+
 const content: TripContent = {
   postcards: [
     {
-      sceneVariantId: 'paris-day',
-      portraitId: 'minho',
-      pose: 'gaze',
-      note: '风从铁塔旁边绕过去。',
+      recipe: firstRecipe,
     },
     {
-      sceneVariantId: 'paris-dawn',
-      portraitId: 'minho',
-      pose: 'sit',
-      note: '天亮的时候，桥边很安静。',
+      recipe: secondRecipe,
     },
   ],
   souvenirIds: [],
@@ -68,10 +128,7 @@ describe('Postcard delivery', () => {
         tripId: 'minho-1000',
         destinationId: 'paris',
         revealAt: 2_000,
-        sceneVariantId: 'paris-day',
-        portraitId: 'minho',
-        pose: 'gaze',
-        note: '风从铁塔旁边绕过去。',
+        recipe: firstRecipe,
         isRead: false,
       },
     ])

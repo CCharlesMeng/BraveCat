@@ -1,6 +1,6 @@
 # Landmark candidate review index v3
 
-All 61 active scene candidates passed user visual review and were promoted for runtime integration. All 61 Minho composites also passed user review. The rights review is complete but did not clear shipping: 7 destinations are blocked, 3 are high-risk holds, and all scenes remain behind open global provenance gates.
+All 61 active scene candidates passed user visual review and were promoted for runtime integration. The user approved the 13 newly added v3 Minho composites on sheet 4; the other 48 composites remain pending renewed review because the approved Portrait bytes changed after their superseded v1 review. The rights review is complete but did not clear shipping: 7 destinations are blocked, 3 are high-risk holds, and all scenes remain behind open global provenance gates.
 
 The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual approval v2 covers the complete 61-scene active set, including all 13 v3 additions.
 
@@ -136,13 +136,13 @@ The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual ap
    - [golden-hour · v01 · visual approved](morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png)
    - [destination contact sheet](morocco-ouarzazate-ait-benhaddou/contact-sheet--morocco-ouarzazate-ait-benhaddou--non-final.png)
 
-## Required decisions
+## Review status
 
-- Visual approval is required for the 13 new scenes and the exact combined active set.
-- Existing v1 visual and composite approvals remain preserved for their original 48-scene scope.
-- After visual approval, promote PNG masters, derive WebP files with PSNR ≥35 dB, and regenerate the runtime catalog.
-- Then generate and review combined Minho composites.
-- Rights review remains pending for every new destination; no v3 scene is shipping eligible.
+- Visual approval is complete for the 13 new scenes and the exact 61-scene active set.
+- The v1 composite approval remains only as an audit record for its original Portrait bytes; it does not approve sheets 1–3 in the current composite set.
+- Sheet 4's 13 v3 composites are approved. The prior 48 composites require renewed review before the combined set can be called approved.
+- Rights review is complete but did not clear shipping. Destination-specific and global provenance gates remain open.
+- No v3 scene is shipping eligible.
 
 ## Minho composite QA v2
 
@@ -151,4 +151,4 @@ The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual ap
 3. [Composite sheet 3 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--03-of-04--non-shipping.png)
 4. [Composite sheet 4 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png)
 
-Composite review decision: **approved by user**.
+Composite review decision: **partial** — sheet 4's 13 v3 composites were approved by the user; sheets 1–3 (48 composites) remain pending renewed review.

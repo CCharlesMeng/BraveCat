@@ -65,6 +65,9 @@ export interface CopyLibrary {
  * 运行时只读取这份类型化清单；新增场景与形象不应要求修改业务代码。
  */
 export interface AssetCatalog {
+  sceneSetRevision: string
+  sceneRevisions: Readonly<Record<SceneVariantId, string>>
+  portraitSetRevisions: Readonly<Record<PortraitId, string>>
   destinations: readonly Destination[]
   portraits: readonly Portrait[]
   items: readonly ItemDefinition[]
@@ -75,6 +78,9 @@ export interface AssetCatalog {
 export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
   catalog: TCatalog,
 ): TCatalog => {
+  if (!catalog.sceneSetRevision.trim()) {
+    throw new RangeError('场景目录 revision 不能为空')
+  }
   if (catalog.copy.postcardNotes.length === 0) {
     throw new RangeError('明信片文案库不能为空')
   }
@@ -90,6 +96,9 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
     }
 
     for (const scene of destination.sceneVariants) {
+      if (!catalog.sceneRevisions[scene.id]?.trim()) {
+        throw new RangeError(`场景 ${scene.id} 缺少 revision`)
+      }
       if (!(PORTRAIT_POSES as readonly string[]).includes(
         scene.compositionSlot.pose,
       )) {
@@ -101,6 +110,9 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
   }
 
   for (const portrait of catalog.portraits) {
+    if (!catalog.portraitSetRevisions[portrait.id]?.trim()) {
+      throw new RangeError(`形象 ${portrait.id} 缺少 set revision`)
+    }
     for (const pose of PORTRAIT_POSES) {
       if (!portrait.poses[pose]?.trim()) {
         throw new RangeError(`形象 ${portrait.id} 缺少 ${pose} 姿势文件`)

@@ -1,6 +1,6 @@
 # Landmark candidate review index
 
-Archived candidate scope: 25 destinations / 61 active scene variants. Human visual review is approved; Minho composite review is approved. Rights review is complete but did not clear any scene for shipping.
+Archived candidate scope: 25 destinations / 61 active scene variants. Human visual review is approved; Minho composite review is partial (13 v3 additions approved, prior 48 pending renewed review after the Portrait-byte change). Rights review is complete but did not clear any scene for shipping.
 
 - [Combined asset archive](../../archive/asset-archive.v2.json)
 - [First-batch normalized manifest](manifest.candidates.json)

@@ -47,7 +47,24 @@ export const STARTER_DESTINATIONS = LANDMARK_DESTINATIONS.map(({ id }) => ({
   region: destinationRegions[id],
 })) satisfies readonly ItineraryDestination[]
 
+const STARTER_SCENE_SET_REVISION =
+  'a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525'
+
+const STARTER_SCENE_REVISIONS = Object.fromEntries(
+  LANDMARK_DESTINATIONS.flatMap(({ sceneVariants }) => (
+    sceneVariants.map((scene) => [
+      scene.id,
+      `${STARTER_SCENE_SET_REVISION}:${scene.imageSrc}`,
+    ])
+  )),
+)
+
 export const STARTER_CATALOG = defineAssetCatalog({
+  sceneSetRevision: STARTER_SCENE_SET_REVISION,
+  sceneRevisions: STARTER_SCENE_REVISIONS,
+  portraitSetRevisions: {
+    minho: 'd9b3935b749ff221a3d5bafcae5e5a5428146c9861a3bd41b1677190b99a4c5f',
+  },
   destinations: LANDMARK_DESTINATIONS,
   portraits: [
     {

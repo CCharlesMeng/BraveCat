@@ -48,7 +48,8 @@
       "docs/art/reviews/landmarks/rights-review-v1.md",
       "docs/art/reviews/landmarks/rights-review-v3-addendum.md"
     ],
-    "rightsDecision": "docs/art/reviews/landmarks/rights-decision.v2.json"
+    "rightsDecision": "docs/art/reviews/landmarks/rights-decision.v2.json",
+    "compositeReview": "partial-v3-13-approved-prior-48-pending-re-review"
   },
   "totals": {
     "destinationCount": 25,
@@ -61,7 +62,7 @@
   "review": {
     "machineQa": "pass",
     "landmarkHumanVisualReview": "approved",
-    "finalRealPortraitCompositeReview": "approved",
+    "finalRealPortraitCompositeReview": "partial-v3-13-approved-prior-48-pending-re-review",
     "landmarkRightsReview": "review-complete-not-cleared"
   },
   "portrait": {
@@ -200,7 +201,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -234,7 +235,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         }
@@ -278,7 +279,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         },
@@ -312,7 +313,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         },
@@ -346,7 +347,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         }
@@ -390,7 +391,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         },
@@ -424,7 +425,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         },
@@ -458,7 +459,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         }
@@ -502,7 +503,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         },
@@ -536,7 +537,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         },
@@ -570,7 +571,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         }
@@ -614,7 +615,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting"
         },
@@ -648,7 +649,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting"
         }
@@ -692,7 +693,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -726,7 +727,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -770,7 +771,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required"
         },
@@ -804,7 +805,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required"
         }
@@ -848,7 +849,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -882,7 +883,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -916,7 +917,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -960,7 +961,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -994,7 +995,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1038,7 +1039,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation"
         },
@@ -1072,7 +1073,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation"
         }
@@ -1116,7 +1117,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -1150,7 +1151,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1194,7 +1195,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory"
         },
@@ -1228,7 +1229,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory"
         }
@@ -1272,7 +1273,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -1306,7 +1307,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1350,7 +1351,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -1384,7 +1385,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -1418,7 +1419,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         }
@@ -1462,7 +1463,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace"
         },
@@ -1496,7 +1497,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace"
         }
@@ -1540,7 +1541,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution"
         },
@@ -1574,7 +1575,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution"
         }
@@ -1618,7 +1619,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1652,7 +1653,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1686,7 +1687,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         }
@@ -1730,7 +1731,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         },
@@ -1764,7 +1765,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         },
@@ -1798,7 +1799,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         }
@@ -1842,7 +1843,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/brazil-rio-de-janeiro-christ-the-redeemer/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required"
         },
@@ -1876,7 +1877,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/brazil-rio-de-janeiro-christ-the-redeemer/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required"
         }
@@ -1920,7 +1921,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1954,7 +1955,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1988,7 +1989,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "approved",
+          "finalRealPortraitCompositeReview": "pending-re-review-after-portrait-byte-change",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         }

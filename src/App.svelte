@@ -97,7 +97,15 @@
       0: (document) => ({
         ...document,
         schemaVersion: 1,
-        state: restoreGameState(document.state, clock.now()),
+      }),
+      1: (document) => ({
+        ...document,
+        schemaVersion: 2,
+        state: restoreGameState(
+          document.state,
+          clock.now(),
+          STARTER_CATALOG,
+        ),
       }),
     },
   })
@@ -107,6 +115,7 @@
   })
   const travelLifecycle = createTravelLifecycle({
     catalog: STARTER_CATALOG,
+    travelerCatId: PRIMARY_CAT_ID,
     portraitId: 'minho',
     destinations: STARTER_DESTINATIONS,
     rhythm: {
@@ -370,7 +379,7 @@
         if (cancelled) return
 
         const now = clock.now()
-        const restored = restoreGameState(saved, now)
+        const restored = restoreGameState(saved, now, STARTER_CATALOG)
         const settledEconomy = reduceEconomy(
           restored.economy,
           { type: 'timePassed', now },

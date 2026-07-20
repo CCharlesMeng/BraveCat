@@ -6,9 +6,10 @@ import type {
   RandomSource,
 } from './itinerary'
 import type { ContentSelector, TripContent } from './selection'
-import type { PortraitId } from './ids'
+import type { CatId, PortraitId } from './ids'
 
 export interface PlanTripRequest extends ItineraryRequest {
+  travelerCatId: CatId
   portraitId: PortraitId
   catalog: AssetCatalog
 }
@@ -40,6 +41,7 @@ export const createPlanTrip = (
   const itinerary = dependencies.planItinerary(request, random)
   const content = dependencies.selectContent({
     itinerary,
+    travelerCatId: request.travelerCatId,
     portraitId: request.portraitId,
     catalog: request.catalog,
   }, random)
