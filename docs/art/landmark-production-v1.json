@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "status": "candidate-generation",
+  "shippingEligible": false,
+  "lockedAt": "2026-07-20",
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "destinationCount": 15,
+    "ordinaryVariantsPerDestination": 2,
+    "rareCompanionVariantCount": 5,
+    "ordinaryTimePairing": [
+      "day-signature",
+      "golden-hour"
+    ]
+  },
+  "sourceDocuments": [
+    "docs/art/calibration-production-v1.md",
+    "docs/art/prompt-pack.calibration.v1.json",
+    "docs/art/asset-manifest.v1.template.json",
+    "CONTEXT.md",
+    "docs/adr/0001-postcards-are-composited-not-generated.md"
+  ],
+  "styleReferences": [
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-postcard.png",
+    "docs/art/style-ref-poses.png",
+    "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+  ],
+  "candidateOutputRoot": "docs/art/candidates/landmarks",
+  "candidatePolicy": {
+    "shippingEligible": false,
+    "oneDirectoryPerDestination": true,
+    "doNotEditSharedManifest": true,
+    "writeManifestFragment": true,
+    "contactSheetRequired": true,
+    "contactSheetMayShowSafeBounds": true,
+    "candidateImagesMustNotShowSafeBounds": true,
+    "promoteOnlyAfterUserApproval": true
+  },
+  "globalConstraints": [
+    "No cat, substitute cat, person, date, postmark, caption, logo, watermark, UI, composition frame, or anchor mark in candidate scene images.",
+    "Rare companions appear only in variants explicitly marked hasCompanion=true.",
+    "Keep the landmark immediately recognizable and preserve its defining silhouette and proportions.",
+    "Reserve an unobstructed, low-detail, low-contrast composition slot away from landmark recognition points and future copy and postmark zones.",
+    "Avoid photorealism, 3D, flat vector art, neon, high saturation, hard digital gradients, thick black outlines, crowded backgrounds, malformed architecture, and pseudo-text.",
+    "Use thin warm gray-brown linework, low-saturation sage green, ochre, faded vermilion, generous negative space, subtle warm-white paper texture, restrained watercolor bleed, and a quiet nostalgic mood."
+  ],
+  "destinations": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower",
+      "name": "故宫角楼",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Clear representative daytime view across the moat, with the corner tower silhouette and layered rooflines accurate and unobstructed.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Quiet early-autumn dawn with pale gold light and a faint moat reflection; preserve the corner tower's defining roof geometry.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "name": "京都伏见稻荷",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative daytime view into the vermilion torii tunnel, with clear perspective rhythm and no readable inscriptions.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Misty early morning at the torii path with soft filtered light, restrained foliage, and no readable inscriptions.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet dawn torii scene with one tiny sparrow perched away from the empty portrait slot.",
+          "hasCompanion": true,
+          "companionBrief": "One small sparrow only; subtle, secondary, and not inside the portrait slot."
+        }
+      ]
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "name": "新加坡鱼尾狮",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime waterfront view with the Merlion silhouette and water jet accurate; simplify distant skyline details.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft sunrise waterfront with pale peach light and quiet reflections, retaining a clearly recognizable Merlion.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Calm early-morning waterfront with one small smooth-coated otter at the water edge, away from the empty portrait slot.",
+          "hasCompanion": true,
+          "companionBrief": "One small smooth-coated otter only; understated and clearly secondary to the Merlion."
+        }
+      ]
+    },
+    {
+      "id": "australia-sydney-opera-house",
+      "name": "悉尼歌剧院",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative harbor daytime view with the Opera House shell geometry accurate and readable against open sky.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Muted sunset over the harbor with faded peach reflections and accurate Opera House shells.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet morning harbor scene with one small silver gull perched away from the empty portrait slot.",
+          "hasCompanion": true,
+          "companionBrief": "One small silver gull only; subtle and outside the portrait slot."
+        }
+      ]
+    },
+    {
+      "id": "france-paris-eiffel-tower",
+      "name": "巴黎埃菲尔铁塔",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative daytime garden view with the full Eiffel Tower silhouette and lattice rhythm intact, no people or signage.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Pale dawn over the Champ de Mars with soft ochre light, long quiet shadows, and an accurate tower silhouette.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "name": "伦敦塔桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime Thames view with both towers, upper walkways, and suspension elements clearly recognizable.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft late-afternoon Thames scene with faded warm light and restrained reflections; preserve bridge proportions.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "italy-rome-colosseum",
+      "name": "罗马斗兽场",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime view with the Colosseum's elliptical mass, stacked arches, and broken outer wall accurate.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Warm early-evening view with faded terracotta light and long shadows; no crowds, signs, or vehicles.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "egypt-giza-pyramids",
+      "name": "吉萨金字塔",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Clear representative daytime desert view with the major pyramid silhouettes and scale relationships coherent, using sparse foreground detail.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Quiet sunrise with pale ochre sand, long soft shadows, and restrained atmospheric haze.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet sunrise pyramid scene with one small hoopoe bird in the foreground, away from the empty portrait slot.",
+          "hasCompanion": true,
+          "companionBrief": "One small hoopoe only; subtle, anatomically coherent, and secondary to the pyramids."
+        }
+      ]
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "name": "纽约布鲁克林大桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative daytime view of the stone Gothic arch and cable fan, with a quiet empty promenade and simplified skyline.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft sunrise along the promenade with faded rose light, accurate stone arches, and coherent suspension cables.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "name": "马丘比丘",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative elevated daytime view with Huayna Picchu, terraces, and principal stone ruins clearly recognizable.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Misty dawn with soft light touching the terraces and mountain ridges, keeping the landmark readable through restrained haze.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "name": "慕田峪长城",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative daytime ridge view with coherent crenellated walls and watchtowers following the mountain contours.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Quiet early-autumn sunrise with muted ochre foliage and soft light along the wall, avoiding crowded or over-detailed hills.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "name": "上海外滩",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative daytime Huangpu River view balancing the Bund promenade and recognizable Pudong skyline, with all signage omitted.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Hazy blue-hour river view with only restrained warm window lights, no neon, logos, signs, or high contrast.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda",
+      "name": "西安大雁塔",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime view with the pagoda's seven-story taper, square massing, and warm brick silhouette accurate.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft dusk with faded vermilion and ochre light, sparse trees, and no plaza crowds, fountains, or signage.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill",
+      "name": "桂林象鼻山",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime river view with the elephant-trunk arch and karst silhouette immediately recognizable.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Misty dawn over still water with soft sage hills and pale reflections, preserving the elephant-trunk opening.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet misty river scene with one small kingfisher perched near the water, away from the empty portrait slot.",
+          "hasCompanion": true,
+          "companionBrief": "One small kingfisher only; low emphasis and outside the portrait slot."
+        }
+      ]
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village",
+      "name": "东莞松山湖溪流背坡村",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime lakeside campus view featuring the red tram and one coherent European-inspired architectural group; no Huawei logo or signage.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft late-afternoon lakeside view with the red tram and warm European-inspired roofs, no logo, signage, people, or pseudo-text.",
+          "hasCompanion": false
+        }
+      ]
+    }
+  ]
+}

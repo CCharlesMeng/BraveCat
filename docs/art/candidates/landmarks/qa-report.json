@@ -1,0 +1,1979 @@
+{
+  "schemaVersion": 1,
+  "reportKind": "landmark-candidate-integration-qa",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "sourceManifest": "docs/art/candidates/landmarks/manifest.candidates.json",
+  "sourceManifestSha256": "05442f044260fc1564d171788a994940c3ff603fd9b7d859a5ba678e4a5a2d26",
+  "generatedAt": "2026-07-20",
+  "overallStatus": "pass",
+  "shippingEligible": false,
+  "totals": {
+    "destinationCount": 15,
+    "activeSceneVariantCount": 35,
+    "ordinaryVariantCount": 30,
+    "companionRareVariantCount": 5,
+    "supersededFileCount": 9,
+    "machineCheckCount": 25,
+    "machineChecksPassed": 25,
+    "machineChecksFailed": 0,
+    "pendingHumanCheckCount": 2
+  },
+  "machineChecks": [
+    {
+      "id": "unique-destination-ids",
+      "status": "pass",
+      "expected": {
+        "count": 15,
+        "unique": 15
+      },
+      "actual": {
+        "count": 15,
+        "unique": 15
+      }
+    },
+    {
+      "id": "active-scene-total",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "ordinary-and-companion-rare-totals",
+      "status": "pass",
+      "expected": {
+        "ordinary": 30,
+        "companionRare": 5
+      },
+      "actual": {
+        "ordinary": 30,
+        "companionRare": 5
+      }
+    },
+    {
+      "id": "destination-variant-coverage",
+      "status": "pass",
+      "expected": "exact plan variants per destination, including day-signature and golden-hour for all 15",
+      "actual": "complete",
+      "details": []
+    },
+    {
+      "id": "companion-rare-destination-scope",
+      "status": "pass",
+      "expected": [
+        "japan-kyoto-fushimi-inari-taisha",
+        "singapore-singapore-merlion",
+        "australia-sydney-opera-house",
+        "egypt-giza-pyramids",
+        "china-guilin-elephant-trunk-hill"
+      ],
+      "actual": [
+        "japan-kyoto-fushimi-inari-taisha",
+        "singapore-singapore-merlion",
+        "australia-sydney-opera-house",
+        "egypt-giza-pyramids",
+        "china-guilin-elephant-trunk-hill"
+      ]
+    },
+    {
+      "id": "active-ids-unique",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "active-image-paths-unique",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "candidate-selection-unambiguous",
+      "status": "pass",
+      "expected": [],
+      "actual": []
+    },
+    {
+      "id": "active-filename-grammar",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35,
+      "details": []
+    },
+    {
+      "id": "active-files-exist",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35,
+      "details": []
+    },
+    {
+      "id": "actual-dimensions-1200x900",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "actual-format-png",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "actual-bit-depth-8",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "actual-opaque-rgb",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "actual-embedded-or-assigned-srgb",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "manifest-sha256-matches-actual",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35,
+      "details": []
+    },
+    {
+      "id": "composition-x-y-scale-legal",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "composition-pose-allowed",
+      "status": "pass",
+      "expected": [
+        "eat",
+        "gaze",
+        "play",
+        "sit",
+        "sleep",
+        "walk"
+      ],
+      "actual": [
+        "gaze"
+      ]
+    },
+    {
+      "id": "composition-flip-boolean",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "safe-bounds-inside-unit-square",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "companion-flags-match-plan",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "candidate-status-and-non-shipping",
+      "status": "pass",
+      "expected": 35,
+      "actual": 35
+    },
+    {
+      "id": "no-cat-or-portrait-filenames",
+      "status": "pass",
+      "expected": [],
+      "actual": []
+    },
+    {
+      "id": "overview-sheet-structure",
+      "status": "pass",
+      "expected": {
+        "sheetCount": 3,
+        "destinationsPerSheet": 5
+      },
+      "actual": {
+        "sheetCount": 3,
+        "destinationsPerSheet": [
+          5,
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "id": "overview-sheet-file-format",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3
+    }
+  ],
+  "activeFiles": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "variantId": "day-signature",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "3f8007be31b28d37db9f78375be2c3865927d32f69eab2abd954fe4b6961381b",
+      "actualSha256": "3f8007be31b28d37db9f78375be2c3865927d32f69eab2abd954fe4b6961381b",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "cae884ec8ace36f04b110b5f3791be432a037a510f7d6ba265258e63e330959f",
+      "actualSha256": "cae884ec8ace36f04b110b5f3791be432a037a510f7d6ba265258e63e330959f",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "actualSha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+      "actualSha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--companion-rare--v01",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+      "actualSha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--day-signature--v01",
+      "destinationId": "singapore-singapore-merlion",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--singapore-singapore-merlion--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "c1e27f6769cb1faf7a6b9c27abe846514651a7c64b191345ad150c73ec96db0d",
+      "actualSha256": "c1e27f6769cb1faf7a6b9c27abe846514651a7c64b191345ad150c73ec96db0d",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4509ba389c2e4c41ef024bd85bd3fbb71c2c098b26e44aaa9fc2c543601205dd",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--golden-hour--v01",
+      "destinationId": "singapore-singapore-merlion",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--singapore-singapore-merlion--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "39f8f3cf7157c36e357d9cb37f6bfa143c3082296aa58071636f84c85dae61bd",
+      "actualSha256": "39f8f3cf7157c36e357d9cb37f6bfa143c3082296aa58071636f84c85dae61bd",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4509ba389c2e4c41ef024bd85bd3fbb71c2c098b26e44aaa9fc2c543601205dd",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--companion-rare--v02",
+      "destinationId": "singapore-singapore-merlion",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--singapore-singapore-merlion--companion-rare--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "1bc620e369e3045d7f56f506154511c2dd884faa448a13157bca7f1a4719823a",
+      "actualSha256": "1bc620e369e3045d7f56f506154511c2dd884faa448a13157bca7f1a4719823a",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4b899ad364ecb805bfefd765d0995eb0585afe56abaaa049e6aeaab4481e6078",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--day-signature--v01",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--australia-sydney-opera-house--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "586f6c12f5a61d259170809594f8f25db767477731dc8396ffc941f856188274",
+      "actualSha256": "586f6c12f5a61d259170809594f8f25db767477731dc8396ffc941f856188274",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--golden-hour--v01",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--australia-sydney-opera-house--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "2b59022e50558fb9ea8c9f62bbc8d7b75eef440783ead148a4230ac462d92871",
+      "actualSha256": "2b59022e50558fb9ea8c9f62bbc8d7b75eef440783ead148a4230ac462d92871",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--companion-rare--v01",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--companion-rare--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--australia-sydney-opera-house--companion-rare--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "a36ba0e649bbc304a3c0bfa414f9c86b85e39aba699d722b49ec36d383553481",
+      "actualSha256": "a36ba0e649bbc304a3c0bfa414f9c86b85e39aba699d722b49ec36d383553481",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "france-paris-eiffel-tower--day-signature--v01",
+      "destinationId": "france-paris-eiffel-tower",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--france-paris-eiffel-tower--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "b23c9c62bd4860b754e755e161cc4a97b6e94d2eb09eb521a6ed3b392a139bab",
+      "actualSha256": "b23c9c62bd4860b754e755e161cc4a97b6e94d2eb09eb521a6ed3b392a139bab",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "aaffbf524cda7573d3a04a5e0341822cb629839c5549c8841b76b7d72a5d7b6e",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json"
+    },
+    {
+      "id": "france-paris-eiffel-tower--golden-hour--v01",
+      "destinationId": "france-paris-eiffel-tower",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--france-paris-eiffel-tower--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "1f5719b499f9d7cd1f11acb784850078527328e7094e8d0b113a422a18860dd2",
+      "actualSha256": "1f5719b499f9d7cd1f11acb784850078527328e7094e8d0b113a422a18860dd2",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "aaffbf524cda7573d3a04a5e0341822cb629839c5549c8841b76b7d72a5d7b6e",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json"
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--day-signature--v01",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+      "actualSha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "dc54b7f9b8bebd2348033d70fa2877ba38295f24e895642ec6a2336bb7d06da9",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--golden-hour--v01",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262",
+      "actualSha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "dc54b7f9b8bebd2348033d70fa2877ba38295f24e895642ec6a2336bb7d06da9",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "italy-rome-colosseum--day-signature--v01",
+      "destinationId": "italy-rome-colosseum",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--italy-rome-colosseum--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "c5659c8da65731c86d148cb6c5046065b16f9ba7e773c2fde020d58ac5e17058",
+      "actualSha256": "c5659c8da65731c86d148cb6c5046065b16f9ba7e773c2fde020d58ac5e17058",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "78eef8807d2f0fd9663393d0caf7a3e5f5acae197cfee1dcfc1954c7d79ba5de",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json"
+    },
+    {
+      "id": "italy-rome-colosseum--golden-hour--v01",
+      "destinationId": "italy-rome-colosseum",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--italy-rome-colosseum--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "f0488c78e905e3bf98d9b79510eb6dedd287a9474701b4e17a038fa892a67904",
+      "actualSha256": "f0488c78e905e3bf98d9b79510eb6dedd287a9474701b4e17a038fa892a67904",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "78eef8807d2f0fd9663393d0caf7a3e5f5acae197cfee1dcfc1954c7d79ba5de",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--day-signature--v01",
+      "destinationId": "egypt-giza-pyramids",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--egypt-giza-pyramids--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "b74fcef69632e6c32c9018ee207dd2c97a83a1d25eb3f4ed412e8b5b91dd686e",
+      "actualSha256": "b74fcef69632e6c32c9018ee207dd2c97a83a1d25eb3f4ed412e8b5b91dd686e",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "60126f82aa64e24222bbfda0b0cd3978b2958f89cb05689c19b5f3435197e2fc",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--golden-hour--v01",
+      "destinationId": "egypt-giza-pyramids",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--egypt-giza-pyramids--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "51219eea90a761064a968ad14fecc57d09e743f108538b42aad7581ce226b250",
+      "actualSha256": "51219eea90a761064a968ad14fecc57d09e743f108538b42aad7581ce226b250",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "60126f82aa64e24222bbfda0b0cd3978b2958f89cb05689c19b5f3435197e2fc",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--companion-rare--v02",
+      "destinationId": "egypt-giza-pyramids",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "aca9f96c216bd9dcb7be475abca91a19828cbe61c5ef37dcfc5655783d0c7211",
+      "actualSha256": "aca9f96c216bd9dcb7be475abca91a19828cbe61c5ef37dcfc5655783d0c7211",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2b54193d6451ff5ddb9c6ae38aa53bd85a8d62fb021128d6c4f7ad0fd868f452",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+      "actualSha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "db71a4f4b4ec0804c53e9d8c4f08d67996361509d5c7a10e728b529e40a1b5b3",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+      "actualSha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "db71a4f4b4ec0804c53e9d8c4f08d67996361509d5c7a10e728b529e40a1b5b3",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "peru-cusco-machu-picchu--day-signature--v01",
+      "destinationId": "peru-cusco-machu-picchu",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+      "actualSha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "6568d0f5618a32289eeddb78dfb505af0abe219fbf67d39a8b58530e13a18e46",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json"
+    },
+    {
+      "id": "peru-cusco-machu-picchu--golden-hour--v01",
+      "destinationId": "peru-cusco-machu-picchu",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "7d01821919b48acf57d10e51376e05f3229d40bdf2cb942620b3b842b4e00f32",
+      "actualSha256": "7d01821919b48acf57d10e51376e05f3229d40bdf2cb942620b3b842b4e00f32",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "6568d0f5618a32289eeddb78dfb505af0abe219fbf67d39a8b58530e13a18e46",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall--day-signature--v01",
+      "destinationId": "china-beijing-mutianyu-great-wall",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "845b58c7c63742138863c843529c2f6f33ec5bbfd0757722bd19a89cb3fcc900",
+      "actualSha256": "845b58c7c63742138863c843529c2f6f33ec5bbfd0757722bd19a89cb3fcc900",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "72d2ba1f49d1b6cc0be504208acf057a178df4484412fa872f59dbc2edb9f76a",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall--golden-hour--v01",
+      "destinationId": "china-beijing-mutianyu-great-wall",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "c4ca7694b0e4bce7c7faf8f182764656adecb1944f05676efa4987fa73eed022",
+      "actualSha256": "c4ca7694b0e4bce7c7faf8f182764656adecb1944f05676efa4987fa73eed022",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "72d2ba1f49d1b6cc0be504208acf057a178df4484412fa872f59dbc2edb9f76a",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json"
+    },
+    {
+      "id": "china-shanghai-the-bund--day-signature--v01",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-shanghai-the-bund--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+      "actualSha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "47f754dc28f042c3f197bcec46e67f29a58b3599b7e37cb2c2c946959a273001",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json"
+    },
+    {
+      "id": "china-shanghai-the-bund--golden-hour--v01",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-shanghai-the-bund--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+      "actualSha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "47f754dc28f042c3f197bcec46e67f29a58b3599b7e37cb2c2c946959a273001",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json"
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "variantId": "day-signature",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "1ed5bca2814181c5821dbf84e8bab8645625f66f328d90770304d37fe1e7a1a7",
+      "actualSha256": "1ed5bca2814181c5821dbf84e8bab8645625f66f328d90770304d37fe1e7a1a7",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "9c81e3e1d6f9def93defed31e2cc8dba9d7d3a20034a00ab9393922f5eeec2f9",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json"
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--golden-hour--v01",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "imageSrc": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+      "exists": true,
+      "filenameExpected": "scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "24fb1d31e654f9688d5d33720ddb4a687bdc99a9ef85373af7793b6a9813f909",
+      "actualSha256": "24fb1d31e654f9688d5d33720ddb4a687bdc99a9ef85373af7793b6a9813f909",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "9c81e3e1d6f9def93defed31e2cc8dba9d7d3a20034a00ab9393922f5eeec2f9",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--day-signature--v02",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "variantId": "day-signature",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "ebed0474ee6671fd9654cadeef8a189484df0a163ba4f6169cb787884ee49e72",
+      "actualSha256": "ebed0474ee6671fd9654cadeef8a189484df0a163ba4f6169cb787884ee49e72",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--golden-hour--v02",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "147073907c4ac282554c578703b8c684a7086678027b8af772f218fad145e5bd",
+      "actualSha256": "147073907c4ac282554c578703b8c684a7086678027b8af772f218fad145e5bd",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--companion-rare--v02",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "781ed6f583956e3d1f7250672ad6f2aaf7bdac5e7a0ee0a457a3e672713567f2",
+      "actualSha256": "781ed6f583956e3d1f7250672ad6f2aaf7bdac5e7a0ee0a457a3e672713567f2",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--day-signature--v02",
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "variantId": "day-signature",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "68a878ce60954bf8bb9a0211e58dc8b566e60a6bb9946b97383b49ff26f81c21",
+      "actualSha256": "68a878ce60954bf8bb9a0211e58dc8b566e60a6bb9946b97383b49ff26f81c21",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "88b38fe40d8f88e16bfc96f7ccb5009b711c44df8b475b70690490846c482f42",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json"
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--golden-hour--v02",
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "exists": true,
+      "filenameExpected": "scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "filenameGrammarMatches": true,
+      "manifestSha256": "359aaaee5f65ce04aa8ac620f1ab61307846883dec0a7b5c4a14957b0c8c1127",
+      "actualSha256": "359aaaee5f65ce04aa8ac620f1ab61307846883dec0a7b5c4a14957b0c8c1127",
+      "sha256Matches": true,
+      "actual": {
+        "width": 1200,
+        "height": 900,
+        "format": "PNG",
+        "bitDepth": 8,
+        "pngColorType": 2,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f477eddf52b4fd77f1111863fee50f3872e4dd92bfcd6c6c6135c0cce2ff5f92",
+          "byteLength": 588
+        },
+        "chunks": [
+          "IHDR",
+          "iCCP"
+        ],
+        "embeddedOrAssignedSrgb": true
+      },
+      "compositionSlotLegal": true,
+      "poseAllowed": true,
+      "flipBoolean": true,
+      "safeBoundsLegal": true,
+      "statusCandidate": true,
+      "shippingEligibleFalse": true,
+      "hasCompanionMatchesPlan": true,
+      "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json"
+    }
+  ],
+  "supersededFiles": {
+    "count": 9,
+    "excludedFromActiveTotals": true,
+    "affectsOverallStatus": false,
+    "files": [
+      {
+        "destinationId": "china-beijing-forbidden-city-corner-tower",
+        "variantId": "day-signature",
+        "id": "china-beijing-forbidden-city-corner-tower--day-signature--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--day-signature--v01.png",
+        "exists": true,
+        "manifestSha256": "c470b3a1f7c366cc5a6b392655e651302aa92b5b702edd556747316642c787bb",
+        "actualSha256": "c470b3a1f7c366cc5a6b392655e651302aa92b5b702edd556747316642c787bb",
+        "sha256Matches": true,
+        "supersededBy": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+        "reason": "landmark-fidelity",
+        "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-beijing-forbidden-city-corner-tower",
+        "variantId": "golden-hour",
+        "id": "china-beijing-forbidden-city-corner-tower--golden-hour--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v01.png",
+        "exists": true,
+        "manifestSha256": "7d2fb0495be04475d3448c99a7fb1f8777f2bc19e1fe3ed0a6cf5dc23730c34a",
+        "actualSha256": "7d2fb0495be04475d3448c99a7fb1f8777f2bc19e1fe3ed0a6cf5dc23730c34a",
+        "sha256Matches": true,
+        "supersededBy": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+        "reason": "landmark-fidelity",
+        "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "singapore-singapore-merlion",
+        "variantId": "companion-rare",
+        "id": "singapore-singapore-merlion--companion-rare--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v01.png",
+        "exists": true,
+        "manifestSha256": "55e0e7654fad367aa9e422ad381305df568d5b55bd6ac3b448919259f07b0b92",
+        "actualSha256": "55e0e7654fad367aa9e422ad381305df568d5b55bd6ac3b448919259f07b0b92",
+        "sha256Matches": true,
+        "supersededBy": "singapore-singapore-merlion--companion-rare--v02",
+        "reason": "companion-prominence-too-high",
+        "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "egypt-giza-pyramids",
+        "variantId": "companion-rare",
+        "id": "egypt-giza-pyramids--companion-rare--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--companion-rare--v01.png",
+        "exists": true,
+        "manifestSha256": "f78147a5ddca9d346e424529579acf6eed12b5b46a80d8cccaf5d469416c57b5",
+        "actualSha256": "f78147a5ddca9d346e424529579acf6eed12b5b46a80d8cccaf5d469416c57b5",
+        "sha256Matches": true,
+        "supersededBy": "scene--egypt-giza-pyramids--companion-rare--v02.png",
+        "reason": "The v01 hoopoe is too large and competes with the pyramids instead of reading as a rare secondary detail.",
+        "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-guilin-elephant-trunk-hill",
+        "variantId": "day-signature",
+        "id": "china-guilin-elephant-trunk-hill--day-signature",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v01.png",
+        "exists": true,
+        "manifestSha256": "18919e06b7bf58283bc84279ea03b98471816c05cae5b2b31ec75137e30f56df",
+        "actualSha256": "18919e06b7bf58283bc84279ea03b98471816c05cae5b2b31ec75137e30f56df",
+        "sha256Matches": true,
+        "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+        "reason": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile.",
+        "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-guilin-elephant-trunk-hill",
+        "variantId": "golden-hour",
+        "id": "china-guilin-elephant-trunk-hill--golden-hour",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v01.png",
+        "exists": true,
+        "manifestSha256": "76a579fc02700984ef4c335f71615a70273118fca6a20fef7a198cc3f754f75f",
+        "actualSha256": "76a579fc02700984ef4c335f71615a70273118fca6a20fef7a198cc3f754f75f",
+        "sha256Matches": true,
+        "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+        "reason": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile.",
+        "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-guilin-elephant-trunk-hill",
+        "variantId": "companion-rare",
+        "id": "china-guilin-elephant-trunk-hill--companion-rare",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v01.png",
+        "exists": true,
+        "manifestSha256": "cf3c4cbeca267c6fb678174a003e8701f8f9c9caa0b047e0c6b9f2c0ed934ada",
+        "actualSha256": "cf3c4cbeca267c6fb678174a003e8701f8f9c9caa0b047e0c6b9f2c0ed934ada",
+        "sha256Matches": true,
+        "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+        "reason": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile.",
+        "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-dongguan-xiliubeipo-village",
+        "variantId": "day-signature",
+        "id": "china-dongguan-xiliubeipo-village--day-signature--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--day-signature--v01.png",
+        "exists": true,
+        "manifestSha256": "5f38d8ef50a4b6c6bc24f4b42736dd9e03792928278d0d0f247c46c2c4880679",
+        "actualSha256": "5f38d8ef50a4b6c6bc24f4b42736dd9e03792928278d0d0f247c46c2c4880679",
+        "sha256Matches": true,
+        "supersededBy": "scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+        "reason": "The clean v01 ensemble was too generic and did not preserve enough identifiable Xiliubeipo Village campus geometry.",
+        "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      },
+      {
+        "destinationId": "china-dongguan-xiliubeipo-village",
+        "variantId": "golden-hour",
+        "id": "china-dongguan-xiliubeipo-village--golden-hour--v01",
+        "status": "superseded",
+        "shippingEligible": false,
+        "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--golden-hour--v01.png",
+        "exists": true,
+        "manifestSha256": "0293df74c1ea48c45b51a659343271e6d87fb4b4f97455da1c52d11ba98cfb83",
+        "actualSha256": "0293df74c1ea48c45b51a659343271e6d87fb4b4f97455da1c52d11ba98cfb83",
+        "sha256Matches": true,
+        "supersededBy": "scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+        "reason": "The clean v01 ensemble was too generic and did not preserve enough identifiable Xiliubeipo Village campus geometry.",
+        "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
+        "evaluation": "informational-only; excluded from active totals and machine-pass gating"
+      }
+    ]
+  },
+  "qaArtifacts": [
+    {
+      "kind": "global-overview-contact-sheet",
+      "status": "candidate-non-final",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-01-of-03--non-final.png",
+      "destinations": [
+        "china-beijing-forbidden-city-corner-tower",
+        "japan-kyoto-fushimi-inari-taisha",
+        "singapore-singapore-merlion",
+        "australia-sydney-opera-house",
+        "france-paris-eiffel-tower"
+      ],
+      "destinationCount": 5,
+      "sha256": "aa4d82794c803b5620ee75210fb1a034c7c181ab2b21a715869e0c3cbf5defdb",
+      "dimensions": {
+        "width": 2400,
+        "height": 2810,
+        "format": "png",
+        "mode": "RGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        }
+      },
+      "overlays": [
+        "safeBounds",
+        "compositionSlot-bottom-center-anchor"
+      ],
+      "review": {
+        "decision": "pending"
+      }
+    },
+    {
+      "kind": "global-overview-contact-sheet",
+      "status": "candidate-non-final",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-02-of-03--non-final.png",
+      "destinations": [
+        "united-kingdom-london-tower-bridge",
+        "italy-rome-colosseum",
+        "egypt-giza-pyramids",
+        "united-states-new-york-brooklyn-bridge",
+        "peru-cusco-machu-picchu"
+      ],
+      "destinationCount": 5,
+      "sha256": "92a988ceebbfe9ef1548d7e26efc4ed6a3a20df21a4a3c5f33989a55dc111a40",
+      "dimensions": {
+        "width": 2400,
+        "height": 2810,
+        "format": "png",
+        "mode": "RGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        }
+      },
+      "overlays": [
+        "safeBounds",
+        "compositionSlot-bottom-center-anchor"
+      ],
+      "review": {
+        "decision": "pending"
+      }
+    },
+    {
+      "kind": "global-overview-contact-sheet",
+      "status": "candidate-non-final",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-03-of-03--non-final.png",
+      "destinations": [
+        "china-beijing-mutianyu-great-wall",
+        "china-shanghai-the-bund",
+        "china-xian-giant-wild-goose-pagoda",
+        "china-guilin-elephant-trunk-hill",
+        "china-dongguan-xiliubeipo-village"
+      ],
+      "destinationCount": 5,
+      "sha256": "6c3978514e75db19a117b7cd7525eeb6eec0bbd0cf557b018a9779cc80bfaecb",
+      "dimensions": {
+        "width": 2400,
+        "height": 2810,
+        "format": "png",
+        "mode": "RGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "colorSpace": "sRGB",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        }
+      },
+      "overlays": [
+        "safeBounds",
+        "compositionSlot-bottom-center-anchor"
+      ],
+      "review": {
+        "decision": "pending"
+      }
+    }
+  ],
+  "humanReview": {
+    "humanVisualReview": {
+      "status": "pending",
+      "scope": "all 35 clean active candidates"
+    },
+    "finalRealPortraitCompositeReview": {
+      "status": "pending",
+      "blockedBy": "approved real Portrait asset and human composite review"
+    },
+    "overviewSheetVisualInspection": {
+      "status": "pass",
+      "performed": true,
+      "scope": "clipping and label readability on all three non-final overview sheets",
+      "notes": "All three sheets were visually inspected at full-sheet scale: titles, Chinese destination names, variant/revision/companion labels, pending-review labels, safeBounds overlays, and bottom-center anchors are readable and remain within the canvas."
+    }
+  },
+  "normalizations": [
+    "Active IDs were normalized to destinationId--variantId--vNN while each source fragment candidate ID is retained as sourceCandidateId.",
+    "All imageSrc values were normalized to canonical repository-relative paths under docs/art/candidates/landmarks/{destinationId}/.",
+    "Missing units/anchor fields were normalized to units=normalized and anchor=bottom-center from the shared coordinate-system lock."
+  ],
+  "discrepancies": []
+}

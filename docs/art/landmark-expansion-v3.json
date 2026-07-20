@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v2-2026-07-20",
+  "status": "candidate-generation",
+  "shippingEligible": false,
+  "createdAt": "2026-07-20",
+  "expansion": {
+    "destinationCountAdded": 5,
+    "ordinaryVariantsAdded": 10,
+    "companionRareVariantsAdded": 3,
+    "combinedDestinationCount": 25,
+    "combinedActiveVariantTarget": 61
+  },
+  "lockedStyleAndFormatSource": "docs/art/landmark-production-v1.json",
+  "baseCandidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v2.json",
+  "candidateOutputRoot": "docs/art/candidates/landmarks",
+  "companionPolicy": {
+    "scope": "rare-scene-variants-only",
+    "directlyPaintedIntoScene": true,
+    "standaloneAsset": false,
+    "mayBeAnotherCat": false,
+    "catCompanionRules": [
+      "Do not add a cat Companion in this batch.",
+      "Do not infer, imitate, or pre-empt the player's Portrait identity.",
+      "Do not export a standalone animal, pose set, identity board, or reusable Portrait from a companion scene."
+    ],
+    "allCompanionRules": [
+      "Use only the explicitly listed species and count for each rare variant.",
+      "Keep companions subtle and visually secondary to both landmark and future player Portrait.",
+      "Companions must remain outside safeBounds and must not obscure landmark recognition points."
+    ]
+  },
+  "candidatePolicy": {
+    "shippingEligible": false,
+    "oneDirectoryPerDestination": true,
+    "doNotEditSharedManifest": true,
+    "writeManifestFragment": true,
+    "contactSheetRequired": true,
+    "candidateImagesMustNotShowSafeBounds": true,
+    "contactSheetMayShowSafeBounds": true,
+    "promoteOnlyAfterUserApproval": true,
+    "realSubjectReferenceRequired": true,
+    "recordReferenceUrlsAndRights": true,
+    "restrictedSourcePhotosRetained": false
+  },
+  "globalConstraints": [
+    "Every ordinary variant contains no cat, animal, person, date, postmark, caption, logo, watermark, readable sign, pseudo-text, UI, slot frame, or anchor mark.",
+    "A rare variant contains only its explicitly authorized Companion and no player cat or substitute Portrait.",
+    "Use primary or official visual sources for factual landmark geometry and layout, record provenance and rights notes, and do not retain restricted source photographs.",
+    "Keep the landmark immediately recognizable and preserve defining proportions and structural relationships.",
+    "Reserve an unobstructed, low-detail, low-contrast Portrait slot away from landmark recognition points and future copy and postmark zones.",
+    "Use locked B intensity: thin warm gray-brown linework, low-saturation sage green, ochre, faded vermilion, generous negative space, subtle warm-white paper texture, restrained watercolor bleed, and quiet nostalgia.",
+    "Avoid photorealism, 3D, flat vector art, neon, high saturation, hard digital gradients, thick black outlines, crowded backgrounds, malformed architecture or anatomy, and copied source-photo pixels."
+  ],
+  "destinations": [
+    {
+      "id": "mexico-yucatan-chichen-itza",
+      "name": "奇琴伊察",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime view of El Castillo with its stepped pyramid geometry, central stairways, square summit temple, and open limestone plaza immediately readable.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft late-afternoon view with restrained warm stone and long low shadows while preserving El Castillo's nine terraces, axial stairs, and summit temple.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet plaza-edge view with exactly one tiny Yucatan jay on a lateral stone, outside the Portrait slot and secondary to El Castillo.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "yucatan-jay",
+            "count": 1,
+            "maximumFrameHeight": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "id": "jordan-petra-al-khazneh",
+      "name": "佩特拉卡兹尼神殿",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet view emerging from the Siq toward Al-Khazneh, preserving the rose-rock facade's two-storey classical order, central tholos, urn, and enclosing canyon walls.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft amber light reaching Al-Khazneh through the shaded Siq, with restrained rose sandstone and the facade's columns, pediments, tholos, and urn clearly legible.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat",
+      "name": "吴哥窟",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime view across the reflecting basin with Angkor Wat's five-tower quincunx silhouette, layered galleries, causeway, and tropical tree line coherent.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Muted dawn with pale gold and lotus-pond reflections, keeping the five sanctuary towers and long horizontal gallery silhouette unmistakable without crowds.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet causeway-edge view with exactly one small long-tailed macaque seated on a lateral stone outside the Portrait slot and secondary to the temple.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "long-tailed-macaque",
+            "count": 1,
+            "maximumFrameHeight": 0.06
+          }
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound",
+      "name": "米尔福德峡湾",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime view across Milford Sound toward Mitre Peak, preserving the steep pyramidal summit, dark sheer fiord walls, quiet water, and restrained native shoreline.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft misty early light over Mitre Peak and the fiord, with pale reflections, layered cliffs, and the iconic pyramidal silhouette remaining clear.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet rocky shoreline view with exactly one small kea on a lateral boulder outside the Portrait slot and secondary to Mitre Peak.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "kea",
+            "count": 1,
+            "maximumFrameHeight": 0.06
+          }
+        }
+      ]
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou",
+      "name": "艾本哈杜村",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime view across the Ounila valley toward Ait Benhaddou, preserving the stepped earthen ksar, corner towers, crenellations, hillside crown, and sparse riverbed.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Restrained late-afternoon view with warm ochre earthen walls and long soft shadows, keeping the clustered kasbah towers and hill-climbing silhouette coherent.",
+          "hasCompanion": false
+        }
+      ]
+    }
+  ]
+}

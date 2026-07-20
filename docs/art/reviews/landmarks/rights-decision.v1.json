@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "landmark-rights-and-provenance-product-risk-review",
+  "decision": "review-complete-not-cleared",
+  "reviewer": "agent-research-not-legal-counsel",
+  "reviewedAt": "2026-07-20",
+  "shippingEligible": false,
+  "legalDisclaimer": "Conservative product-risk review only; not legal advice.",
+  "sourceReview": {
+    "path": "docs/art/reviews/landmarks/rights-review-v1.md",
+    "sha256": "9bbec7b21f4c1eaef930c18628870bebd7a93251e39e9cefa1e4b45a3d49008e"
+  },
+  "scope": {
+    "candidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v2.json",
+    "candidateManifestSha256": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0",
+    "activeSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
+    "destinationCount": 20,
+    "activeSceneVariantCount": 48
+  },
+  "globalGates": [
+    {
+      "id": "style-reference-rights",
+      "status": "open",
+      "assetCount": 48,
+      "requiredAction": "signed-author-license-acquisition-records"
+    },
+    {
+      "id": "generator-terms-provenance",
+      "status": "open",
+      "assetCount": 48,
+      "requiredAction": "dated-terms-account-plan-provider-record"
+    },
+    {
+      "id": "reverse-image-and-similarity-review",
+      "status": "open",
+      "assetCount": 48,
+      "requiredAction": "reverse-image-and-human-similarity-review"
+    },
+    {
+      "id": "trademark-clearance",
+      "status": "open",
+      "assetCount": 48,
+      "requiredAction": "territory-class-search-and-no-endorsement-qa"
+    }
+  ],
+  "summary": {
+    "low": {
+      "destinationCount": 6,
+      "sceneCount": 13
+    },
+    "medium": {
+      "destinationCount": 7,
+      "sceneCount": 19
+    },
+    "high": {
+      "destinationCount": 2,
+      "sceneCount": 4
+    },
+    "blocked": {
+      "destinationCount": 5,
+      "sceneCount": 12
+    },
+    "plausibleAfterRemediation": {
+      "destinationCount": 13,
+      "sceneCount": 32
+    }
+  },
+  "destinations": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower",
+      "sceneCount": 2,
+      "risk": "medium",
+      "disposition": "plausible-after-cc-compliance",
+      "shippingEligible": false
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-site-policy-review",
+      "shippingEligible": false
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "stb-permission-required",
+      "shippingEligible": false
+    },
+    {
+      "id": "australia-sydney-opera-house",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "soht-license-or-counsel-required",
+      "shippingEligible": false
+    },
+    {
+      "id": "france-paris-eiffel-tower",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-if-no-protected-lighting",
+      "shippingEligible": false
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": false
+    },
+    {
+      "id": "italy-rome-colosseum",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "park-authorization-required",
+      "shippingEligible": false
+    },
+    {
+      "id": "egypt-giza-pyramids",
+      "sceneCount": 3,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": false
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": false
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "sceneCount": 2,
+      "risk": "high",
+      "disposition": "peru-counsel-and-authority-scope-confirmation",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "sceneCount": 2,
+      "risk": "medium",
+      "disposition": "plausible-after-building-signage-inventory",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-cc-compliance",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "huawei-permission-or-replace",
+      "shippingEligible": false
+    },
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda",
+      "sceneCount": 2,
+      "risk": "high",
+      "disposition": "china-counsel-and-cc-adaptation-resolution",
+      "shippingEligible": false
+    },
+    {
+      "id": "india-agra-taj-mahal",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-similarity-review",
+      "shippingEligible": false
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-site-review",
+      "shippingEligible": false
+    },
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "sanctuary-license-or-brazil-counsel-required",
+      "shippingEligible": false
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-similarity-review",
+      "shippingEligible": false
+    }
+  ],
+  "remainingGates": [
+    "global-provenance-remediation",
+    "destination-specific-rights-remediation",
+    "qualified-counsel-or-permission-for-high-and-blocked-destinations",
+    "explicit-shipping-approval"
+  ]
+}

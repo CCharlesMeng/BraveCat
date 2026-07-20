@@ -1,0 +1,702 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v3.json",
+  "destinationId": "new-zealand-fiordland-milford-sound",
+  "destinationName": "米尔福德峡湾",
+  "preferredPlaceReference": "Piopiotahi / Milford Sound",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "styleDirection": {
+    "styleIntensity": "B",
+    "status": "locked",
+    "retainedCues": [
+      "thin warm gray-brown linework",
+      "translucent low-saturation sage, blue-gray, and restrained ochre watercolor",
+      "subtle warm-white paper grain",
+      "restrained watercolor bleed",
+      "airy negative space",
+      "quiet nostalgia"
+    ],
+    "excludedReferenceContent": [
+      "cats",
+      "birds and other reference animals",
+      "rooms and furniture",
+      "torii and architecture",
+      "objects and icons",
+      "text, stamps, and layouts",
+      "borders and UI"
+    ],
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+    ]
+  },
+  "provenance": {
+    "generator": "Cursor GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "referenceUse": {
+      "styleReferences": "locked-B watercolor cues only",
+      "realSubjectSources": "factual geometry, spatial relationships, naming caution, and companion plausibility only",
+      "sourcePhotoPixelsUsed": false
+    },
+    "sourceGeneratedAssets": [
+      {
+        "promptId": "day-signature-v01",
+        "toolManagedFilename": "milford-day-signature.png",
+        "sha256": "8baae6b20a528720bb98363b8a6d3e02584264402d8fcae442b5397b4fcf3066",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "golden-hour-v01",
+        "toolManagedFilename": "milford-golden-hour.png",
+        "sha256": "7833b43059fe054bb4523712fa799c20c6ae2645b916124fb6e70885a2f77048",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "companion-rare-v01",
+        "toolManagedFilename": "milford-companion-rare.png",
+        "sha256": "480a7403476c6b6a0054ecd4ca77e2f1107c5e390ccfe574db413a6626ae0e8a",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "companion-rare-v02",
+        "toolManagedFilename": "milford-companion-rare-v02.png",
+        "sha256": "e71de510fb57f54e88529ed2a2cf91e3b3e1142a28d2c42b989684f46448a3e5",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      }
+    ],
+    "normalization": {
+      "tool": "Pillow 12.3.0",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "exactAspectCropDimensions": {
+        "width": 1364,
+        "height": 1023,
+        "aspectRatio": "4:3"
+      },
+      "cropPixels": {
+        "left": 86,
+        "top": 0,
+        "rightExclusive": 1450,
+        "bottomExclusive": 1023
+      },
+      "resize": {
+        "method": "Pillow Image.Resampling.LANCZOS",
+        "width": 1200,
+        "height": 900
+      },
+      "distortion": false,
+      "inputColorInterpretation": "untagged generator RGB treated as sRGB",
+      "outputProfile": "embedded sRGB built-in ICC profile, 588 bytes",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh PNG export retaining only the embedded ICC profile"
+    },
+    "regenerationAudit": [
+      {
+        "variantId": "companion-rare",
+        "supersededVersion": "v01",
+        "replacementVersion": "v02",
+        "reason": "The first draft's complete kea silhouette measured approximately 83 px on the normalized 900 px frame, about 9.2% frame height, exceeding the plan's 6% maximum.",
+        "supersededRevisionRetained": true,
+        "supersededImageSrc": "scene--new-zealand-fiordland-milford-sound--companion-rare--v01.png"
+      }
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "visualReferenceResearch": {
+      "src": "visual-reference-research.md",
+      "sha256": "cdb982aece82c092587b346f99f66cd60df5a5b8aa7ad629dd58f671939a7f98"
+    },
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotoPixelsUsed": false,
+    "geometryOnlyUse": true,
+    "notes": "Four primary or official factual sources were used as text references. No source photograph or visual file was retained. Final rights approval remains pending.",
+    "sources": [
+      {
+        "id": "doc-milford-geometry",
+        "sourceOwner": "New Zealand Department of Conservation / Te Papa Atawhai",
+        "title": "Milford Road/Milford Sound area: Fiordland National Park",
+        "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/places-to-go/milford-road-milford-sound-area/",
+        "licenseOrTerms": "DOC Crown material is generally CC BY 4.0 unless marked otherwise; the page image is labelled DOC. No image was downloaded or reused.",
+        "termsUrl": "https://www.doc.govt.nz/footer-links/copyright/",
+        "use": "Mitre Peak's 1,692 m direct rise, sheer walls, glacial U-shaped setting, wet climate, and Milford Sound/Piopiotahi context.",
+        "assetRetained": false
+      },
+      {
+        "id": "ngai-tahu-reimagining-piopiotahi",
+        "sourceOwner": "Te Rūnanga o Ngāi Tahu",
+        "title": "Reimagining Piopiotahi",
+        "url": "https://ngaitahu.iwi.nz/opportunities-and-resources/publications/te-karaka/reimagining-piopiotahi/",
+        "licenseOrTerms": "No open license stated; proprietary article and photographic content requires applicable authorization. Facts were paraphrased and no visual asset was retained.",
+        "termsUrl": "https://ngaitahu.iwi.nz/terms-of-service/",
+        "use": "Piopiotahi naming, Te Rua-o-te-Moko context, mana whenua, Tū Te Rakiwhānoa account, and caution that multiple name-origin accounts exist.",
+        "assetRetained": false
+      },
+      {
+        "id": "unesco-te-wahipounamu",
+        "sourceOwner": "UNESCO World Heritage Centre",
+        "title": "Te Wahipounamu – South West New Zealand",
+        "url": "https://whc.unesco.org/en/list/551/",
+        "licenseOrTerms": "Property description marked CC BY-SA 3.0 IGO; photographs and other visual elements require their applicable authorization under UNESCO's image policy.",
+        "termsUrl": "https://whc.unesco.org/en/disclaimer/",
+        "use": "Successive glaciation, fjords, towering cliffs, southern beech and podocarp cover, mountainous wilderness, and kea presence in the property.",
+        "assetRetained": false
+      },
+      {
+        "id": "doc-kea",
+        "sourceOwner": "New Zealand Department of Conservation / Te Papa Atawhai",
+        "title": "Kea: New Zealand native land birds",
+        "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kea/",
+        "licenseOrTerms": "DOC Crown text is generally CC BY 4.0; the lead photograph is credited James Reardon with a copyright symbol and therefore requires permission. It was not retained or used.",
+        "termsUrl": "https://www.doc.govt.nz/footer-links/copyright/",
+        "use": "Fiordland and sea-level plausibility, Milford Track and Homer Tunnel occurrence, conservation status, taonga significance, and no-feeding caution.",
+        "assetRetained": false
+      }
+    ]
+  },
+  "culturalReview": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "warnings": [
+      "Prefer Piopiotahi / Milford Sound or a product-wide form approved through cultural review.",
+      "Do not present one origin account for Piopiotahi as uncontested; Te Rūnanga o Ngāi Tahu records multiple accounts.",
+      "Do not turn Tū Te Rakiwhānoa narratives, waka, adze, pou, pounamu, or invented Māori-inspired motifs into decoration without mana-whenua-led art direction.",
+      "Do not add an unverified Māori alternate name for Mitre Peak.",
+      "Do not use UNESCO or World Heritage emblems or imply endorsement."
+    ]
+  },
+  "prompts": [
+    {
+      "id": "day-signature-v01",
+      "variantId": "day-signature",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "exactText": "Create the DAY-SIGNATURE candidate scene for Milford Sound / Piopiotahi, New Zealand. Landscape 4:3. View from a quiet natural foreshore across calm fiord water toward Mitre Peak. Geography must be immediately recognizable: Mitre Peak is a very steep, asymmetrical pyramidal mountain rising directly from the water, with a narrow clear summit and descending jagged shoulder; dark near-sheer rock faces and forested lower slopes; massive U-shaped glacial fiord walls recede on both sides; restrained native beech shoreline and pale blue-gray reflections. Keep the summit silhouette crisp against a spacious pale daylight sky; do not turn it into a generic snowy cone. At bottom-center, intentionally compose a broad, quiet, pale natural rock shelf/shore patch that is grounded, low-detail, low-contrast, and completely unmarked for a future seated/gazing Portrait; keep recognition features above it and keep edges, plants, reflections, and objects out of this quiet patch. STYLE ONLY from the three attached references: preserve only locked intensity-B watercolor language—thin warm gray-brown pencil/ink linework, translucent low-saturation sage and blue-gray washes, restrained ochre, subtle warm-white paper grain, gentle controlled watercolor bleed, airy negative space, quiet nostalgia. Use the center B panel only from the triptych. Do not copy or include any reference subject, cat, bird, torii, room, furniture, object, icon, postcard frame, layout, writing, stamp, or decoration. This scene contains NO ANIMALS at all, including no distant birds or silhouettes. Also no player cat or substitute cat, no people, boats, docks, buildings, roads, vehicles, text or pseudo-text, date, postmark, logo, watermark, UI, border, frame, label, guide, safe-bound box, anchor, slot marker, or geometric overlay. No photorealism, 3D, flat vector art, neon, thick black outlines, hard digital gradients, or crowded detail. Output only the unframed scene artwork."
+    },
+    {
+      "id": "golden-hour-v01",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "exactText": "Create the GOLDEN-HOUR candidate scene for Milford Sound / Piopiotahi, New Zealand. Landscape 4:3. A soft misty early-golden-light view from a natural foreshore across quiet water toward Mitre Peak. Geography must remain immediately recognizable: Mitre Peak is a very steep, asymmetrical pyramidal mountain rising directly from the water, with narrow summit and descending jagged shoulder; dark sheer rock faces and forested lower slopes; immense U-shaped glacial fiord walls layer into distance on both sides; pale calm reflections. Use restrained peach-ochre dawn light and thin drifting mist, but mist must not hide or flatten the iconic pyramidal summit silhouette; avoid a generic snowy cone and avoid dramatic saturated sunset. At bottom-center, intentionally compose a broad, quiet, pale natural rock shelf/shore patch that is grounded, low-detail, low-contrast, and completely unmarked for a future seated/gazing Portrait; keep recognition features above it and keep edges, plants, reflections, and objects out of this quiet patch. STYLE ONLY from the three attached references: retain only locked intensity-B watercolor cues—thin warm gray-brown pencil/ink linework, translucent low-saturation sage, blue-gray and restrained ochre washes, subtle warm-white paper grain, gentle controlled watercolor bleed, airy negative space, quiet nostalgia. Use the center B panel only from the triptych. Do not copy or include any reference subject, cat, bird, torii, room, furniture, object, icon, postcard frame, layout, writing, stamp, or decoration. This scene contains NO ANIMALS at all, including no distant birds or silhouettes. Also no player cat or substitute cat, no people, boats, docks, buildings, roads, vehicles, text or pseudo-text, date, postmark, logo, watermark, UI, border, frame, label, guide, safe-bound box, anchor, slot marker, or geometric overlay. No photorealism, 3D, flat vector art, neon, thick black outlines, hard digital gradients, or crowded detail. Output only the unframed scene artwork."
+    },
+    {
+      "id": "companion-rare-v01",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "exactText": "Create the COMPANION-RARE candidate scene for Milford Sound / Piopiotahi, New Zealand. Landscape 4:3. A quiet rocky natural foreshore across calm fiord water toward Mitre Peak. Geography must be immediately recognizable: Mitre Peak is a very steep, asymmetrical pyramidal mountain rising directly from the water, with narrow clear summit and descending jagged shoulder; dark near-sheer rock faces and forested lower slopes; massive U-shaped glacial fiord walls recede on both sides; restrained native shoreline and pale blue-gray reflections. At bottom-center, intentionally compose a broad, quiet, pale natural rock shelf/shore patch that is grounded, low-detail, low-contrast, and completely unmarked for a future seated/gazing Portrait; keep recognition features above it and keep edges, plants, reflections, and objects out of this quiet patch. Include EXACTLY ONE small kea, and no other animal: one anatomically coherent olive-green New Zealand alpine parrot with a dark long curved bill and long tapered tail, calmly perched in side view on one isolated FAR LOWER-RIGHT LATERAL boulder. Keep the entire kea tiny—about 3–4% of frame height, never above 6%—visually secondary, clearly outside the bottom-center quiet Portrait area, with closed wings and no exaggerated orange display. No second kea, no flock, no distant bird silhouettes. STYLE ONLY from the three attached references: retain only locked intensity-B watercolor cues—thin warm gray-brown pencil/ink linework, translucent low-saturation sage and blue-gray washes, restrained ochre, subtle warm-white paper grain, gentle controlled watercolor bleed, airy negative space, quiet nostalgia. Use the center B panel only from the triptych. Do not copy or include any reference subject, cat, torii, room, furniture, object, icon, postcard frame, layout, writing, stamp, or decoration. No player cat or substitute cat, no people, boats, docks, buildings, roads, vehicles, food, feeding, human gear, text or pseudo-text, date, postmark, logo, watermark, UI, border, frame, label, guide, safe-bound box, anchor, slot marker, or geometric overlay. No photorealism, 3D, flat vector art, neon, thick black outlines, hard digital gradients, or crowded detail. Output only the unframed scene artwork."
+    },
+    {
+      "id": "companion-rare-v02",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "requestedAspectRatio": "4:3",
+      "exactText": "Regenerate the COMPANION-RARE candidate for Milford Sound / Piopiotahi, New Zealand because the first draft's kea was too large. Landscape 4:3. Quiet rocky natural foreshore across calm fiord water toward immediately recognizable Mitre Peak: a very steep asymmetrical pyramidal mountain rising directly from water, narrow summit and descending jagged shoulder, dark near-sheer rock faces, forested lower slopes, huge U-shaped glacial walls layering on both sides, pale blue-gray reflections. Reserve a broad grounded low-detail pale natural rock shelf at BOTTOM-CENTER, entirely unmarked and free of plants, edges, objects, and reflection seams, for a future seated/gazing Portrait. Include EXACTLY ONE kea and no other animal. The one kea must be MINUSCULE: its complete silhouette from crown through tail must be only about 2% of total frame height, certainly under 4%; place it on a small isolated FAR LOWER-RIGHT LATERAL boulder near the right edge, completely outside the bottom-center quiet area. It should read on close inspection as an olive-green New Zealand alpine parrot with dark curved bill, closed wings, and long tapered tail, but remain a tiny secondary detail. No second bird, no distant silhouettes, no enlarged foreground wildlife, no food or human interaction. STYLE ONLY from attached references: locked intensity-B watercolor cues only, center B triptych panel only—thin warm gray-brown pencil/ink, translucent low-saturation sage and blue-gray, restrained ochre, subtle warm-white paper grain, gentle controlled bleed, airy negative space, quiet nostalgia. Do not copy any reference subject, cat, torii, room, furniture, icon, postcard frame, layout, writing, stamp, or decoration. No player/substitute cat, people, boats, docks, buildings, roads, vehicles, text/pseudo-text, date, postmark, logo, watermark, UI, border, frame, label, safe-bound box, anchor, guide, slot marker, or overlay. No photorealism, 3D, flat vector art, neon, thick black outlines, hard digital gradients, snowy generic cone, or clutter. Output only the unframed scene artwork."
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--new-zealand-fiordland-milford-sound--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shipping": false,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1800,
+      "height": 700
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "sha256": "d60fd54f344c6f146394055cf74e0164f0577e5226fd3a1c2674bb08604686dd",
+    "overlays": [
+      "variant labels and active revision",
+      "portrait safeBounds",
+      "bottom-center portrait anchors",
+      "technical format checks",
+      "rare-companion count, placement, and estimated frame-height callout",
+      "superseded rare-revision note"
+    ]
+  },
+  "machineInspection": {
+    "decision": "pass",
+    "checkedAt": "2026-07-20",
+    "tool": "Pillow 12.3.0 plus PNG IHDR and ICC inspection",
+    "checks": {
+      "activeSceneCount": 3,
+      "retainedSupersededSceneCount": 1,
+      "allActiveScenes1200x900": true,
+      "allActiveScenesAspectRatio4x3": true,
+      "allActiveScenesPng": true,
+      "allActiveScenesBitDepth8": true,
+      "allActiveScenesPngColorType2Truecolor": true,
+      "allActiveScenesRgb": true,
+      "allActiveScenesOpaque": true,
+      "allActiveScenesEmbeddedSrgb": true,
+      "allActiveScenesMetadataOnlyIcc": true,
+      "contactSheet1800x700RgbOpaqueSrgb": true,
+      "hashesRecomputed": true
+    },
+    "notes": "All retained PNGs have an embedded 588-byte 'sRGB built-in' profile. Candidate scenes contain no overlays; overlays occur only on the contact sheet."
+  },
+  "visualInspection": {
+    "decision": "pass-for-candidate-review",
+    "checkedAt": "2026-07-20",
+    "notes": "The three active scenes preserve a readable steep pyramidal Mitre Peak, direct water rise, enclosing fiord walls, quiet bottom-center grounded area, and locked-B watercolor character. Ordinary variants show no observed animals. Active rare v02 shows exactly one small lateral kea; v01 was rejected for oversize and retained only as a superseded audit revision."
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Machine and visual constraint inspection completed. No approval is inferred. Human art-direction, geographic-specificity, cultural, companion-anatomy, rights, and final candidate reviews remain pending."
+  },
+  "sceneVariants": [
+    {
+      "id": "new-zealand-fiordland-milford-sound--day-signature",
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "Piopiotahi daylight signature",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--new-zealand-fiordland-milford-sound--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "15bd7c19291cb670a422feaf5b909b6c91bff25dfbf1b64de86f14c5db3b4796",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.38,
+        "y": 0.6,
+        "width": 0.24,
+        "height": 0.35
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The bottom-center anchor lands on a broad pale natural rock shelf. The reserved portrait body area remains below the peak's recognition silhouette."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "day-signature-v01",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "subjectGeometrySourceIds": [
+          "doc-milford-geometry",
+          "unesco-te-wahipounamu"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "No cat, animal, person, boat, dock, building, road, vehicle, text, pseudo-text, date, postmark, logo, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "geographicSpecificity": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Steep pyramidal Mitre Peak, direct water rise, forested lower slopes, and enclosing glacial fiord walls are immediately readable."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound--golden-hour",
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "Piopiotahi misty golden hour",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "1958c28261d22b6ad4b9ae5bfcadcc7739b5d704cba4502b97e0fa2e60827781",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.38,
+        "y": 0.6,
+        "width": 0.24,
+        "height": 0.35
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The bottom-center anchor lands on the pale natural rock shelf; the portrait area stays below the summit and clear of misty recognition edges."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "golden-hour-v01",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "subjectGeometrySourceIds": [
+          "doc-milford-geometry",
+          "unesco-te-wahipounamu"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "No cat, animal, person, boat, dock, building, road, vehicle, text, pseudo-text, date, postmark, logo, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "geographicSpecificity": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Misty pale-gold light remains restrained; Mitre Peak's steep summit and direct water rise remain readable."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound--companion-rare",
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "name": "Piopiotahi with rare kea",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--new-zealand-fiordland-milford-sound--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "c2cfb56c5f8432be411c7c3da3ef9405e86b0ed27ccb2b906b033c2400ab0f19",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "kea",
+        "scientificName": "Nestor notabilis",
+        "count": 1,
+        "maximumFrameHeight": 0.06,
+        "estimatedFrameHeight": 0.052,
+        "frameHeightEstimateMethod": "manual pixel-bounding inspection on normalized output: approximately 47 px / 900 px",
+        "placement": "far lower-right lateral natural boulder",
+        "outsideSafeBounds": true,
+        "secondaryToLandmark": true,
+        "anatomicallyCoherent": true,
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false,
+        "otherAnimalsPresent": false
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.38,
+        "y": 0.6,
+        "width": 0.24,
+        "height": 0.35
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The portrait anchor is grounded on the broad bottom-center rock shelf. The single kea is isolated near the far-right edge at approximately x=0.943, y=0.794."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "companion-rare-v02",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "subjectGeometrySourceIds": [
+          "doc-milford-geometry",
+          "unesco-te-wahipounamu"
+        ],
+        "companionSourceIds": [
+          "doc-kea",
+          "unesco-te-wahipounamu"
+        ],
+        "culturalSourceIds": [
+          "ngai-tahu-reimagining-piopiotahi"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "Exactly one small kea observed. No cat, second animal, person, boat, dock, building, road, vehicle, food, human gear, text, pseudo-text, date, postmark, logo, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "companion": {
+          "decision": "pass-for-candidate-review",
+          "notes": "One coherent olive-green hooked-bill parrot is approximately 5.2% of frame height, laterally isolated outside safeBounds, and secondary to Mitre Peak. It did not meet the regeneration prompt's conservative under-4% target, but it passes the source plan's hard 6% ceiling."
+        },
+        "geographicSpecificity": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Mitre Peak's steep pyramidal summit, direct water rise, and enclosing glacial walls remain dominant and readable."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null,
+          "companionAnatomy": null,
+          "companionSubordination": null
+        },
+        "notes": "Pending human art-direction, companion-anatomy, and cultural review."
+      }
+    }
+  ],
+  "supersededRevisions": [
+    {
+      "id": "new-zealand-fiordland-milford-sound--companion-rare--v01",
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "status": "superseded-rejected",
+      "candidate": false,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--new-zealand-fiordland-milford-sound--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "197225b488ec556191a839f46e21d41ecc2e99db138e3a3b7e420c056e4aeca1",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "kea",
+        "count": 1,
+        "maximumFrameHeight": 0.06,
+        "estimatedFrameHeight": 0.092,
+        "frameHeightEstimateMethod": "manual pixel-bounding inspection on normalized output: approximately 83 px / 900 px",
+        "outsideSafeBounds": true,
+        "otherAnimalsPresent": false
+      },
+      "provenance": {
+        "promptId": "companion-rare-v01",
+        "normalizationRef": "#/provenance/normalization"
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass"
+        },
+        "hardConstraints": {
+          "decision": "fail",
+          "notes": "The sole kea exceeds the 6% maximum frame-height constraint. Superseded by v02 and excluded from the active contact sheet and sceneVariants."
+        }
+      }
+    }
+  ],
+  "pendingReviews": [
+    "human art-direction",
+    "landmark geographic specificity",
+    "companion anatomy and subordination",
+    "mana-whenua cultural naming and story use",
+    "rights",
+    "final candidate selection",
+    "portrait composite after the user-photo hard gate"
+  ],
+  "approval": {
+    "inferred": false,
+    "promoted": false,
+    "shippingEligible": false
+  }
+}

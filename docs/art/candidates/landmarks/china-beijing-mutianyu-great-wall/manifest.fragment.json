@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "china-beijing-mutianyu-great-wall",
+  "destinationName": "慕田峪长城",
+  "status": "candidate",
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque"
+  },
+  "sceneVariants": [
+    {
+      "id": "china-beijing-mutianyu-great-wall--day-signature",
+      "variantId": "day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "format": "png",
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "845b58c7c63742138863c843529c2f6f33ec5bbfd0757722bd19a89cb3fcc900",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.22,
+        "y": 0.91,
+        "scale": 0.31,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.055,
+          "y": 0.555,
+          "width": 0.34,
+          "height": 0.385
+        },
+        "provenance": {
+          "generator": "Cursor GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null,
+          "generatedOn": "2026-07-20",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "operation": "center-crop-to-4:3-then-resize",
+            "resampling": "Lanczos",
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG",
+            "distortion": false
+          },
+          "referenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "sourcePlan": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export"
+        },
+        "inspection": {
+          "hardViolations": [],
+          "noCatOrSubstituteCat": true,
+          "noAnimalOrPerson": true,
+          "noTextDatePostmarkLogoWatermarkOrUi": true,
+          "noSlotLineOrAnchor": true,
+          "coherentWallAndWatchtowers": true,
+          "quietPortraitSpaceReserved": true
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": "Pending user art review."
+        }
+      }
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall--golden-hour",
+      "variantId": "golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "format": "png",
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "c4ca7694b0e4bce7c7faf8f182764656adecb1944f05676efa4987fa73eed022",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.23,
+        "y": 0.91,
+        "scale": 0.31,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.055,
+          "y": 0.57,
+          "width": 0.36,
+          "height": 0.37
+        },
+        "provenance": {
+          "generator": "Cursor GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null,
+          "generatedOn": "2026-07-20",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "operation": "center-crop-to-4:3-then-resize",
+            "resampling": "Lanczos",
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG",
+            "distortion": false
+          },
+          "referenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "sourcePlan": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export"
+        },
+        "inspection": {
+          "hardViolations": [],
+          "noCatOrSubstituteCat": true,
+          "noAnimalOrPerson": true,
+          "noTextDatePostmarkLogoWatermarkOrUi": true,
+          "noSlotLineOrAnchor": true,
+          "coherentWallAndWatchtowers": true,
+          "quietPortraitSpaceReserved": true
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": "Pending user art review."
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "status": "non-final",
+    "shippingEligible": false,
+    "imageSrc": "contact-sheet--china-beijing-mutianyu-great-wall--non-final.png",
+    "dimensions": {
+      "width": 1600,
+      "height": 740,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "format": "png",
+      "alpha": "opaque",
+      "mode": "RGB"
+    },
+    "sha256": "635634ae5a44c110235b99af6e7087422a7e8ac63485b840c41bfe95a2fbe3c1",
+    "overlays": [
+      "variant-labels",
+      "safeBounds",
+      "compositionSlot-anchor",
+      "qa-status"
+    ]
+  }
+}

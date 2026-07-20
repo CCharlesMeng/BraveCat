@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v2.json",
+  "destinationId": "south-africa-cape-town-table-mountain",
+  "destinationName": "开普敦桌山",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "generatedAt": "2026-07-20",
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenance": {
+    "generator": "Cursor GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "referenceUse": {
+      "styleReferences": "locked-B style only",
+      "realVisualSources": "factual subject geometry and spatial relationships only"
+    },
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+    ],
+    "normalization": {
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "method": "integer 1364x1023 crop to exact 4:3 followed by Lanczos resize",
+      "outputDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "outputProfile": "embedded sRGB",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh RGB PNG export"
+    },
+    "regenerationAudit": [
+      {
+        "variantId": "day-signature",
+        "reason": "Initial draft placed the lower-left quiet portrait region over water rather than plausible grounded foreground.",
+        "retainedInCandidateDirectory": false
+      },
+      {
+        "variantId": "companion-rare",
+        "reason": "Initial draft's rock hyrax exceeded the maximum 6% frame-height constraint.",
+        "retainedInCandidateDirectory": false
+      }
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "visualReferenceResearch": {
+      "src": "visual-reference-research.md",
+      "sha256": "296633bcc536feea45a9a714366e06318744a11c68f5cff722b0643aa3ded59a"
+    },
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotoPixelsUsed": false,
+    "geometryOnlyUse": true,
+    "notes": "All source pages were used only to verify factual geometry, orientation, city layering, and tablecloth behavior. No source photograph is included in this candidate package.",
+    "sources": [
+      {
+        "id": "sat-overall-form",
+        "sourceOwner": "South African Tourism",
+        "title": "Explore the rugged, intensely beautiful mountain ranges of South Africa",
+        "url": "https://www.southafrica.net/uk/en/travel/article/explore-the-rugged-intensely-beautiful-mountain-ranges-of-south-africa",
+        "licenseOrTerms": "SAT and/or contributor copyright; copying or downloading requires written permission under SAT site terms.",
+        "geometryUse": "Level plateau proportions, flanking peaks, City Bowl and Table Bay Harbour amphitheatre, and orographic tablecloth.",
+        "assetRetained": false
+      },
+      {
+        "id": "sanparks-lions-head-orientation",
+        "sourceOwner": "South African National Parks",
+        "title": "Lion's Head & Signal Hill",
+        "url": "https://www.sanparks.org/parks/table-mountain/what-to-do/attractions/lions-head-signal-hill",
+        "licenseOrTerms": "SANParks permission required for reproduction or adaptation of site photographs and graphics.",
+        "geometryUse": "Viewer-relative check that Lion's Head appears right of Table Mountain when faced head-on.",
+        "assetRetained": false
+      },
+      {
+        "id": "city-east-west-orientation",
+        "sourceOwner": "City of Cape Town",
+        "title": "Company's Garden Self Guided Walk",
+        "url": "https://resource.capetown.gov.za/documentcentre/Documents/Procedures,%20guidelines%20and%20regulations/Company's%20Garden%20Self%20Guided%20Walk.pdf",
+        "licenseOrTerms": "City-owned visual aids unless otherwise indicated; no open reuse license stated.",
+        "geometryUse": "Table Valley at the mountain's foot, Devil's Peak east, and Lion's Head west.",
+        "assetRetained": false
+      },
+      {
+        "id": "commons-three-peak-panorama",
+        "sourceOwner": "Daniel Case",
+        "title": "Devil's Peak, Table Mountain and Lion's Head panorama from Signal Hill",
+        "url": "https://commons.wikimedia.org/wiki/File:Devil%27s_Peak,_Table_Mountain_and_Lion%27s_Head_panorama_from_Signal_Hill.jpg",
+        "licenseOrTerms": "CC BY-SA 3.0 Unported or GFDL 1.2-or-later, at the reuser's option.",
+        "geometryUse": "Frontal left-to-right sequence and relative breadth: Devil's Peak, Table Mountain, Lion's Head.",
+        "assetRetained": false
+      },
+      {
+        "id": "commons-waterfront-layering",
+        "sourceOwner": "Romaine",
+        "title": "Cape Town - Table Mountain seen from Waterfront (2)",
+        "url": "https://commons.wikimedia.org/wiki/File:Cape_Town_-_Table_Mountain_seen_from_Waterfront_(2).jpg",
+        "licenseOrTerms": "CC0 1.0 Universal Public Domain Dedication.",
+        "geometryUse": "Cape Town and harbour foreground layering against the mountain backdrop.",
+        "assetRetained": false
+      },
+      {
+        "id": "commons-tablecloth",
+        "sourceOwner": "KodachromeFan",
+        "title": "Cape Town, Table Mountain, Table Cloth",
+        "url": "https://commons.wikimedia.org/wiki/File:Cape_Town,_Table_Mountain,_Table_Cloth.jpg",
+        "licenseOrTerms": "CC BY-SA 3.0 Unported.",
+        "geometryUse": "Thin summit cloud cap crossing the plateau edge, spilling downslope, and fading.",
+        "assetRetained": false
+      },
+      {
+        "id": "nasa-regional-relief",
+        "sourceOwner": "NASA Earth Observatory; image credit SRTM Team NASA/JPL/NIMA",
+        "title": "Cape Town, South Africa",
+        "url": "https://science.nasa.gov/earth/earth-observatory/cape-town-south-africa-4665/",
+        "licenseOrTerms": "NASA media guidelines; acknowledge NASA, do not imply endorsement, and separately clear marked third-party material.",
+        "geometryUse": "Regional relationship among Table Bay, city, mountain relief, and Cape Peninsula; rendering exaggeration was not copied.",
+        "assetRetained": false
+      }
+    ]
+  },
+  "contactSheet": {
+    "imageSrc": "contact-sheet--south-africa-cape-town-table-mountain--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shipping": false,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1800,
+      "height": 700
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "sha256": "f51ea361ccd2461a079559cb10f01d314d89001977b2a33640d74a465b4385b5",
+    "overlays": [
+      "variant labels",
+      "portrait safeBounds",
+      "bottom-center portrait anchors",
+      "technical format checks",
+      "rare-companion count, placement, and frame-height callout"
+    ]
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Machine and visual constraint inspection completed; human candidate selection and rights review remain pending."
+  },
+  "sceneVariants": [
+    {
+      "id": "south-africa-cape-town-table-mountain--day-signature",
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "Table Mountain daylight signature",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--south-africa-cape-town-table-mountain--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "206475de12d4a490739f09bb5d1c312d31bfc33edd7c9fcaf9172b6cec9e48c3",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.17,
+        "y": 0.92,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.61,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "Lower-left pale lookout terrace is quiet, low contrast, and free of objects or slot markers."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "subjectGeometrySourceIds": [
+          "sat-overall-form",
+          "sanparks-lions-head-orientation",
+          "city-east-west-orientation",
+          "commons-three-peak-panorama",
+          "commons-waterfront-layering",
+          "nasa-regional-relief"
+        ],
+        "sourcePhotoPixelsUsed": false,
+        "sceneIntent": "Clear frontal relationship with Devil's Peak left, the broad flat plateau central, Lion's Head right, sparse Cape Town below, and a grounded quiet lower-left portrait area."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "technicalInspection": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB, embedded sRGB, 8-bit channels, opaque PNG."
+        },
+        "hardConstraintInspection": {
+          "decision": "pass",
+          "notes": "No cat, animal, person, date, caption, sign, pseudo-text, logo, watermark, UI, marker, slot frame, or decorative glyph observed."
+        },
+        "geographicSpecificityInspection": {
+          "decision": "pass",
+          "notes": "Flat summit and the Devil's Peak-left/Table Mountain-center/Lion's Head-right relationship are immediately readable, with Cape Town and bay kept secondary."
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain--golden-hour",
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "Table Mountain golden-hour tablecloth",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--south-africa-cape-town-table-mountain--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "8faee340b3bf3e3789e850a8daf25e571266c8388bbe219b480ac6a540ab35df",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.17,
+        "y": 0.92,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.61,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "Lower-left muted fynbos slope provides a grounded, low-contrast portrait area away from the skyline."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "subjectGeometrySourceIds": [
+          "sat-overall-form",
+          "sanparks-lions-head-orientation",
+          "city-east-west-orientation",
+          "commons-three-peak-panorama",
+          "commons-waterfront-layering",
+          "commons-tablecloth"
+        ],
+        "sourcePhotoPixelsUsed": false,
+        "sceneIntent": "Muted golden-hour view with the three-part mountain relationship intact and a shallow tablecloth cloud spilling over the central plateau without hiding its level edge."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "technicalInspection": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB, embedded sRGB, 8-bit channels, opaque PNG."
+        },
+        "hardConstraintInspection": {
+          "decision": "pass",
+          "notes": "No cat, animal, person, date, caption, sign, pseudo-text, logo, watermark, UI, marker, slot frame, or decorative glyph observed."
+        },
+        "geographicSpecificityInspection": {
+          "decision": "pass",
+          "notes": "The broad level summit remains readable beneath a restrained tablecloth; Devil's Peak, Lion's Head, and sparse Cape Town foreground remain coherent."
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain--companion-rare",
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "name": "Table Mountain with rare rock hyrax",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--south-africa-cape-town-table-mountain--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "a14d57a0f805a84d1980ec344236b1203f5b5558f6d4ccef5c91c0810d667bce",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "rock-hyrax",
+        "scientificName": "Procavia capensis",
+        "count": 1,
+        "maximumFrameHeight": 0.06,
+        "estimatedFrameHeight": 0.025,
+        "frameHeightEstimateMethod": "visual inspection against the normalized 900-pixel frame",
+        "placement": "far lower-right lateral foreground rock",
+        "outsideSafeBounds": true,
+        "secondaryToLandmark": true,
+        "anatomicallyCoherent": true,
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false,
+        "otherAnimalsPresent": false
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.17,
+        "y": 0.92,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.61,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "Pale lower-left lookout ground is quiet; the single hyrax is laterally isolated at far lower right."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 172,
+          "top": 0,
+          "rightExclusive": 1536,
+          "bottomExclusive": 1023
+        },
+        "subjectGeometrySourceIds": [
+          "sat-overall-form",
+          "sanparks-lions-head-orientation",
+          "city-east-west-orientation",
+          "commons-three-peak-panorama",
+          "commons-waterfront-layering",
+          "commons-tablecloth"
+        ],
+        "sourcePhotoPixelsUsed": false,
+        "sceneIntent": "Airy rocky viewpoint with the three-part Table Mountain silhouette preserved and exactly one tiny rock hyrax on a far-right stone."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null,
+          "companionAnatomy": null,
+          "companionSubordination": null
+        },
+        "technicalInspection": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB, embedded sRGB, 8-bit channels, opaque PNG."
+        },
+        "hardConstraintInspection": {
+          "decision": "pass",
+          "notes": "Exactly one tiny rock hyrax observed; no cat, second animal, bird, person, date, caption, sign, pseudo-text, logo, watermark, UI, marker, slot frame, or decorative glyph observed."
+        },
+        "companionInspection": {
+          "decision": "pass",
+          "notes": "One anatomically coherent compact rock hyrax is approximately 2–3% of frame height, outside safeBounds on the far-right lateral rock, and clearly secondary."
+        },
+        "geographicSpecificityInspection": {
+          "decision": "pass",
+          "notes": "Flat Table Mountain plateau, Devil's Peak at left, Lion's Head at right, and Cape Town below remain immediately legible."
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    }
+  ]
+}

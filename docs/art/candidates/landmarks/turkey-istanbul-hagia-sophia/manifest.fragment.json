@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "destinationId": "turkey-istanbul-hagia-sophia",
+  "destinationName": "伊斯坦布尔圣索菲亚",
+  "status": "candidate",
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "locks": {
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenanceAndRights": {
+    "realVisualReferenceResearch": "visual-reference-research.md",
+    "realVisualReferenceUsage": "factual exterior geometry and structural relationships only; no remote image was supplied to generation",
+    "referenceSources": [
+      {
+        "publisherOrAuthor": "T.C. Fatih Municipality",
+        "title": "The Hagia Sophia Grand Mosque (Ayasofya-i Kebir Cami-i Şerifi)",
+        "url": "https://www.fatih.bel.tr/en/main/pages/the-hagia-sophia-grand-mosque-ayasofya-i-kebi/578",
+        "license": "no open reuse license identified; treated as all-rights-reserved",
+        "usage": "authoritative dome, semi-dome, support-stay, and minaret geometry facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Arild Vågen",
+        "title": "Hagia Sophia Mars 2013",
+        "url": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg",
+        "license": "CC BY-SA 3.0",
+        "usage": "exterior silhouette and massing facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Dosseman / Dick Osseman",
+        "title": "Hagia Sophia exterior in 2017 2235",
+        "url": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_exterior_in_2017_2235.jpg",
+        "license": "CC BY-SA 4.0",
+        "usage": "buttress and side-elevation geometry facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Hunanuk",
+        "title": "Fatihistanbul",
+        "url": "https://commons.wikimedia.org/wiki/File:Fatihistanbul.jpg",
+        "license": "CC0 1.0",
+        "usage": "aerial footprint, dome hierarchy, and four-corner minaret arrangement only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "ImanFakhri",
+        "title": "Exterior of Hagia Sophia (1) - Istanbul (2022)",
+        "url": "https://commons.wikimedia.org/wiki/File:Exterior_of_Hagia_Sophia_(1)_-_Istanbul_(2022).jpg",
+        "license": "CC BY-SA 4.0",
+        "usage": "close exterior masonry and buttress-transition facts only",
+        "retained": false
+      }
+    ],
+    "retainedRemoteSourceFiles": [],
+    "restrictedSourcePhotoRetained": false,
+    "copiedSourcePhotoPixels": false,
+    "styleReferenceUsage": "repository references used only for line weight, restrained watercolor intensity, paper texture, and palette; their subjects, cats, text, framing, UI, and compositions were excluded",
+    "generatedOutputStatus": "original AI-generated candidate artwork pending human provenance and rights review",
+    "shippingRightsReview": "pending"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": "Human landmark, style, composition-slot, companion-policy, and shipping-rights review remain required."
+  },
+  "sceneVariants": [
+    {
+      "id": "turkey-istanbul-hagia-sophia--day-signature",
+      "variantId": "day-signature",
+      "name": "伊斯坦布尔圣索菲亚 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--turkey-istanbul-hagia-sophia--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "12bcb5eb6c67ed2123f6eb0dd32c50afd45d039cdf2505ea0afd6c6e6e50bc18",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.91,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.59,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only; subjects, cats, text, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Quiet south-west daytime view emphasizing Hagia Sophia's broad central dome and windowed base, descending half-domes, irregular buttressed Byzantine mass, exactly four minarets, and an empty lower-left Portrait area.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "The broad central dome, stepped half-domes, heavy buttressed mass, and four distinct minarets remain readable after normalization. No cat, animal, person, date, sign, readable text, pseudo-text, logo, watermark, UI, marker, border, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia--golden-hour",
+      "variantId": "golden-hour",
+      "name": "伊斯坦布尔圣索菲亚 · 暮色",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--turkey-istanbul-hagia-sophia--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "293069045654cbe058466f0da7782a1f117ec7ba0e00e4df78a49f82fc3f6758",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.68,
+        "y": 0.6,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 2,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "rejectedPreExportAttempts": [
+            {
+              "attempt": 1,
+              "reasonCode": "four-minaret-arrangement",
+              "reason": "Only three minarets were visibly countable, so the required four-corner arrangement was not adequately demonstrated.",
+              "retainedInCandidateDirectory": false
+            }
+          ],
+          "styleReferenceUsage": "style-only; subjects, cats, text, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Muted rose-and-ochre late-afternoon south-east view with the broad dome, half-dome cascade, heavy buttresses, four visibly countable corner minarets, and a quiet lower-right Portrait area.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly four visibly separate minarets, the broad central dome, half-dome cascade, and buttressed ancient mass remain legible. No cat, animal, person, date, sign, readable text, pseudo-text, logo, watermark, UI, marker, border, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia--companion-rare",
+      "variantId": "companion-rare",
+      "name": "伊斯坦布尔圣索菲亚 · 街巷幼猫旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--turkey-istanbul-hagia-sophia--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "f513506777b60b124bcf58e3c09b9c99eb5c98506c97a630dc25a3f436e173de",
+      "hasCompanion": true,
+      "companion": {
+        "role": "non-player Companion",
+        "kind": "Istanbul street kitten",
+        "appearance": "small understated gray-brown tabby; no orange-white coat; no scarf, collar, bell, clothing, or accessory",
+        "count": 1,
+        "maximumFrameHeight": 0.07,
+        "approximateFrameHeight": 0.033,
+        "placement": "right lateral courtyard stone ledge, outside Portrait safeBounds",
+        "approximateBounds": {
+          "units": "normalized",
+          "x": 0.871,
+          "y": 0.689,
+          "width": 0.024,
+          "height": 0.033
+        },
+        "prominence": "tiny incidental secondary accent",
+        "playerPortrait": false,
+        "maySubstituteForPlayerPortrait": false,
+        "identityBoardDetail": false,
+        "resemblesStyleReferenceCat": false,
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false,
+        "reusableAnimalAsset": false,
+        "poseSet": false,
+        "authorization": {
+          "authorizedBy": "user",
+          "authorizedAt": "2026-07-20",
+          "scope": "this destination's companion-rare scene only",
+          "authorizedRole": "non-player Companion",
+          "authorizedSpeciesAndAppearance": "exactly one small understated gray-brown tabby Istanbul street kitten",
+          "authorizedMaximumFrameHeight": 0.07,
+          "standaloneCatOrPortraitAuthorized": false,
+          "playerIdentityInferenceAuthorized": false
+        }
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.185,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.6,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true,
+        "companionBoundsRemainInsideCanvas": true,
+        "companionHeightAtOrBelowAuthorizedMaximum": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 4,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "rejectedPreExportAttempts": [
+            {
+              "attempt": 1,
+              "reasonCode": "companion-frame-height",
+              "reason": "The kitten exceeded the authorized seven-percent frame-height maximum.",
+              "retainedInCandidateDirectory": false
+            },
+            {
+              "attempt": 2,
+              "reasonCode": "normalization-crop-safety",
+              "reason": "The kitten sat too close to the source-canvas edge to survive the required centered 4:3 crop safely.",
+              "retainedInCandidateDirectory": false
+            },
+            {
+              "attempt": 3,
+              "reasonCode": "companion-frame-height",
+              "reason": "The repositioned kitten remained at or slightly above the maximum visual height tolerance.",
+              "retainedInCandidateDirectory": false
+            }
+          ],
+          "sceneReferenceUsage": "rejected generated attempts were used only for composition continuity; none was retained in the candidate directory",
+          "styleReferenceUsage": "style-only; subjects, cats, text, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Quiet morning view with Hagia Sophia's broad dome, half-domes, buttressed mass and four minarets, plus exactly one tiny gray-brown tabby non-player Companion on the right lateral ledge outside the empty lower-left Portrait area.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly one tiny approximately 3.3%-frame-height gray-brown tabby kitten is visible on the right lateral ledge outside safeBounds. It has no accessory, orange-white coat, or Portrait emphasis. Four minarets and the landmark's dome, half-domes, and buttressed mass remain readable; no person, bird, second animal, date, sign, readable text, pseudo-text, logo, watermark, UI, marker, border, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "visualReferenceResearch": {
+      "path": "visual-reference-research.md",
+      "sha256": "fe04913d23c97805b757fb9b2c6ac6c90ae0c68110dee3275adf56adf0ee2bff"
+    }
+  },
+  "qa": {
+    "contactSheet": "contact-sheet--turkey-istanbul-hagia-sophia--non-final.png",
+    "contactSheetSha256": "8b0eb5ba2efb46492cb6b5305f4bb72f386e8b06e8f750369429c672b101a5da",
+    "contactSheetOverlays": [
+      "variant labels",
+      "safeBounds rectangles",
+      "composition anchors",
+      "dimensions",
+      "explicit non-player Companion label",
+      "companion count and approximate frame height",
+      "authorized companion location ring",
+      "pending review state"
+    ],
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "machineValidation": {
+      "performedAt": "2026-07-20",
+      "sceneCount": 3,
+      "allScenesAre1200x900": true,
+      "allScenesAreSrgb8BitOpaqueRgbPng": true,
+      "allHashesComputed": true,
+      "ordinaryVariantAnimalCount": 0,
+      "rareVariantAnimalCount": 1,
+      "visualInspectionPerformed": true
+    },
+    "reviewState": "pending"
+  }
+}

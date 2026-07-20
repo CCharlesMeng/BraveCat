@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "landmark-minho-composite-human-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20",
+  "scope": {
+    "activeSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
+    "compositeSetSha256": "e24bfe4549294d6313ce578e6c44edac8d9c6a98a8cec48ea60a8a49fc3fa955",
+    "portraitId": "minho",
+    "sceneCount": 48,
+    "selection": "all-active-scene-composites"
+  },
+  "exclusions": [],
+  "remainingGates": [
+    "shipping-rights-review"
+  ],
+  "shippingEligible": false,
+  "notes": "User explicitly approved all 48 Minho scene composites. This decision does not waive landmark rights review."
+}

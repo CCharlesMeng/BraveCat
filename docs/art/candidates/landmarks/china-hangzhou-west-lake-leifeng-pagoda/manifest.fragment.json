@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+  "destinationName": "杭州西湖雷峰塔",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-expansion-v2.json",
+  "lockedProductionSource": "docs/art/landmark-production-v1.json",
+  "productionRules": [
+    "docs/art/calibration-production-v1.md",
+    "docs/art/prompt-pack.calibration.v1.json",
+    "docs/art/asset-manifest.v1.template.json",
+    "CONTEXT.md",
+    "docs/adr/0001-postcards-are-composited-not-generated.md"
+  ],
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "visualReferenceResearch": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/visual-reference-research.md",
+  "visualReferences": [
+    {
+      "id": "commons-leifeng-20240729",
+      "kind": "real-photograph",
+      "use": "landmark-geometry-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_(20240729).jpg",
+      "localSrc": "reference--leifeng-pagoda-20240729--wikimedia.jpg",
+      "localSha256": "94ea041fac99a5ada85b139e31985066f46b09217e19d4d9fe2dc96fc4797f09",
+      "owner": "HoweyYuan",
+      "license": "CC BY-SA 4.0",
+      "geometryClaims": [
+        "five stacked octagonal pavilion-style storeys",
+        "broad upturned eaves narrowing upward",
+        "tall pointed finial",
+        "lower tower body embedded in dense tree canopy"
+      ],
+      "excludedContent": [
+        "people",
+        "stairs",
+        "railings",
+        "lamps",
+        "photographic color and lighting"
+      ]
+    },
+    {
+      "id": "commons-leifeng-dusk-long-bridge",
+      "kind": "real-photograph",
+      "use": "landmark-and-landscape-geometry-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_on_West_Lake_at_Dusk_2.jpg",
+      "localSrc": "reference--leifeng-pagoda-dusk-long-bridge--wikimedia.jpg",
+      "localSha256": "b4525f414c32e4948f9c013dd60052f85e53aa03c119e1c86396cd9bef2075a1",
+      "owner": "Yinweichen",
+      "license": "CC BY-SA 4.0",
+      "geometryClaims": [
+        "pagoda raised above the wooded Xizhao Hill silhouette",
+        "broad West Lake water foreground",
+        "layered lower hills continuing behind and to the right"
+      ],
+      "excludedContent": [
+        "boats",
+        "people",
+        "buildings",
+        "photographic sunset styling"
+      ]
+    },
+    {
+      "id": "commons-leifeng-from-west-lake",
+      "kind": "real-photograph",
+      "use": "landmark-and-landscape-geometry-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:West_Lake_-_Hangzhou,_China.jpg",
+      "localSrc": "reference--leifeng-pagoda-from-west-lake--wikimedia.jpg",
+      "localSha256": "675e04e6e4c739f1c58080997248ebb1222b4aa5f422803035c95aa83a782e9f",
+      "owner": "Louisa Salazar",
+      "license": "CC BY-SA 3.0",
+      "geometryClaims": [
+        "wide lake-to-shore separation",
+        "pagoda scale within a heavily wooded southern hill system",
+        "larger ridges rising behind the pagoda"
+      ],
+      "excludedContent": [
+        "boats",
+        "people",
+        "secondary architecture",
+        "photographic palette"
+      ]
+    }
+  ],
+  "authoritativeResearchSources": [
+    {
+      "publisher": "Hangzhou municipal culture and tourism government site",
+      "title": "Leifeng Pagoda in Evening Glow",
+      "url": "https://wgly.hangzhou.gov.cn/art/2023/8/17/art_1229740539_58948526.html",
+      "use": "factual placement and classic Long Bridge view only; no page image retained"
+    },
+    {
+      "publisher": "Hangzhou municipal culture and tourism government site",
+      "title": "Leifeng Pagoda",
+      "url": "https://wgly.hangzhou.gov.cn/art/2016/1/12/art_1229495282_58929450.html",
+      "use": "five-storey octagonal form and Sunset Hill placement only; no page image retained"
+    },
+    {
+      "publisher": "Hangzhou municipal culture and tourism government site",
+      "title": "Admire the Charm of Song Dynasty: Leifeng Pagoda",
+      "url": "https://wgly.hangzhou.gov.cn/art/2022/9/6/art_1229471480_58941644.html",
+      "use": "stacked pavilion-like body and terminal finial only; no page image retained"
+    },
+    {
+      "publisher": "UNESCO World Heritage Centre",
+      "title": "West Lake Cultural Landscape of Hangzhou",
+      "url": "https://whc.unesco.org/en/list/1334/",
+      "license": "page description marked CC BY-SA IGO 3.0; gallery media not used",
+      "use": "lake, wooded hills, causeway, and distant-ridge landscape relationship only"
+    }
+  ],
+  "rights": {
+    "status": "pending-review",
+    "restrictedSourcePhotosRetained": false,
+    "notes": [
+      "Repository art supplied locked-B style only; its cats, objects, layouts, text, postmarks, and UI were excluded.",
+      "The retained real photographs are explicitly CC BY-SA licensed and supplied landmark or landscape geometry only.",
+      "No source pixels were copied into the normalized outputs; candidates synthesize factual geometry across multiple references.",
+      "Preserve source attribution and applicable share-alike terms if legal review determines an output is an adaptation of a CC BY-SA reference.",
+      "Candidates remain non-shipping until human visual and rights review."
+    ]
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Machine and agent visual QA complete; human selection and rights review pending."
+  },
+  "contactSheet": {
+    "imageSrc": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/contact-sheet--china-hangzhou-west-lake-leifeng-pagoda--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1560,
+      "height": 720,
+      "format": "png",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB"
+    },
+    "sha256": "7abb61c0e1516ec6dee26ccecb01ff59698946596f034f53cac476cef077c32b",
+    "candidateImagesContainQaOverlays": false,
+    "sheetContainsLabelsAndQaOverlaysOnly": true,
+    "overlays": [
+      "variant-label",
+      "version-label",
+      "review-state",
+      "safeBounds",
+      "compositionSlot-bottom-center-anchor",
+      "pose-scale-flip"
+    ],
+    "visualInspection": {
+      "performed": true,
+      "clippingFound": false,
+      "labelsReadable": true
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda--day-signature",
+      "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+      "variantId": "day-signature",
+      "name": "杭州西湖雷峰塔 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "600ca5d260cd50cbae034fd83779580ed24fce44398a32aea7ce00cb5df549d2",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.835,
+        "y": 0.91,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": true
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.7,
+          "y": 0.55,
+          "width": 0.27,
+          "height": 0.36
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "repository art used for style only; reference cats, animals, text, borders, UI, objects, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "subjectReferenceUse": "real sources used for Leifeng Pagoda tier geometry, wooded-hill placement, lake relationship, and distant hills only",
+          "visualReferenceIds": [
+            "commons-leifeng-20240729",
+            "commons-leifeng-dusk-long-bridge",
+            "commons-leifeng-from-west-lake"
+          ],
+          "promptBrief": "Calm daytime West Lake view with the five-storey octagonal Leifeng Pagoda on the left wooded rise, broad quiet water, distant layered hills, a restrained lower-right causeway edge, and an unmarked low-detail portrait slot.",
+          "normalization": {
+            "method": "exact 4:3 center crop followed by Lanczos resize",
+            "crop": {
+              "x": 86,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB built-in"
+          },
+          "rightsNotes": "CC BY-SA photographic references informed geometry only; attribution and share-alike applicability remains part of pending rights review."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "five readable octagonal pavilion-style roof tiers, narrowing eaves, tall finial, wooded-hill placement, broad water, and distant hills",
+            "notes": "No cat, animal, person, boat, date, postmark, caption, logo, watermark, readable sign, pseudo-text, UI, slot line, anchor, or candidate-image QA overlay observed. Lower-right portrait slot is quiet, grounded on the causeway terrace, and clear of landmark recognition points."
+          }
+        }
+      }
+    },
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour",
+      "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+      "variantId": "golden-hour",
+      "name": "杭州西湖雷峰塔 · 金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "78025c8ba6d2d1b76c01e6869a336e8c666e4e0c9a6107715f8abcd0add8bb34",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.195,
+        "y": 0.91,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.06,
+          "y": 0.56,
+          "width": 0.27,
+          "height": 0.35
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "repository art used for style only; reference cats, animals, text, borders, UI, objects, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "subjectReferenceUse": "real sources used for Leifeng Pagoda tier geometry, wooded-hill placement, lake relationship, and distant hills only",
+          "visualReferenceIds": [
+            "commons-leifeng-20240729",
+            "commons-leifeng-dusk-long-bridge",
+            "commons-leifeng-from-west-lake"
+          ],
+          "promptBrief": "Misty pale-gold morning over West Lake with the five-storey octagonal Leifeng Pagoda on the right wooded rise, broad still water and reflection, layered distant hills, a restrained lower-left causeway edge, and an unmarked low-detail portrait slot.",
+          "normalization": {
+            "method": "exact 4:3 center crop followed by Lanczos resize",
+            "crop": {
+              "x": 86,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB built-in"
+          },
+          "rightsNotes": "CC BY-SA photographic references informed geometry only; attribution and share-alike applicability remains part of pending rights review."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "five readable octagonal pavilion-style roof tiers, narrowing eaves, tall finial, wooded-hill placement, broad water, and distant hills",
+            "notes": "No cat, animal, person, boat, date, postmark, caption, logo, watermark, readable sign, pseudo-text, UI, slot line, anchor, or candidate-image QA overlay observed. Lower-left portrait slot is quiet, grounded on the causeway terrace, and clear of landmark recognition points."
+          }
+        }
+      }
+    }
+  ],
+  "inspection": {
+    "performed": true,
+    "decision": "pending",
+    "hardViolationsFound": false,
+    "candidateImagesContainQaOverlays": false,
+    "generatedCatAsset": false,
+    "notes": [
+      "Both clean scene candidates were visually inspected after exact normalization.",
+      "Both show five readable pavilion-style tiers and a tall finial above wooded Xizhao Hill.",
+      "Both preserve broad West Lake water and layered distant hills while keeping their portrait safe bounds clear.",
+      "No regeneration was required because no hard exclusion was observed.",
+      "Human landmark-fidelity, composite-fit, and rights review remain pending."
+    ]
+  }
+}

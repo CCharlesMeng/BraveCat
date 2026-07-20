@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "art-production-template",
+  "catalogId": "{{catalog-id}}",
+  "status": "template-with-locked-decisions",
+  "shippingEligible": false,
+  "locks": {
+    "style": {
+      "state": "locked",
+      "value": "B",
+      "meaning": "existing-reference-intensity",
+      "selectedCandidateId": "style-intensity-b-reference",
+      "reviewer": "user",
+      "lockedAt": "2026-07-20"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "reviewer": "user",
+      "lockedAt": "2026-07-20"
+    },
+    "portrait": {
+      "state": "blocked-by-user-photo",
+      "selectedCandidateId": "",
+      "userPhotoReceived": false,
+      "allowInventedSubstitute": false,
+      "unblockSequence": [
+        "explain-photo-requirements",
+        "wait-for-user-photo-in-a-later-message",
+        "verify-photo-coverage",
+        "confirm-cat-identity-with-user",
+        "enable-portrait-generation"
+      ]
+    },
+    "destinationList": {
+      "state": "pending",
+      "selectedCandidateId": "",
+      "reviewer": "",
+      "lockedAt": ""
+    },
+    "iconLanguage": {
+      "state": "pending",
+      "selectedCandidateId": "",
+      "reviewer": "",
+      "lockedAt": ""
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "renderOrder": [
+    "scene",
+    "portrait",
+    "postcard-copy",
+    "postmark"
+  ],
+  "specs": {
+    "scene": {
+      "width": 1200,
+      "height": 900,
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "colorSpace": "sRGB",
+      "format": "png",
+      "alpha": "opaque"
+    },
+    "portraitPose": {
+      "width": 1024,
+      "height": 1024,
+      "colorSpace": "sRGB",
+      "format": "png",
+      "alpha": "straight"
+    },
+    "itemOrSouvenir": {
+      "width": 512,
+      "height": 512,
+      "colorSpace": "sRGB",
+      "format": "png",
+      "alpha": "straight"
+    }
+  },
+  "portraits": [
+    {
+      "id": "{{portrait-id-after-user-photo}}",
+      "name": "{{portrait-display-name-after-user-photo}}",
+      "status": "blocked-by-user-photo",
+      "identityReferenceSrc": "",
+      "poses": {
+        "sit": "",
+        "sleep": "",
+        "walk": "",
+        "eat": "",
+        "play": "",
+        "gaze": ""
+      },
+      "production": {
+        "state": "blocked-by-user-photo",
+        "executionEnabled": false,
+        "blockedBy": "user-photo",
+        "allowInventedSubstitute": false,
+        "promptJobIdAfterUnblock": "portrait-six-pose-after-user-photo",
+        "model": "",
+        "seed": "",
+        "sourceCandidateId": "",
+        "plannedOutputsAfterUnblock": {
+          "sit": "{{portrait-output-dir}}/portrait--{{portrait-id}}--sit--v01.png",
+          "sleep": "{{portrait-output-dir}}/portrait--{{portrait-id}}--sleep--v01.png",
+          "walk": "{{portrait-output-dir}}/portrait--{{portrait-id}}--walk--v01.png",
+          "eat": "{{portrait-output-dir}}/portrait--{{portrait-id}}--eat--v01.png",
+          "play": "{{portrait-output-dir}}/portrait--{{portrait-id}}--play--v01.png",
+          "gaze": "{{portrait-output-dir}}/portrait--{{portrait-id}}--gaze--v01.png"
+        },
+        "review": {
+          "decision": "blocked-by-user-photo",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "identityConsistency": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "sceneVariants": [
+    {
+      "id": "{{destination-id}}--{{variant-id}}",
+      "destinationId": "{{destination-id}}",
+      "name": "{{variant-display-name}}",
+      "status": "candidate",
+      "imageSrc": "{{scene-output-dir}}/scene--{{destination-id}}--{{variant-id}}--v01.png",
+      "compositionSlot": {
+        "x": 0.22,
+        "y": 0.82,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": false,
+      "production": {
+        "safeBounds": {
+          "x": 0.08,
+          "y": 0.48,
+          "width": 0.28,
+          "height": 0.34
+        },
+        "promptJobId": "scene-composition-slot",
+        "model": "{{model}}",
+        "seed": "{{seed}}",
+        "sourceCandidateId": "{{candidate-id}}",
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "{{item-id}}",
+      "name": "{{item-display-name}}",
+      "kind": "snack",
+      "status": "candidate",
+      "imageSrc": "{{item-output-dir}}/item--snack--{{item-id}}--v01.png",
+      "production": {
+        "promptJobId": "item-icon-language",
+        "model": "{{model}}",
+        "seed": "{{seed}}",
+        "sourceCandidateId": "{{candidate-id}}",
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "identityConsistency": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "souvenirs": [
+    {
+      "id": "{{souvenir-id}}",
+      "destinationId": "{{destination-id}}",
+      "name": "{{souvenir-display-name}}",
+      "status": "candidate",
+      "imageSrc": "{{souvenir-output-dir}}/souvenir--{{destination-id}}--{{souvenir-id}}--v01.png",
+      "production": {
+        "promptJobId": "item-icon-language",
+        "model": "{{model}}",
+        "seed": "{{seed}}",
+        "sourceCandidateId": "{{candidate-id}}",
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "identityConsistency": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ]
+}

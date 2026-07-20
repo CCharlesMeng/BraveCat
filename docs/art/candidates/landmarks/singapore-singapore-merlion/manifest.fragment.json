@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "singapore-singapore-merlion",
+  "destinationName": "新加坡鱼尾狮",
+  "status": "candidate",
+  "reviewState": "pending",
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20T18:38:22+08:00",
+  "updatedAt": "2026-07-20T18:44:11+08:00",
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "candidates": [
+    {
+      "id": "singapore-singapore-merlion--day-signature--v01",
+      "variantId": "day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "c1e27f6769cb1faf7a6b9c27abe846514651a7c64b191345ad150c73ec96db0d",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "provenance": {
+        "generationMethod": "image-generation",
+        "generationTool": "GenerateImage",
+        "model": "not-reported-by-tool",
+        "seed": null,
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "requestedAspectRatio": "4:3",
+        "generatedDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": ""
+      }
+    },
+    {
+      "id": "singapore-singapore-merlion--golden-hour--v01",
+      "variantId": "golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "39f8f3cf7157c36e357d9cb37f6bfa143c3082296aa58071636f84c85dae61bd",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "provenance": {
+        "generationMethod": "image-generation",
+        "generationTool": "GenerateImage",
+        "model": "not-reported-by-tool",
+        "seed": null,
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "requestedAspectRatio": "4:3",
+        "generatedDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": ""
+      }
+    },
+    {
+      "id": "singapore-singapore-merlion--companion-rare--v02",
+      "variantId": "companion-rare",
+      "revisionOf": "singapore-singapore-merlion--companion-rare--v01",
+      "revisionReason": "reduce-companion-prominence",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "1bc620e369e3045d7f56f506154511c2dd884faa448a13157bca7f1a4719823a",
+      "hasCompanion": true,
+      "companion": {
+        "species": "smooth-coated-otter",
+        "count": 1
+      },
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "provenance": {
+        "generationMethod": "image-generation",
+        "generationTool": "GenerateImage",
+        "model": "not-reported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20T18:44:11+08:00",
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sceneReference": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v01.png",
+        "sceneReferenceUse": "landmark-layout-and-style-continuity",
+        "companionScaleConstraint": "maximum-5-percent-frame-height",
+        "requestedAspectRatio": "4:3",
+        "generatedDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": ""
+      }
+    }
+  ],
+  "supersededCandidates": [
+    {
+      "id": "singapore-singapore-merlion--companion-rare--v01",
+      "variantId": "companion-rare",
+      "status": "superseded",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "55e0e7654fad367aa9e422ad381305df568d5b55bd6ac3b448919259f07b0b92",
+      "hasCompanion": true,
+      "companion": {
+        "species": "smooth-coated-otter",
+        "count": 1
+      },
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "supersededBy": "singapore-singapore-merlion--companion-rare--v02",
+      "supersededAt": "2026-07-20T18:44:11+08:00",
+      "supersededReason": "companion-prominence-too-high",
+      "review": {
+        "decision": "superseded",
+        "reviewer": "internal-qa",
+        "reviewedAt": "2026-07-20T18:40:00+08:00",
+        "notes": "Otter reads as a large foreground subject rather than a subtle rare Companion."
+      }
+    }
+  ],
+  "qaArtifacts": [
+    {
+      "kind": "contact-sheet",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/contact-sheet--singapore-singapore-merlion--non-final.png",
+      "dimensions": {
+        "width": 1800,
+        "height": 590,
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "5365be830fb470be098b71ebbacfdcb8bcfc7efb16a3d96affffb1bfd01c2719",
+      "activeRareVersion": "v02",
+      "overlays": [
+        "safeBounds",
+        "compositionSlot-bottom-center-anchor"
+      ],
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    }
+  ]
+}

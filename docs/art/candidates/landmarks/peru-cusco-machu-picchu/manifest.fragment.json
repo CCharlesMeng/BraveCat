@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "peru-cusco-machu-picchu",
+  "destinationName": "马丘比丘",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sceneSpec": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "sceneVariants": [
+    {
+      "id": "peru-cusco-machu-picchu--day-signature",
+      "destinationId": "peru-cusco-machu-picchu",
+      "variantId": "day-signature",
+      "name": "Representative daytime",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.04,
+          "y": 0.55,
+          "width": 0.28,
+          "height": 0.36
+        },
+        "provenance": {
+          "sourcePlan": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": "Cursor GenerateImage",
+          "model": "unspecified-by-tool",
+          "seed": null,
+          "generatedAt": "2026-07-20",
+          "variantBrief": "Representative elevated daytime view with Huayna Picchu, terraces, and principal stone ruins clearly recognizable.",
+          "styleIntensity": "B",
+          "referenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "normalization": {
+            "tool": "Pillow 11.3.0",
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "operation": "center-crop-to-4:3-and-lanczos-resample",
+            "output": "1200x900 sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "peru-cusco-machu-picchu--golden-hour",
+      "destinationId": "peru-cusco-machu-picchu",
+      "variantId": "golden-hour",
+      "name": "Misty dawn",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "7d01821919b48acf57d10e51376e05f3229d40bdf2cb942620b3b842b4e00f32",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.04,
+          "y": 0.55,
+          "width": 0.28,
+          "height": 0.36
+        },
+        "provenance": {
+          "sourcePlan": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": "Cursor GenerateImage",
+          "model": "unspecified-by-tool",
+          "seed": null,
+          "generatedAt": "2026-07-20",
+          "variantBrief": "Misty dawn with soft light touching the terraces and mountain ridges, keeping the landmark readable through restrained haze.",
+          "styleIntensity": "B",
+          "referenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "normalization": {
+            "tool": "Pillow 11.3.0",
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "operation": "center-crop-to-4:3-and-lanczos-resample",
+            "output": "1200x900 sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--peru-cusco-machu-picchu--non-final.png",
+    "status": "non-final",
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1740,
+      "height": 780
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "sha256": "dc9c24a0a31466b34681b7252c2ad48048f8d846bb591dac16abd9fa84cf950f",
+    "overlays": [
+      "variant-labels",
+      "candidate-and-shipping-state",
+      "safeBounds",
+      "compositionSlot-anchor",
+      "visual-QA-notes"
+    ]
+  }
+}

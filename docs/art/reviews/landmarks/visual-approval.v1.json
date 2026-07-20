@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "landmark-human-visual-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20",
+  "scope": {
+    "activeSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
+    "destinationCount": 20,
+    "activeSceneVariantCount": 48,
+    "selection": "all-active-scene-variants"
+  },
+  "exclusions": [],
+  "remainingGates": [
+    "final-real-minho-composite-review",
+    "shipping-rights-review"
+  ],
+  "shippingEligible": false,
+  "notes": "User explicitly approved the complete active landmark image set and requested work to continue. This decision covers visual quality only; it does not waive composite or rights review."
+}

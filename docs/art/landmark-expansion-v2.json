@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-v1-2026-07-20",
+  "status": "candidate-generation",
+  "shippingEligible": false,
+  "createdAt": "2026-07-20",
+  "expansion": {
+    "destinationCountAdded": 5,
+    "ordinaryVariantsAdded": 10,
+    "companionRareVariantsAdded": 3,
+    "combinedDestinationCount": 20,
+    "combinedActiveVariantTarget": 48
+  },
+  "lockedStyleAndFormatSource": "docs/art/landmark-production-v1.json",
+  "candidateOutputRoot": "docs/art/candidates/landmarks",
+  "companionPolicy": {
+    "scope": "rare-scene-variants-only",
+    "directlyPaintedIntoScene": true,
+    "standaloneAsset": false,
+    "mayBeAnotherCat": true,
+    "authorizedByUserAt": "2026-07-20",
+    "catCompanionRules": [
+      "A cat Companion is explicitly a non-player travel companion, never the player's Portrait.",
+      "Keep it small, secondary, outside the portrait composition slot, and without distinctive identity-design emphasis.",
+      "Do not infer, imitate, or pre-empt the player's real cat identity before user photos arrive.",
+      "Do not export a standalone cat, pose set, identity board, or reusable Portrait from a companion scene.",
+      "Do not use the orange-white cat from style references or any invented cat as a substitute for the player cat."
+    ],
+    "allCompanionRules": [
+      "Use only the explicitly listed species and count for each rare variant.",
+      "Keep companions subtle and visually secondary to both landmark and future player Portrait.",
+      "Companions must not overlap safeBounds or obscure landmark recognition points."
+    ]
+  },
+  "candidatePolicy": {
+    "shippingEligible": false,
+    "oneDirectoryPerDestination": true,
+    "doNotEditSharedManifest": true,
+    "writeManifestFragment": true,
+    "contactSheetRequired": true,
+    "candidateImagesMustNotShowSafeBounds": true,
+    "contactSheetMayShowSafeBounds": true,
+    "promoteOnlyAfterUserApproval": true,
+    "realSubjectReferenceRequired": true,
+    "recordReferenceUrlsAndRights": true
+  },
+  "globalConstraints": [
+    "Every ordinary variant contains no cat, animal, person, date, postmark, caption, logo, watermark, readable sign, pseudo-text, UI, slot frame, or anchor mark.",
+    "A rare variant contains only its explicitly authorized Companion and no player cat or substitute Portrait.",
+    "Use reliable real photographs or authoritative visual sources for landmark silhouette and layout, and record provenance and rights notes.",
+    "Keep the landmark immediately recognizable and preserve defining proportions and structural relationships.",
+    "Reserve an unobstructed, low-detail, low-contrast portrait slot away from landmark recognition points and future copy and postmark zones.",
+    "Use locked B intensity: thin warm gray-brown linework, low-saturation sage green, ochre, faded vermilion, generous negative space, subtle warm-white paper texture, restrained watercolor bleed, and quiet nostalgia.",
+    "Avoid photorealism, 3D, flat vector art, neon, high saturation, hard digital gradients, thick black outlines, crowded backgrounds, malformed architecture or anatomy, and copied source-photo pixels."
+  ],
+  "destinations": [
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda",
+      "name": "杭州西湖雷峰塔",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime view across West Lake with Leifeng Pagoda's tiered silhouette on the wooded hill, a restrained causeway edge, and broad quiet water.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Misty early morning with pale gold light, soft lake reflections, distant layered hills, and the pagoda silhouette still immediately readable.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "india-agra-taj-mahal",
+      "name": "阿格拉泰姬陵",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime garden-and-reflection view with the central onion dome, four minarets, platform symmetry, and marble massing accurate.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Soft sunrise with pale peach marble, restrained Yamuna haze, and the dome and minarets remaining clear without crowds or text.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet morning garden view with exactly one tiny Indian palm squirrel on a lateral stone edge, outside the portrait slot.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "indian-palm-squirrel",
+            "count": 1,
+            "maximumFrameHeight": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia",
+      "name": "伊斯坦布尔圣索菲亚",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative quiet daytime view with the central dome, cascading half-domes, buttressed mass, and four minarets coherent; omit signs and crowds.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Muted late-afternoon view with faded rose and ochre light, a clear dome-and-minaret silhouette, sparse trees, and no readable text.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet courtyard-edge view with exactly one small non-player Istanbul street kitten sitting on a lateral stone ledge outside the portrait slot.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "non-player-street-kitten",
+            "count": 1,
+            "maximumFrameHeight": 0.07,
+            "appearance": "small understated gray-brown tabby, no scarf or accessory, not orange-white, no identity-board detail"
+          }
+        }
+      ]
+    },
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer",
+      "name": "里约热内卢基督像",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative clear daytime Corcovado view with Christ the Redeemer's open-arm silhouette anatomically coherent and Rio's mountain-and-bay setting simplified below.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Dawn above soft cloud bands with pale warm light, keeping the statue's open-arm silhouette, pedestal, and Corcovado setting recognizable.",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain",
+      "name": "开普敦桌山",
+      "variants": [
+        {
+          "id": "day-signature",
+          "brief": "Representative calm daytime view with Table Mountain's broad flat summit, Devil's Peak and Lion's Head relationship coherent, and sparse Cape Town foreground.",
+          "hasCompanion": false
+        },
+        {
+          "id": "golden-hour",
+          "brief": "Quiet golden-hour view with restrained cloud tablecloth and faded fynbos colors while preserving the flat-topped silhouette.",
+          "hasCompanion": false
+        },
+        {
+          "id": "companion-rare",
+          "brief": "Quiet rocky viewpoint with exactly one small rock hyrax on a lateral stone, outside the portrait slot and secondary to Table Mountain.",
+          "hasCompanion": true,
+          "companion": {
+            "kind": "rock-hyrax",
+            "count": 1,
+            "maximumFrameHeight": 0.06
+          }
+        }
+      ]
+    }
+  ]
+}

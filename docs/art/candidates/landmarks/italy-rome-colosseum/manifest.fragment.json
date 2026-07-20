@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "italy-rome-colosseum",
+  "destinationName": "罗马斗兽场",
+  "status": "candidate",
+  "shippingEligible": false,
+  "lockedStyle": {
+    "intensity": "B",
+    "referenceUse": "style-only"
+  },
+  "spec": {
+    "width": 1200,
+    "height": 900,
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "format": "png",
+    "alpha": "opaque",
+    "pixelMode": "RGB"
+  },
+  "sceneVariants": [
+    {
+      "id": "italy-rome-colosseum--day-signature",
+      "variantId": "day-signature",
+      "brief": "Representative quiet daytime view with the Colosseum's elliptical mass, stacked arches, and broken outer wall accurate.",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--italy-rome-colosseum--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "sha256": "c5659c8da65731c86d148cb6c5046065b16f9ba7e773c2fde020d58ac5e17058",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.19,
+        "y": 0.93,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.05,
+        "y": 0.63,
+        "width": 0.28,
+        "height": 0.31
+      },
+      "provenance": {
+        "generator": "Cursor GenerateImage",
+        "promptJobId": "scene-variant-export",
+        "constraintsSource": "docs/art/landmark-production-v1.json",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "referenceUse": "style-only",
+        "generatedDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "method": "center-crop-then-isotropic-resize",
+          "cropBoxPixels": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resizeFilter": "Lanczos",
+          "outputProfile": "embedded-sRGB-ICC",
+          "outputMode": "8-bit-opaque-RGB"
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": "",
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Hard-constraint inspection passed; final composite QA remains blocked by user photo."
+      }
+    },
+    {
+      "id": "italy-rome-colosseum--golden-hour",
+      "variantId": "golden-hour",
+      "brief": "Warm early-evening view with faded terracotta light and long shadows; no crowds, signs, or vehicles.",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--italy-rome-colosseum--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "sha256": "f0488c78e905e3bf98d9b79510eb6dedd287a9474701b4e17a038fa892a67904",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.87,
+        "y": 0.94,
+        "scale": 0.2,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "x": 0.76,
+        "y": 0.73,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "provenance": {
+        "generator": "Cursor GenerateImage",
+        "promptJobId": "scene-variant-export",
+        "constraintsSource": "docs/art/landmark-production-v1.json",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "referenceUse": "style-only",
+        "generatedDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "method": "center-crop-then-isotropic-resize",
+          "cropBoxPixels": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resizeFilter": "Lanczos",
+          "outputProfile": "embedded-sRGB-ICC",
+          "outputMode": "8-bit-opaque-RGB"
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": "",
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Hard-constraint inspection passed; final composite QA remains blocked by user photo."
+      }
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "miaoyouji-calibration-2026-07-20-a",
+  "status": "calibration-non-final",
+  "shippingEligible": false,
+  "createdAt": "2026-07-20",
+  "promptPackId": "miaoyouji-calibration-v1",
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "seed": null
+  },
+  "lockedDecisions": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B",
+      "meaning": "existing-reference-intensity"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900
+    },
+    "portraitGeneration": {
+      "state": "approved-real-cat-identity",
+      "selectedCandidateId": "portrait-board--minho--candidate-a--v02",
+      "userPhotoReceived": true,
+      "allowInventedSubstitute": false,
+      "reviewer": "user",
+      "approvedAt": "2026-07-20"
+    }
+  },
+  "styleReferences": [
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-postcard.png",
+    "docs/art/style-ref-poses.png"
+  ],
+  "candidates": [
+    {
+      "id": "portrait-board--calico-01--candidate-a--v01",
+      "assetFamily": "portrait",
+      "status": "withdrawn-blocked-by-user-photo",
+      "shippingEligible": false,
+      "usableAsPortraitReference": false,
+      "retainedForAuditOnly": true,
+      "promptJobId": "portrait-six-pose-calibration",
+      "path": "docs/art/candidates/calibration/calibration-non-final--portrait-board--calico-01--candidate-a--v01.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "png",
+      "alpha": "opaque-board",
+      "sha256": "77d687ab6607790a3179161b31358a802e0c9a569750ed4e6c2e74c2b42e2acf",
+      "intendedChecks": [
+        "six-pose identity consistency",
+        "marking stability",
+        "silhouette and scale consistency"
+      ],
+      "knownNonFinalTraits": [
+        "generated before the user-photo gate and explicitly withdrawn",
+        "must not be selected, shipped, or used as a substitute for the user's real cat",
+        "contact sheet is opaque and cannot be shipped as pose assets",
+        "walk and gaze include a scarf while other poses do not",
+        "paper background and contact shadows require final transparent exports"
+      ],
+      "review": {
+        "decision": "withdrawn",
+        "reviewer": "policy-lock",
+        "reviewedAt": "2026-07-20",
+        "notes": "Blocked until the user supplies real cat photos; invented-cat calibration is invalid."
+      }
+    },
+    {
+      "id": "portrait-board--minho--candidate-a--v02",
+      "assetFamily": "portrait",
+      "status": "approved-identity-reference",
+      "shippingEligible": false,
+      "usableAsPortraitReference": true,
+      "retainedForAuditOnly": false,
+      "promptJobId": "portrait-six-pose-calibration",
+      "path": "docs/art/candidates/calibration/calibration-non-final--portrait-board--minho--candidate-a--v02.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "png",
+      "alpha": "opaque-board",
+      "sha256": "a24a54fb93b7396770fb57359717a13ccf13ef54b5f85a98461072a9510e977a",
+      "verifiedAt": "2026-07-20",
+      "intendedChecks": [
+        "six-pose identity consistency",
+        "face-ear-eye-body-and-tail consistency",
+        "silhouette and scale consistency"
+      ],
+      "knownNonFinalTraits": [
+        "calibration contact sheet is opaque and must not be shipped as a pose asset",
+        "the top-left sit cell has a slightly oversized head; the approved formal sit corrects it to the real full-body proportion",
+        "formal runtime poses are exported separately as approved transparent PNG files"
+      ],
+      "review": {
+        "decision": "approved",
+        "reviewer": "user",
+        "reviewedAt": "2026-07-20",
+        "notes": "User approved the board's overall Minho identity. The only requested correction was to make the formal sit head slightly smaller than the top-left board cell; that correction is present in the separately exported formal sit. No accessories."
+      }
+    },
+    {
+      "id": "scene-board--hillside-railway--candidate-a--v01",
+      "assetFamily": "scene",
+      "status": "calibration-non-final",
+      "shippingEligible": false,
+      "promptJobId": "scene-composition-slot",
+      "path": "docs/art/candidates/calibration/calibration-non-final--scene-board--hillside-railway--candidate-a--v01.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "png",
+      "alpha": "opaque-board",
+      "sha256": "382e3063b5bc582ad514b5b5da38b445fc7fb21f3239c91788fee77d63c28d0e",
+      "intendedChecks": [
+        "quiet-area balance",
+        "bottom-center slot anchoring",
+        "landmark readability with an empty portrait slot"
+      ],
+      "suggestedCompositionSlot": {
+        "x": 0.22,
+        "y": 0.93,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "suggestedSafeBounds": {
+        "x": 0.05,
+        "y": 0.54,
+        "width": 0.34,
+        "height": 0.38
+      },
+      "knownNonFinalTraits": [
+        "pre-lock 1536x1024 3:2 board does not conform to the locked 1200x900 4:3 final format",
+        "imaginary railway concept is not an approved destination",
+        "calibration header, dashed slot, and anchor are baked into the board",
+        "slot values are approximate until tested with an approved transparent portrait"
+      ],
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": "",
+        "notes": ""
+      }
+    },
+    {
+      "id": "item-board--starter-set--candidate-a--v01",
+      "assetFamily": "item-and-souvenir",
+      "status": "calibration-non-final",
+      "shippingEligible": false,
+      "promptJobId": "item-icon-language",
+      "path": "docs/art/candidates/calibration/calibration-non-final--item-board--starter-set--candidate-a--v01.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "png",
+      "alpha": "opaque-board",
+      "sha256": "31dd2618f0887ffa51204f588dbeae5cb5de72ba1c81c93a1991709ea6b01cb8",
+      "intendedChecks": [
+        "icon language consistency",
+        "visual-weight consistency",
+        "recognition at small display sizes"
+      ],
+      "knownNonFinalTraits": [
+        "contact sheet is opaque and cannot be shipped as individual icons",
+        "objects still require approved 512x512 straight-alpha redraws or exports",
+        "item roster is illustrative and does not lock the v1 catalog"
+      ],
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": "",
+        "notes": ""
+      }
+    }
+  ],
+  "collectionReview": {
+    "decision": "pending",
+    "selectedCandidateIds": [
+      "portrait-board--minho--candidate-a--v02"
+    ],
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": "Minho portrait identity is approved; scene and item calibration remain pending."
+  }
+}

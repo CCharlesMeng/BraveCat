@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v3.json",
+  "destinationId": "cambodia-siem-reap-angkor-wat",
+  "destinationName": "吴哥窟",
+  "status": "candidate",
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "locks": {
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenanceAndRights": {
+    "realVisualReferenceResearch": "visual-reference-research.md",
+    "realVisualReferenceUsage": "factual geometry, setting, species plausibility, and conservation facts from official text only; no remote image was supplied to generation",
+    "referenceSources": [
+      {
+        "publisherOrAuthor": "APSARA National Authority, Kingdom of Cambodia",
+        "title": "Angkor Wat",
+        "url": "https://apsaraauthority.gov.kh/2021/06/14/angkor-wat/",
+        "license": "no open reuse license identified; treated as all-rights-reserved",
+        "usage": "overall enclosure, moat, western causeway, gopura, gallery, and axial-layout facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "UNESCO World Heritage Centre",
+        "title": "Angkor, World Heritage List no. 668",
+        "url": "https://whc.unesco.org/en/list/668/",
+        "license": "page descriptive text marked CC BY-SA 3.0 IGO; gallery and media rights may differ",
+        "usage": "forested archaeological-park, hydraulic-structure, route, geographical-context, and Khmer-architecture facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Hansen, M.F. et al. / International Union for Conservation of Nature",
+        "title": "Macaca fascicularis, The IUCN Red List of Threatened Species 2022: e.T12551A199563077",
+        "url": "https://www.iucnredlist.org/species/pdf/199563077",
+        "license": "© 2022 IUCN; educational/non-commercial reproduction with acknowledgement permitted; commercial reproduction or reposting requires prior written permission",
+        "usage": "Cambodia range, temple-habitat plausibility, appearance, conservation status, and protection facts only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "APSARA National Authority, Kingdom of Cambodia",
+        "title": "Taking photos and videos of personal memories does not require prior permission",
+        "url": "https://apsaraauthority.gov.kh/2023/10/06/taking-photos-and-videos-of-personal-memories/",
+        "license": "no blanket reuse license; professional/commercial photography and filming require applicable authorization",
+        "usage": "rights and permission boundary only",
+        "retained": false
+      }
+    ],
+    "retainedRemoteSourceFiles": [],
+    "restrictedSourcePhotoRetained": false,
+    "copiedSourcePhotoPixels": false,
+    "styleReferenceUsage": "repository references used only for locked-B line weight, restrained watercolor intensity, warm paper texture, and low-saturation palette; all cats, animals, text, objects, framing, UI, and compositions from the references were excluded",
+    "generatedOutputStatus": "original AI-generated candidate artwork pending human provenance, cultural-landmark, and rights review",
+    "shippingRightsReview": "pending"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": "Human landmark accuracy, cultural sensitivity, style, composition-slot, Companion-policy, provenance, and shipping-rights reviews remain required."
+  },
+  "sceneVariants": [
+    {
+      "id": "cambodia-siem-reap-angkor-wat--day-signature",
+      "variantId": "day-signature",
+      "name": "吴哥窟 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--cambodia-siem-reap-angkor-wat--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "39f09f4b5cfdc6582ab73fe1da84e24331b14d706ff65c02b6dc468c04728d64",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.28,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.37,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only locked-B cues; subjects, cats, animals, text, objects, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry and setting constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Calm western daytime view across a reflecting basin with all five lotus-bud sanctuary towers separately countable as a quincunx, nested terraces, long galleries, a coherent western causeway, low tropical tree line, and a quiet unmarked bottom-center Portrait area; no cats, animals, people, text, marks, or layout artifacts.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos3 resize",
+            "implementation": "sharp 0.35.3",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "edgeConvention": "right and bottom exclusive"
+            },
+            "cropDimensions": {
+              "width": 1364,
+              "height": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Five distinct sanctuary towers are visibly countable around the tallest center; layered galleries, western approach, basin, reflections, and tropical tree line remain coherent after normalization. The bottom-center safe area is quiet and clear of tower/gallery recognition points. No cat, animal, person, date, postmark, sign, readable text, pseudo-text, logo, watermark, UI, border, guide, anchor, safe-bound mark, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat--golden-hour",
+      "variantId": "golden-hour",
+      "name": "吴哥窟 · 黎明金色时刻",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "0ea5e80dc283063a1af0976a1ace078961bfd294c85759db2043657ba03a3b74",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.28,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.37,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only locked-B cues; subjects, cats, animals, text, objects, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry and setting constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Muted pale-gold dawn across a lotus-edged reflecting pond with five separately countable sanctuary towers in quincunx, nested galleries, coherent causeway and basin relationships, restrained haze and reflections, and a quiet unmarked bottom-center Portrait area; no cats, animals, people, text, marks, or layout artifacts.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos3 resize",
+            "implementation": "sharp 0.35.3",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "edgeConvention": "right and bottom exclusive"
+            },
+            "cropDimensions": {
+              "width": 1364,
+              "height": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Five sanctuary towers remain visibly countable against the pale dawn sky; layered galleries, west approach, basin, lotus accents, and subdued reflections remain coherent and secondary. The bottom-center safe area is low-detail and clear of tower/gallery recognition points. No cat, animal, person, date, postmark, sign, readable text, pseudo-text, logo, watermark, UI, border, guide, anchor, safe-bound mark, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat--companion-rare",
+      "variantId": "companion-rare",
+      "name": "吴哥窟 · 长尾猕猴旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "31f94a0081aaacb541b6f6db65702c40f8aba53d133bbbdb707df9759feb00e7",
+      "hasCompanion": true,
+      "companion": {
+        "role": "non-player Companion",
+        "kind": "long-tailed-macaque",
+        "scientificName": "Macaca fascicularis",
+        "appearance": "one small muted gray-brown long-tailed macaque seated naturally with its long tail visible; no food, collar, clothing, accessory, performance, or caricature",
+        "count": 1,
+        "maximumFrameHeight": 0.06,
+        "approximateFrameHeight": 0.044,
+        "placement": "far-left lateral causeway stone in the midground, outside Portrait safeBounds",
+        "approximateBounds": {
+          "units": "normalized",
+          "x": 0.014,
+          "y": 0.553,
+          "width": 0.028,
+          "height": 0.044
+        },
+        "prominence": "tiny incidental secondary accent",
+        "conservationWarning": "IUCN Endangered assessment; regionally and temple-habitat plausible, but no official site-specific Angkor Wat occurrence record was established in this research",
+        "playerPortrait": false,
+        "maySubstituteForPlayerPortrait": false,
+        "identityBoardDetail": false,
+        "resemblesStyleReferenceCat": false,
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false,
+        "reusableAnimalAsset": false,
+        "poseSet": false,
+        "authorization": {
+          "authorizedBy": "user",
+          "authorizedAt": "2026-07-20",
+          "scope": "this destination's companion-rare scene only",
+          "authorizedRole": "non-player Companion",
+          "authorizedSpeciesAndCount": "exactly one small long-tailed macaque",
+          "authorizedMaximumFrameHeight": 0.06,
+          "standaloneAnimalOrPortraitAuthorized": false,
+          "playerIdentityInferenceAuthorized": false
+        }
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.5,
+        "y": 0.93,
+        "scale": 0.28,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.37,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true,
+        "companionBoundsRemainInsideCanvas": true,
+        "companionHeightAtOrBelowAuthorizedMaximum": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 2,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "rejectedPreExportAttempts": [
+            {
+              "attempt": 1,
+              "reasonCode": "companion-frame-height",
+              "reason": "The macaque visibly exceeded the authorized six-percent frame-height maximum and was rejected before repository export.",
+              "retainedInCandidateDirectory": false
+            }
+          ],
+          "styleReferenceUsage": "style-only locked-B cues; subjects, cats, animals, text, objects, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry, setting, and species constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Quiet western morning view with five separately countable sanctuary towers, layered galleries, coherent causeway and reflecting basin, one tiny gray-brown long-tailed macaque on the far-left midground causeway stone at approximately 4.4% frame height, and a clear unmarked bottom-center Portrait area; exactly one animal total and no cats, people, text, marks, or layout artifacts.",
+          "normalization": {
+            "method": "centered exact 4:3 crop then Lanczos3 resize",
+            "implementation": "sharp 0.35.3",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "edgeConvention": "right and bottom exclusive"
+            },
+            "cropDimensions": {
+              "width": 1364,
+              "height": 1023
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly one tiny gray-brown long-tailed macaque is visible on the far-left midground causeway stone at approximately 4.4% frame height, below the 6% cap and fully outside safeBounds. Five sanctuary towers, nested galleries, causeway, basin, and reflections remain readable. No cat, second animal, bird, fish, insect, person, food interaction, date, postmark, sign, readable text, pseudo-text, logo, watermark, UI, border, guide, anchor, safe-bound mark, or candidate-image QA overlay was observed."
+          }
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "visualReferenceResearch": {
+      "path": "visual-reference-research.md",
+      "sha256": "7ce1b119b87c6a7697dfd49b8ca882b9892a184bccdefe239b89e888ae80efe4"
+    }
+  },
+  "qa": {
+    "contactSheet": "contact-sheet--cambodia-siem-reap-angkor-wat--non-final.png",
+    "contactSheetSha256": "6b3bdb5310533211d8687a5b1c06e27b32ebb5a0173b915aa9ece06100f537be",
+    "contactSheetOverlays": [
+      "variant labels",
+      "safeBounds rectangles",
+      "composition anchors",
+      "dimensions",
+      "explicit non-player Companion label",
+      "companion count and approximate frame height",
+      "authorized companion location ring",
+      "pending review state"
+    ],
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "generation": {
+      "generatedAttemptCount": 4,
+      "selectedSceneCount": 3,
+      "rejectedPreExportAttemptCount": 1,
+      "rejectedAttemptsRetainedInCandidateDirectory": false
+    },
+    "machineValidation": {
+      "performedAt": "2026-07-20",
+      "sceneCount": 3,
+      "allScenesAre1200x900": true,
+      "allScenesAreSrgb8BitOpaqueRgbPng": true,
+      "allScenesHaveEmbeddedSrgbProfile": true,
+      "allHashesComputed": true,
+      "ordinaryVariantAnimalCount": 0,
+      "rareVariantAnimalCount": 1,
+      "rareCompanionFrameHeightAtOrBelowMaximum": true,
+      "visualInspectionPerformed": true
+    },
+    "reviewState": "pending"
+  }
+}

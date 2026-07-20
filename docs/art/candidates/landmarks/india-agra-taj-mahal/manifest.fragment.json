@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "destinationId": "india-agra-taj-mahal",
+  "destinationName": "阿格拉泰姬陵",
+  "status": "candidate",
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "locks": {
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenanceAndRights": {
+    "realVisualReferenceResearch": "visual-reference-research.md",
+    "realVisualReferenceUsage": "factual geometry, spatial relationships, and companion anatomy only; remote sources were not supplied to generation",
+    "retainedRemoteSourceFiles": [],
+    "restrictedSourcePhotoRetained": false,
+    "copiedSourcePhotoPixels": false,
+    "styleReferenceUsage": "repository references used only for line weight, restrained watercolor intensity, paper texture, and palette; reference subjects, text, framing, and compositions excluded",
+    "generatedOutputStatus": "original AI-generated candidate artwork pending human provenance and rights review",
+    "shippingRightsReview": "pending"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": "Human landmark, style, composition-slot, and shipping-rights review remain required."
+  },
+  "sceneVariants": [
+    {
+      "id": "india-agra-taj-mahal--day-signature",
+      "variantId": "day-signature",
+      "name": "阿格拉泰姬陵 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--india-agra-taj-mahal--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "cda1728ce5dd292551c5c42bf3b1fba2157a44bcf7827c4b9431247e91f30446",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.73,
+        "y": 0.6,
+        "width": 0.24,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Calm frontal south-axis daytime view with one dominant central dome, exactly four platform minarets, broad raised marble platform, simplified charbagh and reflection channel, Yamuna behind the tomb, and a quiet lower-right portrait area.",
+          "normalization": {
+            "method": "centered aspect-preserving fractional 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85.333333,
+              "top": 0,
+              "right": 1450.666667,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "One dominant dome, four distinct platform minarets, platform symmetry, garden axis, and rear Yamuna relationship remain legible. No cat, animal, person, text, pseudo-text, logo, watermark, UI, date, border, or candidate-image QA overlay observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "india-agra-taj-mahal--golden-hour",
+      "variantId": "golden-hour",
+      "name": "阿格拉泰姬陵 · 雅穆纳晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--india-agra-taj-mahal--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "ca70335dbc19f4c510147f32393c216b5544a9d0a0167ae7a2a86b62c3bd4586",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.175,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.6,
+        "width": 0.29,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Soft north-bank sunrise across a restrained Yamuna foreground, with the riverfront terrace directly on the far bank, the charbagh mostly hidden behind the tomb, one dominant dome, exactly four minarets, pale peach marble, and a quiet lower-left terrace portrait area.",
+          "normalization": {
+            "method": "centered aspect-preserving fractional 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85.333333,
+              "top": 0,
+              "right": 1450.666667,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "The north-bank Yamuna/platform relationship, one dominant dome, and four distinct minarets remain readable in restrained peach haze. No cat, animal, person, boat, text, pseudo-text, logo, watermark, UI, date, border, or candidate-image QA overlay observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "india-agra-taj-mahal--companion-rare",
+      "variantId": "companion-rare",
+      "name": "阿格拉泰姬陵 · 棕榈松鼠旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--india-agra-taj-mahal--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "ce2aeafc2a7f699489f57245deae6543d18017e5fb2e8fa97c5d8c90dd61c2c9",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "indian-palm-squirrel",
+        "taxonReference": "Funambulus pennantii",
+        "count": 1,
+        "maximumFrameHeight": 0.05,
+        "approximateFrameHeight": 0.03,
+        "placement": "left lateral reflecting-pool stone edge, outside portrait safeBounds",
+        "prominence": "tiny incidental secondary accent",
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.85,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.73,
+        "y": 0.6,
+        "width": 0.24,
+        "height": 0.34
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 2,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "rejectedPreExportAttempts": [
+            {
+              "attempt": 1,
+              "reasonCode": "companion-frame-height",
+              "reason": "The squirrel exceeded the approximately five-percent frame-height cap.",
+              "retainedInCandidateDirectory": false
+            }
+          ],
+          "sceneReferenceUsage": "the rejected pre-export attempt was used only for architectural composition continuity and was not retained",
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry and companion anatomy constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "promptBrief": "Quiet frontal morning garden view with accurate central dome, exactly four platform minarets and symmetry, plus exactly one tiny five-striped northern palm squirrel at approximately three percent frame height on the left lateral stone edge, outside the quiet lower-right portrait area.",
+          "normalization": {
+            "method": "centered aspect-preserving fractional 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85.333333,
+              "top": 0,
+              "right": 1450.666667,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly one tiny approximately three-percent-frame-height palm squirrel is visible on the left lateral stone edge outside safeBounds. One dominant dome and four distinct minarets remain readable; no cat, person, bird, extra animal, text, pseudo-text, logo, watermark, UI, date, border, or candidate-image QA overlay observed."
+          }
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "visualReferenceResearch": {
+      "path": "visual-reference-research.md",
+      "sha256": "8a1c94a7968ee2a13dcfd6913d274f63a0ce5ac5900f933810cd5095182cc66f"
+    }
+  },
+  "qa": {
+    "contactSheet": "contact-sheet--india-agra-taj-mahal--non-final.png",
+    "contactSheetSha256": "b15e3ee183aad52038f9b00c0497f84986645ad151b9f47d4549248996d1980a",
+    "contactSheetOverlays": [
+      "variant labels",
+      "safeBounds rectangles",
+      "composition anchors",
+      "dimensions",
+      "companion count and approximate height",
+      "authorized companion location ring",
+      "pending review state"
+    ],
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "machineValidation": {
+      "performedAt": "2026-07-20",
+      "sceneCount": 3,
+      "allScenesAre1200x900": true,
+      "allScenesAreSrgb8BitOpaqueRgbPng": true,
+      "allHashesComputed": true,
+      "visualInspectionPerformed": true
+    },
+    "reviewState": "pending"
+  }
+}

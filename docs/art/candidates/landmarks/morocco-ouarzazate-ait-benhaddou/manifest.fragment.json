@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v3.json",
+  "destinationId": "morocco-ouarzazate-ait-benhaddou",
+  "destinationName": "艾本哈杜村",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "locks": {
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenanceAndRights": {
+    "realVisualReferenceResearch": "visual-reference-research.md",
+    "realVisualReferenceResearchSha256": "09960d35e927424ac21ec9169274003b6c10fc3f0f1d08f885ca137fc88da0d7",
+    "realVisualReferenceUsage": "factual ksar geometry, Ounila Valley setting, earthen-material relationships, and living-heritage cautions only; no remote image was supplied to generation",
+    "referenceSources": [
+      {
+        "publisherOrAuthor": "UNESCO World Heritage Centre",
+        "title": "Ksar of Ait-Ben-Haddou",
+        "url": "https://whc.unesco.org/en/list/444",
+        "license": "property description marked CC BY-SA 3.0 IGO; gallery and other media not assumed covered",
+        "usage": "factual collective-dwelling, defensive-wall, angle-tower, clay-brick-detail, summit-loft, Ounila Valley, and earthen-construction relationships only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Kingdom of Morocco, Ministry of Youth, Culture and Communication",
+        "title": "Patrimoine matériel Unesco",
+        "url": "https://mjcc.gov.ma/fr/departements/culture/patrimoine-materiel-unesco/",
+        "license": "no open media-reuse license identified; treated as all-rights-reserved",
+        "usage": "official confirmation of the earthen ensemble, enclosing walls, clustered houses, corner towers, and southern Moroccan architectural identity",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "Moroccan National Tourist Office",
+        "title": "Medina in Ouarzazate-Zagora-Tinghir",
+        "url": "https://www.visitmorocco.com/en/travel/ouarzazate-zagora-tinghir/medina",
+        "license": "no open text or image reuse license identified; treated as all-rights-reserved",
+        "usage": "factual Ounila Valley, hill-climbing buildings, and summit grain-store relationships only",
+        "retained": false
+      },
+      {
+        "publisherOrAuthor": "UNESCO World Heritage Centre",
+        "title": "État de conservation (SOC 2024) Ksar d’Aït-Ben-Haddou (Maroc)",
+        "url": "https://whc.unesco.org/fr/soc/4606/",
+        "license": "no separate open media-reuse license identified; report-page media not retained",
+        "usage": "living-heritage, earthquake, restoration, residential-occupation, visitor-pressure, and management context only",
+        "retained": false
+      }
+    ],
+    "retainedRemoteSourceFiles": [],
+    "restrictedSourcePhotoRetained": false,
+    "remoteSourceMediaSuppliedToGenerator": false,
+    "copiedSourcePhotoPixels": false,
+    "styleReferenceUsage": "repository references used only for thin warm linework, locked-B restrained watercolor intensity, low-saturation palette, paper texture, and quiet nostalgia; their cats, text, objects, framing, UI, and compositions were excluded",
+    "generatedOutputStatus": "original AI-generated candidate artwork pending human landmark, living-heritage, provenance, and rights review",
+    "livingHeritageWarning": "Aït Ben Haddou is a traditional habitat and living heritage place, not an empty fantasy ruin or merely a film set; do not promote imagery that exoticizes residents, romanticizes abandonment, or asserts an undocumented current damage/restoration state.",
+    "shippingRightsReview": "pending"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": "Human landmark, living-heritage, style, composition-slot, provenance, and shipping-rights reviews remain required. No approval is inferred."
+  },
+  "sceneVariants": [
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou--day-signature",
+      "destinationId": "morocco-ouarzazate-ait-benhaddou",
+      "variantId": "day-signature",
+      "name": "艾本哈杜村 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "b033052ad70a23918899607c4aef50a7765b538e111519fe190981d94da56635",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.175,
+        "y": 0.94,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.64,
+        "width": 0.29,
+        "height": 0.32
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "sourcePlan": "docs/art/landmark-expansion-v3.json",
+        "promptJobId": "scene-variant-export",
+        "variantBrief": "Representative quiet daytime view across the Ounila valley toward Ait Benhaddou, preserving the stepped earthen ksar, corner towers, crenellations, hillside crown, and sparse riverbed.",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "sourceEmbeddedIccProfile": false,
+          "sourceSha256": "27cb2374119dd7a4eb2401f33e85b61efec6680f6947d2f05332276e39141704",
+          "sourceRetention": "tool-managed generated-image file outside the repository; not a shipping artifact",
+          "styleReferenceUsage": "style-only; locked B cues only; subjects, cats, text, objects, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry and living-heritage constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "prompt": "Landscape 4:3, edge-to-edge scene artwork only. A quiet representative daytime view across the sparse Ounila Valley riverbed toward the Ksar of Aït Ben Haddou. Preserve factual recognition geometry: one compact collective settlement of warm earthen dwellings packed inside defensive walls; the ensemble climbs a dry hill in clear stepped tiers to a small summit granary/fortified crown; several tall angular corner towers with restrained clay-brick upper decoration and small coherent crenellated/toothed parapets; irregular clustered flat-roofed dwellings, not a single palace; broad pale oued foreground, a few low muted sage shrubs and narrow cultivated traces, dry layered High Atlas foothills behind. Three-quarter valley-facing composition, with the ksar occupying the middle and right-middle and its complete hill silhouette clear against a pale sky. Reserve the lower-left foreground as an unmarked, unobstructed, low-detail, low-contrast Portrait area, roughly 30% wide by 35% high, with flat quiet earth and no recognition points. Locked style intensity B only, using the attached references solely for medium and intensity: thin warm gray-brown hand-drawn linework, low-saturation ochre and sage, very small faded vermilion accents only if architectural, generous negative space, subtle warm-white paper grain within the painting, restrained transparent watercolor washes and bleed, calm nostalgic atmosphere. Exclude every subject, cat, animal, person, text, pseudo-text, calligraphy, number, date, postmark, readable sign, logo, watermark, UI, icon, menu, furniture, vase, fish, postcard framing, border, caption band, safe-bound rectangle, anchor, guide, marker, slot frame. No cinematic props. No photorealism, 3D, flat vector look, thick black outlines, neon, saturation, hard gradient, fantasy towers, dome, minaret, red-brick castle, modern concrete city, crowds, or copied reference composition.",
+          "normalization": {
+            "tool": "Pillow 12.3.0",
+            "method": "centered exact 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "cropDimensions": {
+              "width": 1364,
+              "height": 1023
+            },
+            "resampling": "LANCZOS",
+            "distortionApplied": false,
+            "colorManagement": "untagged source RGB treated as sRGB; sRGB ICC profile embedded in output",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "machineInspection": {
+            "performed": true,
+            "dimensionsMatch": true,
+            "modeIsRgb": true,
+            "isOpaque": true,
+            "embeddedSrgbProfile": true,
+            "sha256Computed": true
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "The stepped earthen settlement, clustered fortified dwellings, angular towers, summit crown, dry hill silhouette, and sparse valley floor remain legible after normalization. The lower-left slot is quiet and outside the main recognition points. No cat, animal, person, date, text, pseudo-text, sign, postmark, logo, watermark, UI, border, marker, safeBounds overlay, anchor, or guide was observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou--golden-hour",
+      "destinationId": "morocco-ouarzazate-ait-benhaddou",
+      "variantId": "golden-hour",
+      "name": "艾本哈杜村 · 金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "mode": "RGB",
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "f63a2da2ebf0ef7432b307453f49de3743fcef2c969661098b2fe7b4484aad6d",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.83,
+        "y": 0.94,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.69,
+        "y": 0.64,
+        "width": 0.28,
+        "height": 0.32
+      },
+      "legalBoundsValidation": {
+        "allValuesWithinNormalizedRange": true,
+        "boundsRemainInsideCanvas": true,
+        "anchorInsideSafeBounds": true,
+        "landmarkRecognitionPointsOutsideSafeBounds": true,
+        "companionOutsideSafeBounds": true
+      },
+      "production": {
+        "sourcePlan": "docs/art/landmark-expansion-v3.json",
+        "promptJobId": "scene-variant-export",
+        "variantBrief": "Restrained late-afternoon view with warm ochre earthen walls and long soft shadows, keeping the clustered kasbah towers and hill-climbing silhouette coherent.",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "generationAttempt": 1,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "sourceMode": "RGB",
+          "sourceFormat": "PNG",
+          "sourceEmbeddedIccProfile": false,
+          "sourceSha256": "1c64c03cb9004f8e939dccb6522590c04e5e7469de3b3f386d7ba7001c971eb9",
+          "sourceRetention": "tool-managed generated-image file outside the repository; not a shipping artifact",
+          "styleReferenceUsage": "style-only; locked B cues only; subjects, cats, text, objects, framing, UI, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUsage": "geometry and living-heritage constraints synthesized from visual-reference-research.md; no remote image supplied to generation",
+          "prompt": "Landscape 4:3, edge-to-edge scene artwork only. A restrained late-afternoon golden-hour view across the Ounila Valley toward the Ksar of Aït Ben Haddou, compositionally distinct from a frontal day view. Preserve factual recognition geometry: one compact collective earthen ksar, its clustered dwellings and high defensive wall rising diagonally in stepped tiers up the hill to a small summit granary/fortified crown; visibly angular corner towers and a few taller kasbah-like houses with restrained clay-brick upper motifs and small coherent crenellated/toothed parapets; flat roofs and irregular attached masses, not a single fantasy palace. Use a gentle side-angle with the ksar occupying the left and middle, hill silhouette fully coherent, long soft shadows moving across a broad sparse ochre riverbed, muted sage river-edge vegetation and dry layered foothills. Keep sunlight warm but low-saturation, with pale apricot and faded vermilion touches controlled. Reserve the lower-right foreground as an unmarked, unobstructed, low-detail, low-contrast Portrait area, roughly 29% wide by 34% high, with quiet flat earth and no towers, vegetation clumps, walls, or recognition points. Locked style intensity B only, using the attached references solely for medium and intensity: thin warm gray-brown hand-drawn linework, low-saturation sage and ochre, generous negative space, subtle warm-white paper grain within the painting, restrained transparent watercolor washes and bleed, calm nostalgic atmosphere. Exclude every subject, cat, animal, person, text, pseudo-text, calligraphy, number, date, postmark, readable sign, logo, watermark, UI, icon, menu, furniture, vase, fish, postcard framing, border, caption band, safe-bound rectangle, anchor, guide, marker, slot frame. No cinematic props. No photorealism, 3D, flat vector look, thick black outlines, neon, high saturation, hard digital gradients, dramatic orange sky, fantasy towers, dome, minaret, red-brick castle, modern concrete city, crowds, or copied reference composition.",
+          "normalization": {
+            "tool": "Pillow 12.3.0",
+            "method": "centered exact 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "cropDimensions": {
+              "width": 1364,
+              "height": 1023
+            },
+            "resampling": "LANCZOS",
+            "distortionApplied": false,
+            "colorManagement": "untagged source RGB treated as sRGB; sRGB ICC profile embedded in output",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "embedded sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "machineInspection": {
+            "performed": true,
+            "dimensionsMatch": true,
+            "modeIsRgb": true,
+            "isOpaque": true,
+            "embeddedSrgbProfile": true,
+            "sha256Computed": true
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "The warm earthen mass, stepped diagonal climb, clustered towers, summit crown, sparse riverbed, and dry valley hills remain coherent after normalization. The lower-right slot is quiet and clear of the main recognition points. No cat, animal, person, date, text, pseudo-text, sign, postmark, logo, watermark, UI, border, marker, safeBounds overlay, anchor, or guide was observed."
+          }
+        }
+      }
+    }
+  ],
+  "artifacts": {
+    "visualReferenceResearch": {
+      "path": "visual-reference-research.md",
+      "sha256": "09960d35e927424ac21ec9169274003b6c10fc3f0f1d08f885ca137fc88da0d7"
+    }
+  },
+  "qa": {
+    "contactSheet": "contact-sheet--morocco-ouarzazate-ait-benhaddou--non-final.png",
+    "contactSheetSha256": "3cd6defeff96135b840f2bd7be4195f539af3075eeb636dc3e8d13c3b7dcbf4c",
+    "contactSheetDimensions": {
+      "width": 1740,
+      "height": 780,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "format": "png"
+    },
+    "contactSheetOverlays": [
+      "variant labels",
+      "candidate and pending-review state",
+      "safeBounds rectangles",
+      "bottom-center composition anchors",
+      "dimensions",
+      "visual QA summary"
+    ],
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "machineValidation": {
+      "performedAt": "2026-07-20",
+      "sceneCount": 2,
+      "allScenesAre1200x900": true,
+      "allScenesAreSrgb8BitOpaqueRgbPng": true,
+      "allScenesHaveEmbeddedSrgbProfiles": true,
+      "allHashesComputed": true,
+      "allCompositionSlotsUseBottomCenterAnchors": true,
+      "allSafeBoundsLegal": true,
+      "ordinaryVariantAnimalCount": 0,
+      "visualInspectionPerformed": true,
+      "hardConstraintViolationCount": 0
+    },
+    "pendingReviews": [
+      "human landmark fidelity",
+      "human living-heritage framing",
+      "human locked-B style fit",
+      "human composition-slot fit with approved Portrait",
+      "human provenance and rights",
+      "human shipping approval"
+    ],
+    "reviewState": "pending",
+    "shippingEligible": false
+  }
+}

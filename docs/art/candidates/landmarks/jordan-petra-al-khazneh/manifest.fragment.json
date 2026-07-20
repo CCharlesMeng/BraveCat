@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "destinationId": "jordan-petra-al-khazneh",
+  "destinationName": "佩特拉卡兹尼神殿",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-expansion-v3.json",
+  "sourcePlanSha256": "fcf071fcae23f52d97b425ba38a1266c85af9db018c21f00f531db3063533b44",
+  "lockedProductionSource": "docs/art/landmark-production-v1.json",
+  "lockedProductionSourceSha256": "1b3a716c16fa56a47776228f438dcc9ef3265dba97177584283c6781b663445e",
+  "productionRules": [
+    "docs/art/calibration-production-v1.md",
+    "docs/art/prompt-pack.calibration.v1.json",
+    "docs/art/asset-manifest.v1.template.json",
+    "CONTEXT.md",
+    "docs/adr/0001-postcards-are-composited-not-generated.md"
+  ],
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "inputProvenance": {
+    "calibrationRules": {
+      "path": "docs/art/calibration-production-v1.md",
+      "sha256": "e67d112608aa9adf5d95b983cadca18356eaaf13a1c27a4bddce5f95a8fe918e"
+    },
+    "domainContext": {
+      "path": "CONTEXT.md",
+      "sha256": "878382089816fd289344a789a1105be88ed69a6a86fc1104feded905d49a1494"
+    },
+    "styleReferences": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+        "selectedPanel": "B",
+        "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+      }
+    ],
+    "styleReferenceUsage": "Style-only use: thin warm gray-brown linework, restrained low-saturation watercolor, warm-white paper texture, gentle bleed, and quiet B-level contrast. Reference cats, animals, people, text, objects, UI, borders, layouts, and compositions were excluded."
+  },
+  "visualReferenceResearch": {
+    "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/visual-reference-research.md",
+    "sha256": "ef55c6a4527219b2174471080321a1257b8625d099244d1307be0ed178c4199c",
+    "use": "official text and publication descriptions supplied factual geometry and Siq-setting constraints only"
+  },
+  "provenanceAndRights": {
+    "referenceSources": [
+      {
+        "id": "unesco-petra-326",
+        "publisher": "UNESCO World Heritage Centre",
+        "title": "Petra",
+        "url": "https://whc.unesco.org/en/list/326/",
+        "license": "Written site description: CC BY-SA IGO 3.0; gallery and other media excluded",
+        "usage": "rock-cut red-sandstone setting, Siq approach, and Hellenistic/Nabataean architectural relationship only",
+        "retained": false
+      },
+      {
+        "id": "pdtra-al-khazna",
+        "publisher": "Petra Development and Tourism Region Authority",
+        "title": "Al Khazna (The Treasury)",
+        "url": "https://www.visitpetra.jo/en/Location/2",
+        "license": "No open media-reuse license identified; treated as all-rights-reserved except for facts",
+        "usage": "39.5 m height, Siq-entrance position, Nabataean rock-cut mausoleum, six-capital lower order, and urn only",
+        "retained": false
+      },
+      {
+        "id": "pdtra-the-siq",
+        "publisher": "Petra Development and Tourism Region Authority",
+        "title": "The Siq",
+        "url": "https://www.visitpetra.jo/en/Location/25",
+        "license": "No open media-reuse license identified; treated as all-rights-reserved except for facts",
+        "usage": "narrow natural split-gorge approach just over 1 km long only",
+        "retained": false
+      },
+      {
+        "id": "doa-adaj60-classical-orders",
+        "publisher": "Department of Antiquities of Jordan",
+        "title": "The Classical Orders in the Rock Façades of Petra: Architecture and Graphic Reconstruction",
+        "url": "https://publication.doa.gov.jo/uploads/publications/216/ADAJ%2060%20English-387-406.pdf",
+        "license": "No open reuse license identified for article figures; treated as all-rights-reserved except for facts",
+        "usage": "two-level composition, approximately 42 m by 28 m formal field, six-support lower portico, two central freestanding columns, outer engaged supports, broken pediments, and central tholos only",
+        "retained": false
+      }
+    ],
+    "retainedRemoteSourceFiles": [],
+    "restrictedSourcePhotosRetained": false,
+    "remoteImagesSuppliedToGenerator": false,
+    "copiedOrTracedSourcePixels": false,
+    "realReferenceUsage": "Factual geometry was synthesized from official written descriptions. No remote photograph, publication figure, map, scan, or page capture was used as an image-generation input.",
+    "generatedOutputStatus": "Original AI-generated candidate artwork pending human provenance, cultural-sensitivity, and rights review.",
+    "shippingRightsReview": "pending",
+    "warnings": [
+      "Official-site consultation does not grant reuse rights to PDTRA or Department of Antiquities photographs, drawings, scans, or page designs.",
+      "UNESCO's CC BY-SA IGO 3.0 notice applies to its written description and was not assumed to cover gallery media.",
+      "Model-output provenance, accidental similarity to protected photographs or illustrations, cultural-heritage/site rules, and Jordan-specific commercial-use restrictions remain unreviewed.",
+      "No user visual approval or rights approval is inferred."
+    ]
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "pendingReviews": [
+      "user visual selection and approval",
+      "human landmark-fidelity review",
+      "human composition-slot review",
+      "approved-Portrait composite review after the user-photo gate is cleared",
+      "human provenance and shipping-rights review"
+    ],
+    "notes": "Machine and agent visual QA are complete for selected v02 candidates. Human visual, landmark, composite, and rights decisions remain pending."
+  },
+  "contactSheet": {
+    "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/contact-sheet--jordan-petra-al-khazneh--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1560,
+      "height": 720,
+      "format": "png",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB"
+    },
+    "sha256": "90deb0e51293b97081da56ca7fa9af1ec9d175f47705d4ffaa1104907e04ff5e",
+    "candidateImagesContainQaOverlays": false,
+    "sheetContainsLabelsAndQaOverlaysOnly": true,
+    "selectedRevisionsShown": [
+      "scene--jordan-petra-al-khazneh--day-signature--v02.png",
+      "scene--jordan-petra-al-khazneh--golden-hour--v02.png"
+    ],
+    "overlays": [
+      "variant label",
+      "version label",
+      "review state",
+      "safeBounds",
+      "compositionSlot bottom-center anchor",
+      "pose, scale, and flip",
+      "superseded-revision note"
+    ],
+    "visualInspection": {
+      "performed": true,
+      "clippingFound": false,
+      "labelsReadable": true,
+      "selectedScenesMatchManifestSlots": true
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "jordan-petra-al-khazneh--day-signature",
+      "destinationId": "jordan-petra-al-khazneh",
+      "variantId": "day-signature",
+      "name": "佩特拉卡兹尼神殿 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "selectedRevision": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "embeddedColorProfile": "sRGB built-in",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "6ca21b56e23c752dcc52a655c1c95c904f4bf5edab1deabd0c607ed4df12ca64",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.27,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.12,
+          "y": 0.6,
+          "width": 0.3,
+          "height": 0.33
+        },
+        "legalBoundsValidation": {
+          "allValuesWithinNormalizedRange": true,
+          "boundsRemainInsideCanvas": true,
+          "anchorInsideSafeBounds": true,
+          "renderedPortraitHeightFitsSafeBounds": true,
+          "landmarkRecognitionPointsOutsideSafeBounds": true,
+          "companionOutsideSafeBounds": true
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generationAttempt": 2,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "generatedSourceRetention": "Tool-managed source remains outside the repository and is not a shipping or candidate artifact.",
+          "styleIntensity": "B",
+          "styleReferenceUse": "Repository art used for medium and intensity only; its subjects, cats, animals, text, borders, UI, objects, and compositions were excluded.",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUse": "Official written geometry constraints synthesized through visual-reference-research.md; no remote image supplied to generation.",
+          "visualReferenceIds": [
+            "unesco-petra-326",
+            "pdtra-al-khazna",
+            "pdtra-the-siq",
+            "doa-adaj60-classical-orders"
+          ],
+          "promptBrief": "Quiet daytime view emerging from the shaded Siq, with Al-Khazneh right-of-center, a continuous rock-cut cliff, coherent two-storey classical order, central tholos and urn, and an unmarked low-detail lower-left Portrait area.",
+          "promptArchitectureConstraints": [
+            "continuous cliff-carved facade rather than a freestanding building",
+            "lower six-support rhythm with two central freestanding columns and four outer engaged supports",
+            "central lower triangular pediment and one dark axial doorway",
+            "upper broken-pediment wings around one circular columned tholos",
+            "one prominent urn crowning the tholos",
+            "all panels and relief fields blank or strictly non-representational"
+          ],
+          "promptHardExclusions": [
+            "cat, animal, bird, person, crowd, statue, deity, readable human or animal relief",
+            "text, pseudo-text, letters, numerals, date, postmark, logo, watermark, UI, sign",
+            "border, frame, safe-bound mark, anchor mark, guide mark",
+            "malformed or duplicated columns, extra storey, invented dome, detached temple",
+            "photorealism, 3D render, flat vector style, thick black outlines, hard digital gradients"
+          ],
+          "normalization": {
+            "method": "largest centered exact 4:3 integer crop followed by Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "rightExclusive": 1450,
+              "bottomExclusive": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Pillow Resampling.LANCZOS"
+            },
+            "distortionApplied": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB built-in"
+          },
+          "rightsNotes": "No remote image was supplied, copied, traced, retained, or used as a style source. Human source-independence and shipping-rights review remain pending."
+        },
+        "supersededRevision": {
+          "revision": "v01",
+          "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v01.png",
+          "sha256": "c624271a1d4a78f5e9c98b82421966cb25524d4a2e2fb4f58bc68c2dacacc474",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "mode": "RGB"
+          },
+          "status": "superseded-rejected",
+          "shippingEligible": false,
+          "reasonCode": "forbidden-representational-reliefs",
+          "reason": "Post-normalization inspection found readable human- and animal-like carved figures on facade panels, violating the no-person and no-animal clean-scene constraints."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "Two-storey facade remains carved into the cliff, with a coherent six-support lower rhythm, central triangular pediment and doorway, upper broken-pediment wings, central tholos, urn, and enclosing Siq walls.",
+            "slotAssessment": "The lower-left safeBounds are grounded on the shaded stone approach and remain clear of the facade, tholos, urn, columns, doorway, and principal canyon opening.",
+            "notes": "No cat, animal, bird, person, readable representational relief, text, pseudo-text, date, postmark, logo, watermark, UI, border, frame, slot line, anchor, guide, or reference artifact was observed in selected v02."
+          }
+        }
+      }
+    },
+    {
+      "id": "jordan-petra-al-khazneh--golden-hour",
+      "destinationId": "jordan-petra-al-khazneh",
+      "variantId": "golden-hour",
+      "name": "佩特拉卡兹尼神殿 · 金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "selectedRevision": "v02",
+      "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "embeddedColorProfile": "sRGB built-in",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "4b4ae9b682a092bfbbb22fcb49b44e8b4ec55780ad22a3dcb7997c60e0f3b175",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.72,
+        "y": 0.92,
+        "scale": 0.28,
+        "pose": "gaze",
+        "flip": true
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.59,
+          "y": 0.62,
+          "width": 0.26,
+          "height": 0.31
+        },
+        "legalBoundsValidation": {
+          "allValuesWithinNormalizedRange": true,
+          "boundsRemainInsideCanvas": true,
+          "anchorInsideSafeBounds": true,
+          "renderedPortraitHeightFitsSafeBounds": true,
+          "landmarkRecognitionPointsOutsideSafeBounds": true,
+          "companionOutsideSafeBounds": true
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generationAttempt": 2,
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "generatedSourceRetention": "Tool-managed source remains outside the repository and is not a shipping or candidate artifact.",
+          "styleIntensity": "B",
+          "styleReferenceUse": "Repository art used for medium and intensity only; its subjects, cats, animals, text, borders, UI, objects, and compositions were excluded.",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B"
+          ],
+          "realVisualReferenceUse": "Official written geometry constraints synthesized through visual-reference-research.md; no remote image supplied to generation.",
+          "visualReferenceIds": [
+            "unesco-petra-326",
+            "pdtra-al-khazna",
+            "pdtra-the-siq",
+            "doa-adaj60-classical-orders"
+          ],
+          "promptBrief": "Compositionally distinct oblique late-afternoon Siq reveal with Al-Khazneh left-of-center, soft amber light on the upper rock, cool shaded foreground, coherent tholos and urn, and an unmarked low-detail lower-right Portrait area.",
+          "promptArchitectureConstraints": [
+            "continuous cliff-carved facade rather than a freestanding building",
+            "lower six-support rhythm with two central freestanding columns and four outer engaged supports",
+            "central lower triangular pediment and one dark axial doorway",
+            "upper broken-pediment wings around one circular columned tholos",
+            "one prominent urn crowning the tholos",
+            "all panels and relief fields blank or strictly non-representational"
+          ],
+          "promptHardExclusions": [
+            "cat, animal, bird, person, crowd, statue, deity, readable human or animal relief",
+            "text, pseudo-text, letters, numerals, date, postmark, logo, watermark, UI, sign",
+            "border, frame, safe-bound mark, anchor mark, guide mark",
+            "malformed or duplicated columns, extra storey, invented dome, detached temple",
+            "photorealism, 3D render, flat vector style, thick black outlines, hard digital gradients"
+          ],
+          "normalization": {
+            "method": "largest centered exact 4:3 integer crop followed by Lanczos resize",
+            "cropPixels": {
+              "left": 86,
+              "top": 0,
+              "rightExclusive": 1450,
+              "bottomExclusive": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Pillow Resampling.LANCZOS"
+            },
+            "distortionApplied": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB built-in"
+          },
+          "rightsNotes": "No remote image was supplied, copied, traced, retained, or used as a style source. Human source-independence and shipping-rights review remain pending."
+        },
+        "supersededRevision": {
+          "revision": "v01",
+          "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v01.png",
+          "sha256": "38f0cb4def4857b1317da48fdc2c8706ee2bdea98aac0a0ed7b64386cae87b61",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "mode": "RGB"
+          },
+          "status": "superseded-rejected",
+          "shippingEligible": false,
+          "reasonCode": "forbidden-representational-reliefs",
+          "reason": "Post-normalization inspection found readable human- and animal-like carved figures on facade panels, violating the no-person and no-animal clean-scene constraints."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "Oblique two-storey facade remains carved into the cliff, with a coherent six-support lower rhythm, central triangular pediment and doorway, upper broken-pediment wings, central tholos, urn, and deep enclosing Siq walls.",
+            "slotAssessment": "The lower-right safeBounds are grounded on quiet shaded stone, outside the facade and all primary recognition points; the flip directs the future gaze pose back toward the monument.",
+            "notes": "No cat, animal, bird, person, readable representational relief, text, pseudo-text, date, postmark, logo, watermark, UI, border, frame, slot line, anchor, guide, or reference artifact was observed in selected v02."
+          }
+        }
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/visual-reference-research.md",
+      "kind": "research",
+      "status": "candidate-support",
+      "sha256": "ef55c6a4527219b2174471080321a1257b8625d099244d1307be0ed178c4199c"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v01.png",
+      "kind": "scene",
+      "status": "superseded-rejected",
+      "sha256": "c624271a1d4a78f5e9c98b82421966cb25524d4a2e2fb4f58bc68c2dacacc474"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v02.png",
+      "kind": "scene",
+      "status": "selected-candidate",
+      "sha256": "6ca21b56e23c752dcc52a655c1c95c904f4bf5edab1deabd0c607ed4df12ca64"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v01.png",
+      "kind": "scene",
+      "status": "superseded-rejected",
+      "sha256": "38f0cb4def4857b1317da48fdc2c8706ee2bdea98aac0a0ed7b64386cae87b61"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v02.png",
+      "kind": "scene",
+      "status": "selected-candidate",
+      "sha256": "4b4ae9b682a092bfbbb22fcb49b44e8b4ec55780ad22a3dcb7997c60e0f3b175"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/contact-sheet--jordan-petra-al-khazneh--non-final.png",
+      "kind": "contact-sheet",
+      "status": "candidate-non-final",
+      "sha256": "90deb0e51293b97081da56ca7fa9af1ec9d175f47705d4ffaa1104907e04ff5e"
+    }
+  ],
+  "inspection": {
+    "performed": true,
+    "decision": "pending",
+    "plannedVariantCount": 2,
+    "selectedCandidateCount": 2,
+    "generationAttemptCount": 4,
+    "supersededRevisionCount": 2,
+    "hardViolationsFoundInSelectedCandidates": false,
+    "candidateImagesContainQaOverlays": false,
+    "generatedCatAsset": false,
+    "machineValidation": {
+      "performedAt": "2026-07-20",
+      "selectedScenesAre1200x900": true,
+      "selectedScenesAreSrgb8BitOpaqueRgbPng": true,
+      "selectedScenesUseExact43CropAndLanczosResize": true,
+      "allReferencedArtifactHashesComputed": true,
+      "allCompositionSlotsAndSafeBoundsLegal": true,
+      "ordinaryVariantAnimalCount": 0,
+      "visualInspectionPerformedForEveryRetainedRevision": true
+    },
+    "notes": [
+      "Both v01 normalized revisions were inspected, rejected for readable representational facade reliefs, and preserved as superseded revisions.",
+      "Replacement v02 candidates were independently generated, normalized, and inspected.",
+      "Selected day-signature and golden-hour scenes preserve distinct compositions while keeping the two-storey facade, tholos, urn, columns, and enclosing Siq coherent.",
+      "No hard exclusion was observed in either selected v02 scene.",
+      "Human visual, landmark-fidelity, approved-Portrait composite, provenance, cultural-sensitivity, and shipping-rights reviews remain pending."
+    ]
+  }
+}

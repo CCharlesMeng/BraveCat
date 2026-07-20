@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "art-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "destinationId": "france-paris-eiffel-tower",
+  "destinationName": "巴黎埃菲尔铁塔",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "styleLock": {
+    "intensity": "B",
+    "description": "restrained watercolor at existing-reference intensity"
+  },
+  "spec": {
+    "width": 1200,
+    "height": 900,
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "format": "png",
+    "alpha": "opaque",
+    "mode": "RGB"
+  },
+  "sceneVariants": [
+    {
+      "id": "france-paris-eiffel-tower--day-signature",
+      "variantId": "day-signature",
+      "name": "巴黎埃菲尔铁塔·日间代表景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--france-paris-eiffel-tower--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "b23c9c62bd4860b754e755e161cc4a97b6e94d2eb09eb521a6ed3b392a139bab",
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.89,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": false,
+      "production": {
+        "safeBounds": {
+          "x": 0.06,
+          "y": 0.54,
+          "width": 0.28,
+          "height": 0.35
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20T18:31:00+08:00",
+          "generator": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null,
+          "promptTemplateId": "scene-variant-export",
+          "variantBrief": "Representative daytime garden view with the full Eiffel Tower silhouette and lattice rhythm intact, no people or signage.",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "referenceUse": "style-only; no reference subject, cat, text, border, or layout copied",
+          "aspectRatioRequested": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "aspect-preserving center crop to 4:3, then Lanczos resize",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+            "outputMode": "8-bit opaque RGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "formatCompliance": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "france-paris-eiffel-tower--golden-hour",
+      "variantId": "golden-hour",
+      "name": "巴黎埃菲尔铁塔·黎明金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--france-paris-eiffel-tower--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "1f5719b499f9d7cd1f11acb784850078527328e7094e8d0b113a422a18860dd2",
+      "compositionSlot": {
+        "x": 0.2,
+        "y": 0.89,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": false,
+      "production": {
+        "safeBounds": {
+          "x": 0.07,
+          "y": 0.59,
+          "width": 0.26,
+          "height": 0.3
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20T18:31:00+08:00",
+          "generator": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null,
+          "promptTemplateId": "scene-variant-export",
+          "variantBrief": "Pale dawn over the Champ de Mars with soft ochre light, long quiet shadows, and an accurate tower silhouette.",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "referenceUse": "style-only; no reference subject, cat, text, border, or layout copied",
+          "aspectRatioRequested": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "aspect-preserving center crop to 4:3, then Lanczos resize",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+            "outputMode": "8-bit opaque RGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "formatCompliance": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--france-paris-eiffel-tower--non-final.png",
+    "status": "qa-non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 2400,
+      "height": 1040
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "mode": "RGB",
+    "sha256": "76b5176c7824608eca8bcd60ff1c68c7910c41362a1095c4ed2ecaeac4087892",
+    "overlays": [
+      "safeBounds",
+      "compositionSlot-bottom-center-anchor"
+    ],
+    "review": {
+      "decision": "pending",
+      "reviewer": "",
+      "reviewedAt": "",
+      "notes": ""
+    }
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "destinationId": "egypt-giza-pyramids",
+  "destinationName": "吉萨金字塔",
+  "status": "candidate",
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "locks": {
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  },
+  "sceneVariants": [
+    {
+      "id": "egypt-giza-pyramids--day-signature",
+      "variantId": "day-signature",
+      "name": "吉萨金字塔 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--egypt-giza-pyramids--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "b74fcef69632e6c32c9018ee207dd2c97a83a1d25eb3f4ed412e8b5b91dd686e",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/style-ref-poses.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "promptBrief": "Clear representative daytime Giza Plateau view with three coherent principal pyramid silhouettes, sparse foreground detail, and a quiet lower-right portrait area.",
+          "normalization": {
+            "method": "aspect-preserving 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Three major pyramid silhouettes remain coherent; no cat, companion, person, camel, text, border, slot line, anchor, or other prohibited element observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "egypt-giza-pyramids--golden-hour",
+      "variantId": "golden-hour",
+      "name": "吉萨金字塔 · 晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--egypt-giza-pyramids--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "51219eea90a761064a968ad14fecc57d09e743f108538b42aad7581ce226b250",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/style-ref-poses.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "promptBrief": "Quiet sunrise Giza Plateau view with pale ochre sand, long soft shadows, restrained haze, coherent pyramid scale relationships, and a quiet lower-right portrait area.",
+          "normalization": {
+            "method": "aspect-preserving 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Sunrise treatment remains restrained; no cat, companion, person, camel, text, border, slot line, anchor, or other prohibited element observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "egypt-giza-pyramids--companion-rare",
+      "variantId": "companion-rare",
+      "name": "吉萨金字塔 · 戴胜旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "aca9f96c216bd9dcb7be475abca91a19828cbe61c5ef37dcfc5655783d0c7211",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "hoopoe",
+        "count": 1,
+        "placement": "left lateral midground, outside portrait safeBounds",
+        "approximateFrameHeightPercent": 3,
+        "prominence": "tiny incidental accent; unmistakably secondary to the pyramids"
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "sceneReference": "scene--egypt-giza-pyramids--golden-hour--v01.png",
+          "sceneReferenceUsage": "composition and scale continuity only; source candidate unchanged",
+          "styleReferenceUsage": "style-only; subjects, text, framing, and compositions excluded",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/style-ref-poses.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "promptBrief": "Quiet sunrise Giza Plateau view with exactly one tiny hoopoe at approximately 3–5% of frame height in the left lateral midground, coherent pyramid scale relationships, and a quiet lower-right portrait area.",
+          "normalization": {
+            "method": "aspect-preserving 4:3 crop then Lanczos resize",
+            "cropPixels": {
+              "left": 85,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1024
+            },
+            "distortionApplied": false,
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly one tiny, approximately 3%-frame-height hoopoe is visible in the left lateral midground outside safeBounds and remains secondary to the pyramids; no cat, person, camel, extra animal, text, border, slot line, anchor, or other prohibited element observed."
+          }
+        }
+      }
+    }
+  ],
+  "supersededCandidates": [
+    {
+      "id": "egypt-giza-pyramids--companion-rare--v01",
+      "variantId": "companion-rare",
+      "status": "superseded",
+      "shippingEligible": false,
+      "imageSrc": "scene--egypt-giza-pyramids--companion-rare--v01.png",
+      "sha256": "f78147a5ddca9d346e424529579acf6eed12b5b46a80d8cccaf5d469416c57b5",
+      "supersededBy": "scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "reasonCode": "companion-prominence",
+      "reason": "The v01 hoopoe is too large and competes with the pyramids instead of reading as a rare secondary detail."
+    }
+  ],
+  "qa": {
+    "contactSheet": "contact-sheet--egypt-giza-pyramids--non-final.png",
+    "contactSheetSha256": "409cf3ca2f9f5edd458d665a86b9ceb150cdbbae103fb1ff30278424e128f1dc",
+    "contactSheetOverlays": [
+      "variant labels",
+      "safeBounds rectangles",
+      "dimensions",
+      "companion count",
+      "pending review state"
+    ],
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "reviewState": "pending"
+  }
+}

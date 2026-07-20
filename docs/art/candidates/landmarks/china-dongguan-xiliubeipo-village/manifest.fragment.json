@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "art-candidate-fragment",
+  "destinationId": "china-dongguan-xiliubeipo-village",
+  "destinationName": "东莞松山湖溪流背坡村",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "activeSceneVersion": "v02",
+  "generatedAt": "2026-07-20",
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "provenance": {
+    "planId": "miaoyouji-landmarks-v1-2026-07-20",
+    "promptJobId": "scene-variant-export",
+    "generator": "Cursor GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "referenceUse": "style-only",
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+    ],
+    "normalization": {
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "method": "integer crop to exact 4:3 followed by uniform Lanczos resize",
+      "outputProfile": "embedded sRGB",
+      "metadataPolicy": "fresh opaque RGB PNG export"
+    },
+    "subjectReferencePolicy": "Official photographs were used only for factual subject geometry and layout. Logos, signs, readable text, people, watermarks, and license-restricted decorative marks were excluded from generated candidates.",
+    "factualSources": [
+      {
+        "sourceOwner": "Huawei Technologies",
+        "title": "Huawei campus - OX HORN CAMPUS",
+        "url": "https://digitalpower.huawei.com/resource/public/campus/en/songshanlake.html",
+        "supports": "The campus is on the southern shore of Songshan Lake and is divided into 12 European-city-inspired villages."
+      },
+      {
+        "sourceOwner": "Huawei Technologies",
+        "title": "松山湖华为溪流背坡村",
+        "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-10",
+        "supports": "Official pond-side red tram, platform, balustrade, round brick tower, and connected campus-block arrangement."
+      },
+      {
+        "sourceOwner": "Huawei Technologies",
+        "title": "松山湖华为溪流背坡村",
+        "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-12",
+        "supports": "Official wider tram-viaduct, water-channel, arcaded block, green spire, and crenellated brick ensemble arrangement."
+      }
+    ]
+  },
+  "contactSheet": {
+    "imageSrc": "contact-sheet--china-dongguan-xiliubeipo-village--non-final.png",
+    "nonFinal": true,
+    "dimensions": {
+      "width": 1800,
+      "height": 860
+    },
+    "sha256": "368d9492422f2ff4cac2f8872a008052143e78ac17d9787907e0bc7651bb1c64",
+    "overlays": [
+      "active v02 variant labels",
+      "safeBounds",
+      "technical QA summary"
+    ]
+  },
+  "sceneVariants": [
+    {
+      "id": "china-dongguan-xiliubeipo-village--day-signature",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "Tram viaduct and crenellated campus ensemble",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "68a878ce60954bf8bb9a0211e58dc8b566e60a6bb9946b97383b49ff26f81c21",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.83,
+        "y": 0.93,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "x": 0.7,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "provenance": {
+        "visualReferences": [
+          {
+            "sourceOwner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "role": "primary subject geometry and layout",
+            "pageUrl": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-12",
+            "assetUrl": "https://www-file.huawei.com/dam/asset/view/835a507023b64af49ab39ae99a2fcfd6.jpg",
+            "verifiedSubject": "松山湖华为溪流背坡村",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          },
+          {
+            "sourceOwner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "role": "secondary tram and pond-side context",
+            "pageUrl": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-10",
+            "assetUrl": "https://www-file.huawei.com/dam/asset/view/19c5ca7bc02e49ddac4a2eefa0bee45e.jpg",
+            "verifiedSubject": "松山湖华为溪流背坡村",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          }
+        ],
+        "styleReferenceUse": "locked-B style only",
+        "sourceCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "sceneIntent": "Preserve the official wider tram-viaduct ensemble: cream arcaded block and conical turret, water channel, green spire, red tram, long crenellated brick block, and multiple towers."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "hardConstraintInspection": {
+          "decision": "pass",
+          "notes": "Visual inspection found no cat or substitute, animal, person or silhouette, date, postmark, caption, logo, signage, watermark, pseudo-text, UI, slot line, or anchor."
+        },
+        "geographicSpecificityInspection": {
+          "decision": "pass",
+          "notes": "The tram viaduct, water channel, arcaded white block, green spire, crenellated brick block, and tower relationships track the cited official Huawei photograph."
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--golden-hour",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "name": "Pond-side tram stop and round tower ensemble",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "359aaaee5f65ce04aa8ac620f1ab61307846883dec0a7b5c4a14957b0c8c1127",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.835,
+        "y": 0.93,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "x": 0.7,
+        "y": 0.59,
+        "width": 0.27,
+        "height": 0.36
+      },
+      "provenance": {
+        "visualReferences": [
+          {
+            "sourceOwner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "role": "primary subject geometry and layout",
+            "pageUrl": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-10",
+            "assetUrl": "https://www-file.huawei.com/dam/asset/view/19c5ca7bc02e49ddac4a2eefa0bee45e.jpg",
+            "verifiedSubject": "松山湖华为溪流背坡村",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          },
+          {
+            "sourceOwner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "role": "secondary wider campus and tram context",
+            "pageUrl": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-12",
+            "assetUrl": "https://www-file.huawei.com/dam/asset/view/835a507023b64af49ab39ae99a2fcfd6.jpg",
+            "verifiedSubject": "松山湖华为溪流背坡村",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          }
+        ],
+        "styleReferenceUse": "locked-B style only",
+        "sourceCropPixels": {
+          "left": 32,
+          "top": 0,
+          "rightExclusive": 1396,
+          "bottomExclusive": 1023
+        },
+        "sceneIntent": "Preserve the official pond-side tram-stop ensemble: platform canopy, red tram, pale balustrade, pond, round brick conical-roof tower, connected blocks, and distant towers."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "hardConstraintInspection": {
+          "decision": "pass",
+          "notes": "Successive drafts were rejected for a person-like tram-window silhouette and tiny pseudo-text-like tram marks. The final active file was inspected at close zoom and contains no cat or substitute, animal, person or silhouette, date, postmark, caption, logo, signage, watermark, pseudo-text, UI, slot line, or anchor."
+        },
+        "geographicSpecificityInspection": {
+          "decision": "pass",
+          "notes": "The pond-side platform, tram, stone balustrade, round brick tower, connected roofline, and distant tower relationships track the cited official Huawei photograph."
+        },
+        "notes": "Pending human art-direction approval."
+      }
+    }
+  ],
+  "supersededSceneVariants": [
+    {
+      "id": "china-dongguan-xiliubeipo-village--day-signature--v01",
+      "variantId": "day-signature",
+      "version": "v01",
+      "status": "superseded",
+      "shipping": false,
+      "shippingEligible": false,
+      "retainedForAudit": true,
+      "imageSrc": "scene--china-dongguan-xiliubeipo-village--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "sha256": "5f38d8ef50a4b6c6bc24f4b42736dd9e03792928278d0d0f247c46c2c4880679",
+      "hasCompanion": false,
+      "supersededBy": "scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "supersededAt": "2026-07-20",
+      "supersessionReason": "The clean v01 ensemble was too generic and did not preserve enough identifiable Xiliubeipo Village campus geometry."
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--golden-hour--v01",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "status": "superseded",
+      "shipping": false,
+      "shippingEligible": false,
+      "retainedForAudit": true,
+      "imageSrc": "scene--china-dongguan-xiliubeipo-village--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "sha256": "0293df74c1ea48c45b51a659343271e6d87fb4b4f97455da1c52d11ba98cfb83",
+      "hasCompanion": false,
+      "supersededBy": "scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "supersededAt": "2026-07-20",
+      "supersessionReason": "The clean v01 ensemble was too generic and did not preserve enough identifiable Xiliubeipo Village campus geometry."
+    }
+  ]
+}

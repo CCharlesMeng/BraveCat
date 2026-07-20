@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "australia-sydney-opera-house",
+  "destinationName": "悉尼歌剧院",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque"
+  },
+  "contactSheet": {
+    "imageSrc": "contact-sheet--australia-sydney-opera-house--non-final.png",
+    "status": "candidate-non-final",
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1776,
+      "height": 516
+    },
+    "sha256": "7c1693e94237ed9607ac83966a7183fc103144a0cd2ba07bbd61e378115dff92"
+  },
+  "sceneVariants": [
+    {
+      "id": "australia-sydney-opera-house--day-signature",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "day-signature",
+      "name": "悉尼歌剧院·日间标志景观",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--australia-sydney-opera-house--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "586f6c12f5a61d259170809594f8f25db767477731dc8396ffc941f856188274",
+      "compositionSlot": {
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": false,
+      "production": {
+        "safeBounds": {
+          "x": 0.04,
+          "y": 0.54,
+          "width": 0.28,
+          "height": 0.36
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "crop": {
+              "x": 172,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false
+          },
+          "styleReferenceUse": "style-only",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": "Candidate QA complete; human selection review pending."
+        }
+      }
+    },
+    {
+      "id": "australia-sydney-opera-house--golden-hour",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "golden-hour",
+      "name": "悉尼歌剧院·金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--australia-sydney-opera-house--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "2b59022e50558fb9ea8c9f62bbc8d7b75eef440783ead148a4230ac462d92871",
+      "compositionSlot": {
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": false,
+      "production": {
+        "safeBounds": {
+          "x": 0.04,
+          "y": 0.54,
+          "width": 0.28,
+          "height": 0.36
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "crop": {
+              "x": 172,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false
+          },
+          "styleReferenceUse": "style-only",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": "Candidate QA complete; human selection review pending."
+        }
+      }
+    },
+    {
+      "id": "australia-sydney-opera-house--companion-rare",
+      "destinationId": "australia-sydney-opera-house",
+      "variantId": "companion-rare",
+      "name": "悉尼歌剧院·银鸥旅伴",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--australia-sydney-opera-house--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "a36ba0e649bbc304a3c0bfa414f9c86b85e39aba699d722b49ec36d383553481",
+      "compositionSlot": {
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "hasCompanion": true,
+      "companion": {
+        "species": "silver-gull",
+        "count": 1,
+        "placement": "far-right podium edge, outside safeBounds"
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.04,
+          "y": 0.54,
+          "width": 0.28,
+          "height": 0.36
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "crop": {
+              "x": 172,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false
+          },
+          "styleReferenceUse": "style-only",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": "Candidate QA complete; human selection review pending."
+        }
+      }
+    }
+  ]
+}

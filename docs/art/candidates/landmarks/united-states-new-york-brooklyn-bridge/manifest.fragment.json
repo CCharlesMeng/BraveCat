@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "destinationId": "united-states-new-york-brooklyn-bridge",
+  "destinationName": "纽约布鲁克林大桥",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "sceneVariants": [
+    {
+      "id": "united-states-new-york-brooklyn-bridge--day-signature",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "day-signature",
+      "name": "纽约布鲁克林大桥 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "format": "png",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.3,
+        "y": 0.85,
+        "scale": 0.22,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.18,
+          "y": 0.63,
+          "width": 0.24,
+          "height": 0.22
+        },
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmarks-v1-2026-07-20",
+          "sourceSpec": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "selectedGenerationAttempt": 2,
+          "regenerationReason": "The first attempt placed the reserved portrait area at the river edge rather than on a reliable promenade surface.",
+          "variantBrief": "Representative daytime view of the stone Gothic arch and cable fan, with a quiet empty promenade and simplified skyline.",
+          "styleIntensity": "B",
+          "styleReferenceUsage": "style-only; reference subjects, cats, animals, text, borders, layouts, stamps, and UI were excluded",
+          "styleReferencesProvidedToGenerator": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "requestedAspectRatio": "4:3",
+          "normalization": {
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "method": "Aspect-preserving centered crop to 4:3 with Lanczos resampling",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "output": "sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "hardFailure": false,
+          "machineChecksPassed": true,
+          "hardConstraintViolations": [],
+          "notes": "Two Gothic arch openings, the stone tower, and coherent cable structure remain readable; the skyline is simplified and the lower-left slot sits on the promenade. No prohibited subject or graphic element was observed."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "formatCompliance": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--golden-hour",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "golden-hour",
+      "name": "纽约布鲁克林大桥 · 晨光",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "format": "png",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.3,
+        "y": 0.85,
+        "scale": 0.22,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.18,
+          "y": 0.63,
+          "width": 0.24,
+          "height": 0.22
+        },
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmarks-v1-2026-07-20",
+          "sourceSpec": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "selectedGenerationAttempt": 3,
+          "regenerationReason": "The first attempt placed the reserved area at the river edge; the second attempt had only one Gothic opening. Both were rejected before export.",
+          "variantBrief": "Soft sunrise along the promenade with faded rose light, accurate stone arches, and coherent suspension cables.",
+          "styleIntensity": "B",
+          "styleReferenceUsage": "style-only; reference subjects, cats, animals, text, borders, layouts, stamps, and UI were excluded",
+          "styleReferencesProvidedToGenerator": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "requestedAspectRatio": "4:3",
+          "normalization": {
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "method": "Aspect-preserving centered crop to 4:3 with Lanczos resampling",
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "output": "sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "hardFailure": false,
+          "machineChecksPassed": true,
+          "hardConstraintViolations": [],
+          "notes": "The selected regeneration restores two Gothic arch openings and coherent suspension lines; faded rose light remains restrained, the skyline is simplified, and the lower-left slot sits on the promenade. No prohibited subject or graphic element was observed."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "formatCompliance": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--united-states-new-york-brooklyn-bridge--non-final.png",
+    "status": "non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 2100,
+      "height": 960
+    },
+    "format": "png",
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "mode": "RGB",
+    "sha256": "cd7ac2bfb88c5043ef709e6cf36204e248e916b9ca67cf59c3432b7c0443e44f",
+    "labels": [
+      "day-signature",
+      "golden-hour"
+    ],
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.bottom-center-anchor"
+    ],
+    "candidateImagesContainQaOverlays": false,
+    "review": {
+      "decision": "pending",
+      "reviewer": "",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

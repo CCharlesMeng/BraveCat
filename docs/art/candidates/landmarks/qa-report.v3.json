@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 3,
+  "reportKind": "landmark-candidate-integration-qa",
+  "planId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+  "sourcePlans": [
+    "docs/art/landmark-production-v1.json",
+    "docs/art/landmark-expansion-v2.json",
+    "docs/art/landmark-expansion-v3.json"
+  ],
+  "sourceManifest": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+  "sourceManifestSha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c",
+  "generatedAt": "2026-07-20",
+  "overallStatus": "pass",
+  "shippingEligible": false,
+  "activeSet": {
+    "selection": "all-active-scene-variants",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61,
+    "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525"
+  },
+  "totals": {
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61,
+    "ordinaryVariantCount": 50,
+    "companionRareVariantCount": 11,
+    "supersededSceneFileCount": 13,
+    "machineCheckCount": 10,
+    "machineChecksPassed": 10,
+    "machineChecksFailed": 0,
+    "pendingHumanCheckCount": 3
+  },
+  "machineChecks": [
+    {
+      "id": "unique-destination-ids",
+      "status": "pass",
+      "expected": 25,
+      "actual": 25
+    },
+    {
+      "id": "non-colliding-v3-destinations",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "source-plan-and-fragment-coverage",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "active-scene-total",
+      "status": "pass",
+      "expected": 61,
+      "actual": 61
+    },
+    {
+      "id": "unique-semantic-scene-ids",
+      "status": "pass",
+      "expected": 61,
+      "actual": 61
+    },
+    {
+      "id": "v3-image-dimensions-color-hashes-and-filenames",
+      "status": "pass",
+      "expected": 13,
+      "actual": 13
+    },
+    {
+      "id": "v3-composition-slots-and-safe-bounds",
+      "status": "pass",
+      "expected": 13,
+      "actual": 13
+    },
+    {
+      "id": "v3-companion-policy",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "id": "protected-base-manifest-integrity",
+      "status": "pass",
+      "expected": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0",
+      "actual": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0"
+    },
+    {
+      "id": "destination-and-global-contact-sheets",
+      "status": "pass",
+      "expected": 9,
+      "actual": 9
+    }
+  ],
+  "pendingHumanChecks": [
+    {
+      "id": "human-visual-review-v3-active-set",
+      "status": "pending",
+      "note": "Review the new v3 destination sheets and combined overview sheets; machine QA does not authorize promotion."
+    },
+    {
+      "id": "final-real-minho-composite-review-v3",
+      "status": "blocked-until-visual-approval-and-promotion",
+      "note": "Generate combined Minho composite sheets only after the new exact active set is visually approved."
+    },
+    {
+      "id": "shipping-rights-review",
+      "status": "pending",
+      "note": "Primary-source terms, cultural context, public-monument considerations, and adaptation risk remain a separate gate."
+    }
+  ],
+  "protectedInputs": {
+    "baseManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v2.json",
+      "sha256": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0"
+    },
+    "expansionPlan": {
+      "path": "docs/art/landmark-expansion-v3.json",
+      "sha256": "fcf071fcae23f52d97b425ba38a1266c85af9db018c21f00f531db3063533b44"
+    }
+  },
+  "overviewSheets": [
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v3-01-of-04--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v3-02-of-04--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v3-03-of-04--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v3-04-of-04--non-final.png"
+  ],
+  "errors": []
+}

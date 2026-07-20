@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "destinationId": "china-xian-giant-wild-goose-pagoda",
+  "destinationName": "西安大雁塔",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Candidate QA complete; human selection review pending."
+  },
+  "contactSheet": {
+    "imageSrc": "contact-sheet--china-xian-giant-wild-goose-pagoda--non-final.png",
+    "status": "candidate-non-final",
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1560,
+      "height": 720
+    },
+    "sha256": "900da563eb66b2d1dafe08629dc4806e07aff086691d626934441885bd43a97b",
+    "candidateImagesContainQaOverlays": false,
+    "sheetContainsLabelsAndQaOverlaysOnly": true
+  },
+  "sceneVariants": [
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--day-signature",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "variantId": "day-signature",
+      "name": "西安大雁塔 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "1ed5bca2814181c5821dbf84e8bab8645625f66f328d90770304d37fe1e7a1a7",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.82,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.08,
+          "y": 0.48,
+          "width": 0.28,
+          "height": 0.34
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "style-only; reference subjects, cats, animals, text, borders, UI, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "promptBrief": "Representative quiet daytime view with the Giant Wild Goose Pagoda's seven-story taper, square massing, warm brick silhouette, sparse greenery, and an unmarked low-detail lower-left portrait slot.",
+          "normalization": {
+            "method": "exact 4:3 center crop followed by Lanczos resize",
+            "crop": {
+              "x": 86,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly seven readable stories; coherent taper and square brick massing. No cat, substitute cat, animal, person, crowd, fountain, text, date, postmark, logo, watermark, UI, slot line, anchor, or candidate-image QA overlay observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--golden-hour",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "variantId": "golden-hour",
+      "name": "西安大雁塔 · 金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "24fb1d31e654f9688d5d33720ddb4a687bdc99a9ef85373af7793b6a9813f909",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.82,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.08,
+          "y": 0.48,
+          "width": 0.28,
+          "height": 0.34
+        },
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "style-only; reference subjects, cats, animals, text, borders, UI, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "promptBrief": "Soft golden-hour dusk with faded vermilion and ochre light, sparse trees, no plaza activity, the pagoda's seven-story warm brick silhouette, and an unmarked low-detail lower-left portrait slot.",
+          "normalization": {
+            "method": "exact 4:3 center crop followed by Lanczos resize",
+            "crop": {
+              "x": 86,
+              "y": 0,
+              "width": 1364,
+              "height": 1023
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distorted": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "Exactly seven readable stories; coherent taper and square brick massing. No cat, substitute cat, animal, person, crowd, fountain, text, date, postmark, logo, watermark, UI, slot line, anchor, or candidate-image QA overlay observed."
+          }
+        }
+      }
+    }
+  ]
+}

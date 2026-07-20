@@ -1,0 +1,37 @@
+{
+  "name": "bravecat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/check-production-build.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "assets:archive": "node scripts/archive-assets.mjs",
+    "assets:check": "node scripts/archive-assets.mjs --check",
+    "assets:integrate-landmarks": "node scripts/integrate-landmarks.mjs",
+    "assets:check-landmark-candidates": "node scripts/integrate-landmarks.mjs --check",
+    "assets:promote-landmarks": "node scripts/promote-landmarks.mjs",
+    "assets:check-landmarks": "node scripts/promote-landmarks.mjs --check",
+    "assets:composite-qa": "node scripts/build-composite-qa.mjs",
+    "assets:composite-check": "node scripts/build-composite-qa.mjs --check"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.13.2",
+    "fake-indexeddb": "^6.2.5",
+    "sharp": "^0.35.3",
+    "svelte": "^5.56.4",
+    "svelte-check": "^4.7.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "dexie": "^4.4.4"
+  }
+}

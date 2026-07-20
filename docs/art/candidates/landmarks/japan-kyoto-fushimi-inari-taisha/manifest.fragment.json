@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "destinationId": "japan-kyoto-fushimi-inari-taisha",
+  "destinationName": "京都伏见稻荷",
+  "status": "candidate",
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  },
+  "sceneVariants": [
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--day-signature",
+      "variantId": "day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.56,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+          ],
+          "normalization": {
+            "method": "aspect-preserving crop then Lanczos resize",
+            "cropPixels": {
+              "left": 171,
+              "top": 0,
+              "right": 1536,
+              "bottom": 1024
+            },
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--golden-hour",
+      "variantId": "golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.805,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.66,
+        "y": 0.56,
+        "width": 0.29,
+        "height": 0.35
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+          ],
+          "normalization": {
+            "method": "aspect-preserving crop then Lanczos resize",
+            "cropPixels": {
+              "left": 0,
+              "top": 0,
+              "right": 1365,
+              "bottom": 1024
+            },
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--companion-rare",
+      "variantId": "companion-rare",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "sha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "sparrow",
+        "count": 1,
+        "placement": "upper crossbeam, outside portrait safeBounds"
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.56,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "generationProvenance": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "generatedAt": "2026-07-20",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleReferenceUsage": "style-only",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+          ],
+          "normalization": {
+            "method": "aspect-preserving crop then Lanczos resize",
+            "cropPixels": {
+              "left": 171,
+              "top": 0,
+              "right": 1536,
+              "bottom": 1024
+            },
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "outputProfile": "sRGB",
+            "outputMode": "8-bit opaque RGB PNG"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": "",
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ]
+}

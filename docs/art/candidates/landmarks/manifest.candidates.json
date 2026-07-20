@@ -1,0 +1,3930 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-master",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "integratedAt": "2026-07-20",
+  "status": "candidate",
+  "shippingEligible": false,
+  "approvalState": "pending-human-approval",
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B",
+      "lockedAt": "2026-07-20"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "destinationSet": {
+      "state": "locked",
+      "count": 15,
+      "orderedIds": [
+        "china-beijing-forbidden-city-corner-tower",
+        "japan-kyoto-fushimi-inari-taisha",
+        "singapore-singapore-merlion",
+        "australia-sydney-opera-house",
+        "france-paris-eiffel-tower",
+        "united-kingdom-london-tower-bridge",
+        "italy-rome-colosseum",
+        "egypt-giza-pyramids",
+        "united-states-new-york-brooklyn-bridge",
+        "peru-cusco-machu-picchu",
+        "china-beijing-mutianyu-great-wall",
+        "china-shanghai-the-bund",
+        "china-xian-giant-wild-goose-pagoda",
+        "china-guilin-elephant-trunk-hill",
+        "china-dongguan-xiliubeipo-village"
+      ]
+    },
+    "variantPolicy": {
+      "state": "locked",
+      "ordinaryVariantsPerDestination": 2,
+      "ordinaryTimePairing": [
+        "day-signature",
+        "golden-hour"
+      ],
+      "rareCompanionVariantCount": 5,
+      "rareCompanionDestinationIds": [
+        "japan-kyoto-fushimi-inari-taisha",
+        "singapore-singapore-merlion",
+        "australia-sydney-opera-house",
+        "egypt-giza-pyramids",
+        "china-guilin-elephant-trunk-hill"
+      ]
+    },
+    "activeCandidateSelection": {
+      "state": "locked-for-human-review",
+      "selectionRule": "Match destinationId + variantId to the plan; exclude declared superseded entries; prefer an explicit active revision when present, otherwise select the highest non-superseded vNN.",
+      "supersededEntriesExcluded": 9
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "finalRealPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "note": "Pre-approval candidate integration only; no runtime/formal-asset promotion is authorized."
+  },
+  "totals": {
+    "destinationCount": 15,
+    "activeSceneVariantCount": 35,
+    "ordinaryVariantCount": 30,
+    "companionRareVariantCount": 5
+  },
+  "sourceFragments": [
+    "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
+    "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
+    "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
+    "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
+    "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
+    "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
+    "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
+    "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
+    "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+    "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
+    "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
+    "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
+    "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
+    "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
+    "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json"
+  ],
+  "rightsAndProvenanceWarnings": [
+    {
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "referenceOwner": "Daniel Case / Wikimedia Commons",
+      "referenceUse": "subject geometry only",
+      "sourceTerms": "CC BY-SA 3.0 or GFDL",
+      "warning": "Daniel Case’s Wikimedia subject-geometry photograph is CC BY-SA 3.0 or GFDL and was used only for landmark geometry, silhouette, platform, wall, and moat relationships; its pixels are not redistributed in this candidate package."
+    },
+    {
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "referenceOwner": "Wikimedia Commons contributors",
+      "referenceUse": "subject silhouette and layout only",
+      "sourceTerms": "CC BY 2.0; public domain; CC BY-SA 3.0/GFDL, per cited source",
+      "warning": "Wikimedia photographs with CC BY 2.0, public-domain, and CC BY-SA 3.0/GFDL source terms were used only for landmark silhouette and layout; source pixels are not redistributed in these generated candidates."
+    },
+    {
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "referenceOwner": "Huawei Technologies",
+      "referenceUse": "factual subject geometry and layout only",
+      "sourceTerms": "editorial use only; all usage rights remain with Huawei Technologies",
+      "shippingGate": "commercial-rights-and-derivative-risk-review-required",
+      "warning": "Huawei gallery photographs are editorial-use-only, remain owned by Huawei Technologies, and were used only as factual geometry/layout references. They must not be copied, cropped, redistributed, or closely reproduced without permission; commercial-rights and derivative-risk review remains required before shipping."
+    }
+  ],
+  "destinations": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower",
+      "name": "故宫角楼",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+        "china-beijing-forbidden-city-corner-tower--golden-hour--v02"
+      ]
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "name": "京都伏见稻荷",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+        "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+        "japan-kyoto-fushimi-inari-taisha--companion-rare--v01"
+      ]
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "name": "新加坡鱼尾狮",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "singapore-singapore-merlion--day-signature--v01",
+        "singapore-singapore-merlion--golden-hour--v01",
+        "singapore-singapore-merlion--companion-rare--v02"
+      ]
+    },
+    {
+      "id": "australia-sydney-opera-house",
+      "name": "悉尼歌剧院",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "australia-sydney-opera-house--day-signature--v01",
+        "australia-sydney-opera-house--golden-hour--v01",
+        "australia-sydney-opera-house--companion-rare--v01"
+      ]
+    },
+    {
+      "id": "france-paris-eiffel-tower",
+      "name": "巴黎埃菲尔铁塔",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "france-paris-eiffel-tower--day-signature--v01",
+        "france-paris-eiffel-tower--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "name": "伦敦塔桥",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "united-kingdom-london-tower-bridge--day-signature--v01",
+        "united-kingdom-london-tower-bridge--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "italy-rome-colosseum",
+      "name": "罗马斗兽场",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "italy-rome-colosseum--day-signature--v01",
+        "italy-rome-colosseum--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "egypt-giza-pyramids",
+      "name": "吉萨金字塔",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "egypt-giza-pyramids--day-signature--v01",
+        "egypt-giza-pyramids--golden-hour--v01",
+        "egypt-giza-pyramids--companion-rare--v02"
+      ]
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "name": "纽约布鲁克林大桥",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "united-states-new-york-brooklyn-bridge--day-signature--v01",
+        "united-states-new-york-brooklyn-bridge--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "name": "马丘比丘",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "peru-cusco-machu-picchu--day-signature--v01",
+        "peru-cusco-machu-picchu--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "name": "慕田峪长城",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-beijing-mutianyu-great-wall--day-signature--v01",
+        "china-beijing-mutianyu-great-wall--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "name": "上海外滩",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-shanghai-the-bund--day-signature--v01",
+        "china-shanghai-the-bund--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda",
+      "name": "西安大雁塔",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+        "china-xian-giant-wild-goose-pagoda--golden-hour--v01"
+      ]
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill",
+      "name": "桂林象鼻山",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-guilin-elephant-trunk-hill--day-signature--v02",
+        "china-guilin-elephant-trunk-hill--golden-hour--v02",
+        "china-guilin-elephant-trunk-hill--companion-rare--v02"
+      ]
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village",
+      "name": "东莞松山湖溪流背坡村",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
+      "activeSceneVariantIds": [
+        "china-dongguan-xiliubeipo-village--day-signature--v02",
+        "china-dongguan-xiliubeipo-village--golden-hour--v02"
+      ]
+    }
+  ],
+  "sceneVariants": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+      "sourceCandidateId": "china-beijing-forbidden-city-corner-tower--day-signature",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "destinationName": "故宫角楼",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "故宫角楼 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        }
+      },
+      "sha256": "3f8007be31b28d37db9f78375be2c3865927d32f69eab2abd954fe4b6961381b",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.79,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.66,
+        "y": 0.56,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool"
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-b"
+        ],
+        "subjectReferenceUse": "Palace Museum description and Wikimedia photograph used for landmark geometry only",
+        "subjectReferences": [
+          {
+            "owner": "The Palace Museum",
+            "title": "角楼",
+            "url": "https://www.dpm.org.cn/explore/building/236522.html",
+            "role": "official structural description"
+          },
+          {
+            "owner": "Daniel Case",
+            "title": "Forbidden City northwest corner tower and moat",
+            "url": "https://commons.wikimedia.org/wiki/File:Forbidden_City_northwest_corner_tower_and_moat.jpg",
+            "license": "CC BY-SA 3.0 or GFDL",
+            "role": "subject geometry only"
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop to 4:3, then Lanczos resize",
+          "distortionApplied": false,
+          "targetWidth": 1200,
+          "targetHeight": 900,
+          "outputMode": "8-bit opaque RGB",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": [
+          "Daniel Case’s Wikimedia subject-geometry photograph is CC BY-SA 3.0 or GFDL and was used only for landmark geometry, silhouette, platform, wall, and moat relationships; its pixels are not redistributed in this candidate package."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+      "sourceCandidateId": "china-beijing-forbidden-city-corner-tower--golden-hour",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "destinationName": "故宫角楼",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "name": "故宫角楼 · 晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2010aeea6e0ce19b191de5d23f5c9ccb52e600bd85c6b32586403f7d1e70bae4",
+          "byteLength": 588
+        }
+      },
+      "sha256": "cae884ec8ace36f04b110b5f3791be432a037a510f7d6ba265258e63e330959f",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.91,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.08,
+        "y": 0.58,
+        "width": 0.28,
+        "height": 0.33
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool"
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-b"
+        ],
+        "subjectReferenceUse": "Palace Museum description and Wikimedia photograph used for landmark geometry only",
+        "subjectReferences": [
+          {
+            "owner": "The Palace Museum",
+            "title": "角楼",
+            "url": "https://www.dpm.org.cn/explore/building/236522.html",
+            "role": "official structural description"
+          },
+          {
+            "owner": "Daniel Case",
+            "title": "Forbidden City northwest corner tower and moat",
+            "url": "https://commons.wikimedia.org/wiki/File:Forbidden_City_northwest_corner_tower_and_moat.jpg",
+            "license": "CC BY-SA 3.0 or GFDL",
+            "role": "subject geometry only"
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop to 4:3, then Lanczos resize",
+          "distortionApplied": false,
+          "targetWidth": 1200,
+          "targetHeight": 900,
+          "outputMode": "8-bit opaque RGB",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": [
+          "Daniel Case’s Wikimedia subject-geometry photograph is CC BY-SA 3.0 or GFDL and was used only for landmark geometry, silhouette, platform, wall, and moat relationships; its pixels are not redistributed in this candidate package."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--day-signature",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "destinationName": "京都伏见稻荷",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "京都伏见稻荷 · day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        }
+      },
+      "sha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.56,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving crop then Lanczos resize",
+          "cropPixels": {
+            "left": 171,
+            "top": 0,
+            "right": 1536,
+            "bottom": 1024
+          },
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+      "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--golden-hour",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "destinationName": "京都伏见稻荷",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "京都伏见稻荷 · golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        }
+      },
+      "sha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.805,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.66,
+        "y": 0.56,
+        "width": 0.29,
+        "height": 0.35
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving crop then Lanczos resize",
+          "cropPixels": {
+            "left": 0,
+            "top": 0,
+            "right": 1365,
+            "bottom": 1024
+          },
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--companion-rare--v01",
+      "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--companion-rare",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "destinationName": "京都伏见稻荷",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "name": "京都伏见稻荷 · companion-rare",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "8b253a46e60c60d46f2165d5c20e3d3b5f97095ee79f6f58b99d3c6f8fa7a1dd",
+          "byteLength": 588
+        }
+      },
+      "sha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.56,
+        "width": 0.3,
+        "height": 0.35
+      },
+      "hasCompanion": true,
+      "companion": {
+        "kind": "sparrow",
+        "count": 1,
+        "placement": "upper crossbeam, outside portrait safeBounds"
+      },
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving crop then Lanczos resize",
+          "cropPixels": {
+            "left": 171,
+            "top": 0,
+            "right": 1536,
+            "bottom": 1024
+          },
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--day-signature--v01",
+      "sourceCandidateId": "singapore-singapore-merlion--day-signature--v01",
+      "destinationId": "singapore-singapore-merlion",
+      "destinationName": "新加坡鱼尾狮",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "新加坡鱼尾狮 · day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4509ba389c2e4c41ef024bd85bd3fbb71c2c098b26e44aaa9fc2c543601205dd",
+          "byteLength": 588
+        }
+      },
+      "sha256": "c1e27f6769cb1faf7a6b9c27abe846514651a7c64b191345ad150c73ec96db0d",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--golden-hour--v01",
+      "sourceCandidateId": "singapore-singapore-merlion--golden-hour--v01",
+      "destinationId": "singapore-singapore-merlion",
+      "destinationName": "新加坡鱼尾狮",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "新加坡鱼尾狮 · golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4509ba389c2e4c41ef024bd85bd3fbb71c2c098b26e44aaa9fc2c543601205dd",
+          "byteLength": 588
+        }
+      },
+      "sha256": "39f8f3cf7157c36e357d9cb37f6bfa143c3082296aa58071636f84c85dae61bd",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "singapore-singapore-merlion--companion-rare--v02",
+      "sourceCandidateId": "singapore-singapore-merlion--companion-rare--v02",
+      "destinationId": "singapore-singapore-merlion",
+      "destinationName": "新加坡鱼尾狮",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "name": "新加坡鱼尾狮 · companion-rare",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/singapore-singapore-merlion/scene--singapore-singapore-merlion--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "4b899ad364ecb805bfefd765d0995eb0585afe56abaaa049e6aeaab4481e6078",
+          "byteLength": 588
+        }
+      },
+      "sha256": "1bc620e369e3045d7f56f506154511c2dd884faa448a13157bca7f1a4719823a",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.2,
+        "y": 0.92,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.05,
+        "y": 0.61,
+        "width": 0.3,
+        "height": 0.31
+      },
+      "hasCompanion": true,
+      "companion": {
+        "species": "smooth-coated-otter",
+        "count": 1
+      },
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop-to-4:3-without-distortion-then-resize",
+          "resampling": "Lanczos",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--day-signature--v01",
+      "sourceCandidateId": "australia-sydney-opera-house--day-signature",
+      "destinationId": "australia-sydney-opera-house",
+      "destinationName": "悉尼歌剧院",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "悉尼歌剧院·日间标志景观",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        }
+      },
+      "sha256": "586f6c12f5a61d259170809594f8f25db767477731dc8396ffc941f856188274",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.54,
+        "width": 0.28,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 172,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--golden-hour--v01",
+      "sourceCandidateId": "australia-sydney-opera-house--golden-hour",
+      "destinationId": "australia-sydney-opera-house",
+      "destinationName": "悉尼歌剧院",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "悉尼歌剧院·金色时刻",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        }
+      },
+      "sha256": "2b59022e50558fb9ea8c9f62bbc8d7b75eef440783ead148a4230ac462d92871",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.54,
+        "width": 0.28,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 172,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "australia-sydney-opera-house--companion-rare--v01",
+      "sourceCandidateId": "australia-sydney-opera-house--companion-rare",
+      "destinationId": "australia-sydney-opera-house",
+      "destinationName": "悉尼歌剧院",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "name": "悉尼歌剧院·银鸥旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--companion-rare--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/australia-sydney-opera-house/scene--australia-sydney-opera-house--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "71aad5df368060ad036a033686719a966be3a6a58f18e3dcc763e46f43f78384",
+          "byteLength": 588
+        }
+      },
+      "sha256": "a36ba0e649bbc304a3c0bfa414f9c86b85e39aba699d722b49ec36d383553481",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.89,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.54,
+        "width": 0.28,
+        "height": 0.36
+      },
+      "hasCompanion": true,
+      "companion": {
+        "species": "silver-gull",
+        "count": 1,
+        "placement": "far-right podium edge, outside safeBounds"
+      },
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 172,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json"
+    },
+    {
+      "id": "france-paris-eiffel-tower--day-signature--v01",
+      "sourceCandidateId": "france-paris-eiffel-tower--day-signature",
+      "destinationId": "france-paris-eiffel-tower",
+      "destinationName": "巴黎埃菲尔铁塔",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "巴黎埃菲尔铁塔·日间代表景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "aaffbf524cda7573d3a04a5e0341822cb629839c5549c8841b76b7d72a5d7b6e",
+          "byteLength": 588
+        }
+      },
+      "sha256": "b23c9c62bd4860b754e755e161cc4a97b6e94d2eb09eb521a6ed3b392a139bab",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.2,
+        "y": 0.89,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.06,
+        "y": 0.54,
+        "width": 0.28,
+        "height": 0.35
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only; no reference subject, cat, text, border, or layout copied",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving center crop to 4:3, then Lanczos resize",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+          "outputMode": "8-bit opaque RGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json"
+    },
+    {
+      "id": "france-paris-eiffel-tower--golden-hour--v01",
+      "sourceCandidateId": "france-paris-eiffel-tower--golden-hour",
+      "destinationId": "france-paris-eiffel-tower",
+      "destinationName": "巴黎埃菲尔铁塔",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "巴黎埃菲尔铁塔·黎明金色时刻",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/france-paris-eiffel-tower/scene--france-paris-eiffel-tower--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "aaffbf524cda7573d3a04a5e0341822cb629839c5549c8841b76b7d72a5d7b6e",
+          "byteLength": 588
+        }
+      },
+      "sha256": "1f5719b499f9d7cd1f11acb784850078527328e7094e8d0b113a422a18860dd2",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.2,
+        "y": 0.89,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.07,
+        "y": 0.59,
+        "width": 0.26,
+        "height": 0.3
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only; no reference subject, cat, text, border, or layout copied",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving center crop to 4:3, then Lanczos resize",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+          "outputMode": "8-bit opaque RGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json"
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--day-signature--v01",
+      "sourceCandidateId": "united-kingdom-london-tower-bridge--day-signature",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "destinationName": "伦敦塔桥",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "Day signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "dc54b7f9b8bebd2348033d70fa2877ba38295f24e895642ec6a2336bb7d06da9",
+          "byteLength": 588
+        }
+      },
+      "sha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.94,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.66,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Uniform Lanczos scale followed by centered crop to 1200x900",
+          "output": "sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--golden-hour--v01",
+      "sourceCandidateId": "united-kingdom-london-tower-bridge--golden-hour",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "destinationName": "伦敦塔桥",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "Golden hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "dc54b7f9b8bebd2348033d70fa2877ba38295f24e895642ec6a2336bb7d06da9",
+          "byteLength": 588
+        }
+      },
+      "sha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.94,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.67,
+        "width": 0.24,
+        "height": 0.29
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Uniform Lanczos scale followed by centered crop to 1200x900",
+          "output": "sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "italy-rome-colosseum--day-signature--v01",
+      "sourceCandidateId": "italy-rome-colosseum--day-signature",
+      "destinationId": "italy-rome-colosseum",
+      "destinationName": "罗马斗兽场",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "罗马斗兽场 · day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "78eef8807d2f0fd9663393d0caf7a3e5f5acae197cfee1dcfc1954c7d79ba5de",
+          "byteLength": 588
+        }
+      },
+      "sha256": "c5659c8da65731c86d148cb6c5046065b16f9ba7e773c2fde020d58ac5e17058",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.19,
+        "y": 0.93,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.05,
+        "y": 0.63,
+        "width": 0.28,
+        "height": 0.31
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop-then-isotropic-resize",
+          "cropBoxPixels": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resizeFilter": "Lanczos",
+          "outputProfile": "embedded-sRGB-ICC",
+          "outputMode": "8-bit-opaque-RGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json"
+    },
+    {
+      "id": "italy-rome-colosseum--golden-hour--v01",
+      "sourceCandidateId": "italy-rome-colosseum--golden-hour",
+      "destinationId": "italy-rome-colosseum",
+      "destinationName": "罗马斗兽场",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "罗马斗兽场 · golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/italy-rome-colosseum/scene--italy-rome-colosseum--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "78eef8807d2f0fd9663393d0caf7a3e5f5acae197cfee1dcfc1954c7d79ba5de",
+          "byteLength": 588
+        }
+      },
+      "sha256": "f0488c78e905e3bf98d9b79510eb6dedd287a9474701b4e17a038fa892a67904",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.87,
+        "y": 0.94,
+        "scale": 0.2,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.76,
+        "y": 0.73,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "center-crop-then-isotropic-resize",
+          "cropBoxPixels": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resizeFilter": "Lanczos",
+          "outputProfile": "embedded-sRGB-ICC",
+          "outputMode": "8-bit-opaque-RGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--day-signature--v01",
+      "sourceCandidateId": "egypt-giza-pyramids--day-signature",
+      "destinationId": "egypt-giza-pyramids",
+      "destinationName": "吉萨金字塔",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "吉萨金字塔 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "60126f82aa64e24222bbfda0b0cd3978b2958f89cb05689c19b5f3435197e2fc",
+          "byteLength": 588
+        }
+      },
+      "sha256": "b74fcef69632e6c32c9018ee207dd2c97a83a1d25eb3f4ed412e8b5b91dd686e",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving 4:3 crop then Lanczos resize",
+          "cropPixels": {
+            "left": 85,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1024
+          },
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--golden-hour--v01",
+      "sourceCandidateId": "egypt-giza-pyramids--golden-hour",
+      "destinationId": "egypt-giza-pyramids",
+      "destinationName": "吉萨金字塔",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "吉萨金字塔 · 晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "60126f82aa64e24222bbfda0b0cd3978b2958f89cb05689c19b5f3435197e2fc",
+          "byteLength": 588
+        }
+      },
+      "sha256": "51219eea90a761064a968ad14fecc57d09e743f108538b42aad7581ce226b250",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving 4:3 crop then Lanczos resize",
+          "cropPixels": {
+            "left": 85,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1024
+          },
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "egypt-giza-pyramids--companion-rare--v02",
+      "sourceCandidateId": "egypt-giza-pyramids--companion-rare",
+      "destinationId": "egypt-giza-pyramids",
+      "destinationName": "吉萨金字塔",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "name": "吉萨金字塔 · 戴胜旅伴",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/egypt-giza-pyramids/scene--egypt-giza-pyramids--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "2b54193d6451ff5ddb9c6ae38aa53bd85a8d62fb021128d6c4f7ad0fd868f452",
+          "byteLength": 588
+        }
+      },
+      "sha256": "aca9f96c216bd9dcb7be475abca91a19828cbe61c5ef37dcfc5655783d0c7211",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.825,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.54,
+        "width": 0.25,
+        "height": 0.36
+      },
+      "hasCompanion": true,
+      "companion": {
+        "kind": "hoopoe",
+        "count": 1,
+        "placement": "left lateral midground, outside portrait safeBounds",
+        "approximateFrameHeightPercent": 3,
+        "prominence": "tiny incidental accent; unmistakably secondary to the pyramids"
+      },
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with functions.GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "functions.GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/style-ref-poses.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "aspect-preserving 4:3 crop then Lanczos resize",
+          "cropPixels": {
+            "left": 85,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1024
+          },
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json"
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+      "sourceCandidateId": "united-states-new-york-brooklyn-bridge--day-signature",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "destinationName": "纽约布鲁克林大桥",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "纽约布鲁克林大桥 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "db71a4f4b4ec0804c53e9d8c4f08d67996361509d5c7a10e728b529e40a1b5b3",
+          "byteLength": 588
+        }
+      },
+      "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.3,
+        "y": 0.85,
+        "scale": 0.22,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.18,
+        "y": 0.63,
+        "width": 0.24,
+        "height": 0.22
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Aspect-preserving centered crop to 4:3 with Lanczos resampling",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "output": "sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+      "sourceCandidateId": "united-states-new-york-brooklyn-bridge--golden-hour",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "destinationName": "纽约布鲁克林大桥",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "纽约布鲁克林大桥 · 晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "db71a4f4b4ec0804c53e9d8c4f08d67996361509d5c7a10e728b529e40a1b5b3",
+          "byteLength": 588
+        }
+      },
+      "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.3,
+        "y": 0.85,
+        "scale": 0.22,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.18,
+        "y": 0.63,
+        "width": 0.24,
+        "height": 0.22
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Aspect-preserving centered crop to 4:3 with Lanczos resampling",
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "output": "sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json"
+    },
+    {
+      "id": "peru-cusco-machu-picchu--day-signature--v01",
+      "sourceCandidateId": "peru-cusco-machu-picchu--day-signature",
+      "destinationId": "peru-cusco-machu-picchu",
+      "destinationName": "马丘比丘",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "Representative daytime",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "6568d0f5618a32289eeddb78dfb505af0abe219fbf67d39a8b58530e13a18e46",
+          "byteLength": 588
+        }
+      },
+      "sha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.55,
+        "width": 0.28,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "unspecified-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "tool": "Pillow 11.3.0",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "operation": "center-crop-to-4:3-and-lanczos-resample",
+          "output": "1200x900 sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json"
+    },
+    {
+      "id": "peru-cusco-machu-picchu--golden-hour--v01",
+      "sourceCandidateId": "peru-cusco-machu-picchu--golden-hour",
+      "destinationId": "peru-cusco-machu-picchu",
+      "destinationName": "马丘比丘",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "Misty dawn",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "6568d0f5618a32289eeddb78dfb505af0abe219fbf67d39a8b58530e13a18e46",
+          "byteLength": 588
+        }
+      },
+      "sha256": "7d01821919b48acf57d10e51376e05f3229d40bdf2cb942620b3b842b4e00f32",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.88,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.55,
+        "width": 0.28,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "unspecified-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": null,
+        "normalizationSummary": {
+          "tool": "Pillow 11.3.0",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "operation": "center-crop-to-4:3-and-lanczos-resample",
+          "output": "1200x900 sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall--day-signature--v01",
+      "sourceCandidateId": "china-beijing-mutianyu-great-wall--day-signature",
+      "destinationId": "china-beijing-mutianyu-great-wall",
+      "destinationName": "慕田峪长城",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "慕田峪长城 · day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "72d2ba1f49d1b6cc0be504208acf057a178df4484412fa872f59dbc2edb9f76a",
+          "byteLength": 588
+        }
+      },
+      "sha256": "845b58c7c63742138863c843529c2f6f33ec5bbfd0757722bd19a89cb3fcc900",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.91,
+        "scale": 0.31,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.055,
+        "y": 0.555,
+        "width": 0.34,
+        "height": 0.385
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "operation": "center-crop-to-4:3-then-resize",
+          "resampling": "Lanczos",
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json"
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall--golden-hour--v01",
+      "sourceCandidateId": "china-beijing-mutianyu-great-wall--golden-hour",
+      "destinationId": "china-beijing-mutianyu-great-wall",
+      "destinationName": "慕田峪长城",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "慕田峪长城 · golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "72d2ba1f49d1b6cc0be504208acf057a178df4484412fa872f59dbc2edb9f76a",
+          "byteLength": 588
+        }
+      },
+      "sha256": "c4ca7694b0e4bce7c7faf8f182764656adecb1944f05676efa4987fa73eed022",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.23,
+        "y": 0.91,
+        "scale": 0.31,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.055,
+        "y": 0.57,
+        "width": 0.36,
+        "height": 0.37
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-reported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style-only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "operation": "center-crop-to-4:3-then-resize",
+          "resampling": "Lanczos",
+          "outputProfile": "sRGB",
+          "outputMode": "8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json"
+    },
+    {
+      "id": "china-shanghai-the-bund--day-signature--v01",
+      "sourceCandidateId": "china-shanghai-the-bund--day-signature",
+      "destinationId": "china-shanghai-the-bund",
+      "destinationName": "上海外滩",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "上海外滩 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "47f754dc28f042c3f197bcec46e67f29a58b3599b7e37cb2c2c946959a273001",
+          "byteLength": 588
+        }
+      },
+      "sha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.16,
+        "y": 0.94,
+        "scale": 0.26,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.045,
+        "y": 0.68,
+        "width": 0.23,
+        "height": 0.28
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "Pillow ImageOps.fit aspect-preserving center crop, then Lanczos resize",
+          "cropBoxSourcePixels": {
+            "left": 85.333333,
+            "top": 0,
+            "right": 1450.666667,
+            "bottom": 1024
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distortionApplied": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json"
+    },
+    {
+      "id": "china-shanghai-the-bund--golden-hour--v01",
+      "sourceCandidateId": "china-shanghai-the-bund--golden-hour",
+      "destinationId": "china-shanghai-the-bund",
+      "destinationName": "上海外滩",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "上海外滩 · 蓝调时刻",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "47f754dc28f042c3f197bcec46e67f29a58b3599b7e37cb2c2c946959a273001",
+          "byteLength": 588
+        }
+      },
+      "sha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.16,
+        "y": 0.94,
+        "scale": 0.26,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.045,
+        "y": 0.68,
+        "width": 0.23,
+        "height": 0.28
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "Pillow ImageOps.fit aspect-preserving center crop, then Lanczos resize",
+          "cropBoxSourcePixels": {
+            "left": 85.333333,
+            "top": 0,
+            "right": 1450.666667,
+            "bottom": 1024
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distortionApplied": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json"
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+      "sourceCandidateId": "china-xian-giant-wild-goose-pagoda--day-signature",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "destinationName": "西安大雁塔",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "西安大雁塔 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "9c81e3e1d6f9def93defed31e2cc8dba9d7d3a20034a00ab9393922f5eeec2f9",
+          "byteLength": 588
+        }
+      },
+      "sha256": "1ed5bca2814181c5821dbf84e8bab8645625f66f328d90770304d37fe1e7a1a7",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.82,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.08,
+        "y": 0.48,
+        "width": 0.28,
+        "height": 0.34
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "exact 4:3 center crop followed by Lanczos resize",
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json"
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda--golden-hour--v01",
+      "sourceCandidateId": "china-xian-giant-wild-goose-pagoda--golden-hour",
+      "destinationId": "china-xian-giant-wild-goose-pagoda",
+      "destinationName": "西安大雁塔",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "西安大雁塔 · 金色时刻",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "9c81e3e1d6f9def93defed31e2cc8dba9d7d3a20034a00ab9393922f5eeec2f9",
+          "byteLength": 588
+        }
+      },
+      "sha256": "24fb1d31e654f9688d5d33720ddb4a687bdc99a9ef85373af7793b6a9813f909",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.82,
+        "scale": 0.32,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.08,
+        "y": 0.48,
+        "width": 0.28,
+        "height": 0.34
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "highest-non-superseded-vNN",
+        "activeRevision": "v01",
+        "supersededEntriesExcluded": 0
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "style references used for style only",
+        "subjectReferences": [],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "method": "exact 4:3 center crop followed by Lanczos resize",
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB"
+        },
+        "rightsWarnings": []
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--day-signature--v02",
+      "sourceCandidateId": "china-guilin-elephant-trunk-hill--day-signature",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "destinationName": "桂林象鼻山",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "桂林象鼻山 · day-signature",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        }
+      },
+      "sha256": "ebed0474ee6671fd9654cadeef8a189484df0a163ba4f6169cb787884ee49e72",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "explicit-active-revision",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "unreported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "Wikimedia photographs used for landmark silhouette and layout only",
+        "subjectReferences": [
+          {
+            "id": "commons-elephanttrunkhill-2009",
+            "url": "https://commons.wikimedia.org/wiki/File:ElephantTrunkHill.jpg",
+            "author": "Bernt Rostad",
+            "license": "CC BY 2.0",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-elephant-trunk-hill-2005",
+            "url": "https://commons.wikimedia.org/wiki/File:Elephant_Trunk_Hill.jpg",
+            "author": "Sentinel7",
+            "license": "Public domain",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-cn-gui-elef-2001",
+            "url": "https://commons.wikimedia.org/wiki/File:CN_GUI-ELEF.jpg",
+            "author": "Bgabel",
+            "license": "CC BY-SA 3.0 / GFDL",
+            "role": "subject-silhouette-and-layout-only"
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "rightsWarnings": [
+          "Wikimedia photographs with CC BY 2.0, public-domain, and CC BY-SA 3.0/GFDL source terms were used only for landmark silhouette and layout; source pixels are not redistributed in these generated candidates."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--golden-hour--v02",
+      "sourceCandidateId": "china-guilin-elephant-trunk-hill--golden-hour",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "destinationName": "桂林象鼻山",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "name": "桂林象鼻山 · golden-hour",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        }
+      },
+      "sha256": "147073907c4ac282554c578703b8c684a7086678027b8af772f218fad145e5bd",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "explicit-active-revision",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "unreported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "Wikimedia photographs used for landmark silhouette and layout only",
+        "subjectReferences": [
+          {
+            "id": "commons-elephanttrunkhill-2009",
+            "url": "https://commons.wikimedia.org/wiki/File:ElephantTrunkHill.jpg",
+            "author": "Bernt Rostad",
+            "license": "CC BY 2.0",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-elephant-trunk-hill-2005",
+            "url": "https://commons.wikimedia.org/wiki/File:Elephant_Trunk_Hill.jpg",
+            "author": "Sentinel7",
+            "license": "Public domain",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-cn-gui-elef-2001",
+            "url": "https://commons.wikimedia.org/wiki/File:CN_GUI-ELEF.jpg",
+            "author": "Bgabel",
+            "license": "CC BY-SA 3.0 / GFDL",
+            "role": "subject-silhouette-and-layout-only"
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "rightsWarnings": [
+          "Wikimedia photographs with CC BY 2.0, public-domain, and CC BY-SA 3.0/GFDL source terms were used only for landmark silhouette and layout; source pixels are not redistributed in these generated candidates."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--companion-rare--v02",
+      "sourceCandidateId": "china-guilin-elephant-trunk-hill--companion-rare",
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "destinationName": "桂林象鼻山",
+      "variantId": "companion-rare",
+      "version": "v02",
+      "name": "桂林象鼻山 · companion-rare",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f642efadc866e24d3c537c31f0e106b701d75f8b77f550ed325988898bc06f7d",
+          "byteLength": 588
+        }
+      },
+      "sha256": "781ed6f583956e3d1f7250672ad6f2aaf7bdac5e7a0ee0a457a3e672713567f2",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "hasCompanion": true,
+      "companion": {
+        "species": "kingfisher",
+        "count": 1
+      },
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "explicit-active-revision",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "unreported-by-tool",
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "Wikimedia photographs used for landmark silhouette and layout only",
+        "subjectReferences": [
+          {
+            "id": "commons-elephanttrunkhill-2009",
+            "url": "https://commons.wikimedia.org/wiki/File:ElephantTrunkHill.jpg",
+            "author": "Bernt Rostad",
+            "license": "CC BY 2.0",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-elephant-trunk-hill-2005",
+            "url": "https://commons.wikimedia.org/wiki/File:Elephant_Trunk_Hill.jpg",
+            "author": "Sentinel7",
+            "license": "Public domain",
+            "role": "subject-silhouette-and-layout-only"
+          },
+          {
+            "id": "commons-cn-gui-elef-2001",
+            "url": "https://commons.wikimedia.org/wiki/File:CN_GUI-ELEF.jpg",
+            "author": "Bgabel",
+            "license": "CC BY-SA 3.0 / GFDL",
+            "role": "subject-silhouette-and-layout-only"
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "rightsWarnings": [
+          "Wikimedia photographs with CC BY 2.0, public-domain, and CC BY-SA 3.0/GFDL source terms were used only for landmark silhouette and layout; source pixels are not redistributed in these generated candidates."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json"
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--day-signature--v02",
+      "sourceCandidateId": "china-dongguan-xiliubeipo-village--day-signature",
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "destinationName": "东莞松山湖溪流背坡村",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "Tram viaduct and crenellated campus ensemble",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "88b38fe40d8f88e16bfc96f7ccb5009b711c44df8b475b70690490846c482f42",
+          "byteLength": 588
+        }
+      },
+      "sha256": "68a878ce60954bf8bb9a0211e58dc8b566e60a6bb9946b97383b49ff26f81c21",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.83,
+        "y": 0.93,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.34
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "explicit-active-revision",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "Huawei editorial-use-only photographs used for factual subject geometry and layout only",
+        "subjectReferences": [
+          {
+            "owner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-12",
+            "role": "primary subject geometry and layout",
+            "rightsStatus": "editorial-use-only",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          },
+          {
+            "owner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-10",
+            "role": "secondary tram and pond-side context",
+            "rightsStatus": "editorial-use-only",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "sourceWidth": 1536,
+          "sourceHeight": 1024,
+          "method": "integer crop to exact 4:3 followed by uniform Lanczos resize",
+          "outputProfile": "embedded sRGB",
+          "metadataPolicy": "fresh opaque RGB PNG export"
+        },
+        "rightsWarnings": [
+          "Huawei gallery photographs are editorial-use-only, remain owned by Huawei Technologies, and were used only as factual geometry/layout references. They must not be copied, cropped, redistributed, or closely reproduced without permission; commercial-rights and derivative-risk review remains required before shipping."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json"
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village--golden-hour--v02",
+      "sourceCandidateId": "china-dongguan-xiliubeipo-village--golden-hour",
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "destinationName": "东莞松山湖溪流背坡村",
+      "variantId": "golden-hour",
+      "version": "v02",
+      "name": "Pond-side tram stop and round tower ensemble",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "versionedPath": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "sha256": "f477eddf52b4fd77f1111863fee50f3872e4dd92bfcd6c6c6135c0cce2ff5f92",
+          "byteLength": 588
+        }
+      },
+      "sha256": "359aaaee5f65ce04aa8ac620f1ab61307846883dec0a7b5c4a14957b0c8c1127",
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.835,
+        "y": 0.93,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.59,
+        "width": 0.27,
+        "height": 0.36
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "selectionDecision": {
+        "state": "locked-for-human-review",
+        "basis": "explicit-active-revision",
+        "activeRevision": "v02",
+        "supersededEntriesExcluded": 1
+      },
+      "provenance": {
+        "summary": "Generated with Cursor GenerateImage under locked style intensity B; style references were used for style only. The selected file is an 8-bit opaque RGB PNG normalized without distortion to 1200×900 and carries an embedded sRGB profile. The generation model and seed were not exposed by the tool. Subject references were restricted to geometry/silhouette/layout as documented; source pixels are not included. Active revision v02 supersedes an earlier candidate where documented in the source fragment.",
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null
+        },
+        "promptJobId": "scene-variant-export",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "subjectReferenceUse": "Huawei editorial-use-only photographs used for factual subject geometry and layout only",
+        "subjectReferences": [
+          {
+            "owner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-10",
+            "role": "primary subject geometry and layout",
+            "rightsStatus": "editorial-use-only",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          },
+          {
+            "owner": "Huawei Technologies",
+            "sourceKind": "official gallery photograph",
+            "url": "https://www.huawei.com/cn/gallery/photos/facilities/huawei-xiliubeipo-village-12",
+            "role": "secondary wider campus and tram context",
+            "rightsStatus": "editorial-use-only",
+            "rightsNote": "Used only as a geometry/layout reference; the source photograph is not redistributed in this candidate package."
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationSummary": {
+          "sourceWidth": 1536,
+          "sourceHeight": 1024,
+          "method": "integer crop to exact 4:3 followed by uniform Lanczos resize",
+          "outputProfile": "embedded sRGB",
+          "metadataPolicy": "fresh opaque RGB PNG export"
+        },
+        "rightsWarnings": [
+          "Huawei gallery photographs are editorial-use-only, remain owned by Huawei Technologies, and were used only as factual geometry/layout references. They must not be copied, cropped, redistributed, or closely reproduced without permission; commercial-rights and derivative-risk review remains required before shipping."
+        ]
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      },
+      "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json"
+    }
+  ]
+}

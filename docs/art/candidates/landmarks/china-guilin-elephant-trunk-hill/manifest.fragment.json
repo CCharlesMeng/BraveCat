@@ -1,0 +1,655 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "china-guilin-elephant-trunk-hill",
+  "destinationName": "桂林象鼻山",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "portraitAnchor": "bottom-center"
+  },
+  "sceneVariants": [
+    {
+      "id": "china-guilin-elephant-trunk-hill--day-signature",
+      "variantId": "day-signature",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "ebed0474ee6671fd9654cadeef8a189484df0a163ba4f6169cb787884ee49e72",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "mixed-role-strictly-separated",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "revision": "v02",
+        "subjectReferenceUse": "landmark-silhouette-and-layout-only",
+        "visualReferenceIds": [
+          "commons-elephanttrunkhill-2009",
+          "commons-elephant-trunk-hill-2005",
+          "commons-cn-gui-elef-2001"
+        ],
+        "supersedes": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v01.png",
+        "revisionReason": "Improve Elephant Trunk Hill silhouette fidelity; v01 read as a generic near-circular natural arch."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Targeted v02 landmark-fidelity candidate; pending human review."
+      },
+      "version": "v02"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--golden-hour",
+      "variantId": "golden-hour",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "147073907c4ac282554c578703b8c684a7086678027b8af772f218fad145e5bd",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "mixed-role-strictly-separated",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "revision": "v02",
+        "subjectReferenceUse": "landmark-silhouette-and-layout-only",
+        "visualReferenceIds": [
+          "commons-elephanttrunkhill-2009",
+          "commons-elephant-trunk-hill-2005",
+          "commons-cn-gui-elef-2001"
+        ],
+        "supersedes": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v01.png",
+        "revisionReason": "Improve Elephant Trunk Hill silhouette fidelity; v01 read as a generic near-circular natural arch."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Targeted v02 landmark-fidelity candidate; pending human review."
+      },
+      "version": "v02"
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--companion-rare",
+      "variantId": "companion-rare",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "781ed6f583956e3d1f7250672ad6f2aaf7bdac5e7a0ee0a457a3e672713567f2",
+      "hasCompanion": true,
+      "companion": {
+        "species": "kingfisher",
+        "count": 1
+      },
+      "compositionSlot": {
+        "x": 0.15,
+        "y": 0.85,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.03,
+        "y": 0.55,
+        "width": 0.24,
+        "height": 0.3
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "mixed-role-strictly-separated",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        },
+        "revision": "v02",
+        "subjectReferenceUse": "landmark-silhouette-and-layout-only",
+        "visualReferenceIds": [
+          "commons-elephanttrunkhill-2009",
+          "commons-elephant-trunk-hill-2005",
+          "commons-cn-gui-elef-2001"
+        ],
+        "supersedes": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v01.png",
+        "revisionReason": "Improve Elephant Trunk Hill silhouette fidelity; v01 read as a generic near-circular natural arch."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Targeted v02 landmark-fidelity candidate; pending human review."
+      },
+      "version": "v02"
+    }
+  ],
+  "contactSheet": {
+    "version": "v02",
+    "status": "non-final",
+    "shippingEligible": false,
+    "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/contact-sheet--china-guilin-elephant-trunk-hill--v02-non-final.png",
+    "dimensions": {
+      "width": 1800,
+      "height": 660
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "mode": "RGB",
+    "sha256": "be76b75633e18fbe2ca4c0887a04b98511e58e053d363d21a87d94d6121d51aa",
+    "overlays": [
+      "variant-label",
+      "revision-label",
+      "companion-count",
+      "landmark-fidelity-check",
+      "safeBounds",
+      "compositionSlot-anchor",
+      "review-state"
+    ]
+  },
+  "inspection": {
+    "revision": "v02",
+    "decision": "pending",
+    "hardViolationsFound": false,
+    "candidateImagesContainQaOverlays": false,
+    "notes": [
+      "Visual inspection found no cat, substitute cat, person, boat, text, date, postmark, logo, watermark, UI, slot line, or anchor in v02 candidate images.",
+      "Only companion-rare contains an animal: exactly one tiny kingfisher outside the portrait safe bounds.",
+      "All v02 variants show the asymmetrical left trunk entering the Li River, a clear water-level opening, and a long, heavier right-hand hill body rather than a freestanding circular arch.",
+      "Golden-hour keeps the opening clear and readable; haze is confined to the background.",
+      "All v02 variants remain pending human review and are not shipping eligible.",
+      "All v01 scene files and the original unversioned v01 QA contact sheet remain unchanged for audit."
+    ]
+  },
+  "supersededSceneVariants": [
+    {
+      "id": "china-guilin-elephant-trunk-hill--day-signature",
+      "variantId": "day-signature",
+      "status": "superseded",
+      "candidate": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "18919e06b7bf58283bc84279ea03b98471816c05cae5b2b31ec75137e30f56df",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.22,
+        "y": 0.84,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.07,
+        "y": 0.52,
+        "width": 0.28,
+        "height": 0.32
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        }
+      },
+      "review": {
+        "decision": "superseded",
+        "reviewer": "production-qa",
+        "reviewedAt": "2026-07-20",
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Retained for audit; not an active candidate."
+      },
+      "version": "v01",
+      "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+      "supersession": {
+        "date": "2026-07-20",
+        "reason": "silhouette-fidelity",
+        "notes": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile."
+      }
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--golden-hour",
+      "variantId": "golden-hour",
+      "status": "superseded",
+      "candidate": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "76a579fc02700984ef4c335f71615a70273118fca6a20fef7a198cc3f754f75f",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.22,
+        "y": 0.84,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.07,
+        "y": 0.52,
+        "width": 0.28,
+        "height": 0.32
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        }
+      },
+      "review": {
+        "decision": "superseded",
+        "reviewer": "production-qa",
+        "reviewedAt": "2026-07-20",
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Retained for audit; not an active candidate."
+      },
+      "version": "v01",
+      "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+      "supersession": {
+        "date": "2026-07-20",
+        "reason": "silhouette-fidelity",
+        "notes": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile."
+      }
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill--companion-rare",
+      "variantId": "companion-rare",
+      "status": "superseded",
+      "candidate": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "cf3c4cbeca267c6fb678174a003e8701f8f9c9caa0b047e0c6b9f2c0ed934ada",
+      "hasCompanion": true,
+      "companion": {
+        "species": "kingfisher",
+        "count": 1
+      },
+      "compositionSlot": {
+        "x": 0.22,
+        "y": 0.84,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "x": 0.07,
+        "y": 0.52,
+        "width": 0.28,
+        "height": 0.32
+      },
+      "provenance": {
+        "generationTool": "Cursor GenerateImage",
+        "generationModel": "unreported-by-tool",
+        "seed": null,
+        "generatedAt": "2026-07-20",
+        "promptTemplateId": "scene-variant-export",
+        "styleIntensity": "B",
+        "referenceUse": "style-only",
+        "styleReferences": [
+          "docs/art/style-ref-home.png",
+          "docs/art/style-ref-postcard.png",
+          "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalization": {
+          "crop": {
+            "x": 86,
+            "y": 0,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "resampler": "Lanczos"
+          },
+          "colorConversion": "8-bit RGB with embedded sRGB profile",
+          "distortionApplied": false
+        }
+      },
+      "review": {
+        "decision": "superseded",
+        "reviewer": "production-qa",
+        "reviewedAt": "2026-07-20",
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null
+        },
+        "notes": "Retained for audit; not an active candidate."
+      },
+      "version": "v01",
+      "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+      "supersession": {
+        "date": "2026-07-20",
+        "reason": "silhouette-fidelity",
+        "notes": "The clean near-circular opening read as a generic natural arch rather than the recognizable asymmetrical elephant-head and trunk-to-water profile."
+      }
+    }
+  ],
+  "activeRevision": "v02",
+  "visualReferences": [
+    {
+      "id": "commons-elephanttrunkhill-2009",
+      "kind": "real-photograph",
+      "use": "subject-silhouette-and-layout-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ElephantTrunkHill.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/ElephantTrunkHill.jpg",
+      "author": "Bernt Rostad",
+      "license": "CC BY 2.0",
+      "referenceNotes": "Full asymmetrical hill mass, left trunk entering water, long right body, and Li River relationship."
+    },
+    {
+      "id": "commons-elephant-trunk-hill-2005",
+      "kind": "real-photograph",
+      "use": "subject-silhouette-and-layout-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Elephant_Trunk_Hill.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Elephant_Trunk_Hill.jpg",
+      "author": "Sentinel7",
+      "license": "Public domain",
+      "referenceNotes": "Clear front-side view of the irregular trunk, body-side wall, open water passage, and waterline."
+    },
+    {
+      "id": "commons-cn-gui-elef-2001",
+      "kind": "real-photograph",
+      "use": "subject-silhouette-and-layout-only",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:CN_GUI-ELEF.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/CN_GUI-ELEF.jpg",
+      "author": "Bgabel",
+      "license": "CC BY-SA 3.0 / GFDL",
+      "referenceNotes": "Oblique view clarifying the eroded inner opening and trunk-to-river geometry; people and boats were explicitly excluded."
+    }
+  ],
+  "researchSources": [
+    {
+      "kind": "official-scenic-area",
+      "url": "https://www.glljsh.com/post/3411.html",
+      "notes": "Official Guilin Two Rivers and Four Lakes / Elephant Hill scenic-area page identifying the hill at the Li and Taohua river confluence."
+    },
+    {
+      "kind": "government-geology",
+      "url": "http://dkj.gxzf.gov.cn/cxzt/dxkp/t19343057.shtml",
+      "notes": "Guangxi geology authority description of Shuiyue Cave between the elephant trunk and leg with river water passing through."
+    }
+  ],
+  "supersededContactSheets": [
+    {
+      "status": "superseded",
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/contact-sheet--china-guilin-elephant-trunk-hill--non-final.png",
+      "dimensions": {
+        "width": 1800,
+        "height": 640
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "9b0f734a7da11af7934c555f3310dd4ec5987b909d0755e3788a69ac1f02199d",
+      "overlays": [
+        "variant-label",
+        "companion-count",
+        "safeBounds",
+        "compositionSlot-anchor",
+        "review-state"
+      ],
+      "version": "v01",
+      "supersededBy": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/contact-sheet--china-guilin-elephant-trunk-hill--v02-non-final.png",
+      "supersessionReason": "Replaced by v02 landmark-fidelity QA contact sheet; retained unchanged for audit."
+    }
+  ]
+}

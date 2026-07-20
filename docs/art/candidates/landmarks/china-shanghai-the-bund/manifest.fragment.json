@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmarks-v1-2026-07-20",
+  "destinationId": "china-shanghai-the-bund",
+  "destinationName": "上海外滩",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sourcePlan": "docs/art/landmark-production-v1.json",
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "contactSheet": {
+    "imageSrc": "contact-sheet--china-shanghai-the-bund--non-final.png",
+    "status": "candidate-non-final",
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1280,
+      "height": 620
+    },
+    "sha256": "d3aa767bd56559396fb94af4eb56360e382511922ef4d65568cc1e0d4d35cb84",
+    "overlays": [
+      "variant-label",
+      "safeBounds",
+      "bottom-center-anchor"
+    ],
+    "containsPortraitAsset": false
+  },
+  "sceneVariants": [
+    {
+      "id": "china-shanghai-the-bund--day-signature",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "day-signature",
+      "name": "上海外滩 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "sha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.16,
+        "y": 0.94,
+        "scale": 0.26,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.045,
+        "y": 0.68,
+        "width": 0.23,
+        "height": 0.28
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "sourceCandidateId": "scene--china-shanghai-the-bund--day-signature--v01",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "Pillow ImageOps.fit aspect-preserving center crop, then Lanczos resize",
+            "cropBoxSourcePixels": {
+              "left": 85.333333,
+              "top": 0,
+              "right": 1450.666667,
+              "bottom": 1024
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distortionApplied": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB"
+          },
+          "styleReferenceUse": "style-only; subjects, text, borders, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "No cat, substitute cat, animal, person, boat, text, signage, date, postmark, logo, watermark, UI, slot line, or anchor observed in the candidate image."
+          },
+          "notes": "Bund and Pudong are balanced with a quiet lower-left promenade slot; human selection review remains pending."
+        }
+      }
+    },
+    {
+      "id": "china-shanghai-the-bund--golden-hour",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "golden-hour",
+      "name": "上海外滩 · 蓝调时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "sha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.16,
+        "y": 0.94,
+        "scale": 0.26,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.045,
+        "y": 0.68,
+        "width": 0.23,
+        "height": 0.28
+      },
+      "production": {
+        "promptJobId": "scene-variant-export",
+        "provenance": {
+          "generatedAt": "2026-07-20",
+          "generator": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+          "sourceCandidateId": "scene--china-shanghai-the-bund--golden-hour--v01",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "Pillow ImageOps.fit aspect-preserving center crop, then Lanczos resize",
+            "cropBoxSourcePixels": {
+              "left": 85.333333,
+              "top": 0,
+              "right": 1450.666667,
+              "bottom": 1024
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "method": "Lanczos"
+            },
+            "distortionApplied": false,
+            "outputMode": "8-bit opaque RGB PNG",
+            "embeddedColorProfile": "sRGB"
+          },
+          "styleReferenceUse": "style-only; subjects, text, borders, and compositions excluded",
+          "styleReferenceSrcs": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "notes": "No cat, substitute cat, animal, person, boat, text, signage, date, postmark, logo, watermark, UI, slot line, or anchor observed in the candidate image; window and promenade lights remain sparse and low contrast."
+          },
+          "notes": "The plan's golden-hour variant follows its specified hazy blue-hour brief without neon; human selection review remains pending."
+        }
+      }
+    }
+  ],
+  "qa": {
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "contactSheetContainsQaOverlaysOnly": true,
+    "hardConstraintViolations": [],
+    "reviewState": "pending"
+  }
+}

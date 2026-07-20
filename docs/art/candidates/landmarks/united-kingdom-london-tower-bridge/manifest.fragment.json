@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "united-kingdom-london-tower-bridge",
+  "destinationName": "伦敦塔桥",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "sceneVariants": [
+    {
+      "id": "united-kingdom-london-tower-bridge--day-signature",
+      "variantId": "day-signature",
+      "name": "Day signature",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.15,
+        "y": 0.94,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.03,
+          "y": 0.66,
+          "width": 0.24,
+          "height": 0.3
+        },
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmarks-v1-2026-07-20",
+          "sourceSpec": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "styleReferenceUsage": "style-only",
+          "styleReferencesConsulted": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/style-ref-poses.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "styleReferencesProvidedToGenerator": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "generatedAt": "2026-07-20",
+          "normalization": {
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "method": "Uniform Lanczos scale followed by centered crop to 1200x900",
+            "output": "sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "inspection": {
+          "hardFailure": false,
+          "machineChecksPassed": true,
+          "notes": "Both towers, upper walkways, bascule roadway, and suspension geometry are readable; the lower-left slot is quiet and unobstructed. No prohibited subject or graphic element observed."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--golden-hour",
+      "variantId": "golden-hour",
+      "name": "Golden hour",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "sha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.15,
+        "y": 0.94,
+        "scale": 0.27,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.03,
+          "y": 0.67,
+          "width": 0.24,
+          "height": 0.29
+        },
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmarks-v1-2026-07-20",
+          "sourceSpec": "docs/art/landmark-production-v1.json",
+          "promptJobId": "scene-variant-export",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "styleReferenceUsage": "style-only",
+          "styleReferencesConsulted": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/style-ref-poses.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "styleReferencesProvidedToGenerator": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "generatedAt": "2026-07-20",
+          "normalization": {
+            "sourceDimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "method": "Uniform Lanczos scale followed by centered crop to 1200x900",
+            "output": "sRGB 8-bit opaque RGB PNG",
+            "distortion": false
+          }
+        },
+        "inspection": {
+          "hardFailure": false,
+          "machineChecksPassed": true,
+          "notes": "Both towers, upper walkways, bascule roadway, and suspension geometry are readable; warm light and reflections remain restrained; the lower-left slot is quiet and unobstructed. No prohibited subject or graphic element observed."
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "status": "non-final",
+    "shippingEligible": false,
+    "imageSrc": "contact-sheet--united-kingdom-london-tower-bridge--non-final.png",
+    "dimensions": {
+      "width": 1604,
+      "height": 668
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "sha256": "829e3ff1f7c10fda65719c08f1a42867d2acdd251c7e5c812398baf6f3c14b21",
+    "labels": [
+      "day-signature",
+      "golden-hour"
+    ],
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.anchor"
+    ]
+  }
+}

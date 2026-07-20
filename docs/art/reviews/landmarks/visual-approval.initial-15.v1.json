@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "landmark-human-visual-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20T19:10:00+08:00",
+  "source": {
+    "candidateManifest": "docs/art/candidates/landmarks/manifest.candidates.json",
+    "candidateManifestSha256": "05442f044260fc1564d171788a994940c3ff603fd9b7d859a5ba678e4a5a2d26",
+    "candidateQa": "docs/art/candidates/landmarks/qa-report.json",
+    "candidateQaSha256": "4a1f320ce7a1c8be5a81a99d8d2318ecaba625fa05f839aa05dd6fc9a4730260",
+    "planId": "miaoyouji-landmarks-v1-2026-07-20"
+  },
+  "scope": {
+    "selection": "all-active-scene-variants",
+    "destinationCount": 15,
+    "activeSceneVariantCount": 35,
+    "ordinaryVariantCount": 30,
+    "companionRareVariantCount": 5,
+    "activeSceneSetSha256": "f896f691493dd90fbe3c0ff6f0444e21b99dde98869dbf2a3cb9fc7cbea1a203",
+    "activeSceneContentSetSha256": "9daa519b5f86ecae49437683107c3d8e487cfea272e092d49d190a25c126f43f",
+    "destinationIds": [
+      "china-beijing-forbidden-city-corner-tower",
+      "japan-kyoto-fushimi-inari-taisha",
+      "singapore-singapore-merlion",
+      "australia-sydney-opera-house",
+      "france-paris-eiffel-tower",
+      "united-kingdom-london-tower-bridge",
+      "italy-rome-colosseum",
+      "egypt-giza-pyramids",
+      "united-states-new-york-brooklyn-bridge",
+      "peru-cusco-machu-picchu",
+      "china-beijing-mutianyu-great-wall",
+      "china-shanghai-the-bund",
+      "china-xian-giant-wild-goose-pagoda",
+      "china-guilin-elephant-trunk-hill",
+      "china-dongguan-xiliubeipo-village"
+    ]
+  },
+  "coveredOverviewSheets": [
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-01-of-03--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-02-of-03--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-03-of-03--non-final.png"
+  ],
+  "exclusions": [],
+  "outsideApprovalScope": {
+    "rule": "No destination or scene absent from the source candidate manifest is covered.",
+    "expansionScenesApprovedByThisRecord": false
+  },
+  "remainingGates": [
+    "rights-and-provenance-clearance",
+    "final-approved-real-portrait-composite-review-for-this-exact-scene-set",
+    "explicit-shipping-approval"
+  ],
+  "shippingEligible": false,
+  "notes": "The user approved all 35 active candidates shown in the three initial-set overview sheets. This visual decision does not approve expansion scenes and does not waive rights, provenance, composite, or shipping gates."
+}

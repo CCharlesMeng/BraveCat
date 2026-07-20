@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v3.json",
+  "lockedProductionSource": "docs/art/landmark-production-v1.json",
+  "destinationId": "mexico-yucatan-chichen-itza",
+  "destinationName": "奇琴伊察",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "productionRules": [
+    "AGENTS.md",
+    "CONTEXT.md",
+    "docs/art/calibration-production-v1.md"
+  ],
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "provenance": {
+    "generator": "Cursor GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "requestedAspectRatio": "4:3",
+    "styleIntensity": "B",
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-B-only"
+    ],
+    "styleReferenceUse": "locked-B watercolor language only; reference cats, animals, text, objects, borders, UI, guide marks, layouts, and compositions were exclusions",
+    "realSourceUse": "official text descriptions supplied factual geometry, site setting, and species plausibility only; no external image was attached to generation",
+    "sourcePhotoPixelsUsed": false,
+    "normalization": {
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "method": "per-variant integer 1364x1023 exact 4:3 crop followed by Lanczos resize",
+      "outputDimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "outputProfile": "embedded sRGB built-in",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh RGB PNG export",
+      "distorted": false
+    },
+    "regenerationAudit": [
+      {
+        "variantId": "companion-rare",
+        "supersededVersion": "v00",
+        "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--companion-rare--v00.png",
+        "sha256": "35f2673a70bfa3d504e7e3568257f42d6ebdb884f7dc8219a792cac9cc1cf951",
+        "dimensions": {
+          "width": 1200,
+          "height": 900,
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "mode": "RGB",
+          "format": "png"
+        },
+        "reason": "The first rare draft contained exactly one coherent Yucatan Jay, but the bird was visually about 8% of frame height and exceeded the plan's 5% maximum.",
+        "disposition": "superseded-hard-constraint",
+        "retainedInCandidateDirectory": true,
+        "shipping": false,
+        "shippingEligible": false,
+        "normalizationCropPixels": {
+          "left": 32,
+          "top": 0,
+          "rightExclusive": 1396,
+          "bottomExclusive": 1023,
+          "width": 1364,
+          "height": 1023
+        }
+      }
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "visualReferenceResearch": {
+      "src": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/visual-reference-research.md",
+      "sha256": "97523018a736790727e7027176e766d753e44ae0398a1cc15d1cc334c53177da"
+    },
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotoPixelsUsed": false,
+    "geometryOnlyUse": true,
+    "sources": [
+      {
+        "id": "unesco-chichen-itza",
+        "sourceOwner": "UNESCO World Heritage Centre",
+        "title": "Pre-Hispanic City of Chichen-Itza",
+        "url": "https://whc.unesco.org/en/list/483/",
+        "licenseOrTerms": "The listing marks its written description CC BY-SA 3.0 IGO; gallery and third-party media rights are separate and were not used.",
+        "factualUse": "Maya-Toltec context, El Castillo identity, terrace setting, and surrounding monumental-group relationship.",
+        "assetRetained": false
+      },
+      {
+        "id": "inah-el-castillo-geometry",
+        "sourceOwner": "Instituto Nacional de Antropología e Historia",
+        "title": "Chichén Itzá",
+        "url": "https://lugares.inah.gob.mx/en/node/4335",
+        "licenseOrTerms": "No open image-reuse license identified; factual text consulted only.",
+        "factualUse": "Quadrangular base, nine staggered bodies, inclined panelled faces, four stairways and balustrades, principal north stair, serpent heads, and summit temple.",
+        "assetRetained": false
+      },
+      {
+        "id": "cornell-yucatan-jay",
+        "sourceOwner": "Cornell Lab of Ornithology, Birds of the World",
+        "title": "Yucatan Jay (Cyanocorax yucatanicus)",
+        "url": "https://birdsoftheworld.org/bow/species/yucjay1/cur/introduction",
+        "licenseOrTerms": "Species text and linked media remain copyrighted unless individually licensed; factual text consulted only.",
+        "factualUse": "Scientific identity, adult black-and-blue plumage, deciduous-forest habitat, and Yucatán Peninsula range.",
+        "assetRetained": false
+      },
+      {
+        "id": "inah-image-reproduction-authorization",
+        "sourceOwner": "Instituto Nacional de Antropología e Historia",
+        "title": "Authorization to reproduce images",
+        "url": "https://tramites.inah.gob.mx/INAH-01-004.php",
+        "licenseOrTerms": "Official authorization process; not a reusable visual source and not a legal determination for this illustration.",
+        "factualUse": "Rights warning for INAH-origin images and monuments under INAH custody.",
+        "assetRetained": false
+      }
+    ],
+    "notes": [
+      "No UNESCO, INAH, Cornell, Macaulay Library, eBird, or other external photograph was downloaded, retained, or supplied to image generation.",
+      "Candidates synthesize factual geometry from official text and do not copy source-photo pixels or a source-photo composition.",
+      "Repository art supplied style only; its cats, animals, text, objects, borders, UI, guides, and layouts were excluded.",
+      "Human rights review remains pending."
+    ],
+    "shippingWarnings": [
+      "Do not infer permission to reuse media displayed by UNESCO, INAH, Cornell, Macaulay Library, or eBird.",
+      "Obtain legal review before commercial release to determine whether Mexican or INAH monument-reproduction authorization, fees, notices, or attribution apply.",
+      "The Yucatan Jay is regionally plausible from the cited habitat and range account, but exact occurrence on El Castillo's plaza was not established by the consulted sources."
+    ]
+  },
+  "contactSheet": {
+    "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/contact-sheet--mexico-yucatan-chichen-itza--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shipping": false,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1800,
+      "height": 700,
+      "format": "png",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB"
+    },
+    "sha256": "67d0e63f78da9cbf1a5e4c6a3925065742caf9abee2e3c9fcefe42dd37b2e423",
+    "candidateImagesContainQaOverlays": false,
+    "sheetContainsLabelsAndQaOverlaysOnly": true,
+    "overlays": [
+      "variant label",
+      "version label",
+      "review state",
+      "safeBounds",
+      "compositionSlot bottom-center anchor",
+      "pose, scale, and flip",
+      "rare companion callout"
+    ],
+    "visualInspection": {
+      "performed": true,
+      "clippingFound": false,
+      "labelsReadable": true,
+      "candidatePanelsMatchCleanMasters": true
+    }
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "visualDecision": "pending",
+    "rightsDecision": "pending",
+    "notes": "Machine and agent visual QA are complete; human selection, visual approval, composite approval, and rights approval remain pending."
+  },
+  "sceneVariants": [
+    {
+      "id": "mexico-yucatan-chichen-itza--day-signature",
+      "destinationId": "mexico-yucatan-chichen-itza",
+      "variantId": "day-signature",
+      "version": "v01",
+      "name": "Chichén Itzá daylight signature",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "53ced667bc88c8eb015ca8d26680393796c29880e88604d5fc86d847823f00bc",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.83,
+        "y": 0.94,
+        "scale": 0.22,
+        "pose": "sit",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.68,
+        "y": 0.71,
+        "width": 0.3,
+        "height": 0.24
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The lower-right plaza below the pyramid base is quiet, low detail, and unmarked."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "styleIntensity": "B",
+        "styleReferenceUse": "style only; reference subjects, text, objects, borders, UI, guides, and composition excluded",
+        "subjectGeometrySourceIds": [
+          "unesco-chichen-itza",
+          "inah-el-castillo-geometry"
+        ],
+        "promptBrief": "Calm daytime front-three-quarter view of El Castillo, with nine receding terrace bodies, axial stairways, a square summit temple, open limestone plaza, low Yucatán tree line, and an unmarked quiet lower-right Portrait area.",
+        "promptExclusions": "No cat, substitute Portrait, person, animal, bird, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, guide, or copied reference artifact.",
+        "normalization": {
+          "method": "exact 4:3 crop followed by Lanczos resize",
+          "crop": {
+            "left": 86,
+            "top": 0,
+            "rightExclusive": 1450,
+            "bottomExclusive": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB built-in"
+        },
+        "sourcePhotoPixelsUsed": false,
+        "rightsNotes": "Official text informed factual geometry only; no external photograph was retained or supplied to generation. Rights review is pending."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Pending human art-direction, composite, and rights approval."
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB PNG color type 2, 8-bit channels, opaque, and embedded sRGB built-in profile."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "animalCount": 0,
+          "violations": [],
+          "notes": "No cat, animal, person, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, or guide observed."
+        },
+        "visual": {
+          "performed": true,
+          "decision": "pass",
+          "landmarkFidelity": "Broad square stepped mass, nine-terrace rhythm, two visible axial stairways, compact square summit temple, and open plaza remain immediately readable.",
+          "slotObstructionFound": false,
+          "copiedReferenceArtifactFound": false
+        }
+      }
+    },
+    {
+      "id": "mexico-yucatan-chichen-itza--golden-hour",
+      "destinationId": "mexico-yucatan-chichen-itza",
+      "variantId": "golden-hour",
+      "version": "v01",
+      "name": "Chichén Itzá golden hour",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "70c314b39ab394b22ec4e4e7233ca820b58a657106a7a3aef839aadf3450ef51",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.16,
+        "y": 0.94,
+        "scale": 0.28,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.61,
+        "width": 0.26,
+        "height": 0.33
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The lower-left open plaza is low contrast and remains clear of the right-positioned pyramid."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "styleIntensity": "B",
+        "styleReferenceUse": "style only; reference subjects, text, objects, borders, UI, guides, and composition excluded",
+        "subjectGeometrySourceIds": [
+          "unesco-chichen-itza",
+          "inah-el-castillo-geometry"
+        ],
+        "promptBrief": "Restrained late-afternoon front-left three-quarter view with El Castillo right of center, nine terrace bodies, axial stairs, square summit temple, long low plaza shadows, and an unmarked quiet lower-left Portrait area; no equinox-serpent claim.",
+        "promptExclusions": "No cat, substitute Portrait, person, animal, bird, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, guide, or copied reference artifact.",
+        "normalization": {
+          "method": "exact 4:3 crop followed by Lanczos resize",
+          "crop": {
+            "left": 128,
+            "top": 0,
+            "rightExclusive": 1492,
+            "bottomExclusive": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB built-in"
+        },
+        "sourcePhotoPixelsUsed": false,
+        "rightsNotes": "Official text informed factual geometry only; no external photograph was retained or supplied to generation. Rights review is pending."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null
+        },
+        "notes": "Pending human art-direction, composite, and rights approval."
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB PNG color type 2, 8-bit channels, opaque, and embedded sRGB built-in profile."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "animalCount": 0,
+          "violations": [],
+          "notes": "No cat, animal, person, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, or guide observed."
+        },
+        "visual": {
+          "performed": true,
+          "decision": "pass",
+          "landmarkFidelity": "Nine-terrace stepped mass, two visible axial stairs, square summit temple, warm limestone, open plaza, and low forest horizon remain coherent.",
+          "slotObstructionFound": false,
+          "copiedReferenceArtifactFound": false,
+          "notes": "Soft long shadows do not simulate or claim the equinox serpent effect."
+        }
+      }
+    },
+    {
+      "id": "mexico-yucatan-chichen-itza--companion-rare",
+      "destinationId": "mexico-yucatan-chichen-itza",
+      "variantId": "companion-rare",
+      "version": "v01",
+      "name": "Chichén Itzá with rare Yucatan Jay",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--companion-rare--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "mode": "RGB"
+      },
+      "sha256": "d68d3cd2103395c661205af245a0bd4d38a2dca9236d9ccbfa620fbe7fe5d5cd",
+      "hasCompanion": true,
+      "companion": {
+        "kind": "yucatan-jay",
+        "scientificName": "Cyanocorax yucatanicus",
+        "count": 1,
+        "maximumFrameHeight": 0.05,
+        "estimatedFrameHeight": 0.033,
+        "frameHeightEstimateMethod": "visual bounding against the normalized 900-pixel frame and magnified crop inspection",
+        "placement": "extreme lower-left lateral limestone",
+        "outsideSafeBounds": true,
+        "outsideLandmarkRecognitionPoints": true,
+        "secondaryToLandmark": true,
+        "anatomicallyCoherent": true,
+        "adultPlumageCoherent": true,
+        "directlyPaintedIntoScene": true,
+        "standaloneAsset": false,
+        "otherAnimalsPresent": false,
+        "plausibility": "Cornell describes this black-and-blue jay in deciduous forests of the Yucatán Peninsula; the cited sources do not establish an exact plaza observation."
+      },
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.84,
+        "y": 0.94,
+        "scale": 0.21,
+        "pose": "sit",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.7,
+        "y": 0.72,
+        "width": 0.28,
+        "height": 0.23
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsCompanion": false,
+        "groundedPlacement": true,
+        "notes": "The lower-right plaza is unmarked and low detail; the single jay is isolated at the extreme lower left."
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "styleIntensity": "B",
+        "styleReferenceUse": "style only; reference subjects, text, objects, borders, UI, guides, and composition excluded",
+        "subjectGeometrySourceIds": [
+          "unesco-chichen-itza",
+          "inah-el-castillo-geometry",
+          "cornell-yucatan-jay"
+        ],
+        "promptBrief": "Quiet plaza-edge front-right three-quarter view of El Castillo with nine terrace bodies, axial stairs, square summit temple, exactly one extremely tiny adult black-and-blue Yucatan Jay on a far lower-left stone, and an unmarked quiet lower-right Portrait area.",
+        "promptExclusions": "No player cat, substitute Portrait, person, second animal, extra bird or bird-like sky mark, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, guide, or copied reference artifact.",
+        "normalization": {
+          "method": "exact 4:3 crop followed by Lanczos resize",
+          "crop": {
+            "left": 32,
+            "top": 0,
+            "rightExclusive": 1396,
+            "bottomExclusive": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "method": "Lanczos"
+          },
+          "distorted": false,
+          "outputMode": "8-bit opaque RGB PNG",
+          "embeddedColorProfile": "sRGB built-in"
+        },
+        "sourcePhotoPixelsUsed": false,
+        "rightsNotes": "Official text informed factual geometry and regional species plausibility only; no external photograph was retained or supplied to generation. Rights review is pending."
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "silhouetteReadability": null,
+          "compositionFit": null,
+          "alphaEdgeQuality": null,
+          "companionAnatomy": null,
+          "companionSubordination": null
+        },
+        "notes": "Pending human art-direction, companion, composite, and rights approval."
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, RGB PNG color type 2, 8-bit channels, opaque, and embedded sRGB built-in profile."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "animalCount": 1,
+          "violations": [],
+          "notes": "Exactly one tiny Yucatan Jay observed. No cat, substitute Portrait, person, second animal, extra bird, text, pseudo-text, date, postmark, logo, watermark, UI, border, sign, slot frame, safe-bound mark, anchor, or guide observed."
+        },
+        "visual": {
+          "performed": true,
+          "decision": "pass",
+          "landmarkFidelity": "Broad nine-terrace stepped pyramid, two visible axial stairs, square summit temple, open plaza, and low Yucatán tree line remain immediately readable.",
+          "companionInspection": "The single adult-plumage blue-and-black jay is coherent at approximately 3.3% of frame height, outside safeBounds, and visually secondary.",
+          "slotObstructionFound": false,
+          "copiedReferenceArtifactFound": false
+        }
+      }
+    }
+  ],
+  "inspection": {
+    "performed": true,
+    "decision": "pending",
+    "generatedVariantCount": 3,
+    "normalizedSelectedCount": 3,
+    "supersededRevisionCount": 1,
+    "hardViolationsFoundInSelectedCandidates": false,
+    "candidateImagesContainQaOverlays": false,
+    "generatedCatAsset": false,
+    "ordinaryAnimalCounts": {
+      "day-signature": 0,
+      "golden-hour": 0
+    },
+    "rareAnimalCount": 1,
+    "notes": [
+      "All three selected clean scene masters were visually inspected after exact normalization.",
+      "El Castillo remains recognizable through its square stepped mass, nine-terrace rhythm, axial stairways, square summit temple, and open plaza.",
+      "No selected candidate contains forbidden text, pseudo-text, people, cats, UI, borders, slot marks, anchors, guides, or copied reference artifacts.",
+      "The first rare revision was retained as v00 and superseded because its jay exceeded the 5% frame-height cap.",
+      "Human landmark-fidelity, art-direction, composite, companion, and rights reviews remain pending."
+    ]
+  },
+  "artifactVerification": {
+    "performed": true,
+    "verifiedAt": "2026-07-20",
+    "allReferencedCandidateArtifactsExist": true,
+    "allRecordedHashesMatch": true,
+    "scenePngHeadersMatchManifest": true,
+    "contactSheetPngHeaderMatchesManifest": true,
+    "researchFileHashMatchesManifest": true
+  }
+}

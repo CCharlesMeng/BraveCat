@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-candidate-fragment",
+  "destinationId": "china-beijing-forbidden-city-corner-tower",
+  "destinationName": "故宫角楼",
+  "status": "candidate",
+  "shippingEligible": false,
+  "locks": {
+    "styleIntensity": "B",
+    "postcardFormat": {
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "landmarkReferences": {
+    "officialGeometrySource": {
+      "publisher": "The Palace Museum",
+      "title": "角楼",
+      "url": "https://www.dpm.org.cn/explore/building/236522.html",
+      "geometryFindings": [
+        "compact pavilion on a Xumi plinth at the junction of the enclosing walls and moat",
+        "cross-shaped plan formed by a central square pavilion and four projecting porch masses",
+        "composite intersecting hip-and-gable roof with four visible upper gables and a central finial",
+        "dense linked middle and lower roof-ridge network rather than repeated pagoda tiers"
+      ]
+    },
+    "subjectGeometryImage": {
+      "localSrc": "reference--forbidden-city-northwest-corner-tower--wikimedia.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Forbidden_City_northwest_corner_tower_and_moat.jpg",
+      "directImage": "https://upload.wikimedia.org/wikipedia/commons/d/df/Forbidden_City_northwest_corner_tower_and_moat.jpg",
+      "title": "Forbidden City northwest corner tower and moat",
+      "author": "Daniel Case",
+      "date": "2014-03-30",
+      "license": "CC BY-SA 3.0 or GFDL",
+      "usage": "subject geometry only; photographic color, boats, people, signage, and incidental details excluded"
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--day-signature",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "variantId": "day-signature",
+      "name": "故宫角楼 · 日间标志景",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "sha256": "3f8007be31b28d37db9f78375be2c3865927d32f69eab2abd954fe4b6961381b",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "anchor": "bottom-center",
+        "units": "normalized",
+        "x": 0.79,
+        "y": 0.9,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.66,
+          "y": 0.56,
+          "width": 0.26,
+          "height": 0.34
+        },
+        "generation": {
+          "promptJobId": "scene-variant-export",
+          "tool": "GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool",
+          "sourceCandidateId": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v02",
+          "supersedes": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v01.png",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-b"
+          ],
+          "subjectGeometryReferences": [
+            "reference--forbidden-city-northwest-corner-tower--wikimedia.jpg",
+            "https://www.dpm.org.cn/explore/building/236522.html"
+          ],
+          "referenceUsage": "repo art used for style only; real photograph and Palace Museum description used for landmark geometry only",
+          "promptBrief": "Representative daytime view across the moat emphasizing the compact corner platform, cross-shaped plan, interlocked multi-eaved hip-and-gable roof mass, dense ridge network, low wall relationship, and empty lower-right portrait slot.",
+          "normalization": {
+            "method": "center-crop to 4:3, then Lanczos resize",
+            "distortionApplied": false,
+            "targetWidth": 1200,
+            "targetHeight": 900,
+            "outputMode": "8-bit opaque RGB",
+            "embeddedColorProfile": "sRGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "materially-closer-than-v01",
+            "notes": "Clean candidate. Silhouette now shows a compact wall-corner footprint, lateral porch roofs, multiple upper gables, and interlocked ridge/eave projections rather than a generic pagoda stack; no cat, animal, person, text, border, or QA overlay observed."
+          }
+        }
+      }
+    },
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--golden-hour",
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "variantId": "golden-hour",
+      "name": "故宫角楼 · 晨光",
+      "status": "candidate",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "format": "png",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "sha256": "cae884ec8ace36f04b110b5f3791be432a037a510f7d6ba265258e63e330959f",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "anchor": "bottom-center",
+        "units": "normalized",
+        "x": 0.22,
+        "y": 0.91,
+        "scale": 0.3,
+        "pose": "gaze",
+        "flip": true
+      },
+      "production": {
+        "safeBounds": {
+          "units": "normalized",
+          "x": 0.08,
+          "y": 0.58,
+          "width": 0.28,
+          "height": 0.33
+        },
+        "generation": {
+          "promptJobId": "scene-variant-export",
+          "tool": "GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool",
+          "sourceCandidateId": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+          "supersedes": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v01.png",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "styleIntensity": "B",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png#panel-b"
+          ],
+          "subjectGeometryReferences": [
+            "reference--forbidden-city-northwest-corner-tower--wikimedia.jpg",
+            "https://www.dpm.org.cn/explore/building/236522.html"
+          ],
+          "referenceUsage": "repo art used for style only; real photograph and Palace Museum description used for landmark geometry only",
+          "promptBrief": "Quiet early-autumn dawn emphasizing the compact corner platform, cross-shaped plan, interlocked multi-eaved hip-and-gable roof mass, dense ridge network, low wall and moat relationship, and empty lower-left portrait slot.",
+          "normalization": {
+            "method": "center-crop to 4:3, then Lanczos resize",
+            "distortionApplied": false,
+            "targetWidth": 1200,
+            "targetHeight": 900,
+            "outputMode": "8-bit opaque RGB",
+            "embeddedColorProfile": "sRGB"
+          }
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "compositionFit": null,
+            "alphaEdgeQuality": null
+          },
+          "visualInspection": {
+            "performed": true,
+            "hardConstraintViolations": [],
+            "landmarkFidelity": "materially-closer-than-v01",
+            "notes": "Clean candidate. Silhouette now shows a compact wall-corner footprint, lateral porch roofs, multiple upper gables, and interlocked ridge/eave projections rather than a generic pagoda stack; no cat, animal, person, text, border, or QA overlay observed."
+          }
+        }
+      }
+    }
+  ],
+  "supersededSceneVariants": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--day-signature--v01",
+      "variantId": "day-signature",
+      "status": "superseded",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v01.png",
+      "sha256": "c470b3a1f7c366cc5a6b392655e651302aa92b5b702edd556747316642c787bb",
+      "supersededBy": "scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+      "reason": "landmark-fidelity",
+      "review": {
+        "decision": "rejected",
+        "notes": "Central building read as a generic stacked pagoda or pavilion rather than the Forbidden City's distinctive compact, cross-shaped corner tower."
+      }
+    },
+    {
+      "id": "china-beijing-forbidden-city-corner-tower--golden-hour--v01",
+      "variantId": "golden-hour",
+      "status": "superseded",
+      "shippingEligible": false,
+      "imageSrc": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v01.png",
+      "sha256": "7d2fb0495be04475d3448c99a7fb1f8777f2bc19e1fe3ed0a6cf5dc23730c34a",
+      "supersededBy": "scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+      "reason": "landmark-fidelity",
+      "review": {
+        "decision": "rejected",
+        "notes": "Central building read as a generic stacked pagoda or pavilion rather than the Forbidden City's distinctive compact, cross-shaped corner tower."
+      }
+    }
+  ],
+  "qa": {
+    "contactSheet": "contact-sheet--china-beijing-forbidden-city-corner-tower--non-final.png",
+    "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+    "reviewState": "pending"
+  }
+}

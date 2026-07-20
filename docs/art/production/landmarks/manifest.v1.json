@@ -1,0 +1,3523 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-production",
+  "catalogId": "miaoyouji-landmarks-production-v1-2026-07-20",
+  "generatedAt": "2026-07-20",
+  "status": "visual-composite-and-rights-reviewed-not-cleared-runtime-integrated",
+  "shippingEligible": false,
+  "source": {
+    "candidateManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v2.json",
+      "sha256": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0",
+      "planId": "miaoyouji-landmarks-combined-v2-2026-07-20"
+    },
+    "candidateQa": {
+      "path": "docs/art/candidates/landmarks/qa-report.v2.json",
+      "reportedOverallStatus": "fail",
+      "note": "The recorded v2 failure is the historical v1 review-index snapshot check; promotion revalidates every active source image and composition field."
+    },
+    "visualApproval": {
+      "path": "docs/art/reviews/landmarks/visual-approval.v1.json",
+      "sha256": "fbf6fb2760c2b467d67dbed2e855cf72be416c2f02a3255b6c4e48b08880ce85",
+      "approvedArchiveSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b"
+    },
+    "approvedArchive": {
+      "path": "docs/art/archive/asset-archive.v1.json",
+      "sha256": "6c46c01bfdfc0dabf92550ac96b3c77f3e89fd473345cd4a3ae80d41bbec3a3a"
+    },
+    "rightsReview": {
+      "path": "docs/art/reviews/landmarks/rights-review-v1.md",
+      "sha256": "9bbec7b21f4c1eaef930c18628870bebd7a93251e39e9cefa1e4b45a3d49008e",
+      "decisionRecord": "docs/art/reviews/landmarks/rights-decision.v1.json",
+      "decisionRecordSha256": "c1d7bc972c863f354599358ca97dfa5cf3dceb3e637d4b4290ecc7bbe7035511",
+      "decision": "review-complete-not-cleared",
+      "reviewedAt": "2026-07-20"
+    },
+    "compositeQa": {
+      "path": "docs/art/reviews/landmarks/composites/manifest.json",
+      "sha256": "ba271519736ead6c02bd05fa8fca7c46da0297fa394b3e46b011010aa019bd61",
+      "compositeSetSha256": "e24bfe4549294d6313ce578e6c44edac8d9c6a98a8cec48ea60a8a49fc3fa955"
+    },
+    "compositeApproval": {
+      "path": "docs/art/reviews/landmarks/composites/approval.v1.json",
+      "sha256": "d20c0700616494b53cbba361bc222ea93cd030d3bc54ba4220e4f05350033cba",
+      "reviewer": "user",
+      "reviewedAt": "2026-07-20"
+    }
+  },
+  "scope": {
+    "destinationCount": 20,
+    "activeSceneVariantCount": 48,
+    "ordinaryVariantCount": 40,
+    "companionRareVariantCount": 8,
+    "versionedSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
+    "productionMasterContentSetSha256": "424a62910fd3a30686b55201b2085712bb863050555e587f1065dc5aba5c0024",
+    "runtimeContentSetSha256": "a71edb2fe9fd91ee0ce94b90be43245ab39f2a8a471206756f2d5d6acfeee747"
+  },
+  "review": {
+    "humanVisualReview": {
+      "decision": "approved",
+      "reviewer": "user",
+      "reviewedAt": "2026-07-20",
+      "selection": "all-active-scene-variants",
+      "exclusions": []
+    },
+    "rightsReview": {
+      "decision": "review-complete-not-cleared",
+      "reviewedAt": "2026-07-20",
+      "reviewer": "agent-research-not-legal-counsel",
+      "globalGatesOpen": [
+        "style-reference-rights",
+        "generator-terms-provenance",
+        "reverse-image-and-similarity-review",
+        "trademark-clearance"
+      ],
+      "riskSummary": {
+        "low": {
+          "destinationCount": 6,
+          "sceneCount": 13
+        },
+        "medium": {
+          "destinationCount": 7,
+          "sceneCount": 19
+        },
+        "high": {
+          "destinationCount": 2,
+          "sceneCount": 4
+        },
+        "blocked": {
+          "destinationCount": 5,
+          "sceneCount": 12
+        }
+      }
+    },
+    "finalRealPortraitCompositeReview": "approved",
+    "shippingApproval": "blocked-pending-remaining-gates"
+  },
+  "remainingGates": [
+    "global-provenance-remediation",
+    "destination-specific-rights-remediation",
+    "qualified-counsel-or-permission-for-high-and-blocked-destinations",
+    "explicit-shipping-approval"
+  ],
+  "runtime": {
+    "productionMasterRoot": "docs/art/production/landmarks/scenes",
+    "sceneRoot": "public/scenes",
+    "generatedCatalog": "src/lib/assets/landmarkCatalog.generated.ts",
+    "productionFilenameGrammar": "scene--{destination-id}--{variant-id}--vNN.png",
+    "runtimeFilenameGrammar": "scene--{destination-id}--{variant-id}--vNN.webp",
+    "semanticSceneIdsExcludeVersion": true,
+    "optimization": {
+      "productionFormat": "png",
+      "runtimeFormat": "webp",
+      "webpQuality": 88,
+      "webpEffort": 6,
+      "smartSubsample": true,
+      "productionMasterBytes": 79527014,
+      "runtimeDerivativeBytes": 8418052,
+      "reductionPercent": 89.4,
+      "loadingPolicy": "on-demand-cache-first",
+      "precached": false
+    }
+  },
+  "rightsAndProvenanceWarnings": [
+    {
+      "destinationId": "china-beijing-forbidden-city-corner-tower",
+      "referenceOwner": "Daniel Case / Wikimedia Commons",
+      "referenceUse": "subject geometry only",
+      "sourceTerms": "CC BY-SA 3.0 or GFDL",
+      "warning": "Daniel Case’s Wikimedia subject-geometry photograph is CC BY-SA 3.0 or GFDL and was used only for landmark geometry, silhouette, platform, wall, and moat relationships; its pixels are not redistributed in this candidate package."
+    },
+    {
+      "destinationId": "china-guilin-elephant-trunk-hill",
+      "referenceOwner": "Wikimedia Commons contributors",
+      "referenceUse": "subject silhouette and layout only",
+      "sourceTerms": "CC BY 2.0; public domain; CC BY-SA 3.0/GFDL, per cited source",
+      "warning": "Wikimedia photographs with CC BY 2.0, public-domain, and CC BY-SA 3.0/GFDL source terms were used only for landmark silhouette and layout; source pixels are not redistributed in these generated candidates."
+    },
+    {
+      "destinationId": "china-dongguan-xiliubeipo-village",
+      "referenceOwner": "Huawei Technologies",
+      "referenceUse": "factual subject geometry and layout only",
+      "sourceTerms": "editorial use only; all usage rights remain with Huawei Technologies",
+      "shippingGate": "commercial-rights-and-derivative-risk-review-required",
+      "warning": "Huawei gallery photographs are editorial-use-only, remain owned by Huawei Technologies, and were used only as factual geometry/layout references. They must not be copied, cropped, redistributed, or closely reproduced without permission; commercial-rights and derivative-risk review remains required before shipping."
+    },
+    {
+      "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+      "referenceUse": "retained CC BY-SA geometry references and consulted authoritative geometry sources",
+      "shippingGate": "cc-attribution-adaptation-share-alike-review-required",
+      "warning": "Retained CC BY-SA geometry-reference photographs and consulted authoritative sources require attribution, adaptation, and share-alike applicability review before shipping."
+    },
+    {
+      "destinationId": "india-agra-taj-mahal",
+      "referenceUse": "consulted geometry and companion-anatomy references only; no source file retained",
+      "shippingGate": "reference-rights-and-adaptation-review-required",
+      "warning": "CC BY-SA, public-domain, rights-reserved, and Library of Congress geometry/anatomy references were consulted without retaining source files; attribution, adaptation, and rights applicability remain pending review."
+    },
+    {
+      "destinationId": "turkey-istanbul-hagia-sophia",
+      "referenceUse": "consulted exterior geometry references only; no source file retained",
+      "shippingGate": "reference-rights-and-adaptation-review-required",
+      "warning": "CC BY-SA, CC0, and rights-reserved exterior-geometry references were consulted without retaining source files; attribution, adaptation, and rights applicability remain pending review."
+    },
+    {
+      "destinationId": "brazil-rio-de-janeiro-christ-the-redeemer",
+      "referenceUse": "consulted public-monument/artwork geometry sources only; no source file retained",
+      "shippingGate": "public-monument-artwork-and-freedom-of-panorama-review-required",
+      "warning": "Public-monument/artwork rights and Brazilian freedom-of-panorama applicability require review; CC BY-SA and rights-reserved sources were consulted for factual geometry only and were not retained."
+    },
+    {
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "referenceUse": "consulted landscape geometry sources only; no source file retained",
+      "shippingGate": "reference-rights-and-adaptation-review-required",
+      "warning": "Rights-reserved, CC BY-SA, CC0, municipal, tourism, SANParks, and NASA sources were consulted for factual geometry only; no source photographs were retained and rights applicability remains pending review."
+    }
+  ],
+  "destinations": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower",
+      "name": "故宫角楼",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-cc-compliance",
+      "scenes": [
+        {
+          "id": "china-beijing-forbidden-city-corner-tower--day-signature",
+          "candidateRevisionId": "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+          "sourceCandidateId": "china-beijing-forbidden-city-corner-tower--day-signature",
+          "destinationId": "china-beijing-forbidden-city-corner-tower",
+          "destinationName": "故宫角楼",
+          "variantId": "day-signature",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.webp",
+          "repoPath": "public/scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.webp",
+          "sha256": "d8de05bde699561c56bca25ab5950a83967e34076bc624e0af61062201f93d1c",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.png",
+            "sha256": "3f8007be31b28d37db9f78375be2c3865927d32f69eab2abd954fe4b6961381b",
+            "byteLength": 1728236,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.webp",
+            "imageSrc": "/scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.webp",
+            "sha256": "d8de05bde699561c56bca25ab5950a83967e34076bc624e0af61062201f93d1c",
+            "byteLength": 211112,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.79,
+            "y": 0.9,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.66,
+            "y": 0.56,
+            "width": 0.26,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cc-compliance",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-beijing-forbidden-city-corner-tower--golden-hour",
+          "candidateRevisionId": "china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+          "sourceCandidateId": "china-beijing-forbidden-city-corner-tower--golden-hour",
+          "destinationId": "china-beijing-forbidden-city-corner-tower",
+          "destinationName": "故宫角楼",
+          "variantId": "golden-hour",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.webp",
+          "repoPath": "public/scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.webp",
+          "sha256": "75c8f031bd87576e6ee06615e146b1c45929fd60bbe859f7f83d318d50a23447",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.png",
+            "sha256": "cae884ec8ace36f04b110b5f3791be432a037a510f7d6ba265258e63e330959f",
+            "byteLength": 1687238,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.webp",
+            "imageSrc": "/scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.webp",
+            "sha256": "75c8f031bd87576e6ee06615e146b1c45929fd60bbe859f7f83d318d50a23447",
+            "byteLength": 196124,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.22,
+            "y": 0.91,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.08,
+            "y": 0.58,
+            "width": 0.28,
+            "height": 0.33
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cc-compliance",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "name": "京都伏见稻荷",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-site-policy-review",
+      "scenes": [
+        {
+          "id": "japan-kyoto-fushimi-inari-taisha--day-signature",
+          "candidateRevisionId": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+          "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--day-signature",
+          "destinationId": "japan-kyoto-fushimi-inari-taisha",
+          "destinationName": "京都伏见稻荷",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+          "sha256": "d4cfb9805140785349ff0242749aa1f2ec2d16132a06233a104b5b301a75ee53",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+            "sha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+            "byteLength": 1979034,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+            "sha256": "d4cfb9805140785349ff0242749aa1f2ec2d16132a06233a104b5b301a75ee53",
+            "byteLength": 276240,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.88,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.56,
+            "width": 0.3,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-site-policy-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "japan-kyoto-fushimi-inari-taisha--golden-hour",
+          "candidateRevisionId": "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+          "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--golden-hour",
+          "destinationId": "japan-kyoto-fushimi-inari-taisha",
+          "destinationName": "京都伏见稻荷",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.webp",
+          "sha256": "e34b27f590454d2d5c5aea70ed994c5753742aca01a73cc61869b4ff7f93e2a4",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+            "sha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+            "byteLength": 1909714,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.webp",
+            "sha256": "e34b27f590454d2d5c5aea70ed994c5753742aca01a73cc61869b4ff7f93e2a4",
+            "byteLength": 255742,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.805,
+            "y": 0.88,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.66,
+            "y": 0.56,
+            "width": 0.29,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-site-policy-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "japan-kyoto-fushimi-inari-taisha--companion-rare",
+          "candidateRevisionId": "japan-kyoto-fushimi-inari-taisha--companion-rare--v01",
+          "sourceCandidateId": "japan-kyoto-fushimi-inari-taisha--companion-rare",
+          "destinationId": "japan-kyoto-fushimi-inari-taisha",
+          "destinationName": "京都伏见稻荷",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.webp",
+          "sha256": "fbfdd7d6e27a7b304ec5949f516ccdbb0cc6d8dc330faa314f79c6b2b2c83302",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+            "sha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+            "byteLength": 1844135,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.webp",
+            "sha256": "fbfdd7d6e27a7b304ec5949f516ccdbb0cc6d8dc330faa314f79c6b2b2c83302",
+            "byteLength": 227696,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.88,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.56,
+            "width": 0.3,
+            "height": 0.35
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "sparrow",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-site-policy-review",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "name": "新加坡鱼尾狮",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "stb-permission-required",
+      "scenes": [
+        {
+          "id": "singapore-singapore-merlion--day-signature",
+          "candidateRevisionId": "singapore-singapore-merlion--day-signature--v01",
+          "sourceCandidateId": "singapore-singapore-merlion--day-signature--v01",
+          "destinationId": "singapore-singapore-merlion",
+          "destinationName": "新加坡鱼尾狮",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--singapore-singapore-merlion--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--singapore-singapore-merlion--day-signature--v01.webp",
+          "sha256": "b5b60c601216fce4e054112374f5e3c4a93711a8783b15ed9ebeed84c39e0f5a",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--singapore-singapore-merlion--day-signature--v01.png",
+            "sha256": "c1e27f6769cb1faf7a6b9c27abe846514651a7c64b191345ad150c73ec96db0d",
+            "byteLength": 1536048,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--singapore-singapore-merlion--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--singapore-singapore-merlion--day-signature--v01.webp",
+            "sha256": "b5b60c601216fce4e054112374f5e3c4a93711a8783b15ed9ebeed84c39e0f5a",
+            "byteLength": 136882,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.2,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.05,
+            "y": 0.61,
+            "width": 0.3,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "stb-permission-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "singapore-singapore-merlion--golden-hour",
+          "candidateRevisionId": "singapore-singapore-merlion--golden-hour--v01",
+          "sourceCandidateId": "singapore-singapore-merlion--golden-hour--v01",
+          "destinationId": "singapore-singapore-merlion",
+          "destinationName": "新加坡鱼尾狮",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--singapore-singapore-merlion--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--singapore-singapore-merlion--golden-hour--v01.webp",
+          "sha256": "d14da1a2e9db3d843ede11a520540f1cef2fd23b4974081b800933b68d3909f4",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--singapore-singapore-merlion--golden-hour--v01.png",
+            "sha256": "39f8f3cf7157c36e357d9cb37f6bfa143c3082296aa58071636f84c85dae61bd",
+            "byteLength": 1611884,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--singapore-singapore-merlion--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--singapore-singapore-merlion--golden-hour--v01.webp",
+            "sha256": "d14da1a2e9db3d843ede11a520540f1cef2fd23b4974081b800933b68d3909f4",
+            "byteLength": 149034,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.2,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.05,
+            "y": 0.61,
+            "width": 0.3,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "stb-permission-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "singapore-singapore-merlion--companion-rare",
+          "candidateRevisionId": "singapore-singapore-merlion--companion-rare--v02",
+          "sourceCandidateId": "singapore-singapore-merlion--companion-rare--v02",
+          "destinationId": "singapore-singapore-merlion",
+          "destinationName": "新加坡鱼尾狮",
+          "variantId": "companion-rare",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--singapore-singapore-merlion--companion-rare--v02.webp",
+          "repoPath": "public/scenes/scene--singapore-singapore-merlion--companion-rare--v02.webp",
+          "sha256": "e6bd5de153e7a38276d7e0eb01dee72a968a7ba7476edc07efe1d84587fa60fb",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--singapore-singapore-merlion--companion-rare--v02.png",
+            "sha256": "1bc620e369e3045d7f56f506154511c2dd884faa448a13157bca7f1a4719823a",
+            "byteLength": 1573814,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--singapore-singapore-merlion--companion-rare--v02.webp",
+            "imageSrc": "/scenes/scene--singapore-singapore-merlion--companion-rare--v02.webp",
+            "sha256": "e6bd5de153e7a38276d7e0eb01dee72a968a7ba7476edc07efe1d84587fa60fb",
+            "byteLength": 146188,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.2,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.05,
+            "y": 0.61,
+            "width": 0.3,
+            "height": 0.31
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "smooth-coated-otter",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "stb-permission-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "australia-sydney-opera-house",
+      "name": "悉尼歌剧院",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "soht-license-or-counsel-required",
+      "scenes": [
+        {
+          "id": "australia-sydney-opera-house--day-signature",
+          "candidateRevisionId": "australia-sydney-opera-house--day-signature--v01",
+          "sourceCandidateId": "australia-sydney-opera-house--day-signature",
+          "destinationId": "australia-sydney-opera-house",
+          "destinationName": "悉尼歌剧院",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--australia-sydney-opera-house--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--australia-sydney-opera-house--day-signature--v01.webp",
+          "sha256": "0371f0f021eaaa36c4c935c9c093517649743a5eab40891e37c75fd0e9b8659f",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--australia-sydney-opera-house--day-signature--v01.png",
+            "sha256": "586f6c12f5a61d259170809594f8f25db767477731dc8396ffc941f856188274",
+            "byteLength": 1424310,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--australia-sydney-opera-house--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--australia-sydney-opera-house--day-signature--v01.webp",
+            "sha256": "0371f0f021eaaa36c4c935c9c093517649743a5eab40891e37c75fd0e9b8659f",
+            "byteLength": 114284,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.89,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.54,
+            "width": 0.28,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "soht-license-or-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "australia-sydney-opera-house--golden-hour",
+          "candidateRevisionId": "australia-sydney-opera-house--golden-hour--v01",
+          "sourceCandidateId": "australia-sydney-opera-house--golden-hour",
+          "destinationId": "australia-sydney-opera-house",
+          "destinationName": "悉尼歌剧院",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--australia-sydney-opera-house--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--australia-sydney-opera-house--golden-hour--v01.webp",
+          "sha256": "ebc1b1b5390dc3afb2716d241fc27771a4c9b1d613355bfd72f0cb7addd4525e",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--australia-sydney-opera-house--golden-hour--v01.png",
+            "sha256": "2b59022e50558fb9ea8c9f62bbc8d7b75eef440783ead148a4230ac462d92871",
+            "byteLength": 1472325,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--australia-sydney-opera-house--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--australia-sydney-opera-house--golden-hour--v01.webp",
+            "sha256": "ebc1b1b5390dc3afb2716d241fc27771a4c9b1d613355bfd72f0cb7addd4525e",
+            "byteLength": 119960,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.89,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.54,
+            "width": 0.28,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "soht-license-or-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "australia-sydney-opera-house--companion-rare",
+          "candidateRevisionId": "australia-sydney-opera-house--companion-rare--v01",
+          "sourceCandidateId": "australia-sydney-opera-house--companion-rare",
+          "destinationId": "australia-sydney-opera-house",
+          "destinationName": "悉尼歌剧院",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--australia-sydney-opera-house--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--australia-sydney-opera-house--companion-rare--v01.webp",
+          "sha256": "48fb153130450b705479a776a08ed9cb4799ae74721c6317b194953fd7aa873e",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--australia-sydney-opera-house--companion-rare--v01.png",
+            "sha256": "a36ba0e649bbc304a3c0bfa414f9c86b85e39aba699d722b49ec36d383553481",
+            "byteLength": 1467143,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--australia-sydney-opera-house--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--australia-sydney-opera-house--companion-rare--v01.webp",
+            "sha256": "48fb153130450b705479a776a08ed9cb4799ae74721c6317b194953fd7aa873e",
+            "byteLength": 121320,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.89,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.54,
+            "width": 0.28,
+            "height": 0.36
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "silver-gull",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "soht-license-or-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "france-paris-eiffel-tower",
+      "name": "巴黎埃菲尔铁塔",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-if-no-protected-lighting",
+      "scenes": [
+        {
+          "id": "france-paris-eiffel-tower--day-signature",
+          "candidateRevisionId": "france-paris-eiffel-tower--day-signature--v01",
+          "sourceCandidateId": "france-paris-eiffel-tower--day-signature",
+          "destinationId": "france-paris-eiffel-tower",
+          "destinationName": "巴黎埃菲尔铁塔",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--france-paris-eiffel-tower--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--france-paris-eiffel-tower--day-signature--v01.webp",
+          "sha256": "abed437c3c193742b465e8dc289a534a82bd94304f08e12935607ab6ed6c673e",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--france-paris-eiffel-tower--day-signature--v01.png",
+            "sha256": "b23c9c62bd4860b754e755e161cc4a97b6e94d2eb09eb521a6ed3b392a139bab",
+            "byteLength": 1521794,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--france-paris-eiffel-tower--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--france-paris-eiffel-tower--day-signature--v01.webp",
+            "sha256": "abed437c3c193742b465e8dc289a534a82bd94304f08e12935607ab6ed6c673e",
+            "byteLength": 122690,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.2,
+            "y": 0.89,
+            "scale": 0.27,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.06,
+            "y": 0.54,
+            "width": 0.28,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-if-no-protected-lighting",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "france-paris-eiffel-tower--golden-hour",
+          "candidateRevisionId": "france-paris-eiffel-tower--golden-hour--v01",
+          "sourceCandidateId": "france-paris-eiffel-tower--golden-hour",
+          "destinationId": "france-paris-eiffel-tower",
+          "destinationName": "巴黎埃菲尔铁塔",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--france-paris-eiffel-tower--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--france-paris-eiffel-tower--golden-hour--v01.webp",
+          "sha256": "8759dec3cdf7c295b887a7fdba5b60bec63246df3f7b7fb323e882c3b7f766c0",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--france-paris-eiffel-tower--golden-hour--v01.png",
+            "sha256": "1f5719b499f9d7cd1f11acb784850078527328e7094e8d0b113a422a18860dd2",
+            "byteLength": 1530120,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--france-paris-eiffel-tower--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--france-paris-eiffel-tower--golden-hour--v01.webp",
+            "sha256": "8759dec3cdf7c295b887a7fdba5b60bec63246df3f7b7fb323e882c3b7f766c0",
+            "byteLength": 135122,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.2,
+            "y": 0.89,
+            "scale": 0.27,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.07,
+            "y": 0.59,
+            "width": 0.26,
+            "height": 0.3
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-if-no-protected-lighting",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "name": "伦敦塔桥",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "united-kingdom-london-tower-bridge--day-signature",
+          "candidateRevisionId": "united-kingdom-london-tower-bridge--day-signature--v01",
+          "sourceCandidateId": "united-kingdom-london-tower-bridge--day-signature",
+          "destinationId": "united-kingdom-london-tower-bridge",
+          "destinationName": "伦敦塔桥",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.webp",
+          "sha256": "978b674e7a617f0350e432205fea042791973b5e2d6d49ba676e278231cf21c4",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+            "sha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+            "byteLength": 1551768,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.webp",
+            "sha256": "978b674e7a617f0350e432205fea042791973b5e2d6d49ba676e278231cf21c4",
+            "byteLength": 147236,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.15,
+            "y": 0.94,
+            "scale": 0.27,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.66,
+            "width": 0.24,
+            "height": 0.3
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "united-kingdom-london-tower-bridge--golden-hour",
+          "candidateRevisionId": "united-kingdom-london-tower-bridge--golden-hour--v01",
+          "sourceCandidateId": "united-kingdom-london-tower-bridge--golden-hour",
+          "destinationId": "united-kingdom-london-tower-bridge",
+          "destinationName": "伦敦塔桥",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.webp",
+          "sha256": "42df0b0705d4d4727714515bb29a0e58f8982323b8107ff9043bf8b575d91eff",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+            "sha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262",
+            "byteLength": 1603131,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.webp",
+            "sha256": "42df0b0705d4d4727714515bb29a0e58f8982323b8107ff9043bf8b575d91eff",
+            "byteLength": 150538,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.15,
+            "y": 0.94,
+            "scale": 0.27,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.67,
+            "width": 0.24,
+            "height": 0.29
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "italy-rome-colosseum",
+      "name": "罗马斗兽场",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "park-authorization-required",
+      "scenes": [
+        {
+          "id": "italy-rome-colosseum--day-signature",
+          "candidateRevisionId": "italy-rome-colosseum--day-signature--v01",
+          "sourceCandidateId": "italy-rome-colosseum--day-signature",
+          "destinationId": "italy-rome-colosseum",
+          "destinationName": "罗马斗兽场",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--italy-rome-colosseum--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--italy-rome-colosseum--day-signature--v01.webp",
+          "sha256": "296664b0a1a838c3c35f1deed566b4df8194996b73d8859d54f13c1ec7a46e24",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--italy-rome-colosseum--day-signature--v01.png",
+            "sha256": "c5659c8da65731c86d148cb6c5046065b16f9ba7e773c2fde020d58ac5e17058",
+            "byteLength": 1835483,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--italy-rome-colosseum--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--italy-rome-colosseum--day-signature--v01.webp",
+            "sha256": "296664b0a1a838c3c35f1deed566b4df8194996b73d8859d54f13c1ec7a46e24",
+            "byteLength": 226038,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.19,
+            "y": 0.93,
+            "scale": 0.27,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.05,
+            "y": 0.63,
+            "width": 0.28,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "park-authorization-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "italy-rome-colosseum--golden-hour",
+          "candidateRevisionId": "italy-rome-colosseum--golden-hour--v01",
+          "sourceCandidateId": "italy-rome-colosseum--golden-hour",
+          "destinationId": "italy-rome-colosseum",
+          "destinationName": "罗马斗兽场",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--italy-rome-colosseum--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--italy-rome-colosseum--golden-hour--v01.webp",
+          "sha256": "f7a88b39ce571fd14a04ee561867b241a0825caaeab787b23dd57dd59bf6d094",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--italy-rome-colosseum--golden-hour--v01.png",
+            "sha256": "f0488c78e905e3bf98d9b79510eb6dedd287a9474701b4e17a038fa892a67904",
+            "byteLength": 1785834,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--italy-rome-colosseum--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--italy-rome-colosseum--golden-hour--v01.webp",
+            "sha256": "f7a88b39ce571fd14a04ee561867b241a0825caaeab787b23dd57dd59bf6d094",
+            "byteLength": 208436,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.87,
+            "y": 0.94,
+            "scale": 0.2,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.76,
+            "y": 0.73,
+            "width": 0.22,
+            "height": 0.22
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "park-authorization-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "egypt-giza-pyramids",
+      "name": "吉萨金字塔",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "egypt-giza-pyramids--day-signature",
+          "candidateRevisionId": "egypt-giza-pyramids--day-signature--v01",
+          "sourceCandidateId": "egypt-giza-pyramids--day-signature",
+          "destinationId": "egypt-giza-pyramids",
+          "destinationName": "吉萨金字塔",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--egypt-giza-pyramids--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--egypt-giza-pyramids--day-signature--v01.webp",
+          "sha256": "182e97b28c296b76be1c03eac67feae53f9c37fc61b30204908dfd9f647ab3e0",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--egypt-giza-pyramids--day-signature--v01.png",
+            "sha256": "b74fcef69632e6c32c9018ee207dd2c97a83a1d25eb3f4ed412e8b5b91dd686e",
+            "byteLength": 1404557,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--egypt-giza-pyramids--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--egypt-giza-pyramids--day-signature--v01.webp",
+            "sha256": "182e97b28c296b76be1c03eac67feae53f9c37fc61b30204908dfd9f647ab3e0",
+            "byteLength": 108546,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.825,
+            "y": 0.9,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.54,
+            "width": 0.25,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "egypt-giza-pyramids--golden-hour",
+          "candidateRevisionId": "egypt-giza-pyramids--golden-hour--v01",
+          "sourceCandidateId": "egypt-giza-pyramids--golden-hour",
+          "destinationId": "egypt-giza-pyramids",
+          "destinationName": "吉萨金字塔",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--egypt-giza-pyramids--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--egypt-giza-pyramids--golden-hour--v01.webp",
+          "sha256": "dc484c3833b03ffe9b6a8046c92725e5f88ea0294750eb41000d15f89e267a0e",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--egypt-giza-pyramids--golden-hour--v01.png",
+            "sha256": "51219eea90a761064a968ad14fecc57d09e743f108538b42aad7581ce226b250",
+            "byteLength": 1364291,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--egypt-giza-pyramids--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--egypt-giza-pyramids--golden-hour--v01.webp",
+            "sha256": "dc484c3833b03ffe9b6a8046c92725e5f88ea0294750eb41000d15f89e267a0e",
+            "byteLength": 93252,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.825,
+            "y": 0.9,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.54,
+            "width": 0.25,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "egypt-giza-pyramids--companion-rare",
+          "candidateRevisionId": "egypt-giza-pyramids--companion-rare--v02",
+          "sourceCandidateId": "egypt-giza-pyramids--companion-rare",
+          "destinationId": "egypt-giza-pyramids",
+          "destinationName": "吉萨金字塔",
+          "variantId": "companion-rare",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--egypt-giza-pyramids--companion-rare--v02.webp",
+          "repoPath": "public/scenes/scene--egypt-giza-pyramids--companion-rare--v02.webp",
+          "sha256": "f0c2ccfdd6739a6aabe5b59e6acc1694e628ecd417627c914d6354e950966e33",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--egypt-giza-pyramids--companion-rare--v02.png",
+            "sha256": "aca9f96c216bd9dcb7be475abca91a19828cbe61c5ef37dcfc5655783d0c7211",
+            "byteLength": 1458456,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--egypt-giza-pyramids--companion-rare--v02.webp",
+            "imageSrc": "/scenes/scene--egypt-giza-pyramids--companion-rare--v02.webp",
+            "sha256": "f0c2ccfdd6739a6aabe5b59e6acc1694e628ecd417627c914d6354e950966e33",
+            "byteLength": 109748,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.825,
+            "y": 0.9,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.54,
+            "width": 0.25,
+            "height": 0.36
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "hoopoe",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "name": "纽约布鲁克林大桥",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "united-states-new-york-brooklyn-bridge--day-signature",
+          "candidateRevisionId": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+          "sourceCandidateId": "united-states-new-york-brooklyn-bridge--day-signature",
+          "destinationId": "united-states-new-york-brooklyn-bridge",
+          "destinationName": "纽约布鲁克林大桥",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.webp",
+          "sha256": "61935a2c8869c7a67d66df4bac18bf3ab587c7681188545d7694d653c748d886",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+            "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+            "byteLength": 1740304,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.webp",
+            "sha256": "61935a2c8869c7a67d66df4bac18bf3ab587c7681188545d7694d653c748d886",
+            "byteLength": 186318,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.3,
+            "y": 0.85,
+            "scale": 0.22,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.18,
+            "y": 0.63,
+            "width": 0.24,
+            "height": 0.22
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "united-states-new-york-brooklyn-bridge--golden-hour",
+          "candidateRevisionId": "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+          "sourceCandidateId": "united-states-new-york-brooklyn-bridge--golden-hour",
+          "destinationId": "united-states-new-york-brooklyn-bridge",
+          "destinationName": "纽约布鲁克林大桥",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.webp",
+          "sha256": "bbe5b52aa5471768509382ce334437e10b21db74efc03f3d654ca11adcd372a4",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+            "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+            "byteLength": 1689117,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.webp",
+            "sha256": "bbe5b52aa5471768509382ce334437e10b21db74efc03f3d654ca11adcd372a4",
+            "byteLength": 186046,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.3,
+            "y": 0.85,
+            "scale": 0.22,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.18,
+            "y": 0.63,
+            "width": 0.24,
+            "height": 0.22
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "name": "马丘比丘",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "high",
+      "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
+      "scenes": [
+        {
+          "id": "peru-cusco-machu-picchu--day-signature",
+          "candidateRevisionId": "peru-cusco-machu-picchu--day-signature--v01",
+          "sourceCandidateId": "peru-cusco-machu-picchu--day-signature",
+          "destinationId": "peru-cusco-machu-picchu",
+          "destinationName": "马丘比丘",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--peru-cusco-machu-picchu--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--peru-cusco-machu-picchu--day-signature--v01.webp",
+          "sha256": "d1da13f1e1aaddd8c2a63b9d8f339dfe4b63d43b53cda467df4078e6761d8e49",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--peru-cusco-machu-picchu--day-signature--v01.png",
+            "sha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+            "byteLength": 1927354,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--peru-cusco-machu-picchu--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--peru-cusco-machu-picchu--day-signature--v01.webp",
+            "sha256": "d1da13f1e1aaddd8c2a63b9d8f339dfe4b63d43b53cda467df4078e6761d8e49",
+            "byteLength": 274132,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.88,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.55,
+            "width": 0.28,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "peru-cusco-machu-picchu--golden-hour",
+          "candidateRevisionId": "peru-cusco-machu-picchu--golden-hour--v01",
+          "sourceCandidateId": "peru-cusco-machu-picchu--golden-hour",
+          "destinationId": "peru-cusco-machu-picchu",
+          "destinationName": "马丘比丘",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.webp",
+          "sha256": "aa9806b829ee4bb1292699fba24dfd9952bc468eef3dc0518864a6455702f997",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.png",
+            "sha256": "7d01821919b48acf57d10e51376e05f3229d40bdf2cb942620b3b842b4e00f32",
+            "byteLength": 1809052,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.webp",
+            "sha256": "aa9806b829ee4bb1292699fba24dfd9952bc468eef3dc0518864a6455702f997",
+            "byteLength": 237008,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.88,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.55,
+            "width": 0.28,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "name": "慕田峪长城",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "china-beijing-mutianyu-great-wall--day-signature",
+          "candidateRevisionId": "china-beijing-mutianyu-great-wall--day-signature--v01",
+          "sourceCandidateId": "china-beijing-mutianyu-great-wall--day-signature",
+          "destinationId": "china-beijing-mutianyu-great-wall",
+          "destinationName": "慕田峪长城",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.webp",
+          "sha256": "b83e8563e77f2ec4c714944c79a241034053b310b8d7c38b42e143376b117863",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.png",
+            "sha256": "845b58c7c63742138863c843529c2f6f33ec5bbfd0757722bd19a89cb3fcc900",
+            "byteLength": 1687920,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.webp",
+            "sha256": "b83e8563e77f2ec4c714944c79a241034053b310b8d7c38b42e143376b117863",
+            "byteLength": 180350,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.22,
+            "y": 0.91,
+            "scale": 0.31,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.055,
+            "y": 0.555,
+            "width": 0.34,
+            "height": 0.385
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-beijing-mutianyu-great-wall--golden-hour",
+          "candidateRevisionId": "china-beijing-mutianyu-great-wall--golden-hour--v01",
+          "sourceCandidateId": "china-beijing-mutianyu-great-wall--golden-hour",
+          "destinationId": "china-beijing-mutianyu-great-wall",
+          "destinationName": "慕田峪长城",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.webp",
+          "sha256": "cc90afd1835548d145c04c505c72a9d8f9cc7b5d885ccf2b01e039a8b54a5527",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.png",
+            "sha256": "c4ca7694b0e4bce7c7faf8f182764656adecb1944f05676efa4987fa73eed022",
+            "byteLength": 1721956,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.webp",
+            "sha256": "cc90afd1835548d145c04c505c72a9d8f9cc7b5d885ccf2b01e039a8b54a5527",
+            "byteLength": 198230,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.23,
+            "y": 0.91,
+            "scale": 0.31,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.055,
+            "y": 0.57,
+            "width": 0.36,
+            "height": 0.37
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "name": "上海外滩",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-building-signage-inventory",
+      "scenes": [
+        {
+          "id": "china-shanghai-the-bund--day-signature",
+          "candidateRevisionId": "china-shanghai-the-bund--day-signature--v01",
+          "sourceCandidateId": "china-shanghai-the-bund--day-signature",
+          "destinationId": "china-shanghai-the-bund",
+          "destinationName": "上海外滩",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-shanghai-the-bund--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--china-shanghai-the-bund--day-signature--v01.webp",
+          "sha256": "9043a239cfc690ae6c2f40799812a79e818000e987cc971ada2e16ad1b25cd38",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-shanghai-the-bund--day-signature--v01.png",
+            "sha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+            "byteLength": 1635653,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-shanghai-the-bund--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--china-shanghai-the-bund--day-signature--v01.webp",
+            "sha256": "9043a239cfc690ae6c2f40799812a79e818000e987cc971ada2e16ad1b25cd38",
+            "byteLength": 159058,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.16,
+            "y": 0.94,
+            "scale": 0.26,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.045,
+            "y": 0.68,
+            "width": 0.23,
+            "height": 0.28
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-building-signage-inventory",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-shanghai-the-bund--golden-hour",
+          "candidateRevisionId": "china-shanghai-the-bund--golden-hour--v01",
+          "sourceCandidateId": "china-shanghai-the-bund--golden-hour",
+          "destinationId": "china-shanghai-the-bund",
+          "destinationName": "上海外滩",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-shanghai-the-bund--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--china-shanghai-the-bund--golden-hour--v01.webp",
+          "sha256": "0db5b61d78ab843ef915d12af5ef43e3ec333b861b89eae3403c55f5793ad7a6",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-shanghai-the-bund--golden-hour--v01.png",
+            "sha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+            "byteLength": 1487392,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-shanghai-the-bund--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--china-shanghai-the-bund--golden-hour--v01.webp",
+            "sha256": "0db5b61d78ab843ef915d12af5ef43e3ec333b861b89eae3403c55f5793ad7a6",
+            "byteLength": 128456,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.16,
+            "y": 0.94,
+            "scale": 0.26,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.045,
+            "y": 0.68,
+            "width": 0.23,
+            "height": 0.28
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-building-signage-inventory",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda",
+      "name": "西安大雁塔",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "china-xian-giant-wild-goose-pagoda--day-signature",
+          "candidateRevisionId": "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+          "sourceCandidateId": "china-xian-giant-wild-goose-pagoda--day-signature",
+          "destinationId": "china-xian-giant-wild-goose-pagoda",
+          "destinationName": "西安大雁塔",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.webp",
+          "sha256": "23c5a2ee4b01c8cbfa6041ee27db96f2f31fb9436c4a7e70eb695697d006e9be",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.png",
+            "sha256": "1ed5bca2814181c5821dbf84e8bab8645625f66f328d90770304d37fe1e7a1a7",
+            "byteLength": 1488539,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.webp",
+            "sha256": "23c5a2ee4b01c8cbfa6041ee27db96f2f31fb9436c4a7e70eb695697d006e9be",
+            "byteLength": 113198,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.22,
+            "y": 0.82,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.08,
+            "y": 0.48,
+            "width": 0.28,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-xian-giant-wild-goose-pagoda--golden-hour",
+          "candidateRevisionId": "china-xian-giant-wild-goose-pagoda--golden-hour--v01",
+          "sourceCandidateId": "china-xian-giant-wild-goose-pagoda--golden-hour",
+          "destinationId": "china-xian-giant-wild-goose-pagoda",
+          "destinationName": "西安大雁塔",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.webp",
+          "sha256": "4f4692c2fb63a2e298c38f091751869bfda1315fba4cc6701ef48b0f92f3e779",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.png",
+            "sha256": "24fb1d31e654f9688d5d33720ddb4a687bdc99a9ef85373af7793b6a9813f909",
+            "byteLength": 1548883,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.webp",
+            "sha256": "4f4692c2fb63a2e298c38f091751869bfda1315fba4cc6701ef48b0f92f3e779",
+            "byteLength": 141870,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.22,
+            "y": 0.82,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.08,
+            "y": 0.48,
+            "width": 0.28,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill",
+      "name": "桂林象鼻山",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-cc-compliance",
+      "scenes": [
+        {
+          "id": "china-guilin-elephant-trunk-hill--day-signature",
+          "candidateRevisionId": "china-guilin-elephant-trunk-hill--day-signature--v02",
+          "sourceCandidateId": "china-guilin-elephant-trunk-hill--day-signature",
+          "destinationId": "china-guilin-elephant-trunk-hill",
+          "destinationName": "桂林象鼻山",
+          "variantId": "day-signature",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.webp",
+          "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.webp",
+          "sha256": "83324528d66ead40ca7047cef793f5431ecf6b731f01afeee5aff7c5ac6674c5",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.png",
+            "sha256": "ebed0474ee6671fd9654cadeef8a189484df0a163ba4f6169cb787884ee49e72",
+            "byteLength": 2043743,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.webp",
+            "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.webp",
+            "sha256": "83324528d66ead40ca7047cef793f5431ecf6b731f01afeee5aff7c5ac6674c5",
+            "byteLength": 304790,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.15,
+            "y": 0.85,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.55,
+            "width": 0.24,
+            "height": 0.3
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cc-compliance",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-guilin-elephant-trunk-hill--golden-hour",
+          "candidateRevisionId": "china-guilin-elephant-trunk-hill--golden-hour--v02",
+          "sourceCandidateId": "china-guilin-elephant-trunk-hill--golden-hour",
+          "destinationId": "china-guilin-elephant-trunk-hill",
+          "destinationName": "桂林象鼻山",
+          "variantId": "golden-hour",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.webp",
+          "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.webp",
+          "sha256": "9b7410d8d92c8931a62069b80c008bcd24204c957c7c5aaa9ecc447daa023ecd",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.png",
+            "sha256": "147073907c4ac282554c578703b8c684a7086678027b8af772f218fad145e5bd",
+            "byteLength": 1943302,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.webp",
+            "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.webp",
+            "sha256": "9b7410d8d92c8931a62069b80c008bcd24204c957c7c5aaa9ecc447daa023ecd",
+            "byteLength": 260230,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.15,
+            "y": 0.85,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.55,
+            "width": 0.24,
+            "height": 0.3
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cc-compliance",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-guilin-elephant-trunk-hill--companion-rare",
+          "candidateRevisionId": "china-guilin-elephant-trunk-hill--companion-rare--v02",
+          "sourceCandidateId": "china-guilin-elephant-trunk-hill--companion-rare",
+          "destinationId": "china-guilin-elephant-trunk-hill",
+          "destinationName": "桂林象鼻山",
+          "variantId": "companion-rare",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.webp",
+          "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.webp",
+          "sha256": "c815388ed52678b67d79fe44c2d72433af1fbbd3cf1bc9691536a93b68aa32de",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.png",
+            "sha256": "781ed6f583956e3d1f7250672ad6f2aaf7bdac5e7a0ee0a457a3e672713567f2",
+            "byteLength": 1861696,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.webp",
+            "imageSrc": "/scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.webp",
+            "sha256": "c815388ed52678b67d79fe44c2d72433af1fbbd3cf1bc9691536a93b68aa32de",
+            "byteLength": 233588,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.15,
+            "y": 0.85,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.55,
+            "width": 0.24,
+            "height": 0.3
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "kingfisher",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cc-compliance",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village",
+      "name": "东莞松山湖溪流背坡村",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "huawei-permission-or-replace",
+      "scenes": [
+        {
+          "id": "china-dongguan-xiliubeipo-village--day-signature",
+          "candidateRevisionId": "china-dongguan-xiliubeipo-village--day-signature--v02",
+          "sourceCandidateId": "china-dongguan-xiliubeipo-village--day-signature",
+          "destinationId": "china-dongguan-xiliubeipo-village",
+          "destinationName": "东莞松山湖溪流背坡村",
+          "variantId": "day-signature",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.webp",
+          "repoPath": "public/scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.webp",
+          "sha256": "4495c83bcaec7586a096783d66dd553ac6689235fa51671dfbfedfdcef6bd58c",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.png",
+            "sha256": "68a878ce60954bf8bb9a0211e58dc8b566e60a6bb9946b97383b49ff26f81c21",
+            "byteLength": 1875943,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.webp",
+            "imageSrc": "/scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.webp",
+            "sha256": "4495c83bcaec7586a096783d66dd553ac6689235fa51671dfbfedfdcef6bd58c",
+            "byteLength": 254772,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.83,
+            "y": 0.93,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.61,
+            "width": 0.26,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "huawei-permission-or-replace",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-dongguan-xiliubeipo-village--golden-hour",
+          "candidateRevisionId": "china-dongguan-xiliubeipo-village--golden-hour--v02",
+          "sourceCandidateId": "china-dongguan-xiliubeipo-village--golden-hour",
+          "destinationId": "china-dongguan-xiliubeipo-village",
+          "destinationName": "东莞松山湖溪流背坡村",
+          "variantId": "golden-hour",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.webp",
+          "repoPath": "public/scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.webp",
+          "sha256": "20ec1ece503fa4042384b6edd5946fad715b03a6ca6f17e13f817e40df748007",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.png",
+            "sha256": "359aaaee5f65ce04aa8ac620f1ab61307846883dec0a7b5c4a14957b0c8c1127",
+            "byteLength": 1951094,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.webp",
+            "imageSrc": "/scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.webp",
+            "sha256": "20ec1ece503fa4042384b6edd5946fad715b03a6ca6f17e13f817e40df748007",
+            "byteLength": 286612,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.835,
+            "y": 0.93,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.59,
+            "width": 0.27,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "huawei-permission-or-replace",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda",
+      "name": "杭州西湖雷峰塔",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "high",
+      "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
+      "scenes": [
+        {
+          "id": "china-hangzhou-west-lake-leifeng-pagoda--day-signature",
+          "candidateRevisionId": "china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01",
+          "sourceCandidateId": "china-hangzhou-west-lake-leifeng-pagoda--day-signature",
+          "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+          "destinationName": "杭州西湖雷峰塔",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.webp",
+          "sha256": "c6d756f033c0105354dd104b115df649b9a01ef2e78fd10878a3aa03bf242afe",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.png",
+            "sha256": "600ca5d260cd50cbae034fd83779580ed24fce44398a32aea7ce00cb5df549d2",
+            "byteLength": 1587970,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.webp",
+            "sha256": "c6d756f033c0105354dd104b115df649b9a01ef2e78fd10878a3aa03bf242afe",
+            "byteLength": 152888,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.835,
+            "y": 0.91,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.55,
+            "width": 0.27,
+            "height": 0.36
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour",
+          "candidateRevisionId": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01",
+          "sourceCandidateId": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour",
+          "destinationId": "china-hangzhou-west-lake-leifeng-pagoda",
+          "destinationName": "杭州西湖雷峰塔",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.webp",
+          "sha256": "bd387ebc6937b561dfb10e4681bbeff5ac580bd5a85b666f8c7d170d5c298375",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.png",
+            "sha256": "78025c8ba6d2d1b76c01e6869a336e8c666e4e0c9a6107715f8abcd0add8bb34",
+            "byteLength": 1624951,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.webp",
+            "sha256": "bd387ebc6937b561dfb10e4681bbeff5ac580bd5a85b666f8c7d170d5c298375",
+            "byteLength": 152926,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.195,
+            "y": 0.91,
+            "scale": 0.32,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.06,
+            "y": 0.56,
+            "width": 0.27,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "india-agra-taj-mahal",
+      "name": "阿格拉泰姬陵",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+      "scenes": [
+        {
+          "id": "india-agra-taj-mahal--day-signature",
+          "candidateRevisionId": "india-agra-taj-mahal--day-signature--v01",
+          "sourceCandidateId": "india-agra-taj-mahal--day-signature",
+          "destinationId": "india-agra-taj-mahal",
+          "destinationName": "阿格拉泰姬陵",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--india-agra-taj-mahal--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--india-agra-taj-mahal--day-signature--v01.webp",
+          "sha256": "fcb431aa74b51fc390174c2aabebd05984fc47483d9ff84454c395736f98bc90",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--india-agra-taj-mahal--day-signature--v01.png",
+            "sha256": "cda1728ce5dd292551c5c42bf3b1fba2157a44bcf7827c4b9431247e91f30446",
+            "byteLength": 1619328,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--india-agra-taj-mahal--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--india-agra-taj-mahal--day-signature--v01.webp",
+            "sha256": "fcb431aa74b51fc390174c2aabebd05984fc47483d9ff84454c395736f98bc90",
+            "byteLength": 149272,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.85,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.73,
+            "y": 0.6,
+            "width": 0.24,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "india-agra-taj-mahal--golden-hour",
+          "candidateRevisionId": "india-agra-taj-mahal--golden-hour--v01",
+          "sourceCandidateId": "india-agra-taj-mahal--golden-hour",
+          "destinationId": "india-agra-taj-mahal",
+          "destinationName": "阿格拉泰姬陵",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--india-agra-taj-mahal--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--india-agra-taj-mahal--golden-hour--v01.webp",
+          "sha256": "8f2d2ce7d8a30cda59087388e7f7dd68603ffffbc7d811580766575c6dc68bb9",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--india-agra-taj-mahal--golden-hour--v01.png",
+            "sha256": "ca70335dbc19f4c510147f32393c216b5544a9d0a0167ae7a2a86b62c3bd4586",
+            "byteLength": 1569853,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--india-agra-taj-mahal--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--india-agra-taj-mahal--golden-hour--v01.webp",
+            "sha256": "8f2d2ce7d8a30cda59087388e7f7dd68603ffffbc7d811580766575c6dc68bb9",
+            "byteLength": 144732,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.175,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.6,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "india-agra-taj-mahal--companion-rare",
+          "candidateRevisionId": "india-agra-taj-mahal--companion-rare--v01",
+          "sourceCandidateId": "india-agra-taj-mahal--companion-rare",
+          "destinationId": "india-agra-taj-mahal",
+          "destinationName": "阿格拉泰姬陵",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--india-agra-taj-mahal--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--india-agra-taj-mahal--companion-rare--v01.webp",
+          "sha256": "d34c3b933f078ac8f0d2f75c11ad122cb0551869d9c1f41b4c47bc5274254c2a",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--india-agra-taj-mahal--companion-rare--v01.png",
+            "sha256": "ce2aeafc2a7f699489f57245deae6543d18017e5fb2e8fa97c5d8c90dd61c2c9",
+            "byteLength": 1575712,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--india-agra-taj-mahal--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--india-agra-taj-mahal--companion-rare--v01.webp",
+            "sha256": "d34c3b933f078ac8f0d2f75c11ad122cb0551869d9c1f41b4c47bc5274254c2a",
+            "byteLength": 137774,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.85,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.73,
+            "y": 0.6,
+            "width": 0.24,
+            "height": 0.34
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "indian-palm-squirrel",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia",
+      "name": "伊斯坦布尔圣索菲亚",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-source-map-and-site-review",
+      "scenes": [
+        {
+          "id": "turkey-istanbul-hagia-sophia--day-signature",
+          "candidateRevisionId": "turkey-istanbul-hagia-sophia--day-signature--v01",
+          "sourceCandidateId": "turkey-istanbul-hagia-sophia--day-signature",
+          "destinationId": "turkey-istanbul-hagia-sophia",
+          "destinationName": "伊斯坦布尔圣索菲亚",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.webp",
+          "sha256": "7fd1304510c0178697b36e183cb4e23c1458ed0f7074ea4bbc8247e992dfa4bd",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.png",
+            "sha256": "12bcb5eb6c67ed2123f6eb0dd32c50afd45d039cdf2505ea0afd6c6e6e50bc18",
+            "byteLength": 1801506,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.webp",
+            "sha256": "7fd1304510c0178697b36e183cb4e23c1458ed0f7074ea4bbc8247e992dfa4bd",
+            "byteLength": 219928,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.18,
+            "y": 0.91,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.59,
+            "width": 0.3,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-site-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "turkey-istanbul-hagia-sophia--golden-hour",
+          "candidateRevisionId": "turkey-istanbul-hagia-sophia--golden-hour--v01",
+          "sourceCandidateId": "turkey-istanbul-hagia-sophia--golden-hour",
+          "destinationId": "turkey-istanbul-hagia-sophia",
+          "destinationName": "伊斯坦布尔圣索菲亚",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.webp",
+          "sha256": "3d953e98f9e59a40124b176a3d524ac13f750bfa766f91c5b883da52fcf174f1",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.png",
+            "sha256": "293069045654cbe058466f0da7782a1f117ec7ba0e00e4df78a49f82fc3f6758",
+            "byteLength": 1728514,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.webp",
+            "sha256": "3d953e98f9e59a40124b176a3d524ac13f750bfa766f91c5b883da52fcf174f1",
+            "byteLength": 183610,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.825,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.68,
+            "y": 0.6,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-site-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "turkey-istanbul-hagia-sophia--companion-rare",
+          "candidateRevisionId": "turkey-istanbul-hagia-sophia--companion-rare--v01",
+          "sourceCandidateId": "turkey-istanbul-hagia-sophia--companion-rare",
+          "destinationId": "turkey-istanbul-hagia-sophia",
+          "destinationName": "伊斯坦布尔圣索菲亚",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.webp",
+          "sha256": "f6cd90a2689f8c102d915194f6c52133242457b93f9f6f33bfe5bc34c08d67e3",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.png",
+            "sha256": "f513506777b60b124bcf58e3c09b9c99eb5c98506c97a630dc25a3f436e173de",
+            "byteLength": 1459140,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.webp",
+            "sha256": "f6cd90a2689f8c102d915194f6c52133242457b93f9f6f33bfe5bc34c08d67e3",
+            "byteLength": 125664,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.185,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.04,
+            "y": 0.6,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "Istanbul street kitten",
+            "count": 1,
+            "role": "non-player Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-site-review",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer",
+      "name": "里约热内卢基督像",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
+      "scenes": [
+        {
+          "id": "brazil-rio-de-janeiro-christ-the-redeemer--day-signature",
+          "candidateRevisionId": "brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01",
+          "sourceCandidateId": "brazil-rio-de-janeiro-christ-the-redeemer--day-signature",
+          "destinationId": "brazil-rio-de-janeiro-christ-the-redeemer",
+          "destinationName": "里约热内卢基督像",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.webp",
+          "sha256": "49cedfc3638ea4c428f2b3f28731104774da4e36e98cdd69d529fc821b90a034",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.png",
+            "sha256": "a79ad30fadb719561480296d2fb3e748d3999dcce9428cdd78cff97778c80154",
+            "byteLength": 1508499,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.webp",
+            "sha256": "49cedfc3638ea4c428f2b3f28731104774da4e36e98cdd69d529fc821b90a034",
+            "byteLength": 132218,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.135,
+            "y": 0.92,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.02,
+            "y": 0.61,
+            "width": 0.23,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour",
+          "candidateRevisionId": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01",
+          "sourceCandidateId": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour",
+          "destinationId": "brazil-rio-de-janeiro-christ-the-redeemer",
+          "destinationName": "里约热内卢基督像",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.webp",
+          "sha256": "3f63c8206091420c5e84d9c6351bf67c6e793d65b5f710ebe18fd112a6bcc7b2",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.png",
+            "sha256": "dc110ebe2ccff4d4886a2d409eef2aa9060eaa5dec32fb20f3ecba1739f11545",
+            "byteLength": 1485975,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.webp",
+            "sha256": "3f63c8206091420c5e84d9c6351bf67c6e793d65b5f710ebe18fd112a6bcc7b2",
+            "byteLength": 104828,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.32,
+            "y": 0.92,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.2,
+            "y": 0.61,
+            "width": 0.24,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain",
+      "name": "开普敦桌山",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+      "scenes": [
+        {
+          "id": "south-africa-cape-town-table-mountain--day-signature",
+          "candidateRevisionId": "south-africa-cape-town-table-mountain--day-signature--v01",
+          "sourceCandidateId": "south-africa-cape-town-table-mountain--day-signature",
+          "destinationId": "south-africa-cape-town-table-mountain",
+          "destinationName": "开普敦桌山",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.webp",
+          "sha256": "9e9d4bdeaac0017045dda451efb0ae0e46c8a6d13eb1b4dbd667f5f926b64289",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.png",
+            "sha256": "206475de12d4a490739f09bb5d1c312d31bfc33edd7c9fcaf9172b6cec9e48c3",
+            "byteLength": 1661504,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.webp",
+            "sha256": "9e9d4bdeaac0017045dda451efb0ae0e46c8a6d13eb1b4dbd667f5f926b64289",
+            "byteLength": 183658,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.17,
+            "y": 0.92,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.61,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "south-africa-cape-town-table-mountain--golden-hour",
+          "candidateRevisionId": "south-africa-cape-town-table-mountain--golden-hour--v01",
+          "sourceCandidateId": "south-africa-cape-town-table-mountain--golden-hour",
+          "destinationId": "south-africa-cape-town-table-mountain",
+          "destinationName": "开普敦桌山",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.webp",
+          "sha256": "c20612573e44acc2d8d509c8e956abb31eea0288acf06c63a5d8dfe6df8e3276",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.png",
+            "sha256": "8faee340b3bf3e3789e850a8daf25e571266c8388bbe219b480ac6a540ab35df",
+            "byteLength": 1743976,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.webp",
+            "sha256": "c20612573e44acc2d8d509c8e956abb31eea0288acf06c63a5d8dfe6df8e3276",
+            "byteLength": 221330,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.17,
+            "y": 0.92,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.61,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "south-africa-cape-town-table-mountain--companion-rare",
+          "candidateRevisionId": "south-africa-cape-town-table-mountain--companion-rare--v01",
+          "sourceCandidateId": "south-africa-cape-town-table-mountain--companion-rare",
+          "destinationId": "south-africa-cape-town-table-mountain",
+          "destinationName": "开普敦桌山",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.webp",
+          "sha256": "e13a863a115baf19c2820377bb93ccd8e6290368d06c0316fa44a5d59719eed9",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.png",
+            "sha256": "a14d57a0f805a84d1980ec344236b1203f5b5558f6d4ccef5c91c0810d667bce",
+            "byteLength": 1458823,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.webp",
+            "sha256": "e13a863a115baf19c2820377bb93ccd8e6290368d06c0316fa44a5d59719eed9",
+            "byteLength": 108378,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.17,
+            "y": 0.92,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.61,
+            "width": 0.29,
+            "height": 0.34
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "rock-hyrax",
+            "count": 1,
+            "role": "scene Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-source-map-and-similarity-review",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    }
+  ]
+}

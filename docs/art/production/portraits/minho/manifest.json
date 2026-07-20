@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "portrait-production",
+  "portrait": {
+    "id": "minho",
+    "name": "Minho",
+    "status": "approved",
+    "identityReferenceSrc": "docs/art/candidates/calibration/calibration-non-final--portrait-board--minho--candidate-a--v02.png",
+    "poses": {
+      "sit": "/portraits/minho/portrait--minho--sit--v01.png",
+      "sleep": "/portraits/minho/portrait--minho--sleep--v01.png",
+      "walk": "/portraits/minho/portrait--minho--walk--v01.png",
+      "eat": "/portraits/minho/portrait--minho--eat--v01.png",
+      "play": "/portraits/minho/portrait--minho--play--v01.png",
+      "gaze": "/portraits/minho/portrait--minho--gaze--v01.png"
+    }
+  },
+  "production": {
+    "state": "approved",
+    "promptJobId": "portrait-pose-export",
+    "sourceCandidateId": "portrait-board--minho--candidate-a--v02",
+    "styleIntensity": "B",
+    "identityReferencePolicy": "user-provided-private-photos-not-stored",
+    "validationReport": "docs/art/production/portraits/minho/validation.json",
+    "validationResult": "pass",
+    "validatedAt": "2026-07-20",
+    "identityLocks": {
+      "eyeColor": "blue-green",
+      "coat": "silver-shaded",
+      "tail": "thick-tapered-with-soft-ring-markings",
+      "body": "compact-sturdy-athletic",
+      "accessories": "none"
+    },
+    "spec": {
+      "width": 1024,
+      "height": 1024,
+      "colorSpace": "sRGB",
+      "format": "png",
+      "alpha": "straight",
+      "safeMarginPx": 64,
+      "transparentPixelRgb": "zero"
+    },
+    "artifacts": {
+      "sit": {
+        "repoPath": "public/portraits/minho/portrait--minho--sit--v01.png",
+        "sha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e"
+      },
+      "sleep": {
+        "repoPath": "public/portraits/minho/portrait--minho--sleep--v01.png",
+        "sha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7"
+      },
+      "walk": {
+        "repoPath": "public/portraits/minho/portrait--minho--walk--v01.png",
+        "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496"
+      },
+      "eat": {
+        "repoPath": "public/portraits/minho/portrait--minho--eat--v01.png",
+        "sha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343"
+      },
+      "play": {
+        "repoPath": "public/portraits/minho/portrait--minho--play--v01.png",
+        "sha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016"
+      },
+      "gaze": {
+        "repoPath": "public/portraits/minho/portrait--minho--gaze--v01.png",
+        "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba"
+      }
+    },
+    "review": {
+      "decision": "approved",
+      "reviewer": "user",
+      "reviewedAt": "2026-07-20",
+      "notes": "User approved the overall identity board on 2026-07-20. Its only requested correction was a slightly smaller sit head than the board's top-left cell to match the real full-body proportions; the formal sit includes that correction. The user then explicitly approved all six normalized formal poses for built-in use. No accessories."
+    }
+  }
+}

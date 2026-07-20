@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "art-candidate-fragment",
+  "planId": "miaoyouji-landmark-expansion-v2-2026-07-20",
+  "sourcePlan": "docs/art/landmark-expansion-v2.json",
+  "destinationId": "brazil-rio-de-janeiro-christ-the-redeemer",
+  "destinationName": "里约热内卢基督像",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20T19:31:00+08:00",
+  "styleLock": {
+    "intensity": "B",
+    "description": "restrained watercolor at existing-reference intensity"
+  },
+  "spec": {
+    "width": 1200,
+    "height": 900,
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "format": "png",
+    "alpha": "opaque",
+    "mode": "RGB"
+  },
+  "referenceResearch": {
+    "document": "visual-reference-research.md",
+    "checkedAt": "2026-07-20",
+    "use": "factual landmark silhouette, proportions, pedestal geometry, Corcovado placement, and simplified Rio mountain-and-bay relationships only",
+    "sourcePhotosRetained": false,
+    "sourcePhotosSuppliedToGenerator": false,
+    "sourcePixelsCopiedOrTraced": false,
+    "rightsReview": "pending",
+    "sources": [
+      {
+        "url": "https://www.paul-landowski.com/en/le-christ-de-rio/",
+        "owner": "Indivision Landowski / Paul Landowski archive",
+        "rights": "copyrighted official site; no open image license relied on",
+        "use": "facts and high-level geometry only"
+      },
+      {
+        "url": "https://www.gov.br/iphan/pt-br/assuntos/noticias/avanca-cooperacao-para-instalar-via-sacra-no-cristo-redentor",
+        "owner": "IPHAN, Government of Brazil",
+        "rights": "no reusable photo license relied on",
+        "use": "factual statue, octagonal pedestal, and summit placement description only"
+      },
+      {
+        "url": "https://www.britannica.com/topic/Christ-the-Redeemer",
+        "owner": "Encyclopaedia Britannica",
+        "rights": "proprietary editorial source",
+        "use": "factual dimension cross-check only"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Brazil-00984_-_Christ_the_Redeemer_(48979386227).jpg",
+        "owner": "Dennis Jarvis",
+        "rights": "CC BY-SA 2.0",
+        "use": "page-only visual inspection of full-statue anatomy and pedestal"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Statue_of_Christ_the_Redeemer.jpg",
+        "owner": "Gustavo Facci",
+        "rights": "CC BY-SA 2.0; file page notes Brazil freedom-of-panorama considerations",
+        "use": "page-only visual inspection of elevated Corcovado placement"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:View_of_Corcovado_from_Sugarloaf_Mountain-Pao_de_Acucar_at_Sunset_-_Rio_de_Janeiro_-_Brazil.jpg",
+        "owner": "Adam Jones",
+        "rights": "CC BY-SA 3.0",
+        "use": "page-only visual inspection of layered mountain relationships"
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/1100/",
+        "owner": "UNESCO World Heritage Centre",
+        "rights": "site description CC-BY-SA IGO 3.0; no gallery-media license relied on",
+        "use": "textual Corcovado, Sugar Loaf, mountain, and Guanabara Bay relationship"
+      }
+    ]
+  },
+  "sceneVariants": [
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer--day-signature",
+      "variantId": "day-signature",
+      "name": "里约热内卢基督像·日间代表景",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "a79ad30fadb719561480296d2fb3e748d3999dcce9428cdd78cff97778c80154",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.135,
+        "y": 0.92,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.02,
+          "y": 0.61,
+          "width": 0.23,
+          "height": 0.31
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20T19:31:00+08:00",
+          "generator": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null,
+          "promptTemplateId": "scene-variant-export",
+          "variantBrief": "Representative clear daytime Corcovado view with Christ the Redeemer's coherent open-arm silhouette and simplified Rio mountain-and-bay setting.",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "styleReferenceUse": "style, medium, palette, line weight, and intensity only; no reference subject, cat, text, border, UI, or layout copied",
+          "subjectReferenceUse": "geometry-only research recorded in visual-reference-research.md; no source photo retained or supplied to the generator",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "aspect-preserving centered crop to exact 4:3, then Lanczos resize",
+            "cropBox": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+            "outputMode": "8-bit opaque RGB"
+          }
+        },
+        "rights": {
+          "status": "pending-review",
+          "generatedCandidateOnly": true,
+          "sourcePhotosRetained": false,
+          "sourcePhotosSuppliedToGenerator": false,
+          "sourcePixelsCopiedOrTraced": false,
+          "notes": "Public-landmark geometry was independently rendered from factual research; final rights review remains required before promotion."
+        },
+        "hardGateInspection": {
+          "inspectedAt": "2026-07-20T19:31:00+08:00",
+          "result": "pass",
+          "checks": [
+            "exactly two coherent open arms and two hands",
+            "one intact head, robe, lower body, and pedestal",
+            "no cat, animal, living person, date, caption, logo, watermark, sign, pseudo-text, UI, slot line, or anchor",
+            "quiet legal portrait bounds remain outside primary landmark recognition points",
+            "1200x900 sRGB 8-bit opaque RGB PNG"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "anatomyCoherence": null,
+            "compositionFit": null,
+            "formatCompliance": null,
+            "rights": null
+          },
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour",
+      "variantId": "golden-hour",
+      "name": "里约热内卢基督像·黎明金色时刻",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "sha256": "dc110ebe2ccff4d4886a2d409eef2aa9060eaa5dec32fb20f3ecba1739f11545",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "x": 0.32,
+        "y": 0.92,
+        "scale": 0.29,
+        "pose": "gaze",
+        "flip": false
+      },
+      "production": {
+        "safeBounds": {
+          "x": 0.2,
+          "y": 0.61,
+          "width": 0.24,
+          "height": 0.31
+        },
+        "provenance": {
+          "generatedAt": "2026-07-20T19:31:00+08:00",
+          "generator": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": null,
+          "promptTemplateId": "scene-variant-export",
+          "variantBrief": "Quiet dawn above cloud bands with pale warm light, a coherent open-arm statue and pedestal, and recognizable Corcovado setting.",
+          "styleReferences": [
+            "docs/art/style-ref-home.png",
+            "docs/art/style-ref-postcard.png",
+            "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+          ],
+          "styleReferenceUse": "style, medium, palette, line weight, and intensity only; no reference subject, cat, text, border, UI, or layout copied",
+          "subjectReferenceUse": "geometry-only research recorded in visual-reference-research.md; no source photo retained or supplied to the generator",
+          "requestedAspectRatio": "4:3",
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "normalization": {
+            "method": "aspect-preserving centered crop to exact 4:3, then Lanczos resize",
+            "cropBox": {
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023
+            },
+            "outputDimensions": {
+              "width": 1200,
+              "height": 900
+            },
+            "colorHandling": "untagged RGB source assigned embedded sRGB ICC profile",
+            "outputMode": "8-bit opaque RGB"
+          }
+        },
+        "rights": {
+          "status": "pending-review",
+          "generatedCandidateOnly": true,
+          "sourcePhotosRetained": false,
+          "sourcePhotosSuppliedToGenerator": false,
+          "sourcePixelsCopiedOrTraced": false,
+          "notes": "Public-landmark geometry was independently rendered from factual research; final rights review remains required before promotion."
+        },
+        "hardGateInspection": {
+          "inspectedAt": "2026-07-20T19:31:00+08:00",
+          "result": "pass",
+          "checks": [
+            "exactly two coherent open arms and two hands",
+            "one intact head, robe, lower body, and pedestal",
+            "no cat, animal, living person, date, caption, logo, watermark, sign, pseudo-text, UI, slot line, or anchor",
+            "cloud bands do not obscure the statue silhouette or pedestal",
+            "quiet legal portrait bounds remain outside primary landmark recognition points",
+            "1200x900 sRGB 8-bit opaque RGB PNG"
+          ]
+        },
+        "review": {
+          "decision": "pending",
+          "reviewer": "",
+          "reviewedAt": null,
+          "scores": {
+            "styleFit": null,
+            "landmarkReadability": null,
+            "silhouetteReadability": null,
+            "anatomyCoherence": null,
+            "compositionFit": null,
+            "formatCompliance": null,
+            "rights": null
+          },
+          "notes": ""
+        }
+      }
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--brazil-rio-de-janeiro-christ-the-redeemer--non-final.png",
+    "status": "qa-non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 2400,
+      "height": 1040
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "mode": "RGB",
+    "sha256": "f97e7c7bd313d8cfbae567bc7763ac9767851af4ed29373a709dc591db8eff7d",
+    "overlays": [
+      "safeBounds",
+      "compositionSlot-bottom-center-anchor"
+    ],
+    "review": {
+      "decision": "pending",
+      "reviewer": "",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

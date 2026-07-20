@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "promptPackId": "miaoyouji-calibration-v1",
+  "phase": "calibration-with-locked-style-and-format",
+  "productionEnabled": false,
+  "lockedDecisions": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B",
+      "meaning": "existing-reference-intensity"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "portraitPolicy": {
+    "state": "blocked-by-user-photo",
+    "executionEnabled": false,
+    "allowInventedSubstitute": false,
+    "mustExplainRequirementsBeforeUpload": true,
+    "mustWaitForLaterUserMessage": true,
+    "photoRequirements": {
+      "recommendedCount": "4-8",
+      "views": [
+        "front",
+        "left-and-right-three-quarter",
+        "side",
+        "full-body-standing-or-sitting",
+        "back-and-tail-markings"
+      ],
+      "quality": [
+        "original-resolution",
+        "sharp-focus",
+        "natural-light",
+        "no-filter",
+        "single-cat",
+        "unobstructed-face-and-body"
+      ],
+      "userNotes": [
+        "eye-color",
+        "distinctive-markings"
+      ]
+    },
+    "unblockSequence": [
+      "explain-photo-requirements",
+      "stop-and-wait",
+      "receive-user-photo-in-a-later-message",
+      "verify-photo-coverage",
+      "confirm-cat-identity-with-user",
+      "enable-blocked-portrait-jobs"
+    ]
+  },
+  "styleReferences": [
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-postcard.png",
+    "docs/art/style-ref-poses.png"
+  ],
+  "sharedStylePrompt": "采用已锁定的 B 浓度，即三张现有参考图的淡彩强度；不得自动增强或减淡。细而温暖的灰褐描线，低饱和鼠尾草绿、赭黄与褪色朱红，大面积留白，轻微米白纸纹，安静怀旧，形体清楚；保持《咪游记》参考图的水彩渗化、线条密度和克制对比度。",
+  "globalNegativePrompt": [
+    "photorealistic",
+    "3D render",
+    "vector-flat",
+    "neon or highly saturated color",
+    "hard digital gradient",
+    "glossy plastic",
+    "thick black outline",
+    "busy background",
+    "logo or watermark other than the required calibration label",
+    "malformed anatomy",
+    "extra limbs",
+    "invented or substitute cat"
+  ],
+  "calibrationJobs": [
+    {
+      "id": "scene-composition-slot",
+      "assetFamily": "scene",
+      "maxOutputs": 3,
+      "outputMode": "contact-sheet",
+      "target": {
+        "width": 1200,
+        "height": 900,
+        "format": "png",
+        "alpha": "opaque-board"
+      },
+      "requiredVariables": [
+        "candidateLetter",
+        "destinationConcept",
+        "timeOfDay",
+        "slotDescription"
+      ],
+      "promptTemplate": "{{sharedStylePrompt}} 内部场景校准板，横版 4:3、1200×900，顶部准确写 CALIBRATION • NON-FINAL。画 {{destinationConcept}} 的 {{timeOfDay}} 场景，但不是最终真实地标素材。按 {{slotDescription}} 留出低细节、低对比、无遮挡的猫形象合成位；板上只用细虚线框和底部中心十字标明该区域，不得放入任何具体猫或替代猫。场景中不得出现猫、人物、日期、邮戳或文案。候选 {{candidateLetter}}。",
+      "acceptanceChecks": [
+        "empty-slot-is-obvious",
+        "slot-does-not-cover-landmark",
+        "slot-avoids-copy-and-postmark-zones",
+        "no-cat-in-scene",
+        "calibration-label-visible"
+      ]
+    },
+    {
+      "id": "item-icon-language",
+      "assetFamily": "item-and-souvenir",
+      "maxOutputs": 3,
+      "outputMode": "contact-sheet",
+      "target": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png",
+        "alpha": "opaque-board"
+      },
+      "requiredVariables": [
+        "candidateLetter",
+        "itemList"
+      ],
+      "promptTemplate": "{{sharedStylePrompt}} 内部图标校准板，顶部准确写 CALIBRATION • NON-FINAL。把 {{itemList}} 排成 3×3 九宫格；每件物品独立、同等视觉重量、轮廓清楚、留足透明裁切间距，不带场景、文字、猫或 UI 边框。候选 {{candidateLetter}}。",
+      "acceptanceChecks": [
+        "exactly-nine-icons",
+        "consistent-visual-weight",
+        "recognizable-at-48px",
+        "clear-crop-spacing",
+        "calibration-label-visible"
+      ]
+    }
+  ],
+  "blockedJobs": [
+    {
+      "id": "portrait-six-pose-calibration",
+      "assetFamily": "portrait",
+      "state": "blocked-by-user-photo",
+      "executionEnabled": false,
+      "blockedBy": "user-photo",
+      "allowInventedSubstitute": false,
+      "unblockRequires": [
+        "photo-requirements-explained",
+        "user-photo-received-in-a-later-message",
+        "photo-coverage-verified",
+        "cat-identity-confirmed-by-user"
+      ],
+      "promptTemplateAfterUnblock": "{{sharedStylePrompt}} 仅根据用户已确认的真实小猫参考照片 {{portraitReferences}} 制作身份校准板。严格保持真实花纹、脸型、耳形、眼睛颜色、体型和尾纹一致；不得补造未在参考照片中确认的特征。2×3 排列 sit、sleep、walk、eat、play、gaze 六姿势，标 CALIBRATION • NON-FINAL。"
+    },
+    {
+      "id": "portrait-pose-export",
+      "assetFamily": "portrait",
+      "state": "blocked-by-user-photo",
+      "executionEnabled": false,
+      "blockedBy": "user-photo",
+      "allowInventedSubstitute": false,
+      "unblockRequires": [
+        "approved-real-cat-identity-board"
+      ],
+      "promptTemplateAfterUnblock": "{{sharedStylePrompt}} 根据用户已确认的真实小猫身份参考 {{portraitReference}} 只画同一只猫的 {{pose}} 姿势。真实花纹逐点一致；1024×1024 固定画布，主体留 64 px 安全边，纯透明背景，无场景、字、边框；输出 straight-alpha PNG。"
+    }
+  ],
+  "productionTemplates": [
+    {
+      "id": "scene-variant-export",
+      "enabledWhenLocks": [
+        "style",
+        "postcardFormat",
+        "destinationList"
+      ],
+      "batchKey": "destinationId",
+      "promptTemplate": "{{sharedStylePrompt}} 画已锁定地标 {{destinationName}} 的 {{variantBrief}} 空白明信片场景底板。横版 4:3、1200×900，保留文案与邮戳安全区；在 {{slotDescription}} 为 {{pose}} 姿势留无遮挡低细节区域。场景中无猫、无替代猫、无合成位标记、无日期文案；旅伴仅在 hasCompanion=true 时按 {{companionBrief}} 直接画入。",
+      "finalCompositeQaState": "blocked-by-user-photo"
+    },
+    {
+      "id": "item-or-souvenir-export",
+      "enabledWhenLocks": [
+        "style",
+        "iconLanguage"
+      ],
+      "batchKey": "itemKind-or-destinationId",
+      "promptTemplate": "{{sharedStylePrompt}} 只画 {{subjectDescription}} 单个图标。512×512 固定画布，主体留 48 px 安全边，透明背景，轮廓在 48 px 下仍可辨；无文字、无猫、无 UI、无纸色矩形底。输出 straight-alpha PNG。"
+    }
+  ]
+}

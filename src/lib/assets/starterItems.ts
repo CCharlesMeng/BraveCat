@@ -1,0 +1,68 @@
+import type { ItemDefinition } from './index'
+
+export const STARTER_ITEMS = [
+  {
+    id: 'fish-biscuit',
+    name: '小鱼饼',
+    kind: 'snack',
+    price: 4,
+    imageSrc: '/assets/items/item--snack--fish-biscuit--v01.png',
+    effectHint: '也许会想起沿路好吃的东西。',
+  },
+  {
+    id: 'travel-tin',
+    name: '旅行罐头',
+    kind: 'snack',
+    price: 4,
+    imageSrc: '/assets/items/item--snack--travel-tin--v01.png',
+    effectHint: '带得足一点，路也许会走得远些。',
+  },
+  {
+    id: 'small-blanket',
+    name: '小毛毯',
+    kind: 'toy',
+    price: 6,
+    imageSrc: '/assets/items/item--toy--small-blanket--v01.png',
+    effectHint: '困了就找个安静的地方蜷起来。',
+  },
+  {
+    id: 'yarn-ball',
+    name: '毛线球',
+    kind: 'toy',
+    price: 6,
+    imageSrc: '/assets/items/item--toy--yarn-ball--v01.png',
+    effectHint: '路上也可以玩一会儿。',
+  },
+  {
+    id: 'small-bell',
+    name: '小铃铛',
+    kind: 'toy',
+    price: 6,
+    imageSrc: '/assets/items/item--toy--small-bell--v01.png',
+    effectHint: '轻轻一响，也许会遇见新旅伴。',
+  },
+  {
+    id: 'small-camera',
+    name: '小相机',
+    kind: 'toy',
+    price: 6,
+    imageSrc: '/assets/items/item--toy--small-camera--v01.png',
+    effectHint: '说不定会多寄一张风景回来。',
+  },
+  {
+    id: 'small-telescope',
+    name: '小望远镜',
+    kind: 'toy',
+    price: 6,
+    imageSrc: '/assets/items/item--toy--small-telescope--v01.png',
+    effectHint: '适合停下来，远远看一会儿。',
+  },
+  {
+    id: 'ticket',
+    name: '车票',
+    kind: 'wish',
+    price: 8,
+    imageSrc: '/assets/items/item--wish--ticket--v01.png',
+    effectHint: '写着一个心愿地，但小猫不一定照着走。',
+  },
+] as const satisfies readonly ItemDefinition[]
