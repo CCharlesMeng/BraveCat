@@ -24,6 +24,7 @@ export interface PackedItem {
 export type EconomyAction =
   | { type: 'timePassed'; now: number }
   | { type: 'windowsillCollected' }
+  | { type: 'treatsGranted'; amount: number }
   | { type: 'itemPurchased'; itemId: ItemId; price: number }
   | {
     type: 'itemAddedToPack'
@@ -55,6 +56,15 @@ export const createInitialEconomyState = (now: number): EconomyState => ({
 })
 
 export const reduceEconomy: EconomyReducer = (state, action) => {
+  if (action.type === 'treatsGranted') {
+    if (!Number.isInteger(action.amount) || action.amount <= 0) return state
+
+    return {
+      ...state,
+      treats: state.treats + action.amount,
+    }
+  }
+
   if (action.type === 'itemRemovedFromPack') {
     const pack = state.packs[action.catId] ?? []
     if (!pack.some(({ itemId }) => itemId === action.itemId)) return state
