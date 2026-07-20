@@ -1,6 +1,9 @@
 {
   "schemaVersion": 1,
   "reviewKind": "landmark-minho-composite-human-review",
+  "status": "superseded",
+  "supersededAt": "2026-07-20",
+  "supersessionReason": "The approved Minho gaze asset changed bytes, so this approval remains an audit record for the prior compositeSetSha256 only.",
   "decision": "approved",
   "reviewer": "user",
   "reviewedAt": "2026-07-20",
