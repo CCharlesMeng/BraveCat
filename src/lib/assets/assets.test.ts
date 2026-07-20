@@ -137,6 +137,34 @@ describe('AssetCatalog', () => {
     })).toThrow('场景 paris-day 引用了未知姿势 fly')
   })
 
+  it('拒绝纪念品引用素材目录之外的目的地', () => {
+    const catalog = validCatalog()
+
+    expect(() => defineAssetCatalog({
+      ...catalog,
+      souvenirs: [{
+        id: 'kyoto-charm',
+        destinationId: 'kyoto',
+        name: '鸟居御守',
+        visualToken: '守',
+      }],
+    })).toThrow('纪念品 kyoto-charm 引用了未知目的地 kyoto')
+  })
+
+  it('拒绝没有安全图形标记的纪念品', () => {
+    const catalog = validCatalog()
+
+    expect(() => defineAssetCatalog({
+      ...catalog,
+      souvenirs: [{
+        id: 'paris-pin',
+        destinationId: 'paris',
+        name: '铁塔纪念章',
+        visualToken: ' ',
+      }],
+    })).toThrow('纪念品 paris-pin 缺少图形标记')
+  })
+
   it('所有视觉已批准目的地都能进入旅行与心愿选择', () => {
     const sceneCount = STARTER_CATALOG.destinations.reduce(
       (total, { sceneVariants }) => total + sceneVariants.length,
@@ -150,5 +178,19 @@ describe('AssetCatalog', () => {
     expect(STARTER_DESTINATIONS.map(({ id }) => id)).toEqual(
       STARTER_CATALOG.destinations.map(({ id }) => id),
     )
+  })
+
+  it('每个旅行目的地都有使用安全图形标记的纪念品元数据', () => {
+    for (const destination of STARTER_CATALOG.destinations) {
+      const souvenirs = STARTER_CATALOG.souvenirs.filter(
+        ({ destinationId }) => destinationId === destination.id,
+      )
+
+      expect(souvenirs).toHaveLength(2)
+      for (const souvenir of souvenirs) {
+        expect(souvenir.visualToken.trim()).not.toBe('')
+        expect(souvenir.imageSrc).toBeUndefined()
+      }
+    }
   })
 })

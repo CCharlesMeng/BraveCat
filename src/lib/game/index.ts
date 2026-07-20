@@ -7,6 +7,10 @@ import {
   createInitialPostcardState,
   type PostcardState,
 } from '../postcards'
+import {
+  createInitialSouvenirState,
+  type SouvenirState,
+} from '../souvenirs'
 import type { TravelState } from '../travel'
 
 export const GAME_STATE_VERSION = 1 as const
@@ -25,6 +29,7 @@ export interface GameState {
   cats: readonly CatProfile[]
   activeCatId: CatId | null
   postcards: PostcardState
+  souvenirs: SouvenirState
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (
@@ -109,7 +114,6 @@ const restoreTravelState = (value: unknown): TravelState | undefined => {
     || !Array.isArray(value.plan.itinerary.postcardSlots)
     || !isRecord(value.plan.content)
     || !Array.isArray(value.plan.content.postcards)
-    || !Array.isArray(value.plan.content.souvenirIds)
     || typeof value.note !== 'string'
     || !Array.isArray(value.packedItems)
     || !value.packedItems.every(isPackedItem)
@@ -117,6 +121,21 @@ const restoreTravelState = (value: unknown): TravelState | undefined => {
 
   return {
     ...(value as unknown as Extract<TravelState, { kind: 'planned' }>),
+    plan: {
+      ...(value.plan as unknown as Extract<
+        TravelState,
+        { kind: 'planned' }
+      >['plan']),
+      content: {
+        ...(value.plan.content as unknown as Extract<
+          TravelState,
+          { kind: 'planned' }
+        >['plan']['content']),
+        souvenirIds: Array.isArray(value.plan.content.souvenirIds)
+          ? value.plan.content.souvenirIds as string[]
+          : [],
+      },
+    },
     packedItems: value.packedItems,
     itemOutcomes: value.packedItems.map((item) => ({
       ...item,
@@ -144,6 +163,19 @@ const isPostcardState = (value: unknown): value is PostcardState => (
   ))
 )
 
+const isSouvenirState = (value: unknown): value is SouvenirState => (
+  isRecord(value)
+  && Array.isArray(value.received)
+  && value.received.every((souvenir) => (
+    isRecord(souvenir)
+    && typeof souvenir.id === 'string'
+    && typeof souvenir.tripId === 'string'
+    && typeof souvenir.souvenirId === 'string'
+    && typeof souvenir.destinationId === 'string'
+    && typeof souvenir.revealedAt === 'number'
+  ))
+)
+
 export const isGameState = (value: unknown): value is GameState => {
   if (
     !isRecord(value)
@@ -154,6 +186,7 @@ export const isGameState = (value: unknown): value is GameState => {
     || !Array.isArray(value.cats)
     || !value.cats.every(isCatProfile)
     || !isPostcardState(value.postcards)
+    || !isSouvenirState(value.souvenirs)
   ) return false
 
   return (
@@ -172,6 +205,7 @@ export const createInitialGameState = (now: number): GameState => ({
   cats: [],
   activeCatId: null,
   postcards: createInitialPostcardState(),
+  souvenirs: createInitialSouvenirState(),
 })
 
 export interface AdoptCatRequest extends CatProfile {}
@@ -213,6 +247,9 @@ export const restoreGameState = (
       && Array.isArray(stored.postcards.received)
       ? stored.postcards as unknown as PostcardState
       : createInitialPostcardState()
+    const souvenirs = isSouvenirState(stored.souvenirs)
+      ? stored.souvenirs
+      : createInitialSouvenirState()
     const travelByCat = Object.fromEntries(
       Object.entries(stored.travelByCat).flatMap(([catId, travel]) => {
         const restored = restoreTravelState(travel)
@@ -227,6 +264,7 @@ export const restoreGameState = (
       cats,
       activeCatId,
       postcards,
+      souvenirs,
     }
   }
 
@@ -238,6 +276,7 @@ export const restoreGameState = (
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     }
   }
 

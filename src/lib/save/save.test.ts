@@ -1,6 +1,11 @@
 import 'fake-indexeddb/auto'
 import { describe, expect, it } from 'vitest'
-import { createInitialGameState, type GameState } from '../game'
+import {
+  createInitialGameState,
+  isGameState,
+  restoreGameState,
+  type GameState,
+} from '../game'
 import { createIndexedDbSaveStore } from './index'
 
 describe('Save', () => {
@@ -32,7 +37,7 @@ describe('Save', () => {
     await store.save(current)
 
     await expect(store.import({
-      schemaVersion: 1,
+      schemaVersion: 2,
       exportedAt: 2_000,
       state: { treats: '很多' },
     })).rejects.toThrow('存档内容不完整或已损坏')
@@ -55,6 +60,10 @@ describe('Save', () => {
             treats: (document.state as { fish: number }).fish,
           },
         }),
+        1: (document) => ({
+          ...document,
+          schemaVersion: 2,
+        }),
       },
     })
 
@@ -64,6 +73,33 @@ describe('Save', () => {
       state: { fish: 12 },
     })).resolves.toEqual({ treats: 12 })
     await expect(store.load()).resolves.toEqual({ treats: 12 })
+  })
+
+  it('导入旧相册存档时补上共享纪念品状态', async () => {
+    const { souvenirs: _discarded, ...legacyState } = createInitialGameState(
+      1_000,
+    )
+    const store = createIndexedDbSaveStore<GameState>(
+      `bravecat-test-${crypto.randomUUID()}`,
+      {
+        validateState: isGameState,
+        migrations: {
+          1: (document) => ({
+            ...document,
+            schemaVersion: 2,
+            state: restoreGameState(document.state, 9_000),
+          }),
+        },
+      },
+    )
+
+    await expect(store.import({
+      schemaVersion: 1,
+      exportedAt: 2_000,
+      state: legacyState,
+    })).resolves.toMatchObject({
+      souvenirs: { received: [] },
+    })
   })
 
   it('JSON 导出再导入会恢复完整行为状态', async () => {
@@ -99,6 +135,15 @@ describe('Save', () => {
           isRead: false,
         }],
       },
+      souvenirs: {
+        received: [{
+          id: 'trip--souvenir-1',
+          tripId: 'trip',
+          souvenirId: 'paris-tower-pin',
+          destinationId: 'paris',
+          revealedAt: 4_000,
+        }],
+      },
     }
     const source = createIndexedDbSaveStore<GameState>(
       `bravecat-test-${crypto.randomUUID()}`,
@@ -112,7 +157,7 @@ describe('Save', () => {
     const imported = await target.import(JSON.parse(json))
 
     expect(JSON.parse(json)).toMatchObject({
-      schemaVersion: 1,
+      schemaVersion: 2,
       exportedAt: 5_000,
     })
     expect(imported).toEqual(state)

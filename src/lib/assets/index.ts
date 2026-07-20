@@ -53,7 +53,8 @@ export interface SouvenirDefinition {
   id: SouvenirId
   destinationId: DestinationId
   name: string
-  imageSrc: string
+  visualToken: string
+  imageSrc?: string
 }
 
 export interface CopyLibrary {
@@ -97,6 +98,20 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
           `场景 ${scene.id} 引用了未知姿势 ${scene.compositionSlot.pose}`,
         )
       }
+    }
+  }
+
+  const destinationIds = new Set(
+    catalog.destinations.map(({ id }) => id),
+  )
+  for (const souvenir of catalog.souvenirs) {
+    if (!destinationIds.has(souvenir.destinationId)) {
+      throw new RangeError(
+        `纪念品 ${souvenir.id} 引用了未知目的地 ${souvenir.destinationId}`,
+      )
+    }
+    if (!souvenir.visualToken.trim()) {
+      throw new RangeError(`纪念品 ${souvenir.id} 缺少图形标记`)
     }
   }
 

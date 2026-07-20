@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { createInitialEconomyState } from '../economy'
 import { createInitialPostcardState } from '../postcards'
+import { createInitialSouvenirState } from '../souvenirs'
 import {
   adoptCat,
   createInitialGameState,
@@ -17,6 +18,7 @@ describe('Game state', () => {
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     })
   })
 
@@ -34,6 +36,7 @@ describe('Game state', () => {
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     })
   })
 
@@ -75,6 +78,7 @@ describe('Game state', () => {
 
     expect(isGameState(valid)).toBe(true)
     expect(isGameState({ ...valid, postcards: undefined })).toBe(false)
+    expect(isGameState({ ...valid, souvenirs: undefined })).toBe(false)
     expect(isGameState({
       ...valid,
       cats: [{ id: 'minho', name: 7 }],
@@ -103,7 +107,6 @@ describe('Game state', () => {
             },
             content: {
               postcards: [],
-              souvenirIds: [],
             },
           },
         },
@@ -113,6 +116,11 @@ describe('Game state', () => {
     expect(
       restoreGameState(earlyRoot, 9_000).travelByCat.minho,
     ).toMatchObject({
+      plan: {
+        content: {
+          souvenirIds: [],
+        },
+      },
       itemOutcomes: [
         { itemId: 'ticket', kind: 'wish', disposition: 'consumed' },
         { itemId: 'blanket', kind: 'toy', disposition: 'return-home' },
