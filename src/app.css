@@ -277,6 +277,14 @@ button:focus-visible {
   cursor: pointer;
 }
 
+.developer-clock button.active {
+  border-color: rgba(78, 101, 61, 0.64);
+  background: #839a70;
+  color: #fffdf4;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+}
+
 .developer-clock button:disabled {
   cursor: default;
   opacity: 0.5;
@@ -962,6 +970,41 @@ main {
   line-height: 1.7;
 }
 
+.album-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border-radius: 14px;
+  background: rgba(123, 137, 101, 0.12);
+}
+
+.album-tabs button {
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.69rem;
+}
+
+.album-tabs button.active {
+  border-color: rgba(81, 84, 67, 0.22);
+  background: rgba(255, 252, 241, 0.82);
+  box-shadow: 0 3px 8px rgba(69, 65, 49, 0.07);
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.album-tabs span {
+  margin-left: 5px;
+  color: #78836b;
+  font-size: 0.61rem;
+}
+
 .purchase-confirmation {
   margin-bottom: 14px;
   padding: 15px;
@@ -1050,6 +1093,83 @@ main {
   margin: 0;
   padding: 0 2px 8px;
   list-style: none;
+}
+
+.souvenir-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0 2px 8px;
+  list-style: none;
+}
+
+.souvenir-card {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: 17px 10px 14px;
+  border: 1px solid rgba(82, 82, 67, 0.22);
+  border-radius: 17px;
+  background: rgba(255, 252, 241, 0.58);
+  text-align: center;
+}
+
+.souvenir-token,
+.souvenir-art {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 11px;
+  border: 1px solid rgba(81, 84, 67, 0.3);
+  border-radius: 18px;
+}
+
+.souvenir-token {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(rgba(87, 78, 59, 0.06) 0.6px, transparent 0.7px) 0 0 / 5px 5px,
+    #eee7d3;
+  color: #657157;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.souvenir-art {
+  object-fit: contain;
+}
+
+.souvenir-card h3,
+.souvenir-card p {
+  margin: 0;
+}
+
+.souvenir-card h3 {
+  overflow: hidden;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.souvenir-card p,
+.souvenir-card time {
+  color: var(--ink-soft);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.59rem;
+}
+
+.souvenir-card p {
+  margin-top: 5px;
+}
+
+.souvenir-card time {
+  display: block;
+  margin-top: 3px;
+}
+
+.empty-state.album-empty {
+  min-height: 190px;
 }
 
 .save-transfer {

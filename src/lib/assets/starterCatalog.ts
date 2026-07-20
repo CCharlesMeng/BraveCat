@@ -7,6 +7,7 @@ import {
   LANDMARK_SCENES_SHIPPING_ELIGIBLE,
 } from './landmarkCatalog.generated'
 import { STARTER_ITEMS } from './starterItems'
+import { STARTER_SOUVENIRS } from './starterSouvenirs'
 import type { ItineraryDestination } from '../itinerary'
 
 export { LANDMARK_SCENES_SHIPPING_ELIGIBLE }
@@ -64,7 +65,7 @@ export const STARTER_CATALOG = defineAssetCatalog({
     },
   ],
   items: STARTER_ITEMS,
-  souvenirs: [],
+  souvenirs: STARTER_SOUVENIRS,
   copy: {
     postcardNotes: [
       '风从屋檐下绕过去，我在这里坐了一会儿。',

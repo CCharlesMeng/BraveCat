@@ -14,6 +14,7 @@
   } from './lib/assets/starterCatalog'
   import { STARTER_ITEMS } from './lib/assets/starterItems'
   import {
+    advanceGameEvents,
     adoptCat,
     createInitialGameState,
     isGameState,
@@ -44,6 +45,7 @@
   import type { DestinationId } from './lib/ids'
 
   type DrawerName = 'pack' | 'shop' | 'album'
+  type AlbumView = 'postcards' | 'souvenirs'
   const PRIMARY_CAT_ID = 'minho'
   const PACK_CAPACITY = 3
   const HOME_TRAVEL_STATE = { kind: 'home' } as const satisfies TravelState
@@ -97,6 +99,7 @@
   }>
 
   let activeDrawer = $state<DrawerName | null>(null)
+  let albumView = $state<AlbumView>('postcards')
   const clock = createClock()
   const saveStore = createIndexedDbSaveStore<GameState>('bravecat', {
     validateState: isGameState,
@@ -104,6 +107,11 @@
       0: (document) => ({
         ...document,
         schemaVersion: 1,
+        state: restoreGameState(document.state, clock.now()),
+      }),
+      1: (document) => ({
+        ...document,
+        schemaVersion: 2,
         state: restoreGameState(document.state, clock.now()),
       }),
     },
@@ -139,6 +147,7 @@
   let activityNotice = $state('')
   let persistenceNotice = $state('')
   let transferNotice = $state('')
+  let timeAcceleration = $state(clock.getAcceleration())
   let developmentGrantAmount = $state(24)
   let pendingPurchase = $state<PendingPurchase | null>(null)
   let purchaseFlowBusy = $state(false)
@@ -171,6 +180,18 @@
   const travelPresence = $derived(
     travelLifecycle.getPresence(travel, gameNow),
   )
+  const currentTripId = $derived(
+    travel.kind === 'planned'
+      ? `${PRIMARY_CAT_ID}-${travel.plan.itinerary.departsAt}`
+      : null,
+  )
+  const currentTripSouvenirCount = $derived(
+    currentTripId
+      ? game.souvenirs.received.filter(
+        ({ tripId }) => tripId === currentTripId,
+      ).length
+      : 0,
+  )
   const unreadPostcardCount = $derived(
     game.postcards.received.filter(({ isRead }) => !isRead).length,
   )
@@ -182,7 +203,9 @@
       : travelPresence === 'traveling'
         ? `${catName}已经出门了。房间里留着一张字条。`
         : travelPresence === 'returned'
-          ? `${catName}已经沿着熟悉的路回到家。`
+          ? currentTripSouvenirCount > 0
+            ? `${catName}回家了，还带回 ${currentTripSouvenirCount} 件纪念品。`
+            : `${catName}已经沿着熟悉的路回到家。`
           : '',
   )
   const availableItems = $derived(STARTER_ITEMS.filter(
@@ -203,6 +226,9 @@
   )
   const findDestination = (destinationId?: string) => (
     STARTER_CATALOG.destinations.find(({ id }) => id === destinationId)
+  )
+  const findSouvenir = (souvenirId: string) => (
+    STARTER_CATALOG.souvenirs.find(({ id }) => id === souvenirId)
   )
   const describePackRejection = (
     reason: PackItemRejectionReason | undefined,
@@ -279,30 +305,13 @@
         ({ kind, wishDestinationId }) => kind === 'wish' && wishDestinationId,
       )?.wishDestinationId,
     })
-    const nextPostcards = nextTravel.kind === 'planned'
-      ? reducePostcards(current.postcards, {
-        type: 'timePassed',
-        now,
-        tripId: `${PRIMARY_CAT_ID}-${nextTravel.plan.itinerary.departsAt}`,
-        itinerary: nextTravel.plan.itinerary,
-        content: nextTravel.plan.content,
-      })
-      : current.postcards
-    if (
-      nextEconomy === current.economy
-      && nextTravel === currentTravel
-      && nextPostcards === current.postcards
-    ) return current
 
-    return {
-      ...current,
+    return advanceGameEvents(current, {
+      catId: PRIMARY_CAT_ID,
+      now,
       economy: nextEconomy,
-      postcards: nextPostcards,
-      travelByCat: {
-        ...current.travelByCat,
-        [PRIMARY_CAT_ID]: nextTravel,
-      },
-    }
+      travel: nextTravel,
+    })
   }
 
   const openDrawer = async (name: DrawerName) => {
@@ -345,6 +354,9 @@
 
     try {
       const imported = await saveStore.import(JSON.parse(await file.text()))
+      clock.setAcceleration(1)
+      timeAcceleration = 1
+      clock.setNow(imported.clockNow)
       const now = clock.now()
       const settledEconomy = reduceEconomy(imported.economy, {
         type: 'timePassed',
@@ -374,6 +386,8 @@
       type: 'timePassed',
       now,
     })
+    const previousTravel = game.travelByCat[PRIMARY_CAT_ID]
+    const previousSouvenirCount = game.souvenirs.received.length
     const next = advanceGame(game, settledEconomy, now)
     if (next === game) {
       if (persistenceNotice) await saveGame()
@@ -381,6 +395,17 @@
     }
 
     game = next
+    if (
+      previousTravel?.kind === 'planned'
+      && next.travelByCat[PRIMARY_CAT_ID]?.kind === 'home'
+    ) {
+      const souvenirCount = next.souvenirs.received.length
+        - previousSouvenirCount
+      activityNotice = souvenirCount > 0
+        ? `${catName}回家了，还带回 ${souvenirCount} 件纪念品。`
+        : `${catName}回家了，正在熟悉的垫子上休息。`
+      chooseHomeActivity()
+    }
     await saveGame()
   }
 
@@ -397,6 +422,7 @@
 
   const setTimeAcceleration = async (multiplier: number) => {
     clock.setAcceleration(multiplier)
+    timeAcceleration = multiplier
     activityNotice = multiplier === 1
       ? '开发时钟已恢复为实时。'
       : `开发时钟已切换为 ${multiplier.toLocaleString()} 倍。`
@@ -429,8 +455,12 @@
         const saved = await saveStore.load()
         if (cancelled) return
 
+        const realNow = clock.now()
+        const restored = restoreGameState(saved, realNow)
+        clock.setAcceleration(1)
+        timeAcceleration = 1
+        clock.setNow(restored.clockNow)
         const now = clock.now()
-        const restored = restoreGameState(saved, now)
         const settledEconomy = reduceEconomy(
           restored.economy,
           { type: 'timePassed', now },
@@ -659,11 +689,26 @@
     <aside class="developer-clock" aria-label="开发工具">
       <div class="developer-control">
         <span>开发时钟</span>
-        <button type="button" onclick={() => setTimeAcceleration(1)}>实时</button>
-        <button type="button" onclick={() => setTimeAcceleration(3_600)}>
+        <button
+          type="button"
+          class:active={timeAcceleration === 1}
+          aria-pressed={timeAcceleration === 1}
+          onclick={() => setTimeAcceleration(1)}
+        >实时</button>
+        <button
+          type="button"
+          class:active={timeAcceleration === 3_600}
+          aria-pressed={timeAcceleration === 3_600}
+          onclick={() => setTimeAcceleration(3_600)}
+        >
           1 小时/秒
         </button>
-        <button type="button" onclick={() => setTimeAcceleration(86_400)}>
+        <button
+          type="button"
+          class:active={timeAcceleration === 86_400}
+          aria-pressed={timeAcceleration === 86_400}
+          onclick={() => setTimeAcceleration(86_400)}
+        >
           1 天/秒
         </button>
       </div>
@@ -1025,28 +1070,90 @@
       </div>
     {:else if activeDrawer === 'album'}
       <div class="drawer-content album-content">
-        {#if game.postcards.received.length > 0}
-          <p class="drawer-intro">已经寄到家的明信片会一直留在这里。</p>
-          <ul class="postcard-list" aria-label="收到的明信片">
-            {#each game.postcards.received as postcard}
-              {@const composition = resolvePostcardComposition(
-                STARTER_CATALOG,
-                postcard,
-              )}
-              <li>
-                <Postcard
-                  {composition}
-                  destinationName={findDestination(postcard.destinationId)?.name ?? '远方'}
-                  renderScene={canRenderLandmarkScenes}
-                />
+        <div class="album-tabs" aria-label="相册分类">
+          <button
+            type="button"
+            class:active={albumView === 'postcards'}
+            aria-pressed={albumView === 'postcards'}
+            onclick={() => albumView = 'postcards'}
+          >
+            明信片
+            <span>{game.postcards.received.length}</span>
+          </button>
+          <button
+            type="button"
+            class:active={albumView === 'souvenirs'}
+            aria-pressed={albumView === 'souvenirs'}
+            onclick={() => albumView = 'souvenirs'}
+          >
+            纪念品
+            <span>{game.souvenirs.received.length}</span>
+          </button>
+        </div>
+
+        {#if albumView === 'postcards'}
+          {#if game.postcards.received.length > 0}
+            <p class="drawer-intro">已经寄到家的明信片会一直留在这里。</p>
+            <ul class="postcard-list" aria-label="收到的明信片">
+              {#each game.postcards.received as postcard}
+                {@const composition = resolvePostcardComposition(
+                  STARTER_CATALOG,
+                  postcard,
+                )}
+                <li>
+                  <Postcard
+                    {composition}
+                    destinationName={findDestination(postcard.destinationId)?.name ?? '远方'}
+                    renderScene={canRenderLandmarkScenes}
+                  />
+                </li>
+              {/each}
+            </ul>
+          {:else}
+            <div class="empty-state album-empty">
+              <span aria-hidden="true">· · ·</span>
+              <h3>{drawer.empty}</h3>
+              <p>小猫寄回的明信片会收在这一页。</p>
+            </div>
+          {/if}
+        {:else if game.souvenirs.received.length > 0}
+          <p class="drawer-intro">小猫回家时带回的小物件会留在这里。</p>
+          <ul class="souvenir-list" aria-label="带回家的纪念品">
+            {#each game.souvenirs.received as receivedSouvenir}
+              {@const souvenir = findSouvenir(receivedSouvenir.souvenirId)}
+              <li class="souvenir-card">
+                {#if souvenir?.imageSrc}
+                  <img
+                    class="souvenir-art"
+                    src={souvenir.imageSrc}
+                    alt=""
+                  />
+                {:else}
+                  <span class="souvenir-token" aria-hidden="true">
+                    {souvenir?.visualToken ?? '念'}
+                  </span>
+                {/if}
+                <div>
+                  <h3>{souvenir?.name ?? '远方带回的小物'}</h3>
+                  <p>
+                    {findDestination(receivedSouvenir.destinationId)?.name ?? '远方'}
+                  </p>
+                  <time
+                    datetime={new Date(receivedSouvenir.revealedAt).toISOString()}
+                  >
+                    {new Date(receivedSouvenir.revealedAt)
+                      .toISOString()
+                      .slice(0, 10)}
+                  </time>
+                </div>
               </li>
             {/each}
           </ul>
         {:else}
-          <div class="empty-state">
+          <div class="empty-state album-empty">
             <span aria-hidden="true">· · ·</span>
-            <h3>{drawer.empty}</h3>
-            <p>{drawer.hint}</p>
+            <h3>还没有带回纪念品</h3>
+            <p>旅行结束回到家时，纪念品会收在这一页。</p>
           </div>
         {/if}
 

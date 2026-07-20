@@ -50,7 +50,20 @@ const catalog: AssetCatalog = {
     },
   ],
   items: [],
-  souvenirs: [],
+  souvenirs: [
+    {
+      id: 'kyoto-bell',
+      destinationId: 'kyoto',
+      name: '风铃',
+      visualToken: '铃',
+    },
+    {
+      id: 'kyoto-charm',
+      destinationId: 'kyoto',
+      name: '御守',
+      visualToken: '守',
+    },
+  ],
   copy: {
     postcardNotes: ['风很轻，我在这里坐了一会儿。'],
     travelNotes: ['窗边有风，我出去看看。'],
@@ -194,6 +207,7 @@ describe('Travel lifecycle', () => {
               note: '风很轻，我在这里坐了一会儿。',
             },
           ],
+          souvenirIds: ['kyoto-charm'],
         },
       },
     })
@@ -272,7 +286,7 @@ describe('Travel lifecycle', () => {
     )
 
     expect(lifecycle.getPresence(waiting, 1_149)).toBe('waiting')
-    expect(lifecycle.getPresence(planned, 1_000)).toBe('traveling')
+    expect(lifecycle.getPresence(planned, 1_000)).toBe('waiting')
     expect(lifecycle.getPresence(planned, 1_150)).toBe('traveling')
     expect(lifecycle.getPresence(planned, 2_649)).toBe('traveling')
     expect(lifecycle.getPresence(planned, 2_650)).toBe('returned')

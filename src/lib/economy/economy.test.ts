@@ -282,4 +282,34 @@ describe('Economy', () => {
 
     expect(result).toBe(economy)
   })
+
+  it('回家时清空本次行囊并只返还未消耗物品', () => {
+    const economy = createEconomy({
+      ownedItems: {
+        'small-blanket': 1,
+      },
+      packs: {
+        'first-cat': [
+          { itemId: 'ticket', kind: 'wish' },
+          { itemId: 'fish-biscuit', kind: 'snack' },
+          { itemId: 'small-blanket', kind: 'toy' },
+        ],
+      },
+    })
+
+    const returned = reduceEconomy(economy, {
+      type: 'tripReturned',
+      catId: 'first-cat',
+      itemOutcomes: [
+        { itemId: 'ticket', disposition: 'consumed' },
+        { itemId: 'fish-biscuit', disposition: 'consumed' },
+        { itemId: 'small-blanket', disposition: 'return-home' },
+      ],
+    })
+
+    expect(returned.packs['first-cat']).toEqual([])
+    expect(returned.ownedItems).toEqual({
+      'small-blanket': 2,
+    })
+  })
 })
