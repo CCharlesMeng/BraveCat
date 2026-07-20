@@ -14,6 +14,7 @@
   } from './lib/assets/starterCatalog'
   import { STARTER_ITEMS } from './lib/assets/starterItems'
   import {
+    advanceGameEvents,
     adoptCat,
     createInitialGameState,
     isGameState,
@@ -29,7 +30,6 @@
   } from './lib/postcards'
   import { createIndexedDbSaveStore } from './lib/save'
   import { selectTripContent } from './lib/selection'
-  import { reduceSouvenirs } from './lib/souvenirs'
   import {
     beginPurchaseChoice,
     confirmPurchasedItemInPack,
@@ -147,6 +147,7 @@
   let activityNotice = $state('')
   let persistenceNotice = $state('')
   let transferNotice = $state('')
+  let timeAcceleration = $state(clock.getAcceleration())
   let developmentGrantAmount = $state(24)
   let pendingPurchase = $state<PendingPurchase | null>(null)
   let purchaseFlowBusy = $state(false)
@@ -304,44 +305,13 @@
         ({ kind, wishDestinationId }) => kind === 'wish' && wishDestinationId,
       )?.wishDestinationId,
     })
-    const tripId = nextTravel.kind === 'planned'
-      ? `${PRIMARY_CAT_ID}-${nextTravel.plan.itinerary.departsAt}`
-      : null
-    const nextPostcards = nextTravel.kind === 'planned'
-      ? reducePostcards(current.postcards, {
-        type: 'timePassed',
-        now,
-        tripId: tripId!,
-        itinerary: nextTravel.plan.itinerary,
-        content: nextTravel.plan.content,
-      })
-      : current.postcards
-    const nextSouvenirs = nextTravel.kind === 'planned'
-      ? reduceSouvenirs(current.souvenirs, {
-        type: 'timePassed',
-        now,
-        tripId: tripId!,
-        itinerary: nextTravel.plan.itinerary,
-        content: nextTravel.plan.content,
-      })
-      : current.souvenirs
-    if (
-      nextEconomy === current.economy
-      && nextTravel === currentTravel
-      && nextPostcards === current.postcards
-      && nextSouvenirs === current.souvenirs
-    ) return current
 
-    return {
-      ...current,
+    return advanceGameEvents(current, {
+      catId: PRIMARY_CAT_ID,
+      now,
       economy: nextEconomy,
-      postcards: nextPostcards,
-      souvenirs: nextSouvenirs,
-      travelByCat: {
-        ...current.travelByCat,
-        [PRIMARY_CAT_ID]: nextTravel,
-      },
-    }
+      travel: nextTravel,
+    })
   }
 
   const openDrawer = async (name: DrawerName) => {
@@ -384,6 +354,9 @@
 
     try {
       const imported = await saveStore.import(JSON.parse(await file.text()))
+      clock.setAcceleration(1)
+      timeAcceleration = 1
+      clock.setNow(imported.clockNow)
       const now = clock.now()
       const settledEconomy = reduceEconomy(imported.economy, {
         type: 'timePassed',
@@ -413,6 +386,8 @@
       type: 'timePassed',
       now,
     })
+    const previousTravel = game.travelByCat[PRIMARY_CAT_ID]
+    const previousSouvenirCount = game.souvenirs.received.length
     const next = advanceGame(game, settledEconomy, now)
     if (next === game) {
       if (persistenceNotice) await saveGame()
@@ -420,6 +395,17 @@
     }
 
     game = next
+    if (
+      previousTravel?.kind === 'planned'
+      && next.travelByCat[PRIMARY_CAT_ID]?.kind === 'home'
+    ) {
+      const souvenirCount = next.souvenirs.received.length
+        - previousSouvenirCount
+      activityNotice = souvenirCount > 0
+        ? `${catName}回家了，还带回 ${souvenirCount} 件纪念品。`
+        : `${catName}回家了，正在熟悉的垫子上休息。`
+      chooseHomeActivity()
+    }
     await saveGame()
   }
 
@@ -436,6 +422,7 @@
 
   const setTimeAcceleration = async (multiplier: number) => {
     clock.setAcceleration(multiplier)
+    timeAcceleration = multiplier
     activityNotice = multiplier === 1
       ? '开发时钟已恢复为实时。'
       : `开发时钟已切换为 ${multiplier.toLocaleString()} 倍。`
@@ -468,8 +455,12 @@
         const saved = await saveStore.load()
         if (cancelled) return
 
+        const realNow = clock.now()
+        const restored = restoreGameState(saved, realNow)
+        clock.setAcceleration(1)
+        timeAcceleration = 1
+        clock.setNow(restored.clockNow)
         const now = clock.now()
-        const restored = restoreGameState(saved, now)
         const settledEconomy = reduceEconomy(
           restored.economy,
           { type: 'timePassed', now },
@@ -698,11 +689,26 @@
     <aside class="developer-clock" aria-label="开发工具">
       <div class="developer-control">
         <span>开发时钟</span>
-        <button type="button" onclick={() => setTimeAcceleration(1)}>实时</button>
-        <button type="button" onclick={() => setTimeAcceleration(3_600)}>
+        <button
+          type="button"
+          class:active={timeAcceleration === 1}
+          aria-pressed={timeAcceleration === 1}
+          onclick={() => setTimeAcceleration(1)}
+        >实时</button>
+        <button
+          type="button"
+          class:active={timeAcceleration === 3_600}
+          aria-pressed={timeAcceleration === 3_600}
+          onclick={() => setTimeAcceleration(3_600)}
+        >
           1 小时/秒
         </button>
-        <button type="button" onclick={() => setTimeAcceleration(86_400)}>
+        <button
+          type="button"
+          class:active={timeAcceleration === 86_400}
+          aria-pressed={timeAcceleration === 86_400}
+          onclick={() => setTimeAcceleration(86_400)}
+        >
           1 天/秒
         </button>
       </div>

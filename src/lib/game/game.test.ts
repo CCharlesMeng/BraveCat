@@ -13,6 +13,7 @@ describe('Game state', () => {
   it('新存档同时建立经济与多猫旅行状态容器', () => {
     expect(createInitialGameState(1_000)).toEqual({
       stateVersion: 1,
+      clockNow: 1_000,
       economy: createInitialEconomyState(1_000),
       travelByCat: {},
       cats: [],
@@ -31,6 +32,7 @@ describe('Game state', () => {
 
     expect(restoreGameState(legacyEconomy, 9_000)).toEqual({
       stateVersion: 1,
+      clockNow: 9_000,
       economy: legacyEconomy,
       travelByCat: {},
       cats: [],
@@ -77,6 +79,7 @@ describe('Game state', () => {
     const valid = createInitialGameState(1_000)
 
     expect(isGameState(valid)).toBe(true)
+    expect(isGameState({ ...valid, clockNow: undefined })).toBe(false)
     expect(isGameState({ ...valid, postcards: undefined })).toBe(false)
     expect(isGameState({ ...valid, souvenirs: undefined })).toBe(false)
     expect(isGameState({
@@ -126,5 +129,22 @@ describe('Game state', () => {
         { itemId: 'blanket', kind: 'toy', disposition: 'return-home' },
       ],
     })
+  })
+
+  it('旧存档曾使用加速时间时不会在刷新后倒退到现实时间', () => {
+    const current = createInitialGameState(1_000)
+    const { clockNow: _clockNow, ...legacyRoot } = current
+    const restored = restoreGameState({
+      ...legacyRoot,
+      economy: {
+        ...legacyRoot.economy,
+        accrual: {
+          ...legacyRoot.economy.accrual,
+          lastAccruedAt: 86_401_000,
+        },
+      },
+    }, 2_000)
+
+    expect(restored.clockNow).toBe(86_401_000)
   })
 })

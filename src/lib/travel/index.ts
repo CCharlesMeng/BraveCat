@@ -135,6 +135,7 @@ export const createTravelLifecycle = (
     getPresence: (state, now) => {
       if (state.kind === 'home') return 'home'
       if (state.kind === 'waiting') return 'waiting'
+      if (now < state.plan.itinerary.departsAt) return 'waiting'
       if (now < state.plan.itinerary.returnsAt) return 'traveling'
       return 'returned'
     },
