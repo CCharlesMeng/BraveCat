@@ -80,6 +80,27 @@ describe('Economy', () => {
     expect(result.windowsillTreats).toBe(0)
   })
 
+  it('开发补给可以连续增加共享小鱼干且不结算窗台', () => {
+    const economy = createEconomy({
+      treats: 5,
+      windowsillTreats: 7,
+    })
+
+    const firstGrant = reduceEconomy(economy, {
+      type: 'treatsGranted',
+      amount: 24,
+    })
+    const secondGrant = reduceEconomy(firstGrant, {
+      type: 'treatsGranted',
+      amount: 24,
+    })
+
+    expect(secondGrant).toEqual({
+      ...economy,
+      treats: 53,
+    })
+  })
+
   it('现实时间倒退时不扣除也不额外生成小鱼干', () => {
     const economy = createEconomy()
 

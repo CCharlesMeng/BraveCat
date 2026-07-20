@@ -66,6 +66,20 @@ for (const imageSrc of Object.values(portraitManifest.portrait.poses)) {
 
 const sceneOutputRoot = path.join(distRoot, 'scenes')
 const serviceWorker = await readFile(path.join(distRoot, 'sw.js'), 'utf8')
+const applicationJavascript = (
+  await Promise.all(
+    (await readdir(path.join(distRoot, 'assets')))
+      .filter((filename) => filename.endsWith('.js'))
+      .map((filename) => readFile(
+        path.join(distRoot, 'assets', filename),
+        'utf8',
+      )),
+  )
+).join('\n')
+assert(
+  !applicationJavascript.includes('treat-grant'),
+  'development treat grant control leaked into the production build',
+)
 if (landmarkManifest.shippingEligible) {
   const expectedScenes = landmarkManifest.destinations.flatMap(
     ({ scenes }) => scenes,

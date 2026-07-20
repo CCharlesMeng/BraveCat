@@ -239,7 +239,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  flex-wrap: wrap;
+  gap: 7px 12px;
   padding: 7px 12px;
   border-bottom: 1px solid rgba(99, 96, 78, 0.16);
   background: rgba(135, 155, 112, 0.12);
@@ -247,19 +248,43 @@ button:focus-visible {
   font-size: 0.62rem;
 }
 
-.developer-clock span {
+.developer-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.developer-clock span,
+.developer-clock label {
   margin-right: 3px;
   color: var(--ink-soft);
   font-weight: 700;
 }
 
-.developer-clock button {
+.developer-clock button,
+.developer-clock input {
   padding: 4px 8px;
   border: 1px solid rgba(90, 103, 73, 0.28);
   border-radius: 999px;
   background: rgba(255, 252, 241, 0.72);
-  cursor: pointer;
+  color: var(--ink);
+  font: inherit;
   font-size: 0.6rem;
+}
+
+.developer-clock button {
+  cursor: pointer;
+}
+
+.developer-clock button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.developer-clock input {
+  width: 58px;
+  border-radius: 8px;
 }
 
 main {
