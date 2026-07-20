@@ -151,6 +151,7 @@ describe('Economy', () => {
       itemId: 'fish-biscuit',
       itemKind: 'snack',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result.ownedItems['fish-biscuit']).toBe(0)
@@ -173,6 +174,7 @@ describe('Economy', () => {
       itemId: 'fish-biscuit',
       itemKind: 'snack',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result).toBe(economy)
@@ -192,6 +194,7 @@ describe('Economy', () => {
       itemId: 'ticket-paris',
       itemKind: 'wish',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result).toBe(economy)
@@ -209,6 +212,7 @@ describe('Economy', () => {
       itemKind: 'wish',
       wishDestinationId: 'france-paris-eiffel-tower',
       capacity: 3,
+      packLocked: false,
     })
 
     expect(result.packs['first-cat']).toEqual([
@@ -256,6 +260,24 @@ describe('Economy', () => {
       itemId: 'small-camera',
       itemKind: 'toy',
       capacity: 3,
+      packLocked: false,
+    })
+
+    expect(result).toBe(economy)
+  })
+
+  it('小猫旅行途中会锁定行囊', () => {
+    const economy = createEconomy({
+      ownedItems: { 'fish-biscuit': 1 },
+    })
+
+    const result = reduceEconomy(economy, {
+      type: 'itemAddedToPack',
+      catId: 'first-cat',
+      itemId: 'fish-biscuit',
+      itemKind: 'snack',
+      capacity: 3,
+      packLocked: true,
     })
 
     expect(result).toBe(economy)

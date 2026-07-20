@@ -21,19 +21,30 @@ export interface PackedItem {
   wishDestinationId?: DestinationId
 }
 
+export type PackItemRejectionReason =
+  | 'pack-locked'
+  | 'item-not-owned'
+  | 'capacity-reached'
+  | 'duplicate-item'
+  | 'wish-already-packed'
+  | 'wish-destination-required'
+
+export interface AddItemToPackAction {
+  type: 'itemAddedToPack'
+  catId: CatId
+  itemId: ItemId
+  itemKind: ItemKind
+  wishDestinationId?: DestinationId
+  capacity: number
+  packLocked: boolean
+}
+
 export type EconomyAction =
   | { type: 'timePassed'; now: number }
   | { type: 'windowsillCollected' }
   | { type: 'treatsGranted'; amount: number }
   | { type: 'itemPurchased'; itemId: ItemId; price: number }
-  | {
-    type: 'itemAddedToPack'
-    catId: CatId
-    itemId: ItemId
-    itemKind: ItemKind
-    wishDestinationId?: DestinationId
-    capacity: number
-  }
+  | AddItemToPackAction
   | { type: 'itemRemovedFromPack'; catId: CatId; itemId: ItemId }
 
 export type EconomyReducer = (
@@ -54,6 +65,32 @@ export const createInitialEconomyState = (now: number): EconomyState => ({
   ownedItems: {},
   packs: {},
 })
+
+export const getPackItemRejectionReason = (
+  state: EconomyState,
+  action: AddItemToPackAction,
+): PackItemRejectionReason | undefined => {
+  const available = state.ownedItems[action.itemId] ?? 0
+  const pack = state.packs[action.catId] ?? []
+
+  if (action.packLocked) return 'pack-locked'
+  if (available === 0) return 'item-not-owned'
+  if (pack.length >= action.capacity) return 'capacity-reached'
+  if (pack.some(({ itemId }) => itemId === action.itemId)) {
+    return 'duplicate-item'
+  }
+  if (
+    action.itemKind === 'wish'
+    && pack.some(({ kind }) => kind === 'wish')
+  ) {
+    return 'wish-already-packed'
+  }
+  if (action.itemKind === 'wish' && !action.wishDestinationId) {
+    return 'wish-destination-required'
+  }
+
+  return undefined
+}
 
 export const reduceEconomy: EconomyReducer = (state, action) => {
   if (action.type === 'treatsGranted') {
@@ -87,17 +124,7 @@ export const reduceEconomy: EconomyReducer = (state, action) => {
   if (action.type === 'itemAddedToPack') {
     const available = state.ownedItems[action.itemId] ?? 0
     const pack = state.packs[action.catId] ?? []
-    const isAlreadyPacked = pack.some(
-      ({ itemId }) => itemId === action.itemId,
-    )
-    const alreadyHasWish = action.itemKind === 'wish'
-      && pack.some(({ kind }) => kind === 'wish')
-    if (
-      available === 0
-      || pack.length >= action.capacity
-      || isAlreadyPacked
-      || alreadyHasWish
-    ) return state
+    if (getPackItemRejectionReason(state, action)) return state
 
     return {
       ...state,
