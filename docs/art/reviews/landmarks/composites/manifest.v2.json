@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "landmark-minho-composite-qa",
+  "generatedAt": "2026-07-20",
+  "status": "approved",
+  "shippingEligible": false,
+  "sourceArchive": "docs/art/archive/asset-archive.v2.json",
+  "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+  "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+  "portraitId": "minho",
+  "sceneCount": 61,
+  "sheetCount": 4,
+  "compositeSetSha256": "feaed47f16f4b9fb7a458b1afa8cb3a5fc6f62cfe69167ac6dec4041ea2bd135",
+  "approval": "docs/art/reviews/landmarks/composites/approval.v2.json",
+  "sheets": [
+    {
+      "repoPath": "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--01-of-04--non-shipping.png",
+      "sha256": "9ff67e97d27939e9bc769d9bc1f1f081e1100abde84239e285cb0fababcdbf62",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16
+    },
+    {
+      "repoPath": "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--02-of-04--non-shipping.png",
+      "sha256": "8fa6c8539627f475c3c6abe5acb1a7c3a27f9446312e43019d780825bc6dd791",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16
+    },
+    {
+      "repoPath": "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--03-of-04--non-shipping.png",
+      "sha256": "942c6bb335b23cf41e754a6c1a495a7229d695a010d4eb36d55c8ccb214029df",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16
+    },
+    {
+      "repoPath": "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png",
+      "sha256": "16244f4beda0c7f67d79e4883298dbe446725ae0cc51f9c65261321a369c8863",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 13
+    }
+  ],
+  "assignments": [
+    {
+      "sceneId": "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+      "sheet": 1,
+      "tile": 1
+    },
+    {
+      "sceneId": "china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+      "sheet": 1,
+      "tile": 2
+    },
+    {
+      "sceneId": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "sheet": 1,
+      "tile": 3
+    },
+    {
+      "sceneId": "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+      "sheet": 1,
+      "tile": 4
+    },
+    {
+      "sceneId": "japan-kyoto-fushimi-inari-taisha--companion-rare--v01",
+      "sheet": 1,
+      "tile": 5
+    },
+    {
+      "sceneId": "singapore-singapore-merlion--day-signature--v01",
+      "sheet": 1,
+      "tile": 6
+    },
+    {
+      "sceneId": "singapore-singapore-merlion--golden-hour--v01",
+      "sheet": 1,
+      "tile": 7
+    },
+    {
+      "sceneId": "singapore-singapore-merlion--companion-rare--v02",
+      "sheet": 1,
+      "tile": 8
+    },
+    {
+      "sceneId": "australia-sydney-opera-house--day-signature--v01",
+      "sheet": 1,
+      "tile": 9
+    },
+    {
+      "sceneId": "australia-sydney-opera-house--golden-hour--v01",
+      "sheet": 1,
+      "tile": 10
+    },
+    {
+      "sceneId": "australia-sydney-opera-house--companion-rare--v01",
+      "sheet": 1,
+      "tile": 11
+    },
+    {
+      "sceneId": "france-paris-eiffel-tower--day-signature--v01",
+      "sheet": 1,
+      "tile": 12
+    },
+    {
+      "sceneId": "france-paris-eiffel-tower--golden-hour--v01",
+      "sheet": 1,
+      "tile": 13
+    },
+    {
+      "sceneId": "united-kingdom-london-tower-bridge--day-signature--v01",
+      "sheet": 1,
+      "tile": 14
+    },
+    {
+      "sceneId": "united-kingdom-london-tower-bridge--golden-hour--v01",
+      "sheet": 1,
+      "tile": 15
+    },
+    {
+      "sceneId": "italy-rome-colosseum--day-signature--v01",
+      "sheet": 1,
+      "tile": 16
+    },
+    {
+      "sceneId": "italy-rome-colosseum--golden-hour--v01",
+      "sheet": 2,
+      "tile": 1
+    },
+    {
+      "sceneId": "egypt-giza-pyramids--day-signature--v01",
+      "sheet": 2,
+      "tile": 2
+    },
+    {
+      "sceneId": "egypt-giza-pyramids--golden-hour--v01",
+      "sheet": 2,
+      "tile": 3
+    },
+    {
+      "sceneId": "egypt-giza-pyramids--companion-rare--v02",
+      "sheet": 2,
+      "tile": 4
+    },
+    {
+      "sceneId": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+      "sheet": 2,
+      "tile": 5
+    },
+    {
+      "sceneId": "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+      "sheet": 2,
+      "tile": 6
+    },
+    {
+      "sceneId": "peru-cusco-machu-picchu--day-signature--v01",
+      "sheet": 2,
+      "tile": 7
+    },
+    {
+      "sceneId": "peru-cusco-machu-picchu--golden-hour--v01",
+      "sheet": 2,
+      "tile": 8
+    },
+    {
+      "sceneId": "china-beijing-mutianyu-great-wall--day-signature--v01",
+      "sheet": 2,
+      "tile": 9
+    },
+    {
+      "sceneId": "china-beijing-mutianyu-great-wall--golden-hour--v01",
+      "sheet": 2,
+      "tile": 10
+    },
+    {
+      "sceneId": "china-shanghai-the-bund--day-signature--v01",
+      "sheet": 2,
+      "tile": 11
+    },
+    {
+      "sceneId": "china-shanghai-the-bund--golden-hour--v01",
+      "sheet": 2,
+      "tile": 12
+    },
+    {
+      "sceneId": "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+      "sheet": 2,
+      "tile": 13
+    },
+    {
+      "sceneId": "china-xian-giant-wild-goose-pagoda--golden-hour--v01",
+      "sheet": 2,
+      "tile": 14
+    },
+    {
+      "sceneId": "china-guilin-elephant-trunk-hill--day-signature--v02",
+      "sheet": 2,
+      "tile": 15
+    },
+    {
+      "sceneId": "china-guilin-elephant-trunk-hill--golden-hour--v02",
+      "sheet": 2,
+      "tile": 16
+    },
+    {
+      "sceneId": "china-guilin-elephant-trunk-hill--companion-rare--v02",
+      "sheet": 3,
+      "tile": 1
+    },
+    {
+      "sceneId": "china-dongguan-xiliubeipo-village--day-signature--v02",
+      "sheet": 3,
+      "tile": 2
+    },
+    {
+      "sceneId": "china-dongguan-xiliubeipo-village--golden-hour--v02",
+      "sheet": 3,
+      "tile": 3
+    },
+    {
+      "sceneId": "china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01",
+      "sheet": 3,
+      "tile": 4
+    },
+    {
+      "sceneId": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01",
+      "sheet": 3,
+      "tile": 5
+    },
+    {
+      "sceneId": "india-agra-taj-mahal--day-signature--v01",
+      "sheet": 3,
+      "tile": 6
+    },
+    {
+      "sceneId": "india-agra-taj-mahal--golden-hour--v01",
+      "sheet": 3,
+      "tile": 7
+    },
+    {
+      "sceneId": "india-agra-taj-mahal--companion-rare--v01",
+      "sheet": 3,
+      "tile": 8
+    },
+    {
+      "sceneId": "turkey-istanbul-hagia-sophia--day-signature--v01",
+      "sheet": 3,
+      "tile": 9
+    },
+    {
+      "sceneId": "turkey-istanbul-hagia-sophia--golden-hour--v01",
+      "sheet": 3,
+      "tile": 10
+    },
+    {
+      "sceneId": "turkey-istanbul-hagia-sophia--companion-rare--v01",
+      "sheet": 3,
+      "tile": 11
+    },
+    {
+      "sceneId": "brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01",
+      "sheet": 3,
+      "tile": 12
+    },
+    {
+      "sceneId": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01",
+      "sheet": 3,
+      "tile": 13
+    },
+    {
+      "sceneId": "south-africa-cape-town-table-mountain--day-signature--v01",
+      "sheet": 3,
+      "tile": 14
+    },
+    {
+      "sceneId": "south-africa-cape-town-table-mountain--golden-hour--v01",
+      "sheet": 3,
+      "tile": 15
+    },
+    {
+      "sceneId": "south-africa-cape-town-table-mountain--companion-rare--v01",
+      "sheet": 3,
+      "tile": 16
+    },
+    {
+      "sceneId": "mexico-yucatan-chichen-itza--day-signature--v01",
+      "sheet": 4,
+      "tile": 1
+    },
+    {
+      "sceneId": "mexico-yucatan-chichen-itza--golden-hour--v01",
+      "sheet": 4,
+      "tile": 2
+    },
+    {
+      "sceneId": "mexico-yucatan-chichen-itza--companion-rare--v01",
+      "sheet": 4,
+      "tile": 3
+    },
+    {
+      "sceneId": "jordan-petra-al-khazneh--day-signature--v02",
+      "sheet": 4,
+      "tile": 4
+    },
+    {
+      "sceneId": "jordan-petra-al-khazneh--golden-hour--v02",
+      "sheet": 4,
+      "tile": 5
+    },
+    {
+      "sceneId": "cambodia-siem-reap-angkor-wat--day-signature--v01",
+      "sheet": 4,
+      "tile": 6
+    },
+    {
+      "sceneId": "cambodia-siem-reap-angkor-wat--golden-hour--v01",
+      "sheet": 4,
+      "tile": 7
+    },
+    {
+      "sceneId": "cambodia-siem-reap-angkor-wat--companion-rare--v01",
+      "sheet": 4,
+      "tile": 8
+    },
+    {
+      "sceneId": "new-zealand-fiordland-milford-sound--day-signature--v01",
+      "sheet": 4,
+      "tile": 9
+    },
+    {
+      "sceneId": "new-zealand-fiordland-milford-sound--golden-hour--v01",
+      "sheet": 4,
+      "tile": 10
+    },
+    {
+      "sceneId": "new-zealand-fiordland-milford-sound--companion-rare--v02",
+      "sheet": 4,
+      "tile": 11
+    },
+    {
+      "sceneId": "morocco-ouarzazate-ait-benhaddou--day-signature--v01",
+      "sheet": 4,
+      "tile": 12
+    },
+    {
+      "sceneId": "morocco-ouarzazate-ait-benhaddou--golden-hour--v01",
+      "sheet": 4,
+      "tile": 13
+    }
+  ],
+  "review": {
+    "decision": "approved",
+    "reviewer": "user",
+    "reviewedAt": "2026-07-20",
+    "checks": [
+      "portrait-grounding",
+      "portrait-scale",
+      "portrait-landmark-separation",
+      "portrait-edge-quality",
+      "pose-and-flip-fit"
+    ]
+  },
+  "remainingGate": "shipping-rights-review"
+}

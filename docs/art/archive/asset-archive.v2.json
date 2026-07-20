@@ -27,29 +27,41 @@
       "activeSceneVariantCount": 13,
       "machineQa": "pass",
       "humanReview": "approved"
+    },
+    {
+      "id": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "sourcePlan": "docs/art/landmark-expansion-v3.json",
+      "sourceManifest": null,
+      "sourceQa": null,
+      "destinationCount": 5,
+      "activeSceneVariantCount": 13,
+      "machineQa": "pass",
+      "humanReview": "approved"
     }
   ],
   "landmarkSet": {
-    "activeSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
-    "visualApproval": "docs/art/reviews/landmarks/visual-approval.v1.json",
-    "compositeApproval": null,
+    "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+    "visualApproval": "docs/art/reviews/landmarks/visual-approval.v2.json",
+    "compositeApproval": "docs/art/reviews/landmarks/composites/approval.v2.json",
     "rightsReviews": [
-      "docs/art/reviews/landmarks/rights-review-v1.md"
+      "docs/art/reviews/landmarks/rights-review-v1.md",
+      "docs/art/reviews/landmarks/rights-review-v3-addendum.md"
     ],
-    "rightsDecision": "docs/art/reviews/landmarks/rights-decision.v1.json"
+    "rightsDecision": "docs/art/reviews/landmarks/rights-decision.v2.json"
   },
   "totals": {
-    "destinationCount": 20,
-    "activeSceneVariantCount": 48,
-    "ordinaryVariantCount": 40,
-    "companionRareVariantCount": 8,
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61,
+    "ordinaryVariantCount": 50,
+    "companionRareVariantCount": 11,
     "approvedPortraitCount": 1,
     "approvedPortraitPoseCount": 6
   },
   "review": {
     "machineQa": "pass",
     "landmarkHumanVisualReview": "approved",
-    "finalRealPortraitCompositeReview": "pending",
+    "finalRealPortraitCompositeReview": "approved",
     "landmarkRightsReview": "review-complete-not-cleared"
   },
   "portrait": {
@@ -188,7 +200,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -222,7 +234,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-forbidden-city-corner-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         }
@@ -266,7 +278,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         },
@@ -300,7 +312,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         },
@@ -334,7 +346,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review"
         }
@@ -378,7 +390,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         },
@@ -412,7 +424,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         },
@@ -446,7 +458,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required"
         }
@@ -490,7 +502,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         },
@@ -524,7 +536,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         },
@@ -558,7 +570,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/australia-sydney-opera-house/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required"
         }
@@ -602,7 +614,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting"
         },
@@ -636,7 +648,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/france-paris-eiffel-tower/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting"
         }
@@ -680,7 +692,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -714,7 +726,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -758,7 +770,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required"
         },
@@ -792,7 +804,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/italy-rome-colosseum/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required"
         }
@@ -836,7 +848,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -870,7 +882,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -904,7 +916,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/egypt-giza-pyramids/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -948,7 +960,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -982,7 +994,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1026,7 +1038,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation"
         },
@@ -1060,7 +1072,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation"
         }
@@ -1104,7 +1116,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -1138,7 +1150,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-beijing-mutianyu-great-wall/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1182,7 +1194,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory"
         },
@@ -1216,7 +1228,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory"
         }
@@ -1260,7 +1272,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         },
@@ -1294,7 +1306,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-xian-giant-wild-goose-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates"
         }
@@ -1338,7 +1350,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -1372,7 +1384,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         },
@@ -1406,7 +1418,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-guilin-elephant-trunk-hill/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance"
         }
@@ -1450,7 +1462,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace"
         },
@@ -1484,7 +1496,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-dongguan-xiliubeipo-village/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace"
         }
@@ -1528,7 +1540,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution"
         },
@@ -1562,7 +1574,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/china-hangzhou-west-lake-leifeng-pagoda/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution"
         }
@@ -1606,7 +1618,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1640,7 +1652,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1674,7 +1686,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/india-agra-taj-mahal/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         }
@@ -1718,7 +1730,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         },
@@ -1752,7 +1764,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         },
@@ -1786,7 +1798,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/turkey-istanbul-hagia-sophia/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review"
         }
@@ -1830,7 +1842,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/brazil-rio-de-janeiro-christ-the-redeemer/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required"
         },
@@ -1864,7 +1876,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/brazil-rio-de-janeiro-christ-the-redeemer/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required"
         }
@@ -1908,7 +1920,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1942,7 +1954,7 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
         },
@@ -1976,9 +1988,501 @@
           "sourceFragment": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
           "machineQa": "pass",
           "humanVisualReview": "approved",
-          "finalRealPortraitCompositeReview": "pending",
+          "finalRealPortraitCompositeReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review"
+        }
+      ]
+    },
+    {
+      "id": "mexico-yucatan-chichen-itza",
+      "name": "奇琴伊察",
+      "batchId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/manifest.fragment.json",
+      "scenes": [
+        {
+          "id": "mexico-yucatan-chichen-itza--day-signature--v01",
+          "semanticId": "mexico-yucatan-chichen-itza--day-signature",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--day-signature--v01.png",
+          "sha256": "53ced667bc88c8eb015ca8d26680393796c29880e88604d5fc86d847823f00bc",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.83,
+            "y": 0.94,
+            "scale": 0.22,
+            "pose": "sit",
+            "flip": true
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required"
+        },
+        {
+          "id": "mexico-yucatan-chichen-itza--golden-hour--v01",
+          "semanticId": "mexico-yucatan-chichen-itza--golden-hour",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--golden-hour--v01.png",
+          "sha256": "70c314b39ab394b22ec4e4e7233ca820b58a657106a7a3aef839aadf3450ef51",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.16,
+            "y": 0.94,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required"
+        },
+        {
+          "id": "mexico-yucatan-chichen-itza--companion-rare--v01",
+          "semanticId": "mexico-yucatan-chichen-itza--companion-rare",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--companion-rare--v01.png",
+          "sha256": "d68d3cd2103395c661205af245a0bd4d38a2dca9236d9ccbfa620fbe7fe5d5cd",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.84,
+            "y": 0.94,
+            "scale": 0.21,
+            "pose": "sit",
+            "flip": true
+          },
+          "hasCompanion": true,
+          "sourceFragment": "docs/art/candidates/landmarks/mexico-yucatan-chichen-itza/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required"
+        }
+      ]
+    },
+    {
+      "id": "jordan-petra-al-khazneh",
+      "name": "佩特拉卡兹尼神殿",
+      "batchId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/manifest.fragment.json",
+      "scenes": [
+        {
+          "id": "jordan-petra-al-khazneh--day-signature--v02",
+          "semanticId": "jordan-petra-al-khazneh--day-signature",
+          "destinationId": "jordan-petra-al-khazneh",
+          "destinationName": "佩特拉卡兹尼神殿",
+          "variantId": "day-signature",
+          "version": "v02",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v02.png",
+          "sha256": "6ca21b56e23c752dcc52a655c1c95c904f4bf5edab1deabd0c607ed4df12ca64",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.27,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates"
+        },
+        {
+          "id": "jordan-petra-al-khazneh--golden-hour--v02",
+          "semanticId": "jordan-petra-al-khazneh--golden-hour",
+          "destinationId": "jordan-petra-al-khazneh",
+          "destinationName": "佩特拉卡兹尼神殿",
+          "variantId": "golden-hour",
+          "version": "v02",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v02.png",
+          "sha256": "4b4ae9b682a092bfbbb22fcb49b44e8b4ec55780ad22a3dcb7997c60e0f3b175",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.72,
+            "y": 0.92,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": true
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/jordan-petra-al-khazneh/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates"
+        }
+      ]
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat",
+      "name": "吴哥窟",
+      "batchId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/manifest.fragment.json",
+      "scenes": [
+        {
+          "id": "cambodia-siem-reap-angkor-wat--day-signature--v01",
+          "semanticId": "cambodia-siem-reap-angkor-wat--day-signature",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.png",
+          "sha256": "39f09f4b5cfdc6582ab73fe1da84e24331b14d706ff65c02b6dc468c04728d64",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required"
+        },
+        {
+          "id": "cambodia-siem-reap-angkor-wat--golden-hour--v01",
+          "semanticId": "cambodia-siem-reap-angkor-wat--golden-hour",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.png",
+          "sha256": "0ea5e80dc283063a1af0976a1ace078961bfd294c85759db2043657ba03a3b74",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required"
+        },
+        {
+          "id": "cambodia-siem-reap-angkor-wat--companion-rare--v01",
+          "semanticId": "cambodia-siem-reap-angkor-wat--companion-rare",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.png",
+          "sha256": "31f94a0081aaacb541b6f6db65702c40f8aba53d133bbbdb707df9759feb00e7",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": true,
+          "sourceFragment": "docs/art/candidates/landmarks/cambodia-siem-reap-angkor-wat/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound",
+      "name": "米尔福德峡湾",
+      "batchId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+      "scenes": [
+        {
+          "id": "new-zealand-fiordland-milford-sound--day-signature--v01",
+          "semanticId": "new-zealand-fiordland-milford-sound--day-signature",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--day-signature--v01.png",
+          "sha256": "15bd7c19291cb670a422feaf5b909b6c91bff25dfbf1b64de86f14c5db3b4796",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review"
+        },
+        {
+          "id": "new-zealand-fiordland-milford-sound--golden-hour--v01",
+          "semanticId": "new-zealand-fiordland-milford-sound--golden-hour",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png",
+          "sha256": "1958c28261d22b6ad4b9ae5bfcadcc7739b5d704cba4502b97e0fa2e60827781",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review"
+        },
+        {
+          "id": "new-zealand-fiordland-milford-sound--companion-rare--v02",
+          "semanticId": "new-zealand-fiordland-milford-sound--companion-rare",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "companion-rare",
+          "version": "v02",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.png",
+          "sha256": "c2cfb56c5f8432be411c7c3da3ef9405e86b0ed27ccb2b906b033c2400ab0f19",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": true,
+          "sourceFragment": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review"
+        }
+      ]
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou",
+      "name": "艾本哈杜村",
+      "batchId": "miaoyouji-landmark-expansion-v3-2026-07-20",
+      "status": "candidate",
+      "shippingEligible": false,
+      "sourceFragment": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/manifest.fragment.json",
+      "scenes": [
+        {
+          "id": "morocco-ouarzazate-ait-benhaddou--day-signature--v01",
+          "semanticId": "morocco-ouarzazate-ait-benhaddou--day-signature",
+          "destinationId": "morocco-ouarzazate-ait-benhaddou",
+          "destinationName": "艾本哈杜村",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png",
+          "sha256": "b033052ad70a23918899607c4aef50a7765b538e111519fe190981d94da56635",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.175,
+            "y": 0.94,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "morocco-counsel-and-authority-determination-required"
+        },
+        {
+          "id": "morocco-ouarzazate-ait-benhaddou--golden-hour--v01",
+          "semanticId": "morocco-ouarzazate-ait-benhaddou--golden-hour",
+          "destinationId": "morocco-ouarzazate-ait-benhaddou",
+          "destinationName": "艾本哈杜村",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "candidate",
+          "shippingEligible": false,
+          "imageSrc": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png",
+          "sha256": "f63a2da2ebf0ef7432b307453f49de3743fcef2c969661098b2fe7b4484aad6d",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "png",
+            "bitDepth": 8,
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "compositionSlot": {
+            "x": 0.83,
+            "y": 0.94,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": true
+          },
+          "hasCompanion": false,
+          "sourceFragment": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/manifest.fragment.json",
+          "machineQa": "pass",
+          "humanVisualReview": "approved",
+          "finalRealPortraitCompositeReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "morocco-counsel-and-authority-determination-required"
         }
       ]
     }

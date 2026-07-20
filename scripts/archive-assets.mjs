@@ -689,47 +689,67 @@ if (landmarkCompositeApproval) {
   }
 }
 
-const landmarkRightsReviewContents = await readFile(
-  path.join(root, landmarkRightsReviewPath),
+const landmarkRightsDecision = await readOptionalJson(
+  landmarkRightsDecisionPath,
 )
-const landmarkRightsDecision = await readJson(landmarkRightsDecisionPath)
+const landmarkRightsReviewRecords = landmarkRightsDecision
+  ? (
+      landmarkRightsDecision.sourceReviews
+      ?? [landmarkRightsDecision.sourceReview]
+    ).filter(Boolean)
+  : []
+const landmarkRightsReviewContents = await Promise.all(
+  landmarkRightsReviewRecords.map(({ path: reviewPath }) => (
+    readFile(path.join(root, reviewPath))
+  )),
+)
 const rightsByDestination = new Map(
-  landmarkRightsDecision.destinations?.map((destination) => (
+  landmarkRightsDecision?.destinations?.map((destination) => (
     [destination.id, destination]
   )) ?? [],
 )
-let landmarkRightsReview = 'invalid'
-if (
-  landmarkRightsDecision.schemaVersion === 1
-  && landmarkRightsDecision.decision === 'review-complete-not-cleared'
-  && landmarkRightsDecision.shippingEligible === false
-  && landmarkRightsDecision.sourceReview?.path === landmarkRightsReviewPath
-  && landmarkRightsDecision.sourceReview?.sha256
-    === sha256(landmarkRightsReviewContents)
-  && landmarkRightsDecision.scope?.activeSceneSetSha256
-    === activeSceneSetSha256
-  && landmarkRightsDecision.scope?.destinationCount === landmarks.length
-  && landmarkRightsDecision.scope?.activeSceneVariantCount === scenes.length
-  && rightsByDestination.size === landmarks.length
-  && landmarks.every((destination) => {
-    const rights = rightsByDestination.get(destination.id)
-    return rights
-      && rights.sceneCount === destination.scenes.length
-      && rights.shippingEligible === false
-      && ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
-  })
-) {
-  landmarkRightsReview = 'review-complete-not-cleared'
-} else {
-  errors.push(`${landmarkRightsDecisionPath}: decision does not match active landmarks`)
+let landmarkRightsReview = 'pending'
+if (landmarkRightsDecision) {
+  if (
+    landmarkRightsDecision.schemaVersion >= 1
+    && landmarkRightsDecision.decision === 'review-complete-not-cleared'
+    && landmarkRightsDecision.shippingEligible === false
+    && landmarkRightsReviewRecords.length > 0
+    && landmarkRightsReviewRecords.every((record, index) => (
+      record?.path
+      && record.sha256 === sha256(landmarkRightsReviewContents[index])
+    ))
+    && landmarkRightsDecision.scope?.activeSceneSetSha256
+      === activeSceneSetSha256
+    && landmarkRightsDecision.scope?.destinationCount === landmarks.length
+    && landmarkRightsDecision.scope?.activeSceneVariantCount === scenes.length
+    && (
+      landmarkRightsDecision.scope?.activeSceneContentSetSha256 === undefined
+      || landmarkRightsDecision.scope.activeSceneContentSetSha256
+        === activeSceneContentSetSha256
+    )
+    && rightsByDestination.size === landmarks.length
+    && landmarks.every((destination) => {
+      const rights = rightsByDestination.get(destination.id)
+      return rights
+        && rights.sceneCount === destination.scenes.length
+        && rights.shippingEligible === false
+        && ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
+    })
+  ) {
+    landmarkRightsReview = 'review-complete-not-cleared'
+  } else {
+    landmarkRightsReview = 'invalid'
+    errors.push(`${landmarkRightsDecisionPath}: decision does not match active landmarks`)
+  }
 }
 
 for (const scene of scenes) {
   const rights = rightsByDestination.get(scene.destinationId)
   scene.humanVisualReview = landmarkHumanVisualReview
   scene.finalRealPortraitCompositeReview = finalRealPortraitCompositeReview
-  scene.rightsReview = rights?.risk ?? 'invalid'
-  scene.rightsDisposition = rights?.disposition ?? 'invalid'
+  scene.rightsReview = rights?.risk ?? 'pending'
+  scene.rightsDisposition = rights?.disposition ?? 'pending'
 }
 
 const archive = {
@@ -760,8 +780,10 @@ const archive = {
     compositeApproval: landmarkCompositeApproval
       ? landmarkCompositeApprovalPath
       : null,
-    rightsReview: landmarkRightsReviewPath,
-    rightsDecision: landmarkRightsDecisionPath,
+    rightsReviews: landmarkRightsDecision
+      ? landmarkRightsReviewRecords.map(({ path: reviewPath }) => reviewPath)
+      : [],
+    rightsDecision: landmarkRightsDecision ? landmarkRightsDecisionPath : null,
   },
   totals: {
     destinationCount: landmarks.length,

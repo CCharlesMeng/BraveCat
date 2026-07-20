@@ -1,17 +1,12 @@
 # Landmark candidate review index v3
 
-All 61 active scene candidates passed user visual review and were promoted for runtime integration. All 61 Minho composites also passed user review. The rights review is complete but did not clear shipping: 7 destinations are blocked, 3 are high-risk holds, and all scenes remain behind open global provenance gates.
+All 61 active scene candidates are non-shipping and pending human approval. Machine QA does not authorize promotion; human visual review, rights review, and final real-Portrait composite review remain pending.
 
-The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual approval v2 covers the complete 61-scene active set, including all 13 v3 additions.
+The previously approved 48-scene v2 subset is preserved byte-for-byte. Approval v1 does not cover the 13 new v3 scenes or the expanded active-set hash.
 
 - [Expansion plan](../../landmark-expansion-v3.json)
 - [Combined candidate manifest](manifest.candidates.v3.json)
 - [Machine QA report](qa-report.v3.json)
-- [Visual approval record](../../reviews/landmarks/visual-approval.v2.json)
-- [Rights and provenance review](../../reviews/landmarks/rights-review-v3-addendum.md)
-- [Machine-checkable rights decision](../../reviews/landmarks/rights-decision.v2.json)
-- [Composite approval record](../../reviews/landmarks/composites/approval.v2.json)
-- [Production manifest](../../production/landmarks/manifest.v2.json)
 - Active-set ID hash: `82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada`
 - Active-set content hash: `a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525`
 
@@ -113,27 +108,27 @@ The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual ap
    - [companion-rare · v01 · companion · previously visual approved](south-africa-cape-town-table-mountain/scene--south-africa-cape-town-table-mountain--companion-rare--v01.png)
    - [destination contact sheet](south-africa-cape-town-table-mountain/contact-sheet--south-africa-cape-town-table-mountain--non-final.png)
 21. **奇琴伊察** (`mexico-yucatan-chichen-itza`) — 3 active candidates
-   - [day-signature · v01 · visual approved](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--day-signature--v01.png)
-   - [golden-hour · v01 · visual approved](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--golden-hour--v01.png)
-   - [companion-rare · v01 · companion · visual approved](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--companion-rare--v01.png)
+   - [day-signature · v01 · pending review](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--day-signature--v01.png)
+   - [golden-hour · v01 · pending review](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--golden-hour--v01.png)
+   - [companion-rare · v01 · companion · pending review](mexico-yucatan-chichen-itza/scene--mexico-yucatan-chichen-itza--companion-rare--v01.png)
    - [destination contact sheet](mexico-yucatan-chichen-itza/contact-sheet--mexico-yucatan-chichen-itza--non-final.png)
 22. **佩特拉卡兹尼神殿** (`jordan-petra-al-khazneh`) — 2 active candidates
-   - [day-signature · v02 · visual approved](jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v02.png)
-   - [golden-hour · v02 · visual approved](jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v02.png)
+   - [day-signature · v02 · pending review](jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--day-signature--v02.png)
+   - [golden-hour · v02 · pending review](jordan-petra-al-khazneh/scene--jordan-petra-al-khazneh--golden-hour--v02.png)
    - [destination contact sheet](jordan-petra-al-khazneh/contact-sheet--jordan-petra-al-khazneh--non-final.png)
 23. **吴哥窟** (`cambodia-siem-reap-angkor-wat`) — 3 active candidates
-   - [day-signature · v01 · visual approved](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.png)
-   - [golden-hour · v01 · visual approved](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.png)
-   - [companion-rare · v01 · companion · visual approved](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.png)
+   - [day-signature · v01 · pending review](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.png)
+   - [golden-hour · v01 · pending review](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.png)
+   - [companion-rare · v01 · companion · pending review](cambodia-siem-reap-angkor-wat/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.png)
    - [destination contact sheet](cambodia-siem-reap-angkor-wat/contact-sheet--cambodia-siem-reap-angkor-wat--non-final.png)
 24. **米尔福德峡湾** (`new-zealand-fiordland-milford-sound`) — 3 active candidates
-   - [day-signature · v01 · visual approved](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--day-signature--v01.png)
-   - [golden-hour · v01 · visual approved](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png)
-   - [companion-rare · v02 · companion · visual approved](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.png)
+   - [day-signature · v01 · pending review](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--day-signature--v01.png)
+   - [golden-hour · v01 · pending review](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png)
+   - [companion-rare · v02 · companion · pending review](new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.png)
    - [destination contact sheet](new-zealand-fiordland-milford-sound/contact-sheet--new-zealand-fiordland-milford-sound--non-final.png)
 25. **艾本哈杜村** (`morocco-ouarzazate-ait-benhaddou`) — 2 active candidates
-   - [day-signature · v01 · visual approved](morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png)
-   - [golden-hour · v01 · visual approved](morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png)
+   - [day-signature · v01 · pending review](morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png)
+   - [golden-hour · v01 · pending review](morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png)
    - [destination contact sheet](morocco-ouarzazate-ait-benhaddou/contact-sheet--morocco-ouarzazate-ait-benhaddou--non-final.png)
 
 ## Required decisions
@@ -144,11 +139,3 @@ The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual ap
 - Then generate and review combined Minho composites.
 - Rights review remains pending for every new destination; no v3 scene is shipping eligible.
 
-## Minho composite QA v2
-
-1. [Composite sheet 1 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--01-of-04--non-shipping.png)
-2. [Composite sheet 2 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--02-of-04--non-shipping.png)
-3. [Composite sheet 3 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--03-of-04--non-shipping.png)
-4. [Composite sheet 4 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png)
-
-Composite review decision: **approved by user**.

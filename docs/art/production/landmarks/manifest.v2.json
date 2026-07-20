@@ -1,51 +1,65 @@
 {
   "schemaVersion": 1,
   "manifestKind": "landmark-production",
-  "catalogId": "miaoyouji-landmarks-production-v1-2026-07-20",
+  "catalogId": "miaoyouji-landmarks-production-v2-2026-07-20",
   "generatedAt": "2026-07-20",
-  "status": "visual-and-rights-reviewed-not-cleared-runtime-integrated",
+  "status": "visual-composite-and-rights-reviewed-not-cleared-runtime-integrated",
   "shippingEligible": false,
   "source": {
     "candidateManifest": {
-      "path": "docs/art/candidates/landmarks/manifest.candidates.v2.json",
-      "sha256": "236daa4a5c6a947d451447d986e5e4b981c8e8791a82f77cc711e19c08f23cd0",
-      "planId": "miaoyouji-landmarks-combined-v2-2026-07-20"
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+      "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c",
+      "planId": "miaoyouji-landmarks-combined-v3-2026-07-20"
     },
     "candidateQa": {
-      "path": "docs/art/candidates/landmarks/qa-report.v2.json",
-      "reportedOverallStatus": "fail",
-      "note": "The recorded v2 failure is the historical v1 review-index snapshot check; promotion revalidates every active source image and composition field."
+      "path": "docs/art/candidates/landmarks/qa-report.v3.json",
+      "reportedOverallStatus": "pass"
     },
     "visualApproval": {
-      "path": "docs/art/reviews/landmarks/visual-approval.v1.json",
-      "sha256": "fbf6fb2760c2b467d67dbed2e855cf72be416c2f02a3255b6c4e48b08880ce85",
-      "approvedArchiveSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b"
+      "path": "docs/art/reviews/landmarks/visual-approval.v2.json",
+      "sha256": "4b9ab2661fb5f13a4745da71fb5c796174d2ff7d7e07553c452dfc2cabf64f3f",
+      "approvedArchiveSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada"
     },
     "approvedArchive": {
-      "path": "docs/art/archive/asset-archive.v1.json",
-      "sha256": "799a8fc935f5b8e0fd6a910e301809a0d5061bc3dfcc1533971bee647cdebce0"
+      "path": "docs/art/archive/asset-archive.v2.json",
+      "sha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3"
     },
     "rightsReview": {
       "reviews": [
         {
           "path": "docs/art/reviews/landmarks/rights-review-v1.md",
           "sha256": "9bbec7b21f4c1eaef930c18628870bebd7a93251e39e9cefa1e4b45a3d49008e"
+        },
+        {
+          "path": "docs/art/reviews/landmarks/rights-review-v3-addendum.md",
+          "sha256": "d764996981da8bf1014f3c7f6812110ef12a009a921bdf9ea3b124cffbcbe787"
         }
       ],
-      "decisionRecord": "docs/art/reviews/landmarks/rights-decision.v1.json",
-      "decisionRecordSha256": "c1d7bc972c863f354599358ca97dfa5cf3dceb3e637d4b4290ecc7bbe7035511",
+      "decisionRecord": "docs/art/reviews/landmarks/rights-decision.v2.json",
+      "decisionRecordSha256": "b371c8d6e1fdca2490b63382c9e7e692e9ab04d6a83374e553725da7997730c6",
       "decision": "review-complete-not-cleared",
+      "reviewedAt": "2026-07-20"
+    },
+    "compositeQa": {
+      "path": "docs/art/reviews/landmarks/composites/manifest.v2.json",
+      "sha256": "c7bfc32ee0dd21150702b5524192fae60681c94e0134b0747b64b410f41a54f9",
+      "compositeSetSha256": "feaed47f16f4b9fb7a458b1afa8cb3a5fc6f62cfe69167ac6dec4041ea2bd135"
+    },
+    "compositeApproval": {
+      "path": "docs/art/reviews/landmarks/composites/approval.v2.json",
+      "sha256": "ec1a2fe690ed1b15610f752986ed4dc549d4f8d0c6bbec0f71fd82fc54fe2481",
+      "reviewer": "user",
       "reviewedAt": "2026-07-20"
     }
   },
   "scope": {
-    "destinationCount": 20,
-    "activeSceneVariantCount": 48,
-    "ordinaryVariantCount": 40,
-    "companionRareVariantCount": 8,
-    "versionedSceneSetSha256": "fb0ecded8a9efa7351ad87c166072f3ca7ff54dbffceefc9d9cac96e77f7fd7b",
-    "productionMasterContentSetSha256": "424a62910fd3a30686b55201b2085712bb863050555e587f1065dc5aba5c0024",
-    "runtimeContentSetSha256": "a71edb2fe9fd91ee0ce94b90be43245ab39f2a8a471206756f2d5d6acfeee747"
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61,
+    "ordinaryVariantCount": 50,
+    "companionRareVariantCount": 11,
+    "versionedSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "productionMasterContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+    "runtimeContentSetSha256": "d5fed2c32dcc54b6a68dd3ae308237b1ef29a618ca4eeb53b34fb649956aa229"
   },
   "review": {
     "humanVisualReview": {
@@ -67,28 +81,27 @@
       ],
       "riskSummary": {
         "low": {
-          "destinationCount": 6,
-          "sceneCount": 13
+          "destinationCount": 7,
+          "sceneCount": 15
         },
         "medium": {
-          "destinationCount": 7,
-          "sceneCount": 19
+          "destinationCount": 8,
+          "sceneCount": 22
         },
         "high": {
-          "destinationCount": 2,
-          "sceneCount": 4
+          "destinationCount": 3,
+          "sceneCount": 6
         },
         "blocked": {
-          "destinationCount": 5,
-          "sceneCount": 12
+          "destinationCount": 7,
+          "sceneCount": 18
         }
       }
     },
-    "finalRealPortraitCompositeReview": "pending",
+    "finalRealPortraitCompositeReview": "approved",
     "shippingApproval": "blocked-pending-remaining-gates"
   },
   "remainingGates": [
-    "final-real-minho-composite-review",
     "global-provenance-remediation",
     "destination-specific-rights-remediation",
     "qualified-counsel-or-permission-for-high-and-blocked-destinations",
@@ -97,7 +110,7 @@
   "runtime": {
     "productionMasterRoot": "docs/art/production/landmarks/scenes",
     "sceneRoot": "public/scenes",
-    "generatedCatalog": "docs/art/production/landmarks/landmarkCatalog.v1.generated.ts",
+    "generatedCatalog": "src/lib/assets/landmarkCatalog.generated.ts",
     "productionFilenameGrammar": "scene--{destination-id}--{variant-id}--vNN.png",
     "runtimeFilenameGrammar": "scene--{destination-id}--{variant-id}--vNN.webp",
     "semanticSceneIdsExcludeVersion": true,
@@ -107,9 +120,9 @@
       "webpQuality": 88,
       "webpEffort": 6,
       "smartSubsample": true,
-      "productionMasterBytes": 79527014,
-      "runtimeDerivativeBytes": 8418052,
-      "reductionPercent": 89.4,
+      "productionMasterBytes": 103123153,
+      "runtimeDerivativeBytes": 11364700,
+      "reductionPercent": 89,
       "loadingPolicy": "on-demand-cache-first",
       "precached": false
     }
@@ -166,6 +179,36 @@
       "referenceUse": "consulted landscape geometry sources only; no source file retained",
       "shippingGate": "reference-rights-and-adaptation-review-required",
       "warning": "Rights-reserved, CC BY-SA, CC0, municipal, tourism, SANParks, and NASA sources were consulted for factual geometry only; no source photographs were retained and rights applicability remains pending review."
+    },
+    {
+      "destinationId": "mexico-yucatan-chichen-itza",
+      "referenceUse": "primary and official sources consulted for factual geometry, setting, and authorized Companion anatomy only; no restricted source photograph retained",
+      "shippingGate": "reference-rights-cultural-and-adaptation-review-required",
+      "warning": "Do not infer permission to reuse media displayed by UNESCO, INAH, Cornell, Macaulay Library, or eBird. Obtain legal review before commercial release to determine whether Mexican or INAH monument-reproduction authorization, fees, notices, or attribution apply. The Yucatan Jay is regionally plausible from the cited habitat and range account, but exact occurrence on El Castillo's plaza was not established by the consulted sources."
+    },
+    {
+      "destinationId": "jordan-petra-al-khazneh",
+      "referenceUse": "primary and official sources consulted for factual geometry, setting, and authorized Companion anatomy only; no restricted source photograph retained",
+      "shippingGate": "reference-rights-cultural-and-adaptation-review-required",
+      "warning": "Official-site consultation does not grant reuse rights to PDTRA or Department of Antiquities photographs, drawings, scans, or page designs. UNESCO's CC BY-SA IGO 3.0 notice applies to its written description and was not assumed to cover gallery media. Model-output provenance, accidental similarity to protected photographs or illustrations, cultural-heritage/site rules, and Jordan-specific commercial-use restrictions remain unreviewed. No user visual approval or rights approval is inferred."
+    },
+    {
+      "destinationId": "cambodia-siem-reap-angkor-wat",
+      "referenceUse": "primary and official sources consulted for factual geometry, setting, and authorized Companion anatomy only; no restricted source photograph retained",
+      "shippingGate": "reference-rights-cultural-and-adaptation-review-required",
+      "warning": "Source terms, cultural context, and adaptation risk remain pending formal rights review before shipping."
+    },
+    {
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "referenceUse": "primary and official sources consulted for factual geometry, setting, and authorized Companion anatomy only; no restricted source photograph retained",
+      "shippingGate": "reference-rights-cultural-and-adaptation-review-required",
+      "warning": "Prefer Piopiotahi / Milford Sound or a product-wide form approved through cultural review. Do not present one origin account for Piopiotahi as uncontested; Te Rūnanga o Ngāi Tahu records multiple accounts. Do not turn Tū Te Rakiwhānoa narratives, waka, adze, pou, pounamu, or invented Māori-inspired motifs into decoration without mana-whenua-led art direction. Do not add an unverified Māori alternate name for Mitre Peak. Do not use UNESCO or World Heritage emblems or imply endorsement."
+    },
+    {
+      "destinationId": "morocco-ouarzazate-ait-benhaddou",
+      "referenceUse": "primary and official sources consulted for factual geometry, setting, and authorized Companion anatomy only; no restricted source photograph retained",
+      "shippingGate": "reference-rights-cultural-and-adaptation-review-required",
+      "warning": "Aït Ben Haddou is a traditional habitat and living heritage place, not an empty fantasy ruin or merely a film set; do not promote imagery that exoticizes residents, romanticizes abandonment, or asserts an undocumented current damage/restoration state."
     }
   ],
   "destinations": [
@@ -239,7 +282,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-beijing-forbidden-city-corner-tower--golden-hour",
@@ -303,7 +346,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -377,7 +420,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "japan-kyoto-fushimi-inari-taisha--golden-hour",
@@ -441,7 +484,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "japan-kyoto-fushimi-inari-taisha--companion-rare",
@@ -514,7 +557,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-site-policy-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -588,7 +631,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "singapore-singapore-merlion--golden-hour",
@@ -652,7 +695,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "singapore-singapore-merlion--companion-rare",
@@ -725,7 +768,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "stb-permission-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -799,7 +842,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "australia-sydney-opera-house--golden-hour",
@@ -863,7 +906,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "australia-sydney-opera-house--companion-rare",
@@ -936,7 +979,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "soht-license-or-counsel-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1010,7 +1053,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "france-paris-eiffel-tower--golden-hour",
@@ -1074,7 +1117,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-if-no-protected-lighting",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1148,7 +1191,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "united-kingdom-london-tower-bridge--golden-hour",
@@ -1212,7 +1255,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1286,7 +1329,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "italy-rome-colosseum--golden-hour",
@@ -1350,7 +1393,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "park-authorization-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1424,7 +1467,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "egypt-giza-pyramids--golden-hour",
@@ -1488,7 +1531,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "egypt-giza-pyramids--companion-rare",
@@ -1561,7 +1604,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1635,7 +1678,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "united-states-new-york-brooklyn-bridge--golden-hour",
@@ -1699,7 +1742,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1773,7 +1816,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "peru-cusco-machu-picchu--golden-hour",
@@ -1837,7 +1880,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "peru-counsel-and-authority-scope-confirmation",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -1911,7 +1954,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-beijing-mutianyu-great-wall--golden-hour",
@@ -1975,7 +2018,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2049,7 +2092,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-shanghai-the-bund--golden-hour",
@@ -2113,7 +2156,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-building-signage-inventory",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2187,7 +2230,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-xian-giant-wild-goose-pagoda--golden-hour",
@@ -2251,7 +2294,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "low",
           "rightsDisposition": "plausible-after-common-gates",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2325,7 +2368,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-guilin-elephant-trunk-hill--golden-hour",
@@ -2389,7 +2432,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-guilin-elephant-trunk-hill--companion-rare",
@@ -2462,7 +2505,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-cc-compliance",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2536,7 +2579,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-dongguan-xiliubeipo-village--golden-hour",
@@ -2600,7 +2643,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "huawei-permission-or-replace",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2674,7 +2717,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "china-hangzhou-west-lake-leifeng-pagoda--golden-hour",
@@ -2738,7 +2781,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "high",
           "rightsDisposition": "china-counsel-and-cc-adaptation-resolution",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -2812,7 +2855,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "india-agra-taj-mahal--golden-hour",
@@ -2876,7 +2919,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "india-agra-taj-mahal--companion-rare",
@@ -2949,7 +2992,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -3023,7 +3066,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "turkey-istanbul-hagia-sophia--golden-hour",
@@ -3087,7 +3130,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "turkey-istanbul-hagia-sophia--companion-rare",
@@ -3160,7 +3203,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-site-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -3234,7 +3277,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour",
@@ -3298,7 +3341,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "blocked",
           "rightsDisposition": "sanctuary-license-or-brazil-counsel-required",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     },
@@ -3372,7 +3415,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "south-africa-cape-town-table-mountain--golden-hour",
@@ -3436,7 +3479,7 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
         },
         {
           "id": "south-africa-cape-town-table-mountain--companion-rare",
@@ -3509,7 +3552,916 @@
           "humanVisualReview": "approved",
           "rightsReview": "medium",
           "rightsDisposition": "plausible-after-source-map-and-similarity-review",
-          "finalRealPortraitCompositeReview": "pending"
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "mexico-yucatan-chichen-itza",
+      "name": "奇琴伊察",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "inah-permission-registration-legend-and-counsel-required",
+      "scenes": [
+        {
+          "id": "mexico-yucatan-chichen-itza--day-signature",
+          "candidateRevisionId": "mexico-yucatan-chichen-itza--day-signature--v01",
+          "sourceCandidateId": "mexico-yucatan-chichen-itza--day-signature",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.webp",
+          "sha256": "1c46c2a9cc9cb218d98914ef5671e402de9f9c29d0586e59cdc8c51958ba7002",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.png",
+            "sha256": "53ced667bc88c8eb015ca8d26680393796c29880e88604d5fc86d847823f00bc",
+            "byteLength": 1756177,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.webp",
+            "sha256": "1c46c2a9cc9cb218d98914ef5671e402de9f9c29d0586e59cdc8c51958ba7002",
+            "byteLength": 189306,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.83,
+            "y": 0.94,
+            "scale": 0.22,
+            "pose": "sit",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.68,
+            "y": 0.71,
+            "width": 0.3,
+            "height": 0.24
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "mexico-yucatan-chichen-itza--golden-hour",
+          "candidateRevisionId": "mexico-yucatan-chichen-itza--golden-hour--v01",
+          "sourceCandidateId": "mexico-yucatan-chichen-itza--golden-hour",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.webp",
+          "sha256": "dacb3602c7a67964ad1146082f23447754e414e5f5f1ad2f8c931167d0a8b3fa",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.png",
+            "sha256": "70c314b39ab394b22ec4e4e7233ca820b58a657106a7a3aef839aadf3450ef51",
+            "byteLength": 1809952,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.webp",
+            "sha256": "dacb3602c7a67964ad1146082f23447754e414e5f5f1ad2f8c931167d0a8b3fa",
+            "byteLength": 216594,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.16,
+            "y": 0.94,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.61,
+            "width": 0.26,
+            "height": 0.33
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "mexico-yucatan-chichen-itza--companion-rare",
+          "candidateRevisionId": "mexico-yucatan-chichen-itza--companion-rare--v01",
+          "sourceCandidateId": "mexico-yucatan-chichen-itza--companion-rare",
+          "destinationId": "mexico-yucatan-chichen-itza",
+          "destinationName": "奇琴伊察",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.webp",
+          "sha256": "2b140614640741cce9d56f1b520307a1ba9ff5070f07739e420a859e51bbcdb0",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.png",
+            "sha256": "d68d3cd2103395c661205af245a0bd4d38a2dca9236d9ccbfa620fbe7fe5d5cd",
+            "byteLength": 1765151,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.webp",
+            "sha256": "2b140614640741cce9d56f1b520307a1ba9ff5070f07739e420a859e51bbcdb0",
+            "byteLength": 188864,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.84,
+            "y": 0.94,
+            "scale": 0.21,
+            "pose": "sit",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.7,
+            "y": 0.72,
+            "width": 0.28,
+            "height": 0.23
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "yucatan-jay",
+            "count": 1,
+            "role": "scene-only Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "inah-permission-registration-legend-and-counsel-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "jordan-petra-al-khazneh",
+      "name": "佩特拉卡兹尼神殿",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "low",
+      "rightsDisposition": "plausible-after-common-gates",
+      "scenes": [
+        {
+          "id": "jordan-petra-al-khazneh--day-signature",
+          "candidateRevisionId": "jordan-petra-al-khazneh--day-signature--v02",
+          "sourceCandidateId": "jordan-petra-al-khazneh--day-signature",
+          "destinationId": "jordan-petra-al-khazneh",
+          "destinationName": "佩特拉卡兹尼神殿",
+          "variantId": "day-signature",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--jordan-petra-al-khazneh--day-signature--v02.webp",
+          "repoPath": "public/scenes/scene--jordan-petra-al-khazneh--day-signature--v02.webp",
+          "sha256": "66721ae2668ff9387daf5318063f5916e7f9752e9cd5cd9ad20db4f64cdaaa1a",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--jordan-petra-al-khazneh--day-signature--v02.png",
+            "sha256": "6ca21b56e23c752dcc52a655c1c95c904f4bf5edab1deabd0c607ed4df12ca64",
+            "byteLength": 2093853,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--jordan-petra-al-khazneh--day-signature--v02.webp",
+            "imageSrc": "/scenes/scene--jordan-petra-al-khazneh--day-signature--v02.webp",
+            "sha256": "66721ae2668ff9387daf5318063f5916e7f9752e9cd5cd9ad20db4f64cdaaa1a",
+            "byteLength": 322340,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.27,
+            "y": 0.92,
+            "scale": 0.3,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.12,
+            "y": 0.6,
+            "width": 0.3,
+            "height": 0.33
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "jordan-petra-al-khazneh--golden-hour",
+          "candidateRevisionId": "jordan-petra-al-khazneh--golden-hour--v02",
+          "sourceCandidateId": "jordan-petra-al-khazneh--golden-hour",
+          "destinationId": "jordan-petra-al-khazneh",
+          "destinationName": "佩特拉卡兹尼神殿",
+          "variantId": "golden-hour",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.webp",
+          "repoPath": "public/scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.webp",
+          "sha256": "91a82981979798d6f9b4d22e0fdf949abe234b1296fdb94d7d09b98586f47a85",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.png",
+            "sha256": "4b4ae9b682a092bfbbb22fcb49b44e8b4ec55780ad22a3dcb7997c60e0f3b175",
+            "byteLength": 1979777,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.webp",
+            "imageSrc": "/scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.webp",
+            "sha256": "91a82981979798d6f9b4d22e0fdf949abe234b1296fdb94d7d09b98586f47a85",
+            "byteLength": 290222,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.72,
+            "y": 0.92,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.59,
+            "y": 0.62,
+            "width": 0.26,
+            "height": 0.31
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "low",
+          "rightsDisposition": "plausible-after-common-gates",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat",
+      "name": "吴哥窟",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "blocked",
+      "rightsDisposition": "apsara-and-mcfa-written-approval-required",
+      "scenes": [
+        {
+          "id": "cambodia-siem-reap-angkor-wat--day-signature",
+          "candidateRevisionId": "cambodia-siem-reap-angkor-wat--day-signature--v01",
+          "sourceCandidateId": "cambodia-siem-reap-angkor-wat--day-signature",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.webp",
+          "sha256": "41069c8e7851e22657e7025559d05ceaaae4519f1224864a69521872557a2c8d",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.png",
+            "sha256": "39f09f4b5cfdc6582ab73fe1da84e24331b14d706ff65c02b6dc468c04728d64",
+            "byteLength": 1844919,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.webp",
+            "sha256": "41069c8e7851e22657e7025559d05ceaaae4519f1224864a69521872557a2c8d",
+            "byteLength": 241656,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.37,
+            "y": 0.61,
+            "width": 0.26,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "cambodia-siem-reap-angkor-wat--golden-hour",
+          "candidateRevisionId": "cambodia-siem-reap-angkor-wat--golden-hour--v01",
+          "sourceCandidateId": "cambodia-siem-reap-angkor-wat--golden-hour",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.webp",
+          "sha256": "c3ae8ad5c34db53ce00bc9fd402d7678db114c94c210a085b67034a747e2fc21",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.png",
+            "sha256": "0ea5e80dc283063a1af0976a1ace078961bfd294c85759db2043657ba03a3b74",
+            "byteLength": 1828094,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.webp",
+            "sha256": "c3ae8ad5c34db53ce00bc9fd402d7678db114c94c210a085b67034a747e2fc21",
+            "byteLength": 244398,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.37,
+            "y": 0.61,
+            "width": 0.26,
+            "height": 0.34
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "cambodia-siem-reap-angkor-wat--companion-rare",
+          "candidateRevisionId": "cambodia-siem-reap-angkor-wat--companion-rare--v01",
+          "sourceCandidateId": "cambodia-siem-reap-angkor-wat--companion-rare",
+          "destinationId": "cambodia-siem-reap-angkor-wat",
+          "destinationName": "吴哥窟",
+          "variantId": "companion-rare",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.webp",
+          "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.webp",
+          "sha256": "aab9c27fe4f859e0885c0d23ea6209fd87d15b086d06376ef02a6b5f49879f49",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.png",
+            "sha256": "31f94a0081aaacb541b6f6db65702c40f8aba53d133bbbdb707df9759feb00e7",
+            "byteLength": 1859496,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.webp",
+            "imageSrc": "/scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.webp",
+            "sha256": "aab9c27fe4f859e0885c0d23ea6209fd87d15b086d06376ef02a6b5f49879f49",
+            "byteLength": 235618,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.28,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.37,
+            "y": 0.61,
+            "width": 0.26,
+            "height": 0.34
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "long-tailed-macaque",
+            "count": 1,
+            "role": "scene-only Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "blocked",
+          "rightsDisposition": "apsara-and-mcfa-written-approval-required",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound",
+      "name": "米尔福德峡湾",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "medium",
+      "rightsDisposition": "plausible-after-cultural-and-source-review",
+      "scenes": [
+        {
+          "id": "new-zealand-fiordland-milford-sound--day-signature",
+          "candidateRevisionId": "new-zealand-fiordland-milford-sound--day-signature--v01",
+          "sourceCandidateId": "new-zealand-fiordland-milford-sound--day-signature",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp",
+          "sha256": "a037baf2a0d02ee31ab33913cc6aefc41d47c601b7ec17415ebfc76e27ef4e96",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.png",
+            "sha256": "15bd7c19291cb670a422feaf5b909b6c91bff25dfbf1b64de86f14c5db3b4796",
+            "byteLength": 1692942,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp",
+            "sha256": "a037baf2a0d02ee31ab33913cc6aefc41d47c601b7ec17415ebfc76e27ef4e96",
+            "byteLength": 194914,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.38,
+            "y": 0.6,
+            "width": 0.24,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "new-zealand-fiordland-milford-sound--golden-hour",
+          "candidateRevisionId": "new-zealand-fiordland-milford-sound--golden-hour--v01",
+          "sourceCandidateId": "new-zealand-fiordland-milford-sound--golden-hour",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.webp",
+          "sha256": "a023ab7434263d933d718d8d238a2d24fb2d63f5890e3b1f7c6750dbe04c130c",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png",
+            "sha256": "1958c28261d22b6ad4b9ae5bfcadcc7739b5d704cba4502b97e0fa2e60827781",
+            "byteLength": 1608492,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.webp",
+            "sha256": "a023ab7434263d933d718d8d238a2d24fb2d63f5890e3b1f7c6750dbe04c130c",
+            "byteLength": 162128,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.38,
+            "y": 0.6,
+            "width": 0.24,
+            "height": 0.35
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "new-zealand-fiordland-milford-sound--companion-rare",
+          "candidateRevisionId": "new-zealand-fiordland-milford-sound--companion-rare--v02",
+          "sourceCandidateId": "new-zealand-fiordland-milford-sound--companion-rare",
+          "destinationId": "new-zealand-fiordland-milford-sound",
+          "destinationName": "米尔福德峡湾",
+          "variantId": "companion-rare",
+          "version": "v02",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.webp",
+          "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.webp",
+          "sha256": "cf7db40c9ead6182ebf569769eeafd9f793496fa220a9b985c701abc28c3f260",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.png",
+            "sha256": "c2cfb56c5f8432be411c7c3da3ef9405e86b0ed27ccb2b906b033c2400ab0f19",
+            "byteLength": 1735056,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.webp",
+            "imageSrc": "/scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.webp",
+            "sha256": "cf7db40c9ead6182ebf569769eeafd9f793496fa220a9b985c701abc28c3f260",
+            "byteLength": 208266,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.5,
+            "y": 0.93,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.38,
+            "y": 0.6,
+            "width": 0.24,
+            "height": 0.35
+          },
+          "hasCompanion": true,
+          "companion": {
+            "kind": "kea",
+            "count": 1,
+            "role": "scene-only Companion",
+            "sceneOnly": true,
+            "directlyPaintedIntoScene": true,
+            "playerPortrait": false,
+            "standaloneAsset": false,
+            "reusableAnimalAsset": false
+          },
+          "humanVisualReview": "approved",
+          "rightsReview": "medium",
+          "rightsDisposition": "plausible-after-cultural-and-source-review",
+          "finalRealPortraitCompositeReview": "approved"
+        }
+      ]
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou",
+      "name": "艾本哈杜村",
+      "status": "approved-for-runtime-integration",
+      "shippingEligible": false,
+      "rightsReview": "high",
+      "rightsDisposition": "morocco-counsel-and-authority-determination-required",
+      "scenes": [
+        {
+          "id": "morocco-ouarzazate-ait-benhaddou--day-signature",
+          "candidateRevisionId": "morocco-ouarzazate-ait-benhaddou--day-signature--v01",
+          "sourceCandidateId": "morocco-ouarzazate-ait-benhaddou--day-signature",
+          "destinationId": "morocco-ouarzazate-ait-benhaddou",
+          "destinationName": "艾本哈杜村",
+          "variantId": "day-signature",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.webp",
+          "repoPath": "public/scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.webp",
+          "sha256": "ea8e174cb30a0f0baf3c515b74b07cfb8a9534c534231d88786739135f304464",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png",
+            "sha256": "b033052ad70a23918899607c4aef50a7765b538e111519fe190981d94da56635",
+            "byteLength": 1770075,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.webp",
+            "imageSrc": "/scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.webp",
+            "sha256": "ea8e174cb30a0f0baf3c515b74b07cfb8a9534c534231d88786739135f304464",
+            "byteLength": 206376,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.175,
+            "y": 0.94,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": false
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.03,
+            "y": 0.64,
+            "width": 0.29,
+            "height": 0.32
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "morocco-counsel-and-authority-determination-required",
+          "finalRealPortraitCompositeReview": "approved"
+        },
+        {
+          "id": "morocco-ouarzazate-ait-benhaddou--golden-hour",
+          "candidateRevisionId": "morocco-ouarzazate-ait-benhaddou--golden-hour--v01",
+          "sourceCandidateId": "morocco-ouarzazate-ait-benhaddou--golden-hour",
+          "destinationId": "morocco-ouarzazate-ait-benhaddou",
+          "destinationName": "艾本哈杜村",
+          "variantId": "golden-hour",
+          "version": "v01",
+          "status": "approved-for-runtime-integration",
+          "shippingEligible": false,
+          "imageSrc": "/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp",
+          "repoPath": "public/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp",
+          "sha256": "651a1b6f12abb0e71ce3a634a0dd88fcc17c8e12192cda0f31b0dc03dca8e869",
+          "dimensions": {
+            "width": 1200,
+            "height": 900,
+            "format": "webp",
+            "alpha": "opaque",
+            "colorSpace": "sRGB"
+          },
+          "productionMaster": {
+            "repoPath": "docs/art/production/landmarks/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png",
+            "sha256": "f63a2da2ebf0ef7432b307453f49de3743fcef2c969661098b2fe7b4484aad6d",
+            "byteLength": 1852155,
+            "dimensions": {
+              "width": 1200,
+              "height": 900,
+              "format": "png",
+              "bitDepth": 8,
+              "alpha": "opaque",
+              "colorSpace": "sRGB"
+            }
+          },
+          "runtimeDerivative": {
+            "repoPath": "public/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp",
+            "imageSrc": "/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp",
+            "sha256": "651a1b6f12abb0e71ce3a634a0dd88fcc17c8e12192cda0f31b0dc03dca8e869",
+            "byteLength": 245966,
+            "format": "webp",
+            "quality": 88,
+            "effort": 6,
+            "smartSubsample": true
+          },
+          "compositionSlot": {
+            "x": 0.83,
+            "y": 0.94,
+            "scale": 0.29,
+            "pose": "gaze",
+            "flip": true
+          },
+          "safeBounds": {
+            "units": "normalized",
+            "x": 0.69,
+            "y": 0.64,
+            "width": 0.28,
+            "height": 0.32
+          },
+          "hasCompanion": false,
+          "companion": null,
+          "humanVisualReview": "approved",
+          "rightsReview": "high",
+          "rightsDisposition": "morocco-counsel-and-authority-determination-required",
+          "finalRealPortraitCompositeReview": "approved"
         }
       ]
     }

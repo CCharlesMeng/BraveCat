@@ -19,6 +19,18 @@ npm test
 npm run build
 ```
 
+素材流水线：
+
+```sh
+npm run assets:check-landmark-candidates
+npm run assets:check
+npm run assets:composite-check
+npm run assets:check-landmarks
+```
+
+地标 WebP 只在开发环境中用于合成验收；权利决定和明确的 shipping approval
+全部通过前，生产构建会自动排除 `dist/scenes`。
+
 ## 项目约定
 
 - 产品需求以 [GitHub issue #1](https://github.com/CCharlesMeng/BraveCat/issues/1) 为准。

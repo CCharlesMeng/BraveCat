@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "reviewKind": "landmark-human-visual-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20",
+  "supersedes": "docs/art/reviews/landmarks/visual-approval.v1.json",
+  "scope": {
+    "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61,
+    "selection": "all-active-scene-variants"
+  },
+  "newlyApprovedScope": {
+    "sourcePlan": "docs/art/landmark-expansion-v3.json",
+    "destinationCount": 5,
+    "activeSceneVariantCount": 13,
+    "selection": "all-v3-added-scene-variants"
+  },
+  "exclusions": [],
+  "remainingGates": [
+    "final-real-minho-composite-review-v3",
+    "shipping-rights-review-v3"
+  ],
+  "shippingEligible": false,
+  "notes": "User explicitly approved all 13 newly added v3 scenes. The previously approved 48-scene subset is unchanged; this decision covers visual quality only and does not waive composite or rights review."
+}

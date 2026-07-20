@@ -40,7 +40,7 @@ const outputQaPath = optionValue(
 )
 const outputReviewIndexPath = optionValue(
   '--output-review-index',
-  'docs/art/candidates/landmarks/review-index.v3.md',
+  'docs/art/candidates/landmarks/review-index.candidates.v3.md',
 )
 
 const absolute = (repoPath) => path.join(root, repoPath)

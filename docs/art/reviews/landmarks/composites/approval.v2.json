@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "reviewKind": "landmark-minho-composite-human-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20",
+  "supersedes": "docs/art/reviews/landmarks/composites/approval.v1.json",
+  "scope": {
+    "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+    "compositeSetSha256": "feaed47f16f4b9fb7a458b1afa8cb3a5fc6f62cfe69167ac6dec4041ea2bd135",
+    "portraitId": "minho",
+    "sceneCount": 61,
+    "selection": "all-active-scene-composites"
+  },
+  "newlyApprovedScope": {
+    "sourcePlan": "docs/art/landmark-expansion-v3.json",
+    "sceneCount": 13,
+    "sheet": "docs/art/reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png",
+    "selection": "all-v3-added-scene-composites"
+  },
+  "exclusions": [],
+  "remainingGates": [
+    "shipping-rights-review-v3"
+  ],
+  "shippingEligible": false,
+  "notes": "User explicitly approved all 13 newly added v3 Minho composites. The prior 48 approved composites remain unchanged; this decision does not waive rights or shipping review."
+}

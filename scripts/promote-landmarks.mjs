@@ -14,6 +14,7 @@ import sharp from 'sharp'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
 const checkOnly = cliArgs.includes('--check')
+const allowExtraRuntimeFiles = cliArgs.includes('--allow-extra-runtime-files')
 const optionValue = (name, fallback) => {
   const index = cliArgs.indexOf(name)
   if (index === -1) return fallback
@@ -235,9 +236,19 @@ const candidateManifest = JSON.parse(candidateContents)
 const candidateQa = await readJson(candidateQaPath)
 const approvalContents = await readContents(visualApprovalPath)
 const visualApproval = JSON.parse(approvalContents)
-const rightsReviewContents = await readContents(rightsReviewPath)
-const rightsDecisionContents = await readContents(rightsDecisionPath)
-const rightsDecision = JSON.parse(rightsDecisionContents)
+const rightsDecisionContents = await readOptionalContents(rightsDecisionPath)
+const rightsDecision = rightsDecisionContents
+  ? JSON.parse(rightsDecisionContents)
+  : null
+const rightsReviewRecords = rightsDecision
+  ? (
+      rightsDecision.sourceReviews
+      ?? [rightsDecision.sourceReview]
+    ).filter(Boolean)
+  : []
+const rightsReviewContents = await Promise.all(
+  rightsReviewRecords.map(({ path: reviewPath }) => readContents(reviewPath)),
+)
 const archiveContents = await readContents(archivePath)
 const archive = JSON.parse(archiveContents)
 const compositeManifestContents = await readOptionalContents(compositeManifestPath)
@@ -318,76 +329,102 @@ if (visualApproval.schemaVersion >= 2) {
   )
 }
 
-assert(
-  rightsDecision.schemaVersion === 1
-    && rightsDecision.reviewKind
-      === 'landmark-rights-and-provenance-product-risk-review'
-    && rightsDecision.decision === 'review-complete-not-cleared'
-    && rightsDecision.shippingEligible === false,
-  'rights decision must fail closed until explicit shipping approval',
-)
-assert(
-  rightsDecision.sourceReview?.path === rightsReviewPath
-    && rightsDecision.sourceReview?.sha256 === sha256(rightsReviewContents),
-  'rights decision does not match the cited review',
-)
-assert(
-  rightsDecision.scope?.candidateManifest === candidateManifestPath
-    && rightsDecision.scope?.candidateManifestSha256 === sha256(candidateContents)
-    && rightsDecision.scope?.activeSceneSetSha256 === approvedActiveSceneSetSha256
-    && rightsDecision.scope?.destinationCount
-      === candidateManifest.totals.destinationCount
-    && rightsDecision.scope?.activeSceneVariantCount === activeEntries.length,
-  'rights decision scope does not match the active candidate set',
-)
-assert(
-  Array.isArray(rightsDecision.globalGates)
-    && rightsDecision.globalGates.length > 0
-    && rightsDecision.globalGates.every((gate) => gate.status === 'open'),
-  'rights decision must enumerate every open global gate',
-)
-
-const rightsByDestination = new Map(
-  rightsDecision.destinations.map((destination) => [destination.id, destination]),
-)
-assert(
-  rightsByDestination.size === candidateManifest.destinations.length,
-  'rights decision has missing or duplicate destinations',
-)
-const derivedRiskSummary = Object.fromEntries(
-  ['low', 'medium', 'high', 'blocked'].map((risk) => [
-    risk,
-    {
-      destinationCount: rightsDecision.destinations.filter(
-        (destination) => destination.risk === risk,
-      ).length,
-      sceneCount: rightsDecision.destinations
-        .filter((destination) => destination.risk === risk)
-        .reduce((total, destination) => total + destination.sceneCount, 0),
-    },
-  ]),
-)
-for (const destination of candidateManifest.destinations) {
-  const rights = rightsByDestination.get(destination.id)
-  assert(rights, `${destination.id}: missing rights decision`)
+const rightsByDestination = new Map()
+let derivedRiskSummary = null
+if (rightsDecision) {
   assert(
-    ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
-      && rights.shippingEligible === false
-      && typeof rights.disposition === 'string'
-      && rights.disposition.length > 0
-      && rights.sceneCount === destination.activeSceneVariantIds.length,
-    `${destination.id}: invalid rights decision`,
+    rightsDecision.schemaVersion >= 1
+      && rightsDecision.reviewKind
+        === 'landmark-rights-and-provenance-product-risk-review'
+      && rightsDecision.decision === 'review-complete-not-cleared'
+      && rightsDecision.shippingEligible === false,
+    'rights decision must fail closed until explicit shipping approval',
   )
+  assert(
+    rightsReviewRecords.length > 0
+      && rightsReviewRecords.every((record, index) => (
+        record?.path
+        && record.sha256 === sha256(rightsReviewContents[index])
+      )),
+    'rights decision does not match the cited review',
+  )
+  assert(
+    rightsDecision.scope?.candidateManifest === candidateManifestPath
+      && rightsDecision.scope?.candidateManifestSha256 === sha256(candidateContents)
+      && rightsDecision.scope?.activeSceneSetSha256 === approvedActiveSceneSetSha256
+      && (
+        rightsDecision.scope?.activeSceneContentSetSha256 === undefined
+        || rightsDecision.scope.activeSceneContentSetSha256
+          === approvedActiveSceneContentSetSha256
+      )
+      && rightsDecision.scope?.destinationCount
+        === candidateManifest.totals.destinationCount
+      && rightsDecision.scope?.activeSceneVariantCount === activeEntries.length,
+    'rights decision scope does not match the active candidate set',
+  )
+  assert(
+    Array.isArray(rightsDecision.globalGates)
+      && rightsDecision.globalGates.length > 0
+      && rightsDecision.globalGates.every((gate) => gate.status === 'open'),
+    'rights decision must enumerate every open global gate',
+  )
+
+  for (const destination of rightsDecision.destinations) {
+    assert(
+      !rightsByDestination.has(destination.id),
+      `${destination.id}: duplicate rights decision`,
+    )
+    rightsByDestination.set(destination.id, destination)
+  }
+  assert(
+    rightsByDestination.size === candidateManifest.destinations.length,
+    'rights decision has missing destinations',
+  )
+  derivedRiskSummary = Object.fromEntries(
+    ['low', 'medium', 'high', 'blocked'].map((risk) => [
+      risk,
+      {
+        destinationCount: rightsDecision.destinations.filter(
+          (destination) => destination.risk === risk,
+        ).length,
+        sceneCount: rightsDecision.destinations
+          .filter((destination) => destination.risk === risk)
+          .reduce((total, destination) => total + destination.sceneCount, 0),
+      },
+    ]),
+  )
+  for (const destination of candidateManifest.destinations) {
+    const rights = rightsByDestination.get(destination.id)
+    assert(rights, `${destination.id}: missing rights decision`)
+    assert(
+      ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
+        && rights.shippingEligible === false
+        && typeof rights.disposition === 'string'
+        && rights.disposition.length > 0
+        && rights.sceneCount === destination.activeSceneVariantIds.length,
+      `${destination.id}: invalid rights decision`,
+    )
+  }
+  assert(
+    ['low', 'medium', 'high', 'blocked'].every((risk) => (
+      rightsDecision.summary?.[risk]?.destinationCount
+        === derivedRiskSummary[risk].destinationCount
+      && rightsDecision.summary?.[risk]?.sceneCount
+        === derivedRiskSummary[risk].sceneCount
+    )),
+    'rights decision risk summary is inconsistent',
+  )
+} else {
+  for (const destination of candidateManifest.destinations) {
+    rightsByDestination.set(destination.id, {
+      id: destination.id,
+      risk: 'pending',
+      disposition: 'pending-rights-review',
+      sceneCount: destination.activeSceneVariantIds.length,
+      shippingEligible: false,
+    })
+  }
 }
-assert(
-  ['low', 'medium', 'high', 'blocked'].every((risk) => (
-    rightsDecision.summary?.[risk]?.destinationCount
-      === derivedRiskSummary[risk].destinationCount
-    && rightsDecision.summary?.[risk]?.sceneCount
-      === derivedRiskSummary[risk].sceneCount
-  )),
-  'rights decision risk summary is inconsistent',
-)
 assert(
   archive.review?.landmarkHumanVisualReview === 'approved'
     && archive.landmarkSet?.activeSceneSetSha256
@@ -635,7 +672,7 @@ try {
 }
 const unexpectedRuntimeFiles = runtimeFiles.filter((filename) => !runtimeNames.has(filename))
 assert(
-  unexpectedRuntimeFiles.length === 0,
+  allowExtraRuntimeFiles || unexpectedRuntimeFiles.length === 0,
   `unexpected versioned runtime scenes: ${unexpectedRuntimeFiles.join(', ')}`,
 )
 
@@ -650,7 +687,7 @@ const unexpectedProductionFiles = productionFiles.filter(
   (filename) => !productionNames.has(filename),
 )
 assert(
-  unexpectedProductionFiles.length === 0,
+  allowExtraRuntimeFiles || unexpectedProductionFiles.length === 0,
   `unexpected production scene masters: ${unexpectedProductionFiles.join(', ')}`,
 )
 
@@ -704,9 +741,17 @@ const productionManifest = {
   manifestKind: 'landmark-production',
   catalogId: `miaoyouji-landmarks-production-v${productionManifestVersion}-2026-07-20`,
   generatedAt: '2026-07-20',
-  status: compositeReviewApproved
-    ? 'visual-composite-and-rights-reviewed-not-cleared-runtime-integrated'
-    : 'visual-and-rights-reviewed-not-cleared-runtime-integrated',
+  status: rightsDecision
+    ? (
+        compositeReviewApproved
+          ? 'visual-composite-and-rights-reviewed-not-cleared-runtime-integrated'
+          : 'visual-and-rights-reviewed-not-cleared-runtime-integrated'
+      )
+    : (
+        compositeReviewApproved
+          ? 'visual-and-composite-approved-rights-pending-runtime-integrated'
+          : 'visual-approved-rights-pending-runtime-integrated'
+      ),
   shippingEligible: false,
   source: {
     candidateManifest: {
@@ -732,14 +777,20 @@ const productionManifest = {
       path: archivePath,
       sha256: sha256(archiveContents),
     },
-    rightsReview: {
-      path: rightsReviewPath,
-      sha256: sha256(rightsReviewContents),
-      decisionRecord: rightsDecisionPath,
-      decisionRecordSha256: sha256(rightsDecisionContents),
-      decision: rightsDecision.decision,
-      reviewedAt: rightsDecision.reviewedAt,
-    },
+    ...(rightsDecision
+      ? {
+          rightsReview: {
+            reviews: rightsReviewRecords.map((record, index) => ({
+              path: record.path,
+              sha256: sha256(rightsReviewContents[index]),
+            })),
+            decisionRecord: rightsDecisionPath,
+            decisionRecordSha256: sha256(rightsDecisionContents),
+            decision: rightsDecision.decision,
+            reviewedAt: rightsDecision.reviewedAt,
+          },
+        }
+      : {}),
     ...(compositeReviewApproved
       ? {
           compositeQa: {
@@ -773,13 +824,17 @@ const productionManifest = {
       selection: visualApproval.scope.selection,
       exclusions: visualApproval.exclusions,
     },
-    rightsReview: {
-      decision: rightsDecision.decision,
-      reviewedAt: rightsDecision.reviewedAt,
-      reviewer: rightsDecision.reviewer,
-      globalGatesOpen: rightsDecision.globalGates.map(({ id }) => id),
-      riskSummary: derivedRiskSummary,
-    },
+    rightsReview: rightsDecision
+      ? {
+          decision: rightsDecision.decision,
+          reviewedAt: rightsDecision.reviewedAt,
+          reviewer: rightsDecision.reviewer,
+          globalGatesOpen: rightsDecision.globalGates.map(({ id }) => id),
+          riskSummary: derivedRiskSummary,
+        }
+      : {
+          decision: 'pending',
+        },
     finalRealPortraitCompositeReview: compositeReviewApproved
       ? 'approved'
       : 'pending',
@@ -787,7 +842,9 @@ const productionManifest = {
   },
   remainingGates: [
     ...(!compositeReviewApproved ? ['final-real-minho-composite-review'] : []),
-    ...rightsDecision.remainingGates,
+    ...(rightsDecision
+      ? rightsDecision.remainingGates
+      : ['shipping-rights-review']),
   ],
   runtime: {
     productionMasterRoot: productionSceneRoot,
@@ -839,6 +896,10 @@ let approvedReviewIndex = reviewIndex
     `All ${sceneCount} active scene candidates passed user visual review and were promoted for runtime integration. Shipping remains blocked until rights review and final real-Portrait composite review pass.`,
   )
   .replaceAll('pending review', 'visual approved')
+  .replace(
+    'The previously approved 48-scene v2 subset is preserved byte-for-byte. Approval v1 does not cover the 13 new v3 scenes or the expanded active-set hash.',
+    'The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual approval v2 covers the complete 61-scene active set, including all 13 v3 additions.',
+  )
 
 if (compositeReviewApproved) {
   approvedReviewIndex = approvedReviewIndex
@@ -852,14 +913,16 @@ if (compositeReviewApproved) {
     )
 }
 
-approvedReviewIndex = approvedReviewIndex.replace(
-  `All ${sceneCount} Minho composites also passed user review. Shipping remains blocked until rights review passes.`,
-  `All ${sceneCount} Minho composites also passed user review. `
-    + 'The rights review is complete but did not clear shipping: '
-    + `${rightsDecision.summary.blocked.destinationCount} destinations are blocked, `
-    + `${rightsDecision.summary.high.destinationCount} are high-risk holds, `
-    + 'and all scenes remain behind open global provenance gates.',
-)
+if (rightsDecision) {
+  approvedReviewIndex = approvedReviewIndex.replace(
+    `All ${sceneCount} Minho composites also passed user review. Shipping remains blocked until rights review passes.`,
+    `All ${sceneCount} Minho composites also passed user review. `
+      + 'The rights review is complete but did not clear shipping: '
+      + `${rightsDecision.summary.blocked.destinationCount} destinations are blocked, `
+      + `${rightsDecision.summary.high.destinationCount} are high-risk holds, `
+      + 'and all scenes remain behind open global provenance gates.',
+  )
+}
 
 const reviewIndexDirectory = path.posix.dirname(reviewIndexPath)
 const visualApprovalLink = path.posix.relative(
@@ -884,6 +947,25 @@ const rightsDecisionLink = path.posix.relative(
 )
 const candidateQaLink = path.posix.basename(candidateQaPath)
 
+if (
+  compositeReviewApproved
+  && !approvedReviewIndex.includes('## Minho composite QA v2')
+) {
+  const compositeSheetLinks = compositeManifest.sheets.map(
+    ({ repoPath }, index) => (
+      `${index + 1}. [Composite sheet ${index + 1} of `
+      + `${compositeManifest.sheets.length}](${path.posix.relative(
+        reviewIndexDirectory,
+        repoPath,
+      )})`
+    ),
+  )
+  approvedReviewIndex = `${approvedReviewIndex.trimEnd()}\n\n`
+    + '## Minho composite QA v2\n\n'
+    + `${compositeSheetLinks.join('\n')}\n\n`
+    + 'Composite review decision: **approved by user**.\n'
+}
+
 if (!approvedReviewIndex.includes('[Visual approval record]')) {
   approvedReviewIndex = approvedReviewIndex.replace(
     `- [Machine QA report](${candidateQaLink})`,
@@ -902,7 +984,10 @@ if (
       + `- [Composite approval record](${compositeApprovalLink})`,
   )
 }
-if (!approvedReviewIndex.includes('[Rights and provenance review]')) {
+if (
+  rightsDecision
+  && !approvedReviewIndex.includes('[Rights and provenance review]')
+) {
   approvedReviewIndex = approvedReviewIndex.replace(
     `- [Visual approval record](${visualApprovalLink})`,
     `- [Visual approval record](${visualApprovalLink})\n`
@@ -912,7 +997,10 @@ if (!approvedReviewIndex.includes('[Rights and provenance review]')) {
 }
 assert(
   approvedReviewIndex.includes('passed user visual review')
-    && approvedReviewIndex.includes('rights review is complete')
+    && (
+      !rightsDecision
+      || approvedReviewIndex.includes('rights review is complete')
+    )
     && !approvedReviewIndex.includes('pending review'),
   `${reviewIndexPath}: could not record visual approval`,
 )

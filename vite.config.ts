@@ -43,22 +43,28 @@ const productionManifest = JSON.parse(
   }
 const rightsDecisionPath =
   productionManifest.source?.rightsReview?.decisionRecord
-if (!rightsDecisionPath) {
-  throw new Error(
-    `${currentProductionManifest.filename}: missing rights decision record`,
-  )
-}
-const rightsDecisionContents = readFileSync(
-  path.join(repositoryRoot, rightsDecisionPath),
-)
-const rightsDecision = JSON.parse(rightsDecisionContents.toString('utf8')) as {
+let rightsDecision: {
   decision?: string
   shippingEligible?: boolean
   remainingGates?: readonly string[]
+} | null = null
+if (rightsDecisionPath) {
+  const rightsDecisionContents = readFileSync(
+    path.join(repositoryRoot, rightsDecisionPath),
+  )
+  rightsDecision = JSON.parse(rightsDecisionContents.toString('utf8'))
+  const rightsDecisionSha256 = createHash('sha256')
+    .update(rightsDecisionContents)
+    .digest('hex')
+  if (
+    productionManifest.source?.rightsReview?.decisionRecordSha256
+      !== rightsDecisionSha256
+  ) {
+    throw new Error(
+      `${currentProductionManifest.filename}: stale rights decision fingerprint`,
+    )
+  }
 }
-const rightsDecisionSha256 = createHash('sha256')
-  .update(rightsDecisionContents)
-  .digest('hex')
 const configuredLandmarkSceneCacheEntries =
   productionManifest.scope?.activeSceneVariantCount
 
@@ -76,19 +82,11 @@ if (typeof productionManifest.shippingEligible !== 'boolean') {
   )
 }
 if (
-  productionManifest.source?.rightsReview?.decisionRecordSha256
-    !== rightsDecisionSha256
-) {
-  throw new Error(
-    `${currentProductionManifest.filename}: stale rights decision fingerprint`,
-  )
-}
-if (
   productionManifest.shippingEligible
   && (
-    rightsDecision.shippingEligible !== true
-    || rightsDecision.decision !== 'cleared-for-shipping'
-    || (rightsDecision.remainingGates?.length ?? 0) > 0
+    rightsDecision?.shippingEligible !== true
+    || rightsDecision?.decision !== 'cleared-for-shipping'
+    || (rightsDecision?.remainingGates?.length ?? 0) > 0
     || productionManifest.review?.shippingApproval !== 'approved'
     || (productionManifest.remainingGates?.length ?? 0) > 0
   )
