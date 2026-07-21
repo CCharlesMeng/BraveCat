@@ -2,6 +2,7 @@ export interface Clock {
   now(): number
   getAcceleration(): number
   setAcceleration(multiplier: number): void
+  setNow(timestamp: number): void
 }
 
 export interface ClockOptions {
@@ -37,6 +38,13 @@ export const createClock = (options: ClockOptions = {}): Clock => {
       gameAnchor = now()
       realAnchor = realNow()
       acceleration = multiplier
+    },
+    setNow: (timestamp) => {
+      if (!Number.isFinite(timestamp)) {
+        throw new RangeError('游戏时间锚点必须是有限数')
+      }
+      gameAnchor = timestamp
+      realAnchor = realNow()
     },
   }
 }

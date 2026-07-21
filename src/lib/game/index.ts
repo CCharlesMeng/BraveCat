@@ -1,11 +1,13 @@
 import {
   createInitialEconomyState,
+  reduceEconomy,
   type EconomyState,
 } from '../economy'
 import type { AssetCatalog } from '../assets'
 import type { CatId, PortraitId } from '../ids'
 import {
   createInitialPostcardState,
+  reducePostcards,
   type PostcardState,
   type ReceivedPostcard,
 } from '../postcards'
@@ -14,9 +16,14 @@ import {
   restoreSelectedPostcard,
   type TripContent,
 } from '../selection'
+import {
+  createInitialSouvenirState,
+  reduceSouvenirs,
+  type SouvenirState,
+} from '../souvenirs'
 import type { PlannedItemOutcome, TravelState } from '../travel'
 
-export const GAME_STATE_VERSION = 2 as const
+export const GAME_STATE_VERSION = 3 as const
 
 export interface CatProfile {
   id: CatId
@@ -27,11 +34,13 @@ export interface CatProfile {
 
 export interface GameState {
   stateVersion: typeof GAME_STATE_VERSION
+  clockNow: number
   economy: EconomyState
   travelByCat: Readonly<Partial<Record<CatId, TravelState>>>
   cats: readonly CatProfile[]
   activeCatId: CatId | null
   postcards: PostcardState
+  souvenirs: SouvenirState
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (
@@ -133,9 +142,12 @@ const restoreTripContent = (
   if (
     !isRecord(value)
     || !Array.isArray(value.postcards)
-    || !Array.isArray(value.souvenirIds)
-    || !value.souvenirIds.every((id) => typeof id === 'string')
   ) return undefined
+
+  const souvenirIds = Array.isArray(value.souvenirIds)
+    && value.souvenirIds.every((id) => typeof id === 'string')
+    ? value.souvenirIds
+    : []
 
   const postcards = value.postcards.map((postcard) => {
     if (
@@ -153,7 +165,7 @@ const restoreTripContent = (
 
   return {
     postcards: postcards as TripContent['postcards'],
-    souvenirIds: value.souvenirIds,
+    souvenirIds,
   }
 }
 
@@ -182,7 +194,6 @@ const restoreTravelState = (
     || !Array.isArray(value.plan.itinerary.postcardSlots)
     || !isRecord(value.plan.content)
     || !Array.isArray(value.plan.content.postcards)
-    || !Array.isArray(value.plan.content.souvenirIds)
     || typeof value.note !== 'string'
     || !Array.isArray(value.packedItems)
     || !value.packedItems.every(isPackedItem)
@@ -229,6 +240,19 @@ const isPostcardState = (value: unknown): value is PostcardState => (
     && typeof postcard.revealAt === 'number'
     && isPostcardRecipe(postcard.recipe)
     && typeof postcard.isRead === 'boolean'
+  ))
+)
+
+const isSouvenirState = (value: unknown): value is SouvenirState => (
+  isRecord(value)
+  && Array.isArray(value.received)
+  && value.received.every((souvenir) => (
+    isRecord(souvenir)
+    && typeof souvenir.id === 'string'
+    && typeof souvenir.tripId === 'string'
+    && typeof souvenir.souvenirId === 'string'
+    && typeof souvenir.destinationId === 'string'
+    && typeof souvenir.revealedAt === 'number'
   ))
 )
 
@@ -301,6 +325,8 @@ export const isGameState = (value: unknown): value is GameState => {
   if (
     !isRecord(value)
     || value.stateVersion !== GAME_STATE_VERSION
+    || typeof value.clockNow !== 'number'
+    || !Number.isFinite(value.clockNow)
     || !isEconomyState(value.economy)
     || !isRecord(value.travelByCat)
     || !Object.entries(value.travelByCat).every(([catId, travel]) => (
@@ -315,6 +341,7 @@ export const isGameState = (value: unknown): value is GameState => {
     || !Array.isArray(value.cats)
     || !value.cats.every(isCatProfile)
     || !isPostcardState(value.postcards)
+    || !isSouvenirState(value.souvenirs)
   ) return false
 
   return (
@@ -328,11 +355,13 @@ export const isGameState = (value: unknown): value is GameState => {
 
 export const createInitialGameState = (now: number): GameState => ({
   stateVersion: GAME_STATE_VERSION,
+  clockNow: now,
   economy: createInitialEconomyState(now),
   travelByCat: {},
   cats: [],
   activeCatId: null,
   postcards: createInitialPostcardState(),
+  souvenirs: createInitialSouvenirState(),
 })
 
 export interface AdoptCatRequest extends CatProfile {}
@@ -377,6 +406,9 @@ export const restoreGameState = (
       activeCatId,
       catalog,
     )
+    const souvenirs = isSouvenirState(stored.souvenirs)
+      ? stored.souvenirs
+      : createInitialSouvenirState()
     const travelByCat = Object.fromEntries(
       Object.entries(stored.travelByCat).flatMap(([catId, travel]) => {
         const restored = restoreTravelState(travel, catId, catalog)
@@ -386,24 +418,127 @@ export const restoreGameState = (
 
     return {
       stateVersion: GAME_STATE_VERSION,
+      clockNow: inferStoredClockNow(stored, now),
       economy: stored.economy,
       travelByCat,
       cats,
       activeCatId,
       postcards,
+      souvenirs,
     }
   }
 
   if (isEconomyState(stored)) {
     return {
       stateVersion: GAME_STATE_VERSION,
+      clockNow: now,
       economy: stored,
       travelByCat: {},
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     }
   }
 
   return createInitialGameState(now)
+}
+
+const inferStoredClockNow = (
+  stored: Record<string, unknown>,
+  now: number,
+): number => {
+  const observedTimes = [now]
+  if (typeof stored.clockNow === 'number' && Number.isFinite(stored.clockNow)) {
+    observedTimes.push(stored.clockNow)
+  }
+  if (
+    isRecord(stored.economy)
+    && isRecord(stored.economy.accrual)
+    && typeof stored.economy.accrual.lastAccruedAt === 'number'
+  ) {
+    observedTimes.push(stored.economy.accrual.lastAccruedAt)
+  }
+  if (isRecord(stored.postcards) && Array.isArray(stored.postcards.received)) {
+    for (const postcard of stored.postcards.received) {
+      if (isRecord(postcard) && typeof postcard.revealAt === 'number') {
+        observedTimes.push(postcard.revealAt)
+      }
+    }
+  }
+  if (isRecord(stored.souvenirs) && Array.isArray(stored.souvenirs.received)) {
+    for (const souvenir of stored.souvenirs.received) {
+      if (isRecord(souvenir) && typeof souvenir.revealedAt === 'number') {
+        observedTimes.push(souvenir.revealedAt)
+      }
+    }
+  }
+  return Math.max(...observedTimes)
+}
+
+export interface AdvanceGameEventsInput {
+  catId: CatId
+  now: number
+  economy: EconomyState
+  travel: TravelState
+}
+
+export const advanceGameEvents = (
+  current: GameState,
+  input: AdvanceGameEventsInput,
+): GameState => {
+  let postcards = current.postcards
+  let souvenirs = current.souvenirs
+  let economy = input.economy
+  let travel = input.travel
+
+  if (travel.kind === 'planned') {
+    const { content, itinerary } = travel.plan
+    const tripId = `${input.catId}-${itinerary.departsAt}`
+    postcards = reducePostcards(postcards, {
+      type: 'timePassed',
+      now: input.now,
+      tripId,
+      itinerary,
+      content,
+    })
+    souvenirs = reduceSouvenirs(souvenirs, {
+      type: 'timePassed',
+      now: input.now,
+      tripId,
+      itinerary,
+      content,
+    })
+
+    if (input.now >= itinerary.returnsAt) {
+      economy = reduceEconomy(economy, {
+        type: 'tripReturned',
+        catId: input.catId,
+        itemOutcomes: travel.itemOutcomes,
+      })
+      travel = { kind: 'home' }
+    }
+  }
+
+  const clockNow = Math.max(current.clockNow, input.now)
+  const currentTravel = current.travelByCat[input.catId]
+  if (
+    economy === current.economy
+    && travel === currentTravel
+    && postcards === current.postcards
+    && souvenirs === current.souvenirs
+    && clockNow === current.clockNow
+  ) return current
+
+  return {
+    ...current,
+    clockNow,
+    economy,
+    postcards,
+    souvenirs,
+    travelByCat: {
+      ...current.travelByCat,
+      [input.catId]: travel,
+    },
+  }
 }

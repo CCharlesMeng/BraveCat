@@ -312,7 +312,7 @@ describe('Travel lifecycle', () => {
     )
 
     expect(lifecycle.getPresence(waiting, 1_149)).toBe('waiting')
-    expect(lifecycle.getPresence(planned, 1_000)).toBe('traveling')
+    expect(lifecycle.getPresence(planned, 1_000)).toBe('waiting')
     expect(lifecycle.getPresence(planned, 1_150)).toBe('traveling')
     expect(lifecycle.getPresence(planned, 2_649)).toBe('traveling')
     expect(lifecycle.getPresence(planned, 2_650)).toBe('returned')

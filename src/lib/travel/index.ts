@@ -9,6 +9,7 @@ import {
 } from '../itinerary'
 import type { CatId, DestinationId, PortraitId } from '../ids'
 import type { PlanTrip, PlannedTrip } from '../planTrip'
+import type { PostcardRecipe } from '../selection'
 
 export const createSeededRandom = (seed: number): RandomSource => {
   let value = seed >>> 0
@@ -45,6 +46,7 @@ export interface TravelAdvanceInput {
   now: number
   pack: readonly PackedItem[]
   wishDestinationId?: DestinationId
+  recentPostcardRecipes?: readonly Pick<PostcardRecipe, 'scene' | 'copy'>[]
 }
 
 export type TravelPresence = 'home' | 'waiting' | 'traveling' | 'returned'
@@ -87,6 +89,7 @@ export const createTravelLifecycle = (
         travelerCatId: config.travelerCatId,
         portraitId: config.portraitId,
         catalog: config.catalog,
+        recentPostcardRecipes: input.recentPostcardRecipes,
       }, random)
       const notes = config.catalog.copy.travelNotes
       if (notes.length === 0) {
@@ -137,6 +140,7 @@ export const createTravelLifecycle = (
     getPresence: (state, now) => {
       if (state.kind === 'home') return 'home'
       if (state.kind === 'waiting') return 'waiting'
+      if (now < state.plan.itinerary.departsAt) return 'waiting'
       if (now < state.plan.itinerary.returnsAt) return 'traveling'
       return 'returned'
     },

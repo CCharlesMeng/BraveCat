@@ -160,6 +160,26 @@ describe('Economy', () => {
     ])
   })
 
+  it('放入一件同类物品后，家里仍保留其余数量', () => {
+    const economy = createEconomy({
+      ownedItems: { 'fish-biscuit': 2 },
+    })
+
+    const result = reduceEconomy(economy, {
+      type: 'itemAddedToPack',
+      catId: 'first-cat',
+      itemId: 'fish-biscuit',
+      itemKind: 'snack',
+      capacity: 3,
+      packLocked: false,
+    })
+
+    expect(result.ownedItems['fish-biscuit']).toBe(1)
+    expect(result.packs['first-cat']).toEqual([
+      { itemId: 'fish-biscuit', kind: 'snack' },
+    ])
+  })
+
   it('同一种物品不能在行囊中重复放置', () => {
     const economy = createEconomy({
       ownedItems: { 'fish-biscuit': 1 },
@@ -281,5 +301,41 @@ describe('Economy', () => {
     })
 
     expect(result).toBe(economy)
+  })
+
+  it('回家结算清空已锁定行囊、返还可返还物品且可安全重试', () => {
+    const economy = createEconomy({
+      packs: {
+        'first-cat': [
+          { itemId: 'ticket', kind: 'wish' },
+          { itemId: 'fish-biscuit', kind: 'snack' },
+          { itemId: 'small-blanket', kind: 'toy' },
+        ],
+      },
+    })
+
+    const returned = reduceEconomy(economy, {
+      type: 'tripReturned',
+      catId: 'first-cat',
+      itemOutcomes: [
+        { itemId: 'ticket', disposition: 'consumed' },
+        { itemId: 'fish-biscuit', disposition: 'consumed' },
+        { itemId: 'small-blanket', disposition: 'return-home' },
+        { itemId: 'unknown-item', disposition: 'return-home' },
+      ],
+    })
+    const retried = reduceEconomy(returned, {
+      type: 'tripReturned',
+      catId: 'first-cat',
+      itemOutcomes: [
+        { itemId: 'ticket', disposition: 'consumed' },
+        { itemId: 'fish-biscuit', disposition: 'consumed' },
+        { itemId: 'small-blanket', disposition: 'return-home' },
+      ],
+    })
+
+    expect(returned.packs['first-cat']).toEqual([])
+    expect(returned.ownedItems).toEqual({ 'small-blanket': 1 })
+    expect(retried).toBe(returned)
   })
 })

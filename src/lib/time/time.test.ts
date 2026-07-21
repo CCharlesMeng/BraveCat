@@ -31,4 +31,17 @@ describe('Clock', () => {
     realNow = 3_000
     expect(clock.now()).toBe(7_500)
   })
+
+  it('恢复虚拟时间锚点后从同一时刻继续实时前进', () => {
+    let realNow = 1_000
+    const clock = createClock({
+      realNow: () => realNow,
+    })
+
+    clock.setNow(86_401_000)
+    realNow = 1_500
+
+    expect(clock.getAcceleration()).toBe(1)
+    expect(clock.now()).toBe(86_401_500)
+  })
 })

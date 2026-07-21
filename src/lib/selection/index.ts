@@ -1,5 +1,5 @@
 import {
-  PORTRAIT_POSES,
+  isPortraitPose,
   type AssetCatalog,
   type Portrait,
   type PortraitPose,
@@ -57,6 +57,7 @@ export interface SelectionRequest {
   travelerCatId: CatId
   portraitId: PortraitId
   catalog: AssetCatalog
+  recentPostcardRecipes?: readonly Pick<PostcardRecipe, 'scene' | 'copy'>[]
 }
 
 export interface SelectedPostcard {
@@ -76,50 +77,54 @@ interface RecipeSnapshotSource {
 
 const createPostcardRecipe = (
   source: RecipeSnapshotSource,
-): PostcardRecipe => ({
-  recipeVersion: POSTCARD_RECIPE_VERSION,
-  travelerCatId: source.travelerCatId,
-  scene: {
-    id: source.scene.id,
-    revision: source.sceneRevision,
-  },
-  portrait: {
-    id: source.portrait.id,
-    setRevision: source.portraitSetRevision,
-  },
-  composition: {
-    id: `${source.scene.id}--default`,
-    x: source.scene.compositionSlot.x,
-    y: source.scene.compositionSlot.y,
-    scale: source.scene.compositionSlot.scale,
-    flip: source.scene.compositionSlot.flip,
-  },
-  pose: source.pose,
-  layers: [
-    {
-      id: 'scene',
-      kind: 'scene',
-      src: source.scene.imageSrc,
+): PostcardRecipe => {
+  const portraitSrc = source.portrait.poses[source.pose]
+  if (!portraitSrc) {
+    throw new RangeError(
+      `形象 ${source.portrait.id} 缺少 ${source.pose} 姿势文件`,
+    )
+  }
+
+  return {
+    recipeVersion: POSTCARD_RECIPE_VERSION,
+    travelerCatId: source.travelerCatId,
+    scene: {
+      id: source.scene.id,
+      revision: source.sceneRevision,
     },
-    {
-      id: 'portrait',
-      kind: 'portrait',
-      src: source.portrait.poses[source.pose],
+    portrait: {
+      id: source.portrait.id,
+      setRevision: source.portraitSetRevision,
     },
-  ],
-  copy: {
-    id: source.copyId,
-    text: source.copyText,
-  },
-})
+    composition: {
+      id: `${source.scene.id}--default`,
+      x: source.scene.compositionSlot.x,
+      y: source.scene.compositionSlot.y,
+      scale: source.scene.compositionSlot.scale,
+      flip: source.scene.compositionSlot.flip,
+    },
+    pose: source.pose,
+    layers: [
+      {
+        id: 'scene',
+        kind: 'scene',
+        src: source.scene.imageSrc,
+      },
+      {
+        id: 'portrait',
+        kind: 'portrait',
+        src: portraitSrc,
+      },
+    ],
+    copy: {
+      id: source.copyId,
+      text: source.copyText,
+    },
+  }
+}
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (
   typeof value === 'object' && value !== null
-)
-
-const isPose = (value: unknown): value is PortraitPose => (
-  typeof value === 'string'
-  && (PORTRAIT_POSES as readonly string[]).includes(value)
 )
 
 export const isPostcardRecipe = (
@@ -141,7 +146,7 @@ export const isPostcardRecipe = (
     || typeof value.composition.y !== 'number'
     || typeof value.composition.scale !== 'number'
     || typeof value.composition.flip !== 'boolean'
-    || !isPose(value.pose)
+    || !isPortraitPose(value.pose)
     || !Array.isArray(value.layers)
     || value.layers.length !== 2
     || !isRecord(value.layers[0])
@@ -190,7 +195,7 @@ export const restoreSelectedPostcard = (
     !isRecord(value)
     || typeof value.sceneVariantId !== 'string'
     || typeof value.portraitId !== 'string'
-    || !isPose(value.pose)
+    || !isPortraitPose(value.pose)
     || typeof value.note !== 'string'
   ) return undefined
 
@@ -254,8 +259,146 @@ const selectOne = <T>(
   return { value: values[index], index }
 }
 
-export const selectTripContent: ContentSelector = (request, random) => ({
-  postcards: request.itinerary.postcardSlots.map((slot) => {
+const renderPostcardNote = (
+  template: string,
+  destinationName: string,
+): string => (
+  template.replaceAll('{destination}', destinationName)
+)
+
+const COMPANION_SCENE_CHANCE = 0.1
+const ONE_SOUVENIR_THRESHOLD = 0.45
+const TWO_SOUVENIR_THRESHOLD = 0.9
+
+const selectScenePool = (
+  destination: AssetCatalog['destinations'][number],
+  random: RandomSource,
+) => {
+  const ordinaryScenes = destination.sceneVariants.filter(
+    ({ hasCompanion }) => !hasCompanion,
+  )
+  const companionScenes = destination.sceneVariants.filter(
+    ({ hasCompanion }) => hasCompanion,
+  )
+  const scenePool = ordinaryScenes.length > 0 && companionScenes.length > 0
+    ? (random() < COMPANION_SCENE_CHANCE
+      ? companionScenes
+      : ordinaryScenes)
+    : destination.sceneVariants
+
+  if (scenePool.length === 0) {
+    throw new RangeError(`目的地没有场景变体：${destination.id}`)
+  }
+
+  return scenePool
+}
+
+interface PostcardSource {
+  scene: SceneVariant
+  note: string
+  noteIndex: number
+}
+
+const postcardSourceKey = (
+  sceneId: SceneVariant['id'],
+  copyId: string,
+) => `${sceneId}\u0000${copyId}`
+
+const selectPostcardSource = (
+  destination: AssetCatalog['destinations'][number],
+  notes: readonly string[],
+  usedSceneIds: ReadonlySet<string>,
+  usedCopyIds: ReadonlySet<string>,
+  usedSourceKeys: ReadonlySet<string>,
+  random: RandomSource,
+): PostcardSource => {
+  const scenePool = selectScenePool(destination, random)
+  const { value: scene } = selectOne(
+    scenePool,
+    random,
+    `目的地没有场景变体：${destination.id}`,
+  )
+  const { value: note, index: noteIndex } = selectOne(
+    notes,
+    random,
+    '明信片文案库不能为空',
+  )
+  const copyId = `postcard-note-${noteIndex + 1}`
+  const sourceKey = postcardSourceKey(scene.id, copyId)
+  if (
+    !usedSceneIds.has(scene.id)
+    && !usedCopyIds.has(copyId)
+    && !usedSourceKeys.has(sourceKey)
+  ) {
+    return { scene, note, noteIndex }
+  }
+
+  const candidates = scenePool.flatMap((candidateScene) => (
+    notes.map((candidateNote, candidateNoteIndex) => ({
+      scene: candidateScene,
+      note: candidateNote,
+      noteIndex: candidateNoteIndex,
+      copyId: `postcard-note-${candidateNoteIndex + 1}`,
+    }))
+  ))
+  const unusedSources = candidates.filter(({ scene, copyId: candidateCopyId }) => (
+    !usedSourceKeys.has(postcardSourceKey(scene.id, candidateCopyId))
+  ))
+  const distinctSource = unusedSources.filter(({ scene, copyId: candidateCopyId }) => (
+    !usedSceneIds.has(scene.id) && !usedCopyIds.has(candidateCopyId)
+  ))
+  const { value: selected } = selectOne(
+    distinctSource.length > 0
+      ? distinctSource
+      : unusedSources.length > 0
+        ? unusedSources
+        : candidates,
+    random,
+    `目的地没有场景变体：${destination.id}`,
+  )
+
+  return selected
+}
+
+const selectSouvenirIds = (
+  request: SelectionRequest,
+  random: RandomSource,
+): readonly SouvenirId[] => {
+  const available = request.catalog.souvenirs.filter(
+    ({ destinationId }) => destinationId === request.itinerary.destinationId,
+  )
+  const maximumCount = Math.min(2, available.length)
+  const countRoll = random()
+  const requestedCount = countRoll < ONE_SOUVENIR_THRESHOLD
+    ? 0
+    : countRoll < TWO_SOUVENIR_THRESHOLD
+      ? 1
+      : 2
+  const count = Math.min(maximumCount, requestedCount)
+  const remaining = [...available]
+
+  return Array.from({ length: count }, () => {
+    const selectedIndex = Math.min(
+      remaining.length - 1,
+      Math.floor(random() * remaining.length),
+    )
+    return remaining.splice(selectedIndex, 1)[0].id
+  })
+}
+
+export const selectTripContent: ContentSelector = (request, random) => {
+  const usedSceneIds = new Set(
+    request.recentPostcardRecipes?.map(({ scene }) => scene.id) ?? [],
+  )
+  const usedCopyIds = new Set(
+    request.recentPostcardRecipes?.map(({ copy }) => copy.id) ?? [],
+  )
+  const usedSourceKeys = new Set(
+    request.recentPostcardRecipes?.map(({ scene, copy }) => (
+      postcardSourceKey(scene.id, copy.id)
+    )) ?? [],
+  )
+  const postcards = request.itinerary.postcardSlots.map((slot) => {
     const destination = request.catalog.destinations.find(
       ({ id }) => id === slot.destinationId,
     )
@@ -263,16 +406,18 @@ export const selectTripContent: ContentSelector = (request, random) => ({
       throw new RangeError(`素材目录缺少目的地：${slot.destinationId}`)
     }
 
-    const { value: scene } = selectOne(
-      destination.sceneVariants,
-      random,
-      `目的地没有场景变体：${slot.destinationId}`,
-    )
-    const { value: note, index: noteIndex } = selectOne(
+    const { scene, note, noteIndex } = selectPostcardSource(
+      destination,
       request.catalog.copy.postcardNotes,
+      usedSceneIds,
+      usedCopyIds,
+      usedSourceKeys,
       random,
-      '明信片文案库不能为空',
     )
+    const copyId = `postcard-note-${noteIndex + 1}`
+    usedSceneIds.add(scene.id)
+    usedCopyIds.add(copyId)
+    usedSourceKeys.add(postcardSourceKey(scene.id, copyId))
     const portrait = request.catalog.portraits.find(
       ({ id }) => id === request.portraitId,
     )
@@ -298,9 +443,13 @@ export const selectTripContent: ContentSelector = (request, random) => ({
         portraitSetRevision,
         pose: scene.compositionSlot.pose,
         copyId: `postcard-note-${noteIndex + 1}`,
-        copyText: note,
+        copyText: renderPostcardNote(note, destination.name),
       }),
     }
-  }),
-  souvenirIds: [],
-})
+  })
+
+  return {
+    postcards,
+    souvenirIds: selectSouvenirIds(request, random),
+  }
+}

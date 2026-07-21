@@ -73,7 +73,10 @@ export const resolvePostcardComposition = (
       flip: recipe.composition.flip,
     },
     note: recipe.copy.text,
-    postmarkDate: new Date(postcard.revealAt).toISOString().slice(0, 10),
+    postmarkDate: new Date(postcard.revealAt)
+      .toISOString()
+      .slice(0, 16)
+      .replace('T', ' '),
   }
 }
 

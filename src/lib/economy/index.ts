@@ -39,10 +39,20 @@ export interface AddItemToPackAction {
   packLocked: boolean
 }
 
+export interface ReturnedItemOutcome {
+  itemId: ItemId
+  disposition: 'consumed' | 'return-home'
+}
+
 export type EconomyAction =
   | { type: 'timePassed'; now: number }
   | { type: 'windowsillCollected' }
   | { type: 'treatsGranted'; amount: number }
+  | {
+    type: 'tripReturned'
+    catId: CatId
+    itemOutcomes: readonly ReturnedItemOutcome[]
+  }
   | { type: 'itemPurchased'; itemId: ItemId; price: number }
   | AddItemToPackAction
   | { type: 'itemRemovedFromPack'; catId: CatId; itemId: ItemId }
@@ -99,6 +109,32 @@ export const reduceEconomy: EconomyReducer = (state, action) => {
     return {
       ...state,
       treats: state.treats + action.amount,
+    }
+  }
+
+  if (action.type === 'tripReturned') {
+    const pack = state.packs[action.catId] ?? []
+    const outcomeByItem = new Map(
+      action.itemOutcomes.map((outcome) => [outcome.itemId, outcome]),
+    )
+    const settledItems = pack.filter(({ itemId }) => outcomeByItem.has(itemId))
+    if (settledItems.length === 0) return state
+
+    const ownedItems = { ...state.ownedItems }
+    for (const item of settledItems) {
+      if (outcomeByItem.get(item.itemId)?.disposition !== 'return-home') {
+        continue
+      }
+      ownedItems[item.itemId] = (ownedItems[item.itemId] ?? 0) + 1
+    }
+
+    return {
+      ...state,
+      ownedItems,
+      packs: {
+        ...state.packs,
+        [action.catId]: pack.filter(({ itemId }) => !outcomeByItem.has(itemId)),
+      },
     }
   }
 

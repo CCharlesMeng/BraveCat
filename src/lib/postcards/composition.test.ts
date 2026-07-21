@@ -112,7 +112,7 @@ describe('Postcard composition', () => {
       id: 'trip--postcard-1',
       tripId: 'trip',
       destinationId: 'paris',
-      revealAt: Date.UTC(2026, 6, 20),
+      revealAt: Date.UTC(2026, 6, 20, 12, 34),
       ...selected,
       isRead: false,
     }
@@ -129,7 +129,7 @@ describe('Postcard composition', () => {
         flip: true,
       },
       note: '风从铁塔旁边绕过去。',
-      postmarkDate: '2026-07-20',
+      postmarkDate: '2026-07-20 12:34',
     })
   })
 })

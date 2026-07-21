@@ -72,7 +72,7 @@ describe('Save', () => {
     await store.save(current)
 
     await expect(store.import({
-      schemaVersion: 2,
+      schemaVersion: 3,
       exportedAt: 2_000,
       state: { treats: '很多' },
     })).rejects.toThrow('存档内容不完整或已损坏')
@@ -98,6 +98,10 @@ describe('Save', () => {
         1: (document) => ({
           ...document,
           schemaVersion: 2,
+        }),
+        2: (document) => ({
+          ...document,
+          schemaVersion: 3,
         }),
       },
     })
@@ -189,7 +193,7 @@ describe('Save', () => {
     const imported = await target.import(JSON.parse(json))
 
     expect(JSON.parse(json)).toMatchObject({
-      schemaVersion: 2,
+      schemaVersion: 3,
       exportedAt: 5_000,
     })
     expect(imported).toEqual(state)

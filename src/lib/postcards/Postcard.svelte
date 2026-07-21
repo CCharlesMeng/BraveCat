@@ -45,7 +45,7 @@
       <p>{composition.note}</p>
       <small>{destinationName}</small>
     </div>
-    <span class="postmark" aria-label={`邮戳日期 ${composition.postmarkDate}`}>
+    <span class="postmark" aria-label={`邮戳时间 ${composition.postmarkDate}`}>
       {composition.postmarkDate.slice(5).replace('-', '.')}
     </span>
   </div>

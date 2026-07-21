@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { AssetCatalog } from '../assets'
 import { createInitialEconomyState } from '../economy'
 import { createInitialPostcardState } from '../postcards'
+import { createInitialSouvenirState } from '../souvenirs'
 import {
   adoptCat,
   createInitialGameState,
@@ -75,12 +76,14 @@ const catalogWithRevisedScenePose: AssetCatalog = {
 describe('Game state', () => {
   it('新存档同时建立经济与多猫旅行状态容器', () => {
     expect(createInitialGameState(1_000)).toEqual({
-      stateVersion: 2,
+      stateVersion: 3,
+      clockNow: 1_000,
       economy: createInitialEconomyState(1_000),
       travelByCat: {},
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     })
   })
 
@@ -92,12 +95,14 @@ describe('Game state', () => {
     }
 
     expect(restoreGameState(legacyEconomy, 9_000)).toEqual({
-      stateVersion: 2,
+      stateVersion: 3,
+      clockNow: 9_000,
       economy: legacyEconomy,
       travelByCat: {},
       cats: [],
       activeCatId: null,
       postcards: createInitialPostcardState(),
+      souvenirs: createInitialSouvenirState(),
     })
   })
 
@@ -138,6 +143,7 @@ describe('Game state', () => {
     const valid = createInitialGameState(1_000)
 
     expect(isGameState(valid)).toBe(true)
+    expect(isGameState({ ...valid, clockNow: undefined })).toBe(false)
     expect(isGameState({ ...valid, postcards: undefined })).toBe(false)
     expect(isGameState({
       ...valid,
@@ -233,7 +239,7 @@ describe('Game state', () => {
       catalogWithRevisedScenePose,
     )
 
-    expect(restored.stateVersion).toBe(2)
+    expect(restored.stateVersion).toBe(3)
     expect(
       restored.travelByCat.minho?.kind === 'planned'
         ? restored.travelByCat.minho.plan.content.postcards[0]
@@ -349,5 +355,48 @@ describe('Game state', () => {
       },
       isRead: true,
     }])
+  })
+
+  it('恢复存档时以虚拟 Clock、经济与已揭晓内容的最大时刻为检查点', () => {
+    const stored = {
+      ...createInitialGameState(1_000),
+      stateVersion: 2,
+      clockNow: 86_000,
+      economy: {
+        ...createInitialGameState(1_000).economy,
+        accrual: {
+          ...createInitialGameState(1_000).economy.accrual,
+          lastAccruedAt: 86_401_000,
+        },
+      },
+      souvenirs: {
+        received: [{
+          id: 'trip--souvenir-1',
+          tripId: 'trip',
+          souvenirId: 'paris-postmark-pin',
+          destinationId: 'paris',
+          revealedAt: 86_402_000,
+        }],
+      },
+    }
+
+    expect(restoreGameState(stored, 2_000).clockNow).toBe(86_402_000)
+  })
+
+  it('升级未保存 Clock 的旧存档时从经济检查点继续', () => {
+    const { clockNow: _clockNow, ...legacyState } = createInitialGameState(1_000)
+    const stored = {
+      ...legacyState,
+      stateVersion: 2,
+      economy: {
+        ...legacyState.economy,
+        accrual: {
+          ...legacyState.economy.accrual,
+          lastAccruedAt: 86_401_000,
+        },
+      },
+    }
+
+    expect(restoreGameState(stored, 2_000).clockNow).toBe(86_401_000)
   })
 })

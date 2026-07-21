@@ -5,13 +5,18 @@ import type {
   ItineraryRequest,
   RandomSource,
 } from './itinerary'
-import type { ContentSelector, TripContent } from './selection'
+import type {
+  ContentSelector,
+  PostcardRecipe,
+  TripContent,
+} from './selection'
 import type { CatId, PortraitId } from './ids'
 
 export interface PlanTripRequest extends ItineraryRequest {
   travelerCatId: CatId
   portraitId: PortraitId
   catalog: AssetCatalog
+  recentPostcardRecipes?: readonly Pick<PostcardRecipe, 'scene' | 'copy'>[]
 }
 
 export interface PlannedTrip {
@@ -44,6 +49,7 @@ export const createPlanTrip = (
     travelerCatId: request.travelerCatId,
     portraitId: request.portraitId,
     catalog: request.catalog,
+    recentPostcardRecipes: request.recentPostcardRecipes,
   }, random)
 
   return { itinerary, content }

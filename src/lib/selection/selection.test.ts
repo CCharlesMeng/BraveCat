@@ -49,7 +49,7 @@ const catalog: AssetCatalog = {
   items: [],
   souvenirs: [],
   copy: {
-    postcardNotes: ['风很轻。'],
+    postcardNotes: ['人，咪到{destination}啦。风很轻。'],
     travelNotes: ['我出去看看。'],
   },
 }
@@ -110,10 +110,98 @@ describe('Selection', () => {
           ],
           copy: {
             id: 'postcard-note-1',
-            text: '风很轻。',
+            text: '人，咪到巴黎啦。风很轻。',
           },
         },
       },
+    ])
+  })
+
+  it('同一旅行与近期来信优先使用不同的场景和文案', () => {
+    const catalogWithAlternatives: AssetCatalog = {
+      ...catalog,
+      sceneRevisions: {
+        'paris-day': 'paris-day-r1',
+        'paris-night': 'paris-night-r1',
+        'paris-morning': 'paris-morning-r1',
+      },
+      destinations: [{
+        ...catalog.destinations[0],
+        sceneVariants: [
+          ...catalog.destinations[0].sceneVariants,
+          {
+            id: 'paris-night',
+            destinationId: 'paris',
+            imageSrc: '/scenes/paris-night.png',
+            compositionSlot: {
+              x: 0.2,
+              y: 0.8,
+              scale: 0.3,
+              pose: 'gaze',
+              flip: false,
+            },
+            hasCompanion: false,
+          },
+          {
+            id: 'paris-morning',
+            destinationId: 'paris',
+            imageSrc: '/scenes/paris-morning.png',
+            compositionSlot: {
+              x: 0.2,
+              y: 0.8,
+              scale: 0.3,
+              pose: 'gaze',
+              flip: false,
+            },
+            hasCompanion: false,
+          },
+        ],
+      }],
+      copy: {
+        ...catalog.copy,
+        postcardNotes: [
+          catalog.copy.postcardNotes[0],
+          '人，咪在{destination}听见了远处的铃声。',
+          '人，咪从{destination}捎来一点很轻的风。',
+        ],
+      },
+    }
+    const itinerary: Itinerary = {
+      destinationId: 'paris',
+      departsAt: 1_000,
+      returnsAt: 4_000,
+      postcardSlots: [
+        { destinationId: 'paris', revealAt: 2_000 },
+        { destinationId: 'paris', revealAt: 3_000 },
+      ],
+      routeKind: 'unwished',
+      isDetour: false,
+    }
+    const recentPostcard = selectTripContent({
+      itinerary: {
+        ...itinerary,
+        postcardSlots: [itinerary.postcardSlots[0]],
+      },
+      travelerCatId: 'cat-1',
+      portraitId: 'my-cat',
+      catalog: catalogWithAlternatives,
+    }, () => 0).postcards[0].recipe
+
+    const content = selectTripContent({
+      itinerary,
+      travelerCatId: 'cat-1',
+      portraitId: 'my-cat',
+      catalog: catalogWithAlternatives,
+      recentPostcardRecipes: [recentPostcard],
+    }, () => 0)
+
+    expect(content.postcards.map(({ recipe }) => recipe.scene.id)).toEqual([
+      'paris-night',
+      'paris-morning',
+    ])
+    expect(content.postcards.map(({ recipe }) => recipe.copy.id)).toEqual([
+      'postcard-note-2',
+      'postcard-note-3',
     ])
   })
 })
