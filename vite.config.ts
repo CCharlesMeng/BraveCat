@@ -130,7 +130,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
-        globIgnores: ['scenes/**'],
+        globIgnores: ['dev-art/**', 'scenes/**'],
         runtimeCaching: productionManifest.shippingEligible
           ? [
               {
@@ -153,9 +153,13 @@ export default defineConfig({
       },
     }),
     {
-      name: 'strip-non-shipping-landmark-scenes',
+      name: 'strip-development-preview-and-non-shipping-scenes',
       apply: 'build',
       closeBundle() {
+        rmSync(path.join(repositoryRoot, 'dist/dev-art'), {
+          recursive: true,
+          force: true,
+        })
         if (!productionManifest.shippingEligible) {
           rmSync(path.join(repositoryRoot, 'dist/scenes'), {
             recursive: true,

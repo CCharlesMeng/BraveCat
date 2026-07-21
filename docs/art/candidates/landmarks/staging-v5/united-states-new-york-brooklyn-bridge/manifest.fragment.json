@@ -1,0 +1,781 @@
+{
+  "schemaVersion": 5,
+  "manifestKind": "landmark-staging-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "destinationId": "united-states-new-york-brooklyn-bridge",
+  "destinationName": "纽约布鲁克林大桥",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseV4": {
+    "combinedManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "byteLength": 427223,
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "destinationFragment": {
+      "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+      "byteLength": 8842,
+      "sha256": "20a76d1929d85e1edc1134d14d1531e2bd600e2e8eebb7743291b7aed79aecb6"
+    },
+    "enrichmentFragment": {
+      "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+      "byteLength": 52726,
+      "sha256": "81b0046d793aa04ce69535d5c757f249b47c21c4905d17695cbf887d1e7e3955"
+    },
+    "activeSceneVariantIds": [
+      "united-states-new-york-brooklyn-bridge--day-signature--v02",
+      "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+      "united-states-new-york-brooklyn-bridge--night-transit--v01",
+      "united-states-new-york-brooklyn-bridge--sheltered-rest--v01"
+    ],
+    "supersededRevisionReferences": [
+      {
+        "id": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v02.png",
+        "byteLength": 1874511,
+        "sha256": "01dba9c8e8b387ddc0de9a3db87d67c255b55b0179817d72e3f5d9272c832256",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      },
+      {
+        "id": "united-states-new-york-brooklyn-bridge--night-transit--v01",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--night-transit--v01.png",
+        "byteLength": 1900337,
+        "sha256": "fa10d9b3cc457cf88f44cf0d8bd61b134d197fceedc6277c770408c155fcdde8",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    },
+    "candidateScenesCatFree": true,
+    "portraitPreviewQaOnly": true
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center of the full Portrait canvas",
+    "scaleMeaning": "rendered Portrait canvas height / scene height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 2,
+    "generateImageRequestCount": 2,
+    "successfulImageArtifactCount": 2,
+    "selectedCandidateCount": 2,
+    "rejectedImageArtifactCount": 0,
+    "retainedRejectedRevisionCount": 0,
+    "variants": [
+      "day-signature--v03",
+      "night-transit--v02"
+    ]
+  },
+  "supersession": [
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "united-states-new-york-brooklyn-bridge--day-signature--v03",
+      "supersedesActiveRevisionId": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v02.png",
+      "supersededRevisionSha256": "01dba9c8e8b387ddc0de9a3db87d67c255b55b0179817d72e3f5d9272c832256"
+    },
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "united-states-new-york-brooklyn-bridge--night-transit--v02",
+      "supersedesActiveRevisionId": "united-states-new-york-brooklyn-bridge--night-transit--v01",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--night-transit--v01.png",
+      "supersededRevisionSha256": "fa10d9b3cc457cf88f44cf0d8bd61b134d197fceedc6277c770408c155fcdde8"
+    }
+  ],
+  "referencePolicy": {
+    "styleReferences": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+        "byteLength": 5766015,
+        "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+      }
+    ],
+    "styleReferenceUse": "style-only; reference cats, animals, text, borders, postmarks, layouts, and UI were excluded",
+    "landmarkContinuityReferenceUse": "identity, geometry, and style continuity only; wholly new compositions were generated",
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false,
+    "portraitUsedAsGenerationReference": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "path": "staging-context-research.md",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/staging-context-research.md",
+      "byteLength": 4435,
+      "sha256": "7a69d95b30dfbfb011ecde5b8cfd38aa8b418100c9f8640ccfc808a6f52738e3",
+      "method": "text-only official-source verification plus hashed v4 research reuse; no restricted media retained"
+    },
+    "sceneContactSheet": {
+      "imageSrc": "scene-contact-sheet--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/scene-contact-sheet--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+      "status": "non-final",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 2400,
+        "height": 1035
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 4203829,
+      "sha256": "91b5ac9c728130e5d402400ee98e8e68a9d3e243473d0b2653fbb1010262870a",
+      "qaOverlays": [
+        "safeBounds",
+        "compositionSlot.bottom-center-anchor"
+      ],
+      "candidateImagesContainQaOverlays": false
+    },
+    "portraitPlacementPreview": {
+      "imageSrc": "portrait-placement-preview--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/portrait-placement-preview--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+      "status": "non-final-qa-only",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 2400,
+        "height": 1085
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 4214652,
+      "sha256": "a8f1a20f6999f40ff4a0fec334e2d53b51bd7ef7adf27f3f74180397f07f7d1c",
+      "approvedPortraitManifest": {
+        "path": "docs/art/production/portraits/minho/manifest.json",
+        "byteLength": 3121,
+        "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+      },
+      "portraitPose": {
+        "id": "minho--walk--v01",
+        "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+        "byteLength": 500393,
+        "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+        "alphaBoundsPx": {
+          "x": 64,
+          "y": 494,
+          "width": 896,
+          "height": 466,
+          "bottomTransparentMargin": 64
+        }
+      },
+      "rendering": "Exact normalized anchor and scale were applied to the full 1024x1024 Portrait canvas with fractional SVG rasterization before sheet downsampling.",
+      "sceneCandidatesRemainCatFree": true
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "united-states-new-york-brooklyn-bridge--day-signature--v03",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "day-signature",
+      "version": "v03",
+      "name": "纽约布鲁克林大桥 · 日间标志景 v03",
+      "action": "supersede-active-revision",
+      "supersedes": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+      "supersededRevisionDeleted": false,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--day-signature--v03.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v03.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "byteLength": 2366273,
+      "sha256": "3cb33160028c5532c4ab580d4e12b18739d78fd90207cc44cfab50199ebddddd",
+      "hasCompanion": false,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.31,
+        "y": 0.79,
+        "scale": 0.135,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.235,
+        "y": 0.63,
+        "width": 0.15,
+        "height": 0.16
+      },
+      "placementIntent": {
+        "framing": "midground",
+        "narrativeWeight": "supporting",
+        "depthBand": "midground wooden-promenade route",
+        "targetScale": 0.135,
+        "allowedScaleBand": {
+          "min": 0.1,
+          "max": 0.17
+        },
+        "physicalSupport": "clear continuous wooden pedestrian-promenade planks",
+        "accessPlausibility": "ordinary pedestrian circulation on NYC DOT's elevated promenade; no structural or traffic-surface access implied",
+        "poseFit": "walk pose follows the promenade perspective toward the bridge route",
+        "clearSilhouette": "pale silver Portrait remains locally readable against warm planks without a blank patch, outline, or spotlight",
+        "visibleOpaqueBaseY": 0.7815625,
+        "fullSilhouetteInsideImage": true,
+        "requiresForegroundOcclusion": false,
+        "overlapsPersonObjectRailPostVehicleOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": 4,
+          "naturalGrouping": "one loose offset pair occupies the right half of the route while two solo walkers use separate left and right tracks",
+          "looseOffsetPairPresent": true,
+          "soloWalkerCountEstimate": 2,
+          "depthVariation": "the pair is larger and nearer; both solos are smaller and farther at unequal depths",
+          "directionVariation": "the pair travels towerward while a viewerward solo breaks the dominant direction; torso angles also differ",
+          "lateralVariation": "figures occupy left-of-center, center-right, and right route positions rather than a centerline",
+          "gestureVariation": "one pair member turns and gestures subtly; solos keep distinct arm and stride silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "bicycles": {
+          "present": true,
+          "countEstimate": 2,
+          "surface": "separated protected roadway-level bicycle lane",
+          "onPedestrianPromenade": false,
+          "irregularIntervals": true,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 2,
+          "surface": "adjacent roadway lanes",
+          "trucksPresent": false,
+          "irregularIntervals": true,
+          "readablePlatesLogosLiveryOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-staging-v5-2026-07-20",
+          "sourcePlan": "docs/art/landmark-staging-v5.json",
+          "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+          "promptJobId": "brooklyn-bridge-staging-v5-day-signature-v03",
+          "variantBrief": "Natural daytime crossing with an offset pair, solo walkers, separated bicycle/road traffic, and a midground walking Perch.",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 1,
+            "successfulImageArtifactCount": 1,
+            "rejectedImageArtifactCount": 0,
+            "note": "The single generated image was selected after normalized visual inspection."
+          },
+          "sourceArtifact": {
+            "filename": "brooklyn-day-signature-v03-source.png",
+            "storage": "tool-managed-outside-repository",
+            "retainedInRepository": false,
+            "byteLength": 3077536,
+            "sha256": "abdfed528c741afa91266a7feada06a043afaebf6aa89bab6ac4add963fcaeee",
+            "dimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "format": "png",
+            "mode": "RGB",
+            "alpha": "opaque",
+            "embeddedIccProfile": false
+          },
+          "styleIntensity": "B",
+          "referenceUse": "three locked files supplied style only; v4 day and night scenes supplied landmark/style continuity only; no Portrait was supplied",
+          "normalization": {
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "processor": "Sharp 0.35.3",
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profileSha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "result": "pass-pending-formal-review",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "naturalPeopleDistribution": "pass",
+            "trafficAndBicyclePlacement": "pass",
+            "noPlayerCatOrAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextPseudoTextLogoLiveryAdOrPlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "perchSupportAndPerspective": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pathAndFilename": "pass",
+            "pngSignature": "pass",
+            "dimensions1200x900": "pass",
+            "bitDepth8": "pass",
+            "opaqueRgbColorType": "pass",
+            "embeddedSrgbProfile": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The pair and two solos are asymmetric, differently scaled, and not a row or procession. Two bicycles and two cars remain on separated correct surfaces. The left-midground plank Perch is continuous and unobstructed."
+        },
+        "portraitPreviewInspection": {
+          "performed": true,
+          "result": "pass-pending-formal-review",
+          "actualApprovedPoseUsed": true,
+          "feetOrBodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personOrObjectOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "smallAndSecondary": true,
+          "notes": "The walk Portrait's visible foot base meets open plank perspective at y=0.7815625; the complete silhouette stays inside the scene and clear of circulation."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "provenanceReferenceRightsReview": "pending",
+        "finalArtworkRightsReview": "pending",
+        "finalPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--night-transit--v02",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "night-transit",
+      "version": "v02",
+      "name": "纽约布鲁克林大桥 · 蓝调夜行 v02",
+      "action": "supersede-active-revision",
+      "supersedes": "united-states-new-york-brooklyn-bridge--night-transit--v01",
+      "supersededRevisionDeleted": false,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--night-transit--v02.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--night-transit--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "byteLength": 2430033,
+      "sha256": "7d164778605d90f8d8576e4b6e1f9b566c337630b76678feaed9e51817ef7d5d",
+      "hasCompanion": false,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.55,
+        "y": 0.64,
+        "scale": 0.08,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.505,
+        "y": 0.54,
+        "width": 0.09,
+        "height": 0.105
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "narrativeWeight": "cameo",
+        "depthBand": "distant route under the tower approach",
+        "targetScale": 0.08,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "dry, visible wooden promenade planks under the tower approach",
+        "accessPlausibility": "ordinary pedestrian circulation on NYC DOT's elevated promenade; no tower, rail, bicycle-lane, or roadway access implied",
+        "poseFit": "walk pose aligns with the receding promenade route",
+        "clearSilhouette": "silver Portrait remains readable against blue-hour planks with natural local contrast and no artificial clearing",
+        "visibleOpaqueBaseY": 0.635,
+        "fullSilhouetteInsideImage": true,
+        "requiresForegroundOcclusion": false,
+        "overlapsPersonObjectRailPostVehicleOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": 5,
+          "naturalGrouping": "one offset pair occupies the left route while three solos occupy separate center and right tracks at unequal depths",
+          "looseOffsetPairPresent": true,
+          "soloWalkerCountEstimate": 3,
+          "depthVariation": "the left pair is nearest; center and right solos step down in apparent scale toward the tower",
+          "directionVariation": "the larger pair and isolated figures use opposing travel impressions and distinct torso angles rather than one synchronized flow",
+          "lateralVariation": "left pair, central solo, and right-side solos occupy multiple route tracks",
+          "gestureVariation": "the pair has a slight turned-head offset while solos use distinct arm and stride silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "bicycles": {
+          "present": true,
+          "countEstimate": 1,
+          "surface": "separated protected roadway-level bicycle lane",
+          "onPedestrianPromenade": false,
+          "irregularIntervals": true,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 3,
+          "surface": "adjacent roadway lanes",
+          "trucksPresent": false,
+          "irregularIntervals": true,
+          "readablePlatesLogosLiveryOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "night": {
+        "applicable": true,
+        "phase": "blue-hour",
+        "ambientPalette": "low-saturation blue-gray",
+        "practicalLighting": "restrained warm promenade lamps, tower lighting, cable lights, and small vehicle lights",
+        "routeReadable": true,
+        "groundPlaneReadable": true,
+        "landmarkSilhouetteReadable": true,
+        "neonDominant": false,
+        "floatingLightOrbsAbsent": true,
+        "highlightsBlown": false,
+        "shadowsCrushed": false
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-staging-v5-2026-07-20",
+          "sourcePlan": "docs/art/landmark-staging-v5.json",
+          "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+          "promptJobId": "brooklyn-bridge-staging-v5-night-transit-v02",
+          "variantBrief": "Blue-hour crossing with sparse asymmetric homebound activity and a distant tower-approach walking Perch.",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 1,
+            "successfulImageArtifactCount": 1,
+            "rejectedImageArtifactCount": 0,
+            "note": "The single generated image was selected after normalized visual inspection."
+          },
+          "sourceArtifact": {
+            "filename": "brooklyn-night-transit-v02-source.png",
+            "storage": "tool-managed-outside-repository",
+            "retainedInRepository": false,
+            "byteLength": 3129490,
+            "sha256": "a4f7146ce0fd49ca829d24dacea00407e5d521207c5fdfd9f586ebd2920315b6",
+            "dimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "format": "png",
+            "mode": "RGB",
+            "alpha": "opaque",
+            "embeddedIccProfile": false
+          },
+          "styleIntensity": "B",
+          "referenceUse": "three locked files supplied style only; v4 day and night scenes supplied landmark/style continuity only; no Portrait was supplied",
+          "normalization": {
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "processor": "Sharp 0.35.3",
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profileSha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "result": "pass-pending-formal-review",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "naturalPeopleDistribution": "pass",
+            "trafficAndBicyclePlacement": "pass",
+            "nightRouteAndGroundReadability": "pass",
+            "noPlayerCatOrAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextPseudoTextLogoLiveryAdOrPlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "perchSupportAndPerspective": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pathAndFilename": "pass",
+            "pngSignature": "pass",
+            "dimensions1200x900": "pass",
+            "bitDepth8": "pass",
+            "opaqueRgbColorType": "pass",
+            "embeddedSrgbProfile": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The offset pair and staggered solos avoid a row and leave the compact distant Perch open. The bicycle and irregular car lights remain on roadway-level surfaces. Lighting is restrained and the plank support plane stays readable."
+        },
+        "portraitPreviewInspection": {
+          "performed": true,
+          "result": "pass-pending-formal-review",
+          "actualApprovedPoseUsed": true,
+          "feetOrBodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personOrObjectOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "smallAndSecondary": true,
+          "notes": "The distant walk Portrait's visible foot base meets the tower-approach planks at y=0.635; it remains a clear cameo between circulation tracks without overlap."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "provenanceReferenceRightsReview": "pending",
+        "finalArtworkRightsReview": "pending",
+        "finalPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    }
+  ],
+  "rejectedRevisions": {
+    "directory": "rejected",
+    "count": 0,
+    "artifacts": [],
+    "note": "Both single-request generations passed normalized inspection; no rejected image revision exists to retain."
+  },
+  "inspection": {
+    "performed": true,
+    "normalizedCandidateCount": 2,
+    "visualInspectionCount": 2,
+    "portraitPreviewInspectionCount": 2,
+    "hardFailureCount": 0,
+    "hardConstraintViolations": [],
+    "machineChecksPassed": true,
+    "checks": {
+      "writesConfinedToDestinationDirectory": "pass",
+      "pathsAndFilenames": "pass",
+      "exactCandidateCount": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgb": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithoutDistortion": "pass",
+      "candidateScenesCatFree": "pass",
+      "qaOverlaysAbsentFromCandidates": "pass",
+      "contactAndPreviewSheetsOpaque": "pass",
+      "allFormalReviewsPending": "pass"
+    },
+    "result": "pass-pending-formal-review"
+  },
+  "rights": {
+    "researchUse": "official text facts only",
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "shippingWarnings": [
+      "Generated candidates and QA previews are non-shipping pending human visual, Ambient Life, access/placement, provenance/reference-rights, final artwork-rights, and final Portrait-composite review.",
+      "Official source photographs, maps, logos, page layouts, marks, and text are not licensed into these candidates and were not retained; only URLs and paraphrased factual cues were used.",
+      "Existing Brooklyn scenes were continuity references only; their pixels were not edited, collaged, traced, or copied.",
+      "The Portrait appears only in the non-final placement preview; the two scene candidates remain cat-free.",
+      "No NYC or NYC DOT endorsement, special bridge access, or permission for an animal is claimed."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v5-human-visual-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-ambient-life-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-access-and-placement-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-provenance-reference-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-artwork-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-shipping-approval",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "accessAndPlacementReview": "pending",
+    "rightsReview": "pending",
+    "finalPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

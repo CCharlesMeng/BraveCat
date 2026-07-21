@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 4,
+  "manifestKind": "landmark-enrichment-candidate-fragment",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+  "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+  "baseManifest": {
+    "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+    "planId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+    "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+  },
+  "baseDestinationFragment": {
+    "path": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
+    "sha256": "dd6636d875d657640711ea69e7ed126667a4f5bf14210fac4b9c63ad30ecc06d"
+  },
+  "destinationId": "united-kingdom-london-tower-bridge",
+  "destinationName": "伦敦塔桥",
+  "status": "candidate",
+  "approvalState": "pending-human-approval",
+  "candidate": true,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseRevisionLinkage": {
+    "action": "supersede-active-revision",
+    "semanticId": "united-kingdom-london-tower-bridge--day-signature",
+    "supersedes": "united-kingdom-london-tower-bridge--day-signature--v01",
+    "supersededImageSrc": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+    "supersededSha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152",
+    "replacement": "united-kingdom-london-tower-bridge--day-signature--v02",
+    "preservation": "The approved v01 artifact remains unchanged at its existing path and is linked as the superseded base revision; this isolated batch does not copy, edit, or delete it."
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    }
+  },
+  "artifacts": {
+    "socialContextResearch": {
+      "kind": "social-context-research",
+      "path": "social-context-research.md",
+      "sha256": "c1db898229dd6ffba1f2e72b28c8a46fa36fabeebb1bad9416fbb5983d30e738",
+      "primaryOfficialSourceCount": 4,
+      "restrictedSourcePhotosRetained": false
+    }
+  },
+  "styleAndContinuityReferences": {
+    "styleReferenceUse": "style-only",
+    "styleReferencesProvidedToGenerator": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/style-ref-poses.png",
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+      }
+    ],
+    "landmarkReferenceUse": "landmark-and-style-continuity-only",
+    "currentTowerBridgeScenesProvidedToGenerator": [
+      {
+        "path": "docs/art/production/landmarks/scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.png",
+        "sha256": "f32cbdb3c49f17e911a24302839f1e0bcf57bc5f841a068526ca2ba4d7cc5152"
+      },
+      {
+        "path": "docs/art/production/landmarks/scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.png",
+        "sha256": "30e84dc9bfc8e31e16a7450d70f27cac78e5f5de17a0937ba94700f56207c262"
+      }
+    ],
+    "sourcePixelReuse": false
+  },
+  "sceneVariants": [
+    {
+      "id": "united-kingdom-london-tower-bridge--day-signature--v02",
+      "sourceCandidateId": "united-kingdom-london-tower-bridge--day-signature",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "Day signature",
+      "action": "supersede-active-revision",
+      "supersedes": "united-kingdom-london-tower-bridge--day-signature--v01",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1",
+          "byteLength": 480
+        }
+      },
+      "sha256": "04ddffa4f6a3dce89e4994ac460586850c1ed75b71cc34ff6064740b61f6e764",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.085,
+        "y": 0.97,
+        "scale": 0.23,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.01,
+        "y": 0.74,
+        "width": 0.15,
+        "height": 0.25
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "presentation": "a few small incidental pedestrians",
+          "surfaces": [
+            "riverside pedestrian paving",
+            "bridge footway"
+          ],
+          "faces": "distant and non-identifiable",
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "placement": "bridge roadway only",
+          "trafficLevel": "light",
+          "redDoubleDeckerCount": 1,
+          "redDoubleDecker": "small, generic, unbranded, and without readable livery, route, advertisement, or plate",
+          "otherVehicles": "a few small generic vehicles without readable plates or marks",
+          "outsideSafeBounds": true
+        },
+        "riverCraft": {
+          "present": true,
+          "count": 1,
+          "description": "modest low-profile generic boat",
+          "placement": "River Thames only",
+          "outsideSafeBounds": true
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true
+      },
+      "production": {
+        "provenance": {
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report a model or seed."
+          },
+          "generatedSource": {
+            "width": 1536,
+            "height": 1024,
+            "format": "png",
+            "mode": "RGB",
+            "hasAlpha": false,
+            "embeddedIcc": false,
+            "sha256": "63a627fd999212cbd2394349faa8ad0ceffc03b9547491f1dd009ead2b77a1ce"
+          },
+          "styleIntensity": "B",
+          "styleReferenceUsage": "style-only",
+          "landmarkReferenceUsage": "landmark-and-style-continuity-only",
+          "research": {
+            "path": "social-context-research.md",
+            "sha256": "c1db898229dd6ffba1f2e72b28c8a46fa36fabeebb1bad9416fbb5983d30e738",
+            "use": "official text facts only"
+          },
+          "generatedAt": "2026-07-20"
+        },
+        "normalization": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Uniform Lanczos3 scale to 1350x900 followed by a centered 75 px crop from each side to exact 1200x900",
+          "crop": {
+            "fit": "cover",
+            "position": "centre",
+            "left": 75,
+            "top": 0,
+            "width": 1200,
+            "height": 900
+          },
+          "output": "embedded-sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "inspection": {
+          "machineChecksPassed": true,
+          "visualInspectionPerformed": true,
+          "result": "pass",
+          "notes": "Both towers and upper walkways remain unobscured; the single generic red double-decker and light traffic stay on the roadway, the modest boat stays on the Thames, small pedestrians stay off the reserved promenade slot, and no prohibited graphic or subject was observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--night-transit--v01",
+      "sourceCandidateId": "united-kingdom-london-tower-bridge--night-transit",
+      "variantId": "night-transit",
+      "version": "v01",
+      "name": "Night transit",
+      "action": "add-active-variant",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--night-transit--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1",
+          "byteLength": 480
+        }
+      },
+      "sha256": "08dd4a7d4589e494137f631705901f0aae575ef72ecc67fe7b9d7843c49398c2",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.15,
+        "y": 0.96,
+        "scale": 0.18,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.06,
+        "y": 0.78,
+        "width": 0.18,
+        "height": 0.2
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "presentation": "three small homebound pedestrians",
+          "surfaces": [
+            "riverside pedestrian promenade"
+          ],
+          "faces": "distant and non-identifiable",
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "placement": "bridge roadway only",
+          "trafficLevel": "sparse",
+          "description": "small generic evening traffic without readable livery, routes, advertisements, logos, or plates",
+          "outsideSafeBounds": true
+        },
+        "riverCraft": {
+          "present": false
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true
+      },
+      "night": {
+        "time": "ordinary early night",
+        "lighting": {
+          "architectural": "restrained warm bridge illumination",
+          "route": "a few warm operational promenade lamps",
+          "ambient": "low-saturation blue-gray watercolor wash",
+          "reflections": "soft broken Thames reflections",
+          "specialEventLighting": false,
+          "neonDominance": false
+        },
+        "walkSlot": {
+          "surface": "dry riverside pedestrian promenade",
+          "clear": true,
+          "legibleAtNight": true
+        },
+        "visualInspection": {
+          "performed": true,
+          "result": "pass",
+          "evidence": "The route and both towers remain legible; lamps and reflections are restrained; activity is sparse and correctly surfaced; the reserved lower-left walk slot is empty."
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report a model or seed."
+          },
+          "generatedSource": {
+            "width": 1536,
+            "height": 1024,
+            "format": "png",
+            "mode": "RGB",
+            "hasAlpha": false,
+            "embeddedIcc": false,
+            "sha256": "bbc6a3d624e26f055a085f9e6ab0cac35b9f66b521f3c4b0b3f587c67d5dad5b"
+          },
+          "styleIntensity": "B",
+          "styleReferenceUsage": "style-only",
+          "landmarkReferenceUsage": "landmark-and-style-continuity-only",
+          "research": {
+            "path": "social-context-research.md",
+            "sha256": "c1db898229dd6ffba1f2e72b28c8a46fa36fabeebb1bad9416fbb5983d30e738",
+            "use": "official text facts only"
+          },
+          "generatedAt": "2026-07-20"
+        },
+        "normalization": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Uniform Lanczos3 scale to 1350x900 followed by a centered 75 px crop from each side to exact 1200x900",
+          "crop": {
+            "fit": "cover",
+            "position": "centre",
+            "left": 75,
+            "top": 0,
+            "width": 1200,
+            "height": 900
+          },
+          "output": "embedded-sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "inspection": {
+          "machineChecksPassed": true,
+          "visualInspectionPerformed": true,
+          "result": "pass",
+          "notes": "The twin towers, upper walkways, route, restrained lamps, sparse pedestrians, roadway traffic, and Thames reflections are readable; the slot is clear; no prohibited subject or graphic element was observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--sheltered-rest--v01",
+      "sourceCandidateId": "united-kingdom-london-tower-bridge--sheltered-rest",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "name": "Sheltered rest",
+      "action": "add-active-variant",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--sheltered-rest--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1",
+          "byteLength": 480
+        }
+      },
+      "sha256": "0fb9e310746204503b8558cf8f3d96d4772ca4e2449140e45f358ccc1b917c15",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.42,
+        "y": 0.8,
+        "scale": 0.16,
+        "pose": "sleep",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.22,
+        "y": 0.65,
+        "width": 0.4,
+        "height": 0.17
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "presentation": "three small distant pedestrians outside the shelter",
+          "surfaces": [
+            "riverside pedestrian promenade"
+          ],
+          "faces": "distant and non-identifiable",
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": false
+        },
+        "riverCraft": {
+          "present": false
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true
+      },
+      "shelter": {
+        "type": "quiet unbranded glass-roofed riverside arcade with a café-like window bench",
+        "realPlaceContext": "south-bank warehouse and covered-arcade vernacular grounded by official Hay's Galleria text facts; not presented as an exact venue reconstruction",
+        "weatherProtection": "covered, dry, and warm",
+        "sleepSurface": {
+          "type": "plain built-in wooden window bench with muted-sage cushion",
+          "clean": true,
+          "grounded": true,
+          "unbranded": true,
+          "slotClear": true
+        },
+        "landmarkRelationship": {
+          "towerBridgeVisibleOutside": true,
+          "twinTowersUnmistakable": true,
+          "framing": "broad arcade opening across the Thames"
+        },
+        "visualInspection": {
+          "performed": true,
+          "result": "pass",
+          "evidence": "The covered interior is plausible and modest, the bench sleep slot is clear, the twin towers dominate the exterior view, and all distant people remain outside the slot."
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report a model or seed."
+          },
+          "generatedSource": {
+            "width": 1536,
+            "height": 1024,
+            "format": "png",
+            "mode": "RGB",
+            "hasAlpha": false,
+            "embeddedIcc": false,
+            "sha256": "e6ec041127cbc21e033df98a5417876009a1d57d80e5fe5d93cdae3c55ac1bc3"
+          },
+          "styleIntensity": "B",
+          "styleReferenceUsage": "style-only",
+          "landmarkReferenceUsage": "landmark-and-style-continuity-only",
+          "research": {
+            "path": "social-context-research.md",
+            "sha256": "c1db898229dd6ffba1f2e72b28c8a46fa36fabeebb1bad9416fbb5983d30e738",
+            "use": "official text facts only"
+          },
+          "generatedAt": "2026-07-20"
+        },
+        "normalization": {
+          "sourceDimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "method": "Uniform Lanczos3 scale to 1350x900 followed by a centered 75 px crop from each side to exact 1200x900",
+          "crop": {
+            "fit": "cover",
+            "position": "centre",
+            "left": 75,
+            "top": 0,
+            "width": 1200,
+            "height": 900
+          },
+          "output": "embedded-sRGB 8-bit opaque RGB PNG",
+          "distortion": false
+        },
+        "inspection": {
+          "machineChecksPassed": true,
+          "visualInspectionPerformed": true,
+          "result": "pass",
+          "notes": "The glass-roofed shelter, broad empty cushioned bench, outside promenade activity, and bridge view are coherent; no venue identity, readable text, logo, cat, border, or QA mark was observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    }
+  ],
+  "contactSheet": {
+    "status": "non-final",
+    "shippingEligible": false,
+    "imageSrc": "contact-sheet--united-kingdom-london-tower-bridge--enrichment-v4--non-final.png",
+    "dimensions": {
+      "width": 1600,
+      "height": 560,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "sha256": "54f53ae8092726a0fa849d2000a9697efca209f5245bd96dfe4713fc6c15d356",
+    "labels": [
+      "day-signature v02",
+      "night-transit v01",
+      "sheltered-rest v01"
+    ],
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.bottom-center-anchor"
+    ],
+    "candidateImagesContainQaOverlays": false
+  },
+  "inspection": {
+    "candidateImageCount": 3,
+    "successfulGenerateImageOutputCount": 3,
+    "transportFailuresWithoutImageBytes": 2,
+    "transportFailureDisposition": "Two transient 429 responses produced no image artifact or revision; the three successful candidate outputs are the only generated scene artifacts in this batch.",
+    "supersededRevisionCount": 0,
+    "rejectedRevisionCount": 0,
+    "machineChecks": {
+      "status": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "exactAspectRatio4x3": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgbColorType2": "pass",
+      "sRgbIccEmbedded": "pass",
+      "alphaAbsent": "pass",
+      "hashesMatch": "pass",
+      "normalizationWithoutDistortion": "pass"
+    },
+    "visualChecks": {
+      "status": "pass",
+      "lockedBStyleContinuity": "pass",
+      "towerBridgeRecognition": "pass",
+      "socialSurfacePlacement": "pass",
+      "peopleAndVehiclesOutsideSafeBounds": "pass",
+      "nightRouteReadability": "pass",
+      "shelterBelievabilityAndSleepSlot": "pass",
+      "noCatOrOtherAnimalCharacter": "pass",
+      "noIdentifiableFaces": "pass",
+      "noTextPseudoTextLogoWatermarkUiBorderOrQaMarks": "pass"
+    }
+  },
+  "provenanceAndRights": {
+    "generationMethod": "image-generation",
+    "generator": "Cursor GenerateImage",
+    "officialTextSources": [
+      "https://www.towerbridge.org.uk/explore-inside",
+      "https://www.towerbridge.org.uk/stories/why-does-tower-bridge-open",
+      "https://www.cityoflondon.gov.uk/services/streets/activities-on-the-highway/street-lighting",
+      "https://www.londonbridgecity.co.uk/properties/hays-galleria"
+    ],
+    "officialSourceUse": "Text facts only for road, pedestrian, river, lighting, and shelter plausibility.",
+    "restrictedSourcePhotoRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotographPixelsUsed": false,
+    "projectReferenceUse": "The three locked-B references were used for style only; current approved Tower Bridge scenes were used for landmark and style continuity only.",
+    "warnings": [
+      "Generated candidates remain non-shipping pending human visual and social-context review.",
+      "Reference-rights, source-independence, final artwork-rights, transport-livery and trademark, night-lighting, and generic interior or venue-identity review remain pending.",
+      "Final approved real-Portrait composite review and explicit shipping approval remain pending."
+    ]
+  },
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "socialContextReview": "pending",
+    "rightsReview": "pending",
+    "finalRealPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null
+  },
+  "pendingReviews": [
+    "human-visual-review",
+    "social-context-review",
+    "reference-rights-and-source-independence-review",
+    "final-artwork-rights-review",
+    "transport-livery-and-trademark-review",
+    "night-lighting-review",
+    "interior-and-venue-identity-review",
+    "final-approved-real-portrait-composite-review",
+    "explicit-shipping-approval"
+  ]
+}

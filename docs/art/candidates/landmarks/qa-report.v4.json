@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 4,
+  "reportKind": "landmark-enrichment-integration-qa",
+  "planId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "sourceManifest": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+  "sourceManifestSha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f",
+  "generatedAt": "2026-07-20",
+  "overallStatus": "pass",
+  "shippingEligible": false,
+  "activeSet": {
+    "selection": "all-active-scene-variants",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 71,
+    "activeSceneSetSha256": "d871af0cfc146ee62a52039cb54e781b4b541de45181ca3f5ba3859eda7de885",
+    "activeSceneContentSetSha256": "63fc6b05b9ca37d9115267cef2e3a458c7729a8f02b4d23297f17e71d43af445"
+  },
+  "totals": {
+    "destinationCount": 25,
+    "activeSceneVariantCount": 71,
+    "ordinaryVariantCount": 60,
+    "companionRareVariantCount": 11,
+    "supersededSceneFileCount": 21,
+    "generatedCandidateCount": 15,
+    "activeDayRevisionCount": 5,
+    "newNightTransitCount": 5,
+    "newShelteredRestCount": 5,
+    "machineCheckCount": 13,
+    "machineChecksPassed": 13,
+    "machineChecksFailed": 0
+  },
+  "machineChecks": [
+    {
+      "id": "protected-v3-input-integrity",
+      "status": "pass",
+      "expected": 104,
+      "actual": 104
+    },
+    {
+      "id": "enrichment-destination-and-fragment-coverage",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "generated-candidate-count",
+      "status": "pass",
+      "expected": 15,
+      "actual": 15
+    },
+    {
+      "id": "explicit-day-revisions",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "exact-new-active-variants",
+      "status": "pass",
+      "expected": 10,
+      "actual": 10
+    },
+    {
+      "id": "night-transit-coverage",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "sheltered-rest-coverage",
+      "status": "pass",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "social-night-and-shelter-validation",
+      "status": "pass",
+      "expected": {
+        "social": 15,
+        "night": 5,
+        "shelter": 5
+      },
+      "actual": {
+        "social": 15,
+        "night": 5,
+        "shelter": 5
+      }
+    },
+    {
+      "id": "combined-active-scene-total",
+      "status": "pass",
+      "expected": 71,
+      "actual": 71
+    },
+    {
+      "id": "unique-semantic-and-versioned-ids",
+      "status": "pass",
+      "expected": 71,
+      "actual": 71
+    },
+    {
+      "id": "superseded-and-rejected-file-count",
+      "status": "pass",
+      "expected": 21,
+      "actual": 21
+    },
+    {
+      "id": "image-format-hash-filename-and-slot-policy",
+      "status": "pass",
+      "expected": 15,
+      "actual": 15
+    },
+    {
+      "id": "destination-and-global-contact-sheets",
+      "status": "pass",
+      "expected": 10,
+      "actual": 10
+    }
+  ],
+  "pendingHumanChecks": [
+    {
+      "id": "v4-social-context-and-visual-review",
+      "status": "pending",
+      "note": "Review people/vehicle plausibility, non-identifiability, night readability, shelter believability, landmark fidelity, and Portrait-slot separation."
+    },
+    {
+      "id": "v4-minho-composite-review",
+      "status": "blocked-until-visual-approval",
+      "note": "Composite the five day revisions plus ten new night/rest scenes only after the exact v4 active set is visually approved."
+    },
+    {
+      "id": "v4-rights-cultural-and-trademark-review",
+      "status": "pending",
+      "note": "Social context, transport liveries, night lighting, interiors, venue identity, shrine context, and source-independence require separate review."
+    }
+  ],
+  "protectedInputs": {
+    "baseManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+      "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+    },
+    "enrichmentPlan": {
+      "path": "docs/art/landmark-enrichment-v4.json",
+      "sha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5"
+    }
+  },
+  "overviewSheets": [
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v4-01-of-05--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v4-02-of-05--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v4-03-of-05--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v4-04-of-05--non-final.png",
+    "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v4-05-of-05--non-final.png"
+  ],
+  "errors": []
+}

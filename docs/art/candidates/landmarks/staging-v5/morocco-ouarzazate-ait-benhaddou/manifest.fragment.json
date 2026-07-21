@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-staging-v5-candidate-fragment",
+  "destinationId": "morocco-ouarzazate-ait-benhaddou",
+  "destinationName": "艾本哈杜村",
+  "status": "candidate",
+  "reviewState": "pending",
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "sourcePlan": {
+    "path": "docs/art/landmark-staging-v5.json",
+    "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+    "sha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505"
+  },
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "baseLinkage": {
+    "candidateManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "planId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "destinationFragment": {
+      "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/manifest.fragment.json",
+      "sha256": "a7f9d7823e6f6b9896d82773f9d2e25f5f59df96dbed0b37afb99f9ce0285b11"
+    },
+    "existingActiveCandidatesRetained": [
+      {
+        "id": "morocco-ouarzazate-ait-benhaddou--day-signature--v01",
+        "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png",
+        "sha256": "b033052ad70a23918899607c4aef50a7765b538e111519fe190981d94da56635"
+      },
+      {
+        "id": "morocco-ouarzazate-ait-benhaddou--golden-hour--v01",
+        "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png",
+        "sha256": "f63a2da2ebf0ef7432b307453f49de3743fcef2c969661098b2fe7b4484aad6d"
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png",
+    "lockedStyleAndFormatSource": {
+      "path": "docs/art/landmark-production-v1.json",
+      "sha256": "1b3a716c16fa56a47776228f438dcc9ef3265dba97177584283c6781b663445e"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "portraitAnchor": "bottom-center of the 1024x1024 Portrait asset",
+    "scaleMeaning": "rendered Portrait canvas height / Scene height"
+  },
+  "lockedStyleReferences": [
+    {
+      "path": "docs/art/style-ref-home.png",
+      "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+      "usage": "style medium and locked-B intensity only"
+    },
+    {
+      "path": "docs/art/style-ref-postcard.png",
+      "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+      "usage": "style medium and locked-B intensity only"
+    },
+    {
+      "path": "docs/art/style-ref-poses.png",
+      "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110",
+      "usage": "style medium and locked-B intensity only; reference cats and composition excluded"
+    },
+    {
+      "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+      "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+      "usage": "panel B intensity only"
+    }
+  ],
+  "approvedPortraitQaSource": {
+    "archive": {
+      "path": "docs/art/archive/asset-archive.v2.json",
+      "sha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3"
+    },
+    "portraitId": "minho",
+    "pose": "gaze",
+    "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+    "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+    "usage": "QA preview only; never supplied to Scene generation and never embedded in the Scene candidate",
+    "shippingArtifact": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/staging-context-research.md",
+      "sha256": "d7bd19672c5c4d829943804eb48dc0926b0248b9b871304aed3c377688fcf74d",
+      "method": "official-source text review only",
+      "restrictedSourcePhotosRetained": false
+    },
+    "priorVisualReferenceResearch": {
+      "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/visual-reference-research.md",
+      "sha256": "09960d35e927424ac21ec9169274003b6c10fc3f0f1d08f885ca137fc88da0d7"
+    },
+    "sceneContactSheet": {
+      "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/scene-contact-sheet--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+      "sha256": "5f92b53ff1a252909eed5eb171efaebb60d8229c6f752848b5240b8049cdb5f8",
+      "dimensions": {
+        "width": 980,
+        "height": 901,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "containsPortrait": false,
+      "overlays": [
+        "visible-silhouette safeBounds",
+        "bottom-center composition anchor"
+      ],
+      "shippingEligible": false
+    },
+    "portraitPlacementPreview": {
+      "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/portrait-placement-preview--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+      "sha256": "e1a372358a2de58bb6ccb52db01284a125ffaccf6fe4e328fce43ce8aa1a85c1",
+      "dimensions": {
+        "width": 980,
+        "height": 901,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "containsApprovedMinho": true,
+      "qaOnly": true,
+      "shippingEligible": false
+    }
+  },
+  "rights": {
+    "status": "blocked-pending-human-heritage-provenance-rights-and-authority-review",
+    "officialSourcesUsedAsTextOnly": true,
+    "restrictedSourcePhotosRetained": false,
+    "remoteSourceMediaSuppliedToGenerator": false,
+    "referenceUrls": [
+      "https://whc.unesco.org/en/list/444/",
+      "https://whc.unesco.org/document/171623",
+      "https://whc.unesco.org/en/soc/1168/",
+      "https://whc.unesco.org/en/decisions/8553/",
+      "https://www.visitmorocco.com/en/travel/ouarzazate-zagora-tinghir/medina",
+      "https://mjcc.gov.ma/fr/departements/culture/patrimoine-materiel-unesco/"
+    ],
+    "sourceTerms": [
+      "UNESCO marks the property-description text CC BY-SA 3.0 IGO; that notice was not treated as a licence for gallery photographs or other media.",
+      "Moroccan government and tourism pages were treated as rights-reserved official text sources unless expressly stated otherwise."
+    ],
+    "shippingWarnings": [
+      "Aït Ben Haddou is a traditional habitat and living heritage place, not an abandoned fantasy ruin or merely a film set.",
+      "Do not exoticize residents, romanticize abandonment, or assert an undocumented current damage, occupation, or restoration state.",
+      "The pedestrian-access evidence supports a connected ordinary approach, not public access to fragile roofs, defensive walls, protected masonry, ruin edges, or cliffs.",
+      "Human landmark, living-heritage, provenance, adaptation/rights, and authority review remain required before promotion or shipping."
+    ]
+  },
+  "sceneVariants": [
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou--distant-overlook--v01",
+      "variantId": "distant-overlook",
+      "version": "v01",
+      "name": "艾本哈杜村 · 远眺",
+      "status": "candidate",
+      "shippingEligible": false,
+      "action": "add-active-variant",
+      "supersedes": null,
+      "imageSrc": "scene--morocco-ouarzazate-ait-benhaddou--distant-overlook--v01.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--distant-overlook--v01.png",
+      "sha256": "ae41d6f60023ed1a2934513217d883a0f6cf7fb992fe230e51f30b22a2e1abee",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "iccProfile": "embedded-sRGB"
+      },
+      "catDrawnIntoScene": false,
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.77,
+        "y": 0.84,
+        "scale": 0.08,
+        "pose": "gaze",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "meaning": "visible Portrait silhouette plus inspection margin",
+        "x": 0.735,
+        "y": 0.75,
+        "width": 0.07,
+        "height": 0.1
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "narrativeWeight": "cameo",
+        "depthBand": "distant visitor overlook",
+        "targetScale": 0.08,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "broad stable compacted-earth and simple-paved approach terrace with visible perspective",
+        "accessPlausibility": "connected visitor approach outside the protected ksar and safely set back from any drop",
+        "poseFit": "gaze body base meets the level approach while the flipped head faces toward the ksar",
+        "clearSilhouette": "natural warm-earth contrast keeps the tiny silver Portrait readable without a spotlight, outline, or empty box",
+        "completePortraitContained": true,
+        "requiresForegroundOcclusion": false,
+        "clearOf": [
+          "fragile roofs",
+          "defensive walls",
+          "protected masonry",
+          "ruin edges",
+          "cliffs",
+          "retaining stones",
+          "people",
+          "vegetation",
+          "hard shadows"
+        ]
+      },
+      "ambientLife": {
+        "policy": "staging-v5-natural-circulation",
+        "people": {
+          "approximateVisibleCount": 3,
+          "grouping": "one tiny loose pair plus one smaller isolated walker",
+          "presentation": "non-identifiable visitors on the connected approach at different depth, scale, direction, and spacing",
+          "livingHeritageFraming": "ordinary access evidence only; residents are not depicted as decoration",
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "count": 0
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "synchronizedPosesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeLineupAbsent": true,
+          "outsidePerchSafeBounds": true,
+          "ksarAndFoothillsRemainDominant": true
+        }
+      },
+      "production": {
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool"
+        },
+        "acceptedGenerationAttempt": 1,
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "sourceMode": "RGB",
+        "sourceFormat": "PNG",
+        "sourceEmbeddedIccProfile": false,
+        "sourceSha256": "51cd3849a6e789a510e103f5ecf51159761550efc81aaf1aafe989a5b337bb69",
+        "sourceRetention": "tool-managed generated image outside the repository; not a shipping artifact",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style medium and intensity only",
+        "sceneReferenceUse": "factual landmark and style continuity only; prior viewpoints and compositions not copied",
+        "sceneReferences": [
+          {
+            "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.png",
+            "sha256": "b033052ad70a23918899607c4aef50a7765b538e111519fe190981d94da56635"
+          },
+          {
+            "path": "docs/art/candidates/landmarks/morocco-ouarzazate-ait-benhaddou/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.png",
+            "sha256": "f63a2da2ebf0ef7432b307453f49de3743fcef2c969661098b2fe7b4484aad6d"
+          }
+        ],
+        "officialTextResearchUse": "heritage geometry, Ounila setting, pedestrian-access boundary, living-heritage caution, and visitor-pressure constraints only",
+        "normalization": {
+          "tool": "Pillow 12.3.0",
+          "method": "centered exact 4:3 crop without distortion, then Lanczos resize",
+          "sourceCrop": {
+            "left": 86,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resampling": "Image.Resampling.LANCZOS",
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorManagement": "untagged source RGB treated as sRGB; generated sRGB ICC profile embedded",
+          "outputMode": "8-bit opaque RGB PNG"
+        }
+      },
+      "inspection": {
+        "machine": {
+          "dimensionsMatch": true,
+          "modeIsRgb": true,
+          "isOpaque": true,
+          "embeddedSrgbProfile": true,
+          "sha256Computed": true
+        },
+        "visual": {
+          "performed": true,
+          "catFreeScene": true,
+          "supportContactInQaPreview": true,
+          "perspectiveScalePlausible": true,
+          "completeContainment": true,
+          "peopleOrStructureOverlapAbsent": true,
+          "occlusionMaskNotNeeded": true,
+          "localContrastAdequate": true,
+          "naturalPeopleDistribution": true,
+          "broadAccessibleGroundLegible": true,
+          "fragileRoofWallOrCliffPerchAbsent": true,
+          "ksarAndFoothillsDominant": true
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "placementReview": "pending",
+        "landmarkReview": "pending",
+        "livingHeritageReview": "pending",
+        "rightsReview": "blocked",
+        "finalRealPortraitCompositeReview": "pending",
+        "shippingApproval": "blocked",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    }
+  ],
+  "rejectedRevisions": [],
+  "inspection": {
+    "machineQa": "pass",
+    "internalVisualQa": "pass",
+    "candidateCount": 1,
+    "rejectedRevisionCount": 0,
+    "allCandidateScenesCatFree": true,
+    "allCandidateScenes1200x900": true,
+    "allCandidateScenesOpaque8BitRgbSrgbPng": true,
+    "allCandidateHashesVerified": true,
+    "allArtifactPathsVerified": true,
+    "allPeopleOutsideSafeBounds": true,
+    "naturalPeopleDistributionObserved": true,
+    "portraitQaPreviewCount": 1,
+    "portraitPreviewIsNonShipping": true
+  },
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "placementReview": "pending",
+    "landmarkReview": "pending",
+    "livingHeritageReview": "pending",
+    "rightsReview": "blocked",
+    "finalRealPortraitCompositeReview": "pending",
+    "shippingApproval": "blocked",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Distant-overlook v01 is an additive active-variant candidate only after human approval. Existing day and golden-hour candidates remain untouched. No shipping approval is inferred."
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "status": "candidate-generation",
+  "shippingEligible": false,
+  "createdAt": "2026-07-20",
+  "purpose": "Replace visibly arranged social figures with natural circulation and make every Cat placement a physically plausible Perch at a deliberate foreground, midground, or distant framing.",
+  "staging": {
+    "destinationCountTouched": 10,
+    "activeVariantRevisions": 10,
+    "newActiveVariants": 5,
+    "candidateImagesToGenerate": 15,
+    "baseDestinationCount": 25,
+    "baseActiveVariantCount": 71,
+    "combinedDestinationCount": 25,
+    "combinedActiveVariantTarget": 76
+  },
+  "baseCandidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+  "lockedStyleAndFormatSource": "docs/art/landmark-production-v1.json",
+  "candidateOutputRoot": "docs/art/candidates/landmarks/staging-v5",
+  "approvedPortraitPreviewSource": "docs/art/archive/asset-archive.v2.json",
+  "ambientLifePolicy": {
+    "purpose": "People and traffic communicate ordinary use of the real place rather than filling empty space.",
+    "required": [
+      "Arrange people asymmetrically across the real circulation surface.",
+      "Mix loose pairs or small groups with isolated individuals where the location plausibly supports them.",
+      "Vary depth, apparent scale, direction of travel, lateral position, spacing, and simple body gesture.",
+      "Allow mild natural overlap between distant people while keeping faces non-identifiable.",
+      "Keep all people and vehicles outside the Cat Perch safeBounds.",
+      "Keep the landmark and route legible; Ambient Life remains secondary."
+    ],
+    "forbidden": [
+      "evenly spaced row",
+      "single-file procession unless the real path physically forces it",
+      "same-size figures on one depth plane",
+      "mirrored or synchronized poses",
+      "repeated clone silhouettes",
+      "all figures facing one direction",
+      "crowd wall",
+      "people placed only along an image edge",
+      "vehicles at identical intervals",
+      "identifiable faces",
+      "readable clothing marks, signage, plates, route text, advertisements, logos, or livery"
+    ],
+    "qaEvidenceRequired": {
+      "naturalGrouping": true,
+      "depthVariation": true,
+      "directionVariation": true,
+      "equalSpacingAbsent": true,
+      "cloneSilhouettesAbsent": true,
+      "outsidePerchSafeBounds": true
+    }
+  },
+  "catPlacementPolicy": {
+    "catDrawnIntoScene": false,
+    "anchorSemantics": "bottom-center of the Portrait asset; x and y may be anywhere in the Scene",
+    "purpose": "The Cat remains the narrative traveler but may be visually primary, supporting, or a small distant cameo.",
+    "framingBands": {
+      "foreground": {
+        "portraitHeightScaleMin": 0.18,
+        "portraitHeightScaleMax": 0.28,
+        "narrativeWeight": "primary-or-supporting"
+      },
+      "midground": {
+        "portraitHeightScaleMin": 0.1,
+        "portraitHeightScaleMax": 0.17,
+        "narrativeWeight": "supporting"
+      },
+      "distant": {
+        "portraitHeightScaleMin": 0.055,
+        "portraitHeightScaleMax": 0.095,
+        "narrativeWeight": "cameo"
+      }
+    },
+    "perchRequirements": [
+      "Record framing, narrativeWeight, depthBand, physicalSupport, accessPlausibility, poseFit, and clearSilhouette in placementIntent.",
+      "The Portrait feet or body base must meet a visible support plane with believable perspective.",
+      "The Perch must be reachable in the physical world and appropriate for the selected pose.",
+      "Do not use an unsafe cliff lip, protected ruin wall, traffic lane, water surface, roof with no plausible access, or floating visual gap.",
+      "Keep the complete Portrait silhouette inside the image and outside people, vehicles, rails, posts, furniture, and hard shadows.",
+      "Current compositing has no foreground occlusion mask, so the Perch must not require the Cat to appear behind an object.",
+      "At distant framing, preserve local contrast behind the Cat without creating a spotlight, empty box, outline, or artificial clearing."
+    ],
+    "previewRequirements": {
+      "approvedPortrait": "minho",
+      "useScenePose": true,
+      "nonFinalQaOnly": true,
+      "sceneCandidateRemainsCatFree": true,
+      "onePlacementPreviewPerCandidate": true,
+      "previewMustBeIncludedInDestinationSheet": true
+    }
+  },
+  "globalExclusions": [
+    "player cat or substitute cat drawn into the scene candidate",
+    "readable text, pseudo-text, dates, postmarks, logos, watermarks, UI, frames, guides, anchors, or safe-bound marks in the scene candidate",
+    "photorealism, 3D rendering, flat vector art, neon-heavy lighting, thick black outlines, hard gradients, malformed landmarks",
+    "physically unsupported Portrait placement, incorrect perspective scale, hidden feet without an occlusion mask, staged crowd, evenly spaced people"
+  ],
+  "candidatePolicy": {
+    "shippingEligible": false,
+    "oneDirectoryPerDestination": true,
+    "doNotEditV4Artifacts": true,
+    "writeManifestFragment": true,
+    "sceneOnlyContactSheetRequired": true,
+    "portraitPlacementPreviewSheetRequired": true,
+    "candidateImagesMustRemainCatFree": true,
+    "candidateImagesMustNotShowQaOverlays": true,
+    "contactSheetsMayShowQaOverlays": true,
+    "promoteOnlyAfterUserApproval": true,
+    "recordReferenceUrlsAndRights": true,
+    "restrictedSourcePhotosRetained": false
+  },
+  "destinations": [
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "name": "纽约布鲁克林大桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+          "version": "v03",
+          "brief": "Natural daytime crossing with an offset pair, one solo walker, and separated cyclist/traffic at varied depths rather than a procession.",
+          "portraitPose": "walk",
+          "framing": "midground",
+          "targetScale": 0.135,
+          "perch": "clear wooden pedestrian-plank route with visible perspective and no railing overlap",
+          "narrativeWeight": "supporting"
+        },
+        {
+          "id": "night-transit",
+          "action": "supersede-active-revision",
+          "supersedes": "united-states-new-york-brooklyn-bridge--night-transit--v01",
+          "version": "v02",
+          "brief": "Blue-hour bridge route with sparse asymmetric homebound activity, varied directions, and no single-file line.",
+          "portraitPose": "walk",
+          "framing": "distant",
+          "targetScale": 0.08,
+          "perch": "farther wooden promenade under the bridge-tower approach with a clear silhouette",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "name": "慕田峪长城",
+      "variants": [
+        {
+          "id": "distant-overlook",
+          "action": "add-active-variant",
+          "supersedes": null,
+          "version": "v01",
+          "brief": "Layered mountain ridges and Great Wall watchtowers with a tiny Cat Perch on a broad, accessible stone lookout section, gazing over the landscape without becoming the visual subject.",
+          "portraitPose": "gaze",
+          "framing": "distant",
+          "targetScale": 0.065,
+          "perch": "broad accessible inner parapet or lookout paving, never a narrow wall top or cliff edge",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "name": "伦敦塔桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "united-kingdom-london-tower-bridge--day-signature--v02",
+          "version": "v03",
+          "brief": "Lived-in Thames view with loose pairs and solo pedestrians at different depths, irregular generic traffic, and no arranged row.",
+          "portraitPose": "walk",
+          "framing": "foreground",
+          "targetScale": 0.22,
+          "perch": "wide dry riverside promenade with visible ground contact",
+          "narrativeWeight": "primary"
+        },
+        {
+          "id": "night-transit",
+          "action": "supersede-active-revision",
+          "supersedes": "united-kingdom-london-tower-bridge--night-transit--v01",
+          "version": "v02",
+          "brief": "Early-night river route with naturally staggered walkers and irregular traffic rather than figures aligned along the parapet.",
+          "portraitPose": "walk",
+          "framing": "midground",
+          "targetScale": 0.125,
+          "perch": "mid-distance riverside path with no rail or lamp overlap",
+          "narrativeWeight": "supporting"
+        }
+      ]
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain",
+      "name": "开普敦桌山",
+      "variants": [
+        {
+          "id": "distant-overlook",
+          "action": "add-active-variant",
+          "supersedes": null,
+          "version": "v01",
+          "brief": "Wide Table Mountain plateau and layered Cape landscape with a tiny gazing Cat on a stable accessible lookout area set back from the cliff edge.",
+          "portraitPose": "gaze",
+          "framing": "distant",
+          "targetScale": 0.07,
+          "perch": "stable plateau lookout surface with a clear setback from any drop",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "name": "上海外滩",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "china-shanghai-the-bund--day-signature--v02",
+          "version": "v03",
+          "brief": "Calm active promenade with asymmetric pairs, a solo walker, varied depth and direction, irregular ferry and road movement, and no edge-aligned row.",
+          "portraitPose": "walk",
+          "framing": "foreground",
+          "targetScale": 0.21,
+          "perch": "wide unobstructed promenade paving with clear foot contact",
+          "narrativeWeight": "primary"
+        },
+        {
+          "id": "night-transit",
+          "action": "supersede-active-revision",
+          "supersedes": "china-shanghai-the-bund--night-transit--v01",
+          "version": "v02",
+          "brief": "Restrained Bund evening with staggered commuters in small loose groupings and varied directions, never a single line.",
+          "portraitPose": "walk",
+          "framing": "distant",
+          "targetScale": 0.08,
+          "perch": "farther promenade segment with readable paving and silhouette contrast",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "name": "马丘比丘",
+      "variants": [
+        {
+          "id": "distant-overlook",
+          "action": "add-active-variant",
+          "supersedes": null,
+          "version": "v01",
+          "brief": "Broad mountain and citadel vista with a tiny gazing Cat on a plausible visitor overlook path or stable terrace ground, not on protected masonry.",
+          "portraitPose": "gaze",
+          "framing": "distant",
+          "targetScale": 0.07,
+          "perch": "sanctioned-looking overlook path or stable natural ground outside protected ruin walls",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "name": "京都伏见稻荷",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "japan-kyoto-fushimi-inari-taisha--day-signature--v02",
+          "version": "v03",
+          "brief": "Respectful visitor circulation as an offset pair plus isolated walkers at varied depths and directions, not a centered procession.",
+          "portraitPose": "walk",
+          "framing": "midground",
+          "targetScale": 0.135,
+          "perch": "clear stone approach path with visible ground plane and no gate-post overlap",
+          "narrativeWeight": "supporting"
+        },
+        {
+          "id": "night-transit",
+          "action": "supersede-active-revision",
+          "supersedes": "japan-kyoto-fushimi-inari-taisha--night-transit--v01",
+          "version": "v02",
+          "brief": "Lantern-lit torii path with two or three naturally staggered travelers, mixed direction and depth, and no central single-file line.",
+          "portraitPose": "walk",
+          "framing": "distant",
+          "targetScale": 0.075,
+          "perch": "farther readable stone step or path beneath the torii rhythm",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound",
+      "name": "米尔福德峡湾",
+      "variants": [
+        {
+          "id": "distant-overlook",
+          "action": "add-active-variant",
+          "supersedes": null,
+          "version": "v01",
+          "brief": "Expansive fjord and mountain vista with a small gazing Cat on a stable public foreshore viewpoint or broad dry rock, secondary to the landscape.",
+          "portraitPose": "gaze",
+          "framing": "distant",
+          "targetScale": 0.085,
+          "perch": "stable accessible foreshore viewpoint set safely above the water",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "name": "新加坡鱼尾狮",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "singapore-singapore-merlion--day-signature--v02",
+          "version": "v03",
+          "brief": "Active Marina Bay promenade with one loose pair plus isolated walkers at different depths and directions instead of a right-edge lineup.",
+          "portraitPose": "walk",
+          "framing": "foreground",
+          "targetScale": 0.22,
+          "perch": "broad dry promenade paving with no jet, person, or railing overlap",
+          "narrativeWeight": "primary"
+        },
+        {
+          "id": "night-transit",
+          "action": "supersede-active-revision",
+          "supersedes": "singapore-singapore-merlion--night-transit--v01",
+          "version": "v02",
+          "brief": "Humid blue-hour bay with sparse asymmetric evening walkers and irregular boat movement, avoiding edge alignment.",
+          "portraitPose": "walk",
+          "framing": "midground",
+          "targetScale": 0.125,
+          "perch": "mid-distance promenade paving with clean silhouette contrast",
+          "narrativeWeight": "supporting"
+        }
+      ]
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou",
+      "name": "艾本哈杜村",
+      "variants": [
+        {
+          "id": "distant-overlook",
+          "action": "add-active-variant",
+          "supersedes": null,
+          "version": "v01",
+          "brief": "Wide earthen ksar and foothill view with a tiny gazing Cat on a plausible accessible terrace or broad approach ridge, never a fragile roof edge.",
+          "portraitPose": "gaze",
+          "framing": "distant",
+          "targetScale": 0.08,
+          "perch": "broad accessible terrace or stable approach ground with visible support",
+          "narrativeWeight": "cameo"
+        }
+      ]
+    }
+  ]
+}

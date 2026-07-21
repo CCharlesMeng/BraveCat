@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-staging-v5-candidate-fragment",
+  "destinationId": "singapore-singapore-merlion",
+  "destinationName": "新加坡鱼尾狮",
+  "status": "candidate",
+  "reviewState": "pending",
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "sourcePlan": {
+    "path": "docs/art/landmark-staging-v5.json",
+    "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+    "sha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505"
+  },
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "baseLinkage": {
+    "candidateManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "planId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "originalDestinationFragment": {
+      "path": "docs/art/candidates/landmarks/singapore-singapore-merlion/manifest.fragment.json",
+      "sha256": "2f2b19a686ed2e3bed11dab25a62c36062f26ce5f44911c5fa60455c79d33815"
+    },
+    "activeEnrichmentFragment": {
+      "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/manifest.fragment.json",
+      "sha256": "fb3d3a2bfb0d4e06cebc7ac90c89ca181a70bddd43ce3348b19e7b5c7e80f79b"
+    },
+    "supersededActiveCandidates": [
+      {
+        "id": "singapore-singapore-merlion--day-signature--v02",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v02.png",
+        "sha256": "5a575cb50f969bdde2d6d0154967acd0bf06fc4c4c0952862b3a92100b4d5ca4",
+        "retained": true
+      },
+      {
+        "id": "singapore-singapore-merlion--night-transit--v01",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/scene--singapore-singapore-merlion--night-transit--v01.png",
+        "sha256": "7cb4a350a7e0fc99e6945f7b544923a1e4a27be7f07048020dd9fba1e438d967",
+        "retained": true
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": "B",
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png",
+    "lockedStyleAndFormatSource": {
+      "path": "docs/art/landmark-production-v1.json",
+      "sha256": "1b3a716c16fa56a47776228f438dcc9ef3265dba97177584283c6781b663445e"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "portraitAnchor": "bottom-center of the 1024x1024 Portrait asset",
+    "scaleMeaning": "rendered Portrait canvas height / Scene height"
+  },
+  "lockedStyleReferences": [
+    {
+      "path": "docs/art/style-ref-home.png",
+      "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+      "usage": "style medium and locked-B intensity only"
+    },
+    {
+      "path": "docs/art/style-ref-postcard.png",
+      "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+      "usage": "style medium and locked-B intensity only"
+    },
+    {
+      "path": "docs/art/style-ref-poses.png",
+      "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110",
+      "usage": "style medium and locked-B intensity only; reference cats and composition excluded"
+    },
+    {
+      "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+      "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+      "usage": "panel B intensity only"
+    }
+  ],
+  "approvedPortraitQaSource": {
+    "archive": {
+      "path": "docs/art/archive/asset-archive.v2.json",
+      "sha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3"
+    },
+    "portraitId": "minho",
+    "pose": "walk",
+    "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+    "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+    "usage": "QA preview only; never supplied to Scene generation and never embedded in a Scene candidate",
+    "shippingArtifact": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/staging-context-research.md",
+      "sha256": "9bdcd1b2a1cc109e04b4ee8226d39f09fd8859f2703a46f97c55be88494e52f4",
+      "method": "official-source text review only",
+      "restrictedSourcePhotosRetained": false
+    },
+    "priorContextResearch": {
+      "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/social-context-research.md",
+      "sha256": "606af9d633b621b725de647a9754680dc4975cbffe9e70e32c966d18dbb851df"
+    },
+    "sceneContactSheet": {
+      "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/scene-contact-sheet--singapore-singapore-merlion--staging-v5--non-final.png",
+      "sha256": "0c2fdc7bbd8e93b5af89b07d4833a9ca128f11fadb5210f1bf4cd5a40e899168",
+      "dimensions": {
+        "width": 1640,
+        "height": 796,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "containsPortrait": false,
+      "overlays": [
+        "visible-silhouette safeBounds",
+        "bottom-center composition anchor"
+      ],
+      "shippingEligible": false
+    },
+    "portraitPlacementPreview": {
+      "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/portrait-placement-preview--singapore-singapore-merlion--staging-v5--non-final.png",
+      "sha256": "0e0dfc10303938862e1de4f314360aef3572e0dd8e1592a9866fa7799654c0b8",
+      "dimensions": {
+        "width": 1640,
+        "height": 796,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque"
+      },
+      "containsApprovedMinho": true,
+      "qaOnly": true,
+      "shippingEligible": false
+    }
+  },
+  "rights": {
+    "status": "blocked-pending-specific-legal-and-STB-review",
+    "officialSourcesUsedAsTextOnly": true,
+    "restrictedSourcePhotosRetained": false,
+    "remoteSourceMediaSuppliedToGenerator": false,
+    "referenceUrls": [
+      "https://www.stb.gov.sg/about-stb/stb-brand-assets/",
+      "https://www.visitsingapore.com/neighbourhood/featured-neighbourhood/marina-bay/merlion-park/",
+      "https://www.ura.gov.sg/-/media/Corporate/Singapore-City-Gallery/Worksheets/Marina-Bay-Gardens-by-the-Bay.pdf"
+    ],
+    "shippingWarnings": [
+      "STB administers statutory protection of the Merlion Symbol and resembling representations under Section 39 of the Singapore Tourism Board Act 1963.",
+      "A stylised Merlion depiction in a commercial game is not safely assumed to fit STB's listed no-application examples.",
+      "Obtain a specific legal determination and, if required, written STB permission before promotion or commercial shipping.",
+      "Do not use the depiction or the word Merlion as a game logo, app icon, trademark, or statement of STB or Singapore endorsement.",
+      "Other copyright, trademark, site-policy, and licence requirements remain the user's responsibility."
+    ]
+  },
+  "sceneVariants": [
+    {
+      "id": "singapore-singapore-merlion--day-signature--v03",
+      "variantId": "day-signature",
+      "version": "v03",
+      "name": "新加坡鱼尾狮 · 日间自然流动",
+      "status": "candidate",
+      "shippingEligible": false,
+      "action": "supersede-active-revision",
+      "supersedes": "singapore-singapore-merlion--day-signature--v02",
+      "imageSrc": "scene--singapore-singapore-merlion--day-signature--v03.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v03.png",
+      "sha256": "00213fca355b7ceff56b683a1657f65dabdb20b56b054f794393e9fedaf44318",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "iccProfile": "embedded-sRGB"
+      },
+      "catDrawnIntoScene": false,
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.22,
+        "y": 0.93,
+        "scale": 0.22,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "meaning": "visible Portrait silhouette plus inspection margin",
+        "x": 0.1,
+        "y": 0.79,
+        "width": 0.24,
+        "height": 0.15
+      },
+      "placementIntent": {
+        "framing": "foreground",
+        "narrativeWeight": "primary",
+        "depthBand": "foreground dry promenade",
+        "targetScale": 0.22,
+        "allowedScaleBand": {
+          "min": 0.18,
+          "max": 0.28
+        },
+        "physicalSupport": "broad dry level promenade paving with visible perspective",
+        "accessPlausibility": "ordinary public pedestrian surface at Merlion Park",
+        "poseFit": "walk paws meet the paving and face along the circulation route",
+        "clearSilhouette": "quiet pale paving provides natural contrast without an artificial clearing",
+        "completePortraitContained": true,
+        "requiresForegroundOcclusion": false,
+        "clearOf": [
+          "water jet",
+          "splash",
+          "water",
+          "people",
+          "railings",
+          "statue plinth",
+          "lamps",
+          "plants",
+          "hard shadows"
+        ]
+      },
+      "ambientLife": {
+        "policy": "staging-v5-natural-circulation",
+        "people": {
+          "approximateVisibleCount": 4,
+          "grouping": "one offset loose pair plus two isolated walkers",
+          "presentation": "non-identifiable, asymmetrically scattered across varied depth, scale, direction, lateral position, spacing, and gesture",
+          "outsideSafeBounds": true
+        },
+        "boats": {
+          "count": 2,
+          "kind": "generic unmarked bay boats",
+          "irregularMovement": true,
+          "variedDistanceScaleHeadingAndSpacing": true,
+          "readableMarkings": false,
+          "logosOrLivery": false,
+          "outsideSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "synchronizedPosesAbsent": true,
+          "crowdWallAbsent": true,
+          "rightEdgeLineupAbsent": true,
+          "outsidePerchSafeBounds": true,
+          "landmarkRemainsDominant": true
+        }
+      },
+      "production": {
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool"
+        },
+        "acceptedGenerationAttempt": 3,
+        "transportFailures": [
+          {
+            "attempt": 1,
+            "httpStatus": 429,
+            "artifactProduced": false
+          }
+        ],
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "sourceMode": "RGB",
+        "sourceFormat": "PNG",
+        "sourceEmbeddedIccProfile": false,
+        "sourceSha256": "4acf4cb1df67b5e73bb37635f70cfc7f5e92ffdb24899273183be72c1b7ca913",
+        "sourceRetention": "tool-managed generated image outside the repository; not a shipping artifact",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style medium and intensity only",
+        "sceneReferenceUse": "landmark and style continuity only; people layout explicitly excluded",
+        "sceneReferences": [
+          {
+            "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/scene--singapore-singapore-merlion--day-signature--v02.png",
+            "sha256": "5a575cb50f969bdde2d6d0154967acd0bf06fc4c4c0952862b3a92100b4d5ca4"
+          }
+        ],
+        "normalization": {
+          "tool": "Pillow 12.3.0",
+          "method": "centered exact 4:3 crop without distortion, then Lanczos resize",
+          "sourceCrop": {
+            "left": 86,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resampling": "Image.Resampling.LANCZOS",
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorManagement": "untagged source RGB treated as sRGB; generated sRGB ICC profile embedded",
+          "outputMode": "8-bit opaque RGB PNG"
+        }
+      },
+      "inspection": {
+        "machine": {
+          "dimensionsMatch": true,
+          "modeIsRgb": true,
+          "isOpaque": true,
+          "embeddedSrgbProfile": true,
+          "sha256Computed": true
+        },
+        "visual": {
+          "performed": true,
+          "catFreeScene": true,
+          "supportContactInQaPreview": true,
+          "perspectiveScalePlausible": true,
+          "completeContainment": true,
+          "peopleOrRailOverlapAbsent": true,
+          "occlusionMaskNotNeeded": true,
+          "localContrastAdequate": true,
+          "naturalPeopleDistribution": true,
+          "waterJetClearOfPerch": true
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "placementReview": "pending",
+        "landmarkReview": "pending",
+        "rightsReview": "blocked",
+        "finalRealPortraitCompositeReview": "pending",
+        "shippingApproval": "blocked",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "singapore-singapore-merlion--night-transit--v02",
+      "variantId": "night-transit",
+      "version": "v02",
+      "name": "新加坡鱼尾狮 · 蓝调夜间行旅",
+      "status": "candidate",
+      "shippingEligible": false,
+      "action": "supersede-active-revision",
+      "supersedes": "singapore-singapore-merlion--night-transit--v01",
+      "imageSrc": "scene--singapore-singapore-merlion--night-transit--v02.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/scene--singapore-singapore-merlion--night-transit--v02.png",
+      "sha256": "dd08f3990ad7d3d8b48bd2c747a976355b29f736bf2ee16067e42f6ad4d184ff",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "iccProfile": "embedded-sRGB"
+      },
+      "catDrawnIntoScene": false,
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.34,
+        "y": 0.82,
+        "scale": 0.125,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "meaning": "visible Portrait silhouette plus inspection margin",
+        "x": 0.27,
+        "y": 0.74,
+        "width": 0.14,
+        "height": 0.09
+      },
+      "placementIntent": {
+        "framing": "midground",
+        "narrativeWeight": "supporting",
+        "depthBand": "mid-distance promenade",
+        "targetScale": 0.125,
+        "allowedScaleBand": {
+          "min": 0.1,
+          "max": 0.17
+        },
+        "physicalSupport": "dry mid-distance promenade paving with readable perspective",
+        "accessPlausibility": "ordinary public pedestrian route around the bay",
+        "poseFit": "walk paws meet the route and face toward the landmark circulation",
+        "clearSilhouette": "restrained warm-gray paving separates the Portrait naturally from the blue-hour water",
+        "completePortraitContained": true,
+        "requiresForegroundOcclusion": false,
+        "clearOf": [
+          "water",
+          "water jet",
+          "people",
+          "railings",
+          "lamps",
+          "planters",
+          "statue plinth",
+          "hard shadows"
+        ]
+      },
+      "ambientLife": {
+        "policy": "staging-v5-natural-circulation",
+        "people": {
+          "approximateVisibleCount": 4,
+          "grouping": "one offset loose pair plus two isolated walkers",
+          "presentation": "sparse non-identifiable evening circulation across three depths and varied direction, scale, lateral position, spacing, and gesture",
+          "outsideSafeBounds": true
+        },
+        "boats": {
+          "count": 2,
+          "kind": "generic unmarked bay boats",
+          "irregularMovement": true,
+          "variedDistanceScaleHeadingAndSpacing": true,
+          "readableMarkings": false,
+          "logosOrLivery": false,
+          "outsideSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "synchronizedPosesAbsent": true,
+          "crowdWallAbsent": true,
+          "rightEdgeLineupAbsent": true,
+          "outsidePerchSafeBounds": true,
+          "landmarkRemainsDominant": true
+        }
+      },
+      "night": {
+        "timeOfDay": "humid blue hour",
+        "palette": "low-saturation blue-gray and teal",
+        "promenadeLighting": "restrained warm practical lamps",
+        "skylineLighting": "sparse warm windows and subdued reflections",
+        "routeLegible": true,
+        "jetLegible": true,
+        "neonDominance": false,
+        "crushedShadows": false
+      },
+      "production": {
+        "generationMethod": "image-generation",
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": "not-exposed-by-tool",
+          "seed": "not-exposed-by-tool"
+        },
+        "acceptedGenerationAttempt": 2,
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "sourceMode": "RGB",
+        "sourceFormat": "PNG",
+        "sourceEmbeddedIccProfile": false,
+        "sourceSha256": "0998017d00ddfc8a1ddd8aa2913a68de26e97f787ac539dcc038eb8a9ab84cbf",
+        "sourceRetention": "tool-managed generated image outside the repository; not a shipping artifact",
+        "styleIntensity": "B",
+        "styleReferenceUse": "style medium and intensity only",
+        "sceneReferenceUse": "landmark, lighting, and style continuity only; people layout explicitly excluded",
+        "sceneReferences": [
+          {
+            "path": "docs/art/candidates/landmarks/enrichment-v4/singapore-singapore-merlion/scene--singapore-singapore-merlion--night-transit--v01.png",
+            "sha256": "7cb4a350a7e0fc99e6945f7b544923a1e4a27be7f07048020dd9fba1e438d967"
+          }
+        ],
+        "normalization": {
+          "tool": "Pillow 12.3.0",
+          "method": "centered exact 4:3 crop without distortion, then Lanczos resize",
+          "sourceCrop": {
+            "left": 86,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023
+          },
+          "resampling": "Image.Resampling.LANCZOS",
+          "distortionApplied": false,
+          "outputDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "colorManagement": "untagged source RGB treated as sRGB; generated sRGB ICC profile embedded",
+          "outputMode": "8-bit opaque RGB PNG"
+        }
+      },
+      "inspection": {
+        "machine": {
+          "dimensionsMatch": true,
+          "modeIsRgb": true,
+          "isOpaque": true,
+          "embeddedSrgbProfile": true,
+          "sha256Computed": true
+        },
+        "visual": {
+          "performed": true,
+          "catFreeScene": true,
+          "supportContactInQaPreview": true,
+          "perspectiveScalePlausible": true,
+          "completeContainment": true,
+          "peopleOrRailOverlapAbsent": true,
+          "occlusionMaskNotNeeded": true,
+          "localContrastAdequate": true,
+          "naturalPeopleDistribution": true,
+          "nightRouteAndJetLegible": true
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "placementReview": "pending",
+        "landmarkReview": "pending",
+        "rightsReview": "blocked",
+        "finalRealPortraitCompositeReview": "pending",
+        "shippingApproval": "blocked",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    }
+  ],
+  "rejectedRevisions": [
+    {
+      "id": "singapore-singapore-merlion--day-signature--v03--rejected-r01",
+      "variantId": "day-signature",
+      "generationAttempt": 2,
+      "status": "rejected",
+      "shippingEligible": false,
+      "imageSrc": "rejected/scene--singapore-singapore-merlion--day-signature--v03--rejected-r01.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/rejected/scene--singapore-singapore-merlion--day-signature--v03--rejected-r01.png",
+      "sha256": "51ab51138c4efd6cb66c9459f88c7d312db966e762b7b36354814e570b0689b3",
+      "sourceSha256": "e5d60a6b8b87dbcbd185a7513ab14e6875b215ca0e3d1d31df5b7f55da2c5bb1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "normalizationMatchesAcceptedCandidates": true,
+      "rejectionReason": "The centered exact 4:3 crop removed the far-right second isolated walker, leaving only one loose pair plus one isolated walker and failing the required scattered distribution."
+    },
+    {
+      "id": "singapore-singapore-merlion--night-transit--v02--rejected-r01",
+      "variantId": "night-transit",
+      "generationAttempt": 1,
+      "status": "rejected",
+      "shippingEligible": false,
+      "imageSrc": "rejected/scene--singapore-singapore-merlion--night-transit--v02--rejected-r01.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/rejected/scene--singapore-singapore-merlion--night-transit--v02--rejected-r01.png",
+      "sha256": "608ae2edeba75f300828fe67dcfa1b00a44041fabd2d80aed0f0e4121bd9d3fe",
+      "sourceSha256": "7735a9e130175f2036bc0a58333b7f649e2c71f5c96808bf7df3cb4135241fa1",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "format": "png"
+      },
+      "normalizationMatchesAcceptedCandidates": true,
+      "rejectionReason": "The scene contained one loose pair but only one isolated walker, so depth and lateral scattering did not meet the explicit plural isolated-walker requirement."
+    }
+  ],
+  "inspection": {
+    "machineQa": "pass",
+    "internalVisualQa": "pass",
+    "candidateCount": 2,
+    "rejectedRevisionCount": 2,
+    "transportFailureCount": 1,
+    "allCandidateScenesCatFree": true,
+    "allCandidateScenes1200x900": true,
+    "allCandidateScenesOpaque8BitRgbSrgbPng": true,
+    "allCandidateHashesVerified": true,
+    "allArtifactPathsVerified": true,
+    "allPeopleAndBoatsOutsideSafeBounds": true,
+    "naturalPeopleDistributionObserved": true,
+    "portraitQaPreviewCount": 2,
+    "portraitPreviewIsNonShipping": true
+  },
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "placementReview": "pending",
+    "landmarkReview": "pending",
+    "rightsReview": "blocked",
+    "finalRealPortraitCompositeReview": "pending",
+    "shippingApproval": "blocked",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Day v03 supersedes active day v02 and night v02 supersedes active night v01 only after human approval. Existing revisions remain untouched. No Merlion candidate may ship before the legal/STB gate is resolved."
+  }
+}

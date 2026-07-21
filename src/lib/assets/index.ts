@@ -5,10 +5,26 @@ import type {
   SceneVariantId,
   SouvenirId,
 } from '../ids'
+import {
+  BASELINE_PORTRAIT_POSES,
+  isPortraitPose,
+  PORTRAIT_POSES,
+  PORTRAIT_POSE_VOCABULARY,
+} from './portraitPoseVocabulary.js'
 
-export const PORTRAIT_POSES = ['sit', 'sleep', 'walk', 'eat', 'play', 'gaze'] as const
+export {
+  BASELINE_PORTRAIT_POSES,
+  isPortraitPose,
+  PORTRAIT_POSES,
+  PORTRAIT_POSE_VOCABULARY,
+} from './portraitPoseVocabulary.js'
 
 export type PortraitPose = (typeof PORTRAIT_POSES)[number]
+type PortraitPoseDefinition = (typeof PORTRAIT_POSE_VOCABULARY)[number]
+export type BaselinePortraitPose = Extract<
+  PortraitPoseDefinition,
+  { baseline: true }
+>['id']
 
 export interface CompositionSlot {
   x: number
@@ -35,7 +51,8 @@ export interface Destination {
 export interface Portrait {
   id: PortraitId
   name: string
-  poses: Readonly<Record<PortraitPose, string>>
+  poses: Readonly<Record<BaselinePortraitPose, string>>
+    & Readonly<Partial<Record<PortraitPose, string>>>
 }
 
 export type ItemKind = 'snack' | 'wish' | 'toy'
@@ -53,7 +70,8 @@ export interface SouvenirDefinition {
   id: SouvenirId
   destinationId: DestinationId
   name: string
-  imageSrc: string
+  visualToken: string
+  imageSrc?: string
 }
 
 export interface CopyLibrary {
@@ -88,6 +106,39 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
     throw new RangeError('出发字条文案库不能为空')
   }
 
+  for (const portrait of catalog.portraits) {
+    if (!catalog.portraitSetRevisions[portrait.id]?.trim()) {
+      throw new RangeError(`形象 ${portrait.id} 缺少 set revision`)
+    }
+    for (const pose of BASELINE_PORTRAIT_POSES) {
+      if (!portrait.poses[pose]?.trim()) {
+        throw new RangeError(`形象 ${portrait.id} 缺少 ${pose} 姿势文件`)
+      }
+    }
+    for (const [pose, imageSrc] of Object.entries(portrait.poses)) {
+      if (!isPortraitPose(pose)) {
+        throw new RangeError(`形象 ${portrait.id} 包含未知姿势 ${pose}`)
+      }
+      if (!imageSrc?.trim()) {
+        throw new RangeError(`形象 ${portrait.id} 缺少 ${pose} 姿势文件`)
+      }
+    }
+  }
+
+  const destinationIds = new Set(
+    catalog.destinations.map(({ id }) => id),
+  )
+  for (const souvenir of catalog.souvenirs) {
+    if (!destinationIds.has(souvenir.destinationId)) {
+      throw new RangeError(
+        `纪念品 ${souvenir.id} 引用了未知目的地 ${souvenir.destinationId}`,
+      )
+    }
+    if (!souvenir.visualToken.trim()) {
+      throw new RangeError(`纪念品 ${souvenir.id} 缺少图形标记`)
+    }
+  }
+
   for (const destination of catalog.destinations) {
     if (destination.sceneVariants.length < 2) {
       throw new RangeError(
@@ -99,23 +150,18 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
       if (!catalog.sceneRevisions[scene.id]?.trim()) {
         throw new RangeError(`场景 ${scene.id} 缺少 revision`)
       }
-      if (!(PORTRAIT_POSES as readonly string[]).includes(
-        scene.compositionSlot.pose,
-      )) {
+      if (!isPortraitPose(scene.compositionSlot.pose)) {
         throw new RangeError(
           `场景 ${scene.id} 引用了未知姿势 ${scene.compositionSlot.pose}`,
         )
       }
-    }
-  }
-
-  for (const portrait of catalog.portraits) {
-    if (!catalog.portraitSetRevisions[portrait.id]?.trim()) {
-      throw new RangeError(`形象 ${portrait.id} 缺少 set revision`)
-    }
-    for (const pose of PORTRAIT_POSES) {
-      if (!portrait.poses[pose]?.trim()) {
-        throw new RangeError(`形象 ${portrait.id} 缺少 ${pose} 姿势文件`)
+      for (const portrait of catalog.portraits) {
+        if (!portrait.poses[scene.compositionSlot.pose]?.trim()) {
+          throw new RangeError(
+            `形象 ${portrait.id} 缺少场景 ${scene.id} 所需的 `
+              + `${scene.compositionSlot.pose} 姿势文件`,
+          )
+        }
       }
     }
   }

@@ -7,6 +7,10 @@ import {
 } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  BASELINE_PORTRAIT_POSES,
+  isPortraitPose,
+} from '../src/lib/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const artRoot = path.join(root, 'docs/art')
@@ -147,7 +151,7 @@ const validateCompositionSlot = (slot, label, errors) => {
   ) {
     errors.push(`${label}: illegal portrait scale`)
   }
-  if (!['sit', 'sleep', 'walk', 'eat', 'play', 'gaze'].includes(slot.pose)) {
+  if (!isPortraitPose(slot.pose)) {
     errors.push(`${label}: unsupported pose ${String(slot.pose)}`)
   }
   if (typeof slot.flip !== 'boolean') {
@@ -388,7 +392,7 @@ const inspectPortrait = async () => {
   const validation = await readJson(portraitValidationPath)
   const errors = []
   const poses = []
-  const requiredPoses = ['sit', 'sleep', 'walk', 'eat', 'play', 'gaze']
+  const requiredPoses = BASELINE_PORTRAIT_POSES
   const artifactPoseNames = Object.keys(manifest.production.artifacts).sort()
   const runtimePoseNames = Object.keys(manifest.portrait.poses).sort()
   const validationPoseNames = Object.keys(validation.poses ?? {}).sort()
@@ -399,7 +403,10 @@ const inspectPortrait = async () => {
     || JSON.stringify(runtimePoseNames) !== JSON.stringify(expectedPoseNames)
     || JSON.stringify(validationPoseNames) !== JSON.stringify(expectedPoseNames)
   ) {
-    errors.push('Minho manifest, validation, and runtime pose sets must be exactly six fixed poses')
+    errors.push(
+      'Minho manifest, validation, and runtime pose sets must match '
+        + 'the baseline Portrait vocabulary',
+    )
   }
 
   for (const [pose, artifact] of Object.entries(manifest.production.artifacts)) {
@@ -485,7 +492,7 @@ const inspectPortrait = async () => {
     || validation.checks?.privateSourcePhotosStoredInRepo !== false
     || poses.length !== requiredPoses.length
   ) {
-    errors.push('Minho portrait approval or six-pose validation is incomplete')
+    errors.push('Minho portrait approval or baseline-pose validation is incomplete')
   }
 
   return {
@@ -674,7 +681,10 @@ const landmarkCompositeApproval = await readOptionalJson(
   landmarkCompositeApprovalPath,
 )
 let finalRealPortraitCompositeReview = 'pending'
-if (landmarkCompositeApproval) {
+if (
+  landmarkCompositeApproval?.decision === 'approved'
+  && landmarkCompositeApproval.status !== 'superseded'
+) {
   const scope = landmarkCompositeApproval.scope
   if (
     landmarkCompositeApproval.decision !== 'approved'

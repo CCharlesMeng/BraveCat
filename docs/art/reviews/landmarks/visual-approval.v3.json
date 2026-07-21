@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 3,
+  "reviewKind": "landmark-human-visual-review",
+  "decision": "approved",
+  "reviewer": "user",
+  "reviewedAt": "2026-07-20",
+  "supersedes": "docs/art/reviews/landmarks/visual-approval.v2.json",
+  "scope": {
+    "candidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v5.json",
+    "candidateManifestSha256": "7efae429086d85dadd024a717547d1320186bf9628f4787ae3ba4fbee2a6cd5a",
+    "machineQaReport": "docs/art/candidates/landmarks/qa-report.v5.json",
+    "activeSceneSetSha256": "1e0261d460485b21496d84bc13545d5682165a057645a171e25f530b9e2234db",
+    "activeSceneContentSetSha256": "b6dfe68f17c599d1bb9da5b6c902b27a8975d46831f4e5b7f34be0c9885e9669",
+    "sourceFragmentSetSha256": "78db9cacf9b57464a9d0774e5e6f6374171227b88137ec81068c470abff9e7b7",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 76,
+    "selection": "all-active-scene-variants"
+  },
+  "newlyApprovedScope": {
+    "sourcePlan": "docs/art/landmark-staging-v5.json",
+    "reviewIndex": "docs/art/candidates/landmarks/review-index.v5.md",
+    "destinationCountTouched": 10,
+    "activeSceneVariantCount": 15,
+    "supersedingRevisionCount": 10,
+    "newDistantOverlookCount": 5,
+    "unchangedActiveSceneCount": 61,
+    "selection": "all-v5-staging-candidates",
+    "framingDistribution": {
+      "foreground": 3,
+      "midground": 4,
+      "distant": 8
+    }
+  },
+  "placementPreviewReview": {
+    "decision": "approved",
+    "portraitId": "minho",
+    "sceneCount": 15,
+    "selection": "all-v5-candidate-placement-previews",
+    "sheet": "docs/art/candidates/landmarks/contact-sheet--landmarks--placement-preview-v5-01-of-01--non-final.png",
+    "sheetSha256": "511d01b85b6f4813c76c9aeddb47b26c3414dbad9896523ea80d865a87671ef6",
+    "nonFinalQaOnly": true,
+    "sourceScenesRemainCatFree": true,
+    "approvedAspects": [
+      "natural Ambient Life distribution",
+      "foreground, midground, and distant Cat framing",
+      "physical Perch contact and perspective",
+      "Cat visual weight and placement"
+    ]
+  },
+  "exclusions": [],
+  "remainingGates": [
+    "final-production-minho-composite-review-v5",
+    "site-access-cultural-and-shipping-rights-review-v5"
+  ],
+  "nonVisualWarningsRemainBinding": [
+    "Machu Picchu ordinary-animal access restriction",
+    "Milford Sound and Fiordland conservation and pet-access restrictions",
+    "Fushimi Inari cultural, access, and commercial-use review",
+    "Merlion statutory symbol and Singapore Tourism Board review",
+    "Table Mountain park-access and conservation review",
+    "all source-independence, trademark, livery, venue, heritage, and final artwork-rights checks"
+  ],
+  "shippingEligible": false,
+  "notes": "User explicitly approved the exact 15-candidate v5 visual and Minho-placement-preview set and the resulting 76-scene active selection. This visual decision does not waive site-access, cultural, conservation, trademark, source-independence, final production composite, rights, or shipping review."
+}

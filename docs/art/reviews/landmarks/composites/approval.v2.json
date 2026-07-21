@@ -1,7 +1,10 @@
 {
   "schemaVersion": 2,
   "reviewKind": "landmark-minho-composite-human-review",
-  "decision": "partial",
+  "status": "superseded",
+  "supersededAt": "2026-07-20",
+  "supersessionReason": "User rejected the realistic Minho production-composite direction because the Cat reads as a separate layer. A watercolor Portrait and varied scene staging now require a new exact-set review.",
+  "decision": "rejected-for-production",
   "reviewer": "user",
   "reviewedAt": "2026-07-20",
   "supersedes": "docs/art/reviews/landmarks/composites/approval.superseded.v1.json",

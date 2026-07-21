@@ -7,6 +7,9 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import {
+  PORTRAIT_POSES,
+} from '../src/lib/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -36,6 +39,18 @@ const approvalPath = optionValue(
   '--approval',
   `${outputRoot}/approval.v1.json`,
 )
+const portraitCandidateManifestPath = optionValue(
+  '--portrait-candidate-manifest',
+  '',
+)
+const sceneCandidateManifestPath = optionValue(
+  '--scene-candidate-manifest',
+  '',
+)
+const sceneVisualApprovalPath = optionValue(
+  '--scene-visual-approval',
+  '',
+)
 const columns = 4
 const rows = 4
 const tileWidth = 300
@@ -47,6 +62,9 @@ const scenesPerSheet = columns * rows
 const sha256 = (contents) => (
   createHash('sha256').update(contents).digest('hex')
 )
+const assert = (condition, message) => {
+  if (!condition) throw new Error(message)
+}
 
 const readOptionalJson = async (repoPath) => {
   try {
@@ -68,22 +86,148 @@ const archive = JSON.parse(
 if (archive.review.machineQa !== 'pass') {
   throw new Error('asset archive machine QA must pass before composite QA')
 }
-if (archive.review.landmarkHumanVisualReview !== 'approved') {
+if (
+  !sceneCandidateManifestPath
+  && archive.review.landmarkHumanVisualReview !== 'approved'
+) {
   throw new Error('landmark visual review must be approved before composite QA')
 }
 if (!archive.portrait.shippingEligible) {
   throw new Error('approved portrait is required for composite QA')
 }
 
-const scenes = archive.landmarks.flatMap((destination) => (
-  destination.scenes.map((scene) => ({
-    ...scene,
-    destinationName: destination.name,
-  }))
-))
-const portraitByPose = new Map(
-  archive.portrait.poses.map((pose) => [pose.pose, pose]),
+const sceneCandidateManifest = sceneCandidateManifestPath
+  ? JSON.parse(
+      await readFile(path.join(root, sceneCandidateManifestPath), 'utf8'),
+    )
+  : null
+const sceneVisualApproval = sceneVisualApprovalPath
+  ? JSON.parse(
+      await readFile(path.join(root, sceneVisualApprovalPath), 'utf8'),
+    )
+  : null
+if (sceneCandidateManifest) {
+  assert(
+    sceneCandidateManifest.manifestKind === 'landmark-candidate-master'
+      && sceneCandidateManifest.shippingEligible === false
+      && sceneCandidateManifest.activeSet?.activeSceneVariantCount > 0,
+    'scene candidate manifest is not ready for composite QA',
+  )
+  assert(
+    sceneVisualApproval?.decision === 'approved'
+      && sceneVisualApproval.reviewer === 'user'
+      && sceneVisualApproval.scope?.activeSceneSetSha256
+        === sceneCandidateManifest.activeSet.activeSceneSetSha256
+      && sceneVisualApproval.scope?.activeSceneContentSetSha256
+        === sceneCandidateManifest.activeSet.activeSceneContentSetSha256,
+    'scene visual approval does not match the candidate active set',
+  )
+}
+const candidateSceneById = new Map(
+  sceneCandidateManifest?.sceneVariants.map((scene) => [scene.id, scene])
+    ?? [],
 )
+const scenes = sceneCandidateManifest
+  ? sceneCandidateManifest.destinations.flatMap((destination) => (
+      destination.activeSceneVariantIds.map((sceneId) => {
+        const scene = candidateSceneById.get(sceneId)
+        assert(scene, `${destination.id}: missing active scene ${sceneId}`)
+        return {
+          ...scene,
+          destinationName: destination.name,
+        }
+      })
+    ))
+  : archive.landmarks.flatMap((destination) => (
+      destination.scenes.map((scene) => ({
+        ...scene,
+        destinationName: destination.name,
+      }))
+    ))
+const activeSceneSetSha256 = sceneCandidateManifest
+  ? sceneCandidateManifest.activeSet.activeSceneSetSha256
+  : archive.landmarkSet.activeSceneSetSha256
+const activeSceneContentSetSha256 = sceneCandidateManifest
+  ? sceneCandidateManifest.activeSet.activeSceneContentSetSha256
+  : archive.landmarkSet.activeSceneContentSetSha256
+const portraitCandidateManifest = portraitCandidateManifestPath
+  ? JSON.parse(
+      await readFile(path.join(root, portraitCandidateManifestPath), 'utf8'),
+    )
+  : null
+if (
+  portraitCandidateManifest
+  && (
+    portraitCandidateManifest.schemaVersion !== 2
+    || portraitCandidateManifest.manifestKind
+      !== 'portrait-watercolor-candidate-set'
+    || portraitCandidateManifest.status
+      !== 'machine-qa-pass-pending-human-review'
+    || portraitCandidateManifest.shippingEligible !== false
+    || portraitCandidateManifest.machineQa?.result !== 'pass'
+  )
+) {
+  throw new Error('portrait candidate manifest is not ready for composite QA')
+}
+if (portraitCandidateManifest) {
+  const expectedPoses = [...PORTRAIT_POSES].sort()
+  const artifactPoses = portraitCandidateManifest.artifacts
+    .map(({ pose }) => pose)
+    .sort()
+  const vocabularyPoses = [...portraitCandidateManifest.poseVocabulary.poseIds]
+    .sort()
+  assert(
+    JSON.stringify(artifactPoses) === JSON.stringify(expectedPoses)
+      && JSON.stringify(vocabularyPoses) === JSON.stringify(expectedPoses)
+      && portraitCandidateManifest.poseCoverage.required
+        === PORTRAIT_POSES.length
+      && portraitCandidateManifest.poseCoverage.produced
+        === PORTRAIT_POSES.length
+      && portraitCandidateManifest.poseCoverage.missing.length === 0,
+    'portrait candidate must cover the canonical ten-pose vocabulary',
+  )
+  for (const artifact of portraitCandidateManifest.artifacts) {
+    const contents = await readFile(
+      path.join(root, artifact.normalized.repoPath),
+    )
+    assert(
+      sha256(contents) === artifact.normalized.sha256,
+      `${artifact.pose}: portrait candidate hash mismatch`,
+    )
+    assert(
+      artifact.identity.identityLockSha256
+        === portraitCandidateManifest.identity.metadataSha256,
+      `${artifact.pose}: portrait identity metadata mismatch`,
+    )
+  }
+}
+const portraitId = portraitCandidateManifest?.candidateSetId
+  ?? archive.portrait.id
+const portraitContentSetSha256 = portraitCandidateManifest?.contentSetSha256
+  ?? sha256(Buffer.from(
+    archive.portrait.poses
+      .map(({ pose, sha256: poseSha256 }) => `${pose}\t${poseSha256}`)
+      .sort()
+      .join('\n'),
+  ))
+const portraitByPose = new Map(
+  portraitCandidateManifest
+    ? portraitCandidateManifest.artifacts.map(({ pose, normalized }) => [
+        pose,
+        {
+          pose,
+          repoPath: normalized.repoPath,
+          sha256: normalized.sha256,
+        },
+      ])
+    : archive.portrait.poses.map((pose) => [pose.pose, pose]),
+)
+const scenePoseIds = [...new Set(
+  scenes.map((scene) => scene.compositionSlot.pose),
+)].sort()
+const candidateOnlyPoseIds = portraitCandidateManifest
+  ? PORTRAIT_POSES.filter((pose) => !scenePoseIds.includes(pose))
+  : []
 
 const composeTile = async (scene, index) => {
   const portrait = portraitByPose.get(scene.compositionSlot.pose)
@@ -100,6 +244,10 @@ const composeTile = async (scene, index) => {
     Math.round(scene.compositionSlot.scale * sceneHeight),
   )
   let portraitImage = sharp(path.join(root, portrait.repoPath))
+    .trim({
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+      threshold: 2,
+    })
     .resize({
       height: portraitHeight,
       fit: 'inside',
@@ -214,16 +362,26 @@ const compositeSetSha256 = sha256(Buffer.from(
     .sort()
     .join('\n'),
 ))
-const approval = await readOptionalJson(approvalPath)
+const approvalRecord = await readOptionalJson(approvalPath)
+const approval = (
+  approvalRecord?.decision === 'approved'
+  && approvalRecord.status !== 'superseded'
+)
+  ? approvalRecord
+  : null
 if (
   approval
   && (
     approval.decision !== 'approved'
     || approval.reviewer !== 'user'
     || approval.scope?.activeSceneSetSha256
-      !== archive.landmarkSet.activeSceneSetSha256
+      !== activeSceneSetSha256
     || approval.scope?.compositeSetSha256 !== compositeSetSha256
-    || approval.scope?.portraitId !== archive.portrait.id
+    || approval.scope?.portraitId !== portraitId
+    || (
+      approval.scope?.portraitContentSetSha256 !== undefined
+      && approval.scope.portraitContentSetSha256 !== portraitContentSetSha256
+    )
     || approval.scope?.sceneCount !== scenes.length
   )
 ) {
@@ -238,14 +396,27 @@ const manifest = {
   status: approval ? 'approved' : 'pending-human-review',
   shippingEligible: false,
   sourceArchive: archivePath,
-  activeSceneSetSha256: archive.landmarkSet.activeSceneSetSha256,
-  ...(archive.landmarkSet.activeSceneContentSetSha256
+  activeSceneSetSha256,
+  ...(activeSceneContentSetSha256
     ? {
-        activeSceneContentSetSha256:
-          archive.landmarkSet.activeSceneContentSetSha256,
+        activeSceneContentSetSha256,
       }
     : {}),
-  portraitId: archive.portrait.id,
+  sceneSource: sceneCandidateManifestPath || archivePath,
+  portraitId,
+  portraitContentSetSha256,
+  portraitSource: portraitCandidateManifestPath || archive.portrait.sourceManifest,
+  ...(portraitCandidateManifest
+    ? {
+        portraitPoseCoverage: {
+          candidatePoseCount: PORTRAIT_POSES.length,
+          candidatePoses: PORTRAIT_POSES,
+          sceneCompositePoseCount: scenePoseIds.length,
+          sceneCompositePoses: scenePoseIds,
+          pendingDedicatedScenePoses: candidateOnlyPoseIds,
+        },
+      }
+    : {}),
   sceneCount: scenes.length,
   sheetCount,
   compositeSetSha256,
@@ -262,6 +433,13 @@ const manifest = {
       'portrait-landmark-separation',
       'portrait-edge-quality',
       'pose-and-flip-fit',
+      ...(portraitCandidateManifest
+        ? [
+            'candidate-ten-pose-coverage',
+            'candidate-artifact-hashes',
+            'candidate-identity-metadata',
+          ]
+        : []),
     ],
   },
   remainingGate: approval

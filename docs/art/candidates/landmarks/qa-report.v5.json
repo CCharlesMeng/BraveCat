@@ -1,0 +1,1128 @@
+{
+  "schemaVersion": 5,
+  "reportKind": "landmark-staging-integration-qa",
+  "planId": "miaoyouji-landmarks-combined-v5-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourceManifest": "docs/art/candidates/landmarks/manifest.candidates.v5.json",
+  "sourceManifestSha256": "7efae429086d85dadd024a717547d1320186bf9628f4787ae3ba4fbee2a6cd5a",
+  "generatedAt": "2026-07-20",
+  "overallStatus": "pass",
+  "shippingEligible": false,
+  "activeSet": {
+    "selection": "all-active-scene-variants",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 76,
+    "activeSceneSetSha256": "1e0261d460485b21496d84bc13545d5682165a057645a171e25f530b9e2234db",
+    "activeSceneContentSetSha256": "b6dfe68f17c599d1bb9da5b6c902b27a8975d46831f4e5b7f34be0c9885e9669"
+  },
+  "sourceSet": {
+    "sourceFragmentCount": 40,
+    "sourceFragmentSetSha256": "78db9cacf9b57464a9d0774e5e6f6374171227b88137ec81068c470abff9e7b7"
+  },
+  "totals": {
+    "destinationCount": 25,
+    "activeSceneVariantCount": 76,
+    "ordinaryVariantCount": 65,
+    "companionRareVariantCount": 11,
+    "supersededSceneFileCount": 37,
+    "v5SupersededActiveRevisionCount": 10,
+    "v5RejectedRevisionFileCount": 6,
+    "unchangedActiveSceneCount": 61,
+    "generatedCandidateCount": 15,
+    "activeSupersedingRevisionCount": 10,
+    "newDistantOverlookCount": 5,
+    "machineCheckCount": 14,
+    "machineChecksPassed": 14,
+    "machineChecksFailed": 0,
+    "pendingHumanCheckCount": 3
+  },
+  "framingDistribution": {
+    "foreground": 3,
+    "midground": 4,
+    "distant": 8
+  },
+  "machineChecks": [
+    {
+      "id": "protected-v4-integrity",
+      "status": "pass",
+      "expected": 109,
+      "actual": 109,
+      "activeSceneSetSha256": "d871af0cfc146ee62a52039cb54e781b4b541de45181ca3f5ba3859eda7de885",
+      "activeSceneContentSetSha256": "63fc6b05b9ca37d9115267cef2e3a458c7729a8f02b4d23297f17e71d43af445"
+    },
+    {
+      "id": "exact-plan-and-fragment-coverage",
+      "status": "pass",
+      "expected": {
+        "destinations": 10,
+        "fragments": 10,
+        "candidates": 15
+      },
+      "actual": {
+        "destinations": 10,
+        "fragments": 10,
+        "candidates": 15
+      }
+    },
+    {
+      "id": "exact-active-total-and-unchanged-scope",
+      "status": "pass",
+      "expected": {
+        "destinations": 25,
+        "activeScenes": 76,
+        "unchangedScenes": 61
+      },
+      "actual": {
+        "destinations": 25,
+        "activeScenes": 76,
+        "unchangedScenes": 61
+      }
+    },
+    {
+      "id": "exact-replacements-and-additions",
+      "status": "pass",
+      "expected": {
+        "supersedingRevisions": 10,
+        "newDistantOverlooks": 5
+      },
+      "actual": {
+        "supersedingRevisions": 10,
+        "newDistantOverlooks": 5
+      }
+    },
+    {
+      "id": "foreground-midground-distant-distribution",
+      "status": "pass",
+      "expected": {
+        "foreground": 3,
+        "midground": 4,
+        "distant": 8
+      },
+      "actual": {
+        "foreground": 3,
+        "midground": 4,
+        "distant": 8
+      }
+    },
+    {
+      "id": "ambient-life-natural-distribution-evidence",
+      "status": "pass",
+      "expected": 10,
+      "actual": 10
+    },
+    {
+      "id": "physical-perch-and-placement-evidence",
+      "status": "pass",
+      "expected": 15,
+      "actual": 15
+    },
+    {
+      "id": "new-image-filename-format-hash-and-cat-free-policy",
+      "status": "pass",
+      "expected": 15,
+      "actual": 15
+    },
+    {
+      "id": "all-active-images-and-hashes",
+      "status": "pass",
+      "expected": 76,
+      "actual": 76
+    },
+    {
+      "id": "destination-scene-and-minho-preview-sheets",
+      "status": "pass",
+      "expected": {
+        "sceneContactSheets": 10,
+        "placementPreviewSheets": 10
+      },
+      "actual": {
+        "sceneContactSheets": 10,
+        "placementPreviewSheets": 10
+      }
+    },
+    {
+      "id": "combined-overview-coverage",
+      "status": "pass",
+      "expected": {
+        "sceneOnlyCandidates": 76,
+        "placementPreviewCandidates": 15
+      },
+      "actual": {
+        "sceneOnlyCandidates": 76,
+        "placementPreviewCandidates": 15
+      }
+    },
+    {
+      "id": "active-source-and-content-set-hashes",
+      "status": "pass",
+      "expected": {
+        "sourceFragmentCount": 40,
+        "activeSceneCount": 76
+      },
+      "actual": {
+        "sourceFragmentCount": 40,
+        "activeSceneCount": 76
+      },
+      "hashes": {
+        "sourceFragmentSetSha256": "78db9cacf9b57464a9d0774e5e6f6374171227b88137ec81068c470abff9e7b7",
+        "activeSceneSetSha256": "1e0261d460485b21496d84bc13545d5682165a057645a171e25f530b9e2234db",
+        "activeSceneContentSetSha256": "b6dfe68f17c599d1bb9da5b6c902b27a8975d46831f4e5b7f34be0c9885e9669"
+      }
+    },
+    {
+      "id": "dynamic-superseded-and-rejected-counts",
+      "status": "pass",
+      "expected": {
+        "baseSuperseded": 21,
+        "v5Superseded": 10,
+        "v5Rejected": 6,
+        "totalSuperseded": 37
+      },
+      "actual": {
+        "totalSuperseded": 37,
+        "v5Superseded": 10,
+        "v5Rejected": 6
+      }
+    },
+    {
+      "id": "shipping-disabled-and-human-gates-pending",
+      "status": "pass",
+      "expected": false,
+      "actual": false
+    }
+  ],
+  "pendingHumanChecks": [
+    {
+      "id": "v5-exact-set-visual-and-placement-review",
+      "status": "pending",
+      "note": "Review all fifteen v5 candidates, physical Perches, framing, scale, natural Ambient Life, and actual Minho placement previews as one exact active-set change."
+    },
+    {
+      "id": "v5-rights-cultural-and-source-independence-review",
+      "status": "pending",
+      "note": "Rights, cultural context, site access, protected surfaces, trademark or livery details, and source independence remain separate human gates."
+    },
+    {
+      "id": "v5-final-composite-and-shipping-approval",
+      "status": "blocked-until-exact-set-approval",
+      "note": "The placement previews are non-final QA only. Final real-Portrait composites and shipping approval remain pending."
+    }
+  ],
+  "protectedInputs": {
+    "baseManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "baseQa": {
+      "path": "docs/art/candidates/landmarks/qa-report.v4.json",
+      "sha256": "0499aabbceef938f5ff89521085cae43ed181d252528db7d6b77acf36fb116fd"
+    },
+    "baseReviewIndex": {
+      "path": "docs/art/candidates/landmarks/review-index.v4.md",
+      "sha256": "1c2ca2ead5d6e106fc8f195944842893772c34afd5004b7d6ecd9cb7fa03d5ca"
+    },
+    "stagingPlan": {
+      "path": "docs/art/landmark-staging-v5.json",
+      "sha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505"
+    },
+    "approvedPortraitArchive": {
+      "path": "docs/art/archive/asset-archive.v2.json",
+      "sha256": "8ddc043ba9a3c457a6babdc943af9d3570afea5ddcee839165f73ce0160f34f9",
+      "portraitId": "minho"
+    }
+  },
+  "destinationArtifacts": [
+    {
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+      "sourceFragmentSha256": "8d23b71e189afa6a47247b149534d60230f740d86e7c5d2915acae0e0c83d926",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/scene-contact-sheet--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+        "sha256": "91b5ac9c728130e5d402400ee98e8e68a9d3e243473d0b2653fbb1010262870a",
+        "width": 2400,
+        "height": 1035,
+        "declaredSha256": "91b5ac9c728130e5d402400ee98e8e68a9d3e243473d0b2653fbb1010262870a",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/scene-contact-sheet--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+          "status": "non-final",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 2400,
+            "height": 1035
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 4203829,
+          "sha256": "91b5ac9c728130e5d402400ee98e8e68a9d3e243473d0b2653fbb1010262870a",
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "candidateImagesContainQaOverlays": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/portrait-placement-preview--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+        "sha256": "a8f1a20f6999f40ff4a0fec334e2d53b51bd7ef7adf27f3f74180397f07f7d1c",
+        "width": 2400,
+        "height": 1085,
+        "declaredSha256": "a8f1a20f6999f40ff4a0fec334e2d53b51bd7ef7adf27f3f74180397f07f7d1c",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/united-states-new-york-brooklyn-bridge/portrait-placement-preview--united-states-new-york-brooklyn-bridge--staging-v5--non-final.png",
+          "status": "non-final-qa-only",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 2400,
+            "height": 1085
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 4214652,
+          "sha256": "a8f1a20f6999f40ff4a0fec334e2d53b51bd7ef7adf27f3f74180397f07f7d1c",
+          "approvedPortraitManifest": {
+            "path": "docs/art/production/portraits/minho/manifest.json",
+            "byteLength": 3121,
+            "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--walk--v01",
+            "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+            "byteLength": 500393,
+            "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+            "alphaBoundsPx": {
+              "x": 64,
+              "y": 494,
+              "width": 896,
+              "height": 466,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "rendering": "Exact normalized anchor and scale were applied to the full 1024x1024 Portrait canvas with fractional SVG rasterization before sheet downsampling.",
+          "sceneCandidatesRemainCatFree": true
+        }
+      }
+    },
+    {
+      "destinationId": "china-beijing-mutianyu-great-wall",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/china-beijing-mutianyu-great-wall/manifest.fragment.json",
+      "sourceFragmentSha256": "f083bec90083e9c11d511406304f6aebbc58e1174d78bfd46572abd9ea54f05e",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/china-beijing-mutianyu-great-wall/scene-contact-sheet--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+        "sha256": "add3cdb92c287fd8f2a6134d9d90ea4a5bed2ece3c14e25c678c0098d17bd539",
+        "width": 1320,
+        "height": 1115,
+        "declaredSha256": "add3cdb92c287fd8f2a6134d9d90ea4a5bed2ece3c14e25c678c0098d17bd539",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/china-beijing-mutianyu-great-wall/scene-contact-sheet--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+          "status": "non-final",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1320,
+            "height": 1115
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 2383292,
+          "sha256": "add3cdb92c287fd8f2a6134d9d90ea4a5bed2ece3c14e25c678c0098d17bd539",
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "candidateImagesContainQaOverlays": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/china-beijing-mutianyu-great-wall/portrait-placement-preview--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+        "sha256": "dfd56f8a3a8de401e8e1177a43dfe856dc17616950be6416908ed1166a5f3e7a",
+        "width": 1320,
+        "height": 1135,
+        "declaredSha256": "dfd56f8a3a8de401e8e1177a43dfe856dc17616950be6416908ed1166a5f3e7a",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/china-beijing-mutianyu-great-wall/portrait-placement-preview--china-beijing-mutianyu-great-wall--staging-v5--non-final.png",
+          "status": "non-final-qa-only",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1320,
+            "height": 1135
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 2383797,
+          "sha256": "dfd56f8a3a8de401e8e1177a43dfe856dc17616950be6416908ed1166a5f3e7a",
+          "approvedPortraitManifest": {
+            "path": "docs/art/production/portraits/minho/manifest.json",
+            "byteLength": 3121,
+            "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--gaze--v01",
+            "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+            "byteLength": 735117,
+            "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+            "alphaBoundsPx": {
+              "x": 256,
+              "y": 64,
+              "width": 512,
+              "height": 896,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "rendering": "Exact normalized anchor and scale were applied to the full 1024x1024 Portrait canvas with fractional SVG rasterization before sheet downsampling.",
+          "sceneCandidateRemainsCatFree": true
+        }
+      }
+    },
+    {
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/manifest.fragment.json",
+      "sourceFragmentSha256": "92bcca4db12aa6634c7975ecdaa0aa3ae3894d5f91ca2039d70a5df26e6a8210",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/scene-contact-sheet--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+        "sha256": "593abca139d9a1c6edb9769727898b1f62f9e44f1e80bdf64a813dcfb417ea5b",
+        "width": 1600,
+        "height": 1340,
+        "declaredSha256": "593abca139d9a1c6edb9769727898b1f62f9e44f1e80bdf64a813dcfb417ea5b",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/scene-contact-sheet--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+          "status": "non-final",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1600,
+            "height": 1340
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 3049701,
+          "sha256": "593abca139d9a1c6edb9769727898b1f62f9e44f1e80bdf64a813dcfb417ea5b",
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "includesPortraitPlacementPreviewPanels": true,
+          "candidateImagesContainQaOverlays": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/portrait-placement-preview--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+        "sha256": "92402b3e375bd35b2ea2bdc75a11ac31b0ab97e5dd7cf00d7fd47eca282a2f0f",
+        "width": 1200,
+        "height": 1940,
+        "declaredSha256": "92402b3e375bd35b2ea2bdc75a11ac31b0ab97e5dd7cf00d7fd47eca282a2f0f",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/portrait-placement-preview--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+          "status": "non-final-qa-only",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1200,
+            "height": 1940
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 3524876,
+          "sha256": "92402b3e375bd35b2ea2bdc75a11ac31b0ab97e5dd7cf00d7fd47eca282a2f0f",
+          "approvedPortraitSource": {
+            "archivePath": "docs/art/archive/asset-archive.v2.json",
+            "archiveByteLength": 100636,
+            "archiveSha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3",
+            "manifestPath": "docs/art/production/portraits/minho/manifest.json",
+            "manifestByteLength": 3121,
+            "manifestSha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--walk--v01",
+            "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+            "byteLength": 500393,
+            "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+            "alphaBoundsPx": {
+              "x": 64,
+              "y": 494,
+              "width": 896,
+              "height": 466,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "rendering": "Exact normalized anchors and nominal scales were applied to the full 1024x1024 Portrait canvas at 2x scene resolution, then Lanczos-downsampled for fractional-pixel accuracy.",
+          "sceneCandidatesRemainCatFree": true
+        }
+      }
+    },
+    {
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/manifest.fragment.json",
+      "sourceFragmentSha256": "fbc3cdb08b727401059292e3e2dd253bb104160d6ba8ae70ed91fc4ba483e1c0",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/scene-contact-sheet--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+        "sha256": "ac22cea6f9a8ef48389f10b2244d519470abc0851ca87eb4cc1ab8b0eb2cd11d",
+        "width": 1600,
+        "height": 700,
+        "declaredSha256": "ac22cea6f9a8ef48389f10b2244d519470abc0851ca87eb4cc1ab8b0eb2cd11d",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/scene-contact-sheet--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+          "status": "non-final",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1600,
+            "height": 700
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 1571080,
+          "sha256": "ac22cea6f9a8ef48389f10b2244d519470abc0851ca87eb4cc1ab8b0eb2cd11d",
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "includesPortraitPlacementPreviewPanel": true,
+          "candidateImageContainsQaOverlays": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/portrait-placement-preview--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+        "sha256": "97164c86645d75b7bd98c662bcae5ca25da425d166621d91bdee174017655dc2",
+        "width": 1200,
+        "height": 1000,
+        "declaredSha256": "97164c86645d75b7bd98c662bcae5ca25da425d166621d91bdee174017655dc2",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/portrait-placement-preview--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+          "status": "non-final-qa-only",
+          "shippingEligible": false,
+          "dimensions": {
+            "width": 1200,
+            "height": 1000
+          },
+          "format": "png",
+          "mode": "RGB",
+          "colorSpace": "sRGB",
+          "bitDepth": 8,
+          "alpha": "opaque",
+          "byteLength": 1870389,
+          "sha256": "97164c86645d75b7bd98c662bcae5ca25da425d166621d91bdee174017655dc2",
+          "approvedPortraitSource": {
+            "archivePath": "docs/art/archive/asset-archive.v2.json",
+            "archiveByteLength": 100636,
+            "archiveSha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3",
+            "manifestPath": "docs/art/production/portraits/minho/manifest.json",
+            "manifestByteLength": 3121,
+            "manifestSha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--gaze--v01",
+            "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+            "byteLength": 735117,
+            "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+            "alphaBoundsPx": {
+              "x": 256,
+              "y": 64,
+              "width": 512,
+              "height": 896,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "rendering": "Exact normalized anchor and scale were applied to the full 1024x1024 Portrait canvas at 2x scene resolution, then Lanczos-downsampled.",
+          "sceneCandidateRemainsCatFree": true
+        }
+      }
+    },
+    {
+      "destinationId": "china-shanghai-the-bund",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/manifest.fragment.json",
+      "sourceFragmentSha256": "ab782576bbb3a1ac4f92e2e1f4e51ed378b48aef03e64d36ec3edf65f26214f9",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/scene-contact-sheet--china-shanghai-the-bund--staging-v5--non-final.png",
+        "sha256": "2cc4568a9b5d38542a4ab60fdf7a7584054182963ef0d513d77dd5006f4c9db6",
+        "width": 1800,
+        "height": 780,
+        "declaredSha256": "2cc4568a9b5d38542a4ab60fdf7a7584054182963ef0d513d77dd5006f4c9db6",
+        "sourceMetadata": {
+          "kind": "scene-contact-sheet",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/scene-contact-sheet--china-shanghai-the-bund--staging-v5--non-final.png",
+          "imageSrc": "scene-contact-sheet--china-shanghai-the-bund--staging-v5--non-final.png",
+          "byteLength": 2107875,
+          "sha256": "2cc4568a9b5d38542a4ab60fdf7a7584054182963ef0d513d77dd5006f4c9db6",
+          "dimensions": {
+            "width": 1800,
+            "height": 780,
+            "format": "png",
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "candidateImagesContainQaOverlays": false,
+          "shippingEligible": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/portrait-placement-preview--china-shanghai-the-bund--staging-v5--non-final.png",
+        "sha256": "532648a0a51f598364fbeb5907afd9cf371f4daa300f758e01d1f85f91919809",
+        "width": 1800,
+        "height": 980,
+        "declaredSha256": "532648a0a51f598364fbeb5907afd9cf371f4daa300f758e01d1f85f91919809",
+        "sourceMetadata": {
+          "kind": "portrait-placement-preview",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/portrait-placement-preview--china-shanghai-the-bund--staging-v5--non-final.png",
+          "imageSrc": "portrait-placement-preview--china-shanghai-the-bund--staging-v5--non-final.png",
+          "byteLength": 2144834,
+          "sha256": "532648a0a51f598364fbeb5907afd9cf371f4daa300f758e01d1f85f91919809",
+          "dimensions": {
+            "width": 1800,
+            "height": 980,
+            "format": "png",
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "portraitId": "minho",
+          "approvedPortrait": "minho",
+          "usesApprovedPortrait": true,
+          "actualPortraitComposite": true,
+          "nonFinalQaOnly": true,
+          "sceneCandidatesRemainCatFree": true,
+          "approvedPortraitManifest": {
+            "repoPath": "docs/art/production/portraits/minho/manifest.json",
+            "byteLength": 3121,
+            "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--walk--v01",
+            "repoPath": "public/portraits/minho/portrait--minho--walk--v01.png",
+            "byteLength": 500393,
+            "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+            "alphaBoundsPx": {
+              "x": 64,
+              "y": 494,
+              "width": 896,
+              "height": 466,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "labels": [
+            "framing",
+            "scale",
+            "support",
+            "narrative role"
+          ],
+          "shippingEligible": false
+        }
+      }
+    },
+    {
+      "destinationId": "peru-cusco-machu-picchu",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/manifest.fragment.json",
+      "sourceFragmentSha256": "b36aeea4bbd96eb5ababb6e18670c4ac54638ba8c6d0313a08a86d4eb281bf74",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/scene-contact-sheet--peru-cusco-machu-picchu--staging-v5--non-final.png",
+        "sha256": "06f4e94578b6fc37ad17adb3198c49757948e18e900f8b31fd75d137b2a3bd27",
+        "width": 1800,
+        "height": 780,
+        "declaredSha256": "06f4e94578b6fc37ad17adb3198c49757948e18e900f8b31fd75d137b2a3bd27",
+        "sourceMetadata": {
+          "kind": "scene-contact-sheet",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/scene-contact-sheet--peru-cusco-machu-picchu--staging-v5--non-final.png",
+          "imageSrc": "scene-contact-sheet--peru-cusco-machu-picchu--staging-v5--non-final.png",
+          "byteLength": 1178640,
+          "sha256": "06f4e94578b6fc37ad17adb3198c49757948e18e900f8b31fd75d137b2a3bd27",
+          "dimensions": {
+            "width": 1800,
+            "height": 780,
+            "format": "png",
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "qaOverlays": [
+            "safeBounds",
+            "compositionSlot.bottom-center-anchor"
+          ],
+          "candidateImagesContainQaOverlays": false,
+          "shippingEligible": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/portrait-placement-preview--peru-cusco-machu-picchu--staging-v5--non-final.png",
+        "sha256": "eaddba84a4951f2ecb73a659362ecc76ed39d28d7f1f2fb5dfd5354184591ede",
+        "width": 1800,
+        "height": 980,
+        "declaredSha256": "eaddba84a4951f2ecb73a659362ecc76ed39d28d7f1f2fb5dfd5354184591ede",
+        "sourceMetadata": {
+          "kind": "portrait-placement-preview",
+          "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/portrait-placement-preview--peru-cusco-machu-picchu--staging-v5--non-final.png",
+          "imageSrc": "portrait-placement-preview--peru-cusco-machu-picchu--staging-v5--non-final.png",
+          "byteLength": 1204831,
+          "sha256": "eaddba84a4951f2ecb73a659362ecc76ed39d28d7f1f2fb5dfd5354184591ede",
+          "dimensions": {
+            "width": 1800,
+            "height": 980,
+            "format": "png",
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "portraitId": "minho",
+          "approvedPortrait": "minho",
+          "usesApprovedPortrait": true,
+          "actualPortraitComposite": true,
+          "nonFinalQaOnly": true,
+          "sceneCandidateRemainsCatFree": true,
+          "approvedPortraitManifest": {
+            "repoPath": "docs/art/production/portraits/minho/manifest.json",
+            "byteLength": 3121,
+            "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+          },
+          "portraitPose": {
+            "id": "minho--gaze--v01",
+            "repoPath": "public/portraits/minho/portrait--minho--gaze--v01.png",
+            "byteLength": 735117,
+            "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+            "alphaBoundsPx": {
+              "x": 256,
+              "y": 64,
+              "width": 512,
+              "height": 896,
+              "bottomTransparentMargin": 64
+            }
+          },
+          "labels": [
+            "framing",
+            "scale",
+            "support",
+            "narrative role"
+          ],
+          "shippingEligible": false
+        }
+      }
+    },
+    {
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
+      "sourceFragmentSha256": "59823cc04a86b2568663be65f3299142055db9369ac25ae71ecd9045a6f75c0b",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/japan-kyoto-fushimi-inari-taisha/scene-contact-sheet--japan-kyoto-fushimi-inari-taisha--staging-v5--non-final.png",
+        "sha256": "a0a9cc6d61cc2e2992302680cd90a82025b34d5e590d378b834b3b8c999ba56f",
+        "width": 1800,
+        "height": 920,
+        "declaredSha256": "a0a9cc6d61cc2e2992302680cd90a82025b34d5e590d378b834b3b8c999ba56f",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--japan-kyoto-fushimi-inari-taisha--staging-v5--non-final.png",
+          "sha256": "a0a9cc6d61cc2e2992302680cd90a82025b34d5e590d378b834b3b8c999ba56f",
+          "dimensions": {
+            "width": 1800,
+            "height": 920
+          },
+          "mode": "RGB",
+          "alpha": "opaque",
+          "colorSpace": "sRGB",
+          "candidate": true,
+          "shippingEligible": false,
+          "overlays": [
+            "variant and supersession labels",
+            "Perch safeBounds",
+            "bottom-center anchor and support-contact indicator",
+            "numbered Ambient Life figures and direction arrows",
+            "placement metadata and pending cultural-rights warning"
+          ]
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/japan-kyoto-fushimi-inari-taisha/portrait-placement-preview--japan-kyoto-fushimi-inari-taisha--staging-v5--non-final.png",
+        "sha256": "a3234ef7f3d5a3562d1fe241fe1f941047c2b52e3b019b9c627640b8fabd74e1",
+        "width": 1800,
+        "height": 920,
+        "declaredSha256": "a3234ef7f3d5a3562d1fe241fe1f941047c2b52e3b019b9c627640b8fabd74e1",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--japan-kyoto-fushimi-inari-taisha--staging-v5--non-final.png",
+          "sha256": "a3234ef7f3d5a3562d1fe241fe1f941047c2b52e3b019b9c627640b8fabd74e1",
+          "dimensions": {
+            "width": 1800,
+            "height": 920
+          },
+          "mode": "RGB",
+          "alpha": "opaque",
+          "colorSpace": "sRGB",
+          "portraitId": "minho",
+          "portraitApproved": true,
+          "previewOnly": true,
+          "candidateSceneFilesRemainCatFree": true,
+          "renderMethod": "4x supersampled exact normalized transform, Lanczos downsample",
+          "shippingEligible": false
+        }
+      }
+    },
+    {
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+      "sourceFragmentSha256": "2ea2b83b93e498ff1a1bdd06729a15c032261d9a1bcf1328b727011295105ff1",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/new-zealand-fiordland-milford-sound/scene-contact-sheet--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+        "sha256": "32accb6743ffc276c5bbaa210db0378a674a243b49c67d5c9923bcf0318a287a",
+        "width": 1400,
+        "height": 1150,
+        "declaredSha256": "32accb6743ffc276c5bbaa210db0378a674a243b49c67d5c9923bcf0318a287a",
+        "sourceMetadata": {
+          "imageSrc": "scene-contact-sheet--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+          "sha256": "32accb6743ffc276c5bbaa210db0378a674a243b49c67d5c9923bcf0318a287a",
+          "dimensions": {
+            "width": 1400,
+            "height": 1150
+          },
+          "mode": "RGB",
+          "alpha": "opaque",
+          "colorSpace": "sRGB",
+          "candidate": true,
+          "shippingEligible": false,
+          "overlays": [
+            "variant and addition label",
+            "Perch safeBounds",
+            "bottom-center anchor and support-contact indicator",
+            "placement metadata",
+            "nature-scene Ambient Life not-applicable evidence",
+            "pending cultural-conservation-rights warning"
+          ]
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/new-zealand-fiordland-milford-sound/portrait-placement-preview--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+        "sha256": "84de58d35c879119bb79786b281f022959ca9d88ae5006c1948fef1210943755",
+        "width": 1400,
+        "height": 1150,
+        "declaredSha256": "84de58d35c879119bb79786b281f022959ca9d88ae5006c1948fef1210943755",
+        "sourceMetadata": {
+          "imageSrc": "portrait-placement-preview--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+          "sha256": "84de58d35c879119bb79786b281f022959ca9d88ae5006c1948fef1210943755",
+          "dimensions": {
+            "width": 1400,
+            "height": 1150
+          },
+          "mode": "RGB",
+          "alpha": "opaque",
+          "colorSpace": "sRGB",
+          "portraitId": "minho",
+          "portraitApproved": true,
+          "previewOnly": true,
+          "candidateSceneFileRemainsCatFree": true,
+          "renderMethod": "4x supersampled exact normalized transform, Lanczos downsample",
+          "shippingEligible": false
+        }
+      }
+    },
+    {
+      "destinationId": "singapore-singapore-merlion",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/manifest.fragment.json",
+      "sourceFragmentSha256": "11ec77e0b12ad899a9babdc0b6db2d87cfed1c78fe2d70e64695a5eb187275f9",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/scene-contact-sheet--singapore-singapore-merlion--staging-v5--non-final.png",
+        "sha256": "0c2fdc7bbd8e93b5af89b07d4833a9ca128f11fadb5210f1bf4cd5a40e899168",
+        "width": 1640,
+        "height": 796,
+        "declaredSha256": "0c2fdc7bbd8e93b5af89b07d4833a9ca128f11fadb5210f1bf4cd5a40e899168",
+        "sourceMetadata": {
+          "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/scene-contact-sheet--singapore-singapore-merlion--staging-v5--non-final.png",
+          "sha256": "0c2fdc7bbd8e93b5af89b07d4833a9ca128f11fadb5210f1bf4cd5a40e899168",
+          "dimensions": {
+            "width": 1640,
+            "height": 796,
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "containsPortrait": false,
+          "overlays": [
+            "visible-silhouette safeBounds",
+            "bottom-center composition anchor"
+          ],
+          "shippingEligible": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/portrait-placement-preview--singapore-singapore-merlion--staging-v5--non-final.png",
+        "sha256": "0e0dfc10303938862e1de4f314360aef3572e0dd8e1592a9866fa7799654c0b8",
+        "width": 1640,
+        "height": 796,
+        "declaredSha256": "0e0dfc10303938862e1de4f314360aef3572e0dd8e1592a9866fa7799654c0b8",
+        "sourceMetadata": {
+          "path": "docs/art/candidates/landmarks/staging-v5/singapore-singapore-merlion/portrait-placement-preview--singapore-singapore-merlion--staging-v5--non-final.png",
+          "sha256": "0e0dfc10303938862e1de4f314360aef3572e0dd8e1592a9866fa7799654c0b8",
+          "dimensions": {
+            "width": 1640,
+            "height": 796,
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "containsApprovedMinho": true,
+          "qaOnly": true,
+          "shippingEligible": false
+        }
+      }
+    },
+    {
+      "destinationId": "morocco-ouarzazate-ait-benhaddou",
+      "sourceFragment": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/manifest.fragment.json",
+      "sourceFragmentSha256": "55daf7f5ee1e52aab990b2761ab11e7e2ddf311292730d76e4c2281cbc5a4ad5",
+      "sceneContactSheet": {
+        "kind": "scene-contact-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/scene-contact-sheet--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+        "sha256": "5f92b53ff1a252909eed5eb171efaebb60d8229c6f752848b5240b8049cdb5f8",
+        "width": 980,
+        "height": 901,
+        "declaredSha256": "5f92b53ff1a252909eed5eb171efaebb60d8229c6f752848b5240b8049cdb5f8",
+        "sourceMetadata": {
+          "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/scene-contact-sheet--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+          "sha256": "5f92b53ff1a252909eed5eb171efaebb60d8229c6f752848b5240b8049cdb5f8",
+          "dimensions": {
+            "width": 980,
+            "height": 901,
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "containsPortrait": false,
+          "overlays": [
+            "visible-silhouette safeBounds",
+            "bottom-center composition anchor"
+          ],
+          "shippingEligible": false
+        }
+      },
+      "minhoPlacementPreviewSheet": {
+        "kind": "minho-placement-preview-sheet",
+        "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/portrait-placement-preview--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+        "sha256": "e1a372358a2de58bb6ccb52db01284a125ffaccf6fe4e328fce43ce8aa1a85c1",
+        "width": 980,
+        "height": 901,
+        "declaredSha256": "e1a372358a2de58bb6ccb52db01284a125ffaccf6fe4e328fce43ce8aa1a85c1",
+        "sourceMetadata": {
+          "path": "docs/art/candidates/landmarks/staging-v5/morocco-ouarzazate-ait-benhaddou/portrait-placement-preview--morocco-ouarzazate-ait-benhaddou--staging-v5--non-final.png",
+          "sha256": "e1a372358a2de58bb6ccb52db01284a125ffaccf6fe4e328fce43ce8aa1a85c1",
+          "dimensions": {
+            "width": 980,
+            "height": 901,
+            "mode": "RGB",
+            "colorSpace": "sRGB",
+            "bitDepth": 8,
+            "alpha": "opaque"
+          },
+          "containsApprovedMinho": true,
+          "qaOnly": true,
+          "shippingEligible": false
+        }
+      }
+    }
+  ],
+  "overviewSheets": [
+    {
+      "kind": "combined-scene-only-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v5-01-of-05--non-final.png",
+      "sha256": "92cd3000f84371a8c44a40b4945a6ee9bec0d4c434906a7562f7dc0816e0b402",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16,
+      "sceneIds": [
+        "china-beijing-forbidden-city-corner-tower--day-signature--v02",
+        "china-beijing-forbidden-city-corner-tower--golden-hour--v02",
+        "japan-kyoto-fushimi-inari-taisha--day-signature--v03",
+        "japan-kyoto-fushimi-inari-taisha--golden-hour--v01",
+        "japan-kyoto-fushimi-inari-taisha--companion-rare--v01",
+        "japan-kyoto-fushimi-inari-taisha--night-transit--v02",
+        "japan-kyoto-fushimi-inari-taisha--sheltered-rest--v01",
+        "singapore-singapore-merlion--day-signature--v03",
+        "singapore-singapore-merlion--golden-hour--v01",
+        "singapore-singapore-merlion--companion-rare--v02",
+        "singapore-singapore-merlion--night-transit--v02",
+        "singapore-singapore-merlion--sheltered-rest--v01",
+        "australia-sydney-opera-house--day-signature--v01",
+        "australia-sydney-opera-house--golden-hour--v01",
+        "australia-sydney-opera-house--companion-rare--v01",
+        "france-paris-eiffel-tower--day-signature--v01"
+      ]
+    },
+    {
+      "kind": "combined-scene-only-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v5-02-of-05--non-final.png",
+      "sha256": "1e99ef36ecba08ad8257c5b427b4e77551cf0970242f030fd034e4a1c51ac576",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16,
+      "sceneIds": [
+        "france-paris-eiffel-tower--golden-hour--v01",
+        "united-kingdom-london-tower-bridge--day-signature--v03",
+        "united-kingdom-london-tower-bridge--golden-hour--v01",
+        "united-kingdom-london-tower-bridge--night-transit--v02",
+        "united-kingdom-london-tower-bridge--sheltered-rest--v01",
+        "italy-rome-colosseum--day-signature--v01",
+        "italy-rome-colosseum--golden-hour--v01",
+        "egypt-giza-pyramids--day-signature--v01",
+        "egypt-giza-pyramids--golden-hour--v01",
+        "egypt-giza-pyramids--companion-rare--v02",
+        "united-states-new-york-brooklyn-bridge--day-signature--v03",
+        "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+        "united-states-new-york-brooklyn-bridge--night-transit--v02",
+        "united-states-new-york-brooklyn-bridge--sheltered-rest--v01",
+        "peru-cusco-machu-picchu--day-signature--v01",
+        "peru-cusco-machu-picchu--golden-hour--v01"
+      ]
+    },
+    {
+      "kind": "combined-scene-only-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v5-03-of-05--non-final.png",
+      "sha256": "eccfd6d62976e41d2995d7148cbe6926febf661b20e73c5b35702d3ec4837ee7",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16,
+      "sceneIds": [
+        "peru-cusco-machu-picchu--distant-overlook--v01",
+        "china-beijing-mutianyu-great-wall--day-signature--v01",
+        "china-beijing-mutianyu-great-wall--golden-hour--v01",
+        "china-beijing-mutianyu-great-wall--distant-overlook--v01",
+        "china-shanghai-the-bund--day-signature--v03",
+        "china-shanghai-the-bund--golden-hour--v01",
+        "china-shanghai-the-bund--night-transit--v02",
+        "china-shanghai-the-bund--sheltered-rest--v01",
+        "china-xian-giant-wild-goose-pagoda--day-signature--v01",
+        "china-xian-giant-wild-goose-pagoda--golden-hour--v01",
+        "china-guilin-elephant-trunk-hill--day-signature--v02",
+        "china-guilin-elephant-trunk-hill--golden-hour--v02",
+        "china-guilin-elephant-trunk-hill--companion-rare--v02",
+        "china-dongguan-xiliubeipo-village--day-signature--v02",
+        "china-dongguan-xiliubeipo-village--golden-hour--v02",
+        "china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01"
+      ]
+    },
+    {
+      "kind": "combined-scene-only-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v5-04-of-05--non-final.png",
+      "sha256": "613179413138dae60f843b5d908ef4b633bd7e4b013888c1b017205258d789d4",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 16,
+      "sceneIds": [
+        "china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01",
+        "india-agra-taj-mahal--day-signature--v01",
+        "india-agra-taj-mahal--golden-hour--v01",
+        "india-agra-taj-mahal--companion-rare--v01",
+        "turkey-istanbul-hagia-sophia--day-signature--v01",
+        "turkey-istanbul-hagia-sophia--golden-hour--v01",
+        "turkey-istanbul-hagia-sophia--companion-rare--v01",
+        "brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01",
+        "brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01",
+        "south-africa-cape-town-table-mountain--day-signature--v01",
+        "south-africa-cape-town-table-mountain--golden-hour--v01",
+        "south-africa-cape-town-table-mountain--companion-rare--v01",
+        "south-africa-cape-town-table-mountain--distant-overlook--v01",
+        "mexico-yucatan-chichen-itza--day-signature--v01",
+        "mexico-yucatan-chichen-itza--golden-hour--v01",
+        "mexico-yucatan-chichen-itza--companion-rare--v01"
+      ]
+    },
+    {
+      "kind": "combined-scene-only-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--overview-v5-05-of-05--non-final.png",
+      "sha256": "d66ea9ead823f4b539d754c3bbf79bad929551a9a15925b3e8150858456c9889",
+      "width": 1200,
+      "height": 1040,
+      "sceneCount": 12,
+      "sceneIds": [
+        "jordan-petra-al-khazneh--day-signature--v02",
+        "jordan-petra-al-khazneh--golden-hour--v02",
+        "cambodia-siem-reap-angkor-wat--day-signature--v01",
+        "cambodia-siem-reap-angkor-wat--golden-hour--v01",
+        "cambodia-siem-reap-angkor-wat--companion-rare--v01",
+        "new-zealand-fiordland-milford-sound--day-signature--v01",
+        "new-zealand-fiordland-milford-sound--golden-hour--v01",
+        "new-zealand-fiordland-milford-sound--companion-rare--v02",
+        "new-zealand-fiordland-milford-sound--distant-overlook--v01",
+        "morocco-ouarzazate-ait-benhaddou--day-signature--v01",
+        "morocco-ouarzazate-ait-benhaddou--golden-hour--v01",
+        "morocco-ouarzazate-ait-benhaddou--distant-overlook--v01"
+      ]
+    }
+  ],
+  "placementPreviewOverviewSheets": [
+    {
+      "kind": "combined-minho-placement-preview-overview",
+      "path": "docs/art/candidates/landmarks/contact-sheet--landmarks--placement-preview-v5-01-of-01--non-final.png",
+      "sha256": "511d01b85b6f4813c76c9aeddb47b26c3414dbad9896523ea80d865a87671ef6",
+      "width": 1200,
+      "height": 1120,
+      "sceneCount": 15,
+      "sceneIds": [
+        "united-states-new-york-brooklyn-bridge--day-signature--v03",
+        "united-states-new-york-brooklyn-bridge--night-transit--v02",
+        "china-beijing-mutianyu-great-wall--distant-overlook--v01",
+        "united-kingdom-london-tower-bridge--day-signature--v03",
+        "united-kingdom-london-tower-bridge--night-transit--v02",
+        "south-africa-cape-town-table-mountain--distant-overlook--v01",
+        "china-shanghai-the-bund--day-signature--v03",
+        "china-shanghai-the-bund--night-transit--v02",
+        "peru-cusco-machu-picchu--distant-overlook--v01",
+        "japan-kyoto-fushimi-inari-taisha--day-signature--v03",
+        "japan-kyoto-fushimi-inari-taisha--night-transit--v02",
+        "new-zealand-fiordland-milford-sound--distant-overlook--v01",
+        "singapore-singapore-merlion--day-signature--v03",
+        "singapore-singapore-merlion--night-transit--v02",
+        "morocco-ouarzazate-ait-benhaddou--distant-overlook--v01"
+      ],
+      "portraitId": "minho",
+      "nonFinalQaOnly": true,
+      "sourceScenesRemainCatFree": true
+    }
+  ],
+  "errors": []
+}

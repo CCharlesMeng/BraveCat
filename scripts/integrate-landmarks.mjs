@@ -7,6 +7,7 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import { isPortraitPose } from '../src/lib/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -118,7 +119,7 @@ const validateCompositionSlot = (slot, safeBounds, label, errors) => {
     || slot.y > 1
     || slot.scale <= 0
     || slot.scale > 1
-    || !['sit', 'sleep', 'walk', 'eat', 'play', 'gaze'].includes(slot.pose)
+    || !isPortraitPose(slot.pose)
     || typeof slot.flip !== 'boolean'
   ) {
     errors.push(`${label}: invalid normalized bottom-center compositionSlot`)

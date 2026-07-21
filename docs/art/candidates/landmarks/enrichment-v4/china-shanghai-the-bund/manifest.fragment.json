@@ -1,0 +1,813 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-enrichment-v4-candidate-fragment",
+  "planId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "destinationId": "china-shanghai-the-bund",
+  "destinationName": "上海外滩",
+  "preferredPlaceReference": "上海外滩 / the Bund",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "outputDirectory": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund",
+  "activeSceneCount": 3,
+  "base": {
+    "extendsPlanId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+    "candidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+    "destinationFragment": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
+    "sharedArtifactsModified": false,
+    "approvedContinuityReferencesOnly": true,
+    "continuityReferences": [
+      {
+        "id": "china-shanghai-the-bund--day-signature--v01",
+        "path": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v01.png",
+        "sha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+        "use": "landmark, palette, and style continuity only",
+        "modified": false
+      },
+      {
+        "id": "china-shanghai-the-bund--golden-hour--v01",
+        "path": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--golden-hour--v01.png",
+        "sha256": "fecd9110f79c550111ec1d51cb7bbcd1fdb51a08f664d04df7f6ff2a8c775752",
+        "use": "night palette, landmark, and style continuity only",
+        "modified": false
+      }
+    ],
+    "supersession": [
+      {
+        "activeRevisionId": "china-shanghai-the-bund--day-signature--v02",
+        "supersedesRevisionId": "china-shanghai-the-bund--day-signature--v01",
+        "supersededRevisionDeleted": false,
+        "supersededRevisionModified": false,
+        "promotionState": "pending-user-approval"
+      }
+    ]
+  },
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "styleDirection": {
+    "styleIntensity": "B",
+    "status": "locked",
+    "retainedCues": [
+      "thin warm gray-brown pencil and ink linework",
+      "translucent low-saturation sage, ochre, faded vermilion, and blue-gray watercolor",
+      "subtle warm-white paper grain",
+      "restrained watercolor bleed and contrast",
+      "airy negative space",
+      "quiet nostalgia with clear architecture"
+    ],
+    "excludedReferenceContent": [
+      "all cats and animals",
+      "rooms, furniture, objects, and icons from the references",
+      "torii and other reference architecture",
+      "postcard borders, layouts, writing, and stamps",
+      "UI and composition guides"
+    ],
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/style-ref-poses.png"
+    ]
+  },
+  "research": {
+    "document": {
+      "path": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/social-context-research.md",
+      "sha256": "ca011de9ba8f896771cf770f1054a50b2728e07abe949def1ec268154f38af17"
+    },
+    "officialPrimarySourceCount": 4,
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotoPixelsUsed": false,
+    "factsOnlyUse": true,
+    "keyConclusions": [
+      "The floodwall-top promenade, platforms, plazas, ramps, and ground paths form the pedestrian waterfront circulation.",
+      "East Zhongshan No. 1 Road is a separate motor roadway between the historic west-bank facades and the waterfront public realm.",
+      "A small public ferry is plausible on the Huangpu via Bund-adjacent Shanghai Ferry routes.",
+      "Routine night mode favors restrained static illumination rather than festival light-show effects.",
+      "A generic historic Bund hotel lounge or river-facing window seat is plausible, but no named venue interior may be copied."
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "risk": "medium",
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourcePhotographsRetained": false,
+    "sourcePhotoPixelsUsed": false,
+    "notes": "Four official or primary pages were used as text-only factual references. Shanghai government and transport pages were paraphrased; no page imagery was retained. Fairmont text, photography, graphics, designs, names, and marks are proprietary, so the shelter is generic and does not copy a named room or venue composition. Human rights review remains required for landmark exteriors, modern skyline architecture, architectural lighting, and any potentially recognizable hospitality-interior treatment.",
+    "warning": "Do not ship or promote until a human rights reviewer confirms the intended distribution territories and use. Public visibility, building age, or official publication does not establish public-domain status.",
+    "sources": [
+      {
+        "id": "shanghai-bund-waterfront-design",
+        "sourceOwner": "People's Government of Shanghai Municipality / Shanghai Municipal Planning Bureau",
+        "title": "市政府新闻发布会介绍外滩滨水区城市设计方案主要内容",
+        "publishedAt": "2008-05-28",
+        "url": "https://www.shanghai.gov.cn/nw9822/20200906/0001-9822_277198.html",
+        "termsUrl": "https://english.shanghai.gov.cn/en/20231231/16a6fe52826b4da592dc66cbdc09b87d.html",
+        "licenseOrTerms": "Shanghai municipal web materials are copyrighted; republication or quotation requires attribution and use within the authorization scope and term.",
+        "use": "Promenade, platform, plaza, ramp, pedestrian-path, surface-road, and historic-facade relationships.",
+        "assetRetained": false
+      },
+      {
+        "id": "shanghai-ferry-dongjin-dongfu",
+        "sourceOwner": "Shanghai Municipal Transportation Commission / Shanghai Ferry Co., Ltd.",
+        "title": "营运调整公告",
+        "publishedAt": "2022-08-31",
+        "url": "https://jtw.sh.gov.cn/bmts/20220831/fd63bb0ea85c4648b7dbb0b8b375e421.html",
+        "termsUrl": null,
+        "licenseOrTerms": "No open visual reuse license relied upon; route facts were paraphrased and no page or ferry image was retained.",
+        "use": "Dongjin and Dongfu public cross-river ferry plausibility and operational-control caution.",
+        "assetRetained": false
+      },
+      {
+        "id": "shanghai-landscape-lighting-plan",
+        "sourceOwner": "People's Government of Shanghai Municipality / Shanghai Landscaping and City Appearance Administrative Bureau",
+        "title": "上海将打造“世界著名夜游城市” 向世界展示“典雅精致、温馨舒适、繁华时尚、流光溢彩”城市夜景形象",
+        "publishedAt": "2024-01-20",
+        "url": "https://www.shanghai.gov.cn/nw4411/20240120/1e0d4fbb096a4e24a4423c44b0093c25.html",
+        "termsUrl": "https://english.shanghai.gov.cn/en/20231231/16a6fe52826b4da592dc66cbdc09b87d.html",
+        "licenseOrTerms": "Shanghai municipal web materials are copyrighted; facts were paraphrased and no page imagery was retained.",
+        "use": "Routine static lighting, special-event mode distinction, floodwall illumination, and route-lighting legibility.",
+        "assetRetained": false
+      },
+      {
+        "id": "fairmont-peace-hotel-venue",
+        "sourceOwner": "Fairmont Hotels & Resorts",
+        "title": "Fairmont Peace Hotel",
+        "publishedAt": null,
+        "url": "https://www.fairmont.com/en/hotels/shanghai/fairmont-peace-hotel.html",
+        "termsUrl": "https://www.fairmont.com/en/legal-notice.html",
+        "licenseOrTerms": "Fairmont protects its text, photographs, graphics, designs, names, and marks and limits downloads to personal non-commercial use. Nothing was downloaded, retained, or copied.",
+        "use": "Factual plausibility of a century-old Bund hotel with lounges and Huangpu/Pudong views; the generated shelter is intentionally generic.",
+        "assetRetained": false
+      }
+    ]
+  },
+  "culturalAndSocialReview": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "warnings": [
+      "Prefer neutral names such as 上海外滩, the Bund, 黄浦江, and 浦东陆家嘴.",
+      "Avoid romanticized colonial-era slogans and describe the west-bank subject neutrally as the historic Bund building ensemble.",
+      "Do not use stereotyped costume, qipao staging, rickshaws, lantern clichés, dragon motifs, or pseudo-Chinese ornament as contemporary-Shanghai shorthand.",
+      "Keep people incidental, non-identifiable, naturally walking or commuting, and secondary to the destination and future Portrait.",
+      "Do not imply that the generic hotel lounge is public, that sleeping there is ordinary guest conduct, or that Fairmont or Peace Hotel endorses the scene."
+    ]
+  },
+  "provenance": {
+    "generator": "Cursor GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "referenceUse": {
+      "styleReferences": "locked-B watercolor cues only; reference subjects and layouts excluded",
+      "approvedBundScenes": "landmark, palette, and style continuity only",
+      "officialPrimarySources": "factual geometry, circulation, lighting, shelter plausibility, wording, and rights caution only",
+      "sourcePhotoPixelsUsed": false
+    },
+    "sourceGeneratedAssets": [
+      {
+        "promptId": "day-signature-v02",
+        "toolManagedFilename": "bund-day-signature-v02-source.png",
+        "sha256": "0aeb918fc54592d4409132ce4e4bad69da19aca09656607a682daeee603bfeb9",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "night-transit-v01",
+        "toolManagedFilename": "bund-night-transit-v01-source.png",
+        "sha256": "b0ad874b420202b28f3d8e2f3ccfda996733535c2bb66f982c1c4320f361cd10",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "sheltered-rest-v01",
+        "toolManagedFilename": "bund-sheltered-rest-v01-source.png",
+        "sha256": "6036b79aed6f548a1b0021c6e9a5131d82f05b15da247b1f491db5f891efcadb",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      }
+    ],
+    "normalization": {
+      "tool": "Pillow 12.3.0",
+      "method": "integer exact-4:3 crop followed by Pillow Image.Resampling.LANCZOS resize",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "exactAspectCropDimensions": {
+        "width": 1364,
+        "height": 1023,
+        "aspectRatio": "4:3"
+      },
+      "variantCropPixels": {
+        "day-signature-v02": {
+          "left": 160,
+          "top": 0,
+          "rightExclusive": 1524,
+          "bottomExclusive": 1023,
+          "reason": "right-shifted within source bounds to retain the Pudong tower group while preserving the foreground route"
+        },
+        "night-transit-v01": {
+          "left": 160,
+          "top": 0,
+          "rightExclusive": 1524,
+          "bottomExclusive": 1023,
+          "reason": "right-shifted within source bounds to retain the Pudong tower group while preserving the foreground route"
+        },
+        "sheltered-rest-v01": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023,
+          "reason": "centered crop retains the full window bench and skyline"
+        }
+      },
+      "resize": {
+        "method": "Pillow Image.Resampling.LANCZOS",
+        "width": 1200,
+        "height": 900
+      },
+      "distortion": false,
+      "inputColorInterpretation": "untagged generator RGB treated as sRGB",
+      "outputProfile": "embedded sRGB built-in ICC profile, 588 bytes",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh PNG export retaining only the embedded ICC profile"
+    },
+    "rejectedRevisionAudit": {
+      "count": 0,
+      "note": "All three first successful generated outputs passed candidate-level visual inspection after exact-aspect crop selection. No generated revision was rejected. The shared day-signature v01 is superseded, not rejected, and remains untouched."
+    }
+  },
+  "prompts": [
+    {
+      "id": "day-signature-v02",
+      "variantId": "day-signature",
+      "version": "v02",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 5,
+      "exactText": "Create the DAY-SIGNATURE v02 empty scene base for 上海外滩 / the Bund, landscape 4:3. This is a lived-in but calm contemporary daytime west-bank waterfront view looking along the Bund promenade and across the Huangpu toward Pudong. Geography and circulation must be credible: a broad stone floodwall-top PEDESTRIAN PROMENADE runs continuously from the lower foreground into depth; the historic Bund waterfront facades stand on the WEST/LEFT beyond East Zhongshan No. 1 Road; a clearly separate narrow glimpse of that MOTOR ROAD lies only between the facades and promenade, with 3–4 tiny generic contemporary cars traveling on it; the Huangpu occupies the middle/right; Pudong/Lujiazui is across the river with a restrained recognizable Oriental Pearl Tower, trapezoid-topped Shanghai World Financial Center, and twisting Shanghai Tower. Place one modest generic public ferry on the RIVER only, small and unbranded. Add 5–7 small or mid-distance incidental walkers spaced naturally on the promenade, active but calm, with no identifiable faces and no one posing at the viewer. OMIT cyclists because promenade cycling is not established. Reserve the LOWER-LEFT foreground promenade, roughly x 6–29% and y 61–95%, as a broad grounded low-detail low-contrast clear walking Portrait area, with its bottom-center near x 17%, y 93%; no person, vehicle, railing post, chain, curb seam, plant, or object may enter that area. Do not draw any guide, box, anchor, or slot mark. Keep people and vehicles secondary and outside this clear area. STYLE ONLY from the three style references: locked intensity-B nostalgic watercolor, thin warm gray-brown pencil/ink lines, translucent low-saturation sage, ochre, faded vermilion and blue-gray washes, warm-white paper grain, restrained bleed, airy negative space, clear architecture, no thick outlines. Use the two approved Bund scenes ONLY for destination silhouette, palette, and spatial continuity; do not copy pixels or preserve their omitted road. Do not copy any reference cat, bird, torii, room, furniture, object, postcard border, UI, writing, stamp, or composition. ABSOLUTELY NO player cat, substitute cat, other cat, animal, bird, pet, close-up face, readable sign, pseudo-text, building lettering, advertisement, license plate, route text, logo, corporate livery, trademark, date, postmark, watermark, caption, UI, border, frame, label, guide, overlay, safe-bound mark, or anchor. No crowds, demonstrations, police, uniforms, flags, neon, photorealism, 3D, flat vector art, hard digital gradients, blown white sky, malformed towers, fantasy architecture, cars on the promenade, pedestrians on the road, or boats on land. Output only the unframed scene artwork with an empty Portrait slot."
+    },
+    {
+      "id": "night-transit-v01",
+      "variantId": "night-transit",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 5,
+      "exactText": "Create the NIGHT-TRANSIT v01 empty scene base for 上海外滩 / the Bund, landscape 4:3. Show an ordinary calm EARLY EVENING on the west-bank Bund promenade, not a festival, nightlife advertisement, or light show. Geography and circulation must remain immediately legible: a continuous pale stone floodwall-top PEDESTRIAN route begins in the lower foreground and leads safely into depth; historic Bund facades stand WEST/LEFT beyond a separate East Zhongshan No. 1 MOTOR ROAD; show only 2–3 tiny generic cars on that road; the Huangpu is middle/right; recognizable Pudong/Lujiazui silhouettes rise across the river, including the Oriental Pearl Tower, trapezoid-topped Shanghai World Financial Center, and twisting Shanghai Tower. One small generic public ferry travels on the RIVER only. Add 4–6 sparse, small, non-identifiable evening walkers naturally moving on the promenade, with no one posing toward the viewer. Reserve LOWER-LEFT foreground, roughly x 6–29% and y 61–95%, as a broad grounded clean low-detail walking Portrait area with bottom-center near x 17%, y 93%; keep every walker, vehicle, railing post, chain, curb seam, plant, and object out of it. No visible guide or mark. NIGHT PALETTE: low-saturation blue-gray watercolor sky and river, restrained warm amber lamps, pale static architectural illumination, soft short reflections; preserve readable paving edges, floodwall, route direction, and skyline silhouette. No crushed black shadows, blown lamps, glowing orbs, laser beams, animated media facades, saturated colored light, or neon spectacle. STYLE ONLY from the three style references: locked intensity-B nostalgic watercolor, thin warm gray-brown pencil/ink lines, translucent washes, warm-white paper grain, restrained bleed and contrast, airy calm. Use the two approved Bund scenes ONLY for destination silhouette, palette, and spatial continuity; do not copy pixels. Do not copy any reference cat, bird, torii, room, object, postcard border, UI, writing, stamp, or composition. ABSOLUTELY NO player cat, substitute cat, other cat, animal, bird, pet, close-up face, readable sign, pseudo-text, building lettering, advertisement, license plate, route text, logo, corporate livery, trademark, date, postmark, watermark, caption, UI, border, frame, label, guide, overlay, safe-bound mark, or anchor. No crowds, demonstrations, police, uniforms, flags, photorealism, 3D, flat vector art, hard gradients, malformed towers, fantasy architecture, cars on promenade, pedestrians on road, or boats on land. Output only the unframed scene artwork with an empty Portrait slot."
+    },
+    {
+      "id": "sheltered-rest-v01",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 5,
+      "exactText": "Create the SHELTERED-REST v01 empty scene base for 上海外滩 / the Bund, landscape 4:3. View from INSIDE a quiet, generic upper-floor historic-building hotel lounge/window alcove on the WEST bank. It must be a credible dry warm shelter, but not an identifiable Fairmont/Peace Hotel room and not a copied venue interior. Through one broad multi-pane river-facing window, show the Huangpu and a recognizable subdued Pudong/Lujiazui skyline outside: Oriental Pearl Tower, trapezoid-topped Shanghai World Financial Center, and twisting Shanghai Tower in correct east-bank relationship, with one tiny generic ferry on the river and a few minute non-identifiable promenade walkers far below. Compose a genuinely sleepable, long, deep upholstered WINDOW BENCH across the lower-left to lower-middle foreground, roughly x 8–48% and y 66–91%. Its cushion surface must be broad, horizontal, clean, grounded, softly warm, low-detail, and completely uninterrupted for a future sleeping Portrait; keep seams, piping, buttons, blanket folds, cups, books, menus, lamps, plants, table edges, people, and all objects outside this clear sleep area. Bottom-center sleeping anchor will be near x 28%, y 88%, but draw NO marker. Keep enough visible cushion in front of and behind the future sleeping figure; the slot must look actually usable, not a narrow sill or ledge. Use restrained generic Art-Deco-era proportions only—warm wood or pale stone window reveals, one simple side table far right, muted sage/ochre upholstery—without reproducing any named room, distinctive proprietary decor, branded furniture arrangement, hotel identity, luxury product, or private-residence cues. Warm dim interior light contrasts gently with cool blue-gray dusk outside; the river and Pudong remain unmistakable and not obscured by curtains. STYLE ONLY from the three style references: locked intensity-B nostalgic watercolor, thin warm gray-brown pencil/ink lines, translucent low-saturation sage, ochre and blue-gray washes, warm-white paper grain, restrained bleed, quiet negative space. Use the two approved Bund scenes ONLY for skyline, river, palette, and destination continuity; do not copy pixels. Do not copy any reference cat, bird, torii, room, furniture, object, postcard border, UI, writing, stamp, or composition. ABSOLUTELY NO player cat, substitute cat, other cat, animal, bird, pet bed, person indoors, close-up face, readable sign, pseudo-text, hotel name, menu, room number, advertisement, logo, corporate mark, branded amenity, trademark, date, postmark, watermark, caption, UI, border, frame, label, guide, overlay, safe-bound mark, or anchor. No neon spectacle, photorealism, 3D, flat vector art, hard digital gradients, heavy luxury-product staging, clutter, crushed shadows, blown window, malformed skyline, or impossible window geometry. Output only the unframed scene artwork with an empty sleep slot."
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--china-shanghai-the-bund--enrichment-v4--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shipping": false,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1800,
+      "height": 780
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "sha256": "8bb2a77f538779c807bdaba7579b0b62e216560994e885752df2ab9a51d3e253",
+    "overlays": [
+      "variant labels and active revisions",
+      "portrait safeBounds",
+      "bottom-center portrait anchors",
+      "pose, scale, dimensions, profile, and hash-prefix checks",
+      "day supersession note",
+      "social-placement, night-readability, and shelter-believability notes"
+    ],
+    "candidateImagesContainOverlays": false
+  },
+  "machineInspection": {
+    "decision": "pass",
+    "checkedAt": "2026-07-20",
+    "tool": "Pillow 12.3.0 plus PNG IHDR, chunk, ICC, path, and SHA-256 inspection",
+    "checks": {
+      "activeSceneCount": 3,
+      "retainedRejectedSceneCount": 0,
+      "allActiveScenes1200x900": true,
+      "allActiveScenesAspectRatio4x3": true,
+      "allActiveScenesPng": true,
+      "allActiveScenesBitDepth8": true,
+      "allActiveScenesPngColorType2Truecolor": true,
+      "allActiveScenesRgb": true,
+      "allActiveScenesOpaque": true,
+      "allActiveScenesEmbeddedSrgb": true,
+      "allActiveScenesIccProfileBytes": 588,
+      "allActiveScenesMetadataOnlyIcc": true,
+      "contactSheet1800x780RgbOpaqueSrgb": true,
+      "hashesRecomputed": true,
+      "pathsExist": true,
+      "baseHashesRecomputed": true,
+      "candidateImagesContainSafeBoundsOrAnchorOverlays": false,
+      "contactSheetContainsQaOverlaysOnly": true
+    },
+    "notes": "All candidate scenes and the contact sheet have an embedded 588-byte 'sRGB built-in' profile. Scene PNG chunk types are IHDR, iCCP, IDAT, and IEND only."
+  },
+  "visualInspection": {
+    "decision": "pass-for-candidate-review",
+    "checkedAt": "2026-07-20",
+    "architecture": {
+      "decision": "pass-for-candidate-review",
+      "notes": "All scenes preserve the west-bank Bund, Huangpu, and Pudong relationship. The Oriental Pearl Tower, Shanghai World Financial Center opening, and Shanghai Tower profile are legible. Facade-by-facade and dimensional accuracy remain pending human architecture review."
+    },
+    "socialPlacement": {
+      "decision": "pass-for-candidate-review",
+      "notes": "Small incidental walkers remain on promenade surfaces, tiny generic cars remain on the road, and one generic ferry per scene remains on the river. No cyclist is shown because promenade cycling was not established by the selected official source."
+    },
+    "nightReadability": {
+      "decision": "pass-for-candidate-review",
+      "notes": "The route, floodwall, paving, skyline, and ferry remain legible in low-saturation blue-gray washes with restrained warm static lights and no observed neon-dominant spectacle."
+    },
+    "shelterBelievability": {
+      "decision": "pass-for-candidate-review",
+      "notes": "The rest scene is clearly indoors, dry, warm, and river-facing. Its deep uninterrupted upholstered bench is large enough for a sleeping Portrait, while the Huangpu and Pudong remain recognizable outside."
+    },
+    "forbiddenContent": {
+      "decision": "pass",
+      "notes": "No player cat, substitute cat, other cat, animal, readable sign, pseudo-text, plate, advertisement, corporate livery, logo, date, postmark, watermark, UI, border, frame, or QA overlay was observed in any candidate scene."
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "china-shanghai-the-bund--day-signature",
+      "revisionId": "china-shanghai-the-bund--day-signature--v02",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "day-signature",
+      "version": "v02",
+      "action": "supersede-active-revision",
+      "supersedes": "china-shanghai-the-bund--day-signature--v01",
+      "name": "上海外滩 · 日间标志景",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "0556bf41805f6ae3234810391f9209d25d77e279c702ca56cd80ddbd21eecaf0",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.17,
+        "y": 0.94,
+        "scale": 0.22,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.7,
+        "width": 0.25,
+        "height": 0.27
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "overlapsVehicleOrVessel": false,
+        "groundedPlacement": true,
+        "notes": "The walking anchor lands on the broad lower-left paved promenade below the small mid-distance walkers."
+      },
+      "policy": {
+        "people": {
+          "presentation": "small incidental promenade walkers",
+          "countEstimate": "7-9",
+          "facesIdentifiable": false,
+          "outsideSafeBounds": true,
+          "secondaryToLandmark": true
+        },
+        "vehicles": {
+          "genericCarsOnMotorRoadOnly": true,
+          "countEstimate": "2-4",
+          "readablePlatesOrMarks": false,
+          "outsideSafeBounds": true
+        },
+        "ferry": {
+          "count": 1,
+          "surface": "Huangpu River",
+          "genericAndUnbranded": true,
+          "readableRouteText": false
+        },
+        "cyclistPresent": false,
+        "animalsPresent": false,
+        "forbiddenContentObserved": []
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "day-signature-v02",
+        "requestedAspectRatio": "4:3",
+        "sourceGeneratedAssetSha256": "0aeb918fc54592d4409132ce4e4bad69da19aca09656607a682daeee603bfeb9",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 160,
+          "top": 0,
+          "rightExclusive": 1524,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "researchSourceIds": [
+          "shanghai-bund-waterfront-design",
+          "shanghai-ferry-dongjin-dongfu"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "architecture": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Historic facades, separate road and promenade, Huangpu, and the principal Pudong silhouettes remain legible."
+        },
+        "socialPlacement": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Walkers occupy the promenade, cars occupy the road, and the ferry occupies the river; the scene feels active but calm."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "No cat, animal, readable text, plate, ad, livery, logo, watermark, UI, frame, or QA overlay observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": "Pending human art-direction, architecture, social-context, rights, and final candidate approval."
+      }
+    },
+    {
+      "id": "china-shanghai-the-bund--night-transit",
+      "revisionId": "china-shanghai-the-bund--night-transit--v01",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "night-transit",
+      "version": "v01",
+      "action": "add-active-variant",
+      "name": "上海外滩 · 夜间行旅",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--night-transit--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "3b72aa70405fddb1b1a62637a38d9bcf59f26eeb2943976fa7d64dce156bd992",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.17,
+        "y": 0.94,
+        "scale": 0.21,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.72,
+        "width": 0.26,
+        "height": 0.25
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "overlapsVehicleOrVessel": false,
+        "groundedPlacement": true,
+        "notes": "The walking anchor lands on the lit lower-left promenade below the sparse evening walkers."
+      },
+      "policy": {
+        "people": {
+          "presentation": "small incidental evening walkers",
+          "countEstimate": "6-8",
+          "facesIdentifiable": false,
+          "outsideSafeBounds": true,
+          "secondaryToLandmark": true
+        },
+        "vehicles": {
+          "genericCarsOnMotorRoadOnly": true,
+          "countEstimate": "2-3",
+          "readablePlatesOrMarks": false,
+          "outsideSafeBounds": true
+        },
+        "ferry": {
+          "count": 1,
+          "surface": "Huangpu River",
+          "genericAndUnbranded": true,
+          "readableRouteText": false
+        },
+        "night": {
+          "lowSaturationBlueGray": true,
+          "restrainedWarmLamps": true,
+          "routeLegible": true,
+          "groundPlaneLegible": true,
+          "landmarkSilhouetteLegible": true,
+          "neonDominant": false,
+          "crushedShadows": false,
+          "blownHighlights": false,
+          "dynamicMediaOrLaserEffects": false
+        },
+        "animalsPresent": false,
+        "forbiddenContentObserved": []
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "night-transit-v01",
+        "requestedAspectRatio": "4:3",
+        "sourceGeneratedAssetSha256": "b0ad874b420202b28f3d8e2f3ccfda996733535c2bb66f982c1c4320f361cd10",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 160,
+          "top": 0,
+          "rightExclusive": 1524,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "researchSourceIds": [
+          "shanghai-bund-waterfront-design",
+          "shanghai-ferry-dongjin-dongfu",
+          "shanghai-landscape-lighting-plan"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "architecture": {
+          "decision": "pass-for-candidate-review",
+          "notes": "The historic west-bank facades, river, and principal Pudong silhouettes remain readable after dark."
+        },
+        "socialPlacement": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Evening walkers, cars, and ferry remain on their correct surfaces and outside the Portrait slot."
+        },
+        "nightReadability": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Warm static lights clarify a continuous route without neon dominance or crushed shadows."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "No cat, animal, readable text, plate, ad, livery, logo, watermark, UI, frame, or QA overlay observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": "Pending human art-direction, architecture, social-context, rights, and final candidate approval."
+      }
+    },
+    {
+      "id": "china-shanghai-the-bund--sheltered-rest",
+      "revisionId": "china-shanghai-the-bund--sheltered-rest--v01",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "action": "add-active-variant",
+      "name": "上海外滩 · 临江安歇",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--sheltered-rest--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "fa34e63f3cf3b17ddec16652f623ea13a30e10407e22ec9c880da220e4be5194",
+      "hasCompanion": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.31,
+        "y": 0.89,
+        "scale": 0.22,
+        "pose": "sleep",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.07,
+        "y": 0.67,
+        "width": 0.48,
+        "height": 0.24
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "overlapsVehicleOrVessel": false,
+        "groundedPlacement": true,
+        "sleepSurfaceCredible": true,
+        "notes": "The sleeping anchor lands on a broad, deep, dry, uninterrupted upholstered window bench."
+      },
+      "policy": {
+        "people": {
+          "presentation": "minute exterior promenade walkers only",
+          "countEstimate": "several",
+          "peopleIndoors": false,
+          "facesIdentifiable": false,
+          "outsideSafeBounds": true,
+          "secondaryToLandmark": true
+        },
+        "ferry": {
+          "count": 1,
+          "surface": "Huangpu River",
+          "genericAndUnbranded": true,
+          "readableRouteText": false
+        },
+        "shelter": {
+          "type": "generic historic Bund hotel lounge window alcove",
+          "dry": true,
+          "warm": true,
+          "protected": true,
+          "destinationVisibleOutside": true,
+          "sleepSurface": "deep upholstered window bench",
+          "sleepSlotCleanAndUninterrupted": true,
+          "namedVenueInteriorCopied": false,
+          "logoOrLuxuryProductPlacement": false,
+          "privateResidenceIdentity": false
+        },
+        "animalsPresent": false,
+        "forbiddenContentObserved": []
+      },
+      "provenance": {
+        "generatedAt": "2026-07-20",
+        "tool": "Cursor GenerateImage",
+        "model": null,
+        "seed": null,
+        "promptId": "sheltered-rest-v01",
+        "requestedAspectRatio": "4:3",
+        "sourceGeneratedAssetSha256": "6036b79aed6f548a1b0021c6e9a5131d82f05b15da247b1f491db5f891efcadb",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "researchSourceIds": [
+          "shanghai-bund-waterfront-design",
+          "shanghai-ferry-dongjin-dongfu",
+          "fairmont-peace-hotel-venue"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200x900, 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "architecture": {
+          "decision": "pass-for-candidate-review",
+          "notes": "The west-bank indoor viewpoint, Huangpu, and principal Pudong silhouettes are spatially legible."
+        },
+        "socialPlacement": {
+          "decision": "pass-for-candidate-review",
+          "notes": "No person is indoors; minute exterior walkers remain on the promenade and the ferry remains on the river."
+        },
+        "shelterBelievability": {
+          "decision": "pass-for-candidate-review",
+          "notes": "The lounge is enclosed, dry, warm, unbranded, and contains a deep clean sleeping surface with destination recognition outside."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "No cat, animal, pet-bed branding, readable text, menu, room number, logo, luxury-product placement, watermark, UI, frame, or QA overlay observed."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": "Pending human art-direction, architecture, shelter plausibility, social-context, rights, and final candidate approval."
+      }
+    }
+  ],
+  "supersededBaseRevisions": [
+    {
+      "id": "china-shanghai-the-bund--day-signature--v01",
+      "status": "previously-approved-base-revision-superseded-by-candidate",
+      "path": "docs/art/candidates/landmarks/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v01.png",
+      "sha256": "d2aa5e3d4d16df998a8a393b1c8bdbf6fc395e2f82487b7b0d8fae428b8dffdd",
+      "retained": true,
+      "modified": false,
+      "rejected": false
+    }
+  ],
+  "rejectedRevisions": [],
+  "pendingApprovals": [
+    "human art direction and locked-B style fit",
+    "Bund architecture and geographic specificity",
+    "social placement and contemporary cultural-context review",
+    "night route readability",
+    "shelter plausibility and genericization",
+    "rights review for intended territories and use",
+    "final candidate selection and promotion",
+    "Portrait composite review after the user-photo hard gate"
+  ],
+  "approval": {
+    "inferred": false,
+    "promoted": false,
+    "shippingEligible": false
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "reportKind": "landmark-enrichment-v4-destination-qa",
+  "destinationId": "singapore-singapore-merlion",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "generatedAt": "2026-07-20",
+  "overallStatus": "pass",
+  "shippingEligible": false,
+  "machineChecks": [
+    {
+      "id": "required-candidate-count",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "id": "required-variant-revisions",
+      "status": "pass",
+      "expected": [
+        "day-signature--v02",
+        "night-transit--v01",
+        "sheltered-rest--v01"
+      ],
+      "actual": [
+        "day-signature--v02",
+        "night-transit--v01",
+        "sheltered-rest--v01"
+      ]
+    },
+    {
+      "id": "png-dimensions-color-and-alpha",
+      "status": "pass",
+      "expected": "1200x900, PNG, 8-bit, opaque RGB, sRGB",
+      "actual": "all three candidates: 1200x900, PNG, uchar/8-bit, 3-channel RGB, hasAlpha=false, embedded sRGB ICC"
+    },
+    {
+      "id": "normalization",
+      "status": "pass",
+      "expected": "exact 4:3 crop without distortion plus Lanczos",
+      "actual": "1536x1024 source -> 1364x1023 exact 4:3 crop at left=86, top=0 -> 1200x900 with sharp Lanczos3"
+    },
+    {
+      "id": "contact-sheet",
+      "status": "pass",
+      "expected": "opaque PNG with overlays confined to QA sheet",
+      "actual": "1800x590 opaque RGB sRGB PNG"
+    },
+    {
+      "id": "rejected-revisions-retained",
+      "status": "pass",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "id": "restricted-source-photos-retained",
+      "status": "pass",
+      "expected": false,
+      "actual": false
+    }
+  ],
+  "visualChecks": [
+    {
+      "candidateId": "singapore-singapore-merlion--day-signature--v02",
+      "status": "pass",
+      "checks": {
+        "lockedBStyleContinuity": "pass",
+        "merlionProfileWaterJetAndSkylineDominant": "pass",
+        "smallVisitorsAndWalkers": "pass",
+        "exactlyOneGenericUnmarkedBoat": "pass",
+        "walkSlotClearAndGrounded": "pass",
+        "socialContentOutsideSafeBounds": "pass",
+        "noAnimalsTextLogosOrQaMarks": "pass"
+      },
+      "note": "Sparse right-edge walkers remain incidental and non-identifiable; the open center foreground provides the walk slot."
+    },
+    {
+      "candidateId": "singapore-singapore-merlion--night-transit--v01",
+      "status": "pass",
+      "checks": {
+        "lockedBStyleContinuity": "pass",
+        "humidBlueHourReadability": "pass",
+        "restrainedSkylineAndPromenadeLights": "pass",
+        "sparseWalkersAndGenericBoat": "pass",
+        "walkSlotClearAndGrounded": "pass",
+        "socialContentOutsideSafeBounds": "pass",
+        "noNeonSpectacleAnimalsTextLogosOrQaMarks": "pass"
+      },
+      "note": "The route and jet remain legible without crushed shadows or dominant neon."
+    },
+    {
+      "candidateId": "singapore-singapore-merlion--sheltered-rest--v01",
+      "status": "pass",
+      "checks": {
+        "lockedBStyleContinuity": "pass",
+        "credibleCoveredWaterfrontContext": "pass",
+        "merlionAndBayVisible": "pass",
+        "coolDrySleepableBenchArea": "pass",
+        "sparseDistantActivity": "pass",
+        "sleepSlotClearAndGrounded": "pass",
+        "socialContentOutsideSafeBounds": "pass",
+        "noAnimalsTextLogosOrQaMarks": "pass"
+      },
+      "note": "The unbranded built-in cushion reads as a protected café/arcade rest surface, not a named venue or private residence."
+    }
+  ],
+  "hashes": {
+    "scene--singapore-singapore-merlion--day-signature--v02.png": "5a575cb50f969bdde2d6d0154967acd0bf06fc4c4c0952862b3a92100b4d5ca4",
+    "scene--singapore-singapore-merlion--night-transit--v01.png": "7cb4a350a7e0fc99e6945f7b544923a1e4a27be7f07048020dd9fba1e438d967",
+    "scene--singapore-singapore-merlion--sheltered-rest--v01.png": "e8e80a610c9eb909f70c3dccc8d2258e28636562b57ca01c335feb3421d41361",
+    "contact-sheet--singapore-singapore-merlion--enrichment-v4--non-final.png": "e1cd781ddcc930822c1421134e2fe16086b7cb40a2126b66510d5664316284c6"
+  },
+  "pendingHumanChecks": [
+    {
+      "id": "human-visual-and-social-context-review",
+      "status": "pending"
+    },
+    {
+      "id": "final-real-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "merlion-symbol-and-artwork-rights-review",
+      "status": "blocked"
+    },
+    {
+      "id": "shipping-approval",
+      "status": "blocked"
+    }
+  ],
+  "errors": []
+}

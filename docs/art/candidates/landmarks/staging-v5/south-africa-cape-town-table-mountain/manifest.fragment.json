@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 5,
+  "manifestKind": "landmark-staging-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "destinationId": "south-africa-cape-town-table-mountain",
+  "destinationName": "开普敦桌山",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseV4": {
+    "combinedManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "byteLength": 427223,
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "destinationFragment": {
+      "path": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/manifest.fragment.json",
+      "byteLength": 19219,
+      "sha256": "67bf9a6b9301ec54c15e13736866410fa1d8f5c290f4df4e974145fffa7905fd"
+    },
+    "visualReferenceResearch": {
+      "path": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/visual-reference-research.md",
+      "byteLength": 18337,
+      "sha256": "296633bcc536feea45a9a714366e06318744a11c68f5cff722b0643aa3ded59a"
+    },
+    "activeSceneVariantIds": [
+      "south-africa-cape-town-table-mountain--day-signature--v01",
+      "south-africa-cape-town-table-mountain--golden-hour--v01",
+      "south-africa-cape-town-table-mountain--companion-rare--v01"
+    ],
+    "continuityReferences": [
+      {
+        "id": "south-africa-cape-town-table-mountain--day-signature--v01",
+        "path": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/scene--south-africa-cape-town-table-mountain--day-signature--v01.png",
+        "byteLength": 1661504,
+        "sha256": "206475de12d4a490739f09bb5d1c312d31bfc33edd7c9fcaf9172b6cec9e48c3",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      },
+      {
+        "id": "south-africa-cape-town-table-mountain--golden-hour--v01",
+        "path": "docs/art/candidates/landmarks/south-africa-cape-town-table-mountain/scene--south-africa-cape-town-table-mountain--golden-hour--v01.png",
+        "byteLength": 1743976,
+        "sha256": "8faee340b3bf3e3789e850a8daf25e571266c8388bbe219b480ac6a540ab35df",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "candidateSceneCatFree": true,
+    "portraitPreviewQaOnly": true,
+    "shippingEligible": false
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center of the full Portrait canvas",
+    "scaleMeaning": "rendered Portrait canvas height / scene height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 1,
+    "generateImageRequestCount": 2,
+    "successfulImageArtifactCount": 2,
+    "selectedCandidateCount": 1,
+    "rejectedImageArtifactCount": 1,
+    "retainedRejectedRevisionCount": 1,
+    "variants": [
+      "distant-overlook--v01"
+    ]
+  },
+  "addition": {
+    "action": "add-active-variant",
+    "newVariantId": "south-africa-cape-town-table-mountain--distant-overlook--v01",
+    "supersedes": null,
+    "baseV4VariantDeletedOrEdited": false
+  },
+  "referencePolicy": {
+    "styleReferences": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/style-ref-poses.png",
+        "byteLength": 2404407,
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+      }
+    ],
+    "styleReferenceUse": "style-only; cats, animals, text, postmarks, borders, layout, and UI in the references were excluded",
+    "landmarkContinuityReferenceUse": "palette, terrain identity, and locked project continuity only; a wholly new summit-outlook composition was generated",
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false,
+    "minhoPortraitUsedAsGenerationReference": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "path": "staging-context-research.md",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/staging-context-research.md",
+      "byteLength": 4946,
+      "sha256": "4771b85b7e8b4a2a376699316a7dc9c4944ffdc5c187fd9002a85653fad2724e",
+      "officialSourceCount": 6,
+      "method": "official text-only summit access, safety, circulation, and rights research; no source photo, map image, or page asset retained"
+    },
+    "sceneContactSheet": {
+      "imageSrc": "scene-contact-sheet--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/scene-contact-sheet--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+      "status": "non-final",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 1600,
+        "height": 700
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 1571080,
+      "sha256": "ac22cea6f9a8ef48389f10b2244d519470abc0851ca87eb4cc1ab8b0eb2cd11d",
+      "qaOverlays": [
+        "safeBounds",
+        "compositionSlot.bottom-center-anchor"
+      ],
+      "includesPortraitPlacementPreviewPanel": true,
+      "candidateImageContainsQaOverlays": false
+    },
+    "portraitPlacementPreview": {
+      "imageSrc": "portrait-placement-preview--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/portrait-placement-preview--south-africa-cape-town-table-mountain--staging-v5--non-final.png",
+      "status": "non-final-qa-only",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 1200,
+        "height": 1000
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 1870389,
+      "sha256": "97164c86645d75b7bd98c662bcae5ca25da425d166621d91bdee174017655dc2",
+      "approvedPortraitSource": {
+        "archivePath": "docs/art/archive/asset-archive.v2.json",
+        "archiveByteLength": 100636,
+        "archiveSha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3",
+        "manifestPath": "docs/art/production/portraits/minho/manifest.json",
+        "manifestByteLength": 3121,
+        "manifestSha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+      },
+      "portraitPose": {
+        "id": "minho--gaze--v01",
+        "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+        "byteLength": 735117,
+        "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+        "alphaBoundsPx": {
+          "x": 256,
+          "y": 64,
+          "width": 512,
+          "height": 896,
+          "bottomTransparentMargin": 64
+        }
+      },
+      "rendering": "Exact normalized anchor and scale were applied to the full 1024x1024 Portrait canvas at 2x scene resolution, then Lanczos-downsampled.",
+      "sceneCandidateRemainsCatFree": true
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "south-africa-cape-town-table-mountain--distant-overlook--v01",
+      "destinationId": "south-africa-cape-town-table-mountain",
+      "variantId": "distant-overlook",
+      "version": "v01",
+      "name": "开普敦桌山 · 远眺 v01",
+      "action": "add-active-variant",
+      "supersedes": null,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--south-africa-cape-town-table-mountain--distant-overlook--v01.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/scene--south-africa-cape-town-table-mountain--distant-overlook--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "byteLength": 588,
+          "sha256": "c88c08a325579febc39e81d6615b88e08d7d65d8a473ed23c5991eae17317ab6"
+        }
+      },
+      "byteLength": 1875661,
+      "sha256": "c32580c005231bc5c5c93dfda9b8c96a8a08e307399bd40b199fe193af567fc6",
+      "hasCompanion": false,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.3,
+        "y": 0.72,
+        "scale": 0.07,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.265,
+        "y": 0.64,
+        "width": 0.07,
+        "height": 0.09
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "narrativeWeight": "cameo",
+        "depthBand": "distant summit-loop lookout",
+        "targetScale": 0.07,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "stable, maintained stone summit-loop path on broad plateau ground",
+        "accessPlausibility": "official SANParks and Cableway text supports an accessible summit walkway and wheelchair-accessible Upper Station loop; the generated route is generalized and not a surveyed exact coordinate",
+        "poseFit": "gaze pose faces frame-right over Lion's Head, Cape Town, Table Bay, ocean, and layered coastal relief",
+        "clearSilhouette": "the tiny silver Portrait stays locally readable against ordinary ochre path tones without a spotlight, outline, halo, empty box, or artificial clearing",
+        "setback": "the Perch is surrounded by broad plateau ground and fynbos, with no cliff lip or nearby drop visible",
+        "forbiddenSupportChecks": {
+          "cliffLip": false,
+          "isolatedBoulder": false,
+          "protectedVegetation": false,
+          "stairs": false,
+          "railOrParapetCap": false,
+          "trafficSurface": false,
+          "roof": false,
+          "floatingGap": false
+        },
+        "fullCanvasBounds": {
+          "x": 0.27375,
+          "y": 0.65,
+          "width": 0.0525,
+          "height": 0.07
+        },
+        "visibleAlphaBounds": {
+          "x": 0.286875,
+          "y": 0.654375,
+          "width": 0.02625,
+          "height": 0.06125
+        },
+        "visibleOpaqueBaseY": 0.715625,
+        "fullSilhouetteInsideImage": true,
+        "requiresForegroundOcclusion": false,
+        "overlapsPersonObjectRailPostRockVegetationStairOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": false,
+          "countEstimate": 0,
+          "reason": "The landscape and placement support remain the inspection subjects; no arranged visitor figures were added."
+        },
+        "vehicles": {
+          "present": false,
+          "countEstimate": 0
+        },
+        "distantWatercraft": {
+          "present": true,
+          "presentation": "tiny generic marks at unequal positions and depths on Table Bay",
+          "identifiableLiveryLogosPlatesOrText": false,
+          "irregularIntervals": true,
+          "outsidePerchSafeBounds": true
+        },
+        "animals": {
+          "present": false,
+          "countEstimate": 0
+        },
+        "qaEvidence": {
+          "arrangedPeopleAbsent": true,
+          "equalSpacingAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "edgeLineupAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "landscapeEvidence": {
+        "cameraLocationIntent": "actual Table Mountain summit plateau looking outward, not a full-massif view from another hill",
+        "plateauGroundDominant": true,
+        "maintainedSummitRouteVisible": true,
+        "lionsHeadAndSignalHillReadable": true,
+        "capeTownAndTableBayLayeringReadable": true,
+        "landscapeRemainsSubjectAfterPreviewComposite": true,
+        "catNarrativeWeight": "tiny cameo"
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-staging-v5-2026-07-20",
+          "sourcePlan": "docs/art/landmark-staging-v5.json",
+          "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+          "promptJobId": "table-mountain-staging-v5-distant-overlook-v01",
+          "variantBrief": "Wide summit plateau and layered Cape landscape with a tiny gaze Perch on maintained accessible-looking ground safely set back from any drop.",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 2,
+            "successfulImageArtifactCount": 2,
+            "selectedImageArtifactCount": 1,
+            "rejectedImageArtifactCount": 1,
+            "note": "The first result was retained as r01 after failing the actual-summit viewpoint and natural-Perch requirements; the second passed normalized inspection."
+          },
+          "sourceArtifact": {
+            "filename": "scene--south-africa-cape-town-table-mountain--distant-overlook--v01-final.png",
+            "storage": "tool-managed-outside-repository",
+            "retainedInRepository": false,
+            "byteLength": 3096342,
+            "sha256": "ec7b3b2251ec95fb207661e3acd856d0dbcbae1c1c3f521e031646c1fa4fda41",
+            "dimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "format": "png",
+            "mode": "RGB",
+            "alpha": "opaque",
+            "embeddedIccProfile": false
+          },
+          "styleIntensity": "B",
+          "referenceUse": "three locked style files supplied style only; active Table Mountain day and golden-hour scenes supplied palette, terrain identity, and style continuity only; no Portrait was supplied",
+          "normalization": {
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "processor": "Pillow 12.3.0",
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profileSha256": "c88c08a325579febc39e81d6615b88e08d7d65d8a473ed23c5991eae17317ab6"
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "result": "pass-pending-formal-review",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "actualSummitOutlookReadability": "pass",
+            "plateauLandscapeDominance": "pass",
+            "maintainedRouteContinuity": "pass",
+            "safeSetbackFromDrop": "pass",
+            "stableAccessibleLookingPerch": "pass",
+            "noPlayerCatPersonOrAnimal": "pass",
+            "noReadableTextPseudoTextSignLogoOrMark": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pathAndFilename": "pass",
+            "pngSignature": "pass",
+            "dimensions1200x900": "pass",
+            "bitDepth8": "pass",
+            "opaqueRgbColorType": "pass",
+            "embeddedSrgbProfile": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The camera reads from the summit plateau over Lion's Head, Cape Town, Table Bay, and distant relief. The maintained path is broad, connected, and separated from any drop by ordinary plateau ground."
+        },
+        "portraitPreviewInspection": {
+          "performed": true,
+          "result": "pass-pending-formal-review",
+          "actualApprovedPoseUsed": true,
+          "feetOrBodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personObjectRailPostRockVegetationStairOrHardShadowOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "localContrastWithoutSpotlight": true,
+          "landscapeRemainsSubject": true,
+          "notes": "At scale 0.07 the visible body base meets the maintained path at y=0.715625. Minho remains a tiny cameo with clear support and no cliff-lip implication."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "environmentalAndParkContextReview": "pending",
+        "provenanceReferenceRightsReview": "pending",
+        "finalArtworkRightsReview": "pending",
+        "finalPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    }
+  ],
+  "rejectedRevisions": {
+    "count": 1,
+    "artifacts": [
+      {
+        "variantId": "distant-overlook",
+        "candidateVersion": "v01",
+        "revision": "r01",
+        "imageSrc": "rejected--scene--south-africa-cape-town-table-mountain--distant-overlook--v01--r01.png",
+        "repoPath": "docs/art/candidates/landmarks/staging-v5/south-africa-cape-town-table-mountain/rejected--scene--south-africa-cape-town-table-mountain--distant-overlook--v01--r01.png",
+        "byteLength": 1927024,
+        "sha256": "989eb7ed5629d8e9a73d303972435d61b869448e52ca81d125d63e957db56913",
+        "sourceArtifactSha256": "e28bc0be95342ca45aaa99b2c0ab79cf8ef114a8d600a0d88e59545d51b0ab35",
+        "sourceArtifactByteLength": 3092680,
+        "reason": "The first result showed the full Table Mountain massif from a different hillside and introduced a conspicuous circular clearing; it did not read as an actual summit-plateau route or a naturally integrated Perch."
+      }
+    ],
+    "retention": "The normalized rejected revision remains in the destination directory and is excluded from selected candidate counts."
+  },
+  "inspection": {
+    "performed": true,
+    "normalizedCandidateCount": 1,
+    "retainedRejectedRevisionCount": 1,
+    "visualInspectionCount": 2,
+    "portraitPreviewInspectionCount": 1,
+    "hardFailureCount": 0,
+    "hardConstraintViolations": [],
+    "machineChecksPassed": true,
+    "checks": {
+      "writesConfinedToDestinationDirectory": "pass",
+      "pathsAndFilenames": "pass",
+      "exactSelectedCandidateCount": "pass",
+      "rejectedRevisionPreserved": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "exactAspectRatio4x3": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgb": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithExactCropAndLanczosWithoutDistortion": "pass",
+      "candidateSceneCatFree": "pass",
+      "qaOverlaysAbsentFromCandidate": "pass",
+      "contactAndPreviewSheetsOpaque": "pass",
+      "allFormalReviewsPending": "pass"
+    },
+    "result": "pass-pending-formal-review"
+  },
+  "rights": {
+    "researchUse": "official text facts only",
+    "officialSourcePhotoMapOrGraphicPixelsUsed": false,
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "shippingWarnings": [
+      "The selected candidate, rejected revision, contact sheet, and Portrait preview are non-shipping pending human visual, access/placement, environmental/park context, provenance/reference-rights, final artwork-rights, and final Portrait-composite review.",
+      "SANParks states that commercial filming and stills shoots require a permit and impact review; whether and how this applies to generated commercial game art requires formal rights review.",
+      "SANParks and Cableway website photographs, maps, graphics, logos, page layouts, and text are not licensed into this candidate and were not retained; only URLs and paraphrased factual cues were used.",
+      "Existing Table Mountain scenes were continuity references only; their pixels were not edited, collaged, traced, or copied.",
+      "The generated summit path is a generalized original interpretation, not a survey or claim that every depicted coordinate is visitor-accessible.",
+      "Minho appears only in the non-final QA preview; the selected scene candidate remains Cat-free."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v5-human-visual-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-access-and-placement-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-environmental-and-park-context-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-provenance-reference-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-artwork-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-shipping-approval",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "accessAndPlacementReview": "pending",
+    "environmentalAndParkContextReview": "pending",
+    "rightsReview": "pending",
+    "finalPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

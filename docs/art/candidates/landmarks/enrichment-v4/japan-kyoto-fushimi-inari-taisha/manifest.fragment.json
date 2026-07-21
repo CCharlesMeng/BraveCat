@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-enrichment-candidate-fragment",
+  "planId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+  "destinationId": "japan-kyoto-fushimi-inari-taisha",
+  "destinationName": "京都伏见稻荷",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "baseLinkage": {
+    "baseCandidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+    "baseCandidateManifestSha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c",
+    "baseDestinationFragment": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/manifest.fragment.json",
+    "baseDestinationFragmentSha256": "c34445c06c78e1d9bc798d9122b7d7db5119f25aef4ab456fd3a324a68e6bc82",
+    "sharedFilesModified": false,
+    "supersession": {
+      "action": "supersede-active-revision",
+      "candidateRevisionId": "japan-kyoto-fushimi-inari-taisha--day-signature--v02",
+      "supersedesRevisionId": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "supersededImageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "supersededImageSha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "supersededRevisionRetained": true,
+      "selectionState": "candidate-supersession-proposal",
+      "note": "The v01 file remains untouched in the base v3 destination directory. No shared manifest or approved asset was edited."
+    }
+  },
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "styleDirection": {
+    "styleIntensity": "B",
+    "status": "locked",
+    "retainedCues": [
+      "thin warm gray-brown linework",
+      "translucent low-saturation sage, ochre, faded vermilion, and blue-gray watercolor",
+      "subtle warm-ivory paper grain",
+      "restrained watercolor bleed and contrast",
+      "quiet nostalgic atmosphere",
+      "clear landmark hierarchy"
+    ],
+    "excludedReferenceContent": [
+      "all cats and other animals",
+      "text, pseudo-text, stamps, signs, plaques, and inscriptions",
+      "postcard borders, UI, guides, and QA marks",
+      "rooms, props, icons, and layouts from the style references"
+    ],
+    "styleReferences": [
+      {
+        "src": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+        "use": "style-only"
+      },
+      {
+        "src": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+        "use": "style-only"
+      },
+      {
+        "src": "docs/art/style-ref-poses.png",
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110",
+        "use": "style-only; all depicted cats and labels explicitly excluded"
+      }
+    ],
+    "approvedSceneContinuityReferences": [
+      {
+        "src": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+        "sha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+        "use": "architectural, palette, and landmark continuity only"
+      },
+      {
+        "src": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.png",
+        "sha256": "5bca6c24875d1e0e29604b63c593fa3f46daa3613bfc0a98705e8af240cdb4ee",
+        "use": "architectural, palette, and landmark continuity only"
+      },
+      {
+        "src": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.png",
+        "sha256": "483e37f25491404a5f071337c1f35db4547e13d38d5711f308afdad8fe130ec3",
+        "use": "architectural, palette, and landmark continuity only; the bird was explicitly excluded"
+      }
+    ]
+  },
+  "provenance": {
+    "generator": "functions.GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "referenceUse": {
+      "styleReferences": "locked-B watercolor cues only",
+      "approvedScenes": "continuity references only",
+      "officialResearch": "factual cultural, circulation, early-evening, and public-rest context only",
+      "sourcePhotoPixelsUsed": false
+    },
+    "sourceGeneratedAssets": [
+      {
+        "promptId": "day-signature-v02",
+        "toolManagedFilename": "scene--japan-kyoto-fushimi-inari-taisha--day-signature--v02.png",
+        "sha256": "cb10d197c9ff276b0f1dbfce4def9410cc2b4af966c782bf223cf313e4536ab9",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "night-transit-v01",
+        "toolManagedFilename": "scene--japan-kyoto-fushimi-inari-taisha--night-transit--v01.png",
+        "sha256": "b50c5bce61b14fdd9485b45c2e3973069ab1289bde83343fc99e6c3b3fa309bc",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      },
+      {
+        "promptId": "sheltered-rest-v01",
+        "toolManagedFilename": "scene--japan-kyoto-fushimi-inari-taisha--sheltered-rest--v01.png",
+        "sha256": "c921181759024fe18b1bc29d2eb221723fa3369c148785a47b6d9534a280b230",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      }
+    ],
+    "generationAttempts": {
+      "successfulAssetCount": 3,
+      "failedGeneratedRevisionCount": 0,
+      "transientToolErrorsWithoutArtifacts": [
+        {
+          "promptId": "night-transit-v01",
+          "count": 2,
+          "error": "HTTP 429",
+          "revisionAssetProduced": false
+        },
+        {
+          "promptId": "sheltered-rest-v01",
+          "count": 2,
+          "error": "HTTP 429",
+          "revisionAssetProduced": false
+        }
+      ],
+      "note": "Transient requests emitted no image and therefore created no failed revision file to retain. The successful generated sources are recorded above; the superseded base day v01 remains retained."
+    },
+    "normalization": {
+      "tool": "Pillow 12.3.0",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "exactAspectCropDimensions": {
+        "width": 1364,
+        "height": 1023,
+        "aspectRatio": "4:3"
+      },
+      "perVariantCropPixels": {
+        "day-signature-v02": {
+          "left": 172,
+          "top": 0,
+          "rightExclusive": 1536,
+          "bottomExclusive": 1023,
+          "framing": "right-weighted crop preserves the full torii rhythm and the lower-left legal walk slot"
+        },
+        "night-transit-v01": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023,
+          "framing": "center crop preserves lamps, steps, torii, and the lower-right legal walk route"
+        },
+        "sheltered-rest-v01": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023,
+          "framing": "center crop preserves the wooden bench and torii view through the veranda"
+        }
+      },
+      "resize": {
+        "method": "Pillow Image.Resampling.LANCZOS",
+        "width": 1200,
+        "height": 900
+      },
+      "distortion": false,
+      "inputColorInterpretation": "untagged generator RGB treated as sRGB",
+      "outputProfile": "embedded sRGB built-in ICC profile, 588 bytes",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh PNG export retaining only the embedded ICC profile"
+    }
+  },
+  "socialContextResearch": {
+    "src": "social-context-research.md",
+    "sha256": "11ee0de7c2062b6d82fe764c957449c0dc9d260a69cc2b887c4143bea0a3d7e6",
+    "researchDate": "2026-07-20",
+    "sourceCount": 4,
+    "primaryOrOfficialSourcesOnly": true,
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourceImagesRetained": false,
+    "sources": [
+      {
+        "id": "fushimi-inari-visitor-request",
+        "sourceOwner": "Fushimi Inari Taisha",
+        "title": "Requests from Fushimi Inari Taisha",
+        "url": "https://inari.jp/en/request/",
+        "licenseOrTerms": "Official shrine page; no open media license assumed. Facts were paraphrased and no visual asset was retained.",
+        "use": "sacred-area status, restricted interiors, open circulation, rest-area, lantern, animal, and commercial-photography cautions",
+        "assetRetained": false
+      },
+      {
+        "id": "fushimi-inari-teichoan",
+        "sourceOwner": "Fushimi Inari Taisha",
+        "title": "Teichoan",
+        "url": "https://inari.jp/en/map/spot_19/",
+        "licenseOrTerms": "Official shrine page; no open media license assumed. Facts were paraphrased and no visual asset was retained.",
+        "use": "public rest area with café and terrace as evidence for a generalized public-facing shelter context",
+        "assetRetained": false
+      },
+      {
+        "id": "kyoto-travel-fushimi-inari",
+        "sourceOwner": "Kyoto City Tourism Association",
+        "title": "Fushimi Inari Taisha Shrine",
+        "url": "https://kyoto.travel/en/destinations/fushimi-inaritaisha-shrine/",
+        "licenseOrTerms": "Official tourism page; no open media license assumed. Facts were paraphrased and no visual asset was retained.",
+        "use": "torii hillside route and credible late-afternoon or early-evening pedestrian access",
+        "assetRetained": false
+      },
+      {
+        "id": "kyoto-travel-fushimi-access",
+        "sourceOwner": "Kyoto City Tourism Association",
+        "title": "Comfortable access to Fushimi (Fushimi Inari Taisha Shrine)",
+        "url": "https://kyoto.travel/en/getting-around/comfortable-access-to-fushimi-fushimi-inari-taisha-shrine/",
+        "licenseOrTerms": "Official tourism page; no open media license assumed. Facts were paraphrased and no visual asset was retained.",
+        "use": "pedestrian flows from JR Inari and Keihan Fushimi-inari stations and public approach commerce",
+        "assetRetained": false
+      }
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "sourcePhotoPixelsUsed": false,
+    "geometryOnlyUse": false,
+    "referenceUse": "official text facts plus internal approved-scene continuity; no external image retained",
+    "shippingGate": "destination-specific-rights-cultural-and-adaptation-review-required",
+    "warnings": [
+      "Official-source consultation does not license shrine or Kyoto Travel photographs, maps, page layouts, logos, text passages, donor inscriptions, or trade dress.",
+      "Fushimi Inari Taisha prohibits commercial photography without permission. That rule does not itself decide original-illustration rights, but commercial release still requires destination-specific legal and cultural review.",
+      "No shrine endorsement, permission, private-interior access, overnight use, or special lighting program is claimed.",
+      "Check accidental similarity, local site-use expectations, and any applicable trademark, unfair-competition, or cultural-property concerns before promotion."
+    ]
+  },
+  "culturalReview": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "warnings": [
+      "Treat the shrine as an active sacred place of worship, not a theme-park corridor or costume set.",
+      "Keep worshipper circulation open and do not stage people, a Portrait slot, or props on gates, lanterns, worship structures, or restricted areas.",
+      "Do not invent sacred motifs, rites, offerings, festival elements, or access to private or sacred interiors.",
+      "Keep torii donor inscriptions blank and omit readable or pseudo-text.",
+      "The sheltered sleep slot is compositional fiction and does not imply that sleeping at the shrine or Teichoan is permitted.",
+      "Animals and fox imagery are omitted rather than using sacred associations decoratively."
+    ]
+  },
+  "peoplePolicy": {
+    "allowed": true,
+    "faces": "small or mid-distance, non-identifiable, and not directed toward the viewer",
+    "behavior": "quiet walking only; no selfie staging, costume posing, blocked circulation, or crowd",
+    "safeBoundsRule": "all people and social detail remain outside each Portrait safeBounds",
+    "vehiclesPresent": false,
+    "animalsPresent": false
+  },
+  "nightContext": {
+    "variantId": "night-transit",
+    "time": "early night",
+    "officialSupport": "Kyoto Travel explicitly describes late-afternoon and early-evening walking on the torii route.",
+    "lighting": "restrained existing fixed-path lantern light with open blue-gray ambient shadows; no claim of a formal illumination program",
+    "travelerCount": 3,
+    "routeReadability": "pass-for-candidate-review",
+    "horrorTreatment": false,
+    "festivalLighting": false,
+    "neon": false
+  },
+  "shelterContext": {
+    "variantId": "sheltered-rest",
+    "type": "generic public-facing open-sided wooden rest pavilion or approach veranda",
+    "factualBasis": "Teichoan is officially described as a public rest area with a café and terrace; Kyoto Travel documents shops and restaurants on the station approach.",
+    "preciseBuildingLikenessClaimed": false,
+    "privateInteriorClaimed": false,
+    "sacredInteriorClaimed": false,
+    "overnightAccessClaimed": false,
+    "sleepPermissionClaimed": false,
+    "sleepSurface": "dry unmarked wooden bench"
+  },
+  "prompts": [
+    {
+      "id": "day-signature-v02",
+      "variantId": "day-signature",
+      "version": "v02",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 6,
+      "exactText": "Create an original empty postcard scene for Fushimi Inari Taisha in Kyoto, landscape 4:3 with no border. Match only the locked watercolor treatment of the three style references and the architectural/palette continuity of the three approved scene references: thin warm gray-brown linework, translucent low-saturation sage and ochre washes, faded vermilion, subtle warm-ivory paper grain, restrained contrast, gentle watercolor bleed, quiet nostalgic atmosphere, clear shapes. Ignore and do not reproduce any cats, animals, text, UI, frames, stamps, signs, plaques, or marks visible in references. Daytime signature view: a recognizable sequence of vermilion torii gates over a stone-paved pedestrian approach, accurate coherent perspective rhythm, surrounding restrained green hillside foliage, soft daylight. Show exactly four small respectful mid-distance adult visitors walking naturally along the approach, secondary to the gates, with indistinct non-identifiable faces and no posed selfies. No vehicles. Keep the torii surfaces blank and free of donor inscriptions. Reserve an unmarked, low-detail, unobstructed portion of the legal paved walking route in the lower-left foreground, approximately normalized x 0.03–0.33 and y 0.57–0.91, completely empty for later compositing of a walking character. All people and social detail must stay outside that area. Do not draw a box, guide, anchor, QA mark, or character there. Hard exclusions: no player cat, no other cat, no animals or birds, no fox statues, no readable text or pseudo-text, no inscriptions, logos, signage, watermark, caption, date, postmark, UI, safe-bound marks, festival decorations, sacred ritual invention, close-up faces, crowds, vehicles, photorealism, 3D, vector art, neon, thick black outlines, hard gradients, malformed gates. The output is the scene only."
+    },
+    {
+      "id": "night-transit-v01",
+      "variantId": "night-transit",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 6,
+      "exactText": "Create an original empty postcard scene for Fushimi Inari Taisha in Kyoto, landscape 4:3 with no border. Match only the locked watercolor treatment of the three style references and the architectural/palette continuity of the three approved scenes: thin warm gray-brown linework, translucent watercolor, faded vermilion, low-saturation blue-gray and sage, warm ivory paper grain, restrained contrast, gentle bleed, quiet nostalgic mood, crisp enough architectural readability. Ignore and do not reproduce any cats, animals, text, UI, frames, stamps, signs, plaques, or marks visible in references. Early-night transit view, not midnight: a calm recognizable torii path with shallow stone steps and a clear paved walking route. Preserve legible vermilion gate rhythm and coherent perspective under a low-saturation blue-gray sky. A few existing fixed path lanterns provide restrained small warm pools of light; no festival lighting, floating lanterns, neon, or theatrical glow. Show exactly three distant adult travelers moving quietly along the route, tiny and non-identifiable, with no posing. Keep shadows open and readable; atmosphere serene and safe, never horror, haunted, eerie, threatening, or cinematic noir. Reserve an unmarked, unobstructed, low-detail section of the legal paved route in the lower-right foreground, approximately normalized x 0.66–0.92 and y 0.59–0.92, completely empty for later compositing of a walking character. All people, lamps, and social detail must stay outside that area. Do not draw a box, guide, anchor, QA mark, or character there. Hard exclusions: no player cat, no other cat, no animals or birds, no fox statues, no readable text or pseudo-text, no torii inscriptions, logos, signage, watermark, caption, date, postmark, UI, safe-bound marks, graves, supernatural effects, fog-heavy horror, festival crowd, neon, blown highlights, crushed blacks, floating light orbs, close-up faces, vehicles, photorealism, 3D, vector art, thick black outlines, hard gradients, malformed gates. The output is the scene only."
+    },
+    {
+      "id": "sheltered-rest-v01",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 6,
+      "exactText": "Create an original empty postcard scene related to the public approach of Fushimi Inari Taisha in Kyoto, landscape 4:3 with no border. Match only the locked watercolor treatment of the three style references and the palette/landmark continuity of the three approved scene references: thin warm gray-brown linework, translucent low-saturation sage and ochre washes, faded vermilion, subtle warm-ivory paper grain, restrained contrast, gentle watercolor bleed, quiet nostalgic atmosphere, clear shapes. Ignore and do not reproduce any cats, animals, text, UI, frames, stamps, signs, plaques, or marks visible in references. Sheltered-rest view: a modest generic public-facing wooden rest pavilion or approach teahouse veranda, open-sided and clearly not a sacred building, private residence, historic private tea-room interior, hotel, or luxury space. A simple dry wooden bench runs along the lower-left foreground under the eaves, clean, unmarked, uncluttered, and wide enough for a later sleeping-character composite. Through the open veranda on the middle-right, show a recognizable sequence of vermilion torii gates and the public pedestrian approach beyond. Show exactly two very small distant adult visitors passing outside, quiet and non-identifiable; nobody is inside the shelter. Natural late-afternoon daylight with subtle warm shelter tones, no claim of overnight service. Reserve the clean wooden bench surface and immediate space above it in the lower-left, approximately normalized x 0.06–0.42 and y 0.60–0.89, completely empty and low-detail for a sleeping pose. All people and social detail must stay outside that area. Do not draw a cat, bed, cushion branding, box, guide, anchor, QA mark, or character there. Hard exclusions: no player cat, no other cat, no animals or birds, no fox statues, no readable text or pseudo-text, no torii inscriptions, menu, logo, signage, watermark, caption, date, postmark, UI, safe-bound marks, private or sacred interior, altar, offering, ritual object, invented sacred motif, luxury décor, people sleeping, close-up faces, vehicles, photorealism, 3D, vector art, neon, thick black outlines, hard gradients, malformed architecture. The output is the scene only."
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--japan-kyoto-fushimi-inari-taisha--enrichment-v4--non-final.png",
+    "status": "candidate-non-final",
+    "candidate": true,
+    "shipping": false,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 1800,
+      "height": 700
+    },
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "sha256": "8c72378d176a70d0c3c281b847fc7b6f8b0463b247b1b59c0028048e83e518b9",
+    "overlays": [
+      "variant labels and active candidate revision",
+      "Portrait safeBounds",
+      "bottom-center Portrait anchors",
+      "people counts and pose metadata",
+      "day v02 supersession note",
+      "non-final and pending-review notice"
+    ]
+  },
+  "machineInspection": {
+    "decision": "pass",
+    "checkedAt": "2026-07-20",
+    "tool": "Pillow 12.3.0 plus PNG signature, IHDR, ICC, and SHA-256 inspection",
+    "checks": {
+      "activeSceneCount": 3,
+      "failedGeneratedRevisionCount": 0,
+      "supersededBaseRevisionRetained": true,
+      "allActiveScenes1200x900": true,
+      "allActiveScenesAspectRatio4x3": true,
+      "allActiveScenesPng": true,
+      "allActiveScenesBitDepth8": true,
+      "allActiveScenesPngColorType2Truecolor": true,
+      "allActiveScenesRgb": true,
+      "allActiveScenesOpaque": true,
+      "allActiveScenesEmbeddedSrgb": true,
+      "allActiveScenesMetadataOnlyIcc": true,
+      "contactSheet1800x700RgbOpaqueSrgb": true,
+      "hashesRecomputed": true
+    },
+    "notes": "All candidate scenes are exact 1200×900 PNG color type 2, 8-bit RGB, opaque, with an embedded 588-byte sRGB built-in profile. Scene PNG metadata contains only ICC profile data. Candidate scenes contain no QA overlays; overlays occur only on the contact sheet."
+  },
+  "visualInspection": {
+    "decision": "pass-for-candidate-review",
+    "checkedAt": "2026-07-20",
+    "checks": {
+      "lockedStyleBContinuity": "pass-for-candidate-review",
+      "landmarkImmediatelyReadable": true,
+      "noCatOrOtherAnimalObserved": true,
+      "noReadableTextPseudoTextLogoSignUiOrQaMarkObserved": true,
+      "noVehicleObserved": true,
+      "peopleCountsMatch": true,
+      "allPeopleOutsideSafeBounds": true,
+      "legalGroundedSlots": true,
+      "nightRouteAndStepsReadable": true,
+      "nightAvoidsHorrorFestivalCrowdAndNeon": true,
+      "shelterIsPublicFacingAndNotSacredOrPrivateInterior": true,
+      "toriiVisibleFromShelter": true
+    },
+    "notes": "Day shows four respectful mid-distance visitors and an open lower-left paved walk slot. Night shows three distant travelers, readable torii and steps, restrained warm path lamps, and a clear lower-right paved route. Shelter shows two distant visitors outside, a dry unoccupied wooden bench under an open-sided veranda, and torii beyond."
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": "Mechanical and agent visual inspection completed. No approval, shrine permission, endorsement, or promotion is inferred."
+  },
+  "sceneVariants": [
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--day-signature",
+      "revisionId": "japan-kyoto-fushimi-inari-taisha--day-signature--v02",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "day-signature",
+      "version": "v02",
+      "action": "supersede-active-revision",
+      "supersedes": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "name": "Respectful daytime torii approach",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "2558c79e354fb33699116501a8f1613c3a656c31147da5907daf8c853fda5cf9",
+      "hasCompanion": false,
+      "people": {
+        "count": 4,
+        "distance": "mid-distance",
+        "facesIdentifiable": false,
+        "behavior": "walking quietly along the paved torii approach",
+        "outsideSafeBounds": true
+      },
+      "vehiclesPresent": false,
+      "animalsPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.18,
+        "y": 0.91,
+        "scale": 0.28,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.03,
+        "y": 0.59,
+        "width": 0.3,
+        "height": 0.34
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "groundedPlacement": true,
+        "legalWalkingSurface": true,
+        "notes": "The lower-left anchor lands on the open stone-paved pedestrian route, outside the torii bases and visitor flow."
+      },
+      "provenance": {
+        "promptId": "day-signature-v02",
+        "generatedAt": "2026-07-20",
+        "tool": "functions.GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 172,
+          "top": 0,
+          "rightExclusive": 1536,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "socialContextSourceIds": [
+          "fushimi-inari-visitor-request",
+          "kyoto-travel-fushimi-access"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200×900, exact 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "Four non-identifiable visitors observed. No cat, other animal, vehicle, readable text, pseudo-text, inscription, logo, sign, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "landmarkAndSocialContext": {
+          "decision": "pass-for-candidate-review",
+          "notes": "The vermilion torii rhythm remains dominant; sparse respectful pedestrian activity does not block the approach or safeBounds."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "compositionFit": null,
+          "peoplePlacement": null,
+          "culturalContext": null
+        },
+        "notes": "Pending human art-direction, cultural, rights, and candidate-supersession approval."
+      }
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--night-transit",
+      "revisionId": "japan-kyoto-fushimi-inari-taisha--night-transit--v01",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "night-transit",
+      "version": "v01",
+      "action": "add-active-variant",
+      "name": "Quiet early-night torii transit",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--night-transit--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "838c219f5d26ca00254700decb3c955f05bb983f39202768869d211d2cc9226f",
+      "hasCompanion": false,
+      "people": {
+        "count": 3,
+        "distance": "distant",
+        "facesIdentifiable": false,
+        "behavior": "walking quietly up the stepped torii path",
+        "outsideSafeBounds": true
+      },
+      "vehiclesPresent": false,
+      "animalsPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.81,
+        "y": 0.92,
+        "scale": 0.27,
+        "pose": "walk",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.68,
+        "y": 0.6,
+        "width": 0.27,
+        "height": 0.33
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "overlapsLanterns": false,
+        "groundedPlacement": true,
+        "legalWalkingSurface": true,
+        "notes": "The lower-right anchor lands on a broad paved branch of the public walking route, clear of steps, gate bases, lamps, vegetation, and travelers."
+      },
+      "night": {
+        "time": "early night",
+        "travelerCount": 3,
+        "restrainedWarmFixedLanterns": true,
+        "toriiReadable": true,
+        "stepsReadable": true,
+        "routeReadable": true,
+        "crushedShadows": false,
+        "horror": false,
+        "festivalCrowd": false,
+        "neon": false
+      },
+      "provenance": {
+        "promptId": "night-transit-v01",
+        "generatedAt": "2026-07-20",
+        "tool": "functions.GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "socialContextSourceIds": [
+          "fushimi-inari-visitor-request",
+          "kyoto-travel-fushimi-inari"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200×900, exact 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "Three distant travelers observed. No cat, other animal, vehicle, readable text, pseudo-text, inscription, logo, sign, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "nightReadability": {
+          "decision": "pass-for-candidate-review",
+          "notes": "Vermilion gate rhythm, shallow steps, and the lower-right walking route remain readable under restrained warm lamps and blue-gray ambient light without horror, crowd, or neon treatment."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "compositionFit": null,
+          "peoplePlacement": null,
+          "nightReadability": null,
+          "culturalContext": null
+        },
+        "notes": "Pending human art-direction, night-context, cultural, rights, and final candidate approval."
+      }
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--sheltered-rest",
+      "revisionId": "japan-kyoto-fushimi-inari-taisha--sheltered-rest--v01",
+      "destinationId": "japan-kyoto-fushimi-inari-taisha",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "action": "add-active-variant",
+      "name": "Public-facing approach rest veranda",
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--japan-kyoto-fushimi-inari-taisha--sheltered-rest--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "sha256": "521b639a6e6ab1dbf11d1154e96990f3da0126830900c3c5f87cf0a0e8cd1cc2",
+      "hasCompanion": false,
+      "people": {
+        "count": 2,
+        "distance": "distant",
+        "facesIdentifiable": false,
+        "behavior": "walking outside on the torii approach",
+        "insideShelter": false,
+        "outsideSafeBounds": true
+      },
+      "vehiclesPresent": false,
+      "animalsPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.23,
+        "y": 0.84,
+        "scale": 0.2,
+        "pose": "sleep",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.04,
+        "y": 0.59,
+        "width": 0.39,
+        "height": 0.27
+      },
+      "compositionLegality": {
+        "decision": "pass",
+        "anchorInsideSafeBounds": true,
+        "renderedHeightInsideSafeBounds": true,
+        "overlapsLandmarkRecognitionPoints": false,
+        "overlapsPeople": false,
+        "groundedPlacement": true,
+        "dryShelteredSurface": true,
+        "privateOrSacredSurface": false,
+        "notes": "The lower-left anchor lands on a dry unmarked wooden bench under the public-facing open veranda, clear of the torii view and outdoor circulation."
+      },
+      "shelter": {
+        "type": "generic public-facing open-sided wooden rest pavilion or approach veranda",
+        "sleepSurface": "dry unmarked wooden bench",
+        "toriiVisibleBeyond": true,
+        "publicFacing": true,
+        "privateInterior": false,
+        "sacredInterior": false,
+        "overnightServiceClaimed": false,
+        "sleepPermissionClaimed": false
+      },
+      "provenance": {
+        "promptId": "sheltered-rest-v01",
+        "generatedAt": "2026-07-20",
+        "tool": "functions.GenerateImage",
+        "model": null,
+        "seed": null,
+        "requestedAspectRatio": "4:3",
+        "sourceDimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "normalizationCropPixels": {
+          "left": 86,
+          "top": 0,
+          "rightExclusive": 1450,
+          "bottomExclusive": 1023
+        },
+        "normalizationRef": "#/provenance/normalization",
+        "socialContextSourceIds": [
+          "fushimi-inari-visitor-request",
+          "fushimi-inari-teichoan",
+          "kyoto-travel-fushimi-access"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "inspection": {
+        "technical": {
+          "decision": "pass",
+          "notes": "Verified 1200×900, exact 4:3, PNG color type 2, RGB, 8-bit channels, opaque, and embedded sRGB."
+        },
+        "hardConstraints": {
+          "decision": "pass",
+          "notes": "Two distant outdoor visitors observed. No cat, other animal, vehicle, readable text, pseudo-text, inscription, menu, logo, sign, watermark, UI, border, slot frame, anchor, or guide observed."
+        },
+        "shelterPlausibility": {
+          "decision": "pass-for-candidate-review",
+          "notes": "The shelter reads as a modest public-facing open veranda with a dry bench and torii beyond, without depicting or claiming access to a private, sacred, or historic tea-room interior."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "scores": {
+          "styleFit": null,
+          "landmarkReadability": null,
+          "compositionFit": null,
+          "peoplePlacement": null,
+          "shelterPlausibility": null,
+          "culturalContext": null
+        },
+        "notes": "Pending human art-direction, shelter-context, cultural, rights, and final candidate approval."
+      }
+    }
+  ],
+  "supersededRevisions": [
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+      "variantId": "day-signature",
+      "version": "v01",
+      "status": "base-active-revision-superseded-by-v4-candidate",
+      "candidate": false,
+      "shippingEligible": false,
+      "imageSrc": "docs/art/candidates/landmarks/japan-kyoto-fushimi-inari-taisha/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.png",
+      "sha256": "40c10c867bee66aa622aed8a1e0d2ef7dd02d6aaaedb02a7976f94c44a920052",
+      "retained": true,
+      "modified": false,
+      "reason": "The v4 plan requests a lived-in daytime revision with a small number of respectful mid-distance visitors while preserving the landmark and legal walk slot."
+    }
+  ],
+  "pendingReviews": [
+    "human art-direction and locked-style fit",
+    "landmark and torii architectural readability",
+    "visitor count, behavior, circulation, and safeBounds placement",
+    "early-night access and restrained-lighting plausibility",
+    "public-facing shelter plausibility and no-sleep-permission implication",
+    "shrine-specific cultural review",
+    "destination-specific rights and adaptation review",
+    "final candidate selection and day supersession approval",
+    "real Portrait composite after the user-photo hard gate"
+  ],
+  "approval": {
+    "inferred": false,
+    "promoted": false,
+    "shippingEligible": false
+  }
+}

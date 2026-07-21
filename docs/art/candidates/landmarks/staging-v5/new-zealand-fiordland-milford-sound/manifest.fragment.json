@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "landmark-staging-v5-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "destinationId": "new-zealand-fiordland-milford-sound",
+  "destinationName": "米尔福德峡湾",
+  "preferredPlaceReference": "Piopiotahi / Milford Sound",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "generatedAt": "2026-07-20",
+  "baseLinkage": {
+    "baseCandidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+    "baseCandidateManifestSha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f",
+    "baseDestinationFragment": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/manifest.fragment.json",
+    "baseDestinationFragmentSha256": "e7e3824ca8c8673beb0dff53b2b53e6ccf82a097cc926b152403b394cd9c2353",
+    "sharedFilesModified": false,
+    "currentArtUse": "continuity-only",
+    "change": {
+      "action": "add-active-variant",
+      "candidateRevisionId": "new-zealand-fiordland-milford-sound--distant-overlook--v01",
+      "supersedesRevisionId": null,
+      "baseRevisionsModified": false
+    }
+  },
+  "specification": {
+    "orientation": "landscape",
+    "aspectRatio": "4:3",
+    "width": 1200,
+    "height": 900,
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "mode": "RGB",
+    "alpha": "opaque",
+    "format": "png"
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-canvas-height / scene-height"
+  },
+  "lockedInputs": {
+    "formatSource": {
+      "src": "docs/art/landmark-production-v1.json",
+      "sha256": "1b3a716c16fa56a47776228f438dcc9ef3265dba97177584283c6781b663445e"
+    },
+    "calibrationSource": {
+      "src": "docs/art/calibration-production-v1.md",
+      "sha256": "e67d112608aa9adf5d95b983cadca18356eaaf13a1c27a4bddce5f95a8fe918e",
+      "styleIntensity": "B"
+    },
+    "approvedPortraitPreviewSource": {
+      "src": "docs/art/archive/asset-archive.v2.json",
+      "sha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3",
+      "portraitId": "minho",
+      "use": "placement-preview-only"
+    },
+    "styleReferences": [
+      {
+        "src": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+        "use": "locked-B style only"
+      },
+      {
+        "src": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+        "use": "locked-B style only; border, text, Cat, animal, and layout excluded"
+      },
+      {
+        "src": "docs/art/style-ref-poses.png",
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110",
+        "use": "locked-B style only; all Cats, labels, and subjects excluded"
+      }
+    ],
+    "approvedSceneContinuityReferences": [
+      {
+        "src": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--day-signature--v01.png",
+        "sha256": "15bd7c19291cb670a422feaf5b909b6c91bff25dfbf1b64de86f14c5db3b4796",
+        "use": "Mitre Peak, fjord, palette, and atmospheric continuity only; prior foreground excluded"
+      },
+      {
+        "src": "docs/art/candidates/landmarks/new-zealand-fiordland-milford-sound/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.png",
+        "sha256": "1958c28261d22b6ad4b9ae5bfcadcc7739b5d704cba4502b97e0fa2e60827781",
+        "use": "Mitre Peak, fjord, palette, and atmospheric continuity only; prior foreground excluded"
+      }
+    ],
+    "previewPortrait": {
+      "pose": "gaze",
+      "src": "public/portraits/minho/portrait--minho--gaze--v01.png",
+      "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+      "use": "non-final placement QA sheet only",
+      "drawnIntoSceneFile": false
+    }
+  },
+  "provenance": {
+    "generator": "functions.GenerateImage",
+    "generatorModel": null,
+    "seed": null,
+    "modelAndSeedDisclosure": "not exposed by the image-generation tool",
+    "sourcePhotoPixelsUsed": false,
+    "externalVisualSourcesAttached": false,
+    "referenceUse": {
+      "styleReferences": "locked-B watercolor cues only",
+      "approvedScenes": "continuity only",
+      "officialResearch": "factual public-foreshore access, landmark geometry, safety, naming, mana-whenua, and rights context only",
+      "approvedPortrait": "preview compositing only; never attached to scene generation"
+    },
+    "sourceGeneratedAssets": [
+      {
+        "promptId": "distant-overlook-v01-source-a",
+        "toolManagedFilename": "milford-sound-distant-overlook-v01-source-a.png",
+        "sha256": "df64cce121545009ed2f758dd85f3f15c6ea61237bc819e2305d96671132bdbb",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "mode": "RGB",
+        "embeddedColorProfile": false,
+        "retainedInRepository": false
+      }
+    ],
+    "generationAttempts": {
+      "successfulAssetCount": 1,
+      "failedAttemptsWithoutArtifacts": 1,
+      "transientToolErrorsWithoutArtifacts": [
+        {
+          "promptId": "distant-overlook-v01-source-a",
+          "count": 1,
+          "error": "HTTP 429",
+          "revisionAssetProduced": false
+        }
+      ],
+      "rejectedGeneratedRevisionCount": 0
+    },
+    "normalization": {
+      "tool": "Pillow 12.3.0",
+      "sourceDimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "exactAspectCropDimensions": {
+        "width": 1364,
+        "height": 1023,
+        "aspectRatio": "4:3"
+      },
+      "cropPixels": {
+        "left": 86,
+        "top": 0,
+        "rightExclusive": 1450,
+        "bottomExclusive": 1023
+      },
+      "resize": {
+        "method": "Pillow Image.Resampling.LANCZOS",
+        "width": 1200,
+        "height": 900
+      },
+      "distortion": false,
+      "inputColorInterpretation": "untagged generator RGB treated as sRGB",
+      "outputProfile": "embedded sRGB built-in ICC profile, 588 bytes",
+      "outputMode": "8-bit opaque RGB PNG",
+      "metadataPolicy": "fresh PNG export retaining only ICC profile data"
+    }
+  },
+  "promptRecords": [
+    {
+      "id": "distant-overlook-v01-source-a",
+      "variantId": "distant-overlook",
+      "requestedAspectRatio": "4:3",
+      "referenceImageCount": 5,
+      "summary": "Cat-free expansive Piopiotahi / Milford Sound daylight vista with recognizable Mitre Peak and a broad dry gently graded public foreshore-walk viewpoint, reserving a small distant gaze Perch safely back above the water.",
+      "hardExclusions": [
+        "mountain, cliff, wilderness ledge, narrow ridge, dock, or water-level Perch",
+        "people, vehicles, boats, buildings, or animals",
+        "Cats",
+        "text, pseudo-text, logos, emblems, or QA marks",
+        "invented Māori-inspired decorative motifs",
+        "generic snowy fantasy cone"
+      ]
+    }
+  ],
+  "stagingContextResearch": {
+    "src": "staging-context-research.md",
+    "sha256": "4ca13a3a1d684709c9a1dd06111e6e40440c09a425bd82090761b37a94de1b9a",
+    "researchDate": "2026-07-20",
+    "sourceCount": 4,
+    "officialOrManaWhenuaSourcesOnly": true,
+    "sourcePhotographsDownloaded": false,
+    "sourcePhotographsRetained": false,
+    "restrictedSourceImagesRetained": false,
+    "sources": [
+      {
+        "id": "doc-milford-foreshore-walk",
+        "sourceOwner": "New Zealand Department of Conservation / Te Papa Atawhai",
+        "title": "Milford Foreshore Walk",
+        "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/milford-foreshore-walk/",
+        "use": "easy wheelchair-accessible public loop, sandy foreshore, Mitre Peak views, visitor-carpark connection, pet-rule pointer, and earthquake-tsunami warning",
+        "assetRetained": false
+      },
+      {
+        "id": "doc-milford-area",
+        "sourceOwner": "New Zealand Department of Conservation / Te Papa Atawhai",
+        "title": "Milford Road/Milford Sound area",
+        "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/places-to-go/milford-road-milford-sound-area/",
+        "use": "Mitre Peak direct-water rise, 1,692 m height, glacial U-shaped valleys, rugged walls, and foreshore-view context",
+        "assetRetained": false
+      },
+      {
+        "id": "ngai-tahu-reimagining-piopiotahi",
+        "sourceOwner": "Te Rūnanga o Ngāi Tahu",
+        "title": "Reimagining Piopiotahi",
+        "url": "https://ngaitahu.iwi.nz/opportunities-and-resources/publications/te-karaka/reimagining-piopiotahi/",
+        "use": "Piopiotahi naming, treasured ancestral-place context, mana whenua, and multiple name-origin accounts",
+        "assetRetained": false
+      },
+      {
+        "id": "doc-copyright",
+        "sourceOwner": "New Zealand Department of Conservation / Te Papa Atawhai",
+        "title": "Copyright",
+        "url": "https://www.doc.govt.nz/footer-links/copyright/",
+        "use": "Crown-text reuse terms and exclusions for third-party material, logos, trademarks, and design elements",
+        "assetRetained": false
+      }
+    ]
+  },
+  "rights": {
+    "reviewDecision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "sourcePhotoPixelsUsed": false,
+    "geometryOnlyUse": false,
+    "referenceUse": "official and mana-whenua text facts plus internal approved-Scene continuity; no external image retained",
+    "shippingGate": "destination-specific-rights-mana-whenua-cultural-conservation-and-adaptation-review-required",
+    "warnings": [
+      "DOC Crown text is generally CC BY 4.0 unless an exception applies; third-party images, logos, trademarks, and design elements have separate restrictions. No DOC visual asset was used.",
+      "Te Rūnanga o Ngāi Tahu content is not treated as openly licensed. Facts were paraphrased; no prose, photograph, visual motif, or trade dress was copied.",
+      "No DOC, Ngāi Tahu, UNESCO, World Heritage, or tourism endorsement is claimed.",
+      "The generalized viewpoint is not represented as an exact reproduction of a named platform or facility."
+    ]
+  },
+  "culturalAndConservationReview": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "warnings": [
+      "Prefer Piopiotahi / Milford Sound or a product-wide form approved through mana-whenua cultural review.",
+      "Do not present one origin account for Piopiotahi as uncontested.",
+      "Do not turn creation narratives, waka, adze, pou, pounamu, or generic Māori-inspired motifs into decoration without mana-whenua-led direction.",
+      "DOC states no dogs and points other pets to conservation-land rules. The fictional Minho preview does not establish or endorse real-world Cat access.",
+      "The ordinary-water setback is staging, not a tsunami-safety or evacuation guarantee."
+    ]
+  },
+  "sceneContactSheet": {
+    "imageSrc": "scene-contact-sheet--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+    "sha256": "32accb6743ffc276c5bbaa210db0378a674a243b49c67d5c9923bcf0318a287a",
+    "dimensions": {
+      "width": 1400,
+      "height": 1150
+    },
+    "mode": "RGB",
+    "alpha": "opaque",
+    "colorSpace": "sRGB",
+    "candidate": true,
+    "shippingEligible": false,
+    "overlays": [
+      "variant and addition label",
+      "Perch safeBounds",
+      "bottom-center anchor and support-contact indicator",
+      "placement metadata",
+      "nature-scene Ambient Life not-applicable evidence",
+      "pending cultural-conservation-rights warning"
+    ]
+  },
+  "portraitPlacementPreview": {
+    "imageSrc": "portrait-placement-preview--new-zealand-fiordland-milford-sound--staging-v5--non-final.png",
+    "sha256": "84de58d35c879119bb79786b281f022959ca9d88ae5006c1948fef1210943755",
+    "dimensions": {
+      "width": 1400,
+      "height": 1150
+    },
+    "mode": "RGB",
+    "alpha": "opaque",
+    "colorSpace": "sRGB",
+    "portraitId": "minho",
+    "portraitApproved": true,
+    "previewOnly": true,
+    "candidateSceneFileRemainsCatFree": true,
+    "renderMethod": "4x supersampled exact normalized transform, Lanczos downsample",
+    "shippingEligible": false
+  },
+  "machineInspection": {
+    "decision": "pass",
+    "checkedAt": "2026-07-20",
+    "tool": "Pillow 12.3.0 plus SHA-256 and PNG property inspection",
+    "checks": {
+      "activeSceneCount": 1,
+      "actionIsAddition": true,
+      "baseRevisionsModified": false,
+      "rejectedGeneratedRevisionCount": 0,
+      "scene1200x900": true,
+      "sceneAspectRatio4x3": true,
+      "scenePng": true,
+      "sceneBitDepth8": true,
+      "sceneRgb": true,
+      "sceneOpaque": true,
+      "sceneEmbeddedSrgb": true,
+      "candidateSceneContainsNoQaOverlay": true,
+      "contactAndPreviewSheetsRgbOpaqueSrgb": true,
+      "allReferencedFilesExist": true,
+      "hashesRecomputed": true
+    }
+  },
+  "visualInspection": {
+    "decision": "pass-for-human-review",
+    "checkedAt": "2026-07-20",
+    "checks": {
+      "lockedStyleBContinuity": "pass-for-human-review",
+      "mitrePeakAndFjordImmediatelyReadable": true,
+      "sceneFileCatFree": true,
+      "noReadableTextPseudoTextLogoEmblemUiOrQaMarkObserved": true,
+      "noPersonVehicleBoatBuildingOrAnimalObserved": true,
+      "publicForeshoreViewpointReadsStableAndAccessible": true,
+      "unsafeMountainCliffOrWaterPerchAbsent": true,
+      "supportContact": true,
+      "perspectiveScalePlausible": true,
+      "portraitSilhouetteContained": true,
+      "portraitLocalContrastReadable": true,
+      "portraitOverlapOrOcclusionObserved": false,
+      "catSecondaryToFjordAndPeaks": true,
+      "culturalStagingAppropriateForCandidateReview": true
+    },
+    "notes": "The broad dry gently graded foreground reads as a generalized public foreshore-walk viewing surface set back above ordinary water. The small gaze preview is grounded and secondary to Mitre Peak, the fjord, and enclosing walls."
+  },
+  "sceneVariants": [
+    {
+      "id": "new-zealand-fiordland-milford-sound--distant-overlook",
+      "revisionId": "new-zealand-fiordland-milford-sound--distant-overlook--v01",
+      "destinationId": "new-zealand-fiordland-milford-sound",
+      "variantId": "distant-overlook",
+      "version": "v01",
+      "action": "add-active-variant",
+      "supersedes": null,
+      "status": "candidate",
+      "candidate": true,
+      "shipping": false,
+      "shippingEligible": false,
+      "imageSrc": "scene--new-zealand-fiordland-milford-sound--distant-overlook--v01.png",
+      "sha256": "f66cd2db8faa5c1d40773d8e4822d46fe3c02d567f1b4d64e97d4c9fbc2ba124",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "hasCompanion": false,
+      "peoplePresent": false,
+      "vehiclesPresent": false,
+      "boatsPresent": false,
+      "buildingsPresent": false,
+      "animalsPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.28,
+        "y": 0.79,
+        "scale": 0.085,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.24,
+        "y": 0.7,
+        "width": 0.08,
+        "height": 0.1
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "narrativeWeight": "cameo",
+        "depthBand": "distant public foreshore-walk viewpoint",
+        "targetScale": 0.085,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "broad dry gently graded compacted foreshore-walk viewing surface set back above the water",
+        "accessPlausibility": "DOC supports an easy wheelchair-accessible public foreshore loop; this generalized surface is human-accessible, while real-Cat access is not established",
+        "poseFit": "gaze",
+        "clearSilhouette": true,
+        "supportContact": "pass-for-human-review",
+        "perspectiveFit": "pass-for-human-review",
+        "completeSilhouetteInsideImage": true,
+        "requiresForegroundOcclusionMask": false,
+        "overlapsPeopleVehiclesRailsPostsFurniturePlantsObjectsOrHardShadows": false,
+        "unsafeCliffLipMountainLedgeWaterSurfaceRoofOrTrafficLane": false,
+        "catSecondaryToLandscape": true
+      },
+      "ambientLifeQa": {
+        "applicability": "not-applicable-nature-scene",
+        "reason": "The variant is an expansive protected-landscape overlook. People and traffic are intentionally omitted so the fjord, peaks, and small distant Cat remain the complete narrative.",
+        "peoplePresent": false,
+        "vehiclesPresent": false,
+        "boatsPresent": false,
+        "buildingsPresent": false,
+        "animalsPresent": false,
+        "outsidePerchSafeBounds": true
+      },
+      "provenance": {
+        "promptId": "distant-overlook-v01-source-a",
+        "normalizationRef": "#/provenance/normalization",
+        "researchSourceIds": [
+          "doc-milford-foreshore-walk",
+          "doc-milford-area",
+          "ngai-tahu-reimagining-piopiotahi"
+        ],
+        "sourcePhotoPixelsUsed": false
+      },
+      "review": {
+        "decision": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": "Pending human art-direction, geographic-specificity, public-viewpoint, Perch/composite, mana-whenua cultural naming, conservation, rights, and addition approval."
+      }
+    }
+  ],
+  "rejectedRevisions": [],
+  "rejectedRevisionRetention": {
+    "required": true,
+    "retainedCount": 0,
+    "note": "The first successful generated revision passed candidate inspection. One earlier HTTP 429 produced no image and therefore created no rejected revision file to retain."
+  },
+  "pendingReviews": [
+    "human art-direction and locked-style fit",
+    "Mitre Peak and fjord geographic specificity",
+    "public foreshore viewpoint accessibility and safe-setback plausibility",
+    "distant Perch support, perspective, silhouette, overlap, and no-occlusion review",
+    "mana-whenua cultural naming and depiction review",
+    "conservation and real-pet-access messaging review",
+    "destination-specific rights and adaptation review",
+    "new active-variant approval",
+    "final composite approval"
+  ],
+  "approval": {
+    "inferred": false,
+    "promoted": false,
+    "shippingEligible": false
+  }
+}

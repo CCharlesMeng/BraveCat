@@ -15,6 +15,13 @@
     "assets:check:v1": "node scripts/archive-assets.mjs --check",
     "assets:integrate-landmarks": "node scripts/integrate-landmarks.mjs",
     "assets:check-landmark-candidates": "node scripts/integrate-landmarks.mjs --check",
+    "assets:integrate-landmark-enrichment": "node scripts/integrate-landmark-enrichment.mjs",
+    "assets:check-landmark-enrichment": "node scripts/integrate-landmark-enrichment.mjs --check",
+    "assets:integrate-landmark-staging": "node scripts/integrate-landmark-staging.mjs",
+    "assets:check-landmark-staging": "node scripts/integrate-landmark-staging.mjs --check",
+    "assets:integrate-latest-art": "node scripts/integrate-latest-art.mjs",
+    "assets:check-latest-art": "node scripts/integrate-latest-art.mjs --check",
+    "assets:check-development-home-art": "node scripts/check-development-home-art.mjs",
     "assets:promote-landmarks": "node scripts/promote-landmarks.mjs --candidate-manifest docs/art/candidates/landmarks/manifest.candidates.v3.json --candidate-qa docs/art/candidates/landmarks/qa-report.v3.json --visual-approval docs/art/reviews/landmarks/visual-approval.v2.json --rights-review docs/art/reviews/landmarks/rights-review-v3-addendum.md --rights-decision docs/art/reviews/landmarks/rights-decision.v2.json --composite-manifest docs/art/reviews/landmarks/composites/manifest.v2.json --composite-approval docs/art/reviews/landmarks/composites/approval.v2.json --archive docs/art/archive/asset-archive.v2.json --production-manifest docs/art/production/landmarks/manifest.v2.json --review-index docs/art/candidates/landmarks/review-index.v3.md",
     "assets:check-landmarks": "npm run assets:promote-landmarks -- --check",
     "assets:promote-landmarks:v1": "node scripts/promote-landmarks.mjs --allow-extra-runtime-files --generated-catalog docs/art/production/landmarks/landmarkCatalog.v1.generated.ts",
@@ -22,7 +29,13 @@
     "assets:composite-qa": "node scripts/build-composite-qa.mjs --archive docs/art/archive/asset-archive.v2.json --output-root docs/art/reviews/landmarks/composites --output-manifest docs/art/reviews/landmarks/composites/manifest.v2.json --approval docs/art/reviews/landmarks/composites/approval.v2.json",
     "assets:composite-check": "npm run assets:composite-qa -- --check",
     "assets:composite-qa:v1": "node scripts/build-composite-qa.mjs",
-    "assets:composite-check:v1": "node scripts/build-composite-qa.mjs --check"
+    "assets:composite-check:v1": "node scripts/build-composite-qa.mjs --check",
+    "assets:build-minho-watercolor": "node scripts/build-minho-watercolor-candidates.mjs",
+    "assets:check-minho-watercolor": "node scripts/build-minho-watercolor-candidates.mjs --check",
+    "assets:composite-qa:minho-watercolor": "npm run assets:check-minho-watercolor && node scripts/build-composite-qa.mjs --archive docs/art/archive/asset-archive.v2.json --portrait-candidate-manifest docs/art/candidates/portraits/minho-watercolor-v2/manifest.candidate.json --output-root docs/art/reviews/portraits/minho-watercolor-v2/composites --output-manifest docs/art/reviews/portraits/minho-watercolor-v2/composites/manifest.json --approval docs/art/reviews/portraits/minho-watercolor-v2/composites/approval.json",
+    "assets:composite-check:minho-watercolor": "npm run assets:composite-qa:minho-watercolor -- --check",
+    "story:integrate-cinematic": "node scripts/integrate-cinematic-story.mjs",
+    "story:check-cinematic": "node scripts/integrate-cinematic-story.mjs --check"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.1.2",

@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "planId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+  "status": "candidate-generation",
+  "shippingEligible": false,
+  "createdAt": "2026-07-20",
+  "enrichment": {
+    "destinationCountTouched": 5,
+    "activeVariantRevisions": 5,
+    "newActiveVariants": 10,
+    "candidateImagesToGenerate": 15,
+    "combinedDestinationCount": 25,
+    "combinedActiveVariantTarget": 71
+  },
+  "baseCandidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+  "lockedStyleAndFormatSource": "docs/art/landmark-production-v1.json",
+  "candidateOutputRoot": "docs/art/candidates/landmarks/enrichment-v4",
+  "contentPolicy": {
+    "purpose": "Add credible everyday life, night travel, and sheltered rest without replacing the player Portrait or obscuring landmark recognition.",
+    "people": {
+      "allowed": true,
+      "presentation": "small or mid-distance incidental figures only",
+      "rules": [
+        "Use a modest scene-appropriate number of people so bridges, promenades, roads, and shrine approaches do not look implausibly abandoned.",
+        "Keep faces non-identifiable and without portrait-level detail.",
+        "Keep every person outside the Portrait safeBounds and secondary to the landmark.",
+        "Do not show crowds, demonstrations, uniforms with readable insignia, celebrities, or staged poses directed at the viewer."
+      ]
+    },
+    "vehicles": {
+      "allowedWherePlausible": true,
+      "rules": [
+        "Use only generic locally plausible vehicles, bicycles, ferries, or boats where the real circulation layout supports them.",
+        "Keep vehicles small or mid-distance and outside Portrait safeBounds.",
+        "Do not show readable plates, route text, advertisements, corporate livery, trademarks, or logos.",
+        "Do not place vehicles on pedestrian-only or culturally inappropriate surfaces."
+      ]
+    },
+    "night": {
+      "variantId": "night-transit",
+      "purpose": "Show the Cat traveling after dark through a still-active place.",
+      "rules": [
+        "Use restrained warm lamps and low-saturation blue-gray night washes while preserving locked-B watercolor readability.",
+        "Keep the route, ground plane, and landmark silhouette legible enough for a walking Portrait.",
+        "Use sparse believable evening activity rather than an empty set or a dense nightlife crowd.",
+        "Avoid neon dominance, blown highlights, black crushed shadows, floating light orbs, and unreadable signage."
+      ]
+    },
+    "rest": {
+      "variantId": "sheltered-rest",
+      "purpose": "Give the Cat a plausible dry, warm, protected place to sleep during travel.",
+      "rules": [
+        "Use a real-place-plausible covered arcade, pavilion, veranda, waiting room, teahouse, café window seat, or sheltered terrace.",
+        "Keep the destination recognizable through a window, doorway, arcade opening, or immediate exterior relationship.",
+        "Reserve a clean, grounded, low-detail sleep safeBounds on a bench, mat, cushion, window seat, or dry floor area.",
+        "Do not generate a cat, pet bed branding, readable menu, hotel logo, private residence identity, or luxury-product placement."
+      ]
+    },
+    "globalExclusions": [
+      "player cat, substitute cat, reusable animal asset, close-up face, readable text, pseudo-text, date, postmark, logo, watermark, UI, frame, safe-bound mark, anchor mark, guide mark",
+      "photorealism, 3D render, flat vector art, neon-heavy cyberpunk lighting, thick black outlines, hard digital gradients, malformed architecture, unsafe traffic placement"
+    ]
+  },
+  "candidatePolicy": {
+    "shippingEligible": false,
+    "oneDirectoryPerDestination": true,
+    "doNotEditExistingDestinationFragments": true,
+    "writeManifestFragment": true,
+    "contactSheetRequired": true,
+    "candidateImagesMustNotShowQaOverlays": true,
+    "contactSheetMayShowQaOverlays": true,
+    "promoteOnlyAfterUserApproval": true,
+    "researchRealCirculationAndShelter": true,
+    "recordReferenceUrlsAndRights": true,
+    "restrictedSourcePhotosRetained": false
+  },
+  "destinations": [
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "name": "纽约布鲁克林大桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+          "version": "v02",
+          "brief": "Lived-in daytime bridge view with a few small pedestrians and cyclists on their proper shared path, sparse distant roadway traffic, and the stone Gothic tower and cable geometry still dominant.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "night-transit",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Blue-hour crossing with warm bridge lamps, a few homebound walkers and cyclists, restrained distant vehicle lights, a readable Manhattan-side route, and a clear walking Portrait slot.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "sheltered-rest",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Warm covered waterfront waiting room or café window seat in Brooklyn with the bridge tower and East River visible outside, sparse passersby beyond, and an unmarked cushioned sleep slot.",
+          "portraitPose": "sleep",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "name": "伦敦塔桥",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "united-kingdom-london-tower-bridge--day-signature--v01",
+          "version": "v02",
+          "brief": "Lived-in Thames daytime view with small pedestrians, light generic road traffic including one unbranded red double-decker, and a modest river boat while the twin towers and upper walkways stay unobscured.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "night-transit",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Early-night bridge crossing with restrained architectural lamps, sparse pedestrians and generic traffic, soft Thames reflections, and a safe walking route beside the recognizable twin towers.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "sheltered-rest",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Covered riverside arcade or quiet café window seat with Tower Bridge framed outside, a dry warm bench for sleeping, and only a few distant pedestrians beyond the shelter.",
+          "portraitPose": "sleep",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "name": "上海外滩",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "china-shanghai-the-bund--day-signature--v01",
+          "version": "v02",
+          "brief": "Active but calm daytime Bund promenade with small walkers, one cyclist where plausible, generic road traffic, and a modest Huangpu ferry while the historic waterfront and Pudong skyline remain clear.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "night-transit",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Restrained evening Bund with warm street lamps, cool river reflections, small commuters, generic cars and ferries, and a readable promenade route without neon-heavy spectacle or readable signs.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "sheltered-rest",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Quiet covered riverside lounge, historic-building arcade, or hotel window seat with the Huangpu and skyline visible outside, a warm unmarked sleep area, and subdued distant city life.",
+          "portraitPose": "sleep",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "name": "京都伏见稻荷",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "japan-kyoto-fushimi-inari-taisha--day-signature--v01",
+          "version": "v02",
+          "brief": "Lived-in daytime torii approach with a small number of respectful mid-distance visitors moving along the path, no vehicles, and the vermilion gate rhythm remaining dominant and unobstructed.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "night-transit",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Quiet lantern-lit early-night torii path with two or three distant travelers, readable steps and gate rhythm, restrained shadows, and a clear walking Portrait route.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "sheltered-rest",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Modest teahouse veranda or shrine-approach rest pavilion with torii visible beyond, a dry tatami-edge or wooden-bench sleep slot, and only a few distant visitors outside.",
+          "portraitPose": "sleep",
+          "hasCompanion": false
+        }
+      ]
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "name": "新加坡鱼尾狮",
+      "variants": [
+        {
+          "id": "day-signature",
+          "action": "supersede-active-revision",
+          "supersedes": "singapore-singapore-merlion--day-signature--v01",
+          "version": "v02",
+          "brief": "Lived-in daytime Marina Bay promenade with small visitors, a few walkers, and one generic harbor boat while the Merlion profile, water jet, and skyline remain clearly readable.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "night-transit",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Humid blue-hour Marina Bay with restrained skyline lights, warm promenade lamps, small evening walkers and a harbor boat, plus a clear route for a walking Portrait.",
+          "portraitPose": "walk",
+          "hasCompanion": false
+        },
+        {
+          "id": "sheltered-rest",
+          "action": "add-active-variant",
+          "version": "v01",
+          "brief": "Covered waterfront arcade or quiet café window seat with the Merlion and bay visible outside, a cool dry bench or cushion for sleeping, and sparse distant promenade activity.",
+          "portraitPose": "sleep",
+          "hasCompanion": false
+        }
+      ]
+    }
+  ]
+}

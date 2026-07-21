@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 5,
+  "manifestKind": "landmark-staging-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "destinationId": "united-kingdom-london-tower-bridge",
+  "destinationName": "伦敦塔桥",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseV4": {
+    "combinedManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+      "byteLength": 427223,
+      "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+    },
+    "destinationFragment": {
+      "path": "docs/art/candidates/landmarks/united-kingdom-london-tower-bridge/manifest.fragment.json",
+      "byteLength": 6733,
+      "sha256": "dd6636d875d657640711ea69e7ed126667a4f5bf14210fac4b9c63ad30ecc06d"
+    },
+    "enrichmentFragment": {
+      "path": "docs/art/candidates/landmarks/enrichment-v4/united-kingdom-london-tower-bridge/manifest.fragment.json",
+      "byteLength": 23129,
+      "sha256": "bb3f57a77ccc3cdc4aca3214c1dd7c25a2ca97d7c42c5906ba2e8dfe027d42a8"
+    },
+    "activeSceneVariantIds": [
+      "united-kingdom-london-tower-bridge--day-signature--v02",
+      "united-kingdom-london-tower-bridge--golden-hour--v01",
+      "united-kingdom-london-tower-bridge--night-transit--v01",
+      "united-kingdom-london-tower-bridge--sheltered-rest--v01"
+    ],
+    "supersededRevisionReferences": [
+      {
+        "id": "united-kingdom-london-tower-bridge--day-signature--v02",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v02.png",
+        "byteLength": 1687175,
+        "sha256": "04ddffa4f6a3dce89e4994ac460586850c1ed75b71cc34ff6064740b61f6e764",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      },
+      {
+        "id": "united-kingdom-london-tower-bridge--night-transit--v01",
+        "path": "docs/art/candidates/landmarks/enrichment-v4/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--night-transit--v01.png",
+        "byteLength": 1779219,
+        "sha256": "08dd4a7d4589e494137f631705901f0aae575ef72ecc67fe7b9d7843c49398c2",
+        "referenceUse": "landmark and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "candidateScenesCatFree": true,
+    "portraitPreviewQaOnly": true,
+    "shippingEligible": false
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center of the full Portrait canvas",
+    "scaleMeaning": "rendered Portrait canvas height / scene height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 2,
+    "generateImageRequestCount": 4,
+    "successfulImageArtifactCount": 4,
+    "selectedCandidateCount": 2,
+    "rejectedImageArtifactCount": 2,
+    "retainedRejectedRevisionCount": 2,
+    "variants": [
+      "day-signature--v03",
+      "night-transit--v02"
+    ]
+  },
+  "supersession": [
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "united-kingdom-london-tower-bridge--day-signature--v03",
+      "supersedesActiveRevisionId": "united-kingdom-london-tower-bridge--day-signature--v02",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v02.png",
+      "supersededRevisionSha256": "04ddffa4f6a3dce89e4994ac460586850c1ed75b71cc34ff6064740b61f6e764"
+    },
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "united-kingdom-london-tower-bridge--night-transit--v02",
+      "supersedesActiveRevisionId": "united-kingdom-london-tower-bridge--night-transit--v01",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--night-transit--v01.png",
+      "supersededRevisionSha256": "08dd4a7d4589e494137f631705901f0aae575ef72ecc67fe7b9d7843c49398c2"
+    }
+  ],
+  "referencePolicy": {
+    "styleReferences": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/style-ref-poses.png",
+        "byteLength": 2404407,
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+      }
+    ],
+    "styleReferenceUse": "style-only; cats, animals, text, postmarks, borders, layout, and UI in the references were excluded",
+    "landmarkContinuityReferenceUse": "identity, geometry, and locked project continuity only; wholly new compositions were generated",
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false,
+    "minhoPortraitUsedAsGenerationReference": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "path": "staging-context-research.md",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/staging-context-research.md",
+      "byteLength": 5076,
+      "sha256": "f34c5bd4ac8c1b75295979ecae6da1ff6d5b2bc18fcea7b8b047fdfd39c9b6a1",
+      "officialSourceCount": 6,
+      "method": "official text-only circulation, access, and rights research; no source photo or page asset retained"
+    },
+    "sceneContactSheet": {
+      "imageSrc": "scene-contact-sheet--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/scene-contact-sheet--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+      "status": "non-final",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 1600,
+        "height": 1340
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 3049701,
+      "sha256": "593abca139d9a1c6edb9769727898b1f62f9e44f1e80bdf64a813dcfb417ea5b",
+      "qaOverlays": [
+        "safeBounds",
+        "compositionSlot.bottom-center-anchor"
+      ],
+      "includesPortraitPlacementPreviewPanels": true,
+      "candidateImagesContainQaOverlays": false
+    },
+    "portraitPlacementPreview": {
+      "imageSrc": "portrait-placement-preview--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/portrait-placement-preview--united-kingdom-london-tower-bridge--staging-v5--non-final.png",
+      "status": "non-final-qa-only",
+      "shippingEligible": false,
+      "dimensions": {
+        "width": 1200,
+        "height": 1940
+      },
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "byteLength": 3524876,
+      "sha256": "92402b3e375bd35b2ea2bdc75a11ac31b0ab97e5dd7cf00d7fd47eca282a2f0f",
+      "approvedPortraitSource": {
+        "archivePath": "docs/art/archive/asset-archive.v2.json",
+        "archiveByteLength": 100636,
+        "archiveSha256": "4b1d3e52a8aec0cb0941a7724db946b4cdc87a28b3cbaa3348b4cb5b62186df3",
+        "manifestPath": "docs/art/production/portraits/minho/manifest.json",
+        "manifestByteLength": 3121,
+        "manifestSha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+      },
+      "portraitPose": {
+        "id": "minho--walk--v01",
+        "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+        "byteLength": 500393,
+        "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+        "alphaBoundsPx": {
+          "x": 64,
+          "y": 494,
+          "width": 896,
+          "height": 466,
+          "bottomTransparentMargin": 64
+        }
+      },
+      "rendering": "Exact normalized anchors and nominal scales were applied to the full 1024x1024 Portrait canvas at 2x scene resolution, then Lanczos-downsampled for fractional-pixel accuracy.",
+      "sceneCandidatesRemainCatFree": true
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "united-kingdom-london-tower-bridge--day-signature--v03",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "variantId": "day-signature",
+      "version": "v03",
+      "name": "伦敦塔桥 · 日间标志景 v03",
+      "action": "supersede-active-revision",
+      "supersedes": "united-kingdom-london-tower-bridge--day-signature--v02",
+      "supersededRevisionDeleted": false,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--day-signature--v03.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--day-signature--v03.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "byteLength": 588,
+          "sha256": "742b58e66d60aaaf7ca4f6bb244d472843c74d19571dc09634c0d5a0805e8d24"
+        }
+      },
+      "byteLength": 1676536,
+      "sha256": "0e119d82a608d7eef656792053c02bd693ff836b269f09445d3c2c51d700b4d3",
+      "hasCompanion": false,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.42,
+        "y": 0.94,
+        "scale": 0.22,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.325,
+        "y": 0.71,
+        "width": 0.19,
+        "height": 0.24
+      },
+      "placementIntent": {
+        "framing": "foreground",
+        "narrativeWeight": "primary",
+        "depthBand": "foreground riverside promenade",
+        "targetScale": 0.22,
+        "allowedScaleBand": {
+          "min": 0.18,
+          "max": 0.28
+        },
+        "physicalSupport": "wide, dry, uninterrupted stone promenade paving with converging perspective",
+        "accessPlausibility": "ordinary public riverside pedestrian circulation supported by official Southwark riverside-walk text; the generated coordinate is generalized, not a surveyed or reserved position",
+        "poseFit": "walk pose follows the open promenade toward frame-right without entering the river edge or another travel track",
+        "clearSilhouette": "the approved silver Portrait remains readable against naturally varied ochre paving without a spotlight, outline, halo, or empty box",
+        "fullCanvasBounds": {
+          "x": 0.3375,
+          "y": 0.72,
+          "width": 0.165,
+          "height": 0.22
+        },
+        "visibleAlphaBounds": {
+          "x": 0.3478125,
+          "y": 0.8261328125,
+          "width": 0.144375,
+          "height": 0.1001171875
+        },
+        "visibleOpaqueBaseY": 0.92625,
+        "fullSilhouetteInsideImage": true,
+        "requiresForegroundOcclusion": false,
+        "overlapsPersonObjectRailPostVehicleBoatOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": "at least 6 including tiny distant walkers",
+          "naturalGrouping": "one readable loose offset pair occupies the left midground; separate center and right solos use different tracks; additional tiny walkers recede irregularly under the trees",
+          "loosePairPresent": true,
+          "soloWalkersPresent": true,
+          "depthVariation": "nearer pair and right solo, smaller center solo, and tiny distant walkers create several unequal depth bands",
+          "directionVariation": "the pair, center solo, and right profile walker have distinct front/back/profile travel impressions",
+          "lateralVariation": "readable figures occupy left, center, and right promenade tracks rather than one edge or centerline",
+          "gestureVariation": "the pair is offset while both clear solos have different arm and stride silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "surface": "Tower Bridge roadway only",
+          "trafficLevel": "light",
+          "genericMutedRedDoubleDeckerCountMaximum": 1,
+          "irregularIntervals": true,
+          "readablePlatesLogosLiveryRoutesOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "riverCraft": {
+          "present": true,
+          "countEstimate": 2,
+          "placement": "River Thames only",
+          "unequalDistanceDepthAndSpacing": true,
+          "genericAndUnbranded": true,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-staging-v5-2026-07-20",
+          "sourcePlan": "docs/art/landmark-staging-v5.json",
+          "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+          "promptJobId": "tower-bridge-staging-v5-day-signature-v03",
+          "variantBrief": "Lived-in daytime Thames view with a foreground walking Perch and natural, multi-track Ambient Life.",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 2,
+            "successfulImageArtifactCount": 2,
+            "selectedImageArtifactCount": 1,
+            "rejectedImageArtifactCount": 1,
+            "note": "The first result was retained as r01 after failing the edge-distribution requirement; the second passed normalized inspection."
+          },
+          "sourceArtifact": {
+            "filename": "scene--united-kingdom-london-tower-bridge--day-signature--v03-final.png",
+            "storage": "tool-managed-outside-repository",
+            "retainedInRepository": false,
+            "byteLength": 2709869,
+            "sha256": "550fa1c98b0ce5b6dbb7399f35247ddaa3c1822cae557e5eee227461e182a198",
+            "dimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "format": "png",
+            "mode": "RGB",
+            "alpha": "opaque",
+            "embeddedIccProfile": false
+          },
+          "styleIntensity": "B",
+          "referenceUse": "three locked style files supplied style only; v4 day and night scenes supplied Tower Bridge identity and style continuity only; no Portrait was supplied",
+          "normalization": {
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "processor": "Pillow 12.3.0",
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profileSha256": "742b58e66d60aaaf7ca4f6bb244d472843c74d19571dc09634c0d5a0805e8d24"
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "result": "pass-pending-formal-review",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "naturalPeopleDistribution": "pass",
+            "irregularTrafficAndBoatDistribution": "pass",
+            "foregroundPromenadePerch": "pass",
+            "noPlayerCatOrAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextPseudoTextLogoLiveryAdOrPlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pathAndFilename": "pass",
+            "pngSignature": "pass",
+            "dimensions1200x900": "pass",
+            "bitDepth8": "pass",
+            "opaqueRgbColorType": "pass",
+            "embeddedSrgbProfile": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The pair and solos span left, center, and right path tracks at unequal depth and scale. Generic traffic and two river craft are irregular. The lower-center Perch is continuous and unobstructed."
+        },
+        "portraitPreviewInspection": {
+          "performed": true,
+          "result": "pass-pending-formal-review",
+          "actualApprovedPoseUsed": true,
+          "feetOrBodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personObjectRailPostVehicleBoatOrHardShadowOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "localContrastWithoutSpotlight": true,
+          "notes": "At scale 0.22 the visible foot base meets foreground paving at y=0.92625; the full silhouette is clear of every circulation element."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "provenanceReferenceRightsReview": "pending",
+        "finalArtworkRightsReview": "pending",
+        "finalPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge--night-transit--v02",
+      "destinationId": "united-kingdom-london-tower-bridge",
+      "variantId": "night-transit",
+      "version": "v02",
+      "name": "伦敦塔桥 · 夜间通行 v02",
+      "action": "supersede-active-revision",
+      "supersedes": "united-kingdom-london-tower-bridge--night-transit--v01",
+      "supersededRevisionDeleted": false,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-kingdom-london-tower-bridge--night-transit--v02.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/scene--united-kingdom-london-tower-bridge--night-transit--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB built-in",
+          "byteLength": 588,
+          "sha256": "742b58e66d60aaaf7ca4f6bb244d472843c74d19571dc09634c0d5a0805e8d24"
+        }
+      },
+      "byteLength": 1870054,
+      "sha256": "a43b6173e30166aab65acc03e36dde3d7f8c7e11c11333d7280003671a26db17",
+      "hasCompanion": false,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.43,
+        "y": 0.79,
+        "scale": 0.125,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.375,
+        "y": 0.655,
+        "width": 0.11,
+        "height": 0.145
+      },
+      "placementIntent": {
+        "framing": "midground",
+        "narrativeWeight": "supporting",
+        "depthBand": "midground riverside path",
+        "targetScale": 0.125,
+        "allowedScaleBand": {
+          "min": 0.1,
+          "max": 0.17
+        },
+        "physicalSupport": "dry, readable stone riverside path with coherent night perspective",
+        "accessPlausibility": "ordinary public riverside pedestrian circulation; no bridge-road, parapet, controlled filming position, or private access is implied",
+        "poseFit": "walk pose follows the open path toward frame-right and remains separated from the river wall",
+        "clearSilhouette": "the silver Portrait has natural local contrast against blue-gray paving without a spotlight, outline, halo, or empty box",
+        "fullCanvasBounds": {
+          "x": 0.383125,
+          "y": 0.665,
+          "width": 0.09375,
+          "height": 0.125
+        },
+        "visibleAlphaBounds": {
+          "x": 0.388984375,
+          "y": 0.725302734375,
+          "width": 0.08203125,
+          "height": 0.056884765625
+        },
+        "visibleOpaqueBaseY": 0.7821875,
+        "fullSilhouetteInsideImage": true,
+        "requiresForegroundOcclusion": false,
+        "overlapsPersonObjectRailPostVehicleBoatOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": "at least 4 including distant silhouettes",
+          "naturalGrouping": "one loose offset pair uses the left path, a smaller solo recedes near center, and a separate profile solo occupies the right path",
+          "loosePairPresent": true,
+          "soloWalkersPresent": true,
+          "depthVariation": "the pair and right solo are larger at different depths while the center solo and distant figures step down irregularly",
+          "directionVariation": "pair, receding center solo, and right profile solo create distinct travel impressions rather than one synchronized flow",
+          "lateralVariation": "left pair, center solo, and right solo occupy multiple tracks across the broad route",
+          "gestureVariation": "pair members are offset; both solos have distinct stride and arm silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "surface": "Tower Bridge roadway only",
+          "trafficLevel": "sparse",
+          "irregularIntervals": true,
+          "readablePlatesLogosLiveryRoutesOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "riverCraft": {
+          "present": true,
+          "placement": "River Thames only",
+          "unequalDistanceDepthAndSpacing": true,
+          "genericAndUnbranded": true,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "night": {
+        "applicable": true,
+        "phase": "ordinary early night",
+        "ambientPalette": "low-saturation blue-gray",
+        "practicalLighting": "restrained warm bridge, route, and distant city lights",
+        "routeReadable": true,
+        "groundPlaneReadable": true,
+        "landmarkSilhouetteReadable": true,
+        "neonDominant": false,
+        "floatingLightOrbsAbsent": true,
+        "highlightsBlown": false,
+        "shadowsCrushed": false
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-staging-v5-2026-07-20",
+          "sourcePlan": "docs/art/landmark-staging-v5.json",
+          "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+          "promptJobId": "tower-bridge-staging-v5-night-transit-v02",
+          "variantBrief": "Ordinary early-night Thames route with a midground walking Perch and naturally staggered homebound activity.",
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 2,
+            "successfulImageArtifactCount": 2,
+            "selectedImageArtifactCount": 1,
+            "rejectedImageArtifactCount": 1,
+            "note": "The first result was retained as r01 after failing clear lateral/directional distribution; the second passed normalized inspection."
+          },
+          "sourceArtifact": {
+            "filename": "scene--united-kingdom-london-tower-bridge--night-transit--v02-final.png",
+            "storage": "tool-managed-outside-repository",
+            "retainedInRepository": false,
+            "byteLength": 3070135,
+            "sha256": "1fdf5ed391283c2de0e8bfcef918812490212a8e0306aebe12a4ffdab85c8c93",
+            "dimensions": {
+              "width": 1536,
+              "height": 1024
+            },
+            "format": "png",
+            "mode": "RGB",
+            "alpha": "opaque",
+            "embeddedIccProfile": false
+          },
+          "styleIntensity": "B",
+          "referenceUse": "three locked style files supplied style only; v4 day and night scenes supplied Tower Bridge identity and style continuity only; no Portrait was supplied",
+          "normalization": {
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "processor": "Pillow 12.3.0",
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profileSha256": "742b58e66d60aaaf7ca4f6bb244d472843c74d19571dc09634c0d5a0805e8d24"
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "result": "pass-pending-formal-review",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "naturalPeopleDistribution": "pass",
+            "irregularTrafficAndBoatDistribution": "pass",
+            "nightRouteAndGroundReadability": "pass",
+            "midgroundPathPerch": "pass",
+            "noPlayerCatOrAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextPseudoTextLogoLiveryAdOrPlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pathAndFilename": "pass",
+            "pngSignature": "pass",
+            "dimensions1200x900": "pass",
+            "bitDepth8": "pass",
+            "opaqueRgbColorType": "pass",
+            "embeddedSrgbProfile": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The left pair and center/right solos are distributed across unequal route tracks and depths. Lighting is restrained, traffic and craft are irregular, and the midground Perch stays clear."
+        },
+        "portraitPreviewInspection": {
+          "performed": true,
+          "result": "pass-pending-formal-review",
+          "actualApprovedPoseUsed": true,
+          "feetOrBodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personObjectRailPostVehicleBoatOrHardShadowOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "localContrastWithoutSpotlight": true,
+          "notes": "At nominal scale 0.125 the visible foot base meets the midground path at y=0.7821875; the full silhouette remains below and left of the river wall and clear of all walkers."
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "provenanceReferenceRightsReview": "pending",
+        "finalArtworkRightsReview": "pending",
+        "finalPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null,
+        "notes": ""
+      }
+    }
+  ],
+  "rejectedRevisions": {
+    "count": 2,
+    "artifacts": [
+      {
+        "variantId": "day-signature",
+        "candidateVersion": "v03",
+        "revision": "r01",
+        "imageSrc": "rejected--scene--united-kingdom-london-tower-bridge--day-signature--v03--r01.png",
+        "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/rejected--scene--united-kingdom-london-tower-bridge--day-signature--v03--r01.png",
+        "byteLength": 1761456,
+        "sha256": "34758e0ccf1fdcb0dba5eb60a346f1fc87fac061f4df138452264cfa01ad36ec",
+        "sourceArtifactSha256": "4ce0092482d471e4dc1ad1460403eba5fbabbe05dcf885806177370e1d5f3182",
+        "sourceArtifactByteLength": 2887560,
+        "reason": "Readable pedestrians were concentrated in the far-left promenade strip; the result did not provide sufficiently clear left/center/right lateral variation and risked an edge lineup."
+      },
+      {
+        "variantId": "night-transit",
+        "candidateVersion": "v02",
+        "revision": "r01",
+        "imageSrc": "rejected--scene--united-kingdom-london-tower-bridge--night-transit--v02--r01.png",
+        "repoPath": "docs/art/candidates/landmarks/staging-v5/united-kingdom-london-tower-bridge/rejected--scene--united-kingdom-london-tower-bridge--night-transit--v02--r01.png",
+        "byteLength": 1812849,
+        "sha256": "79cfdf79a2dc0818343ed347884854be39179db74cfafbe51da6f4fc8bbec078",
+        "sourceArtifactSha256": "44cb3051fab6bd709ee8726f8740812c400cb0ed3d8575e27c560c424e77b618",
+        "sourceArtifactByteLength": 2966059,
+        "reason": "The pair and solos remained concentrated on the left-side path and opposing travel direction was not visually explicit enough for the v5 Ambient Life gate."
+      }
+    ],
+    "retention": "Both normalized rejected revisions remain in the destination directory and are excluded from selected candidate counts."
+  },
+  "inspection": {
+    "performed": true,
+    "normalizedCandidateCount": 2,
+    "retainedRejectedRevisionCount": 2,
+    "visualInspectionCount": 4,
+    "portraitPreviewInspectionCount": 2,
+    "hardFailureCount": 0,
+    "hardConstraintViolations": [],
+    "machineChecksPassed": true,
+    "checks": {
+      "writesConfinedToDestinationDirectory": "pass",
+      "pathsAndFilenames": "pass",
+      "exactSelectedCandidateCount": "pass",
+      "rejectedRevisionsPreserved": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "exactAspectRatio4x3": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgb": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithExactCropAndLanczosWithoutDistortion": "pass",
+      "candidateScenesCatFree": "pass",
+      "qaOverlaysAbsentFromCandidates": "pass",
+      "contactAndPreviewSheetsOpaque": "pass",
+      "allFormalReviewsPending": "pass"
+    },
+    "result": "pass-pending-formal-review"
+  },
+  "rights": {
+    "researchUse": "official text facts only",
+    "officialSourcePhotoPixelsUsed": false,
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "shippingWarnings": [
+      "The selected candidates, rejected revisions, contact sheet, and Portrait preview are non-shipping pending human visual, Ambient Life, access/placement, provenance/reference-rights, final artwork-rights, and final Portrait-composite review.",
+      "Tower Bridge states that permanent structures may be photographed from public spaces, but controlled-location commercial filming and photography can require FilmApp permission; this does not automatically clear generated commercial game art.",
+      "Tower Bridge website photographs, graphics, maps, logos, page layouts, and text are not licensed into these candidates and were not retained; only URLs and paraphrased factual cues were used.",
+      "Existing Tower Bridge scenes were continuity references only; their pixels were not edited, collaged, traced, or copied.",
+      "Generic transport still requires final livery, trademark, plate, and implied-endorsement review.",
+      "Minho appears only in the non-final QA preview; both selected scene candidates remain Cat-free."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v5-human-visual-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-ambient-life-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-access-and-placement-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-provenance-reference-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-artwork-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-transport-livery-trademark-and-implied-endorsement-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-shipping-approval",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "accessAndPlacementReview": "pending",
+    "rightsReview": "pending",
+    "finalPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

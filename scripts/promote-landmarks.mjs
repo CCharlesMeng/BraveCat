@@ -10,6 +10,7 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import { isPortraitPose } from '../src/lib/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -186,7 +187,7 @@ const validateCompositionSlot = (slot, label) => {
     `${label}: slot scale must be in (0, 1]`,
   )
   assert(
-    ['sit', 'sleep', 'walk', 'eat', 'play', 'gaze'].includes(slot.pose),
+    isPortraitPose(slot.pose),
     `${label}: unsupported Portrait pose ${String(slot.pose)}`,
   )
   assert(typeof slot.flip === 'boolean', `${label}: slot flip must be boolean`)
@@ -440,6 +441,7 @@ assert(
 const compositeReviewApproved = Boolean(
   compositeManifest
     && compositeApproval
+    && compositeApproval.status !== 'superseded'
     && compositeManifest.status === 'approved'
     && compositeManifest.review?.decision === 'approved'
     && compositeApproval.decision === 'approved'
@@ -451,7 +453,10 @@ const compositeReviewApproved = Boolean(
     && compositeApproval.scope?.portraitId === 'minho'
     && compositeApproval.scope?.sceneCount === activeEntries.length,
 )
-if (compositeApproval) {
+if (
+  compositeApproval?.decision === 'approved'
+  && compositeApproval.status !== 'superseded'
+) {
   assert(
     compositeReviewApproved,
     'Minho composite approval does not match the active candidate set',

@@ -1,0 +1,857 @@
+{
+  "schemaVersion": 2,
+  "manifestKind": "portrait-watercolor-candidate-set",
+  "candidateSetId": "minho-watercolor-v2",
+  "generatedAt": "2026-07-21",
+  "status": "machine-qa-pass-pending-human-review",
+  "shippingEligible": false,
+  "portraitId": "minho",
+  "poseVocabulary": {
+    "source": "src/lib/assets/portraitPoseVocabulary.js",
+    "sha256": "7c4632db57f4d0f4882d1f532a3cad4808f614ed714dbcdf8a914d09e98a3b5a",
+    "poseCount": 10,
+    "poseIds": [
+      "sit",
+      "sleep",
+      "walk",
+      "eat",
+      "play",
+      "gaze",
+      "sniff",
+      "reach",
+      "stretch",
+      "greet"
+    ],
+    "entries": [
+      {
+        "id": "sit",
+        "baseline": true,
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-front-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      {
+        "id": "sleep",
+        "baseline": true,
+        "support": {
+          "surface": "broad-horizontal-perch",
+          "contacts": "torso-head-and-curled-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      {
+        "id": "walk",
+        "baseline": true,
+        "support": {
+          "surface": "continuous-horizontal-path",
+          "contacts": "load-bearing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      {
+        "id": "eat",
+        "baseline": true,
+        "support": {
+          "surface": "horizontal-perch",
+          "contacts": "standing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "eat",
+          "target": "food-vessel",
+          "source": "portrait-contained",
+          "targetZone": "below-and-ahead-of-muzzle"
+        }
+      },
+      {
+        "id": "play",
+        "baseline": true,
+        "support": {
+          "surface": "horizontal-perch",
+          "contacts": "hind-paws-and-bracing-front-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "play",
+          "target": "small-toy",
+          "source": "portrait-contained",
+          "targetZone": "within-front-paw-reach"
+        }
+      },
+      {
+        "id": "gaze",
+        "baseline": true,
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "observe",
+          "target": "distant-view",
+          "source": "scene-provided",
+          "targetZone": "along-head-and-eye-direction"
+        }
+      },
+      {
+        "id": "sniff",
+        "baseline": false,
+        "support": {
+          "surface": "continuous-horizontal-path",
+          "contacts": "standing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "sniff",
+          "target": "scent-source",
+          "source": "scene-provided",
+          "targetZone": "immediately-ahead-of-lowered-nose"
+        }
+      },
+      {
+        "id": "reach",
+        "baseline": false,
+        "support": {
+          "surface": "horizontal-perch-with-front-clearance",
+          "contacts": "hind-paws-and-bracing-front-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "reach",
+          "target": "reachable-scene-feature",
+          "source": "scene-provided",
+          "targetZone": "ahead-of-raised-front-paw"
+        }
+      },
+      {
+        "id": "stretch",
+        "baseline": false,
+        "support": {
+          "surface": "broad-horizontal-perch",
+          "contacts": "extended-front-paws-and-hind-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      {
+        "id": "greet",
+        "baseline": false,
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-supporting-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "greet",
+          "target": "viewer-or-companion",
+          "source": "scene-provided",
+          "targetZone": "along-face-and-raised-paw-direction"
+        }
+      }
+    ]
+  },
+  "poseCoverage": {
+    "required": 10,
+    "produced": 10,
+    "missing": []
+  },
+  "identity": {
+    "locks": {
+      "identityId": "minho-silver-shaded-v1",
+      "breedType": "round-headed-british-shorthair",
+      "eyeColor": "muted-blue-green",
+      "coat": "silver-shaded-with-soft-broad-bands",
+      "tail": "thick-tapered-with-soft-ring-markings",
+      "body": "compact-sturdy-athletic",
+      "nose": "soft-pink",
+      "accessories": "none"
+    },
+    "metadataSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7",
+    "machineCheck": "consistent-metadata-reference-on-all-poses",
+    "visualConsistencyReview": "pending-human-review"
+  },
+  "style": {
+    "direction": "user-approved-watercolor-c",
+    "rendering": "broad-watercolor-masses-with-sparse-warm-pencil-contour",
+    "eyeDetail": "subdued-flat-blue-green-washes-with-minimal-highlights",
+    "hairDetail": "simplified-coat-masses-without-individual-fur-rendering",
+    "contrast": "restrained",
+    "photorealisticFur": false
+  },
+  "contactSheet": {
+    "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/contact-sheet--minho-watercolor-v2--non-final.png",
+    "sha256": "eec655d8fba120da404679a9f50505719f8bbfc04999fae4f69e3a9f2ffddd74"
+  },
+  "alphaQaContactSheet": {
+    "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/contact-sheet--minho-watercolor-v2--alpha-qa--non-final.png",
+    "sha256": "c20075e5b7ead70021edbcd956c7aa10a5e44f01b51d1c29563ed5bb0bd3c219"
+  },
+  "contentSetSha256": "0634b7b70df8e80857844f6914599faeca2def64ddccc4dcd0384b77abf257ca",
+  "artifacts": [
+    {
+      "pose": "sit",
+      "semantics": {
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-front-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--sit--watercolor--v02.png",
+        "sha256": "a90ae9c9dd5afd2690d99fed078380b26c55adc4e5863e0974ca70444111e240"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--sit--watercolor--v02.png",
+        "sha256": "ce7eba633438eb727f4f321ca9a1336d7e6228877f7da995cb8f831e4b2816fb",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 217,
+          "y": 64,
+          "width": 590,
+          "height": 896
+        },
+        "marginsPx": {
+          "left": 217,
+          "top": 64,
+          "right": 217,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 700362,
+          "translucentPixelCount": 5644,
+          "opaquePixelCount": 342570,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "sleep",
+      "semantics": {
+        "support": {
+          "surface": "broad-horizontal-perch",
+          "contacts": "torso-head-and-curled-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--sleep--watercolor--v02.png",
+        "sha256": "d1c66c9eb70c732a700437c55ad95c0b34f3a883a32604a07ba0947c08ff48a7"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--sleep--watercolor--v02.png",
+        "sha256": "0dfdf000a9fab1b288ec8ff6c43a9839ae2d46dbad891e68cc6e11547028e919",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 377,
+          "width": 896,
+          "height": 583
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 377,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 647493,
+          "translucentPixelCount": 6078,
+          "opaquePixelCount": 395005,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "walk",
+      "semantics": {
+        "support": {
+          "surface": "continuous-horizontal-path",
+          "contacts": "load-bearing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--walk--watercolor--v02.png",
+        "sha256": "f8b529383f30f84be87b63b1eead6e35b8b0db95807b713bae9b7aef9d0c195a"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--walk--watercolor--v02.png",
+        "sha256": "ce88a97e06e1ecac6ae5431c251b9029b00a01a8181c1bcfc743bc73a5f79fe9",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 461,
+          "width": 896,
+          "height": 499
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 461,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 811653,
+          "translucentPixelCount": 8705,
+          "opaquePixelCount": 228218,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "eat",
+      "semantics": {
+        "support": {
+          "surface": "horizontal-perch",
+          "contacts": "standing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "eat",
+          "target": "food-vessel",
+          "source": "portrait-contained",
+          "targetZone": "below-and-ahead-of-muzzle"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--eat--watercolor--v02.png",
+        "sha256": "d4aeb5ce16120edbbb5ef24ba59d6a75a0e7e6fc19e0ea28f76cbfd12516bbc3"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--eat--watercolor--v02.png",
+        "sha256": "72e57bfb03fa01c2bfc3c5bc562fb2ff2afcd42a88745c71e667b7912e0a738b",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 368,
+          "width": 896,
+          "height": 592
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 368,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 696355,
+          "translucentPixelCount": 8695,
+          "opaquePixelCount": 343526,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "play",
+      "semantics": {
+        "support": {
+          "surface": "horizontal-perch",
+          "contacts": "hind-paws-and-bracing-front-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "play",
+          "target": "small-toy",
+          "source": "portrait-contained",
+          "targetZone": "within-front-paw-reach"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--play--watercolor--v02.png",
+        "sha256": "c90081b5ed77f7b259ee95e1ce5923e628a6765d7f62a3079ea78d5002fe2da2"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--play--watercolor--v02.png",
+        "sha256": "d26359b79b35a842e9c763ddeaec8fa4704189e7a443abf6fe8cfc930cf8ebc9",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 176,
+          "width": 896,
+          "height": 784
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 176,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 759996,
+          "translucentPixelCount": 8060,
+          "opaquePixelCount": 280520,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "gaze",
+      "semantics": {
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "observe",
+          "target": "distant-view",
+          "source": "scene-provided",
+          "targetZone": "along-head-and-eye-direction"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--gaze--watercolor--v02.png",
+        "sha256": "561880c888dde2ab973a3b4e56ea1b98339d12fbcc5d2b533a874db2b314bda5"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--gaze--watercolor--v02.png",
+        "sha256": "a2678d5d99331091316cd07185f542fe2f2c0506e45485a73cf2393abb7b93ab",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 249,
+          "y": 64,
+          "width": 526,
+          "height": 896
+        },
+        "marginsPx": {
+          "left": 249,
+          "top": 64,
+          "right": 249,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 748089,
+          "translucentPixelCount": 6033,
+          "opaquePixelCount": 294454,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "sniff",
+      "semantics": {
+        "support": {
+          "surface": "continuous-horizontal-path",
+          "contacts": "standing-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "sniff",
+          "target": "scent-source",
+          "source": "scene-provided",
+          "targetZone": "immediately-ahead-of-lowered-nose"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--sniff--watercolor--v02.png",
+        "sha256": "6bc0c6aac20c9ee6e698fc127492ca5228accf4a78694b1d7e40ad60f3197b1a"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--sniff--watercolor--v02.png",
+        "sha256": "67bf6d0edba57417f8f94cf1901be027deef28db498d7f136ead0612aa17dbf2",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 500,
+          "width": 896,
+          "height": 460
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 500,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 808538,
+          "translucentPixelCount": 8880,
+          "opaquePixelCount": 231158,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "reach",
+      "semantics": {
+        "support": {
+          "surface": "horizontal-perch-with-front-clearance",
+          "contacts": "hind-paws-and-bracing-front-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "reach",
+          "target": "reachable-scene-feature",
+          "source": "scene-provided",
+          "targetZone": "ahead-of-raised-front-paw"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--reach--watercolor--v02.png",
+        "sha256": "2f16a1b20f9246ea08fd673badd8aec6ecd7b7e20ccb086eed503273ac0956d4"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--reach--watercolor--v02.png",
+        "sha256": "cf2c4de39b006863222a092a69d650aa6756da293dac6e0b882c1c3052134a79",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 245,
+          "width": 896,
+          "height": 715
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 245,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 776521,
+          "translucentPixelCount": 8676,
+          "opaquePixelCount": 263379,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "stretch",
+      "semantics": {
+        "support": {
+          "surface": "broad-horizontal-perch",
+          "contacts": "extended-front-paws-and-hind-paws",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "none",
+          "target": "none",
+          "source": "none",
+          "targetZone": "none"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--stretch--watercolor--v02.png",
+        "sha256": "1caa7c93ab7498d3d2e10b194b3ad914c8cf096b897e4430987f5786b5108474"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--stretch--watercolor--v02.png",
+        "sha256": "9034b9c9f9ddca5822ee81819b981ad03dd046934fd47efaef6b7af0b2d142c1",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 64,
+          "y": 145,
+          "width": 896,
+          "height": 815
+        },
+        "marginsPx": {
+          "left": 64,
+          "top": 145,
+          "right": 64,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 761767,
+          "translucentPixelCount": 9409,
+          "opaquePixelCount": 277400,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    },
+    {
+      "pose": "greet",
+      "semantics": {
+        "support": {
+          "surface": "compact-horizontal-perch",
+          "contacts": "hindquarters-and-supporting-paw",
+          "anchor": "support-contact-bottom-center"
+        },
+        "interaction": {
+          "kind": "greet",
+          "target": "viewer-or-companion",
+          "source": "scene-provided",
+          "targetZone": "along-face-and-raised-paw-direction"
+        }
+      },
+      "identity": {
+        "identityId": "minho-silver-shaded-v1",
+        "identityLockSha256": "e287d63fa0b36fac108b99e163116093a0acfbbc61e5b40430a760b77bb0ecb7"
+      },
+      "matte": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/mattes/matte--minho--greet--watercolor--v02.png",
+        "sha256": "8ba7286e4cc429346d63f2cd111b98eb947b482b89478d5fbcf13557ebaa70b2"
+      },
+      "normalized": {
+        "repoPath": "docs/art/candidates/portraits/minho-watercolor-v2/poses/portrait--minho--greet--watercolor--v02.png",
+        "sha256": "f205e0ba9a925fa7c582fe44e67c6ba339d8e9b94812cdeac1a128e28154e264",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024,
+          "format": "png",
+          "colorSpace": "sRGB",
+          "alpha": "straight"
+        },
+        "contentBoundsPx": {
+          "x": 192,
+          "y": 65,
+          "width": 640,
+          "height": 895
+        },
+        "marginsPx": {
+          "left": 192,
+          "top": 65,
+          "right": 192,
+          "bottom": 64
+        },
+        "alphaQa": {
+          "transparentPixelCount": 699232,
+          "translucentPixelCount": 6502,
+          "opaquePixelCount": 342842,
+          "transparentPixelRgbZero": true,
+          "contentAlphaThreshold": 8
+        },
+        "colorQa": {
+          "colorSpace": "sRGB",
+          "embeddedIccProfile": true,
+          "bitDepth": 8,
+          "channels": 4,
+          "alpha": "straight"
+        }
+      }
+    }
+  ],
+  "machineQa": {
+    "result": "pass",
+    "checks": {
+      "canonicalPoseCoverage": true,
+      "png1024Square": true,
+      "rgba8Bit": true,
+      "embeddedSrgb": true,
+      "straightAlpha": true,
+      "transparentRgbZero": true,
+      "minimumMarginPx": 64,
+      "contentBoundsRecorded": true,
+      "artifactHashesRecorded": true,
+      "identityMetadataConsistent": true,
+      "contactSheetsRecorded": true
+    }
+  },
+  "review": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "requiredChecks": [
+      "minho-identity-consistency",
+      "watercolor-c-low-realism",
+      "pose-semantics",
+      "support-contact",
+      "interaction-target-fit",
+      "alpha-edge-quality"
+    ]
+  },
+  "remainingGate": "human-portrait-and-dedicated-scene-composite-approval-before-promotion"
+}

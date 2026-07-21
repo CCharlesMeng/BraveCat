@@ -1,0 +1,1080 @@
+{
+  "schemaVersion": 4,
+  "manifestKind": "landmark-enrichment-candidate-fragment",
+  "planId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v3-2026-07-20",
+  "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+  "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+  "destinationId": "united-states-new-york-brooklyn-bridge",
+  "destinationName": "纽约布鲁克林大桥",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseReferences": {
+    "candidateManifest": {
+      "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+      "byteLength": 328528,
+      "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+    },
+    "destinationFragment": {
+      "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+      "byteLength": 8842,
+      "sha256": "20a76d1929d85e1edc1134d14d1531e2bd600e2e8eebb7743291b7aed79aecb6"
+    },
+    "activeRevisionReferences": [
+      {
+        "id": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+        "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+        "byteLength": 1740304,
+        "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+        "referenceUse": "landmark identity and geometry continuity only",
+        "pixelsEditedOrCopied": false
+      },
+      {
+        "id": "united-states-new-york-brooklyn-bridge--golden-hour--v01",
+        "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+        "byteLength": 1689117,
+        "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06",
+        "referenceUse": "landmark identity and geometry continuity only",
+        "pixelsEditedOrCopied": false
+      }
+    ]
+  },
+  "supersession": {
+    "action": "supersede-active-revision",
+    "newRevisionId": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+    "supersedesActiveRevisionId": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+    "supersededRevisionDeleted": false,
+    "supersededRevisionPath": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+    "supersededRevisionSha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda",
+    "note": "day-signature v02 supersedes active v01 for the v4 candidate set; v01 remains immutable and is not deleted or modified."
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    }
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center",
+    "scaleMeaning": "rendered-portrait-height / scene-height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 3,
+    "generatedImageArtifactCount": 3,
+    "selectedCandidateCount": 3,
+    "rejectedImageArtifactCount": 0,
+    "retainedRejectedRevisionCount": 0,
+    "nonImageRateLimitedRequestCount": 2,
+    "variants": [
+      "day-signature--v02",
+      "night-transit--v01",
+      "sheltered-rest--v01"
+    ]
+  },
+  "referencePolicy": {
+    "styleReferences": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+        "byteLength": 5766015,
+        "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+      }
+    ],
+    "landmarkContinuityReferences": [
+      {
+        "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+        "byteLength": 1740304,
+        "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda"
+      },
+      {
+        "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+        "byteLength": 1689117,
+        "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06"
+      }
+    ],
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false
+  },
+  "artifacts": {
+    "socialContextResearch": {
+      "path": "social-context-research.md",
+      "repoPath": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/social-context-research.md",
+      "byteLength": 7892,
+      "sha256": "ca66a45d39dff0e28f61b2365b81fd368397fa47d6cdb07acc81cfb622ade3fd",
+      "sourceCount": 4,
+      "method": "text-only official/primary-source review; URLs and paraphrased facts retained; no source photographs retained"
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "united-states-new-york-brooklyn-bridge--day-signature--v02",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "day-signature",
+      "version": "v02",
+      "name": "纽约布鲁克林大桥 · 日间标志景 v02",
+      "action": "supersede-active-revision",
+      "supersedes": "united-states-new-york-brooklyn-bridge--day-signature--v01",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--day-signature--v02.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "byteLength": 1874511,
+      "sha256": "01dba9c8e8b387ddc0de9a3db87d67c255b55b0179817d72e3f5d9272c832256",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.28,
+        "y": 0.88,
+        "scale": 0.2,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.17,
+        "y": 0.66,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "countEstimate": 5,
+          "scale": "small-to-mid-distance",
+          "placement": "elevated pedestrian-only promenade, entirely outside safeBounds",
+          "identifiableFaces": false,
+          "stagedTowardViewer": false,
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 2,
+          "bicycleRidersEstimate": 2,
+          "trucksPresent": false,
+          "circulation": "cars in roadway lanes; cyclists in the separated protected roadway-level bicycle lane; none on the pedestrian promenade",
+          "logosOrLiveryReadable": false,
+          "platesReadable": false,
+          "routeTextOrAdsReadable": false,
+          "outsideSafeBounds": true
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true,
+        "playerCatPresent": false,
+        "otherAnimalsPresent": false,
+        "readableTextOrPseudoTextPresent": false
+      },
+      "night": {
+        "applicable": false,
+        "phase": "daylight",
+        "visualInspection": {
+          "performed": true,
+          "result": "not-applicable-daylight",
+          "notes": "Day candidate has soft natural daylight and no night-lighting claim."
+        }
+      },
+      "shelter": {
+        "applicable": false,
+        "visualInspection": {
+          "performed": true,
+          "result": "not-applicable",
+          "notes": "Open bridge crossing; no shelter claim."
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+          "baseCandidateManifest": {
+            "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+            "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+          },
+          "baseDestinationFragment": {
+            "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+            "sha256": "20a76d1929d85e1edc1134d14d1531e2bd600e2e8eebb7743291b7aed79aecb6"
+          },
+          "promptJobId": "brooklyn-bridge-enrichment-v4-day-signature-v02",
+          "variantBrief": "Lived-in daytime bridge view with a few small pedestrians, cyclists on the current protected roadway-level path, sparse roadway traffic, and the stone Gothic tower and cable geometry dominant.",
+          "prompt": {
+            "text": "Create one original scene-only 4:3 landscape illustration for the Brooklyn Bridge day-signature v02 candidate. The first three references lock the gentle hand-painted watercolor-and-colored-pencil style at intensity B (the middle B panel); use their soft ivory paper texture, fine warm-gray pencil lines, restrained pigment, airy detail, and calm postcard readability only. Do not reproduce any cat, animal, text, stamp, border, UI, or layout from those style references. The two approved Brooklyn scenes are landmark identity and geometry continuity references only: redraw a new original composition, do not edit, trace, collage, or copy their pixels.\n\nDepict a lived-in daytime crossing from the elevated wooden pedestrian promenade, approaching one light-gray granite Brooklyn Bridge tower. Preserve exactly two tall pointed Gothic arch openings, coherent tower massing, continuous draped main cables, plausible diagonal stays and vertical suspenders, railing, East River context, and a softly simplified Lower Manhattan skyline. The tower and cable geometry dominate. Show four or five tiny incidental mid-distance pedestrians on the pedestrian-only promenade, facing along the crossing rather than posing. Show one or two tiny cyclists only on the separate protected roadway-level bicycle lane glimpsed beyond/below the right railing, never on the wooden promenade. Add two or three small generic cars only in adjacent roadway lanes, no trucks. People must have no identifiable faces and remain visually secondary.\n\nReserve a clean, unmarked, low-detail Portrait walking area on wooden planks in the lower-left/lower-middle foreground, approximately x 14%–39% and y 62%–88% of the image; keep every person, bicycle, vehicle, cable termination, railing post, shadow, and prop outside that area. The empty area must still look like natural planking, with no box, glow, outline, anchor, guide, or placeholder.\n\nScene plate only. No player Cat, substitute cat, other cats, birds, dogs, animals, statues shaped like animals, close faces, crowds, staged poses, uniforms, readable text, pseudo-text, signs, plate characters, logos, livery, ads, trademarks, watermarks, dates, postmarks, frame, UI, guide marks, road markings with lettering, or unsafe circulation. No photorealism, 3D render, flat vector style, thick black outlines, hard gradients, malformed arches, extra towers, tangled cables, or copied pixels.",
+            "sha256": "06a32ab464f140b5aea63616a939ab6d3b4f7590331a0de0017c47555df0f86b"
+          },
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 1,
+            "successfulImageArtifactCount": 1,
+            "rateLimitedRequestCount": 0,
+            "rejectedImageArtifactCount": 0,
+            "note": "The first generation request produced the selected image and passed inspection."
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "style-only; reference cats, animals, text, borders, stamps, layouts, and UI were excluded",
+          "styleReferences": [
+            {
+              "path": "docs/art/style-ref-home.png",
+              "byteLength": 2734982,
+              "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+            },
+            {
+              "path": "docs/art/style-ref-postcard.png",
+              "byteLength": 3276006,
+              "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+            },
+            {
+              "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+              "byteLength": 5766015,
+              "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+            }
+          ],
+          "subjectReferenceUse": "approved Brooklyn scenes used only for landmark identity and geometry continuity; no pixels edited, collaged, traced, or copied",
+          "landmarkContinuityReferences": [
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+              "byteLength": 1740304,
+              "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda"
+            },
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+              "byteLength": 1689117,
+              "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06"
+            }
+          ],
+          "research": {
+            "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/social-context-research.md",
+            "sha256": "ca66a45d39dff0e28f61b2365b81fd368397fa47d6cdb07acc81cfb622ade3fd",
+            "use": "text-only factual circulation, lighting, social, and shelter context"
+          },
+          "normalization": {
+            "sourceArtifact": {
+              "filename": "scene--united-states-new-york-brooklyn-bridge--day-signature--v02-source.png",
+              "storage": "tool-managed-outside-repository",
+              "retainedInRepository": false,
+              "byteLength": 2982985,
+              "sha256": "9f3b7ebd87f521405695aaa5b62be77ff329db54fedbee8f58c2553e3505bacc",
+              "dimensions": {
+                "width": 1536,
+                "height": 1024
+              },
+              "format": "png",
+              "mode": "RGB",
+              "alpha": "opaque",
+              "embeddedIccProfile": false
+            },
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profile": {
+                "assignment": "embedded-icc",
+                "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+                "byteLength": 480,
+                "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+              }
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "normalizedDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "result": "pass",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "peoplePlacement": "pass",
+            "trafficAndBicyclePlacement": "pass",
+            "noPlayerCat": "pass",
+            "noOtherAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextOrPseudoText": "pass",
+            "noLogoLiveryAdOrReadablePlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pngSignature": "pass",
+            "pathAndFilename": "pass",
+            "dimensions": "pass",
+            "bitDepth": "pass",
+            "opaqueRgbColorType": "pass",
+            "srgbProfileEmbedded": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "Two pointed Gothic arches, light-gray tower massing, suspension cables, pedestrian promenade, separated bicycle lane, and roadway remain readable. Approximately five incidental back-facing or distant walkers, two small cyclists, and two generic cars remain outside the clean lower-left walking slot. No cat, animal, identifiable face, readable text, logo, plate, guide mark, or unsafe traffic placement was observed."
+        },
+        "review": {
+          "decision": "pending",
+          "humanVisualReview": "pending",
+          "socialContextReview": "pending",
+          "rightsReview": "pending",
+          "finalRealPortraitCompositeReview": "pending",
+          "reviewer": "",
+          "reviewedAt": null
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--night-transit--v01",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "night-transit",
+      "version": "v01",
+      "name": "纽约布鲁克林大桥 · 蓝调夜行",
+      "action": "add-active-variant",
+      "supersedes": null,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--night-transit--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "byteLength": 1900337,
+      "sha256": "fa10d9b3cc457cf88f44cf0d8bd61b134d197fceedc6277c770408c155fcdde8",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.28,
+        "y": 0.88,
+        "scale": 0.2,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.17,
+        "y": 0.66,
+        "width": 0.22,
+        "height": 0.22
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "countEstimate": 5,
+          "scale": "small-to-mid-distance",
+          "placement": "farther along the elevated pedestrian-only promenade, entirely outside safeBounds",
+          "identifiableFaces": false,
+          "stagedTowardViewer": false,
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 3,
+          "bicycleRidersEstimate": 1,
+          "trucksPresent": false,
+          "circulation": "cars in roadway lanes; cyclist in the separated protected roadway-level bicycle lane; none on the pedestrian promenade",
+          "logosOrLiveryReadable": false,
+          "platesReadable": false,
+          "routeTextOrAdsReadable": false,
+          "outsideSafeBounds": true
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true,
+        "playerCatPresent": false,
+        "otherAnimalsPresent": false,
+        "readableTextOrPseudoTextPresent": false
+      },
+      "night": {
+        "applicable": true,
+        "phase": "blue-hour",
+        "ambientPalette": "low-saturation blue-gray",
+        "practicalLighting": "restrained warm promenade lamps, tower illumination, and attached cable necklace lights",
+        "routeReadable": true,
+        "groundPlaneReadable": true,
+        "landmarkSilhouetteReadable": true,
+        "neonDominant": false,
+        "highlightsBlown": false,
+        "shadowsCrushed": false,
+        "visualInspection": {
+          "performed": true,
+          "result": "pass",
+          "notes": "The Manhattan-side wood-plank route is legible through the two arches; warm lamps remain restrained and all light points are physically attached to lamps, vehicles, buildings, or bridge cables."
+        }
+      },
+      "shelter": {
+        "applicable": false,
+        "visualInspection": {
+          "performed": true,
+          "result": "not-applicable",
+          "notes": "Transit crossing; no shelter claim."
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+          "baseCandidateManifest": {
+            "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+            "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+          },
+          "baseDestinationFragment": {
+            "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+            "sha256": "20a76d1929d85e1edc1134d14d1531e2bd600e2e8eebb7743291b7aed79aecb6"
+          },
+          "promptJobId": "brooklyn-bridge-enrichment-v4-night-transit-v01",
+          "variantBrief": "Blue-hour crossing with restrained warm bridge lamps, a few homebound walkers, a cyclist on the protected roadway-level path, sparse generic traffic, a readable Manhattan-side route, and a clear walking Portrait slot.",
+          "prompt": {
+            "text": "Create one original scene-only 4:3 landscape illustration for the Brooklyn Bridge night-transit v01 candidate. The first three references lock the gentle hand-painted watercolor-and-colored-pencil style at intensity B (the middle B panel); use their soft paper grain, fine warm-gray pencil lines, restrained washes, and calm readability only. Do not reproduce any cat, animal, text, stamp, border, UI, or layout from the style references. The two approved Brooklyn scenes are landmark identity and geometry continuity references only: redraw a new original composition, do not edit, trace, collage, or copy their pixels.\n\nShow a credible blue-hour crossing from Brooklyn toward Manhattan on the elevated wooden pedestrian promenade. One light-gray granite Brooklyn Bridge tower must remain recognizable with exactly two pointed Gothic arch openings, coherent massing, continuous draped main cables, plausible diagonal stays and vertical suspenders. Keep a readable promenade route leading through the arches toward a softly simplified Lower Manhattan skyline. Use a low-saturation blue-gray sky and river, restrained warm practical promenade lamps, gently illuminated tower surfaces, and a subtle necklace of cable lights—no theatrical color. Include three or four tiny homebound walkers far along the pedestrian-only promenade, non-identifiable and not posed. Include one tiny cyclist only in the separate protected roadway-level bicycle lane visible beyond/below the far right railing, and two or three tiny generic cars only on adjacent roadway lanes with restrained pinpoints of light. No bicycle on the promenade and no truck.\n\nReserve a clean, unmarked, well-lit Portrait walking area on dry wooden planks in the lower-left/lower-middle foreground, approximately x 15%–38% and y 64%–88%; keep every person, bicycle, vehicle, railing post, lamp, strong shadow, reflection, and prop outside it. The route and ground plane must remain legible there, but there must be no box, glow, outline, anchor, guide, or placeholder.\n\nScene plate only. No player Cat, substitute cat, other cats, birds, dogs, animals, close faces, crowds, nightlife spectacle, readable text, pseudo-text, signs, plate characters, logos, livery, route text, ads, trademarks, watermark, date, postmark, frame, UI, guide mark, floating light orb, neon dominance, blown highlights, black crushed shadows, long traffic streaks, photorealism, 3D render, flat vector style, thick black outlines, hard gradients, malformed arches, extra towers, tangled cables, or copied pixels.",
+            "sha256": "f99412af834cc86f520381730bb8ee0693a486517d35f032e5c4025bd8f261a9"
+          },
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 2,
+            "successfulImageArtifactCount": 1,
+            "rateLimitedRequestCount": 1,
+            "rejectedImageArtifactCount": 0,
+            "note": "One earlier HTTP 429 request produced no image artifact; the first successfully generated image passed inspection."
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "style-only; reference cats, animals, text, borders, stamps, layouts, and UI were excluded",
+          "styleReferences": [
+            {
+              "path": "docs/art/style-ref-home.png",
+              "byteLength": 2734982,
+              "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+            },
+            {
+              "path": "docs/art/style-ref-postcard.png",
+              "byteLength": 3276006,
+              "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+            },
+            {
+              "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+              "byteLength": 5766015,
+              "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+            }
+          ],
+          "subjectReferenceUse": "approved Brooklyn scenes used only for landmark identity and geometry continuity; no pixels edited, collaged, traced, or copied",
+          "landmarkContinuityReferences": [
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+              "byteLength": 1740304,
+              "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda"
+            },
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+              "byteLength": 1689117,
+              "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06"
+            }
+          ],
+          "research": {
+            "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/social-context-research.md",
+            "sha256": "ca66a45d39dff0e28f61b2365b81fd368397fa47d6cdb07acc81cfb622ade3fd",
+            "use": "text-only factual circulation, lighting, social, and shelter context"
+          },
+          "normalization": {
+            "sourceArtifact": {
+              "filename": "scene--united-states-new-york-brooklyn-bridge--night-transit--v01-source.png",
+              "storage": "tool-managed-outside-repository",
+              "retainedInRepository": false,
+              "byteLength": 3173962,
+              "sha256": "088673f648c5bd720b2b7c3952a578d4b0ee309061277e9fe0789b0790ef305b",
+              "dimensions": {
+                "width": 1536,
+                "height": 1024
+              },
+              "format": "png",
+              "mode": "RGB",
+              "alpha": "opaque",
+              "embeddedIccProfile": false
+            },
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profile": {
+                "assignment": "embedded-icc",
+                "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+                "byteLength": 480,
+                "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+              }
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "normalizedDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "result": "pass",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "peoplePlacement": "pass",
+            "trafficAndBicyclePlacement": "pass",
+            "noPlayerCat": "pass",
+            "noOtherAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextOrPseudoText": "pass",
+            "noLogoLiveryAdOrReadablePlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pngSignature": "pass",
+            "pathAndFilename": "pass",
+            "dimensions": "pass",
+            "bitDepth": "pass",
+            "opaqueRgbColorType": "pass",
+            "srgbProfileEmbedded": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "The blue-hour route, two pointed arches, tower, cables, skyline, and wooden ground plane remain readable without neon dominance or crushed shadows. Distant walkers, the protected-lane cyclist, and roadway cars remain outside the clean lower-left walking slot. No cat, animal, identifiable face, readable text, logo, plate, floating light orb, guide mark, or unsafe circulation was observed."
+        },
+        "review": {
+          "decision": "pending",
+          "humanVisualReview": "pending",
+          "socialContextReview": "pending",
+          "rightsReview": "pending",
+          "finalRealPortraitCompositeReview": "pending",
+          "reviewer": "",
+          "reviewedAt": null
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge--sheltered-rest--v01",
+      "destinationId": "united-states-new-york-brooklyn-bridge",
+      "variantId": "sheltered-rest",
+      "version": "v01",
+      "name": "纽约布鲁克林大桥 · 临水避风歇息处",
+      "action": "add-active-variant",
+      "supersedes": null,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--united-states-new-york-brooklyn-bridge--sheltered-rest--v01.png",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "byteLength": 1907566,
+      "sha256": "c6277073f28f5a2ba542e0d9d0f06aff6edcab322f355ad6d0fa143b46e5d18b",
+      "hasCompanion": false,
+      "companion": null,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.3,
+        "y": 0.82,
+        "scale": 0.13,
+        "pose": "sleep",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.13,
+        "y": 0.68,
+        "width": 0.34,
+        "height": 0.15
+      },
+      "socialContent": {
+        "policy": "v4-lived-in-context",
+        "people": {
+          "present": true,
+          "countEstimate": 3,
+          "insideShelterCount": 0,
+          "scale": "tiny distant",
+          "placement": "exterior waterfront path only, entirely outside safeBounds",
+          "identifiableFaces": false,
+          "stagedTowardViewer": false,
+          "outsideSafeBounds": true
+        },
+        "vehicles": {
+          "present": false,
+          "genericCarsEstimate": 0,
+          "bicycleRidersEstimate": 0,
+          "trucksPresent": false,
+          "circulation": "no vehicle is discernible in the shelter composition",
+          "logosOrLiveryReadable": false,
+          "platesReadable": false,
+          "routeTextOrAdsReadable": false,
+          "outsideSafeBounds": true
+        },
+        "peopleAndVehiclesOutsideSafeBounds": true,
+        "playerCatPresent": false,
+        "otherAnimalsPresent": false,
+        "readableTextOrPseudoTextPresent": false
+      },
+      "night": {
+        "applicable": true,
+        "phase": "blue-hour exterior",
+        "ambientPalette": "cool blue-gray river and sky with restrained pink dusk residue",
+        "practicalLighting": "warm shielded interior pendants and restrained exterior path lamps",
+        "landmarkSilhouetteReadable": true,
+        "neonDominant": false,
+        "highlightsBlown": false,
+        "shadowsCrushed": false,
+        "visualInspection": {
+          "performed": true,
+          "result": "pass",
+          "notes": "Warm interior/cool exterior separation remains readable without theatrical or branded lighting."
+        }
+      },
+      "shelter": {
+        "applicable": true,
+        "context": "generalized public-facing DUMBO waterfront warehouse café or waiting lounge",
+        "venueIdentityGeneralized": true,
+        "brandedTradeDressPresent": false,
+        "sleepSurface": "broad unbranded cushioned window bench",
+        "dry": true,
+        "warm": true,
+        "protected": true,
+        "grounded": true,
+        "sleepable": true,
+        "landmarkVisibleOutside": true,
+        "permissionToSleepClaimed": false,
+        "petAccessClaimed": false,
+        "visualInspection": {
+          "performed": true,
+          "result": "pass",
+          "notes": "The bench is broad, dry, warmly lit, and free of clutter; the bridge tower, both pointed openings, cables, deck, and East River remain recognizable through the large opening."
+        }
+      },
+      "production": {
+        "provenance": {
+          "sourcePlanId": "miaoyouji-landmark-enrichment-v4-2026-07-20",
+          "sourcePlan": "docs/art/landmark-enrichment-v4.json",
+          "sourcePlanSha256": "d2356e555e59acaa68ac9a020ad5457653d43267c485d8f245de2a1887e122a5",
+          "baseCandidateManifest": {
+            "path": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+            "sha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c"
+          },
+          "baseDestinationFragment": {
+            "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/manifest.fragment.json",
+            "sha256": "20a76d1929d85e1edc1134d14d1531e2bd600e2e8eebb7743291b7aed79aecb6"
+          },
+          "promptJobId": "brooklyn-bridge-enrichment-v4-sheltered-rest-v01",
+          "variantBrief": "Warm generalized waterfront warehouse café or waiting-lounge interior with the Brooklyn Bridge and East River visible outside, sparse exterior passersby, and an unmarked cushioned sleep slot.",
+          "prompt": {
+            "text": "Create one original scene-only 4:3 landscape illustration for the Brooklyn Bridge sheltered-rest v01 candidate. The first three references lock the gentle hand-painted watercolor-and-colored-pencil style at intensity B (the middle B panel); use their soft ivory paper texture, fine warm-gray pencil lines, restrained pigment, and quiet cozy atmosphere only. Do not reproduce any cat, animal, text, stamp, border, UI, or layout from the style references. The two approved Brooklyn scenes are landmark identity and geometry continuity references only: redraw a new original composition, do not edit, trace, collage, or copy their pixels.\n\nDepict a generalized public-facing waterfront warehouse café or waiting-lounge interior in DUMBO at calm blue hour, inspired only by factual red-brick/schist adaptive-reuse context and not by any specific tenant trade dress. The interior must feel genuinely dry, warm, protected, quiet, and sleepable: warm amber practical light, plain timber, muted brick or stone, and a broad unbranded cushioned window bench in the foreground. Through one large clear window or open arcade bay, show the East River and a strongly recognizable side view of the Brooklyn Bridge: one light-gray granite Gothic tower with exactly two pointed arch openings, coherent deck, continuous draped main cables, plausible diagonal stays and vertical suspenders. Keep the tower large enough to identify, not a tiny distant icon. Outside only, include two or three tiny distant park passersby, non-identifiable and away from the reserved seat.\n\nReserve a clean, unmarked, low-detail horizontal Portrait sleeping area across the plain window bench in the lower-left/lower-middle foreground, approximately x 12%–47% and y 62%–82%. Keep all people, cups, dishes, bags, plants, books, seams, cushion buttons, strong shadows, window mullions, and service objects outside that area. The surface must be visibly wide, dry, stable, and softly cushioned, with no box, glow, outline, anchor, guide, pet bed, or placeholder.\n\nScene plate only. No player Cat, substitute cat, other cats, birds, dogs, animals, animal décor, people inside the shelter, identifiable faces, branded furniture, readable menu, readable text, pseudo-text, signs, plate characters, logos, tenant marks, livery, ads, trademarks, watermarks, dates, postmarks, frame, UI, guide marks, luxury-product placement, hotel identity, private-residence identity, clutter in the sleeping area, rain entering the room, photorealism, 3D render, flat vector style, thick black outlines, hard gradients, malformed arches, extra towers, tangled cables, or copied pixels.",
+            "sha256": "96fa15538f18783dd580acd8e352decf4297eb734b5b80c795c29490fd4bee65"
+          },
+          "generator": {
+            "tool": "Cursor GenerateImage",
+            "model": null,
+            "seed": null,
+            "modelAndSeedNote": "Generation tool did not report model or seed."
+          },
+          "generatedAt": "2026-07-20",
+          "generationRequestAudit": {
+            "requestCount": 2,
+            "successfulImageArtifactCount": 1,
+            "rateLimitedRequestCount": 1,
+            "rejectedImageArtifactCount": 0,
+            "note": "One earlier HTTP 429 request produced no image artifact; the first successfully generated image passed inspection."
+          },
+          "styleIntensity": "B",
+          "styleReferenceUse": "style-only; reference cats, animals, text, borders, stamps, layouts, and UI were excluded",
+          "styleReferences": [
+            {
+              "path": "docs/art/style-ref-home.png",
+              "byteLength": 2734982,
+              "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+            },
+            {
+              "path": "docs/art/style-ref-postcard.png",
+              "byteLength": 3276006,
+              "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+            },
+            {
+              "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+              "byteLength": 5766015,
+              "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33"
+            }
+          ],
+          "subjectReferenceUse": "approved Brooklyn scenes used only for landmark identity and geometry continuity; no pixels edited, collaged, traced, or copied",
+          "landmarkContinuityReferences": [
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.png",
+              "byteLength": 1740304,
+              "sha256": "75b2395fcff9294f13096e04cc78f4fb014d9a7f8505947b9bd90ef5e26d5fda"
+            },
+            {
+              "path": "docs/art/candidates/landmarks/united-states-new-york-brooklyn-bridge/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.png",
+              "byteLength": 1689117,
+              "sha256": "1c3ec44e08573689a0e5107d3cab701564766e3a43876b24658a3829e0b1ad06"
+            }
+          ],
+          "research": {
+            "path": "docs/art/candidates/landmarks/enrichment-v4/united-states-new-york-brooklyn-bridge/social-context-research.md",
+            "sha256": "ca66a45d39dff0e28f61b2365b81fd368397fa47d6cdb07acc81cfb622ade3fd",
+            "use": "text-only factual circulation, lighting, social, and shelter context"
+          },
+          "normalization": {
+            "sourceArtifact": {
+              "filename": "scene--united-states-new-york-brooklyn-bridge--sheltered-rest--v01-source.png",
+              "storage": "tool-managed-outside-repository",
+              "retainedInRepository": false,
+              "byteLength": 3190373,
+              "sha256": "dbcd7156643af52eef1ce16e83fb40fb2d15d352d1b7e7edf9400f4c7f97ef3a",
+              "dimensions": {
+                "width": 1536,
+                "height": 1024
+              },
+              "format": "png",
+              "mode": "RGB",
+              "alpha": "opaque",
+              "embeddedIccProfile": false
+            },
+            "exactAspectCrop": {
+              "strategy": "largest centered integer crop with exact 4:3 ratio; one-pixel vertical remainder removed at bottom",
+              "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+              "left": 86,
+              "top": 0,
+              "right": 1450,
+              "bottom": 1023,
+              "width": 1364,
+              "height": 1023,
+              "aspectRatio": "4:3"
+            },
+            "resize": {
+              "width": 1200,
+              "height": 900,
+              "kernel": "Lanczos3"
+            },
+            "colorManagement": {
+              "inputInterpretation": "sRGB",
+              "outputColorSpace": "sRGB",
+              "outputProfileAssignedAndEmbedded": true,
+              "profile": {
+                "assignment": "embedded-icc",
+                "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+                "byteLength": 480,
+                "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+              }
+            },
+            "output": "1200x900 8-bit opaque RGB PNG with embedded sRGB ICC profile",
+            "distortionApplied": false
+          }
+        },
+        "inspection": {
+          "performed": true,
+          "inspectedAtNormalizedSize": true,
+          "normalizedDimensions": {
+            "width": 1200,
+            "height": 900
+          },
+          "result": "pass",
+          "hardFailure": false,
+          "hardConstraintViolations": [],
+          "visualChecklist": {
+            "landmarkFidelity": "pass",
+            "peoplePlacement": "pass",
+            "trafficAndBicyclePlacement": "pass",
+            "noPlayerCat": "pass",
+            "noOtherAnimal": "pass",
+            "noIdentifiableFace": "pass",
+            "noReadableTextOrPseudoText": "pass",
+            "noLogoLiveryAdOrReadablePlate": "pass",
+            "noGuideOrSafeBoundMarksInCandidate": "pass",
+            "safeBoundsClear": "pass"
+          },
+          "machineChecks": {
+            "passed": true,
+            "pngSignature": "pass",
+            "pathAndFilename": "pass",
+            "dimensions": "pass",
+            "bitDepth": "pass",
+            "opaqueRgbColorType": "pass",
+            "srgbProfileEmbedded": "pass",
+            "sha256Recorded": "pass"
+          },
+          "notes": "A warm dry window bench provides a plausible low-detail sleeping surface while the bridge remains recognizable outside. Three tiny exterior passersby remain far to the right and outside safeBounds; there are no people inside. No cat, animal, identifiable face, readable text, menu, logo, tenant mark, plate, guide mark, pet bed, private-residence cue, or luxury-product placement was observed."
+        },
+        "review": {
+          "decision": "pending",
+          "humanVisualReview": "pending",
+          "socialContextReview": "pending",
+          "rightsReview": "pending",
+          "finalRealPortraitCompositeReview": "pending",
+          "reviewer": "",
+          "reviewedAt": null
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "socialContextReview": "pending",
+        "rightsReview": "pending",
+        "finalRealPortraitCompositeReview": "pending",
+        "reviewer": "",
+        "reviewedAt": null
+      }
+    }
+  ],
+  "contactSheet": {
+    "imageSrc": "contact-sheet--united-states-new-york-brooklyn-bridge--enrichment-v4--non-final.png",
+    "status": "non-final",
+    "candidate": true,
+    "shippingEligible": false,
+    "dimensions": {
+      "width": 2100,
+      "height": 660
+    },
+    "format": "png",
+    "colorSpace": "sRGB",
+    "bitDepth": 8,
+    "alpha": "opaque",
+    "mode": "RGB",
+    "profile": {
+      "assignment": "embedded-icc",
+      "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+      "byteLength": 480,
+      "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+    },
+    "byteLength": 1730671,
+    "sha256": "d58412ce3b2bc8c8ddf713dd7d5dd5a33d9902fb7b97d985ee7dd76852df5453",
+    "labels": [
+      "day-signature · v02 · walk",
+      "night-transit · v01 · walk",
+      "sheltered-rest · v01 · sleep"
+    ],
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.bottom-center-anchor"
+    ],
+    "candidateImagesContainQaOverlays": false,
+    "review": {
+      "decision": "pending",
+      "reviewer": "",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  },
+  "inspection": {
+    "performed": true,
+    "normalizedCandidateCount": 3,
+    "visualInspectionCount": 3,
+    "hardFailureCount": 0,
+    "hardConstraintViolations": [],
+    "machineChecksPassed": true,
+    "checks": {
+      "pathsAndFilenames": "pass",
+      "exactCandidateCount": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgbColorType2": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithoutDistortion": "pass",
+      "contactSheetOpaquePng": "pass",
+      "qaOverlaysAbsentFromCandidates": "pass"
+    },
+    "supersededRevisionCount": 0,
+    "rejectedRevisionCount": 0,
+    "result": "pass-pending-human-review"
+  },
+  "rights": {
+    "researchUse": "official/primary-source factual context only",
+    "researchSourceCount": 4,
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "baseDestinationRightsRisk": "low",
+    "v4EnrichmentDisposition": "pending-social-night-shelter-venue-and-source-independence-review",
+    "shippingWarnings": [
+      "Generated candidates remain non-shipping pending human visual, social-context, provenance/reference-rights, venue/trade-dress, final artwork-rights, and final real-Portrait composite review.",
+      "Official source photographs, maps, logos, page layouts, trade dress, and text are not licensed into these candidates and were not retained; only URLs and paraphrased factual cues were used.",
+      "The generalized shelter composition does not claim venue endorsement, permission to sleep, after-hours access, or animal access."
+    ]
+  },
+  "provenanceAndRights": {
+    "restrictedSourcePhotoRetained": false,
+    "warnings": [
+      "Generated candidates remain non-shipping pending human visual, social-context, provenance/reference-rights, venue/trade-dress, final artwork-rights, and final real-Portrait composite review.",
+      "No official or venue source photograph was retained or used as a generation reference; approved Brooklyn scenes were continuity references only and their pixels were not edited or copied.",
+      "The shelter is generalized and does not claim endorsement or permission to sleep or bring an animal into a venue."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v4-human-visual-review",
+      "status": "pending",
+      "scope": "landmark fidelity, people/traffic placement, night readability, shelter believability, and clear Portrait safeBounds"
+    },
+    {
+      "id": "v4-social-context-review",
+      "status": "pending",
+      "scope": "current bridge circulation and incidental-people plausibility"
+    },
+    {
+      "id": "v4-provenance-reference-rights-review",
+      "status": "pending",
+      "scope": "source independence and approved-reference usage"
+    },
+    {
+      "id": "v4-venue-trade-dress-and-artwork-rights-review",
+      "status": "pending",
+      "scope": "generalized waterfront interior, marks, and final artwork rights"
+    },
+    {
+      "id": "v4-final-real-portrait-composite-review",
+      "status": "pending",
+      "scope": "walk and sleep Portrait placement after exact active-set approval"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "socialContextReview": "pending",
+    "rightsReview": "pending",
+    "finalRealPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

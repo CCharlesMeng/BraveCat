@@ -323,6 +323,86 @@ main {
   content: "";
 }
 
+/*
+ * Candidate home art is rendered only from public/dev-art. Production retains
+ * the CSS room above until the candidate set passes its shipping gate.
+ */
+.home-art-preview {
+  background: transparent;
+}
+
+.home-art-preview::after {
+  display: none;
+}
+
+.home-art-canvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.home-art-layer,
+.home-art-cat {
+  position: absolute;
+  display: block;
+}
+
+.home-art-layer {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.home-art-cat {
+  z-index: 2;
+  object-fit: contain;
+}
+
+.home-art-lighting {
+  z-index: 3;
+}
+
+.home-art-preview .sunwash,
+.home-art-preview .window-sky,
+.home-art-preview .window-hill,
+.home-art-preview .window-frame,
+.home-art-preview .wall-note,
+.home-art-preview .side-table {
+  display: none;
+}
+
+.home-art-preview .window {
+  z-index: 5;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  box-shadow: none;
+}
+
+.home-art-preview .windowsill {
+  top: 54%;
+  right: auto;
+  bottom: auto;
+  left: 22%;
+  width: 24%;
+  height: 13%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 .sunwash {
   position: absolute;
   z-index: 1;
@@ -842,21 +922,19 @@ main {
   width: 58px;
   height: 58px;
   place-items: center;
-  border: 1px solid rgba(74, 75, 61, 0.56);
-  border-radius: 19px;
-  background:
-    radial-gradient(rgba(89, 78, 55, 0.06) 0.6px, transparent 0.7px) 0 0 / 5px 5px,
-    #f8f3e6;
-  box-shadow: 0 5px 12px rgba(69, 65, 49, 0.09);
-  color: #69775c;
-  font-size: 1.1rem;
-  font-weight: 650;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  object-fit: contain;
+  transition: transform 150ms ease;
 }
 
 .home-nav button:hover .nav-icon {
   transform: translateY(-2px);
-  box-shadow: 0 7px 14px rgba(69, 65, 49, 0.13);
+  box-shadow: none;
 }
 
 .status-line {
@@ -1142,18 +1220,16 @@ main {
 }
 
 .item-token {
-  display: grid;
+  display: block;
   width: 46px;
   height: 46px;
-  place-items: center;
-  border: 1px solid rgba(81, 84, 67, 0.3);
-  border-radius: 15px;
-  background:
-    radial-gradient(rgba(87, 78, 59, 0.06) 0.6px, transparent 0.7px) 0 0 / 5px 5px,
-    #eee7d3;
-  color: #657157;
-  font-size: 1rem;
-  font-weight: 650;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0;
+  font-weight: normal;
+  object-fit: contain;
 }
 
 .item-copy {
@@ -1318,6 +1394,153 @@ main {
   color: var(--ink-soft);
   font-size: 0.76rem;
   line-height: 1.8;
+}
+
+.treat-balance img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.pack-art {
+  position: relative;
+  width: 100%;
+  max-width: 382px;
+  margin: 14px auto 4px;
+  aspect-ratio: 1;
+}
+
+.pack-layer,
+.pack-item {
+  position: absolute;
+}
+
+.pack-layer {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pack-item {
+  z-index: 1;
+  height: auto;
+  transform-origin: center;
+}
+
+.pack-rim {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.drawer-close img,
+.save-transfer-actions img {
+  width: 18px;
+  height: 18px;
+}
+
+.save-transfer-actions button,
+.save-transfer-actions label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.album-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border-radius: 14px;
+  background: rgba(123, 137, 101, 0.12);
+}
+
+.album-tabs button {
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.69rem;
+}
+
+.album-tabs button.active {
+  border-color: rgba(81, 84, 67, 0.22);
+  background: rgba(255, 252, 241, 0.82);
+  box-shadow: 0 3px 8px rgba(69, 65, 49, 0.07);
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.album-tabs span {
+  margin-left: 5px;
+  color: #78836b;
+  font-size: 0.61rem;
+}
+
+.souvenir-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0 2px 8px;
+  list-style: none;
+}
+
+.souvenir-card {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: 17px 10px 14px;
+  border: 1px solid rgba(82, 82, 67, 0.22);
+  border-radius: 17px;
+  background: rgba(255, 252, 241, 0.58);
+  text-align: center;
+}
+
+.souvenir-token,
+.souvenir-art {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 11px;
+  border: 1px solid rgba(81, 84, 67, 0.3);
+  border-radius: 18px;
+}
+
+.souvenir-token {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(rgba(87, 78, 59, 0.06) 0.6px, transparent 0.7px) 0 0 / 5px 5px,
+    #eee7d3;
+  color: #657157;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.souvenir-art {
+  object-fit: contain;
+}
+
+.souvenir-card h3 {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.souvenir-card p,
+.souvenir-card time {
+  margin: 4px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.62rem;
+}
+
+.album-empty-art {
+  width: clamp(160px, 52vw, 192px);
+  height: auto;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 600px) {

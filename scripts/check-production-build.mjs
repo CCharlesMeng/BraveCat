@@ -65,6 +65,11 @@ for (const imageSrc of Object.values(portraitManifest.portrait.poses)) {
 }
 
 const sceneOutputRoot = path.join(distRoot, 'scenes')
+const developmentPreviewOutputRoot = path.join(distRoot, 'dev-art')
+const developmentHomeArtPreviewOutputRoot = path.join(
+  developmentPreviewOutputRoot,
+  'home-v3',
+)
 const serviceWorker = await readFile(path.join(distRoot, 'sw.js'), 'utf8')
 const applicationJavascript = (
   await Promise.all(
@@ -79,6 +84,22 @@ const applicationJavascript = (
 assert(
   !applicationJavascript.includes('treat-grant'),
   'development treat grant control leaked into the production build',
+)
+assert(
+  !(await exists(developmentPreviewOutputRoot)),
+  'development-only art preview leaked into the production build',
+)
+assert(
+  !(await exists(developmentHomeArtPreviewOutputRoot)),
+  'non-shipping home art preview leaked into the production build',
+)
+assert(
+  !serviceWorker.includes('dev-art/latest-v5'),
+  'service worker caches development-only art preview assets',
+)
+assert(
+  !serviceWorker.includes('dev-art/home-v3'),
+  'service worker caches non-shipping home art preview assets',
 )
 if (landmarkManifest.shippingEligible) {
   const expectedScenes = landmarkManifest.destinations.flatMap(

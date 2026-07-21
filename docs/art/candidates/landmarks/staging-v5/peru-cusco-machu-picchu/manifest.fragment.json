@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 5,
+  "manifestKind": "landmark-staging-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "baseCandidateManifest": {
+    "repoPath": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+    "byteLength": 427223,
+    "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+  },
+  "destinationId": "peru-cusco-machu-picchu",
+  "destinationName": "马丘比丘",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseV4": {
+    "destinationFragment": {
+      "repoPath": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/manifest.fragment.json",
+      "byteLength": 5853,
+      "sha256": "fd5f1e972e5e6fe877891d1e1c3336e160fc037a2eb742b2ed7616988814e9aa"
+    },
+    "activeSceneVariantIds": [
+      "peru-cusco-machu-picchu--day-signature--v01",
+      "peru-cusco-machu-picchu--golden-hour--v01"
+    ],
+    "continuityReference": {
+      "id": "peru-cusco-machu-picchu--day-signature--v01",
+      "repoPath": "docs/art/candidates/landmarks/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--day-signature--v01.png",
+      "byteLength": 1927354,
+      "sha256": "b8e1209e90686370fb8a37ae0f863beca058dac0fab3e8cedafcecf0523879f4",
+      "referenceUse": "destination identity, broad geography, and style continuity only",
+      "pixelsEditedCollagedTracedOrCopied": false
+    }
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    },
+    "candidateScenesCatFree": true,
+    "portraitPreviewQaOnly": true
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center of the full Portrait canvas",
+    "scaleMeaning": "rendered Portrait canvas height / scene height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 1,
+    "generateImageRequestCount": 2,
+    "failedRequestCount": 1,
+    "successfulImageArtifactCount": 1,
+    "selectedCandidateCount": 1,
+    "rejectedImageArtifactCount": 0,
+    "retainedRejectedRevisionCount": 0,
+    "variants": [
+      "distant-overlook--v01"
+    ]
+  },
+  "supersession": [
+    {
+      "action": "add-active-variant",
+      "newRevisionId": "peru-cusco-machu-picchu--distant-overlook--v01",
+      "supersedesActiveRevisionId": null,
+      "supersededRevisionDeleted": false,
+      "note": "This v5 candidate adds a new active semantic variant and leaves both v4 active scenes byte-for-byte unchanged."
+    }
+  ],
+  "referencePolicy": {
+    "generationStyleReferences": [
+      {
+        "repoPath": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "repoPath": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "repoPath": "docs/art/style-ref-poses.png",
+        "byteLength": 2404407,
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+      }
+    ],
+    "lockedIntensityCalibrationConsulted": {
+      "repoPath": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+      "byteLength": 5766015,
+      "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+      "panel": "B"
+    },
+    "styleReferenceUse": "style-only; all reference cats, animals, text, borders, postmarks, layouts, and UI were excluded",
+    "landmarkContinuityReferenceUse": "destination identity and broad geographic continuity only; a wholly new composition was generated",
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false,
+    "portraitUsedAsGenerationReference": false
+  },
+  "sceneContactSheet": {
+    "kind": "scene-contact-sheet",
+    "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/scene-contact-sheet--peru-cusco-machu-picchu--staging-v5--non-final.png",
+    "imageSrc": "scene-contact-sheet--peru-cusco-machu-picchu--staging-v5--non-final.png",
+    "byteLength": 1178640,
+    "sha256": "06f4e94578b6fc37ad17adb3198c49757948e18e900f8b31fd75d137b2a3bd27",
+    "dimensions": {
+      "width": 1800,
+      "height": 780,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.bottom-center-anchor"
+    ],
+    "candidateImagesContainQaOverlays": false,
+    "shippingEligible": false
+  },
+  "portraitPlacementPreviewSheet": {
+    "kind": "portrait-placement-preview",
+    "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/portrait-placement-preview--peru-cusco-machu-picchu--staging-v5--non-final.png",
+    "imageSrc": "portrait-placement-preview--peru-cusco-machu-picchu--staging-v5--non-final.png",
+    "byteLength": 1204831,
+    "sha256": "eaddba84a4951f2ecb73a659362ecc76ed39d28d7f1f2fb5dfd5354184591ede",
+    "dimensions": {
+      "width": 1800,
+      "height": 980,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "portraitId": "minho",
+    "approvedPortrait": "minho",
+    "usesApprovedPortrait": true,
+    "actualPortraitComposite": true,
+    "nonFinalQaOnly": true,
+    "sceneCandidateRemainsCatFree": true,
+    "approvedPortraitManifest": {
+      "repoPath": "docs/art/production/portraits/minho/manifest.json",
+      "byteLength": 3121,
+      "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+    },
+    "portraitPose": {
+      "id": "minho--gaze--v01",
+      "repoPath": "public/portraits/minho/portrait--minho--gaze--v01.png",
+      "byteLength": 735117,
+      "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+      "alphaBoundsPx": {
+        "x": 256,
+        "y": 64,
+        "width": 512,
+        "height": 896,
+        "bottomTransparentMargin": 64
+      }
+    },
+    "labels": [
+      "framing",
+      "scale",
+      "support",
+      "narrative role"
+    ],
+    "shippingEligible": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "kind": "staging-context-research",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/staging-context-research.md",
+      "byteLength": 5697,
+      "sha256": "075093efadcefc0c183d97d3c79541f7f0193934de6ab3239aaa9b9b62625059",
+      "method": "text-only official and institutional source review; no source media retained"
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "peru-cusco-machu-picchu--distant-overlook--v01",
+      "revisionId": "peru-cusco-machu-picchu--distant-overlook--v01",
+      "destinationId": "peru-cusco-machu-picchu",
+      "variantId": "distant-overlook",
+      "version": "v01",
+      "name": "马丘比丘 · 远眺 v01",
+      "action": "add-active-variant",
+      "supersedes": null,
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--peru-cusco-machu-picchu--distant-overlook--v01.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/peru-cusco-machu-picchu/scene--peru-cusco-machu-picchu--distant-overlook--v01.png",
+      "byteLength": 2481009,
+      "sha256": "7b83eeb9eabcfd1c36d2ad3ae25e20aaf14e622efab1f958cd208160ad8983f8",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "catFree": true,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.19,
+        "y": 0.77,
+        "scale": 0.07,
+        "pose": "gaze",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.15,
+        "y": 0.685,
+        "width": 0.08,
+        "height": 0.1
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "depthBand": "distant",
+        "depthDescription": "high panoramic natural visitor overlook route",
+        "narrativeWeight": "cameo",
+        "targetScale": 0.07,
+        "portraitHeightScale": 0.07,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "broad, stable, gently sloped packed-earth-and-grass visitor path with a low natural bank and visible route continuation",
+        "accessPlausibility": "visitors physically reach the Circuit 1 panoramic route; this is a generalized natural route surface and does not claim live-animal admission, which the official code separately prohibits",
+        "legalAnimalAdmission": false,
+        "poseFit": "the gaze pose faces the citadel and Huayna Picchu while remaining set back on stable ground",
+        "clearSilhouette": "the complete tiny Portrait remains locally readable against ordinary pale earth without a spotlight, box, glow, outline, or artificial clearing",
+        "setback": "well inside the broad route and away from every drop",
+        "visibleOpaqueBaseY": 0.765625,
+        "fullSilhouetteInsideImage": true,
+        "noForegroundOcclusionNeeded": true,
+        "foregroundOcclusionRequired": false,
+        "overlapsPersonRockWallPlantObjectOrHardShadow": false,
+        "forbiddenSupportChecks": {
+          "protectedMasonry": false,
+          "wallTop": false,
+          "agriculturalTerraceCrown": false,
+          "narrowLedge": false,
+          "cliffLip": false,
+          "trafficSurface": false,
+          "floatingGap": false
+        }
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": 4,
+          "naturalGrouping": "one very small loose pair shares the far-left route while one smaller isolated visitor is deeper and one larger isolated visitor stands farther right",
+          "loosePairPresent": true,
+          "isolatedWalkerCountEstimate": 2,
+          "depthVariation": "far isolated visitor, small pair, and larger foreground-route solo occupy three clear apparent scales",
+          "directionVariation": "the pair and isolated visitors use different body angles and travel impressions",
+          "lateralVariation": "visitors occupy far-left, left-center, and right-of-path positions rather than one rail or edge line",
+          "gestureVariation": "the pair walks together while the isolated visitors use distinct upright and walking silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "standingOnProtectedMasonry": false,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": false,
+          "countEstimate": 0
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "provenance": {
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedNote": "Generation tool did not expose model or seed."
+        },
+        "generatedAt": "2026-07-20",
+        "promptJobId": "machu-picchu-staging-v5-distant-overlook-v01",
+        "generationRequestAudit": {
+          "requestCount": 2,
+          "failedRequestCount": 1,
+          "successfulImageArtifactCount": 1,
+          "selectedImageArtifactCount": 1,
+          "rejectedImageArtifactCount": 0
+        },
+        "sourceArtifact": {
+          "filename": "machu-picchu-distant-overlook-v01-source.png",
+          "storage": "tool-managed-outside-repository",
+          "retainedInRepository": false,
+          "byteLength": 3068765,
+          "sha256": "84e154a2f802d08e8f4d425f9d78a03b44211dc9d14523f72ef7dd55ee6768cb",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "format": "png",
+          "mode": "RGB",
+          "alpha": "opaque",
+          "embeddedIccProfile": false
+        },
+        "referenceUse": "three locked style files plus the prior Machupicchu day scene for destination identity only; no source pixels copied",
+        "normalization": {
+          "processor": "Sharp 0.35.3",
+          "exactAspectCrop": {
+            "strategy": "slightly left-weighted exact 4:3 crop preserving the complete visitor distribution and principal citadel",
+            "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+            "left": 70,
+            "top": 0,
+            "right": 1434,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023,
+            "aspectRatio": "4:3"
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "kernel": "Lanczos3"
+          },
+          "colorManagement": {
+            "inputInterpretation": "sRGB",
+            "outputColorSpace": "sRGB",
+            "outputProfileAssignedAndEmbedded": true,
+            "profileSha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+          },
+          "output": "1200x900 8-bit opaque RGB PNG",
+          "distortionApplied": false
+        }
+      },
+      "inspection": {
+        "result": "pass-pending-formal-review",
+        "inspectedAtNormalizedSize": true,
+        "hardConstraintViolations": [],
+        "candidateCatFree": true,
+        "landmarkAndMountainDominance": "pass",
+        "naturalPeopleDistribution": "pass",
+        "stableNaturalRoutePerch": "pass",
+        "protectedMasonryAndCliffPlacementAbsent": "pass",
+        "safeBoundsClear": "pass",
+        "portraitPreview": {
+          "actualApprovedPoseUsed": true,
+          "bodyBaseMeetsSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personOrObjectOverlap": false,
+          "foregroundOcclusionNeeded": false,
+          "smallAndSecondary": true
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "heritageAndAccessReview": "pending",
+        "rightsReview": "pending",
+        "finalPortraitCompositeReview": "pending"
+      }
+    }
+  ],
+  "rejectedRevisionCount": 0,
+  "rejectedRevisions": [],
+  "inspection": {
+    "performed": true,
+    "normalizedSelectedCandidateCount": 1,
+    "normalizedRejectedArtifactCount": 0,
+    "visualInspectionCount": 1,
+    "portraitPreviewInspectionCount": 1,
+    "hardFailureCount": 0,
+    "machineChecksPassed": true,
+    "checks": {
+      "writesConfinedToDestinationDirectory": "pass",
+      "pathsAndFilenames": "pass",
+      "exactSelectedCandidateCount": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgb": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithoutDistortion": "pass",
+      "candidateSceneCatFree": "pass",
+      "qaOverlaysAbsentFromCandidate": "pass",
+      "contactAndPreviewSheetsOpaque": "pass",
+      "allFormalReviewsPending": "pass"
+    },
+    "result": "pass-pending-formal-review"
+  },
+  "rights": {
+    "researchUse": "official and institutional text facts only",
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "risk": "high",
+    "warning": "Do not ship until the Ministry/DDC Cusco scope and Peru counsel review commercial illustration, protected-site use, official-site materials, and the intended territories. The official code prohibits advertising-purpose filming or photography and prohibits animals other than guide dogs.",
+    "shippingWarnings": [
+      "No official photograph, route-panel image, map, screenshot, logo, publication image, or other restricted source asset was downloaded or retained.",
+      "The prior Machupicchu scene supplied identity and style continuity only; its pixels were not edited, collaged, traced, or copied.",
+      "The support plane is spatially plausible, but a live companion cat would not be legally admitted under the published animal rule; the fictional depiction requires explicit human cultural/access review.",
+      "The approved Minho Portrait appears only in the non-final QA preview; the candidate scene remains Cat-free."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v5-human-visual-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-ambient-life-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-heritage-and-access-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-provenance-reference-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-artwork-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-shipping-approval",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "heritageAndAccessReview": "pending",
+    "rightsReview": "pending",
+    "finalPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

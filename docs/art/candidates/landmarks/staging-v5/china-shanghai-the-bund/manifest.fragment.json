@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 5,
+  "manifestKind": "landmark-staging-candidate-fragment",
+  "planId": "miaoyouji-landmark-staging-v5-2026-07-20",
+  "extendsPlanId": "miaoyouji-landmarks-combined-v4-2026-07-20",
+  "sourcePlan": "docs/art/landmark-staging-v5.json",
+  "sourcePlanSha256": "64c03dccf87a0588c7f659dd7547241ab603e0bfa881b4d212ac57ee51a4f505",
+  "baseCandidateManifest": {
+    "repoPath": "docs/art/candidates/landmarks/manifest.candidates.v4.json",
+    "byteLength": 427223,
+    "sha256": "e9ac614a6f9e172a81fd8d277a48ad4c75e1e2fa4a02ba928872408251e0778f"
+  },
+  "destinationId": "china-shanghai-the-bund",
+  "destinationName": "上海外滩",
+  "generatedAt": "2026-07-20",
+  "status": "candidate",
+  "candidate": true,
+  "shipping": false,
+  "shippingEligible": false,
+  "restrictedSourcePhotosRetained": false,
+  "baseV4": {
+    "destinationFragment": {
+      "repoPath": "docs/art/candidates/landmarks/china-shanghai-the-bund/manifest.fragment.json",
+      "byteLength": 8173,
+      "sha256": "7e5bc2eda9ae295bd8108dd8d7179ac13fe3300cbdd770070a04e3733eee4f98"
+    },
+    "enrichmentFragment": {
+      "repoPath": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/manifest.fragment.json",
+      "byteLength": 40767,
+      "sha256": "1c9e42d23f79e17d93880c1e75e7a4b7958e0ca3981ec96849b5e3074cdbd0c0"
+    },
+    "activeSceneVariantIds": [
+      "china-shanghai-the-bund--day-signature--v02",
+      "china-shanghai-the-bund--golden-hour--v01",
+      "china-shanghai-the-bund--night-transit--v01",
+      "china-shanghai-the-bund--sheltered-rest--v01"
+    ],
+    "supersededRevisionReferences": [
+      {
+        "id": "china-shanghai-the-bund--day-signature--v02",
+        "repoPath": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v02.png",
+        "byteLength": 1567227,
+        "sha256": "0556bf41805f6ae3234810391f9209d25d77e279c702ca56cd80ddbd21eecaf0",
+        "referenceUse": "destination identity, geography, and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      },
+      {
+        "id": "china-shanghai-the-bund--night-transit--v01",
+        "repoPath": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/scene--china-shanghai-the-bund--night-transit--v01.png",
+        "byteLength": 1739180,
+        "sha256": "3b72aa70405fddb1b1a62637a38d9bcf59f26eeb2943976fa7d64dce156bd992",
+        "referenceUse": "destination identity, night palette, and style continuity only",
+        "pixelsEditedCollagedTracedOrCopied": false
+      }
+    ]
+  },
+  "locks": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "postcardFormat": {
+      "state": "locked",
+      "orientation": "landscape",
+      "aspectRatio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque",
+      "mode": "RGB",
+      "format": "png"
+    },
+    "candidateScenesCatFree": true,
+    "portraitPreviewQaOnly": true
+  },
+  "coordinateSystem": {
+    "units": "normalized",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down",
+    "portraitAnchor": "bottom-center of the full Portrait canvas",
+    "scaleMeaning": "rendered Portrait canvas height / scene height"
+  },
+  "generationSummary": {
+    "plannedCandidateCount": 2,
+    "generateImageRequestCount": 5,
+    "failedRequestCount": 2,
+    "successfulImageArtifactCount": 3,
+    "selectedCandidateCount": 2,
+    "rejectedImageArtifactCount": 1,
+    "retainedRejectedRevisionCount": 1,
+    "variants": [
+      "day-signature--v03",
+      "night-transit--v02"
+    ]
+  },
+  "supersession": [
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "china-shanghai-the-bund--day-signature--v03",
+      "supersedesActiveRevisionId": "china-shanghai-the-bund--day-signature--v02",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v02.png",
+      "supersededRevisionSha256": "0556bf41805f6ae3234810391f9209d25d77e279c702ca56cd80ddbd21eecaf0"
+    },
+    {
+      "action": "supersede-active-revision",
+      "newRevisionId": "china-shanghai-the-bund--night-transit--v02",
+      "supersedesActiveRevisionId": "china-shanghai-the-bund--night-transit--v01",
+      "supersededRevisionDeleted": false,
+      "supersededRevisionPath": "docs/art/candidates/landmarks/enrichment-v4/china-shanghai-the-bund/scene--china-shanghai-the-bund--night-transit--v01.png",
+      "supersededRevisionSha256": "3b72aa70405fddb1b1a62637a38d9bcf59f26eeb2943976fa7d64dce156bd992"
+    }
+  ],
+  "referencePolicy": {
+    "generationStyleReferences": [
+      {
+        "repoPath": "docs/art/style-ref-home.png",
+        "byteLength": 2734982,
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "repoPath": "docs/art/style-ref-postcard.png",
+        "byteLength": 3276006,
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "repoPath": "docs/art/style-ref-poses.png",
+        "byteLength": 2404407,
+        "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+      }
+    ],
+    "lockedIntensityCalibrationConsulted": {
+      "repoPath": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+      "byteLength": 5766015,
+      "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+      "panel": "B"
+    },
+    "styleReferenceUse": "style-only; all reference cats, animals, text, borders, postmarks, layouts, and UI were excluded",
+    "landmarkContinuityReferenceUse": "destination identity, geography, and style continuity only; wholly new compositions were generated",
+    "officialResearchSourcesUsedAsImageReferences": false,
+    "restrictedSourcePhotographsRetained": false,
+    "approvedScenePixelsEditedCollagedTracedOrCopied": false,
+    "portraitUsedAsGenerationReference": false
+  },
+  "sceneContactSheet": {
+    "kind": "scene-contact-sheet",
+    "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/scene-contact-sheet--china-shanghai-the-bund--staging-v5--non-final.png",
+    "imageSrc": "scene-contact-sheet--china-shanghai-the-bund--staging-v5--non-final.png",
+    "byteLength": 2107875,
+    "sha256": "2cc4568a9b5d38542a4ab60fdf7a7584054182963ef0d513d77dd5006f4c9db6",
+    "dimensions": {
+      "width": 1800,
+      "height": 780,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "qaOverlays": [
+      "safeBounds",
+      "compositionSlot.bottom-center-anchor"
+    ],
+    "candidateImagesContainQaOverlays": false,
+    "shippingEligible": false
+  },
+  "portraitPlacementPreviewSheet": {
+    "kind": "portrait-placement-preview",
+    "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/portrait-placement-preview--china-shanghai-the-bund--staging-v5--non-final.png",
+    "imageSrc": "portrait-placement-preview--china-shanghai-the-bund--staging-v5--non-final.png",
+    "byteLength": 2144834,
+    "sha256": "532648a0a51f598364fbeb5907afd9cf371f4daa300f758e01d1f85f91919809",
+    "dimensions": {
+      "width": 1800,
+      "height": 980,
+      "format": "png",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "alpha": "opaque"
+    },
+    "portraitId": "minho",
+    "approvedPortrait": "minho",
+    "usesApprovedPortrait": true,
+    "actualPortraitComposite": true,
+    "nonFinalQaOnly": true,
+    "sceneCandidatesRemainCatFree": true,
+    "approvedPortraitManifest": {
+      "repoPath": "docs/art/production/portraits/minho/manifest.json",
+      "byteLength": 3121,
+      "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+    },
+    "portraitPose": {
+      "id": "minho--walk--v01",
+      "repoPath": "public/portraits/minho/portrait--minho--walk--v01.png",
+      "byteLength": 500393,
+      "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+      "alphaBoundsPx": {
+        "x": 64,
+        "y": 494,
+        "width": 896,
+        "height": 466,
+        "bottomTransparentMargin": 64
+      }
+    },
+    "labels": [
+      "framing",
+      "scale",
+      "support",
+      "narrative role"
+    ],
+    "shippingEligible": false
+  },
+  "artifacts": {
+    "stagingContextResearch": {
+      "kind": "staging-context-research",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/staging-context-research.md",
+      "byteLength": 6074,
+      "sha256": "79dac0c04a4d1225c09ea9546909a099f7e10582e7de0a375dbd8ff23e0c339c",
+      "method": "text-only official-source review; no source media retained"
+    }
+  },
+  "sceneVariants": [
+    {
+      "id": "china-shanghai-the-bund--day-signature--v03",
+      "revisionId": "china-shanghai-the-bund--day-signature--v03",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "day-signature",
+      "version": "v03",
+      "name": "上海外滩 · 日间标志景 v03",
+      "action": "supersede-active-revision",
+      "supersedes": "china-shanghai-the-bund--day-signature--v02",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--day-signature--v03.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/scene--china-shanghai-the-bund--day-signature--v03.png",
+      "byteLength": 2105099,
+      "sha256": "c7934b03f5a95d9ed2cb23e66bcfddf842583b17f36c2c0e527c0b312963d7e3",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "catFree": true,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.13,
+        "y": 0.94,
+        "scale": 0.21,
+        "pose": "walk",
+        "flip": false
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.01,
+        "y": 0.715,
+        "width": 0.24,
+        "height": 0.245
+      },
+      "placementIntent": {
+        "framing": "foreground",
+        "depthBand": "foreground",
+        "depthDescription": "foreground west-bank promenade",
+        "narrativeWeight": "primary",
+        "targetScale": 0.21,
+        "portraitHeightScale": 0.21,
+        "allowedScaleBand": {
+          "min": 0.18,
+          "max": 0.28
+        },
+        "physicalSupport": "broad, dry, visibly paved Bund promenade with coherent perspective",
+        "accessPlausibility": "the official municipal design identifies the floodwall-top route as continuous public pedestrian circulation",
+        "poseFit": "the walk pose follows the open promenade toward the riverfront route",
+        "clearSilhouette": "the complete pale Portrait remains readable on ordinary warm paving without a blank box, outline, glow, or spotlight",
+        "visibleOpaqueBaseY": 0.926875,
+        "fullSilhouetteInsideImage": true,
+        "noForegroundOcclusionNeeded": true,
+        "foregroundOcclusionRequired": false,
+        "overlapsPersonVehicleRailPostPlantObjectOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": 5,
+          "naturalGrouping": "one loose offset pair occupies the center-right midground while three isolated walkers use foreground-left, deep-left, and river-side tracks",
+          "loosePairPresent": true,
+          "isolatedWalkerCountEstimate": 3,
+          "depthVariation": "the nearest solo, medium pair, smaller river-side solo, and tiny deep solo occupy clearly different apparent scales",
+          "directionVariation": "viewerward and away-facing travel impressions plus distinct torso angles prevent one synchronized flow",
+          "lateralVariation": "walkers occupy inner, center, and river-side promenade lanes at unequal positions",
+          "gestureVariation": "the pair turns slightly toward one another while the solos use different arm, tote, and stride silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 3,
+          "surface": "East Zhongshan No. 1 Road only",
+          "irregularIntervals": true,
+          "differentApparentScales": true,
+          "readablePlatesLogosLiveryOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "ferries": {
+          "present": true,
+          "countEstimate": 2,
+          "surface": "Huangpu River only",
+          "irregularIntervals": true,
+          "differentApparentScales": true,
+          "readableNamesRouteTextLogosOrLivery": false,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "provenance": {
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedNote": "Generation tool did not expose model or seed."
+        },
+        "generatedAt": "2026-07-20",
+        "promptJobId": "bund-staging-v5-day-signature-v03-attempt-02",
+        "generationRequestAudit": {
+          "requestCount": 4,
+          "failedRequestCount": 2,
+          "successfulImageArtifactCount": 2,
+          "selectedImageArtifactCount": 1,
+          "rejectedImageArtifactCount": 1,
+          "selectionReason": "Attempt 02 replaced a same-size near-walker plane with one loose pair and isolated walkers at distinct scales and depths."
+        },
+        "sourceArtifact": {
+          "filename": "bund-day-signature-v03-source-attempt-02.png",
+          "storage": "tool-managed-outside-repository",
+          "retainedInRepository": false,
+          "byteLength": 2766059,
+          "sha256": "ea6cc7cec8695579d553b4b1c9494cf0d38ab52bc43feb4ce750a471cef1a72a",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "format": "png",
+          "mode": "RGB",
+          "alpha": "opaque",
+          "embeddedIccProfile": false
+        },
+        "referenceUse": "three locked style files plus the prior Bund day scene for destination identity only; no source pixels copied",
+        "normalization": {
+          "processor": "Sharp 0.35.3",
+          "exactAspectCrop": {
+            "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+            "left": 86,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023,
+            "aspectRatio": "4:3"
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "kernel": "Lanczos3"
+          },
+          "colorManagement": {
+            "inputInterpretation": "sRGB",
+            "outputColorSpace": "sRGB",
+            "outputProfileAssignedAndEmbedded": true,
+            "profileSha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+          },
+          "output": "1200x900 8-bit opaque RGB PNG",
+          "distortionApplied": false
+        }
+      },
+      "inspection": {
+        "result": "pass-pending-formal-review",
+        "inspectedAtNormalizedSize": true,
+        "hardConstraintViolations": [],
+        "candidateCatFree": true,
+        "naturalPeopleDistribution": "pass",
+        "vehicleAndFerryDistribution": "pass",
+        "safeBoundsClear": "pass",
+        "portraitPreview": {
+          "actualApprovedPoseUsed": true,
+          "feetMeetSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personOrObjectOverlap": false,
+          "foregroundOcclusionNeeded": false
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "rightsReview": "pending",
+        "finalPortraitCompositeReview": "pending"
+      }
+    },
+    {
+      "id": "china-shanghai-the-bund--night-transit--v02",
+      "revisionId": "china-shanghai-the-bund--night-transit--v02",
+      "destinationId": "china-shanghai-the-bund",
+      "variantId": "night-transit",
+      "version": "v02",
+      "name": "上海外滩 · 夜间行旅 v02",
+      "action": "supersede-active-revision",
+      "supersedes": "china-shanghai-the-bund--night-transit--v01",
+      "status": "candidate",
+      "candidate": true,
+      "shippingEligible": false,
+      "imageSrc": "scene--china-shanghai-the-bund--night-transit--v02.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/scene--china-shanghai-the-bund--night-transit--v02.png",
+      "byteLength": 2280063,
+      "sha256": "416e8c6ae9dbee55350415f7fa2bd0aed0687aeb68a0618d05490655844f5d50",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "orientation": "landscape",
+        "aspectRatio": "4:3",
+        "format": "png",
+        "mode": "RGB",
+        "colorSpace": "sRGB",
+        "bitDepth": 8,
+        "alpha": "opaque",
+        "profile": {
+          "assignment": "embedded-icc",
+          "description": "sRGB IEC61966-2.1 (Sharp built-in profile)",
+          "byteLength": 480,
+          "sha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+        }
+      },
+      "hasCompanion": false,
+      "companion": null,
+      "catFree": true,
+      "playerCatPresent": false,
+      "compositionSlot": {
+        "units": "normalized",
+        "anchor": "bottom-center",
+        "x": 0.47,
+        "y": 0.67,
+        "scale": 0.08,
+        "pose": "walk",
+        "flip": true
+      },
+      "safeBounds": {
+        "units": "normalized",
+        "x": 0.425,
+        "y": 0.575,
+        "width": 0.09,
+        "height": 0.11
+      },
+      "placementIntent": {
+        "framing": "distant",
+        "depthBand": "distant",
+        "depthDescription": "farther readable promenade segment",
+        "narrativeWeight": "cameo",
+        "targetScale": 0.08,
+        "portraitHeightScale": 0.08,
+        "allowedScaleBand": {
+          "min": 0.055,
+          "max": 0.095
+        },
+        "physicalSupport": "pale, dry, readable promenade paving with visible receding perspective",
+        "accessPlausibility": "the official municipal design identifies the floodwall-top route as continuous public pedestrian circulation",
+        "poseFit": "the flipped walk pose faces into the receding homebound route",
+        "clearSilhouette": "the complete pale Portrait reads against ordinary blue-gray paving without a spotlight, box, glow, or outline",
+        "visibleOpaqueBaseY": 0.665,
+        "fullSilhouetteInsideImage": true,
+        "noForegroundOcclusionNeeded": true,
+        "foregroundOcclusionRequired": false,
+        "overlapsPersonVehicleRailPostPlantObjectOrHardShadow": false
+      },
+      "ambientLifeEvidence": {
+        "policy": "v5-ambient-life",
+        "people": {
+          "present": true,
+          "countEstimate": 6,
+          "naturalGrouping": "one loose group of three occupies the nearer-left promenade while three isolated walkers use center-left, deep-center, and river-side tracks",
+          "looseSmallGroupPresent": true,
+          "isolatedWalkerCountEstimate": 3,
+          "depthVariation": "the three-person group is largest; the isolated walkers step down through medium and small apparent scales",
+          "directionVariation": "mixed viewerward, away-facing, and riverward body angles prevent a one-direction procession",
+          "lateralVariation": "the group and solos occupy left, central, and river-side route locations",
+          "gestureVariation": "the loose group converses while isolated walkers use distinct stride, strap, pocket, and river-glance silhouettes",
+          "identifiableFaces": false,
+          "readableClothingMarks": false,
+          "outsidePerchSafeBounds": true
+        },
+        "vehicles": {
+          "present": true,
+          "genericCarsEstimate": 4,
+          "surface": "East Zhongshan No. 1 Road only",
+          "irregularIntervals": true,
+          "differentApparentScales": true,
+          "readablePlatesLogosLiveryOrAds": false,
+          "outsidePerchSafeBounds": true
+        },
+        "ferries": {
+          "present": true,
+          "countEstimate": 2,
+          "surface": "Huangpu River only",
+          "irregularIntervals": true,
+          "differentApparentScales": true,
+          "readableNamesRouteTextLogosOrLivery": false,
+          "outsidePerchSafeBounds": true
+        },
+        "qaEvidence": {
+          "naturalGrouping": true,
+          "depthVariation": true,
+          "directionVariation": true,
+          "equalSpacingAbsent": true,
+          "singleFileProcessionAbsent": true,
+          "sameSizeDepthPlaneAbsent": true,
+          "mirroredOrSynchronizedPosesAbsent": true,
+          "cloneSilhouettesAbsent": true,
+          "crowdWallAbsent": true,
+          "edgeOnlyPlacementAbsent": true,
+          "outsidePerchSafeBounds": true
+        }
+      },
+      "night": {
+        "applicable": true,
+        "phase": "ordinary early evening",
+        "ambientPalette": "low-saturation blue-gray",
+        "practicalLighting": "restrained static facade and promenade lighting",
+        "routeReadable": true,
+        "groundPlaneReadable": true,
+        "landmarkSilhouetteReadable": true,
+        "neonDominant": false,
+        "floatingLightOrbsAbsent": true,
+        "highlightsBlown": false,
+        "shadowsCrushed": false
+      },
+      "provenance": {
+        "generator": {
+          "tool": "Cursor GenerateImage",
+          "model": null,
+          "seed": null,
+          "modelAndSeedNote": "Generation tool did not expose model or seed."
+        },
+        "generatedAt": "2026-07-20",
+        "promptJobId": "bund-staging-v5-night-transit-v02",
+        "generationRequestAudit": {
+          "requestCount": 1,
+          "failedRequestCount": 0,
+          "successfulImageArtifactCount": 1,
+          "selectedImageArtifactCount": 1,
+          "rejectedImageArtifactCount": 0
+        },
+        "sourceArtifact": {
+          "filename": "bund-night-transit-v02-source.png",
+          "storage": "tool-managed-outside-repository",
+          "retainedInRepository": false,
+          "byteLength": 2986161,
+          "sha256": "9324280a32c18c1819514153944a947e180f2455b92fa7c8550e98b9e0d947ef",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "format": "png",
+          "mode": "RGB",
+          "alpha": "opaque",
+          "embeddedIccProfile": false
+        },
+        "referenceUse": "three locked style files plus the prior Bund night scene for destination identity only; no source pixels copied",
+        "normalization": {
+          "processor": "Sharp 0.35.3",
+          "exactAspectCrop": {
+            "coordinateConvention": "left/top inclusive; right/bottom exclusive",
+            "left": 86,
+            "top": 0,
+            "right": 1450,
+            "bottom": 1023,
+            "width": 1364,
+            "height": 1023,
+            "aspectRatio": "4:3"
+          },
+          "resize": {
+            "width": 1200,
+            "height": 900,
+            "kernel": "Lanczos3"
+          },
+          "colorManagement": {
+            "inputInterpretation": "sRGB",
+            "outputColorSpace": "sRGB",
+            "outputProfileAssignedAndEmbedded": true,
+            "profileSha256": "c56e1685d888f5edb92fe07f2750f387f8fe8e91b32ff8fb0b56bfbbb9458353"
+          },
+          "output": "1200x900 8-bit opaque RGB PNG",
+          "distortionApplied": false
+        }
+      },
+      "inspection": {
+        "result": "pass-pending-formal-review",
+        "inspectedAtNormalizedSize": true,
+        "hardConstraintViolations": [],
+        "candidateCatFree": true,
+        "naturalPeopleDistribution": "pass",
+        "vehicleAndFerryDistribution": "pass",
+        "nightRouteAndGroundReadability": "pass",
+        "safeBoundsClear": "pass",
+        "portraitPreview": {
+          "actualApprovedPoseUsed": true,
+          "feetMeetSupportPlane": true,
+          "fullSilhouetteInsideImage": true,
+          "perspectiveAndScalePlausible": true,
+          "personOrObjectOverlap": false,
+          "foregroundOcclusionNeeded": false
+        }
+      },
+      "review": {
+        "decision": "pending",
+        "humanVisualReview": "pending",
+        "ambientLifeReview": "pending",
+        "accessAndPlacementReview": "pending",
+        "rightsReview": "pending",
+        "finalPortraitCompositeReview": "pending"
+      }
+    }
+  ],
+  "rejectedRevisionCount": 1,
+  "rejectedRevisions": [
+    {
+      "id": "china-shanghai-the-bund--day-signature--v03--attempt-01",
+      "variantId": "day-signature",
+      "status": "rejected",
+      "active": false,
+      "selected": false,
+      "imageSrc": "rejected--scene--china-shanghai-the-bund--day-signature--v03--attempt-01--same-size-plane.png",
+      "repoPath": "docs/art/candidates/landmarks/staging-v5/china-shanghai-the-bund/rejected--scene--china-shanghai-the-bund--day-signature--v03--attempt-01--same-size-plane.png",
+      "byteLength": 2128515,
+      "sha256": "d967a255e4adb296ab0ddc21ddb3bde070c2a2254f882df40a619541d7937bbe",
+      "reason": "Three near walkers read as one same-size depth plane, contrary to the required asymmetric depth distribution.",
+      "sourceArtifact": {
+        "filename": "bund-day-signature-v03-source.png",
+        "storage": "tool-managed-outside-repository",
+        "retainedInRepository": false,
+        "byteLength": 2746806,
+        "sha256": "c03aa6d28a1267fb254849669e251dd56571daf9d564f755162b2fee0d45531c"
+      },
+      "normalization": {
+        "processor": "Sharp 0.35.3",
+        "crop": {
+          "left": 86,
+          "top": 0,
+          "right": 1450,
+          "bottom": 1023,
+          "width": 1364,
+          "height": 1023
+        },
+        "resize": {
+          "width": 1200,
+          "height": 900,
+          "kernel": "Lanczos3"
+        },
+        "output": "1200x900 8-bit opaque RGB sRGB PNG"
+      },
+      "retainedForAudit": true,
+      "shippingEligible": false
+    }
+  ],
+  "inspection": {
+    "performed": true,
+    "normalizedSelectedCandidateCount": 2,
+    "normalizedRejectedArtifactCount": 1,
+    "visualInspectionCount": 3,
+    "portraitPreviewInspectionCount": 2,
+    "hardFailureCount": 0,
+    "machineChecksPassed": true,
+    "checks": {
+      "writesConfinedToDestinationDirectory": "pass",
+      "pathsAndFilenames": "pass",
+      "exactSelectedCandidateCount": "pass",
+      "pngSignature": "pass",
+      "dimensions1200x900": "pass",
+      "bitDepth8": "pass",
+      "opaqueRgb": "pass",
+      "embeddedSrgbProfile": "pass",
+      "sha256": "pass",
+      "normalizedWithoutDistortion": "pass",
+      "candidateScenesCatFree": "pass",
+      "qaOverlaysAbsentFromCandidates": "pass",
+      "contactAndPreviewSheetsOpaque": "pass",
+      "allFormalReviewsPending": "pass"
+    },
+    "result": "pass-pending-formal-review"
+  },
+  "rights": {
+    "researchUse": "official text facts only",
+    "restrictedSourcePhotosRetained": false,
+    "sourceImageLicenseInferred": false,
+    "risk": "medium",
+    "warning": "Do not ship until human review covers Shanghai and intended-territory rights for historic facades, modern skyline architecture, architectural lighting, vessels, and source independence. Public visibility does not establish public-domain status.",
+    "shippingWarnings": [
+      "Official page media, photographs, maps, route graphics, logos, and text were not licensed into or retained with these candidates.",
+      "Existing Bund scenes supplied identity and style continuity only; their pixels were not edited, collaged, traced, or copied.",
+      "All building names, facade lettering, advertisements, plates, route marks, operator liveries, and logos are omitted.",
+      "The approved Minho Portrait appears only in the non-final QA preview; both candidate scenes remain Cat-free."
+    ]
+  },
+  "pendingReviews": [
+    {
+      "id": "v5-human-visual-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-ambient-life-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-access-and-placement-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-provenance-reference-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-artwork-rights-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-final-portrait-composite-review",
+      "status": "pending"
+    },
+    {
+      "id": "v5-shipping-approval",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "decision": "pending",
+    "humanVisualReview": "pending",
+    "ambientLifeReview": "pending",
+    "accessAndPlacementReview": "pending",
+    "rightsReview": "pending",
+    "finalPortraitCompositeReview": "pending",
+    "shippingApproval": "pending",
+    "reviewer": "",
+    "reviewedAt": null,
+    "notes": ""
+  }
+}

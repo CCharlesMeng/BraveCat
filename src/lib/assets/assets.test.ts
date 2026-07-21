@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
   defineAssetCatalog,
+  PORTRAIT_POSES,
+  PORTRAIT_POSE_VOCABULARY,
   type AssetCatalog,
 } from './index'
 import {
@@ -74,6 +76,42 @@ const validCatalog = (): AssetCatalog => ({
 })
 
 describe('AssetCatalog', () => {
+  it('以十个姿势及其落脚与互动语义作为唯一词汇', () => {
+    expect(PORTRAIT_POSES).toEqual([
+      'sit',
+      'sleep',
+      'walk',
+      'eat',
+      'play',
+      'gaze',
+      'sniff',
+      'reach',
+      'stretch',
+      'greet',
+    ])
+    expect(PORTRAIT_POSE_VOCABULARY).toHaveLength(10)
+    expect(PORTRAIT_POSE_VOCABULARY.every(
+      ({ support }) => (
+        support.anchor === 'support-contact-bottom-center'
+        && support.surface.length > 0
+        && support.contacts.length > 0
+      ),
+    )).toBe(true)
+    expect(Object.fromEntries(
+      PORTRAIT_POSE_VOCABULARY.map(({ id, interaction }) => [
+        id,
+        interaction.source,
+      ]),
+    )).toMatchObject({
+      eat: 'portrait-contained',
+      play: 'portrait-contained',
+      gaze: 'scene-provided',
+      sniff: 'scene-provided',
+      reach: 'scene-provided',
+      greet: 'scene-provided',
+    })
+  })
+
   it('拒绝缺少固定姿势文件的形象', () => {
     const catalog = validCatalog()
     const portrait = catalog.portraits[0]
@@ -87,6 +125,39 @@ describe('AssetCatalog', () => {
     })).toThrow(
       '形象 minho 缺少 gaze 姿势文件',
     )
+  })
+
+  it('扩展姿势只在场景使用时要求对应形象文件', () => {
+    const catalog = validCatalog()
+    const destination = catalog.destinations[0]
+    const sniffScene = {
+      ...destination.sceneVariants[0],
+      compositionSlot: {
+        ...destination.sceneVariants[0].compositionSlot,
+        pose: 'sniff' as const,
+      },
+    }
+    const catalogWithSniffScene = {
+      ...catalog,
+      destinations: [{
+        ...destination,
+        sceneVariants: [sniffScene, destination.sceneVariants[1]],
+      }],
+    }
+
+    expect(() => defineAssetCatalog(catalogWithSniffScene)).toThrow(
+      '形象 minho 缺少场景 paris-day 所需的 sniff 姿势文件',
+    )
+    expect(() => defineAssetCatalog({
+      ...catalogWithSniffScene,
+      portraits: [{
+        ...catalog.portraits[0],
+        poses: {
+          ...catalog.portraits[0].poses,
+          sniff: '/portraits/minho/sniff.png',
+        },
+      }],
+    })).not.toThrow()
   })
 
   it('拒绝场景变体不足两个的目的地', () => {
