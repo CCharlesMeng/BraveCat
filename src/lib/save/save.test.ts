@@ -1,5 +1,6 @@
 import 'fake-indexeddb/auto'
 import { describe, expect, it } from 'vitest'
+import { reduceEconomy } from '../economy'
 import {
   createInitialGameState,
   isGameState,
@@ -21,6 +22,41 @@ describe('Save', () => {
     await expect(
       createIndexedDbSaveStore<typeof state>(databaseName).load(),
     ).resolves.toEqual(state)
+  })
+
+  it('刷新后保留开发补给余额和原来的窗台结算状态', async () => {
+    const databaseName = `bravecat-test-${crypto.randomUUID()}`
+    const initial = createInitialGameState(1_000)
+    const economy = {
+      ...initial.economy,
+      treats: 5,
+      windowsillTreats: 7,
+      accrual: {
+        ...initial.economy.accrual,
+        lastAccruedAt: 500,
+      },
+    }
+    const granted = {
+      ...initial,
+      economy: reduceEconomy(economy, {
+        type: 'treatsGranted',
+        amount: 24,
+      }),
+    }
+
+    await createIndexedDbSaveStore<GameState>(databaseName).save(granted)
+
+    await expect(
+      createIndexedDbSaveStore<GameState>(databaseName).load(),
+    ).resolves.toMatchObject({
+      economy: {
+        treats: 29,
+        windowsillTreats: 7,
+        accrual: {
+          lastAccruedAt: 500,
+        },
+      },
+    })
   })
 
   it('拒绝损坏状态且保留当前存档', async () => {

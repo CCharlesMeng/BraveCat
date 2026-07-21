@@ -141,6 +141,7 @@
   let activityNotice = $state('')
   let persistenceNotice = $state('')
   let transferNotice = $state('')
+  let developmentGrantAmount = $state(24)
   let selectedWishDestinationId = $state<DestinationId>(
     STARTER_DESTINATIONS[0].id,
   )
@@ -370,6 +371,24 @@
     await settleGame()
   }
 
+  const grantDevelopmentTreats = async () => {
+    if (
+      !Number.isInteger(developmentGrantAmount)
+      || developmentGrantAmount <= 0
+    ) {
+      activityNotice = '补给数量需要是大于零的整数。'
+      return
+    }
+
+    const granted = await applyEconomy({
+      type: 'treatsGranted',
+      amount: developmentGrantAmount,
+    })
+    if (granted) {
+      activityNotice = `测试补给已经加入：+${developmentGrantAmount} 条小鱼干。`
+    }
+  }
+
   onMount(() => {
     let cancelled = false
 
@@ -524,15 +543,39 @@
   </header>
 
   {#if isDevelopment}
-    <aside class="developer-clock" aria-label="开发时间加速">
-      <span>开发时钟</span>
-      <button type="button" onclick={() => setTimeAcceleration(1)}>实时</button>
-      <button type="button" onclick={() => setTimeAcceleration(3_600)}>
-        1 小时/秒
-      </button>
-      <button type="button" onclick={() => setTimeAcceleration(86_400)}>
-        1 天/秒
-      </button>
+    <aside class="developer-clock" aria-label="开发工具">
+      <div class="developer-control">
+        <span>开发时钟</span>
+        <button type="button" onclick={() => setTimeAcceleration(1)}>实时</button>
+        <button type="button" onclick={() => setTimeAcceleration(3_600)}>
+          1 小时/秒
+        </button>
+        <button type="button" onclick={() => setTimeAcceleration(86_400)}>
+          1 天/秒
+        </button>
+      </div>
+      <div
+        class="developer-control"
+        data-development-control="treat-grant"
+      >
+        <label for="development-treat-grant">测试补给</label>
+        <input
+          id="development-treat-grant"
+          type="number"
+          min="1"
+          step="1"
+          bind:value={developmentGrantAmount}
+          aria-label="每次补充的小鱼干数量"
+        />
+        <button
+          type="button"
+          disabled={!Number.isInteger(developmentGrantAmount)
+            || developmentGrantAmount <= 0}
+          onclick={grantDevelopmentTreats}
+        >
+          补充 +{developmentGrantAmount}
+        </button>
+      </div>
     </aside>
   {/if}
 
