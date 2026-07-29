@@ -93,14 +93,14 @@
       ],
       "knownNonFinalTraits": [
         "calibration contact sheet is opaque and must not be shipped as a pose asset",
-        "the top-left sit cell has a slightly oversized head; the approved formal sit corrects it to the real full-body proportion",
+        "the top-left sit cell reflects the user-requested smaller head-to-body ratio correction",
         "formal runtime poses are exported separately as approved transparent PNG files"
       ],
       "review": {
         "decision": "approved",
         "reviewer": "user",
         "reviewedAt": "2026-07-20",
-        "notes": "User approved the board's overall Minho identity. The only requested correction was to make the formal sit head slightly smaller than the top-left board cell; that correction is present in the separately exported formal sit. No accessories."
+        "notes": "User approved the overall Minho identity, requested a slightly smaller sit head, then explicitly approved all six corrected formal poses. This finalized non-shipping board is composed from those approved poses. No accessories."
       }
     },
     {
