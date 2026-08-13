@@ -4,9 +4,14 @@ import {
   SAVE_SCHEMA_VERSION,
   apiErrorResponseSchema,
   authTokenResponseSchema,
+  generationJobSchema,
   metaResponseSchema,
+  portraitGenerationPoses,
+  redeemPurchaseRequestSchema,
   saveDocumentSchema,
+  submitGenerationRequestSchema,
   submitTransactionsRequestSchema,
+  userPortraitSchema,
 } from '../src/index.js'
 
 describe('save-document schema', () => {
@@ -56,6 +61,79 @@ describe('ledger schemas', () => {
     expect(
       submitTransactionsRequestSchema.safeParse({ transactions: [] }).success,
     ).toBe(false)
+  })
+})
+
+describe('credits schemas', () => {
+  it('核销请求要求支付渠道与非空凭证', () => {
+    expect(
+      redeemPurchaseRequestSchema.safeParse({
+        platform: 'wechat',
+        receipt: 'receipt-blob',
+      }).success,
+    ).toBe(true)
+    expect(
+      redeemPurchaseRequestSchema.safeParse({ platform: 'steam', receipt: 'x' })
+        .success,
+    ).toBe(false)
+    expect(
+      redeemPurchaseRequestSchema.safeParse({ platform: 'apple', receipt: '' })
+        .success,
+    ).toBe(false)
+  })
+})
+
+describe('portrait generation schemas', () => {
+  it('生成套图覆盖完整的 10 姿势词汇', () => {
+    expect(portraitGenerationPoses).toHaveLength(10)
+  })
+
+  it('提交请求要求幂等键与照片引用', () => {
+    expect(
+      submitGenerationRequestSchema.safeParse({
+        idempotencyKey: 'gen-1',
+        photoKey: 'uploads/u1/photo.png',
+      }).success,
+    ).toBe(true)
+    expect(
+      submitGenerationRequestSchema.safeParse({ photoKey: 'uploads/x.png' })
+        .success,
+    ).toBe(false)
+  })
+
+  it('job 状态机只接受既定状态', () => {
+    const base = {
+      id: '4f9c46f8-7a4d-4dc7-8f3f-1f1df1f5a111',
+      photoKey: 'uploads/u1/photo.png',
+      createdAt: 1,
+      updatedAt: 1,
+    }
+    expect(
+      generationJobSchema.safeParse({ ...base, status: 'awaiting_confirm' })
+        .success,
+    ).toBe(true)
+    expect(
+      generationJobSchema.safeParse({ ...base, status: 'rendering' }).success,
+    ).toBe(false)
+  })
+
+  it('形象记录的姿势套图必须穷举全部姿势', () => {
+    const poses = Object.fromEntries(
+      portraitGenerationPoses.map((pose) => [
+        pose,
+        `portraits/generations/j1/${pose}.png`,
+      ]),
+    )
+    const base = {
+      id: '4f9c46f8-7a4d-4dc7-8f3f-1f1df1f5a111',
+      jobId: '4f9c46f8-7a4d-4dc7-8f3f-1f1df1f5a222',
+      createdAt: 1,
+    }
+    expect(userPortraitSchema.safeParse({ ...base, poses }).success).toBe(true)
+    const { sit: _sit, ...missingSit } = poses
+    expect(userPortraitSchema.safeParse({ ...base, poses: missingSit }).success).toBe(
+      false,
+    )
   })
 })
 
