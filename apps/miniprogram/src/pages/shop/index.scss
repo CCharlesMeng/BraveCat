@@ -1,0 +1,45 @@
+.shop-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px 48px;
+}
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.purchase-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -6px;
+  padding: 20px;
+  border-radius: 0 0 18px 18px;
+  background: rgba(135, 155, 112, 0.12);
+  border: 1px solid rgba(91, 83, 64, 0.16);
+  border-top: none;
+}
+
+.wish-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.purchase-choice-actions {
+  display: flex;
+  gap: 14px;
+
+  .card-action {
+    flex: 1;
+    padding: 16px 0;
+  }
+}
+
+.treat-footer {
+  margin-top: 12px;
+  text-align: center;
+}

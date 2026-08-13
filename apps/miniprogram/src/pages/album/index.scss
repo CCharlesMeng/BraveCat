@@ -1,0 +1,67 @@
+.album-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px 48px;
+}
+
+.postcard-thumbnail {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ece2c7;
+}
+
+.thumb-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thumb-portrait {
+  position: absolute;
+  width: auto;
+}
+
+.thumb-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#dce8e2, #f0dfbc);
+}
+
+.souvenir-token {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(135, 155, 112, 0.16);
+  color: #6b7859;
+  font-size: 34px;
+  text-align: center;
+  line-height: 96px;
+}
+
+.save-transfer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(91, 83, 64, 0.16);
+}
+
+.transfer-actions {
+  display: flex;
+  gap: 14px;
+
+  .card-action {
+    flex: 1;
+    padding: 16px 0;
+  }
+}
