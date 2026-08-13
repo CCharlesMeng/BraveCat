@@ -66,6 +66,16 @@ TOKEN=$(curl -s -X POST localhost:3000/v1/auth/guest | jq -r .token)
 curl -s localhost:3000/v1/ledger/balance -H "Authorization: Bearer $TOKEN"
 ```
 
+无库演示模式（内存仓库 + 内存对象存储 + fake AIGC providers，
+放开 `aigcAvatar` 开关并给新游客赠送生成次数，见 `src/dev.ts`）：
+
+```bash
+npm run dev:fake        # 不需要 Postgres 与云凭证；重启即清空数据
+```
+
+配合 web 端完整走一遍 AIGC 形象生成闭环的步骤见
+[`docs/deployment.md`](../../docs/deployment.md)「本地端到端演示」。
+
 ## 与 apps/web 本地联调（云同步）
 
 1. 按上文「本地启动」把 api 跑起来（默认监听 `:3000`）。
@@ -92,6 +102,7 @@ CORS 默认放行 localhost / 127.0.0.1 任意端口，无需额外配置。
 | `CORS_ALLOWED_ORIGINS` | 无 | 逗号分隔的完整 origin 列表（如 `https://app.example.com`）；未配置时仅放行 localhost / 127.0.0.1 任意端口（dev 默认），生产必须显式配置 |
 | `ECONOMY_MAX_EARN_PER_HOUR` | `600` | 占位速率校验：每现实小时可积累的小鱼干上限 |
 | `ECONOMY_INITIAL_EARN_ALLOWANCE` | `100` | 新账号初始积累额度（避免 t=0 上限为零） |
+| `DEV_INITIAL_CREDITS` | `5` | 仅演示入口 `dev:fake`：新游客自动赠送的生成次数 |
 
 AIGC 管线的云服务配置（全部可选；缺失时对应 provider 注入占位实现，
 生成 job 会失败并自动退回次数，服务照常启动）：
@@ -122,9 +133,12 @@ AIGC 管线的云服务配置（全部可选；缺失时对应 provider 注入�
 | `POST /v1/ledger/iap/redeem` | IAP 核销骨架，返回 501（Phase 2 接 StoreKit / 微信支付） |
 | `POST /v1/credits/purchases` | 生成次数包购买核销入账：凭证核销通过后按订单号幂等入账（重复订单标记 `duplicate`） |
 | `GET /v1/credits/balance` | 生成次数余额（严格服务端权威，ADR-0006） |
+| `POST /v1/portraits/photos` | 最小照片上传：JSON + base64（≤3MB 二进制，落在 5MB bodyLimit 内），魔数校验后写入对象存储，返回 `photoKey`；生产接 OSS 预签名 URL 直传后退役 |
 | `POST /v1/portraits/generations` | 提交生成 job：校验照片上传引用与余额，预扣 1 次，返回 202；同幂等键重放返回同一 job（200） |
 | `GET /v1/portraits/generations/:jobId` | 查询 job 状态（他人 job 与不存在统一 404） |
+| `GET /v1/portraits/generations/:jobId/poses/:pose` | 读取某姿势产出图（base64 投影；确认页预览与已确认形象渲染共用） |
 | `POST /v1/portraits/generations/:jobId/confirm` | 用户确认：落定消耗并产出形象记录；重复确认幂等；非 awaiting_confirm 返回 409 |
+| `GET /v1/portraits` | 当前账号全部已确认形象（按创建时间升序；客户端跨会话恢复可选列表） |
 | `GET /v1/meta` | 按平台（web/ios/android/miniprogram）下发最低支持客户端版本与功能开关 |
 
 错误响应统一为 `{ "error": { "code", "message", "details?" } }`，
