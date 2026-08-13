@@ -46,9 +46,9 @@
   import {
     downloadBlob,
     installWebAssetResolver,
+    sharePort,
     webPostcardCanvas,
     webRandom,
-    webShare,
   } from './lib/platform/ports'
   // PROTOTYPE — 右退深墙面原型，验证后随 wallLayoutPrototype.ts 一起删除。
   import WallLayoutPrototype from './lib/WallLayoutPrototype.svelte'
@@ -492,7 +492,7 @@
       const result = await shareOrDownloadPostcard(
         blob,
         postcardFileName(destinationName, composition.postmarkDate),
-        webShare,
+        sharePort,
       )
       postcardExportNotice = result === 'shared'
         ? '明信片已经交给系统分享。'

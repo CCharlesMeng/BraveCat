@@ -8,6 +8,8 @@ import {
   type RandomPort,
   type SharePort,
 } from '@bravecat/core'
+import { Capacitor } from '@capacitor/core'
+import { nativeShare } from './nativePorts'
 
 /** Clock 端口用 core 默认的 Date.now；SaveStore 用 IndexedDB 实现。 */
 
@@ -52,3 +54,11 @@ export const webShare: SharePort = {
 export const installWebAssetResolver = () => {
   configureAssetResolver(createBaseUrlAssetResolver(''))
 }
+
+/**
+ * 分享/保存端口的接线位：Capacitor 原生壳（apps/mobile）里换用系统
+ * 分享面板与文件系统实现，浏览器里仍是 navigator.share + Blob 下载。
+ */
+export const sharePort: SharePort = Capacitor.isNativePlatform()
+  ? nativeShare
+  : webShare
