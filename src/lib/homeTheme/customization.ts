@@ -70,7 +70,7 @@ export const normalizeHomeCustomization = (
   }
 
   const preset = presetForForm(form)
-  const finishId = form.finishIds.includes(selection.finishId)
+  const finishId = form.finishes.some(({ id }) => id === selection.finishId)
     ? selection.finishId
     : preset.finishId
   let piecesChanged = false

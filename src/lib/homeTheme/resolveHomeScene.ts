@@ -46,6 +46,11 @@ export const listCompatiblePieces = (
   )
 }
 
+/** 一个 form 可选的全部表面风格。 */
+export const listHomeFinishes = (formId: string) => (
+  homeFormFor(formId)?.finishes.map(({ id, name }) => ({ id, name })) ?? []
+)
+
 export const resolveHomeScene = (
   selection: HomeCustomization,
   context: HomeSceneContext,
@@ -56,20 +61,25 @@ export const resolveHomeScene = (
     throw new RangeError(`归一化后仍无法解析房间形态：${normalized.formId}`)
   }
 
+  const finish = form.finishes.find(({ id }) => id === normalized.finishId)
+  if (!finish) {
+    throw new RangeError(`归一化后仍无法解析表面风格：${normalized.finishId}`)
+  }
+
   const { canvas } = form
   const { time, activity, portraitId } = context
 
-  const lightingSrc = form.lighting[time]
+  const lightingSrc = finish.lighting[time]
   const catPlacement = form.catPlacements[activity]
   const catAnimation = form.catAnimationsByPortrait[portraitId]?.[activity]
 
   const backdrop: SceneImageLayer[] = []
-  if (form.exterior) {
-    backdrop.push({ id: `exterior-${time}`, src: form.exterior[time] })
+  if (finish.exterior) {
+    backdrop.push({ id: `exterior-${time}`, src: finish.exterior[time] })
   }
   backdrop.push({
     id: 'shell',
-    src: form.shell.activityVariants[activity] ?? form.shell.default,
+    src: finish.shell.activityVariants[activity] ?? finish.shell.default,
   })
 
   // 逐 socket 解析部件；normalize 已保证条目合法，缺省用预设默认值。
@@ -109,6 +119,7 @@ export const resolveHomeScene = (
 
   return {
     formId: form.id,
+    finishId: finish.id,
     canvas,
     shippingEligible: form.shippingEligible,
     backdrop,

@@ -12,6 +12,7 @@ import {
   isGameState,
   restoreGameState,
   selectActiveCat,
+  setHomeCustomization,
 } from './index'
 
 const catalog: AssetCatalog = {
@@ -133,6 +134,25 @@ describe('Game state', () => {
       souvenirs: createInitialSouvenirState(),
       homeCustomization: defaultHomeCustomization(),
     })
+  })
+
+  it('更换家外观选择只改这一个字段并保持形状校验', () => {
+    const initial = createInitialGameState(1_000)
+    const duskSelection = {
+      formId: 'split-level-den',
+      finishId: 'split-level-den-dusk',
+      pieces: { scratcher: 'den-rope-tower' },
+    }
+
+    const changed = setHomeCustomization(initial, duskSelection)
+    expect(changed.homeCustomization).toEqual(duskSelection)
+    expect(changed.economy).toBe(initial.economy)
+    expect(changed.postcards).toBe(initial.postcards)
+    expect(setHomeCustomization(changed, duskSelection)).toBe(changed)
+    expect(() => setHomeCustomization(
+      initial,
+      { formId: 7 } as never,
+    )).toThrow(TypeError)
   })
 
   it('恢复时保留旧存档的家外观选择，缺失或损坏时用默认预设', () => {

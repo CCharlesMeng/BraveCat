@@ -5,6 +5,7 @@ import {
   HOME_THEME_PRESETS,
   isHomeCustomization,
   listCompatiblePieces,
+  listHomeFinishes,
   listHomeForms,
   normalizeHomeCustomization,
   paintedCanvasRect,
@@ -323,6 +324,52 @@ describe('classic-v4 form geometry', () => {
     })
     expect(normalized.pieces.scratcher).toBe('den-green-post')
     expect(normalized.pieces['feeding-set']).toBe('den-ceramic-bowls')
+  })
+
+  it('switches surface finishes without touching form geometry', () => {
+    const context = {
+      time: 'noon',
+      activity: 'sleep',
+      portraitId: 'minho',
+    } as const
+    const dusk = resolveHomeScene(
+      {
+        formId: 'split-level-den',
+        finishId: 'split-level-den-dusk',
+        pieces: {},
+      },
+      context,
+    )
+    expect(dusk.finishId).toBe('split-level-den-dusk')
+    expect(dusk.backdrop).toEqual([
+      {
+        id: 'shell',
+        src: '/dev-art/home-theme/split-level-den/shell--dusk.png',
+      },
+    ])
+    // 暮色 finish 携带全时段灯光层，部件与动态内容一起进入暮色。
+    expect(dusk.lighting?.src).toBe(
+      '/dev-art/home-theme/split-level-den/finish-dusk-lighting.png',
+    )
+    // 几何不随 finish 变化。
+    const morning = resolveHomeScene(
+      {
+        formId: 'split-level-den',
+        finishId: 'split-level-den-watercolor',
+        pieces: {},
+      },
+      context,
+    )
+    expect(dusk.postcardDisplay.slots).toEqual(morning.postcardDisplay.slots)
+    expect(morning.lighting).toBeNull()
+
+    expect(listHomeFinishes('split-level-den')).toEqual([
+      { id: 'split-level-den-watercolor', name: '晨光原木' },
+      { id: 'split-level-den-dusk', name: '暮色蓝调' },
+    ])
+    expect(listHomeFinishes('classic-v4')).toEqual([
+      { id: 'classic-v4-watercolor', name: '经典水彩' },
+    ])
   })
 
   it('lists only compatible registered pieces per socket', () => {

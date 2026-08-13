@@ -163,6 +163,18 @@ src/lib/homeTheme/
    差分件不可移植；替换件缺接触阴影。
 5. **切片 4 — finish 层与玩家 UI**：表面风格切换、主题选择界面、
    门禁放行。
+   **✅ 已完成（2026-08-13）**。form 结构升级：shell/exterior/lighting
+   随 `HomeFinishDefinition` 出资产，一个 form 可挂多套表面风格；
+   split-level-den 新增「暮色蓝调」finish（调色干净底 + 全时段灯光层，
+   `scripts/build-den-dusk-finish.mjs`），几何不随 finish 变化并有
+   测试锁定。玩家侧「布置家」面板落地（`HomeThemePicker.svelte`，
+   仿更换形象的交互模式）：预设整套采用、finish 与兼容部件单独替换，
+   经 `setHomeCustomization` 纯函数写入存档；CDP 验证切主题后刷新
+   保持。门禁模型完整：form/piece 均带 `shippingEligible`，生产环境
+   按放行过滤可选项——当前无放行 form，入口自动隐藏，生产行为不变；
+   dev 环境展示全部预览内容。classic 房间美术像素回归一致（唯一
+   差异是新增的「布置家」入口按钮）。真正"放行"取决于美术验收，
+   不在本切片内。
 
 ## 需要补 ADR 的决策
 

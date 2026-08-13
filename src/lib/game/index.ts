@@ -450,6 +450,23 @@ export const changeCatPortrait = (
   }
 }
 
+/**
+ * 更换全家共享的家外观选择。只校验形状——引用已下架内容不算非法，
+ * 渲染时由 resolveHomeScene 回退；选择未变化时返回原状态。
+ */
+export const setHomeCustomization = (
+  state: GameState,
+  customization: HomeCustomization,
+): GameState => {
+  if (!isHomeCustomization(customization)) {
+    throw new TypeError('家外观选择不完整')
+  }
+  if (
+    JSON.stringify(customization) === JSON.stringify(state.homeCustomization)
+  ) return state
+  return { ...state, homeCustomization: customization }
+}
+
 export const restoreGameState = (
   stored: unknown,
   now: number,

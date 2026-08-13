@@ -7,6 +7,7 @@
   import {
     HOME_THEME_PRESETS,
     listCompatiblePieces,
+    listHomeFinishes,
     listHomeForms,
     normalizeHomeCustomization,
     type HomeCustomization,
@@ -52,6 +53,7 @@
   const fallbackActive = $derived(
     normalizeHomeCustomization(selection) !== selection,
   )
+  const finishOptions = $derived(listHomeFinishes(scene.formId))
 </script>
 
 <aside class="theme-lab-panel" aria-label="Theme Lab">
@@ -68,6 +70,24 @@
       模拟下架主题
     </button>
   </div>
+  {#if finishOptions.length > 1}
+    <div class="theme-lab-socket">
+      <span class="theme-lab-socket-kind">finish</span>
+      <div class="theme-lab-row">
+        {#each finishOptions as finish (finish.id)}
+          <button
+            type="button"
+            class:active={scene.finishId === finish.id}
+            onclick={() => onSelect({
+              ...selection,
+              presetId: undefined,
+              finishId: finish.id,
+            })}
+          >{finish.name}</button>
+        {/each}
+      </div>
+    </div>
+  {/if}
   {#each scene.pieces as pieceSelection (pieceSelection.socketId)}
     {@const options = listCompatiblePieces(
       scene.formId,

@@ -16,6 +16,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'postcard-display',
     name: '暖木画框墙',
     compatibleProfiles: ['classic-v4/right-wall-display'],
+    shippingEligible: true,
     art: {
       base: '/assets/home/display--postcard-wall--v03.png',
     },
@@ -29,6 +30,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'cabinet',
     name: '橡木矮柜',
     compatibleProfiles: ['classic-v4/cabinet'],
+    shippingEligible: true,
     art: {
       base: null,
       foregroundOcclusion: '/assets/home/display--souvenir-occlusion--v01.png',
@@ -39,6 +41,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'scratcher',
     name: '青绒双层抓柱',
     compatibleProfiles: ['split-level-den/platform-scratcher'],
+    shippingEligible: false,
     art: {
       base: `${DEN_PIECE_ROOT}/piece--scratcher--green-post.png`,
     },
@@ -48,6 +51,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'scratcher',
     name: '麻绳斜塔',
     compatibleProfiles: ['split-level-den/platform-scratcher'],
+    shippingEligible: false,
     art: {
       base: `${DEN_PIECE_ROOT}/piece--scratcher--rope-tower.png`,
     },
@@ -57,6 +61,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'feeding-set',
     name: '陶瓷双碗',
     compatibleProfiles: ['split-level-den/platform-feeding'],
+    shippingEligible: false,
     art: {
       base: `${DEN_PIECE_ROOT}/piece--feeding--ceramic-bowls.png`,
     },
@@ -66,6 +71,7 @@ export const HOME_PIECES: Readonly<Record<string, HomePiece>> = {
     kind: 'feeding-set',
     name: '原木高脚食台',
     compatibleProfiles: ['split-level-den/platform-feeding'],
+    shippingEligible: false,
     art: {
       base: `${DEN_PIECE_ROOT}/piece--feeding--raised-feeder.png`,
     },

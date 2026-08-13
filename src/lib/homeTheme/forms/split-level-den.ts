@@ -6,13 +6,15 @@
  * 远端是壁柜；x=980 处转角接右侧返回墙。窗台层（yAtLeft≈1010 的平台）
  * 承担看窗与进食，低层地面承担睡眠与玩耍。
  *
- * 窗景与展示架烘焙在 shell 里，因此没有独立 exterior/lighting 层，
- * 也没有明信片 fixture 与纪念品遮挡图。卡位行与柜沿锚点按
+ * 窗景与展示架烘焙在 shell 里，没有独立 exterior 时间层，也没有
+ * 明信片 fixture 与纪念品遮挡图；暮色 finish 通过调色 shell 与
+ * 全时段灯光层实现。卡位行与柜沿锚点按
  * shell--candidate-v01 实测重排（书架 yAtLeft≈262/419/578、柜顶沿
  * y≈730→748），再用与控制图相同的 wallY 公式投影，不得手工调整单点。
  */
 import type { HomeFormDefinition } from '../types'
 
+const ART_ROOT = '/dev-art/home-theme/split-level-den'
 const CLASSIC_ANIMATION_ROOT = '/dev-art/home-v4/cat-animations'
 /** 实测柜顶沿斜率 18px/340px ≈ 3.0°。 */
 const WALL_SKEW_AT_LEDGE = 3
@@ -23,7 +25,38 @@ export const SPLIT_LEVEL_DEN_FORM = {
   /** 开发预览阶段；未通过上线验收。 */
   shippingEligible: false,
   canvas: { width: 1200, height: 1600 },
-  finishIds: ['split-level-den-watercolor'],
+  finishes: [
+    {
+      id: 'split-level-den-watercolor',
+      name: '晨光原木',
+      exterior: null,
+      lighting: {
+        morning: null,
+        noon: null,
+        dusk: null,
+        'late-night': null,
+      },
+      shell: {
+        default: `${ART_ROOT}/shell.png`,
+        activityVariants: {},
+      },
+    },
+    {
+      id: 'split-level-den-dusk',
+      name: '暮色蓝调',
+      exterior: null,
+      lighting: {
+        morning: `${ART_ROOT}/finish-dusk-lighting.png`,
+        noon: `${ART_ROOT}/finish-dusk-lighting.png`,
+        dusk: `${ART_ROOT}/finish-dusk-lighting.png`,
+        'late-night': `${ART_ROOT}/finish-dusk-lighting.png`,
+      },
+      shell: {
+        default: `${ART_ROOT}/shell--dusk.png`,
+        activityVariants: {},
+      },
+    },
+  ],
   /** 窗框、壁柜、书架、地毯仍烘焙在 shell 里；抓柱与食碗已开 socket。 */
   sockets: [
     {
@@ -39,17 +72,6 @@ export const SPLIT_LEVEL_DEN_FORM = {
       region: { x: 250, y: 1050, width: 300, height: 170 },
     },
   ],
-  exterior: null,
-  lighting: {
-    morning: null,
-    noon: null,
-    dusk: null,
-    'late-night': null,
-  },
-  shell: {
-    default: '/dev-art/home-theme/split-level-den/shell.png',
-    activityVariants: {},
-  },
   catPlacements: {
     sleep: { x: 450, y: 1080, width: 400, height: 400 },
     play: { x: 620, y: 1040, width: 430, height: 430 },

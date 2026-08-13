@@ -98,7 +98,25 @@ export type HomePiece = {
   kind: HomePieceKind
   name: string
   compatibleProfiles: readonly string[]
+  /** 资产是否已通过上线验收；生产环境只向玩家提供已放行部件。 */
+  shippingEligible: boolean
   art: HomePieceArt
+}
+
+/**
+ * 一套表面风格：连续表面（墙面/地板 wash）、窗外时间层与室内
+ * lighting 随 finish 出资产；不创建独立可识别的家具。
+ */
+export type HomeFinishDefinition = {
+  id: HomeFinishId
+  name: string
+  /** 无独立窗外时间层的 finish（窗景烘焙在 shell 里）为 null。 */
+  exterior: Readonly<Record<HomeTime, string>> | null
+  lighting: Readonly<Record<HomeTime, string | null>>
+  shell: {
+    default: string
+    activityVariants: Readonly<Partial<Record<HomeActivity, string>>>
+  }
 }
 
 /** 玩家的家外观选择。只含 ID，不含派生坐标或图片路径。 */
@@ -137,15 +155,9 @@ export type HomeFormDefinition = {
   name: string
   shippingEligible: boolean
   canvas: CanvasSize
-  finishIds: readonly HomeFinishId[]
+  /** 至少一个；预设默认 finish 必须在列。 */
+  finishes: readonly HomeFinishDefinition[]
   sockets: readonly HomeSocket[]
-  /** 无独立窗外时间层的 form（窗景烘焙在 shell 里）为 null。 */
-  exterior: Readonly<Record<HomeTime, string>> | null
-  lighting: Readonly<Record<HomeTime, string | null>>
-  shell: {
-    default: string
-    activityVariants: Readonly<Partial<Record<HomeActivity, string>>>
-  }
   catPlacements: Readonly<Record<HomeActivity, CatPlacement>>
   catPaintBounds: Readonly<Partial<Record<HomeActivity, PaintBounds>>>
   catAnimationsByPortrait: Readonly<Record<
@@ -176,6 +188,7 @@ export type HomeFormDefinition = {
  */
 export type ResolvedHomeScene = {
   formId: HomeFormId
+  finishId: HomeFinishId
   canvas: CanvasSize
   shippingEligible: boolean
   /** 猫与动态内容之下的静态图层，按 z 序排列；shell 层 id 固定为 'shell'。 */

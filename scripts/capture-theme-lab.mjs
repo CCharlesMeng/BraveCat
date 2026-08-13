@@ -232,6 +232,12 @@ try {
     `${origin}/?homeActivity=sleep&themeLab=split-level-den`
       + '&themePieces=scratcher:den-rope-tower,feeding-set:den-raised-feeder',
   )
+  // 暮色蓝调 finish。
+  await capture(
+    'lab--split-level-den--dusk-finish',
+    `${origin}/?homeActivity=sleep&themeLab=split-level-den`
+      + '&themeFinish=split-level-den-dusk',
+  )
   socket.close()
   console.log(`done: ${outputRoot}`)
 } finally {

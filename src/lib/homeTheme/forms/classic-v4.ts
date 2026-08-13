@@ -17,7 +17,30 @@ export const CLASSIC_V4_FORM = {
   /** 候选资产尚未通过上线验收；生产环境继续使用 CSS 房间兜底。 */
   shippingEligible: false,
   canvas: { width: 1200, height: 1600 },
-  finishIds: ['classic-v4-watercolor'],
+  finishes: [
+    {
+      id: 'classic-v4-watercolor',
+      name: '经典水彩',
+      exterior: {
+        morning: `${ART_ROOT}/exterior-morning.png`,
+        noon: `${ART_ROOT}/exterior-noon.png`,
+        dusk: `${ART_ROOT}/exterior-dusk.png`,
+        'late-night': `${ART_ROOT}/exterior-late-night.png`,
+      },
+      lighting: {
+        morning: `${ART_ROOT}/lighting-morning.png`,
+        noon: null,
+        dusk: `${ART_ROOT}/lighting-dusk.png`,
+        'late-night': `${ART_ROOT}/lighting-late-night.png`,
+      },
+      shell: {
+        default: `${ART_ROOT}/interior-foreground.png`,
+        activityVariants: {
+          eat: `${ART_ROOT}/interior-foreground-eat.png`,
+        },
+      },
+    },
+  ],
   /**
    * 窗框、猫爬架、碗、地毯仍烘焙在 shell 里未开 socket；
    * 画框墙 fixture 与柜前遮挡已由 piece 接管。
@@ -36,24 +59,6 @@ export const CLASSIC_V4_FORM = {
       region: { x: 900, y: 880, width: 270, height: 330 },
     },
   ],
-  exterior: {
-    morning: `${ART_ROOT}/exterior-morning.png`,
-    noon: `${ART_ROOT}/exterior-noon.png`,
-    dusk: `${ART_ROOT}/exterior-dusk.png`,
-    'late-night': `${ART_ROOT}/exterior-late-night.png`,
-  },
-  lighting: {
-    morning: `${ART_ROOT}/lighting-morning.png`,
-    noon: null,
-    dusk: `${ART_ROOT}/lighting-dusk.png`,
-    'late-night': `${ART_ROOT}/lighting-late-night.png`,
-  },
-  shell: {
-    default: `${ART_ROOT}/interior-foreground.png`,
-    activityVariants: {
-      eat: `${ART_ROOT}/interior-foreground-eat.png`,
-    },
-  },
   catPlacements: {
     sleep: { x: 40, y: 550, width: 420, height: 420 },
     play: { x: 20, y: 480, width: 450, height: 450 },

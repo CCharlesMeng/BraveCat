@@ -49,6 +49,19 @@
 - `lab--split-level-den--swapped-pieces.png`：Theme Lab 换装组合
   QA 截图（`?themePieces=scratcher:den-rope-tower,feeding-set:den-raised-feeder`）。
 
+## 暮色蓝调 finish（切片 4，2026-08-13）
+
+- `shell--dusk--candidate-v01.png`：干净底整体调色（压亮度 + 靛蓝
+  multiply），几何与「晨光原木」完全一致。
+- `finish-dusk-lighting--candidate-v01.png`：全时段灯光层（普通
+  alpha 叠加，窗心透明 → 四周靛蓝），让部件、猫与动态内容进入
+  同一暮色；由 `scripts/build-den-dusk-finish.mjs` 程序化生成，
+  属 dev 预览候选，正式版待美术评审。
+- `finish-dusk--composite-preview.png`、
+  `lab--split-level-den--dusk-finish.png`：合成与应用内 QA 截图。
+- `player-theme-picker.png`：玩家侧「布置家」面板（生产环境按
+  shippingEligible 过滤，当前入口仅 dev 可见）。
+
 ## 已知欠账（后续切片处理）
 
 - 窗景、壁柜、书架、地毯仍烘焙在 shell 里：无 exterior 时间层与

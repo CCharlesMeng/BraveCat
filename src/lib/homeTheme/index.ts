@@ -21,6 +21,7 @@ export {
 } from './presets'
 export {
   listCompatiblePieces,
+  listHomeFinishes,
   listHomeForms,
   resolveHomeScene,
 } from './resolveHomeScene'
@@ -32,6 +33,7 @@ export type {
   DisplayRect,
   HomeActivity,
   HomeCustomization,
+  HomeFinishDefinition,
   HomeFinishId,
   HomeFormDefinition,
   HomeFormId,

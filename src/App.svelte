@@ -27,9 +27,13 @@
   } from './lib/homeArt'
   import {
     HOME_THEME_PRESETS,
+    listCompatiblePieces,
+    listHomeFinishes,
+    listHomeForms,
     resolveHomeScene,
     type HomeCustomization,
   } from './lib/homeTheme'
+  import HomeThemePicker from './lib/HomeThemePicker.svelte'
   // dev-only 家主题配置器，生产构建不会挂载。
   import ThemeLab from './lib/ThemeLab.svelte'
   import {
@@ -40,6 +44,7 @@
     isGameState,
     restoreGameState,
     selectActiveCat,
+    setHomeCustomization,
     type GameState,
   } from './lib/game'
   import { planItinerary } from './lib/itinerary'
@@ -116,7 +121,8 @@
       ? {
         presetId: themeLabInitialPreset.id,
         formId: themeLabInitialPreset.formId,
-        finishId: themeLabInitialPreset.finishId,
+        finishId: themeLabSearch.get('themeFinish')
+          ?? themeLabInitialPreset.finishId,
         pieces: { ...themeLabInitialPreset.pieces, ...themeLabPieceOverrides },
       }
       : null,
@@ -268,6 +274,7 @@
   let purchaseFlowBusy = $state(false)
   let shopNotice = $state('')
   let portraitChoicesOpen = $state(false)
+  let themeChoicesOpen = $state(false)
   let selectedWishDestinationId = $state<DestinationId>(
     STARTER_DESTINATIONS[0].id,
   )
@@ -302,6 +309,20 @@
   const showHomeArtPreview = $derived(
     isDevelopment && !homeScene.shippingEligible,
   )
+  // 有多于一个可选主题/风格/部件才展示「布置家」；生产环境按放行过滤。
+  const themeChoicesAvailable = $derived.by(() => {
+    const eligiblePresets = HOME_THEME_PRESETS.filter(({ formId }) => (
+      isDevelopment
+      || listHomeForms().find(({ id }) => id === formId)?.shippingEligible
+    ))
+    if (eligiblePresets.length > 1) return true
+    if (listHomeFinishes(homeScene.formId).length > 1) return true
+    return homeScene.pieces.some(({ socketId }) => (
+      listCompatiblePieces(homeScene.formId, socketId)
+        .filter((piece) => isDevelopment || piece.shippingEligible)
+        .length > 1
+    ))
+  })
   const homeBackdropLayers = $derived(homeScene.backdrop.map((layer) => (
     layer.id === 'shell' && wallPrototypeVariantKey && wallPerspectiveBackground
       ? { ...layer, src: wallPerspectiveBackground }
@@ -818,6 +839,22 @@
     }
   }
 
+  const applyHomeCustomization = async (
+    customization: HomeCustomization,
+  ) => {
+    try {
+      const next = setHomeCustomization(game, customization)
+      if (next === game) return
+      game = next
+      activityNotice = '家换上了新的布置。'
+      await saveGame()
+    } catch (error) {
+      activityNotice = error instanceof Error
+        ? error.message
+        : '这次没能换上新的布置。'
+    }
+  }
+
   const switchPortrait = async (portraitId: PortraitId) => {
     try {
       const next = changeCatPortrait(game, {
@@ -1330,8 +1367,22 @@
               class="portrait-choice-toggle"
               type="button"
               aria-expanded={portraitChoicesOpen}
-              onclick={() => portraitChoicesOpen = !portraitChoicesOpen}
+              onclick={() => {
+                portraitChoicesOpen = !portraitChoicesOpen
+                themeChoicesOpen = false
+              }}
             >更换形象</button>
+          {/if}
+          {#if themeChoicesAvailable}
+            <button
+              class="portrait-choice-toggle"
+              type="button"
+              aria-expanded={themeChoicesOpen}
+              onclick={() => {
+                themeChoicesOpen = !themeChoicesOpen
+                portraitChoicesOpen = false
+              }}
+            >布置家</button>
           {/if}
         </div>
         <p>
@@ -1360,6 +1411,17 @@
             </button>
           {/each}
         </div>
+      {/if}
+
+      {#if themeChoicesOpen && themeChoicesAvailable}
+        <HomeThemePicker
+          customization={game.homeCustomization}
+          scene={homeScene}
+          {isDevelopment}
+          onApply={(customization) => {
+            void applyHomeCustomization(customization)
+          }}
+        />
       {/if}
     </section>
 
