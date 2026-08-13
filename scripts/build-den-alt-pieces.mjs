@@ -20,7 +20,7 @@ const argValue = (flag) => {
 const candidateRoot = path.resolve(
   'docs/art/candidates/home-theme-prototypes/2026-08-13/split-level-den',
 )
-const runtimeRoot = path.resolve('public/dev-art/home-theme/split-level-den')
+const runtimeRoot = path.resolve('apps/web/public/dev-art/home-theme/split-level-den')
 const width = 1200
 const height = 1600
 

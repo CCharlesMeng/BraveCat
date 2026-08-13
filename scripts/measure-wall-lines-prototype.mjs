@@ -6,7 +6,7 @@
  */
 import sharp from 'sharp'
 
-const SRC = 'public/dev-art/home-v4/interior-foreground.png'
+const SRC = 'apps/web/public/dev-art/home-v4/interior-foreground.png'
 
 const { data, info } = await sharp(SRC)
   .flatten({ background: '#f4efdc' })
