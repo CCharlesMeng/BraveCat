@@ -43,6 +43,10 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery-v02.png`
 - 当前套装审阅板：
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-part-set-b-warm-walnut-travel-gallery-review-board-v02.png`
+- 当前完整合成审阅图：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--assembled-room-review--candidate-v03-unified-grade.png`
+  — 2026-08-13 用户以“ok”签收整体搭配与统一调色方向；v03 supersedes v02，
+  不签精确坐标或 runtime 分层。
 - 原始生成板 `...review-board-v01.png` 实际为 1536×1024，不是请求中的
   16:9；`v02` 保留原画面并规范为 1920×1080，未覆盖旧文件。
 
@@ -64,7 +68,8 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
 
 ### A
 
-状态：**概念方向通过；套装审阅通过；production 未就绪**。
+状态：**概念方向通过；套装审阅通过；v03 整体搭配与统一调色通过；
+production 未就绪**。
 
 - 结构与透视：完整概念能读出“窗与六卡共享后墙、柜子落在右墙”的 A
   形态；家具均落地，未见明显漂浮。
@@ -227,6 +232,12 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
    判定无需 occlusion 层（卡位底边在轨顶上方，无重叠）。scratcher
    base A/F 已产出（A 靠窗 gaze-perch、F 低层地面），B 未产出；
    perch/play 锚点待猫叠层验收轮量测。下一件：`feeding-set`。
+   **更新（2026-08-13 晚）：**scratcher B 补齐；feeding-set base 三套
+   齐；window-frame base 三套齐（洞对位落位、12px 包边，F 随左墙
+   透视整体变形）——window-frame 因 treat 锚点依赖窗台而提前于
+   cabinet。全件穿戴 QA 见 `production/*/qa--dressed-room--v01.png`。
+   剩余件：`cabinet`（A/B 需右墙透视处理）→ `rug` → `plant`；
+   遮挡拆层债务：窗台前沿 foreground、F 帘布压 postcard 框的 z 序。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前
@@ -482,3 +493,120 @@ exclusion geometry、z-band、遮挡拆层或像素注册。
 层，也不能用来反推 runtime placement。A / F shell 的 alpha/aperture mask、
 主造型透明 base / foreground、socket 对位、比例裁切、逐层注册与猫动画
 遮挡 QA 仍为有效阻断；`runtimeEligible=false`。
+
+## 2026-08-13 · B 候选美术生产
+
+本轮只补齐 B「暖胡桃旅行画廊」的候选美术和审阅证据，没有写入
+`public/`、没有修改运行时代码，也没有创建 runtime manifest。生成器请求
+portrait / 3:4 的文件实测仍为 **1024 × 1536（2:3）**；八类独立造型请求
+1:1，实测均为 **1024 × 1024**。下列文件全部实测 `hasAlpha: no`，因此不
+声明 alpha，也不把纸面审阅源当作可抠图的 production 资产。
+
+### Clean shell
+
+- 初稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--clean-shell-source--candidate-v01.png`
+  — 1024×1536、无 alpha。主内角视觉/梯度线估算 x≈630（约 61.5%），位于
+  目标 x=650±35 内；大窗独占后墙、宽右墙空白，连续象牙墙/天花、暖胡桃
+  地板/踢脚线和零 HomePiece 均通过。窗洞混有非精确 near-black，**遮罩失败
+  并淘汰**，未覆盖。
+- 生成式重做原稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--clean-shell-source--candidate-v02.png`
+  — 1024×1536、无 alpha。主内角仍为 x≈630；结构继续通过。窗洞连通
+  near-black 区 257,742 px 中只有 192,426 px 为精确黑，65,316 px 非
+  `#000000`，**遮罩仍失败并淘汰**。
+- 本轮主 shell：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--clean-shell-source--candidate-v01--retry-v02-blackmask-normalized-v01.png`
+  — 1024×1536、无 alpha。从重做稿非破坏性派生，只把窗洞中心连通且最大
+  RGB 通道不高于 96 的 257,742 px 压为精确 `#000000`；复测该连通区
+  nonexact=0。主内角 x≈630、右墙约 38.5%，标准矩形结构、宽右墙容量、
+  连续表面、无窗框/家具/猫/动态内容均通过。该黑区仍只是烘焙审阅遮罩。
+
+### 八类独立 shape-review source
+
+除另述淘汰稿外，下列八张主图均为 1024×1024、无 alpha，使用米白纸面、
+轻微纸纹/接触影；每张只审造型、材质、配色与完整性。
+
+- `window-frame`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02-blackmask-normalized-v03.png`
+  — 深胡桃完整框、宽窗台和单一藤编/竹帘通过；无 exterior 或附带物件。
+  窗洞逐行限定审阅区共 311,307 个 near-black 像素，复测全部为精确
+  `#000000`。
+- `postcard-display`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--postcard-display-shape-review-source--candidate-v01-not-alpha.png`
+  — 恰好三条胡桃轨、六个空米白框；每行右框比左框略大，三条轨向右略增厚，
+  横边共享同一右墙透视方向；无旅行画。
+- `scratcher`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--scratcher-shape-review-source--candidate-v01-not-alpha.png`
+  — 单一胡桃底座/立柱、奶油织物或藤编双平台及一个克制悬挂玩具完整。
+- `feeding-set`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--feeding-set-shape-review-source--candidate-v01-not-alpha.png`
+  — 两只空哑光沙色陶碗和单一陶土椭圆垫完整；无食物、水或第二张垫。
+- `cabinet`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--cabinet-shape-review-source--candidate-v01-not-alpha.png`
+  — 单一低矮宽胡桃四藤编面柜完整，右近端略大，柜顶完全空。
+- `rug`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--rug-shape-review-source--candidate-v01-not-alpha.png`
+  — 单一燕麦色、低饱和陶土边圆/椭圆平织地毯完整；无第二地垫。
+- `plant`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--plant-shape-review-source--candidate-v01-not-alpha.png`
+  — 单一小尺度象牙陶瓶和疏朗纤细枝叶完整，无第二容器。
+- 可选 `finish swatch`：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--finish-swatch-shape-review-source--candidate-v01-not-alpha.png`
+  — 恰好五块无文字材质样：象牙灰泥、暖胡桃地板、奶油织物、低饱和陶土与
+  藤编；没有被误画成房间或物件。
+
+八张主造型均完整居中、留白充分，无裁切、额外部件、房间污染、猫、UI、
+文字、水印或动态内容；暖胡桃、象牙白、奶油织物、少量陶土和藤编配色一致。
+
+### Window-frame 淘汰证据
+
+- 初稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--window-frame-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024、无 alpha；窗洞存在 near-black 渐变，淘汰。
+- 重做原稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--window-frame-shape-review-source--candidate-v02-not-alpha.png`
+  — 1024×1024、无 alpha；限定窗洞 311,307 px 中 67,478 px 非精确黑，
+  生成式重做后仍失败，淘汰。
+- 连通区归一化试稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02-blackmask-normalized-v01.png`
+  — 深色木框阴影与窗洞连通，归一化误侵入内框/帘上方，淘汰。
+- 首次逐行归一化试稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02-blackmask-normalized-v02.png`
+  — 误把帘上方长阴影压成黑线，淘汰。主路径 `...normalized-v03.png` 将处理
+  限定在真实 aperture 高度，未覆盖上述失败证据。
+
+### Assembled room review
+
+- 初稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--assembled-room-review--candidate-v01.png`
+  — 1024×1536、无 alpha。部件、色板、单一地毯、空六卡、noon exterior 和
+  动态内容去除通过，但主内角视觉估算 x≈557（约 54.4%），右墙被扩到约
+  45.6%，**退化为近中置内角并淘汰**。
+- v02 结构审阅图：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--assembled-room-review--candidate-v02.png`
+  — 1024×1536、无 alpha。主内角视觉估算 x≈637（约 62.2%），位于
+  x=650±35 内；后墙大窗与约 37.8% 的宽右墙读感清楚。六个空框全部位于
+  右墙，每行右框比左框略大，轨道/框横边共享右墙透视；四藤编面柜落地并
+  贴合右墙，右近端略放大。抓柱和空双碗靠后墙窗侧，前景只有一张地毯，
+  柜顶只有一个植物；noon 山谷只出现在窗内。无猫、旅行图、纪念品、食物、
+  水、UI 或文字。结构完整性可作对照，但复核发现整体饱和度偏高，窗景与
+  室内存在明显图层割裂，**作为批准主稿淘汰**；只保留在 Cursor assets。
+- 当前批准主稿 v03 unified grade：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-b-warm-walnut-travel-gallery--assembled-room-review--candidate-v03-unified-grade.png`
+  — 1024×1536、无 alpha。以统一调色修正 v02 的过饱和及窗景图层割裂，
+  保留已通过的整体构图、主内角、宽右墙、六卡、柜体、抓柱、feeding-set、
+  单一地毯与植物关系。2026-08-13 用户以“ok”批准整体搭配与统一调色视觉
+  方向；`v03 supersedes v02`。该批准不签精确坐标、alpha、socket 或注册。
+
+### Runtime 阻断
+
+- 上述 portrait 文件实际为 2:3，不是 3:4 / 1200×1600；全部无 alpha。
+- shell 黑窗洞与 assembled 图均为烘焙 source；没有独立 aperture alpha /
+  mask、逐平面 HomeFinish、透明 base / foreground-occlusion 或同母版像素
+  注册。
+- shape-review 的米白纸面、纸纹和接触影只允许造型签收，不得抠图后复制到
+  runtime；没有边缘去色、socket 对位、support / exclusion、z-band、slot
+  quad、perch / play / feeding / souvenir anchor 或猫动画遮挡 QA。
+- 本章节不授权从合成图反推坐标，不改变既有冻结 geometry，也没有创建
+  runtime manifest；`runtimeEligible=false`。

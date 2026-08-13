@@ -1,11 +1,11 @@
 /**
- * A/F scratcher base 部件装配（生产顺序第 4 步，件序第 2 件）：
+ * A/B/F feeding-set base 部件装配（生产顺序第 4 步，件序第 3 件）：
  *
- * 绿幕抓柱键控 → 裁边 → 等比缩放进 geometry v02 的 scratcher socket
- * region（底边中点对齐 region 底边中点）→ 输出透明部件与 QA 合成。
+ * 绿幕碗垫组键控 → 裁边 → 等比缩放进 geometry v02 的 feeding-set
+ * socket region（底边中点对齐）→ 输出透明部件与 QA 合成。
  *
  * Usage:
- *   node scripts/build-scratcher-pieces.mjs
+ *   node scripts/build-feeding-set-pieces.mjs
  */
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
@@ -19,9 +19,9 @@ const productionRoot = path.resolve(
 )
 
 const FORMS = [
-  { slug: 'a-clear-sage', source: 'scratcher-a-sage-greenscreen-v01.png' },
-  { slug: 'b-warm-walnut-gallery', source: 'scratcher-b-walnut-greenscreen-v01.png' },
-  { slug: 'f-moonwhite-bluegray', source: 'scratcher-f-smokeblue-greenscreen-v01.png' },
+  { slug: 'a-clear-sage', source: 'feeding-a-celadon-greenscreen-v01.png' },
+  { slug: 'b-warm-walnut-gallery', source: 'feeding-b-terracotta-greenscreen-v01.png' },
+  { slug: 'f-moonwhite-bluegray', source: 'feeding-f-bluewhite-greenscreen-v01.png' },
 ]
 
 const keyedPng = async (sourcePath) => {
@@ -49,7 +49,7 @@ for (const { slug, source } of FORMS) {
   const geometry = JSON.parse(await readFile(
     path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
   ))
-  const region = geometry.sockets.find(({ id }) => id === 'scratcher').region
+  const region = geometry.sockets.find(({ id }) => id === 'feeding-set').region
   const keyed = await keyedPng(path.join(stagingRoot, source))
   const trimmed = await sharp(keyed).trim({ threshold: 10 }).png().toBuffer()
   const meta = await sharp(trimmed).metadata()
@@ -60,7 +60,7 @@ for (const { slug, source } of FORMS) {
   const top = region.y + region.height - scaledHeight
 
   const piecePath = path.join(
-    productionRoot, slug, 'piece--scratcher--candidate-v01.png',
+    productionRoot, slug, 'piece--feeding-set--candidate-v01.png',
   )
   await sharp({
     create: { width, height, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
@@ -76,7 +76,7 @@ for (const { slug, source } of FORMS) {
   const outline = Buffer.from(`
 <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   <rect x="${region.x}" y="${region.y}" width="${region.width}"
-    height="${region.height}" fill="none" stroke="#5a7a52"
+    height="${region.height}" fill="none" stroke="#8a6f4f"
     stroke-width="4" stroke-dasharray="12 8"/>
 </svg>
   `)
@@ -84,6 +84,6 @@ for (const { slug, source } of FORMS) {
     .flatten({ background: '#9fc2d8' })
     .composite([{ input: await readFile(piecePath) }, { input: outline }])
     .png()
-    .toFile(path.join(productionRoot, slug, 'qa--piece-scratcher--v01.png'))
-  console.log(`${slug}: scratcher piece + QA written (${scaledWidth}x${scaledHeight} @ ${left},${top})`)
+    .toFile(path.join(productionRoot, slug, 'qa--piece-feeding-set--v01.png'))
+  console.log(`${slug}: feeding-set piece + QA written (${scaledWidth}x${scaledHeight} @ ${left},${top})`)
 }

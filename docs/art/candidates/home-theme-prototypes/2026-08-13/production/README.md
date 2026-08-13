@@ -81,8 +81,45 @@ F 白橡+烟蓝双平台）键控 → 等比缩放进 v02 scratcher socket regio
   靠窗立柱、顶台即窗边 gaze-perch；F 实际落位 148×500 @ (76,820)，
   立于低层地面、贴平台前沿（部件在前正确遮挡平台立面）。
 - `qa--piece-scratcher--v01.png`：部件 + socket region 虚线对位证据。
-- 欠账：高低 perch 与 `play-target` 锚点未量测（待猫叠层验收轮）；
-  B 的 scratcher 未产出。
+- 欠账：高低 perch 与 `play-target` 锚点未量测（待猫叠层验收轮）。
+- **B 已补齐**（2026-08-13 傍晚）：胡桃立柱 + 象牙藤编双平台 + 悬挂
+  玩具球，实际落位 156×500 @ (82,860)。
+
+## 第三件：feeding-set base（A/B/F）
+
+`scripts/build-feeding-set-pieces.mjs`：绿幕碗垫组（A 斑点青瓷双碗 +
+鼠尾草垫、B 陶土双碗 + 陶土边藤编垫、F 蓝白纹样双碗 + 烟蓝毡垫）
+键控 → 等比缩放进 v02 feeding-set socket region、底边中点对齐：
+
+- `piece--feeding-set--candidate-v01.png`：A 250×93 @ (295,1172)、
+  B 220×90 @ (300,1195)、F 230×95 @ (285,1205)。
+- `qa--piece-feeding-set--v01.png`：部件 + socket region 对位证据。
+- 欠账：两碗中心与猫进食落脚点未量测（待猫叠层验收轮）；碗口
+  foreground 待动态填充物需求确认。
+
+## 第五件提前：window-frame base（A/B/F，treat 锚点依赖窗台）
+
+`scripts/build-window-frame-pieces.mjs`：绿幕窗框（洞内同为纯绿）
+键控后按**洞对位**落位——检测素材内透明洞边界，把洞映射到 v02 实测
+窗洞（A/B 矩形、F 透视 quad，框/帘/窗台按窗洞平面列线性映射整体
+变形），框内沿相对窗洞向内包边 12px 以盖住毛洞边缘并吸收画稿窗洞
+顶边不水平造成的楔形露边（B 首轮曾出现右上露蓝，包边后消除）：
+
+- `piece--window-frame--candidate-v01.png`：A 浅木框 + 鼠尾草罗马帘
+  （收拢在洞顶上方）+ 窗台；B 深胡桃框 + 藤编卷帘 + 深窗台；
+  F 白橡框 + 两侧蓝灰纱帘 + 窄窗台（随左墙透视变形）。
+- `qa--piece-window-frame--v01.png`：部件 + 实测窗洞虚线 + treat
+  锚点对位证据。
+- 欠账：窗台前沿 foreground（猫趴窗台时的压边）未拆层；F 帘布
+  与 postcard 框的 z 序为“框画在帘上”，物理上帘更近，帘布应拆进
+  foreground occlusion——留待遮挡拆层轮。
+
+## 全件穿戴 QA
+
+`scripts/build-dressed-room-qa.mjs` 把每套 form 当前全部候选部件按
+z 序（exterior → shell → window-frame → 轨/框 → scratcher →
+feeding-set）合成为 `qa--dressed-room--v01.png`，江湾 v03 以 1.10
+倍率居中作窗外景。仅证据用途，不是 runtime 合成器。
 
 ## Exterior 视差行程 QA（联动 home-exteriors 试点）
 

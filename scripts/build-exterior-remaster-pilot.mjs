@@ -35,14 +35,30 @@ const SCENES = [
   {
     sceneId: 'ext-riverbend-embankment',
     raw: 'ext-riverbend-remaster-v03-raw.png',
+    version: 'v03',
     // 江湾对岸整幅是绿岸，全宽蓝度骤降检测稳定。
     measureX: { min: 100, max: width - 100 },
   },
   {
     sceneId: 'ext-quiet-sea-bay',
     raw: 'ext-quiet-sea-bay-remaster-v03-raw.png',
+    version: 'v03',
     // 海湾左侧是山岬，只在右半开阔海平线上检测。
     measureX: { min: 620, max: 1120 },
+  },
+  {
+    sceneId: 'ext-reed-lake',
+    raw: 'ext-reed-lake-remaster-v02-raw.png',
+    version: 'v02',
+    // 远岸树线横贯全宽。
+    measureX: { min: 100, max: width - 100 },
+  },
+  {
+    sceneId: 'ext-irrigated-fields',
+    raw: 'ext-irrigated-fields-remaster-v02-raw.png',
+    version: 'v02',
+    // 山是蓝灰色背景，注册线取山脚的树线/农舍带（检测最强骤降行）。
+    measureX: { min: 100, max: width - 100 },
   },
 ]
 
@@ -68,7 +84,7 @@ const measureHorizon = (data, rowWidth, measureX, yMin, yMax) => {
   return horizonY
 }
 
-for (const { sceneId, raw, measureX } of SCENES) {
+for (const { sceneId, raw, version, measureX } of SCENES) {
   // 源图等宽放大到 1200×1800，先在放大稿上实测地平线，再解出
   // 让地平线落到 y≈580 的裁切偏置（受 0–200 可用范围约束）。
   const upscaled = await sharp(path.join(stagingRoot, raw))
@@ -82,7 +98,7 @@ for (const { sceneId, raw, measureX } of SCENES) {
   )
 
   const masterPath = path.join(
-    exteriorRoot, `${sceneId}--master--noon-clear--candidate-v03.png`,
+    exteriorRoot, `${sceneId}--master--noon-clear--candidate-${version}.png`,
   )
   await sharp(path.join(stagingRoot, raw))
     .resize(width, upscaledHeight)
@@ -137,7 +153,10 @@ for (const { sceneId, raw, measureX } of SCENES) {
         input, left: 8 + index * (384 + 8), top: 8,
       })))
       .png()
-      .toFile(path.join(qaDir, `qa--${sceneId.replace('ext-', '')}-v03-travel--${slug}--v01.png`))
+      .toFile(path.join(
+        qaDir,
+        `qa--${sceneId.replace('ext-', '')}-${version}-travel--${slug}--v01.png`,
+      ))
     console.log(`${sceneId} × ${slug}: travel QA written`)
   }
 }
