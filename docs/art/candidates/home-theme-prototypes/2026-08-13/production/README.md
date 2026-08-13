@@ -235,3 +235,53 @@ socket region，数值即 v03 几何冻结输入）：
   不影响 socket 拓扑。
 - 逐平面 HomeFinish（墙/地/踢脚线分离输出）未开始；当前 shell 为
   单层烘焙 finish，与 den 迁移态一致。
+
+## 2026-08-13 · furnished base plate 重制（当前主路径）
+
+本轮停止“单件绿幕 → 抠像 → warp → 程序阴影 → 机械装配”的房间生产方式。
+旧 `piece--*.png`、旧 geometry 与 dressed v01–v03 只保留为失败历史；本节
+及以下 `furnished-base-plate` 文件是新的候选主路径。固定主题内容在每套
+source 中一次画成：房间结构、窗框/帘、六个空框/卡、陈列轨、柜体、柜顶
+植物、主地毯以及全部投影/接触阴影。只有 exterior、六张照片、猫与 Cat Item
+在穿戴证明中后合成。
+
+三个首稿实际输出均为 1024×1536。归一化采用**居中 cover 裁切**后缩放到
+1200×1600，没有把 2:3 原图非等比拉伸成 3:4。原始生成件、归一化纯黑洞版、
+aperture-alpha、独立 mask、新图实测 geometry、控制线、签收图并排对照与
+dressed QA 均留在各自 form 目录：
+
+- `source--furnished-base-plate--imagegen-v01.png`
+- `furnished-base-plate--black-aperture--candidate-v01.png`
+- `furnished-base-plate--aperture-alpha--candidate-v01.png`
+- `aperture-mask--furnished-base-plate--candidate-v01.png`
+- `geometry--furnished-base-plate--measured-freeze-v01.json`
+- `qa--furnished-base-plate-control-overlay--candidate-v01.png`
+- `qa--furnished-base-plate-comparison--candidate-v01.png`
+- `qa--furnished-base-plate-dressed--candidate-v01.png`
+
+### 新图实测与 QA
+
+| Form | 新窗洞 bbox（1200×1600） | 洞像素 | 结果 |
+| --- | --- | ---: | --- |
+| A 清润鼠尾草 | `126,329,342,525` | 169,867 | v01 通过 |
+| B 暖胡桃画廊 | `146,281,377,566` | 200,507 | v01 通过 |
+| F 月白蓝灰错层 | `132,209,325,523` | 140,408 | v01 通过 |
+
+六个框内沿 quad、scratch/feed 干净预留区以及柜/毯 bbox 全部从本轮新图
+重新量测并写入上述新 geometry；没有继承旧
+`geometry--measured-freeze-v0*.json`。控制线叠图确认框内 quad 位于真实
+空白内沿、预留区没有烘焙 Cat Item、柜/毯包围盒覆盖新画稿中的真实边界。
+
+并排对照结论：A/B/F 的房间转角、窗/画廊/柜/毯相对视觉重量、主题材质、
+透视方向、日光与接触影均与各自签收效果图一眼同构；抓柱与碗组已移除并由
+连续地面/平台补齐；六框为空；归一化候选窗洞为精确 `#000000`。三个 v01
+均在本轮通过，无需产生失败重试版本。
+
+dressed QA 使用 A=江湾、B=杉溪、F=静海湾母版垫在 alpha 洞后，并以真实
+projective homography 把六张 exterior 裁片贴入新量测的框内 quad；A/F 放置
+对应配色 `rest-cloud-bed` 候选与 sleep 猫，B 放置 `play-soft-tunnel`
+候选与 play 猫。动态层没有改变固定家具的笔触、投影或透视，证明新基底板
+不需要重新回到逐件拼贴。
+
+全部文件仍为候选证据：`runtimeEligible=false`；没有写入 `public/`，没有
+修改运行时代码，也没有把本轮 geometry 接入 scene resolver。

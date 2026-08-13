@@ -1,0 +1,165 @@
+{
+  "formId": "f-moonwhite-bluegray",
+  "assetRole": "furnished-base-plate",
+  "freezeLevel": "furnished-base-plate-measured-freeze-v01",
+  "runtimeEligible": false,
+  "canvas": {
+    "width": 1200,
+    "height": 1600
+  },
+  "source": "source--furnished-base-plate--imagegen-v01.png",
+  "normalization": {
+    "method": "cover-center-crop",
+    "sourceWidth": 1024,
+    "sourceHeight": 1536,
+    "outputWidth": 1200,
+    "outputHeight": 1600
+  },
+  "windowAperture": {
+    "x": 132,
+    "y": 209,
+    "width": 325,
+    "height": 523,
+    "right": 456,
+    "bottom": 731
+  },
+  "aperturePixels": 140408,
+  "postcardInnerQuads": [
+    [
+      [
+        700,
+        280
+      ],
+      [
+        790,
+        280
+      ],
+      [
+        790,
+        362
+      ],
+      [
+        700,
+        362
+      ]
+    ],
+    [
+      [
+        870,
+        280
+      ],
+      [
+        960,
+        280
+      ],
+      [
+        960,
+        362
+      ],
+      [
+        870,
+        362
+      ]
+    ],
+    [
+      [
+        700,
+        432
+      ],
+      [
+        790,
+        432
+      ],
+      [
+        790,
+        509
+      ],
+      [
+        700,
+        509
+      ]
+    ],
+    [
+      [
+        870,
+        432
+      ],
+      [
+        960,
+        432
+      ],
+      [
+        960,
+        509
+      ],
+      [
+        870,
+        509
+      ]
+    ],
+    [
+      [
+        700,
+        583
+      ],
+      [
+        790,
+        583
+      ],
+      [
+        790,
+        654
+      ],
+      [
+        700,
+        654
+      ]
+    ],
+    [
+      [
+        870,
+        583
+      ],
+      [
+        960,
+        583
+      ],
+      [
+        960,
+        654
+      ],
+      [
+        870,
+        654
+      ]
+    ]
+  ],
+  "catItemReserveBBoxes": {
+    "scratch": {
+      "x": 75,
+      "y": 770,
+      "width": 255,
+      "height": 285
+    },
+    "feed": {
+      "x": 330,
+      "y": 900,
+      "width": 300,
+      "height": 145
+    }
+  },
+  "fixedFurnitureBBoxes": {
+    "cabinet": {
+      "x": 672,
+      "y": 760,
+      "width": 455,
+      "height": 235
+    },
+    "rug": {
+      "x": 232,
+      "y": 1165,
+      "width": 790,
+      "height": 372
+    }
+  }
+}

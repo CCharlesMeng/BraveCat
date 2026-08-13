@@ -639,3 +639,63 @@ portrait / 3:4 的文件实测仍为 **1024 × 1536（2:3）**；八类独立造
   quad、perch / play / feeding / souvenir anchor 或猫动画遮挡 QA。
 - 本章节不授权从合成图反推坐标，不改变既有冻结 geometry，也没有创建
   runtime manifest；`runtimeEligible=false`。
+
+## 2026-08-13 · Home Theme furnished base plate 重制
+
+### 管线决议
+
+用户否决了 A/B/F 的逐件拼贴结果：单件光照/笔触不一致、抠像伤边、家具
+warp 有剪切感、程序椭圆影与真实空间不一致。当前主路径改为
+`furnished base plate`：同一幅画内可见的固定主题内容一次生成并烘焙真实
+投影，只让 exterior、六张照片、猫和 Cat Item 保持动态。旧
+`scripts/build-*-pieces.mjs`、`scripts/build-dressed-room-qa.mjs` 与
+`piece--*.png` 不再作为新基底板输入。
+
+固定烘焙范围：房间/平台/台阶、窗框与帘、空六框/卡及陈列轨、柜子、柜顶
+植物、主地毯，以及它们全部的投影和接触阴影。明确排除：scratcher、
+feeding-set、猫、照片、纪念品、Treat、文字与水印。窗洞归一化为精确
+`#000000` 后键控成 alpha 并另存 mask。
+
+### A / B / F v01 生产结果
+
+三套首稿均以各自签收效果图作为唯一参考图生成，实际 source 均为
+1024×1536；采用居中 cover 裁切后等比缩放到 1200×1600。没有非等比拉伸，
+没有复用旧冻结坐标。每套完整归档：
+
+- `production/<slug>/source--furnished-base-plate--imagegen-v01.png`
+- `production/<slug>/furnished-base-plate--black-aperture--candidate-v01.png`
+- `production/<slug>/furnished-base-plate--aperture-alpha--candidate-v01.png`
+- `production/<slug>/aperture-mask--furnished-base-plate--candidate-v01.png`
+- `production/<slug>/geometry--furnished-base-plate--measured-freeze-v01.json`
+- `production/<slug>/qa--furnished-base-plate-control-overlay--candidate-v01.png`
+- `production/<slug>/qa--furnished-base-plate-comparison--candidate-v01.png`
+- `production/<slug>/qa--furnished-base-plate-dressed--candidate-v01.png`
+
+新图实测窗洞：
+
+- A：`x=126, y=329, w=342, h=525`，169,867 px；
+- B：`x=146, y=281, w=377, h=566`，200,507 px；
+- F：`x=132, y=209, w=325, h=523`，140,408 px。
+
+每份新 geometry 同时冻结从本轮画稿量测的六框内沿 quad、scratch/feed
+预留区与柜/毯 bbox；控制线 QA 可直接复核，旧
+`geometry--measured-freeze-v0*.json` 未参与计算。
+
+### QA 与穿戴证明
+
+三个 v01 均通过本轮逐项自查：
+
+- 和签收效果图并排时，房间构图、固定家具位置/大小、主题透视、日光方向、
+  固定家具投影与接触影保持一眼同构；
+- 六框全部为空，窗洞为纯黑，scratcher / feeding-set 已移除且原位置由连续
+  地面或平台补齐；
+- 无猫、照片、纪念品、Treat、额外小物、文字或水印烘焙进基底板。
+
+穿戴证明把 A=江湾、B=杉溪、F=静海湾 exterior 母版放在 alpha 洞后，把
+六张 exterior 裁片按新量测 inner quad 作真实 projective homography，
+再分别放置 A/F `rest-cloud-bed`、B `play-soft-tunnel` 候选与猫。动态层
+不会改写或替代基底板内的固定家具、光影与笔触。三个首稿均通过，因此没有
+为本轮制造无意义的失败重试版本。
+
+本轮只新增候选与 QA 证据；`runtimeEligible=false`，未写 `public/`，未改
+运行时代码，未创建或修改 runtime manifest。
