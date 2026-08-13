@@ -8,10 +8,12 @@ Fastify + TypeScript + Postgres，请求校验用 zod，类型与错误码来自
 
 ```
 services/api
+├── Dockerfile             # 多阶段生产镜像（从仓库根目录构建，见 docs/deployment.md）
 ├── docker-compose.yml     # 本地 Postgres 18
+├── docker-compose.prod.yml  # 生产部署：api + Postgres（见 docs/deployment.md）
 ├── migrations/            # 手写 SQL 迁移（按文件名顺序应用）
-├── scripts/migrate.ts     # 迁移执行器（记录于 schema_migrations 表）
 ├── src/
+│   ├── migrate.ts         # 迁移执行器（记录于 schema_migrations 表；编译进 dist 供容器内执行）
 │   ├── app.ts             # buildApp：依赖注入的 Fastify 工厂，路由挂 /v1
 │   ├── index.ts           # 生产入口：Postgres 仓库 + 环境变量配置 + provider 接线
 │   ├── config.ts          # 环境变量解析 + 平台 meta 常量
@@ -32,6 +34,12 @@ services/api
 │   └── routes/            # auth / save / ledger / credits / portraits / meta
 └── test/                  # vitest，全部跑内存实现，不依赖 Postgres 与云 API
 ```
+
+## 部署
+
+生产镜像（多阶段 `Dockerfile`）与 `docker-compose.prod.yml`（api + Postgres）
+的完整部署步骤——镜像构建、迁移执行、反代 HTTPS、CORS 配置——见
+[`docs/deployment.md`](../../docs/deployment.md)。探活走无鉴权的 `GET /healthz`。
 
 ## 本地启动
 
