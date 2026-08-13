@@ -9,6 +9,8 @@ export interface ApiConfig {
   port: number
   host: string
   databaseUrl: string | undefined
+  /** undefined = 未配置，buildApp 退回 dev 默认（只放行 localhost）。 */
+  corsOrigins: string[] | undefined
   economy: EconomyConfig
 }
 
@@ -31,6 +33,11 @@ export const loadConfig = (env: NodeJS.ProcessEnv = process.env): ApiConfig => (
   port: numberFromEnv('PORT', env.PORT, 3000),
   host: env.HOST ?? '0.0.0.0',
   databaseUrl: env.DATABASE_URL,
+  // 逗号分隔的完整 origin 列表（如 https://app.example.com）；生产必须显式配置。
+  corsOrigins: env.CORS_ALLOWED_ORIGINS
+    ? env.CORS_ALLOWED_ORIGINS.split(',').map((origin) => origin.trim())
+      .filter(Boolean)
+    : undefined,
   economy: {
     // 占位速率常量：每现实小时最多积累的小鱼干；Phase 1b 换 core 重放验算后仍可作兜底。
     maxEarnPerHour: numberFromEnv(

@@ -1,3 +1,4 @@
+import cors from '@fastify/cors'
 import fastify from 'fastify'
 import type { MetaResponse } from '@bravecat/contracts'
 import { ErrorCode } from '@bravecat/contracts'
@@ -13,12 +14,20 @@ import { registerMetaRoutes } from './routes/meta.js'
 import { registerPortraitRoutes } from './routes/portraits.js'
 import { registerSaveRoutes } from './routes/save.js'
 
+/** 未配置 CORS_ALLOWED_ORIGINS 时的 dev 默认：放行本机任意端口。 */
+export const DEFAULT_DEV_CORS_ORIGINS: readonly RegExp[] = [
+  /^https?:\/\/localhost(:\d+)?$/,
+  /^https?:\/\/127\.0\.0\.1(:\d+)?$/,
+]
+
 export interface BuildAppOptions {
   repositories: Repositories
   economyValidator: EconomyValidator
   platformMeta: MetaResponse['platforms']
   /** AIGC 形象管线依赖（生产接线见 index.ts，测试接线见 test/helpers.ts）。 */
   aigc: AigcDeps
+  /** 浏览器端（apps/web）跨域访问放行的 origin；默认只放行 localhost。 */
+  corsOrigins?: readonly (string | RegExp)[]
   /** 可注入时钟，单测用；默认 Date.now。 */
   now?: () => number
   logger?: boolean
@@ -29,6 +38,11 @@ export const buildApp = (options: BuildAppOptions) => {
     logger: options.logger ?? false,
     // 存档 blob 走 JSON 请求体，放宽默认 1MB 限制。
     bodyLimit: 5 * 1024 * 1024,
+  })
+
+  // 浏览器直连 API（无同域反向代理）需要 CORS；非浏览器客户端不受影响。
+  app.register(cors, {
+    origin: [...(options.corsOrigins ?? DEFAULT_DEV_CORS_ORIGINS)],
   })
 
   const deps: RouteDeps = {

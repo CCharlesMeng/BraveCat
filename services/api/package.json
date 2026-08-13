@@ -16,11 +16,13 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1109.0",
     "@bravecat/contracts": "^0.1.0",
+    "@fastify/cors": "^11.3.0",
     "fastify": "^5.11.3",
     "pg": "^8.23.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@bravecat/core": "^0.1.0",
     "@types/node": "^26.2.0",
     "@types/pg": "^8.21.0",
     "tsx": "^4.23.12",

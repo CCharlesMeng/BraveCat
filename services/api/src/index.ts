@@ -61,6 +61,7 @@ const app = buildApp({
   repositories,
   economyValidator: createRateCapValidator(config.economy),
   platformMeta: defaultPlatformMeta,
+  corsOrigins: config.corsOrigins,
   aigc: {
     storage,
     queue,

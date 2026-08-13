@@ -58,6 +58,22 @@ TOKEN=$(curl -s -X POST localhost:3000/v1/auth/guest | jq -r .token)
 curl -s localhost:3000/v1/ledger/balance -H "Authorization: Bearer $TOKEN"
 ```
 
+## 与 apps/web 本地联调（云同步）
+
+1. 按上文「本地启动」把 api 跑起来（默认监听 `:3000`）。
+2. 回到仓库根目录，带上 API 地址起 web dev server：
+
+```bash
+VITE_API_BASE_URL=http://localhost:3000 npm run dev
+```
+
+web 端只有 `VITE_API_BASE_URL` 非空才启用云功能：首次进入静默创建
+游客账号（token 存 localStorage），存档落盘后节流推送云端，启动时先
+pull 比较；「相册 → 云同步」小节显示同步状态、账号与生成次数余额。
+CORS 默认放行 localhost / 127.0.0.1 任意端口，无需额外配置。
+不设 `VITE_API_BASE_URL` 构建出的 web 产物不发起任何云端请求，
+行为与纯本地版完全一致（ADR-0009）。
+
 ## 环境变量
 
 | 变量 | 默认 | 说明 |
@@ -65,6 +81,7 @@ curl -s localhost:3000/v1/ledger/balance -H "Authorization: Bearer $TOKEN"
 | `PORT` | `3000` | 监听端口 |
 | `HOST` | `0.0.0.0` | 监听地址 |
 | `DATABASE_URL` | 无（必填） | Postgres 连接串 |
+| `CORS_ALLOWED_ORIGINS` | 无 | 逗号分隔的完整 origin 列表（如 `https://app.example.com`）；未配置时仅放行 localhost / 127.0.0.1 任意端口（dev 默认），生产必须显式配置 |
 | `ECONOMY_MAX_EARN_PER_HOUR` | `600` | 占位速率校验：每现实小时可积累的小鱼干上限 |
 | `ECONOMY_INITIAL_EARN_ALLOWANCE` | `100` | 新账号初始积累额度（避免 t=0 上限为零） |
 
