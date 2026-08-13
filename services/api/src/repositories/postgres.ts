@@ -1,5 +1,30 @@
 import pg from 'pg'
+import type { GenerationJobRecord } from './types.js'
 import type { Repositories } from './types.js'
+
+const generationJobFromRow = (row: {
+  id: string
+  user_id: string
+  idempotency_key: string
+  photo_key: string
+  status: string
+  failure: unknown
+  result: unknown
+  portrait_id: string | null
+  created_at: string | number
+  updated_at: string | number
+}): GenerationJobRecord => ({
+  id: row.id,
+  userId: row.user_id,
+  idempotencyKey: row.idempotency_key,
+  photoKey: row.photo_key,
+  status: row.status as GenerationJobRecord['status'],
+  failure: (row.failure ?? undefined) as GenerationJobRecord['failure'],
+  result: (row.result ?? undefined) as GenerationJobRecord['result'],
+  portraitId: row.portrait_id ?? undefined,
+  createdAt: Number(row.created_at),
+  updatedAt: Number(row.updated_at),
+})
 
 /**
  * Postgres 实现（pg 驱动 + 手写 SQL，迁移见 migrations/）。
@@ -190,6 +215,95 @@ export const createPostgresRepositories = (pool: pg.Pool): Repositories => ({
         orderId: row.order_id ?? undefined,
         recordedAt: Number(row.recorded_at),
       }))
+    },
+  },
+  generationJobs: {
+    create: async (job) => {
+      await pool.query(
+        `insert into generation_jobs
+           (id, user_id, idempotency_key, photo_key, status,
+            failure, result, portrait_id, created_at, updated_at)
+         values ($1, $2, $3, $4, $5, $6::jsonb, $7::jsonb, $8, $9, $10)`,
+        [
+          job.id,
+          job.userId,
+          job.idempotencyKey,
+          job.photoKey,
+          job.status,
+          job.failure ? JSON.stringify(job.failure) : null,
+          job.result ? JSON.stringify(job.result) : null,
+          job.portraitId ?? null,
+          job.createdAt,
+          job.updatedAt,
+        ],
+      )
+    },
+    findById: async (id) => {
+      const { rows } = await pool.query(
+        'select * from generation_jobs where id = $1',
+        [id],
+      )
+      return rows[0] ? generationJobFromRow(rows[0]) : undefined
+    },
+    findByIdempotencyKey: async (userId, idempotencyKey) => {
+      const { rows } = await pool.query(
+        `select * from generation_jobs
+         where user_id = $1 and idempotency_key = $2`,
+        [userId, idempotencyKey],
+      )
+      return rows[0] ? generationJobFromRow(rows[0]) : undefined
+    },
+    update: async (job) => {
+      await pool.query(
+        `update generation_jobs set
+           status = $2,
+           failure = $3::jsonb,
+           result = $4::jsonb,
+           portrait_id = $5,
+           updated_at = $6
+         where id = $1`,
+        [
+          job.id,
+          job.status,
+          job.failure ? JSON.stringify(job.failure) : null,
+          job.result ? JSON.stringify(job.result) : null,
+          job.portraitId ?? null,
+          job.updatedAt,
+        ],
+      )
+    },
+  },
+  userPortraits: {
+    insert: async (portrait) => {
+      await pool.query(
+        `insert into user_portraits (id, user_id, job_id, poses, created_at)
+         values ($1, $2, $3, $4::jsonb, $5)
+         on conflict (job_id) do nothing`,
+        [
+          portrait.id,
+          portrait.userId,
+          portrait.jobId,
+          JSON.stringify(portrait.poses),
+          portrait.createdAt,
+        ],
+      )
+    },
+    findByJobId: async (jobId) => {
+      const { rows } = await pool.query(
+        'select * from user_portraits where job_id = $1',
+        [jobId],
+      )
+      const row = rows[0]
+      if (!row) {
+        return undefined
+      }
+      return {
+        id: row.id,
+        userId: row.user_id,
+        jobId: row.job_id,
+        poses: row.poses,
+        createdAt: Number(row.created_at),
+      }
     },
   },
 })

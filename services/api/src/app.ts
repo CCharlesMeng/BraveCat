@@ -10,6 +10,7 @@ import { registerAuthRoutes } from './routes/auth.js'
 import { registerCreditRoutes } from './routes/credits.js'
 import { registerLedgerRoutes } from './routes/ledger.js'
 import { registerMetaRoutes } from './routes/meta.js'
+import { registerPortraitRoutes } from './routes/portraits.js'
 import { registerSaveRoutes } from './routes/save.js'
 
 export interface BuildAppOptions {
@@ -71,6 +72,7 @@ export const buildApp = (options: BuildAppOptions) => {
       registerSaveRoutes(v1, deps)
       registerLedgerRoutes(v1, deps)
       registerCreditRoutes(v1, deps)
+      registerPortraitRoutes(v1, deps)
       registerMetaRoutes(v1, deps)
     },
     { prefix: '/v1' },

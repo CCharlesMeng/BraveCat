@@ -1,6 +1,18 @@
 import type { AuthTokenResponse } from '@bravecat/contracts'
-import { createStubPurchaseVerifier } from '../src/aigc/fakes.js'
-import type { PurchaseVerifier } from '../src/aigc/ports.js'
+import { createGenerationJobExecutor } from '../src/aigc/executor.js'
+import {
+  createFakeGenerationProvider,
+  createFakeModerationProvider,
+  createMemoryAssetStorage,
+  createStubPurchaseVerifier,
+} from '../src/aigc/fakes.js'
+import type {
+  GenerationProvider,
+  ModerationProvider,
+  PurchaseVerifier,
+} from '../src/aigc/ports.js'
+import { createBaselinePortraitQa, type PortraitQa } from '../src/aigc/qa.js'
+import { createInProcessJobQueue } from '../src/aigc/queue.js'
 import { buildApp } from '../src/app.js'
 import { defaultPlatformMeta } from '../src/config.js'
 import { createRateCapValidator } from '../src/economy/validator.js'
@@ -28,22 +40,37 @@ export const createTestClock = (start = 1_755_000_000_000): TestClock => {
 
 export interface TestAppOverrides {
   purchaseVerifier?: PurchaseVerifier
+  moderation?: ModerationProvider
+  generation?: GenerationProvider
+  qa?: PortraitQa
 }
 
 export const createTestApp = (overrides: TestAppOverrides = {}) => {
   const clock = createTestClock()
   const repositories = createMemoryRepositories()
+  const storage = createMemoryAssetStorage()
+  const executor = createGenerationJobExecutor({
+    repositories,
+    storage,
+    moderation: overrides.moderation ?? createFakeModerationProvider(),
+    generation: overrides.generation ?? createFakeGenerationProvider(),
+    qa: overrides.qa ?? createBaselinePortraitQa(),
+    now: clock.now,
+  })
+  const queue = createInProcessJobQueue(executor.execute)
   const app = buildApp({
     repositories,
     economyValidator: createRateCapValidator(TEST_ECONOMY),
     platformMeta: defaultPlatformMeta,
     aigc: {
+      storage,
+      queue,
       purchaseVerifier:
         overrides.purchaseVerifier ?? createStubPurchaseVerifier(),
     },
     now: clock.now,
   })
-  return { app, clock, repositories }
+  return { app, clock, repositories, storage, queue }
 }
 
 export type TestApp = ReturnType<typeof createTestApp>['app']

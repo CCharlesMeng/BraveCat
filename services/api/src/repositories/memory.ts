@@ -1,8 +1,10 @@
 import type {
   CreditEntry,
+  GenerationJobRecord,
   LedgerEntry,
   Repositories,
   StoredSave,
+  UserPortraitRecord,
   UserRecord,
 } from './types.js'
 
@@ -15,6 +17,11 @@ export const createMemoryRepositories = (): Repositories => {
   const ledgerKeys = new Set<string>()
   const creditEntries: CreditEntry[] = []
   const creditKeys = new Set<string>()
+  const generationJobs = new Map<string, GenerationJobRecord>()
+  const userPortraits = new Map<string, UserPortraitRecord>()
+
+  const cloneJob = (job: GenerationJobRecord): GenerationJobRecord =>
+    structuredClone(job)
 
   const compositeKey = (userId: string, idempotencyKey: string) =>
     `${userId}\u0000${idempotencyKey}`
@@ -95,6 +102,39 @@ export const createMemoryRepositories = (): Repositories => {
         creditEntries
           .filter((entry) => entry.userId === userId)
           .map((entry) => ({ ...entry })),
+    },
+    generationJobs: {
+      create: async (job) => {
+        generationJobs.set(job.id, cloneJob(job))
+      },
+      findById: async (id) => {
+        const job = generationJobs.get(id)
+        return job ? cloneJob(job) : undefined
+      },
+      findByIdempotencyKey: async (userId, idempotencyKey) => {
+        for (const job of generationJobs.values()) {
+          if (job.userId === userId && job.idempotencyKey === idempotencyKey) {
+            return cloneJob(job)
+          }
+        }
+        return undefined
+      },
+      update: async (job) => {
+        generationJobs.set(job.id, cloneJob(job))
+      },
+    },
+    userPortraits: {
+      insert: async (portrait) => {
+        userPortraits.set(portrait.id, structuredClone(portrait))
+      },
+      findByJobId: async (jobId) => {
+        for (const portrait of userPortraits.values()) {
+          if (portrait.jobId === jobId) {
+            return structuredClone(portrait)
+          }
+        }
+        return undefined
+      },
     },
   }
 }

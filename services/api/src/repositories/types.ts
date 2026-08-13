@@ -1,6 +1,8 @@
 import type {
+  GenerationJob,
   LedgerTransactionType,
   SaveDocument,
+  UserPortrait,
 } from '@bravecat/contracts'
 
 export interface UserRecord {
@@ -80,6 +82,35 @@ export interface GenerationCreditRepository {
   listByUser(userId: string): Promise<CreditEntry[]>
 }
 
+/** 存储侧生成 job 记录 = API 形状（contracts GenerationJob）+ 归属与提交幂等键。 */
+export interface GenerationJobRecord extends GenerationJob {
+  userId: string
+  /** 客户端提交幂等键；同键重复提交返回同一 job。 */
+  idempotencyKey: string
+}
+
+export interface GenerationJobRepository {
+  create(job: GenerationJobRecord): Promise<void>
+  findById(id: string): Promise<GenerationJobRecord | undefined>
+  findByIdempotencyKey(
+    userId: string,
+    idempotencyKey: string,
+  ): Promise<GenerationJobRecord | undefined>
+  /** 按 id 全量覆盖；状态机推进由执行器串行驱动，无并发写。 */
+  update(job: GenerationJobRecord): Promise<void>
+}
+
+/** 确认后产出的形象记录（ADR-0004：只向未来生效，不重写历史内容）。 */
+export interface UserPortraitRecord extends UserPortrait {
+  userId: string
+}
+
+export interface UserPortraitRepository {
+  insert(portrait: UserPortraitRecord): Promise<void>
+  /** 每个 job 至多产出一条形象记录（确认幂等的依据）。 */
+  findByJobId(jobId: string): Promise<UserPortraitRecord | undefined>
+}
+
 export interface LedgerRepository {
   /** 返回给定幂等键中已入账的子集。 */
   findExistingIdempotencyKeys(
@@ -99,4 +130,6 @@ export interface Repositories {
   saves: SaveRepository
   ledger: LedgerRepository
   generationCredits: GenerationCreditRepository
+  generationJobs: GenerationJobRepository
+  userPortraits: UserPortraitRepository
 }
