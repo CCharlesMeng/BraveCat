@@ -32,11 +32,30 @@
   （`?themeLab=split-level-den`）下真实明信片、纪念品、Treat 与猫的
   重投影截图；classic-v4 六状态像素回归同步保持一致。
 
+## 部件拆分（切片 3，2026-08-13）
+
+`shell.png` 已替换为干净底 `shell--candidate-v02-clean.png`：
+以 v01 为参考重生成"无家具"版（`source--clean-shell--imagegen-v02.png`），
+仅在家具区内羽化混入，家具区外与 v01 逐像素一致，书架/卡位实测数据
+继续有效。管线见 `scripts/build-den-piece-split.mjs`。
+
+- `piece--scratcher--green-post`、`piece--feeding--ceramic-bowls`：
+  从 v01 与干净底的差分抠出，自带阴影；叠回干净底可还原 v01
+  （脚本内置还原校验）。差分件含少量结构线残影，仅限本 form
+  本位置使用，不可移植到其他背景。
+- `piece--scratcher--rope-tower`、`piece--feeding--raised-feeder`：
+  绿幕生成 + 绿色优势度键控（`scripts/build-den-alt-pieces.mjs`），
+  底边中点锚定到与默认件相同的落脚点。
+- `lab--split-level-den--swapped-pieces.png`：Theme Lab 换装组合
+  QA 截图（`?themePieces=scratcher:den-rope-tower,feeding-set:den-raised-feeder`）。
+
 ## 已知欠账（后续切片处理）
 
-- 窗景与展示架烘焙在 shell 里：无 exterior 时间层与 lighting，
-  换 finish/时间氛围需等分层资产（切片 4）。
-- 猫爬架、碗、地毯烘焙在 shell 里：吃饭时 minho 贴片自带的碗与
-  shell 画的碗并存，待 feeding-set 部件拆分（切片 3）。
+- 窗景、壁柜、书架、地毯仍烘焙在 shell 里：无 exterior 时间层与
+  lighting，柜体换装与 finish 层待后续切片。
+- 吃饭时 minho 贴片自带的碗与 feeding-set 部件的碗并存，待贴片
+  与部件的碗位对齐评审。
+- 替换部件（麻绳斜塔、高脚食台）无接触阴影，视觉贴地感待美术
+  评审补一层软阴影。
 - minho 动画贴片复用 classic-v4 的四套；是否为本 form 单独出图
   待美术评审。

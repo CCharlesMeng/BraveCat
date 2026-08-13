@@ -6,6 +6,7 @@
 <script lang="ts">
   import {
     HOME_THEME_PRESETS,
+    listCompatiblePieces,
     listHomeForms,
     normalizeHomeCustomization,
     type HomeCustomization,
@@ -40,6 +41,14 @@
     })
   }
 
+  const applyPiece = (socketId: string, pieceId: string) => {
+    onSelect({
+      ...selection,
+      presetId: undefined,
+      pieces: { ...selection.pieces, [socketId]: pieceId },
+    })
+  }
+
   const fallbackActive = $derived(
     normalizeHomeCustomization(selection) !== selection,
   )
@@ -59,6 +68,26 @@
       模拟下架主题
     </button>
   </div>
+  {#each scene.pieces as pieceSelection (pieceSelection.socketId)}
+    {@const options = listCompatiblePieces(
+      scene.formId,
+      pieceSelection.socketId,
+    )}
+    {#if options.length > 1}
+      <div class="theme-lab-socket">
+        <span class="theme-lab-socket-kind">{pieceSelection.kind}</span>
+        <div class="theme-lab-row">
+          {#each options as option (option.id)}
+            <button
+              type="button"
+              class:active={pieceSelection.pieceId === option.id}
+              onclick={() => applyPiece(pieceSelection.socketId, option.id)}
+            >{option.name}</button>
+          {/each}
+        </div>
+      </div>
+    {/if}
+  {/each}
   <label class="theme-lab-toggle">
     <input type="checkbox" bind:checked={showGuides} />
     显示投影参考
@@ -133,6 +162,17 @@
   .theme-lab-row button.retired {
     border-style: dashed;
     opacity: 0.85;
+  }
+
+  .theme-lab-socket {
+    margin: 6px 0;
+    padding-top: 6px;
+    border-top: 1px solid rgba(242, 237, 219, 0.18);
+  }
+
+  .theme-lab-socket-kind {
+    font-size: 11px;
+    opacity: 0.7;
   }
 
   .theme-lab-toggle {

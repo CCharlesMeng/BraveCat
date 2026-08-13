@@ -18,7 +18,24 @@ export const CLASSIC_V4_FORM = {
   shippingEligible: false,
   canvas: { width: 1200, height: 1600 },
   finishIds: ['classic-v4-watercolor'],
-  socketIds: [],
+  /**
+   * 窗框、猫爬架、碗、地毯仍烘焙在 shell 里未开 socket；
+   * 画框墙 fixture 与柜前遮挡已由 piece 接管。
+   */
+  sockets: [
+    {
+      id: 'postcard-display',
+      kind: 'postcard-display',
+      compatibilityProfile: 'classic-v4/right-wall-display',
+      region: { x: 770, y: 170, width: 390, height: 490 },
+    },
+    {
+      id: 'cabinet',
+      kind: 'cabinet',
+      compatibilityProfile: 'classic-v4/cabinet',
+      region: { x: 900, y: 880, width: 270, height: 330 },
+    },
+  ],
   exterior: {
     morning: `${ART_ROOT}/exterior-morning.png`,
     noon: `${ART_ROOT}/exterior-noon.png`,
@@ -75,7 +92,6 @@ export const CLASSIC_V4_FORM = {
   },
   treatPlacement: { x: 600, y: 840, width: 126, height: 112 },
   postcardDisplay: {
-    fixtureSrc: '/assets/home/display--postcard-wall--v03.png',
     slots: [
       { quad: [[792, 184], [974, 225], [970, 319], [792, 278]], contentSkewY: 12.7 },
       { quad: [[1009, 233], [1148, 264], [1144, 337], [1008, 307]], contentSkewY: 12.6 },
@@ -98,7 +114,6 @@ export const CLASSIC_V4_FORM = {
       { x: 992, y: 936, width: 58, height: 50, rotation: 7, skewY: TABLE_SKEW_Y, zIndex: 3 },
       { x: 1024, y: 930, width: 56, height: 48, rotation: -3, skewY: TABLE_SKEW_Y, zIndex: 1 },
     ],
-    occlusionSrc: '/assets/home/display--souvenir-occlusion--v01.png',
     tableSkewY: TABLE_SKEW_Y,
   },
 } as const satisfies HomeFormDefinition

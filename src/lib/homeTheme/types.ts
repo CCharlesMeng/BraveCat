@@ -63,6 +63,44 @@ export type ProjectedDisplayRect = {
   zIndex?: number
 }
 
+export type HomePieceKind =
+  | 'window-frame'
+  | 'postcard-display'
+  | 'scratcher'
+  | 'feeding-set'
+  | 'cabinet'
+  | 'rug'
+  | 'plant'
+
+/** HomeForm 上一个可独立换件的物理位置。 */
+export type HomeSocket = {
+  id: string
+  kind: HomePieceKind
+  /** 与 HomePiece.compatibleProfiles 匹配才允许装入。 */
+  compatibilityProfile: string
+  /** 部件占用的画布参考区域，供 Theme Lab 参考线与校验使用。 */
+  region: CanvasRect
+}
+
+export type HomePieceArt = {
+  /**
+   * 整幅画布尺寸的透明 PNG；迁移期烘焙在 shell 里的部件为 null
+   * （只提供遮挡层或投影数据）。
+   */
+  base: string | null
+  /** 渲染在动态内容之前的前景遮挡层（如柜前的书与篮筐）。 */
+  foregroundOcclusion?: string
+  activityVariants?: Readonly<Partial<Record<HomeActivity, string>>>
+}
+
+export type HomePiece = {
+  id: string
+  kind: HomePieceKind
+  name: string
+  compatibleProfiles: readonly string[]
+  art: HomePieceArt
+}
+
 /** 玩家的家外观选择。只含 ID，不含派生坐标或图片路径。 */
 export type HomeCustomization = {
   presetId?: HomeThemeId
@@ -100,7 +138,7 @@ export type HomeFormDefinition = {
   shippingEligible: boolean
   canvas: CanvasSize
   finishIds: readonly HomeFinishId[]
-  socketIds: readonly string[]
+  sockets: readonly HomeSocket[]
   /** 无独立窗外时间层的 form（窗景烘焙在 shell 里）为 null。 */
   exterior: Readonly<Record<HomeTime, string>> | null
   lighting: Readonly<Record<HomeTime, string | null>>
@@ -116,8 +154,6 @@ export type HomeFormDefinition = {
   >>
   treatPlacement: CanvasRect
   postcardDisplay: {
-    /** 展示架烘焙在 shell 里的 form 为 null。 */
-    fixtureSrc: string | null
     slots: readonly ProjectedDisplayRect[]
     wallPlane: {
       cornerX: number
@@ -131,8 +167,6 @@ export type HomeFormDefinition = {
   }
   souvenirDisplay: {
     anchors: readonly DisplayRect[]
-    /** 前景遮挡烘焙在 shell 里或不需要时为 null。 */
-    occlusionSrc: string | null
     tableSkewY: number
   }
 }
@@ -146,6 +180,15 @@ export type ResolvedHomeScene = {
   shippingEligible: boolean
   /** 猫与动态内容之下的静态图层，按 z 序排列；shell 层 id 固定为 'shell'。 */
   backdrop: readonly SceneImageLayer[]
+  /** backdrop 之上、猫之下的部件层（猫爬架、柜体等），按 socket 声明序。 */
+  rearPieces: readonly SceneImageLayer[]
+  /** 每个 socket 当前解析到的部件，供 Theme Lab 换件 UI 使用。 */
+  pieces: readonly {
+    socketId: string
+    kind: HomePieceKind
+    pieceId: string
+    pieceName: string
+  }[]
   lighting: SceneImageLayer | null
   cat: {
     placement: CatPlacement

@@ -5,8 +5,13 @@
  * 坐标，也不拼接层。未知或已下架的选择先经 normalizeHomeCustomization
  * 回退到预设默认值，因此解析对形状合法的输入总是成功。
  */
-import { normalizeHomeCustomization } from './customization'
+import {
+  isPieceAllowedInSocket,
+  normalizeHomeCustomization,
+  presetForForm,
+} from './customization'
 import { HOME_FORMS, homeFormFor } from './forms'
+import { HOME_PIECES, homePieceFor } from './pieces'
 import {
   canvasStyle,
   displayCanvasStyle,
@@ -15,6 +20,7 @@ import {
 } from './projection'
 import type {
   HomeCustomization,
+  HomePiece,
   HomeSceneContext,
   ResolvedHomeScene,
   SceneImageLayer,
@@ -25,6 +31,20 @@ export const listHomeForms = () => Object.values(HOME_FORMS).map((form) => ({
   name: form.name,
   shippingEligible: form.shippingEligible,
 }))
+
+/** 一个 socket 允许装入的全部注册部件。 */
+export const listCompatiblePieces = (
+  formId: string,
+  socketId: string,
+): readonly HomePiece[] => {
+  const socket = homeFormFor(formId)?.sockets.find(
+    ({ id }) => id === socketId,
+  )
+  if (!socket) return []
+  return Object.values(HOME_PIECES).filter(
+    (piece) => isPieceAllowedInSocket(piece.id, socket),
+  )
+}
 
 export const resolveHomeScene = (
   selection: HomeCustomization,
@@ -52,11 +72,48 @@ export const resolveHomeScene = (
     src: form.shell.activityVariants[activity] ?? form.shell.default,
   })
 
+  // 逐 socket 解析部件；normalize 已保证条目合法，缺省用预设默认值。
+  const preset = presetForForm(form)
+  const rearPieces: SceneImageLayer[] = []
+  const pieceSelections: {
+    socketId: string
+    kind: HomePiece['kind']
+    pieceId: string
+    pieceName: string
+  }[] = []
+  let postcardFixtureSrc: string | null = null
+  let souvenirOcclusionSrc: string | null = null
+  for (const socket of form.sockets) {
+    const pieceId = normalized.pieces[socket.id] ?? preset.pieces[socket.id]
+    const piece = pieceId ? homePieceFor(pieceId) : null
+    if (!piece) continue
+    pieceSelections.push({
+      socketId: socket.id,
+      kind: socket.kind,
+      pieceId: piece.id,
+      pieceName: piece.name,
+    })
+    const baseSrc = piece.art.activityVariants?.[activity] ?? piece.art.base
+    if (socket.kind === 'postcard-display') {
+      // 画框墙 fixture 与明信片同区渲染，走 postcardDisplay 通道。
+      postcardFixtureSrc = baseSrc
+      continue
+    }
+    if (baseSrc) {
+      rearPieces.push({ id: `piece-${socket.id}`, src: baseSrc })
+    }
+    if (socket.kind === 'cabinet' && piece.art.foregroundOcclusion) {
+      souvenirOcclusionSrc = piece.art.foregroundOcclusion
+    }
+  }
+
   return {
     formId: form.id,
     canvas,
     shippingEligible: form.shippingEligible,
     backdrop,
+    rearPieces,
+    pieces: pieceSelections,
     lighting: lightingSrc
       ? { id: `lighting-${time}`, src: lightingSrc }
       : null,
@@ -76,7 +133,7 @@ export const resolveHomeScene = (
       style: canvasStyle(canvas, form.treatPlacement),
     },
     postcardDisplay: {
-      fixtureSrc: form.postcardDisplay.fixtureSrc,
+      fixtureSrc: postcardFixtureSrc,
       slots: form.postcardDisplay.slots.map((slot) => ({
         quad: slot.quad,
         contentSkewY: slot.contentSkewY,
@@ -87,7 +144,7 @@ export const resolveHomeScene = (
       anchors: form.souvenirDisplay.anchors.map((anchor) => ({
         style: displayCanvasStyle(canvas, anchor),
       })),
-      occlusionSrc: form.souvenirDisplay.occlusionSrc,
+      occlusionSrc: souvenirOcclusionSrc,
     },
   }
 }

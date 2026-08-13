@@ -149,6 +149,18 @@ src/lib/homeTheme/
 4. **切片 3 — 部件拆分**：优先 `postcard-display`、`scratcher`、
    `feeding-set`、`cabinet` 四类，各出两款验证换装；per-piece occlusion
    接管后删除全局遮挡图。
+   **✅ 已完成（2026-08-13）**。socket/piece 机制落地：form 声明类型化
+   `HomeSocket`，`HomePiece` 注册表按 kind + compatibilityProfile 匹配，
+   `listCompatiblePieces` seam 就位；归一化把已下架/不兼容部件回退
+   预设默认值。form 定义中的全局 fixture/遮挡字段删除：classic 的
+   画框墙与柜前遮挡改由 `classic-wall-frames`、`classic-oak-cabinet`
+   两个 piece 提供（输出不变，像素回归一致）。split-level-den 真实
+   换装跑通：shell 替换为零漂移干净底（家具区外与 v01 逐像素一致），
+   `scratcher`、`feeding-set` 各两款（默认件差分抠自 v01，替换件
+   绿幕键控），Theme Lab 支持逐 socket 换件与
+   `?themePieces=` 复现。欠账：classic 的 scratcher/feeding/rug 与
+   den 的柜体/窗框仍烘焙在 shell（"四类各两款"完成 2/4 类的双款）；
+   差分件不可移植；替换件缺接触阴影。
 5. **切片 4 — finish 层与玩家 UI**：表面风格切换、主题选择界面、
    门禁放行。
 

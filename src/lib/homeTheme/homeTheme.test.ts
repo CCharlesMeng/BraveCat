@@ -4,6 +4,7 @@ import {
   defaultHomeCustomization,
   HOME_THEME_PRESETS,
   isHomeCustomization,
+  listCompatiblePieces,
   listHomeForms,
   normalizeHomeCustomization,
   paintedCanvasRect,
@@ -35,6 +36,31 @@ describe('resolveHomeScene', () => {
     expect(scene.backdrop).toEqual([
       { id: 'exterior-noon', src: '/dev-art/home-v4/exterior-noon.png' },
       { id: 'shell', src: '/dev-art/home-v4/interior-foreground.png' },
+    ])
+  })
+
+  it('routes classic fixture and occlusion art through pieces unchanged', () => {
+    const scene = sceneFor()
+    // 与部件拆分前的输出一致：既有已验收资产原样接管。
+    expect(scene.postcardDisplay.fixtureSrc)
+      .toBe('/assets/home/display--postcard-wall--v03.png')
+    expect(scene.souvenirDisplay.occlusionSrc)
+      .toBe('/assets/home/display--souvenir-occlusion--v01.png')
+    // classic 柜体仍烘焙在 shell 里，没有独立 rear 层。
+    expect(scene.rearPieces).toEqual([])
+    expect(scene.pieces).toEqual([
+      {
+        socketId: 'postcard-display',
+        kind: 'postcard-display',
+        pieceId: 'classic-wall-frames',
+        pieceName: '暖木画框墙',
+      },
+      {
+        socketId: 'cabinet',
+        kind: 'cabinet',
+        pieceId: 'classic-oak-cabinet',
+        pieceName: '橡木矮柜',
+      },
     ])
   })
 
@@ -148,7 +174,10 @@ describe('resolveHomeScene', () => {
       presetId: 'classic-v4',
       formId: 'classic-v4',
       finishId: 'classic-v4-watercolor',
-      pieces: {},
+      pieces: {
+        'postcard-display': 'classic-wall-frames',
+        cabinet: 'classic-oak-cabinet',
+      },
     })
   })
 })
@@ -252,6 +281,64 @@ describe('classic-v4 form geometry', () => {
     expect(scene.souvenirDisplay.occlusionSrc).toBeNull()
     expect(scene.postcardDisplay.slots).toHaveLength(6)
     expect(scene.cat.sprite?.src).toContain('cat--minho--gaze')
+    // 缺省选择由预设默认部件补齐，渲染为 backdrop 之上的独立层。
+    expect(scene.rearPieces).toEqual([
+      {
+        id: 'piece-scratcher',
+        src: '/dev-art/home-theme/split-level-den/piece--scratcher--green-post.png',
+      },
+      {
+        id: 'piece-feeding-set',
+        src: '/dev-art/home-theme/split-level-den/piece--feeding--ceramic-bowls.png',
+      },
+    ])
+  })
+
+  it('swaps a socket piece independently and falls back when retired', () => {
+    const context = {
+      time: 'noon',
+      activity: 'sleep',
+      portraitId: 'minho',
+    } as const
+    const denSelection = {
+      presetId: 'split-level-den',
+      formId: 'split-level-den',
+      finishId: 'split-level-den-watercolor',
+      pieces: {
+        scratcher: 'den-rope-tower',
+        'feeding-set': 'den-ceramic-bowls',
+      },
+    }
+
+    const swapped = resolveHomeScene(denSelection, context)
+    expect(swapped.rearPieces.map(({ src }) => src)).toEqual([
+      '/dev-art/home-theme/split-level-den/piece--scratcher--rope-tower.png',
+      '/dev-art/home-theme/split-level-den/piece--feeding--ceramic-bowls.png',
+    ])
+
+    // 装入不兼容部件（classic 的画框墙装进抓柱 socket）回退预设默认值。
+    const normalized = normalizeHomeCustomization({
+      ...denSelection,
+      pieces: { ...denSelection.pieces, scratcher: 'classic-wall-frames' },
+    })
+    expect(normalized.pieces.scratcher).toBe('den-green-post')
+    expect(normalized.pieces['feeding-set']).toBe('den-ceramic-bowls')
+  })
+
+  it('lists only compatible registered pieces per socket', () => {
+    expect(
+      listCompatiblePieces('split-level-den', 'scratcher')
+        .map(({ id }) => id),
+    ).toEqual(['den-green-post', 'den-rope-tower'])
+    expect(
+      listCompatiblePieces('split-level-den', 'feeding-set')
+        .map(({ id }) => id),
+    ).toEqual(['den-ceramic-bowls', 'den-raised-feeder'])
+    expect(
+      listCompatiblePieces('classic-v4', 'postcard-display')
+        .map(({ id }) => id),
+    ).toEqual(['classic-wall-frames'])
+    expect(listCompatiblePieces('classic-v4', 'missing-socket')).toEqual([])
   })
 
   it('keeps every split-level display edge on the shared wall plane', () => {

@@ -226,6 +226,12 @@ try {
       )
     }
   }
+  // 换装组合：麻绳斜塔 + 原木高脚食台。
+  await capture(
+    'lab--split-level-den--swapped-pieces',
+    `${origin}/?homeActivity=sleep&themeLab=split-level-den`
+      + '&themePieces=scratcher:den-rope-tower,feeding-set:den-raised-feeder',
+  )
   socket.close()
   console.log(`done: ${outputRoot}`)
 } finally {

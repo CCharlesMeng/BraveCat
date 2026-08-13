@@ -24,7 +24,21 @@ export const SPLIT_LEVEL_DEN_FORM = {
   shippingEligible: false,
   canvas: { width: 1200, height: 1600 },
   finishIds: ['split-level-den-watercolor'],
-  socketIds: [],
+  /** 窗框、壁柜、书架、地毯仍烘焙在 shell 里；抓柱与食碗已开 socket。 */
+  sockets: [
+    {
+      id: 'scratcher',
+      kind: 'scratcher',
+      compatibilityProfile: 'split-level-den/platform-scratcher',
+      region: { x: 40, y: 620, width: 250, height: 680 },
+    },
+    {
+      id: 'feeding-set',
+      kind: 'feeding-set',
+      compatibilityProfile: 'split-level-den/platform-feeding',
+      region: { x: 250, y: 1050, width: 300, height: 170 },
+    },
+  ],
   exterior: null,
   lighting: {
     morning: null,
@@ -76,7 +90,6 @@ export const SPLIT_LEVEL_DEN_FORM = {
   },
   treatPlacement: { x: 255, y: 758, width: 115, height: 98 },
   postcardDisplay: {
-    fixtureSrc: null,
     slots: [
       { quad: [[560, 306.7], [690, 341.9], [690, 420.6], [560, 390.3]], contentSkewY: 15.2 },
       { quad: [[720, 350.1], [840, 382.6], [840, 455.5], [720, 427.6]], contentSkewY: 15.2 },
@@ -97,7 +110,6 @@ export const SPLIT_LEVEL_DEN_FORM = {
       { x: 668, y: 693, width: 58, height: 50, rotation: 7, skewY: WALL_SKEW_AT_LEDGE, zIndex: 3 },
       { x: 736, y: 699, width: 56, height: 48, rotation: -3, skewY: WALL_SKEW_AT_LEDGE, zIndex: 1 },
     ],
-    occlusionSrc: null,
     tableSkewY: WALL_SKEW_AT_LEDGE,
   },
 } as const satisfies HomeFormDefinition

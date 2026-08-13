@@ -256,6 +256,7 @@ for (const sourcePath of [
   'src/app.css',
   'src/lib/homeArt.ts',
   'src/lib/homeTheme/forms/classic-v4.ts',
+  'src/lib/homeTheme/pieces/index.ts',
 ]) {
   const source = await readFile(path.join(root, sourcePath), 'utf8')
   assert(

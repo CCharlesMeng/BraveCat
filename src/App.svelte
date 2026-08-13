@@ -93,13 +93,23 @@
     globalThis.location?.search ?? '',
   )
   // dev 环境 ?themeLab 打开家主题配置器；只覆盖内存选择，不写存档。
-  // ?themeLab=<presetId> 可直接预选主题，供截图与 QA 复现。
-  const themeLabParam = isDevelopment
-    ? new URLSearchParams(globalThis.location?.search ?? '').get('themeLab')
-    : null
+  // ?themeLab=<presetId> 直接预选主题；?themePieces=socket:piece,…
+  // 在预设之上覆盖单个部件，供截图与 QA 复现。
+  const themeLabSearch = new URLSearchParams(
+    isDevelopment ? globalThis.location?.search ?? '' : '',
+  )
+  const themeLabParam = themeLabSearch.get('themeLab')
   const themeLabEnabled = themeLabParam !== null
   const themeLabInitialPreset = HOME_THEME_PRESETS.find(
     ({ id }) => id === themeLabParam,
+  )
+  const themeLabPieceOverrides = Object.fromEntries(
+    (themeLabSearch.get('themePieces') ?? '')
+      .split(',')
+      .map((entry) => entry.split(':'))
+      .filter((pair): pair is [string, string] => (
+        pair.length === 2 && pair.every(Boolean)
+      )),
   )
   let themeLabSelection = $state<HomeCustomization | null>(
     themeLabInitialPreset
@@ -107,7 +117,7 @@
         presetId: themeLabInitialPreset.id,
         formId: themeLabInitialPreset.formId,
         finishId: themeLabInitialPreset.finishId,
-        pieces: themeLabInitialPreset.pieces,
+        pieces: { ...themeLabInitialPreset.pieces, ...themeLabPieceOverrides },
       }
       : null,
   )
@@ -1120,6 +1130,13 @@
       {#if showHomeArtPreview}
         <div class="home-art-canvas" aria-hidden="true">
           {#each homeBackdropLayers as layer (layer.id)}
+            <img
+              class="home-art-layer"
+              src={layer.src}
+              alt=""
+            />
+          {/each}
+          {#each homeScene.rearPieces as layer (layer.id)}
             <img
               class="home-art-layer"
               src={layer.src}

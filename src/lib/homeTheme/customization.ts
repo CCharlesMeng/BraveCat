@@ -7,8 +7,14 @@
  * 同一条路径。
  */
 import { homeFormFor } from './forms'
+import { homePieceFor } from './pieces'
 import { CLASSIC_V4_PRESET, HOME_THEME_PRESETS } from './presets'
-import type { HomeCustomization, HomeFormDefinition } from './types'
+import type {
+  HomeCustomization,
+  HomeFormDefinition,
+  HomeSocket,
+  HomeThemePreset,
+} from './types'
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (
   typeof value === 'object' && value !== null
@@ -27,14 +33,27 @@ export const isHomeCustomization = (
   ))
 )
 
-const presetForForm = (form: HomeFormDefinition) => (
+export const presetForForm = (form: HomeFormDefinition): HomeThemePreset => (
   HOME_THEME_PRESETS.find((preset) => preset.formId === form.id)
   ?? CLASSIC_V4_PRESET
 )
 
+/** 部件存在、种类匹配且声明兼容该 socket 才算可装入。 */
+export const isPieceAllowedInSocket = (
+  pieceId: string,
+  socket: HomeSocket,
+) => {
+  const piece = homePieceFor(pieceId)
+  return piece !== null
+    && piece.kind === socket.kind
+    && piece.compatibleProfiles.includes(socket.compatibilityProfile)
+}
+
 /**
- * 把任意形状合法的选择归一化成当前注册表可解析的选择。
- * 选择本身已合法时原样返回同一个对象引用。
+ * 把任意形状合法的选择归一化成当前注册表可解析的选择：
+ * 未知 form 整体回退默认预设；未知 finish 回退该 form 预设默认值；
+ * 指向不存在 socket 的条目丢弃；已下架或不兼容的部件回退该 socket
+ * 的预设默认值。选择本身已合法时原样返回同一个对象引用。
  */
 export const normalizeHomeCustomization = (
   selection: HomeCustomization,
@@ -54,19 +73,28 @@ export const normalizeHomeCustomization = (
   const finishId = form.finishIds.includes(selection.finishId)
     ? selection.finishId
     : preset.finishId
-  const pieceEntries = Object.entries(selection.pieces)
-  const keptPieces = pieceEntries.filter(
-    ([socketId]) => form.socketIds.includes(socketId),
-  )
+  let piecesChanged = false
+  const pieces: Record<string, string> = {}
+  for (const [socketId, pieceId] of Object.entries(selection.pieces)) {
+    const socket = form.sockets.find(({ id }) => id === socketId)
+    if (!socket) {
+      piecesChanged = true
+      continue
+    }
+    if (isPieceAllowedInSocket(pieceId, socket)) {
+      pieces[socketId] = pieceId
+      continue
+    }
+    piecesChanged = true
+    const fallback = preset.pieces[socketId]
+    if (fallback) pieces[socketId] = fallback
+  }
 
-  if (
-    finishId === selection.finishId
-    && keptPieces.length === pieceEntries.length
-  ) return selection
+  if (finishId === selection.finishId && !piecesChanged) return selection
 
   return {
     ...selection,
     finishId,
-    pieces: Object.fromEntries(keptPieces),
+    pieces,
   }
 }
