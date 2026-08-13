@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "last-light-character-references-v1",
+  "series": {
+    "title": "最后一束光",
+    "originalSeries": true
+  },
+  "status": "visual-reference-non-final",
+  "createdAt": "2026-07-21",
+  "shippingEligible": false,
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "seed": null,
+    "requestedAspectRatio": "4:3",
+    "promptRecord": "Each accepted asset prompt is the verbatim description supplied to GenerateImage; directReferences records the corresponding reference_image_paths inputs.",
+    "rawOutput": {
+      "width": 1536,
+      "height": 1024,
+      "format": "png",
+      "profile": "unprofiled RGB"
+    },
+    "note": "GenerateImage returned 1536x1024 sources despite the requested 4:3 aspect ratio. Accepted sources were normalized deterministically before inclusion."
+  },
+  "calibration": {
+    "styleIntensity": {
+      "state": "locked",
+      "value": "B"
+    },
+    "styleDescription": "Watercolor and colored pencil on soft ivory paper, restrained pigment, broad unpainted paper, fine warm-gray-brown line, quiet nostalgic mood.",
+    "references": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+        "use": "paper, line, restrained wash"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+        "use": "watercolor and colored-pencil handling"
+      },
+      {
+        "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+        "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+        "use": "center-panel B pigment intensity only"
+      }
+    ]
+  },
+  "normalization": {
+    "crop": {
+      "method": "largest centered integer 4:3 crop",
+      "sourceRect": {
+        "x": 86,
+        "y": 0,
+        "width": 1364,
+        "height": 1023
+      }
+    },
+    "resample": {
+      "implementation": "Core Image CILanczosScaleTransform",
+      "filter": "Lanczos",
+      "outputWidth": 1200,
+      "outputHeight": 900
+    },
+    "output": {
+      "format": "png",
+      "bitDepth": 8,
+      "pngColorType": 2,
+      "colorModel": "RGB",
+      "alpha": "none",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "embeddedColorMetadata": "PNG sRGB chunk"
+    }
+  },
+  "canonicalCharacters": [
+    {
+      "id": "a-yao",
+      "name": "阿遥",
+      "descriptor": "Chinese woman, 27, observant and practical; short black bob, rust-red scarf, olive field jacket, indigo trousers, worn canvas satchel.",
+      "continuity": [
+        "same short black bob and fringe",
+        "rust-red scarf in every pose",
+        "olive field jacket and indigo trousers",
+        "worn natural-canvas satchel",
+        "practical dark shoes"
+      ],
+      "colorSwatches": {
+        "hairBlack": "#252927",
+        "rustRedScarf": "#9A4F3D",
+        "oliveFieldJacket": "#72745B",
+        "indigoTrousers": "#384D61",
+        "canvasSatchel": "#A48C66"
+      }
+    },
+    {
+      "id": "zhou-an",
+      "name": "周岸",
+      "descriptor": "Chinese man, 32, calm mechanic with dry warmth; wavy dark hair, thin rectangular glasses, rolled navy shirt, sand work overalls, leather tool roll.",
+      "continuity": [
+        "same wavy dark-hair silhouette",
+        "thin rectangular glasses in every pose",
+        "rolled-sleeve navy shirt",
+        "sand work overalls",
+        "rolled or opened brown leather tool wrap"
+      ],
+      "colorSwatches": {
+        "hairDark": "#2D302F",
+        "glassesWarmGray": "#514D48",
+        "navyShirt": "#334A60",
+        "sandOveralls": "#B09A73",
+        "leatherToolRoll": "#7A5138",
+        "brownShoes": "#66513F"
+      }
+    },
+    {
+      "id": "lin-deng",
+      "name": "林灯",
+      "descriptor": "Original Chinese man in his seventies, kind traveling projectionist; silver hair, cream shirt, brown waistcoat, navy coat, brass pocket watch; no actor basis.",
+      "continuity": [
+        "same swept silver hair and kind lined face",
+        "no eyewear",
+        "cream shirt and brown waistcoat",
+        "navy traveling coat",
+        "brass pocket watch and chain"
+      ],
+      "colorSwatches": {
+        "silverHair": "#B8B7B0",
+        "creamShirt": "#E5D9C2",
+        "brownWaistcoat": "#71543F",
+        "navyCoat": "#35475A",
+        "brassWatch": "#B08B45",
+        "darkTrousers": "#3E4140"
+      }
+    }
+  ],
+  "sharedColorSwatches": {
+    "softIvoryPaper": "#F3EDE1",
+    "warmGrayLine": "#756D63",
+    "ambientWarmGray": "#9A9285",
+    "ambientSage": "#8A9075",
+    "ambientFadedOchre": "#B49A6D",
+    "ambientDustyBlue": "#6F8190"
+  },
+  "globalNegativeConstraints": [
+    "existing film or television references",
+    "real actors or actor likenesses",
+    "logos, signatures, or watermarks",
+    "readable text, letters, numbers, or labels",
+    "Cat or any other animal",
+    "UI, panels, borders, or frames",
+    "photorealism or 3D rendering",
+    "heavy black outlines or saturated pigment",
+    "clipped or cropped figures"
+  ],
+  "assets": [
+    {
+      "id": "character-reference--a-yao--v01",
+      "characterId": "a-yao",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/character-reference--a-yao--v01.png",
+      "sha256": "b1978cbcb44c2fb283d5fc8925f7656e02be86dd08b5b408d1825e582ca6644a",
+      "width": 1200,
+      "height": 900,
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "shippingEligible": false,
+      "acceptedCandidate": "candidate-b",
+      "rawSource": {
+        "artifactName": "character-reference--a-yao--raw-candidate-b.png",
+        "sha256": "61e5d6e024f3bb5b220be81f65ae81b7c7cc1e1ca566c0ce38981042b7a7195e"
+      },
+      "directReferences": [
+        "character-reference--a-yao--raw-candidate-a.png",
+        "docs/art/style-ref-home.png",
+        "docs/art/style-ref-postcard.png",
+        "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+      ],
+      "prompt": "Revise the supplied A-Yao character sheet while preserving her original face, short-black-bob identity, proportions, clothes, and locked-B watercolor/colored-pencil rendering. Landscape sheet intended for a central 4:3 crop: scale all three figures down slightly and keep every hair tip, hand, satchel, stool, trouser cuff, and shoe fully inside the central safe area, with at least 10 percent completely blank ivory margin at both left and right edges and 5 percent blank margin top and bottom. On one uninterrupted soft-ivory paper field with no dividers, show exactly three separate full-body poses of the same original fictional Chinese woman age 27: left at about quarter width, front three-quarter standing, observant and practical; center, a true clean side profile facing right, working with the strap and contents of her worn canvas satchel; right, seated listening attentively on a compact simple low wooden stool, with both feet comfortably inside the safe area. Identical in every pose: same face, same short black bob and fringe, rust-red scarf, olive field jacket, indigo trousers, worn natural-canvas satchel, practical dark shoes. Delicate watercolor washes and colored-pencil texture, restrained low-saturation locked-B pigment, broad unpainted soft ivory paper, fine warm-gray-brown linework, subtle paper grain, minimal contact shadows. Use the supplied prior sheet only as identity reference and the calibration images only for medium, paper, line, and B intensity. Wholly original, no resemblance to actors or existing film/TV characters. Anatomically sound hands. No cats or animals, no text of any kind, no logo, no signature, no watermark, no UI, no panels, no borders, no frames, no clipping, no cropped body parts, no photorealism, no 3D, no heavy black outline, no saturated color."
+    },
+    {
+      "id": "character-reference--zhou-an--v01",
+      "characterId": "zhou-an",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/character-reference--zhou-an--v01.png",
+      "sha256": "e9fd771b3afba9e8a2238e18d3a8d1386470292966665cb79e9a762ba504ea9b",
+      "width": 1200,
+      "height": 900,
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "shippingEligible": false,
+      "acceptedCandidate": "candidate-b",
+      "rawSource": {
+        "artifactName": "character-reference--zhou-an--raw-candidate-b.png",
+        "sha256": "c3f67b8004008dd7d6e8f5a509967d31bcda371440f49543dc672713a97f37a9"
+      },
+      "directReferences": [
+        "character-reference--zhou-an--raw-candidate-a.png",
+        "docs/art/style-ref-home.png",
+        "docs/art/style-ref-postcard.png",
+        "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+      ],
+      "prompt": "Revise the supplied Zhou An character sheet while preserving his original face, wavy-dark-hair identity, lean proportions, clothes, and locked-B watercolor/colored-pencil rendering. Landscape sheet intended for a central 4:3 crop: scale all three figures down slightly and keep every hair tip, hand, tool, leather roll, stool, trouser cuff, and shoe fully inside the central safe area, with at least 10 percent completely blank ivory margin at both left and right edges and 5 percent blank margin top and bottom. On one uninterrupted soft-ivory paper field with no dividers, show exactly three separate full-body poses of the same original fictional Chinese man age 32: left, front three-quarter standing with calm dry warmth and holding a compact rolled brown leather tool wrap; center, a true clean side profile facing right while kneeling naturally to work on one modest unbranded mechanical part, with the leather tool wrap neatly unrolled beside him; right, seated listening attentively on a compact simple low wooden stool. Identical in every pose: same face, same thin rectangular glasses, same wavy dark hair silhouette, rolled-sleeve navy shirt, sand work overalls, practical brown shoes; the accessory is recognizably a leather tool roll rather than a handbag or belt pouch. Delicate watercolor washes and colored-pencil texture, restrained low-saturation locked-B pigment, broad unpainted soft ivory paper, fine warm-gray-brown linework, subtle paper grain, minimal contact shadows. Use the supplied prior sheet only as identity reference and the calibration images only for medium, paper, line, and B intensity. Wholly original, no resemblance to actors or existing film/TV characters. Anatomically sound hands. No cats or animals, no text of any kind, no logo, no signature, no watermark, no UI, no panels, no borders, no frames, no clipping, no cropped body parts, no photorealism, no 3D, no heavy black outline, no saturated color."
+    },
+    {
+      "id": "character-reference--lin-deng--v01",
+      "characterId": "lin-deng",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/character-reference--lin-deng--v01.png",
+      "sha256": "7eab2cc04e924b31d8ee881598507f9e31bb24f881848599c84d4178082fd2e3",
+      "width": 1200,
+      "height": 900,
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "shippingEligible": false,
+      "acceptedCandidate": "candidate-b",
+      "rawSource": {
+        "artifactName": "character-reference--lin-deng--raw-candidate-b.png",
+        "sha256": "8de9b6bcc1cc9059b7ea7e63db8ff98c596711374e8500a35e966af7664a77fc"
+      },
+      "directReferences": [
+        "character-reference--lin-deng--raw-candidate-a.png",
+        "docs/art/style-ref-home.png",
+        "docs/art/style-ref-postcard.png",
+        "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+      ],
+      "prompt": "Revise the supplied Lin Deng character sheet while preserving the same kind, dignified original elderly identity, silver-hair silhouette, slender slightly stooped proportions, clothes, and locked-B watercolor/colored-pencil rendering. Remove all eyewear: Lin Deng wears no glasses in any pose. Remove the hanging camera-like device; do not add a camera. Landscape sheet intended for a central 4:3 crop: scale all three figures down slightly and keep every hair tip, hand, coat hem, watch chain, stool, trouser cuff, and shoe fully inside the central safe area, with at least 10 percent completely blank ivory margin at both left and right edges and 5 percent blank margin top and bottom. On one uninterrupted soft-ivory paper field with no dividers, show exactly three separate full-body poses of the same wholly original Chinese man in his seventies: left, front three-quarter standing kindly with a closed brass pocket watch visible; center, a gentle true side profile facing right, one open hand making a graceful projection gesture toward an imagined off-sheet beam while the other rests near his waist; right, seated listening warmly on a compact simple low wooden stool. Identical outfit in every pose: cream shirt, brown waistcoat, navy coat, dark trousers, practical brown shoes, brass pocket watch and chain. Delicate watercolor washes and colored-pencil texture, restrained low-saturation locked-B pigment, broad unpainted soft ivory paper, fine warm-gray-brown linework, subtle paper grain, minimal contact shadows. Use the prior sheet only for the original face, outfit, and mood, explicitly without its glasses or camera-like prop; use calibration images only for medium, paper, line, and B intensity. Face must not resemble any actor, real person, film, TV series, or existing character. Anatomically sound hands. No cats or animals, no text of any kind, no logo, no signature, no watermark, no UI, no panels, no borders, no frames, no clipping, no cropped body parts, no photorealism, no 3D, no heavy black outline, no saturated color."
+    },
+    {
+      "id": "character-reference--ensemble-scale--v01",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/character-reference--ensemble-scale--v01.png",
+      "sha256": "3ba7064dc38bd821a220f743af130e7f0cc4f1641e2628f2fd2dd79ae587ee25",
+      "width": 1200,
+      "height": 900,
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "shippingEligible": false,
+      "acceptedCandidate": "candidate-d",
+      "rawSource": {
+        "artifactName": "character-reference--ensemble-scale--raw-candidate-d.png",
+        "sha256": "a8f0d4c80e09ba253a061ab516a58b41d647c9bd16ffd661a0d63ff1286c4c2f"
+      },
+      "directReferences": [
+        "character-reference--ensemble-scale--raw-candidate-c.png",
+        "character-reference--a-yao--raw-candidate-b.png",
+        "character-reference--zhou-an--raw-candidate-b.png",
+        "character-reference--lin-deng--raw-candidate-b.png",
+        "docs/art/style-ref-home.png",
+        "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png"
+      ],
+      "relativeHeightRule": "Zhou An tallest; Lin Deng moderately tall but reduced by a gentle stoop; A-Yao shortest.",
+      "ambientLifePalette": [
+        "#9A9285",
+        "#8A9075",
+        "#B49A6D",
+        "#6F8190"
+      ],
+      "prompt": "The supplied ensemble revision is rejected only because its outer incidental people touch the final crop edges. Make a compact crop-safe revision while preserving the canonical trio's supplied original faces, clothes, accessories, relative heights, the six generic Ambient Life treatments, and the same restrained locked-B watercolor/colored-pencil style. Move every incidental person inward by at least one full body width and scale the whole ensemble down slightly. The outer 25 percent of the canvas on both left and right must be entirely untouched soft-ivory paper with absolutely no figure, garment, shoe, bag, shadow, pigment, or line. All nine people must be fully contained between 25 and 75 percent of canvas width, with visible ivory breathing room between the outermost person and those blank bands. Arrange compactly in depth: the three canonical leads centered and largest on a shared baseline; three much smaller anonymous ambient figures grouped behind and to their left; three much smaller anonymous ambient figures grouped behind and to their right. Do not stretch the ambient line toward either canvas edge. Canonical scale remains clear: Zhou An tallest with wavy dark hair, thin rectangular glasses, rolled navy shirt, sand overalls and rolled leather tool wrap; silver-haired Lin Deng moderately tall with a gentle stoop, no glasses, cream shirt, brown waistcoat, navy coat and brass pocket watch; short-bobbed A-Yao shortest with rust-red scarf, olive field jacket, indigo trousers and worn canvas satchel. Exactly six generic low-detail incidental people, varied walking, pausing, carrying and conversational gestures; warm-gray, sage, faded ochre and dusty-blue silhouettes; never copies of the leads. One uninterrupted ivory paper field. Delicate locked-B watercolor washes, restrained pigment, fine warm-gray-brown linework on leads, colored-pencil texture, subtle paper grain. Wholly original, no actor, real-person, film, TV, or existing-character resemblance. No cats or animals, no text, no labels, no marks, no logo, no signature, no watermark, no UI, no panel, no border, no frame, no clipping, no cropped figure, no photorealism, no 3D, no heavy black outline, no saturated color."
+    }
+  ],
+  "contactSheet": {
+    "id": "contact-sheet--characters--non-final",
+    "path": "docs/story/cinematic-journey-v1/assets/references/characters/contact-sheet--characters--non-final.png",
+    "sha256": "1889143b2b4ba1394246cd8582e90b9e48217b252c6a36bca0533d5d0b6ce05e",
+    "width": 2400,
+    "height": 1800,
+    "bitDepth": 8,
+    "colorModel": "RGB",
+    "colorSpace": "sRGB",
+    "opaque": true,
+    "layout": "unlabeled 2x2 review sheet with ivory gutters",
+    "tileResample": "Core Image CILanczosScaleTransform",
+    "shippingEligible": false
+  },
+  "rejectedRevisions": [
+    {
+      "candidate": "a-yao-candidate-a",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--a-yao--candidate-a--rejected.png",
+      "sha256": "a625d0884aca23341d199849d15e87d8f0b4edd4f5de9d2afbb56b08852531e0",
+      "width": 1200,
+      "height": 900,
+      "reason": "The seated shoe clipped at the right edge after the required 4:3 crop.",
+      "shippingEligible": false
+    },
+    {
+      "candidate": "zhou-an-candidate-a",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--zhou-an--candidate-a--rejected.png",
+      "sha256": "a04829739a9dd309f5e070d41f9ef536f70fa68d9ffd88dcb2e9dd331c6ee6f7",
+      "width": 1200,
+      "height": 900,
+      "reason": "Superseded to make the leather tool roll explicit and strengthen the side-working pose.",
+      "shippingEligible": false
+    },
+    {
+      "candidate": "lin-deng-candidate-a",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--lin-deng--candidate-a--rejected.png",
+      "sha256": "a4b4668e6f04858333219e8a78189263b6c780d7f9071e55bb21c17fcaa1e180",
+      "width": 1200,
+      "height": 900,
+      "reason": "The crop clipped a camera-like prop and the revision contained unintended eyewear.",
+      "shippingEligible": false
+    },
+    {
+      "candidate": "ensemble-scale-candidate-a",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--ensemble-scale--candidate-a--rejected.png",
+      "sha256": "ba1c320c4b02cc82d72d1e823005b6ff59d0250ddf8893a99aa18c5466cc9436",
+      "width": 1200,
+      "height": 900,
+      "reason": "Multiple incidental people clipped at the final side edges.",
+      "shippingEligible": false
+    },
+    {
+      "candidate": "ensemble-scale-candidate-b",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--ensemble-scale--candidate-b--rejected.png",
+      "sha256": "84ea1239d17d174ed62e735c0c93671fa4c49282c9747c8ac6e1acb1a3c1c06b",
+      "width": 1200,
+      "height": 900,
+      "reason": "The outer Ambient Life figures still clipped after normalization.",
+      "shippingEligible": false
+    },
+    {
+      "candidate": "ensemble-scale-candidate-c",
+      "path": "docs/story/cinematic-journey-v1/assets/references/characters/rejected/character-reference--ensemble-scale--candidate-c--rejected.png",
+      "sha256": "71d5d53140ce902517aea6846a3f1d48b071b6e37a7419a1200439b24af9867e",
+      "width": 1200,
+      "height": 900,
+      "reason": "The outermost figures remained too close to and touched the crop edges.",
+      "shippingEligible": false
+    }
+  ],
+  "rightsAndOriginality": {
+    "statement": "The characters and depicted scenes are original fictional designs created for the original series 《最后一束光》 with Cursor GenerateImage. No existing film or television character, real actor, logo, branded property, or readable copyrighted text was requested or intentionally referenced. The supplied style calibrations are internal project references and were used only for medium, paper, line, and locked-B pigment intensity.",
+    "actorLikenessRequested": false,
+    "existingScreenReferenceUsed": false,
+    "logoOrBrandRequested": false,
+    "humanRightsReviewRequiredBeforeRelease": true,
+    "shippingEligible": false
+  },
+  "qa": {
+    "reviewedAt": "2026-07-21",
+    "method": [
+      "manual visual inspection at final crop",
+      "programmatic PNG IHDR and chunk inspection",
+      "SHA-256 verification"
+    ],
+    "technical": {
+      "exact1200x900": "pass for all four primary assets",
+      "png8BitRGB": "pass for all four primary assets",
+      "opaqueNoAlpha": "pass for all four primary assets",
+      "embeddedSRGB": "pass for all four primary assets",
+      "lanczosNormalized": "pass"
+    },
+    "visual": {
+      "aYaoIdentityConsistency": "pass",
+      "zhouAnIdentityConsistency": "pass",
+      "linDengIdentityConsistency": "pass",
+      "ensembleRelativeScale": "pass",
+      "ambientLifeTreatments": "pass",
+      "noClippedFigures": "pass",
+      "noExistingFilmOrTVReferenceObserved": "pass",
+      "noActorLikenessIntendedOrObserved": "pass",
+      "noLogoOrWatermarkObserved": "pass",
+      "noReadableTextObserved": "pass",
+      "noCatOrOtherAnimalObserved": "pass",
+      "noUIOrBordersObserved": "pass"
+    },
+    "releaseDecision": "non-final visual reference only",
+    "shippingEligible": false
+  }
+}

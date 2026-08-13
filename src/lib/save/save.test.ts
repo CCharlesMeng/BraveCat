@@ -4,8 +4,10 @@ import { reduceEconomy } from '../economy'
 import {
   createInitialGameState,
   isGameState,
+  restoreGameState,
   type GameState,
 } from '../game'
+import { defaultHomeCustomization } from '../homeTheme'
 import { createIndexedDbSaveStore } from './index'
 
 describe('Save', () => {
@@ -72,7 +74,7 @@ describe('Save', () => {
     await store.save(current)
 
     await expect(store.import({
-      schemaVersion: 3,
+      schemaVersion: 4,
       exportedAt: 2_000,
       state: { treats: '很多' },
     })).rejects.toThrow('存档内容不完整或已损坏')
@@ -103,6 +105,10 @@ describe('Save', () => {
           ...document,
           schemaVersion: 3,
         }),
+        3: (document) => ({
+          ...document,
+          schemaVersion: 4,
+        }),
       },
     })
 
@@ -112,6 +118,36 @@ describe('Save', () => {
       state: { fish: 12 },
     })).resolves.toEqual({ treats: 12 })
     await expect(store.load()).resolves.toEqual({ treats: 12 })
+  })
+
+  it('把 v3 根存档迁移为带家外观选择的 v4', async () => {
+    const {
+      homeCustomization: _dropped,
+      ...v3State
+    } = createInitialGameState(1_000)
+    const store = createIndexedDbSaveStore<GameState>(
+      `bravecat-test-${crypto.randomUUID()}`,
+      {
+        validateState: isGameState,
+        migrations: {
+          3: (document) => ({
+            ...document,
+            schemaVersion: 4,
+            state: restoreGameState(document.state, 9_000),
+          }),
+        },
+      },
+    )
+
+    const imported = await store.import({
+      schemaVersion: 3,
+      exportedAt: 2_000,
+      state: { ...v3State, stateVersion: 3 },
+    })
+
+    expect(imported.stateVersion).toBe(4)
+    expect(imported.homeCustomization).toEqual(defaultHomeCustomization())
+    await expect(store.load()).resolves.toEqual(imported)
   })
 
   it('JSON 导出再导入会恢复完整行为状态', async () => {
@@ -193,7 +229,7 @@ describe('Save', () => {
     const imported = await target.import(JSON.parse(json))
 
     expect(JSON.parse(json)).toMatchObject({
-      schemaVersion: 3,
+      schemaVersion: 4,
       exportedAt: 5_000,
     })
     expect(imported).toEqual(state)

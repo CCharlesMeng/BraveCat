@@ -45,6 +45,7 @@ export type TravelState =
 export interface TravelAdvanceInput {
   now: number
   pack: readonly PackedItem[]
+  portraitId?: PortraitId
   wishDestinationId?: DestinationId
   recentPostcardRecipes?: readonly Pick<PostcardRecipe, 'scene' | 'copy'>[]
 }
@@ -87,7 +88,7 @@ export const createTravelLifecycle = (
         wishDestinationId: input.wishDestinationId,
         rhythm: config.rhythm,
         travelerCatId: config.travelerCatId,
-        portraitId: config.portraitId,
+        portraitId: input.portraitId ?? config.portraitId,
         catalog: config.catalog,
         recentPostcardRecipes: input.recentPostcardRecipes,
       }, random)

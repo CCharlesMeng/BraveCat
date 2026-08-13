@@ -120,6 +120,81 @@ describe('Itinerary', () => {
     expect(itinerary.postcardSlots).toHaveLength(2)
   })
 
+  it('旅行罐头让旅行倾向更长但不突破时长上限', () => {
+    const withoutTin = planItinerary(
+      {
+        departsAt: 10_000,
+        destinations: [{ id: 'paris', region: 'europe' }],
+        packedItemIds: [],
+      },
+      randomFrom(0, 0.5, 0.5),
+    )
+    const withTin = planItinerary(
+      {
+        departsAt: 10_000,
+        destinations: [{ id: 'paris', region: 'europe' }],
+        packedItemIds: ['travel-tin'],
+        packEffects: {
+          travelDurationMultiplier: 1.25,
+          secondPostcardChanceBonus: 0,
+          companionChanceBonus: 0,
+          poseWeights: {},
+          copyTagWeights: {},
+        },
+      },
+      randomFrom(0, 0.5, 0.5),
+    )
+    const cappedTrip = planItinerary(
+      {
+        departsAt: 10_000,
+        destinations: [{ id: 'paris', region: 'europe' }],
+        packedItemIds: ['travel-tin'],
+        packEffects: {
+          travelDurationMultiplier: 1.25,
+          secondPostcardChanceBonus: 0,
+          companionChanceBonus: 0,
+          poseWeights: {},
+          copyTagWeights: {},
+        },
+      },
+      randomFrom(0, 0.99, 0.5),
+    )
+
+    expect(withTin.returnsAt - withTin.departsAt).toBeGreaterThan(
+      withoutTin.returnsAt - withoutTin.departsAt,
+    )
+    expect(cappedTrip.returnsAt - cappedTrip.departsAt).toBe(24 * HOUR)
+  })
+
+  it('小相机把第二张明信片概率从三成提高到五成', () => {
+    const withoutCamera = planItinerary(
+      {
+        departsAt: 10_000,
+        destinations: [{ id: 'paris', region: 'europe' }],
+        packedItemIds: [],
+      },
+      randomFrom(0, 0, 0.35),
+    )
+    const withCamera = planItinerary(
+      {
+        departsAt: 10_000,
+        destinations: [{ id: 'paris', region: 'europe' }],
+        packedItemIds: ['small-camera'],
+        packEffects: {
+          travelDurationMultiplier: 1,
+          secondPostcardChanceBonus: 0.2,
+          companionChanceBonus: 0,
+          poseWeights: {},
+          copyTagWeights: {},
+        },
+      },
+      randomFrom(0, 0, 0.35),
+    )
+
+    expect(withoutCamera.postcardSlots).toHaveLength(1)
+    expect(withCamera.postcardSlots).toHaveLength(2)
+  })
+
   it('按 80/15/5 分配心愿命中、同区域绕路和全球意外', () => {
     const routeKinds = Array.from({ length: 100 }, (_, index) => planItinerary(
       {

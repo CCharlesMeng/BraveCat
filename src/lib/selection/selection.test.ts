@@ -3,6 +3,11 @@ import { selectTripContent } from './index'
 import type { AssetCatalog } from '../assets'
 import type { Itinerary } from '../itinerary'
 
+const randomFrom = (...values: number[]) => {
+  let index = 0
+  return () => values[index++] ?? 0
+}
+
 const catalog: AssetCatalog = {
   sceneSetRevision: 'scenes-r1',
   sceneRevisions: {
@@ -203,5 +208,110 @@ describe('Selection', () => {
       'postcard-note-2',
       'postcard-note-3',
     ])
+  })
+
+  it('按行囊效果提高目标姿势与文案标签的选取权重', () => {
+    const weightedCatalog: AssetCatalog = {
+      ...catalog,
+      sceneRevisions: {
+        'paris-gaze': 'paris-gaze-r1',
+        'paris-eat': 'paris-eat-r1',
+      },
+      destinations: [{
+        ...catalog.destinations[0],
+        sceneVariants: [
+          {
+            ...catalog.destinations[0].sceneVariants[0],
+            id: 'paris-gaze',
+          },
+          {
+            ...catalog.destinations[0].sceneVariants[0],
+            id: 'paris-eat',
+            compositionSlot: {
+              ...catalog.destinations[0].sceneVariants[0].compositionSlot,
+              pose: 'eat',
+            },
+          },
+        ],
+      }],
+      copy: {
+        ...catalog.copy,
+        postcardNotes: [
+          '人，咪在{destination}坐了一会儿。',
+          '人，咪在{destination}吃到一口点心。',
+        ],
+        postcardNoteTags: [[], ['food']],
+      },
+    }
+    const itinerary: Itinerary = {
+      destinationId: 'paris',
+      departsAt: 1_000,
+      returnsAt: 3_000,
+      postcardSlots: [{ destinationId: 'paris', revealAt: 2_000 }],
+      routeKind: 'unwished',
+      isDetour: false,
+    }
+
+    const content = selectTripContent({
+      itinerary,
+      travelerCatId: 'cat-1',
+      portraitId: 'my-cat',
+      catalog: weightedCatalog,
+      packEffects: {
+        travelDurationMultiplier: 1,
+        secondPostcardChanceBonus: 0,
+        companionChanceBonus: 0,
+        poseWeights: { gaze: 1.5 },
+        copyTagWeights: { food: 1.5 },
+      },
+    }, randomFrom(0.5, 0.4, 0))
+
+    expect(content.postcards[0].recipe.scene.id).toBe('paris-gaze')
+    expect(content.postcards[0].recipe.copy.id).toBe('postcard-note-2')
+  })
+
+  it('小铃铛的概率增量可以把边界随机值选到旅伴场景', () => {
+    const companionCatalog: AssetCatalog = {
+      ...catalog,
+      sceneRevisions: {
+        'paris-day': 'paris-day-r1',
+        'paris-companion': 'paris-companion-r1',
+      },
+      destinations: [{
+        ...catalog.destinations[0],
+        sceneVariants: [
+          catalog.destinations[0].sceneVariants[0],
+          {
+            ...catalog.destinations[0].sceneVariants[0],
+            id: 'paris-companion',
+            hasCompanion: true,
+          },
+        ],
+      }],
+    }
+    const itinerary: Itinerary = {
+      destinationId: 'paris',
+      departsAt: 1_000,
+      returnsAt: 3_000,
+      postcardSlots: [{ destinationId: 'paris', revealAt: 2_000 }],
+      routeKind: 'unwished',
+      isDetour: false,
+    }
+
+    const content = selectTripContent({
+      itinerary,
+      travelerCatId: 'cat-1',
+      portraitId: 'my-cat',
+      catalog: companionCatalog,
+      packEffects: {
+        travelDurationMultiplier: 1,
+        secondPostcardChanceBonus: 0,
+        companionChanceBonus: 0.1,
+        poseWeights: {},
+        copyTagWeights: {},
+      },
+    }, randomFrom(0.15, 0, 0, 0))
+
+    expect(content.postcards[0].recipe.scene.id).toBe('paris-companion')
   })
 })

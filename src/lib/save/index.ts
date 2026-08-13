@@ -1,6 +1,6 @@
 import Dexie, { type Table } from 'dexie'
 
-export const SAVE_SCHEMA_VERSION = 3 as const
+export const SAVE_SCHEMA_VERSION = 4 as const
 
 export interface SaveDocument<TState> {
   schemaVersion: number

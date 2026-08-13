@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "last-light-prop-environment-continuity-v1",
+  "title": "《最后一束光》",
+  "status": "continuity-reference-non-final",
+  "shipping": false,
+  "shippingEligible": false,
+  "createdAt": "2026-07-21",
+  "artifactRoot": "docs/story/cinematic-journey-v1/assets/references/props",
+  "scope": "Original prop, environment, and chapter-palette continuity references.",
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "seed": null,
+    "generationCount": 4,
+    "acceptedGenerationCount": 4,
+    "rejectedGenerationCount": 0,
+    "sourceGeometry": {
+      "width": 1536,
+      "height": 1024,
+      "aspectRatio": "3:2",
+      "format": "png",
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "alpha": false
+    },
+    "notes": [
+      "Each accepted asset came from one original GenerateImage invocation.",
+      "GenerateImage did not report a model identifier or seed.",
+      "The requested 4:3 ratio was normalized after generation without cropping or geometric distortion."
+    ]
+  },
+  "styleLock": {
+    "name": "locked-B watercolor",
+    "calibrationPanel": "center panel B only",
+    "usage": "style-only",
+    "characteristics": [
+      "warm off-white paper",
+      "restrained medium saturation and contrast",
+      "translucent watercolor washes",
+      "subtle paper grain and granulation",
+      "delicate graphite or colored-pencil contours",
+      "soft atmospheric depth and tactile wear"
+    ],
+    "references": [
+      {
+        "path": "docs/art/style-ref-home.png",
+        "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+      },
+      {
+        "path": "docs/art/style-ref-postcard.png",
+        "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+      },
+      {
+        "path": "docs/art/candidates/style-intensity/style-intensity-ABC-triptych-calibration-non-final-20260720.png",
+        "sha256": "46fb244a3d6f3d813500c4b86b367f282e84ef73ecb1a3e70e307f9441500d33",
+        "region": "center panel B"
+      }
+    ],
+    "excludedReferenceContent": [
+      "subjects",
+      "Cat and other animals",
+      "objects",
+      "architecture",
+      "compositions",
+      "typography",
+      "borders",
+      "UI"
+    ]
+  },
+  "normalization": {
+    "canonicalWidth": 1200,
+    "canonicalHeight": 900,
+    "canonicalAspectRatio": "4:3",
+    "format": "png",
+    "bitDepth": 8,
+    "colorModel": "RGB",
+    "alpha": false,
+    "colorProfile": "sRGB IEC61966-2.1",
+    "profileEmbedded": true,
+    "resampler": "separable Lanczos-3",
+    "fitPolicy": "contain",
+    "resize": {
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "resizedWidth": 1200,
+      "resizedHeight": 800
+    },
+    "padding": {
+      "top": 50,
+      "right": 0,
+      "bottom": 50,
+      "left": 0,
+      "fill": "median warm-paper color sampled from source corners"
+    },
+    "crop": false,
+    "distortion": false
+  },
+  "canonicalRules": {
+    "geometry": {
+      "travelingCinemaVan": [
+        "Use one compact, softly rounded, vintage-inspired utility body with a consistent wheelbase, wheel scale, door placement, lamps, mirrors, bumpers, hinges, seams, and roof vent.",
+        "The upper body is cream and the lower body is muted teal, divided by one continuous horizontal paint break.",
+        "The visible side carries a blank ivory screen deployed from a plain roof-edge housing with two mechanically plausible articulated braces.",
+        "Rear equipment access uses one large outward-opening door and fixed shelves sized for reels, cases, cables, and tools.",
+        "No badge, emblem, branded grille, license text, or plate-like readable mark is canonical."
+      ],
+      "projectorAndFilmKit": [
+        "The projector is a compact hand-crank unit with a dark-walnut body and base, aged-brass lens, gate, sprockets, reel arms, ventilation, crank, and stable feet.",
+        "The crank remains on the same side and the two-reel film path remains mechanically legible across views.",
+        "Film tins are plain, dented, round metal containers distinguished only by removable cloth knots in muted rust, teal, ochre, or dusty blue.",
+        "The kit includes two empty spoked reels, a hinged metal splicer, blank perforated film leader, and a brown leather tool roll.",
+        "All plates, tins, handles, and tools remain unmarked."
+      ],
+      "oldCinema": [
+        "All vignettes depict one modest neighborhood cinema with faded cream walls, restrained muted-teal lower-wall trim, dark worn wood, and rain-darkened service paving.",
+        "The projection booth uses square projection ports, a wood workbench, the canonical projector, plain film tins, cable hooks, and one amber task lamp.",
+        "The auditorium uses rows of worn muted-red seats, scuffed dark-wood armrests, a central aisle, and one blank taut ivory screen.",
+        "The shallow stage, curtain track, booth ports, service door, alley, folding ramp, and loading position must remain spatially compatible.",
+        "The alley van follows the traveling-cinema-van geometry and palette."
+      ],
+      "moodSheet": [
+        "Use exactly ten unlabelled environment vignettes in two rows of five.",
+        "Separate vignettes only with warm-paper gutters; do not add boxes, captions, numbers, swatches, frames, or UI.",
+        "Read order is left-to-right across the top row, then left-to-right across the bottom row.",
+        "Each location remains original and anonymous, with no recognizable landmark or branded architecture."
+      ]
+    },
+    "color": {
+      "shared": {
+        "paper": "#F2EDDF",
+        "ivoryScreen": "#ECE4CF",
+        "vehicleCream": "#DED1B5",
+        "vehicleMutedTeal": "#82978E",
+        "agedBrass": "#9A7444",
+        "darkWalnut": "#59402F",
+        "wornSeatRed": "#8C5148",
+        "charcoalHardware": "#494842"
+      },
+      "chapterPalettes": [
+        {
+          "chapter": 1,
+          "location": "old cinema",
+          "anchors": ["worn red", "ivory", "amber", "muted teal"]
+        },
+        {
+          "chapter": 2,
+          "location": "rain station",
+          "anchors": ["slate blue-gray", "wet charcoal", "isolated amber"]
+        },
+        {
+          "chapter": 3,
+          "location": "fog harbor",
+          "anchors": ["muted teal water", "pale gray fog", "weathered brown"]
+        },
+        {
+          "chapter": 4,
+          "location": "red-earth road",
+          "anchors": ["rust red", "cream grass", "distant muted teal"]
+        },
+        {
+          "chapter": 5,
+          "location": "mountain teahouse",
+          "anchors": ["weathered timber", "moss green", "warm steam"]
+        },
+        {
+          "chapter": 6,
+          "location": "snow observatory",
+          "anchors": ["blue-white", "indigo dusk", "amber window"]
+        },
+        {
+          "chapter": 7,
+          "location": "river dance hall",
+          "anchors": ["dusty rose", "dark timber", "amber bulbs", "violet reflection"]
+        },
+        {
+          "chapter": 8,
+          "location": "island lighthouse",
+          "anchors": ["cream", "charcoal rock", "sea green", "coral sunset"]
+        },
+        {
+          "chapter": 9,
+          "location": "neon archive",
+          "anchors": ["deep violet", "muted cyan", "blue-black", "small warm accents"]
+        },
+        {
+          "chapter": 10,
+          "location": "outdoor finale",
+          "anchors": ["deep blue dusk", "ivory screen", "warm practical lights", "pale beam"]
+        }
+      ]
+    },
+    "materials": {
+      "vehicle": [
+        "matte weathered painted metal",
+        "clear glass",
+        "dark rubber tires",
+        "aged steel hardware",
+        "plain wood equipment shelving",
+        "taut matte ivory projection cloth"
+      ],
+      "projectorKit": [
+        "aged unlacquered brass",
+        "dark walnut",
+        "dented unprinted steel",
+        "muted woven cloth",
+        "brown vegetable-tanned leather",
+        "black perforated film"
+      ],
+      "cinema": [
+        "faded painted plaster",
+        "scuffed dark wood",
+        "worn matte red upholstery",
+        "plain ivory screen cloth",
+        "aged steel cable hardware",
+        "rain-darkened concrete or stone paving"
+      ],
+      "rendering": [
+        "No glossy plastic UI finish.",
+        "Weathering is soft and use-based, not distressed branding.",
+        "Blank surfaces remain visually blank without pseudo-text texture."
+      ]
+    }
+  },
+  "chapterUsage": [
+    {
+      "chapter": 1,
+      "location": "old cinema",
+      "assets": [
+        "environment-reference--old-cinema-kit--v01",
+        "prop-reference--projector-and-film-kit--v01",
+        "prop-reference--traveling-cinema-van--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 2,
+      "location": "rain station",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 3,
+      "location": "fog harbor",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 4,
+      "location": "red-earth road",
+      "assets": [
+        "prop-reference--traveling-cinema-van--v01",
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 5,
+      "location": "mountain teahouse",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 6,
+      "location": "snow observatory",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 7,
+      "location": "river dance hall",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 8,
+      "location": "island lighthouse",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 9,
+      "location": "neon archive",
+      "assets": [
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    },
+    {
+      "chapter": 10,
+      "location": "outdoor finale",
+      "assets": [
+        "prop-reference--traveling-cinema-van--v01",
+        "prop-reference--projector-and-film-kit--v01",
+        "mood-reference--ten-chapter-palette--v01"
+      ]
+    }
+  ],
+  "originalityRestrictions": [
+    "Original generic designs only.",
+    "Do not reproduce or closely imitate an existing film, television, game, vehicle, projector, cinema, observatory, lighthouse, archive, or landmark design.",
+    "Do not introduce brands, logos, emblems, badges, trademarks, maker plates, license text, or branded color blocking.",
+    "Do not include readable text, pseudo-text, labels, handwriting, letters, numbers, posters, marquees, signs, or film-title imagery.",
+    "Do not include Cat, a mascot, people, animals, or character likenesses.",
+    "Do not include UI, icons, storyboard framing, film frames, decorative borders, panel borders, signatures, or watermarks.",
+    "The locked references authorize style cues only; their subjects, objects, layouts, compositions, architecture, typography, and borders are excluded.",
+    "Blank screens, storage spines, tins, plates, crates, terminals, and vehicle surfaces must remain blank.",
+    "These references are continuity guides, not legal clearance for later third-party additions."
+  ],
+  "assets": [
+    {
+      "id": "prop-reference--traveling-cinema-van--v01",
+      "path": "docs/story/cinematic-journey-v1/assets/references/props/prop-reference--traveling-cinema-van--v01.png",
+      "assetFamily": "prop-reference",
+      "role": "traveling cinema van exterior, screen mechanism, and rear equipment continuity",
+      "shipping": false,
+      "shippingEligible": false,
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorProfile": "sRGB IEC61966-2.1",
+      "alpha": false,
+      "sha256": "f6d30bc373c27be4bd7511028e0f2da57b0416e441ec4bdf2141e1bd22c3c5d6",
+      "sourceGenerationSha256": "cf5a20c2a3cb33a3ba473d83bd9229567d86220fd32a1c701bf8619110b33bfc",
+      "chapterUsage": [1, 4, 10],
+      "promptParagraphs": [
+        "Create an ORIGINAL production-design continuity reference sheet for the fictional Chinese-language story 《最后一束光》, using the supplied images ONLY for the locked-B watercolor treatment: warm off-white paper, restrained medium saturation and contrast matching the CENTER B calibration panel, translucent washes, subtle paper grain, delicate graphite/colored-pencil contour, softly weathered tactile surfaces. Do not copy any subject, object, composition, architecture, typography, border, or character from the reference images.",
+        "Single 4:3 landscape artwork, edge-to-edge plain warm-paper field, no border or framed panels. Main subject: a generic compact vintage-inspired traveling cinema van in coherent three-quarter exterior view, cream upper body and muted-teal lower body, softly rounded but mechanically plausible body shell, consistent wheelbase, tires, doors, hinges, lamps, mirrors, bumpers and panel seams. The visible side has a physically plausible fold-out ivory projection screen deployed from a plain awning-like housing, with braced supports and a taut blank surface. The rear equipment access door is open enough to show organized projector cases, cable reels and storage shelves; keep all geometry understandable and consistent. Add two or three small unframed detail studies floating naturally in the paper field: screen hinge/support mechanism, rear equipment access, compact roof vent/power inlet. Ensure details describe the SAME vehicle, same colors and materials. No people or animals.",
+        "Strict negatives: no Cat, no mascot, no existing film/TV vehicle design, no copyrighted franchise cues, no brand, no logo, no emblem, no maker badge, no plate text or plate-like readable marks, no letters, no numbers, no labels, no handwriting, no readable text, no pseudo-text, no signage, no UI, no icons, no storyboard frames, no decorative frame, no watermark, no signature. Any plate recess must be an entirely blank body-color panel. Original generic design only."
+      ],
+      "qa": {
+        "decision": "accepted-reference",
+        "threeQuarterExterior": true,
+        "foldOutIvoryScreen": true,
+        "rearEquipmentAccess": true,
+        "mechanicallyCoherent": true,
+        "forbiddenContentObserved": false
+      }
+    },
+    {
+      "id": "prop-reference--projector-and-film-kit--v01",
+      "path": "docs/story/cinematic-journey-v1/assets/references/props/prop-reference--projector-and-film-kit--v01.png",
+      "assetFamily": "prop-reference",
+      "role": "projector, film-tin identification, splicing, reel, and tool continuity",
+      "shipping": false,
+      "shippingEligible": false,
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorProfile": "sRGB IEC61966-2.1",
+      "alpha": false,
+      "sha256": "06b0c1c9d5a452a05957e384210c649cdde5cc5d454fb375d5e9f5e4f7bd8c7a",
+      "sourceGenerationSha256": "dc2845426b406a67fb6af2c18717b411d22d268c7acd280dc3f1e4f6f2046549",
+      "chapterUsage": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "promptParagraphs": [
+        "Create an ORIGINAL prop continuity reference sheet for the fictional Chinese-language story 《最后一束光》, using the supplied images ONLY for locked-B watercolor styling: warm off-white paper, restrained medium saturation and contrast matching the CENTER B calibration panel, translucent washes, light granulation, delicate graphite/colored-pencil edges, softly worn tactile materials. Do not copy subjects, layouts, objects, typography, borders, or characters from the references.",
+        "Single 4:3 landscape artwork, edge-to-edge warm-paper field, no border or framed panels. Carefully arranged coherent kit shown in a clear three-quarter tabletop still life with a few nearby unframed detail studies. Hero prop: mechanically plausible hand-crank motion-picture projector with aged unlacquered brass fittings, dark walnut housing/base, lens barrel, gate, sprockets, crank, reel arms, ventilation and stable feet; no impossible overlaps. Supporting objects: several completely plain dented round metal film tins with no markings, distinguished ONLY by tied cloth knots in muted rust, teal, ochre and dusty blue; two empty spoked reels; a compact metal film splicer with visible hinge and cutting guide; loose blank film leader with regular perforations but no images; a rolled brown leather tool roll open to show screwdrivers, brush, oil bottle and pliers. Repeat key forms in small detail views so crank placement, film path, tin system and tool storage remain consistent. No people or animals.",
+        "Strict negatives: no Cat, no mascot, no existing film/TV prop design, no branded industrial product, no logos, no labels, no letters, no numbers, no readable text, no pseudo-text, no handwriting, no film-title imagery, no signs, no UI, no icons, no storyboard frames, no decorative frame, no watermark, no signature. All tin lids, tool handles and projector plates must remain completely blank. Original generic design only."
+      ],
+      "qa": {
+        "decision": "accepted-reference",
+        "handCrankProjector": true,
+        "brassAndDarkWood": true,
+        "plainKnottedFilmTins": true,
+        "splicerReelsAndToolRoll": true,
+        "forbiddenContentObserved": false
+      }
+    },
+    {
+      "id": "environment-reference--old-cinema-kit--v01",
+      "path": "docs/story/cinematic-journey-v1/assets/references/props/environment-reference--old-cinema-kit--v01.png",
+      "assetFamily": "environment-reference",
+      "role": "old-cinema projection booth, auditorium, screen-side, and alley-loading continuity",
+      "shipping": false,
+      "shippingEligible": false,
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorProfile": "sRGB IEC61966-2.1",
+      "alpha": false,
+      "sha256": "053ec0409154b3471f4898f72d6220be9eda91395b85b36e24ba2c2ebd7ceacb",
+      "sourceGenerationSha256": "4ada78d036b1ed62e5fd339f14821e6933eb39a9577aac0c792ef7ab5dca02b5",
+      "chapterUsage": [1],
+      "promptParagraphs": [
+        "Create an ORIGINAL environment continuity sheet for the fictional Chinese-language story 《最后一束光》, using the supplied images ONLY for locked-B watercolor treatment: warm off-white paper, restrained medium saturation and contrast matching CENTER B calibration, translucent washes, subtle grain, fine graphite/colored-pencil structure, gentle age and tactile wear. Do not copy any subject, layout, object, architecture, typography, border, or character from the references.",
+        "Single 4:3 landscape sheet, edge-to-edge warm paper with four naturally separated but UNFRAMED coherent vignette views, no boxes and no labels. All views depict the SAME modest old neighborhood cinema and must share materials and spatial logic: (1) projection booth interior with two square projection ports, worn wood workbench, brass/dark-wood hand-crank projector, organized plain round film tins, cable hooks and a dim amber task lamp; (2) auditorium from rear quarter with rows of worn muted-red upholstered seats, scuffed dark wood armrests, central aisle, blank taut ivory screen, faded cream walls and restrained teal trim; (3) screen/stage-side reverse angle clarifying shallow stage, curtain track and booth ports; (4) narrow rear alley loading setup with cream-and-muted-teal generic compact cinema van, blank crates, coiled cables, folding ramp, plain service door and rain-darkened paving. Mechanically and architecturally plausible; preserve consistent windows, door positions, palette and prop dimensions. Quiet, unpeopled, no animals.",
+        "Strict negatives: no Cat, no mascot, no existing film/TV cinema design, no brands, no logos, no emblems, no posters, no marquees, no labels, no letters, no numbers, no readable text, no pseudo-text, no signage, no screen image, no UI, no icons, no storyboard frames, no panel borders, no decorative frame, no watermark, no signature. Blank surfaces stay blank. Original generic environment only."
+      ],
+      "qa": {
+        "decision": "accepted-reference",
+        "coherentVignetteCount": 4,
+        "projectionBooth": true,
+        "wornRedSeats": true,
+        "blankIvoryScreen": true,
+        "alleyLoadingSetup": true,
+        "forbiddenContentObserved": false
+      }
+    },
+    {
+      "id": "mood-reference--ten-chapter-palette--v01",
+      "path": "docs/story/cinematic-journey-v1/assets/references/props/mood-reference--ten-chapter-palette--v01.png",
+      "assetFamily": "mood-reference",
+      "role": "ten-chapter environment, weather, time-of-day, and palette continuity",
+      "shipping": false,
+      "shippingEligible": false,
+      "width": 1200,
+      "height": 900,
+      "format": "png",
+      "bitDepth": 8,
+      "colorModel": "RGB",
+      "colorProfile": "sRGB IEC61966-2.1",
+      "alpha": false,
+      "sha256": "50f78864c6b3f617250fccd0e97b94d43f196f7dc8b8dcb871086178491be916",
+      "sourceGenerationSha256": "2ecfc423db46d602728d40bb50b5e45f4200abc375ea2460b37e55e2061cdb00",
+      "chapterUsage": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "promptParagraphs": [
+        "Create an ORIGINAL ten-chapter environment mood-and-color reference sheet for the fictional Chinese-language story 《最后一束光》, using the supplied images ONLY for locked-B watercolor treatment: warm off-white paper, restrained medium saturation and contrast matching CENTER B calibration, translucent watercolor washes, subtle granulation, delicate graphite/colored-pencil structure, soft atmospheric depth. Do not copy any subject, composition, architecture, typography, border, or character from the supplied references.",
+        "One coherent 4:3 landscape sheet containing EXACTLY TEN small environment mood vignettes, arranged in two clean rows of five with generous warm-paper gutters, but NO boxes, borders, captions, labels, numbers or text. Each vignette is an original cinematic location study with a distinct but harmonized palette, no people and no animals, ordered visually left-to-right then top-to-bottom as: old neighborhood cinema interior (worn muted-red seats, ivory screen, amber booth glow); rain station (wet platform canopy, slate blue-gray rain, warm isolated lamps, no signs); fog harbor (muted teal water, pale gray fog, small generic workboats without marks); red-earth road (rust-red track, cream grasses, muted-teal distant hills, generic cream/teal compact van); mountain teahouse (weathered timber shelter, moss green and warm steam, blank cups, no signs); snow observatory (small original domed building, blue-white snow, indigo dusk, amber window); river dance hall (aged timber hall beside water, dusty rose and amber bulbs, empty floor); island lighthouse (original simple cream tower, charcoal rocks, sea green, coral sunset); neon archive (anonymous interior stacks, violet/cyan reflected light, entirely blank storage spines and blank terminals, no UI); outdoor finale (ivory projection screen in a field at deep blue dusk, warm lantern-like practical lights, generic seated silhouettes represented only as tiny abstract color shapes if needed, and a final pale beam—prefer fully unpeopled).",
+        "Keep each vignette readable as an environment, with varied weather and time-of-day while preserving one watercolor world. Strict negatives across entire sheet: no Cat, no mascot, no existing film/TV design, no recognizable landmark, no brand, no logo, no emblem, no posters, no labels, no letters, no numbers, no readable text, no pseudo-text, no signage, no UI, no icons, no film frames, no storyboard borders, no decorative frame, no watermark, no signature. Exactly ten vignettes and no additional swatches or thumbnails."
+      ],
+      "qa": {
+        "decision": "accepted-reference",
+        "vignetteCount": 10,
+        "layout": "two rows of five",
+        "chapterOrderCorrect": true,
+        "paperGuttersOnly": true,
+        "forbiddenContentObserved": false
+      }
+    }
+  ],
+  "contactSheet": {
+    "path": "docs/story/cinematic-journey-v1/assets/references/props/contact-sheet--props-and-moods--non-final.png",
+    "status": "non-final",
+    "shipping": false,
+    "shippingEligible": false,
+    "width": 2560,
+    "height": 1920,
+    "format": "png",
+    "bitDepth": 8,
+    "colorModel": "RGB",
+    "colorProfile": "sRGB IEC61966-2.1",
+    "alpha": false,
+    "layout": "two by two, native-size references, warm-paper gutters, no labels",
+    "sha256": "48262c82c87ced47fff12bae3863e4d875d5d047f332cb32675037917b5c14fa"
+  },
+  "rejectRetention": {
+    "required": true,
+    "directory": "docs/story/cinematic-journey-v1/assets/references/props/rejects",
+    "rejectedGenerationCount": 0,
+    "preservedRejects": [],
+    "note": "All four first-pass generations passed scoped visual QA, so no rejected generations were produced. Any future reject must be retained here with its prompt, source hash, rejection reason, and shipping=false."
+  },
+  "qa": {
+    "reviewedAt": "2026-07-21",
+    "hashAlgorithm": "SHA-256",
+    "technical": {
+      "referenceAssetCount": 4,
+      "exactReferenceAssetCountPass": true,
+      "allReferences1200x900": true,
+      "allReferencesExact4x3": true,
+      "allReferencesOpaque": true,
+      "allReferences8BitRGB": true,
+      "allReferencesEmbeddedSRGB": true,
+      "allReferencesLanczosNormalized": true,
+      "contactSheetBuilt": true,
+      "manifestJsonValid": true
+    },
+    "visual": {
+      "lockedBWatercolorMatch": "pass",
+      "requestedPropAndEnvironmentCoverage": "pass",
+      "mechanicalContinuity": "pass",
+      "tenChapterOrderAndCount": "pass",
+      "noCatOrMascot": "pass",
+      "noExistingFilmOrTelevisionDesignObserved": "pass",
+      "noBrandsLogosOrEmblemsObserved": "pass",
+      "noReadableTextOrPseudoTextObserved": "pass",
+      "noUIFramesBordersOrWatermarksObserved": "pass"
+    },
+    "limitations": [
+      "Visual originality review is scoped human-style inspection, not a legal clearance search.",
+      "These are non-final continuity references and are explicitly ineligible for shipping."
+    ],
+    "result": "pass"
+  }
+}

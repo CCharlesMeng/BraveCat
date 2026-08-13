@@ -1,4 +1,8 @@
 import type { DestinationId, ItemId } from '../ids'
+import {
+  EMPTY_PACK_EFFECTS,
+  type PackEffects,
+} from '../packEffects'
 
 export type RandomSource = () => number
 
@@ -51,6 +55,7 @@ export interface ItineraryRequest {
   wishDestinationId?: DestinationId
   rhythm?: TripRhythm
   wishRouteOdds?: WishRouteOdds
+  packEffects?: PackEffects
 }
 
 export interface ItineraryDestination {
@@ -149,12 +154,21 @@ export const planItinerary: ItineraryPlanner = (request, random) => {
   const rhythm = request.rhythm ?? DEFAULT_TRIP_RHYTHM
   const { destination, routeKind } = chooseDestination(request, random)
   const [minimumDuration, maximumDuration] = rhythm.travelDurationMs
-  const duration = minimumDuration
+  const baseDuration = minimumDuration
     + (maximumDuration - minimumDuration) * random()
+  const effects = request.packEffects ?? EMPTY_PACK_EFFECTS
+  const duration = Math.min(
+    maximumDuration,
+    baseDuration * effects.travelDurationMultiplier,
+  )
   const [minimumPostcards, maximumPostcards] = rhythm.postcardCount
   const postcardRoll = random()
+  const secondPostcardChance = Math.min(
+    1,
+    rhythm.secondPostcardChance + effects.secondPostcardChanceBonus,
+  )
   const postcardCount = minimumPostcards === 1 && maximumPostcards === 2
-    ? (postcardRoll < rhythm.secondPostcardChance ? 2 : 1)
+    ? (postcardRoll < secondPostcardChance ? 2 : 1)
     : minimumPostcards + Math.floor(
       postcardRoll * (maximumPostcards - minimumPostcards + 1),
     )

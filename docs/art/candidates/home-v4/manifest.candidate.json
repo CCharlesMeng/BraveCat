@@ -1,0 +1,143 @@
+{
+  "version": 6,
+  "shippingEligible": false,
+  "status": "approved-for-development-preview",
+  "canvas": {
+    "width": 1200,
+    "height": 1600
+  },
+  "source": {
+    "path": "interior-foreground--candidate-v02.png",
+    "generatedDimensions": {
+      "width": 1024,
+      "height": 1536
+    },
+    "crop": {
+      "left": 0,
+      "top": 62,
+      "width": 1024,
+      "height": 1365
+    }
+  },
+  "windowRect": {
+    "left": 0,
+    "top": 0,
+    "width": 570,
+    "height": 977
+  },
+  "rightWallPlane": {
+    "cornerX": 768,
+    "seamTreatment": "single-dark-step",
+    "displayProjection": "cabinet-referenced-quadrilaterals",
+    "physicalReferences": [
+      {
+        "id": "table-front-edge",
+        "skewY": 9.96
+      },
+      {
+        "id": "right-baseboard",
+        "skewY": 12.2
+      }
+    ]
+  },
+  "review": {
+    "developmentPreviewApproval": "docs/art/reviews/home-v4/approval.v1.json"
+  },
+  "outputs": [
+    {
+      "id": "interior-foreground",
+      "path": "interior-foreground--candidate-v03.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "df9d5e27016b179b9d357edf75842995e7ec5fb7188b4e499a937377a522f5c4"
+    },
+    {
+      "id": "interior-foreground-eat",
+      "path": "interior-foreground-eat--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "90afc85f8274ff5fbd1f59d0e46fcf5887d30bb2bbaf4bec3a440a78e1fabd28"
+    },
+    {
+      "id": "home-composite-eat-qa",
+      "path": "home-composite-eat--candidate-v01--qa.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "468ef873b1495cf08791dfa574084202e2ce5247f9e06b0edcb0380c6771c044"
+    },
+    {
+      "id": "home-composite-qa",
+      "path": "home-composite--candidate-v03--qa.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "41e34aa15ca585aa1cf78d53c9488a6a69c13fe650f9736d532dfe97839d61b1"
+    },
+    {
+      "id": "exterior-morning",
+      "path": "exterior-morning--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "ca4231289b04d616ff33447ce08ac335443c6b71dc835d65334217a80367ee57"
+    },
+    {
+      "id": "exterior-noon",
+      "path": "exterior-noon--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "8a1b09cb2ff54870b5146ff141fdbcee191d2508ff48f42b60133266f8abf05a"
+    },
+    {
+      "id": "exterior-dusk",
+      "path": "exterior-dusk--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "c0ef25b2fa95bac52fed4844d07447d24a35f7d190d7a81b2ddaed7915812dd6"
+    },
+    {
+      "id": "exterior-late-night",
+      "path": "exterior-late-night--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "54c847c435949db2e300a0c5b1a833ffc792b8f6fff82b65d127b2d3e252e218"
+    },
+    {
+      "id": "lighting-morning",
+      "path": "lighting-morning--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "cc4d73cff9922974c1753dee2f17ae2265dcb1f736d8d1aceaf7beca0b863b3a"
+    },
+    {
+      "id": "lighting-dusk",
+      "path": "lighting-dusk--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "32e210fb223fc0fa6cbe1e9c6ee95edcf57b565dd49ab2db02fc86be39ec8b0c"
+    },
+    {
+      "id": "lighting-late-night",
+      "path": "lighting-late-night--candidate-v01.png",
+      "width": 1200,
+      "height": 1600,
+      "hasAlpha": true,
+      "sha256": "d0454778dffabb9cdb5ac5ef85da7ea250722387057295b488b2b5e1379a733f"
+    }
+  ],
+  "reviewRequired": [
+    "windowsill supports both the gaze Cat and runtime Treat control",
+    "right wall reads as a separate plane at a 90-degree room corner",
+    "frame fixture follows the right-wall perspective",
+    "window transparency preserves all four exterior time layers",
+    "lighting overlays remain structurally compatible"
+  ]
+}

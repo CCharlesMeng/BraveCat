@@ -1,0 +1,223 @@
+{
+  "version": 4,
+  "shippingEligible": true,
+  "styleIntensity": "B",
+  "perspectiveReference": "public/dev-art/home-v4/interior-foreground.png",
+  "canvas": {
+    "width": 1200,
+    "height": 1600
+  },
+  "wallFixture": {
+    "path": "display--postcard-wall--candidate-v02.png",
+    "structure": "six independent thin frames with clips; no backing board",
+    "cornerX": 768,
+    "projection": "cabinet-referenced-quadrilaterals",
+    "cabinetPerspectiveReference": {
+      "rearSlope": 0.2480916030534351,
+      "frontSlope": 0.19083969465648856
+    },
+    "slots": [
+      {
+        "quad": [
+          [
+            792,
+            184
+          ],
+          [
+            974,
+            225
+          ],
+          [
+            970,
+            319
+          ],
+          [
+            792,
+            278
+          ]
+        ],
+        "contentSkewY": 12.7
+      },
+      {
+        "quad": [
+          [
+            1009,
+            233
+          ],
+          [
+            1148,
+            264
+          ],
+          [
+            1144,
+            337
+          ],
+          [
+            1008,
+            307
+          ]
+        ],
+        "contentSkewY": 12.6
+      },
+      {
+        "quad": [
+          [
+            790,
+            342
+          ],
+          [
+            972,
+            381
+          ],
+          [
+            968,
+            476
+          ],
+          [
+            790,
+            437
+          ]
+        ],
+        "contentSkewY": 12.1
+      },
+      {
+        "quad": [
+          [
+            1006,
+            388
+          ],
+          [
+            1145,
+            418
+          ],
+          [
+            1141,
+            491
+          ],
+          [
+            1005,
+            462
+          ]
+        ],
+        "contentSkewY": 12.2
+      },
+      {
+        "quad": [
+          [
+            788,
+            500
+          ],
+          [
+            970,
+            537
+          ],
+          [
+            966,
+            632
+          ],
+          [
+            788,
+            595
+          ]
+        ],
+        "contentSkewY": 11.5
+      },
+      {
+        "quad": [
+          [
+            1003,
+            544
+          ],
+          [
+            1142,
+            573
+          ],
+          [
+            1138,
+            646
+          ],
+          [
+            1002,
+            618
+          ]
+        ],
+        "contentSkewY": 11.7
+      }
+    ]
+  },
+  "souvenirDisplay": {
+    "tableTreatment": "reuse original right-side table; no added table fixture",
+    "tabletopQuadrilateral": [
+      [
+        938,
+        925
+      ],
+      [
+        1200,
+        990
+      ],
+      [
+        1200,
+        1065
+      ],
+      [
+        938,
+        1015
+      ]
+    ],
+    "vaseExclusionZone": {
+      "x": 1058,
+      "y": 782,
+      "width": 116,
+      "height": 216
+    },
+    "anchors": [
+      {
+        "x": 950,
+        "y": 934,
+        "width": 62,
+        "height": 52,
+        "rotation": -10,
+        "skewY": 10,
+        "zIndex": 2
+      },
+      {
+        "x": 992,
+        "y": 936,
+        "width": 58,
+        "height": 50,
+        "rotation": 7,
+        "skewY": 10,
+        "zIndex": 3
+      },
+      {
+        "x": 1024,
+        "y": 930,
+        "width": 56,
+        "height": 48,
+        "rotation": -3,
+        "skewY": 10,
+        "zIndex": 1
+      }
+    ],
+    "occlusion": "display--souvenir-occlusion--candidate-v01.png"
+  },
+  "qa": {
+    "fullComposite": "display--home-composite--qa-v01.png",
+    "mobile470": "display--home-composite--mobile-470--qa-v01.png",
+    "runtimeMobile470": [
+      "runtime--empty--mobile-470--qa-v01.png",
+      "runtime--partial--mobile-470--qa-v01.png",
+      "runtime--full--mobile-470--qa-v01.png",
+      "runtime--departure-note--mobile-470--qa-v01.png"
+    ],
+    "runtimeReport": "runtime-qa-report.v1.json",
+    "reviewed": [
+      "wall fixtures remain coplanar with the right wall",
+      "fixture scale narrows toward the right column",
+      "three souvenirs stay inside the original tabletop quadrilateral",
+      "vase and front table edge occlude overlapping souvenir pixels",
+      "display avoids the central cat and departure-note regions"
+    ]
+  }
+}

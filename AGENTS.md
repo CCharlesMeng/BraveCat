@@ -13,3 +13,8 @@ Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-
 ### Domain docs
 
 Single-context: one `CONTEXT.md` plus `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+### Cinematic four-act stories
+
+Before proposing, generating, or reviewing a cinematic four-act story, follow
+`docs/agents/cinematic-four-act-stories.md`.

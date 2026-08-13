@@ -193,6 +193,40 @@ describe('AssetCatalog', () => {
     })).toThrow('出发字条文案库不能为空')
   })
 
+  it('拒绝超过二十个百分点的第二张明信片概率增量', () => {
+    const catalog = validCatalog()
+
+    expect(() => defineAssetCatalog({
+      ...catalog,
+      items: [{
+        id: 'camera',
+        name: '相机',
+        kind: 'toy',
+        price: 6,
+        imageSrc: '/items/camera.png',
+        effectHint: '也许会多寄一张明信片。',
+        effects: [{
+          kind: 'second-postcard-chance',
+          bonus: 0.21,
+        }],
+      }],
+    })).toThrow(
+      '物品 camera 的第二张明信片概率增量必须在 0–20% 之间',
+    )
+  })
+
+  it('要求明信片文案标签与文案逐条对应', () => {
+    const catalog = validCatalog()
+
+    expect(() => defineAssetCatalog({
+      ...catalog,
+      copy: {
+        ...catalog.copy,
+        postcardNoteTags: [[], ['food']],
+      },
+    })).toThrow('明信片文案标签必须与文案逐条对应')
+  })
+
   it('拒绝场景引用固定集合之外的姿势', () => {
     const catalog = validCatalog()
     const destination = catalog.destinations[0]

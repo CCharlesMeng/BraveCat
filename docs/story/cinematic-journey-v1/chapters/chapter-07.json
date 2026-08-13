@@ -1,0 +1,660 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "last-light",
+  "seriesTitle": "最后一束光",
+  "chapter": {
+    "id": "last-light--c07",
+    "number": 7,
+    "title": "缺失的一拍",
+    "genreGrammar": "原创河畔旧舞厅群像，以排练、节奏、投影和共同等待构成宽泛音乐片语法，不引用或再现任何既有作品。",
+    "sceneCount": 5,
+    "targetDuration": "12:35",
+    "palette": [
+      "褪色河青",
+      "旧木蜂蜜色",
+      "暗酒红",
+      "投影乳白",
+      "夜河墨蓝"
+    ],
+    "continuityIn": "阿遥与周岸从雪山观测站抵达河畔旧舞厅；奶油色与低饱和青绿色折叠放映车、黄铜与深木手摇放映机、前六卷对应的六只素面片盒和空白第十卷均在车中。观测站确认现有声轨缺失一个完整小节，线索指向这座舞厅。",
+    "continuityOut": "缺失小节被证实是为现场相望与换位保留的一拍；系梅紫布条的第七卷完成交接，无标识棕色蜡筒经授权装入原配缓冲盒随行，供城市档案馆核对同步。第七卷片尾的旋转远光与守灯人手势唤起顾禾的记忆：林灯曾把下一卷托给外湾小岛的守灯人。她告知清晨渡船路线，阿遥与周岸准备前往灯塔。",
+    "sourceArtPolicy": {
+      "catFreeMasters": true,
+      "noReadableText": true,
+      "noLogosOrBrands": true,
+      "noActorLikeness": true,
+      "noExistingIpReferences": true
+    },
+    "catPlan": {
+      "foregroundScenes": [
+        "last-light--c07-s05"
+      ],
+      "midgroundScenes": [
+        "last-light--c07-s01",
+        "last-light--c07-s03"
+      ],
+      "distantScenes": [
+        "last-light--c07-s02",
+        "last-light--c07-s04"
+      ],
+      "rule": "Cat始终沉默，只作轻微视觉见证；不跳关键舞步、不打拍、不发现蜡筒、不判断节奏，也不引路。"
+    },
+    "ambientLifeRule": "排练者与观众须呈现不同年龄、体型与活动能力，以两三人小组、独行者和家庭自然分布，方向、间距与纵深各异；不得排成等距队列或复制同一姿势。",
+    "originalityGuardrails": [
+      "不使用可识别的既有舞步、编舞段落、歌曲、旋律、歌词或音乐片场面。",
+      "所有人物穿普通当代便装，不使用标志性舞台服装、制服、道具或明星形象。",
+      "舞蹈只由原创的让路、换位、停拍相望与转向光束等日常动作组织，不构成对特定作品的模仿。",
+      "蜡筒只记录无旋律的脚步、木板轻响与房间气息，不含歌曲或可辨识引用。"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "last-light--c07-s01",
+      "title": "旧地板的回声",
+      "duration": "02:20",
+      "setting": {
+        "location": "河畔社区旧舞厅主厅",
+        "time": "傍晚排练开始前后",
+        "weather": "细雨刚停，潮湿河风从高窗进入"
+      },
+      "plotBeat": "阿遥与周岸带着放映机进入磨损的社区舞厅，接收系梅紫布条的第七卷，并撞见一场由不同年龄居民参加的日常排练。",
+      "dramaticPurpose": "把技术线索放进仍在使用的公共空间，建立这里的节奏来自人与旧地板，而非华丽舞台或神奇装置。",
+      "actions": [
+        "奶油色与低饱和青绿色折叠放映车停在侧门外；阿遥抱一只素面片盒，周岸与两名志愿者把黄铜与深木手摇放映机推过门槛。",
+        "舞厅管理员从干燥柜中取出一只系梅紫布条的凹痕素面片盒，口头确认这是林灯托存的第七卷；阿遥在手工回片台检查片边并加固一处松动接片，确认可作低速试映。",
+        "社区排练召集人向晴把参与者分成松散的小组：两位年长者在窗边试步，三名年轻人挪椅子，一对父女在后排练习彼此让路，使用助行杖的居民在宽阔通道内按自己的速度加入。",
+        "一架磨旧的立式钢琴只给出彼此分离的低音单音，软槌偶尔敲木箱；没有歌曲、旋律或歌词。人群用走近、停下、侧身让路和交换位置组成原创排练段落。",
+        "周岸空转放映机确认齿轮和飞轮稳定，阿遥把第七卷缺失的声轨小节与排练的停顿逐段比对，但两人都无法说明那一拍为何存在。",
+        "退休舞者顾禾穿普通深色针织衫从门口听了一会儿，在大家又一次提前落脚时出声叫停。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "向晴",
+          "line": "别追着别人走。先看清谁正要从你身边过去。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "这块地板比我们的机器更会提醒人。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "提醒总落在同一个空处，和声轨缺口重合。"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "不是地板慢，是你们把该等的一拍走掉了。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "从湿漉漉的侧门轨道推进至主厅中广角，再以低机位掠过磨损地板，最后停在门口的顾禾。",
+        "composition": "放映机与阿遥、周岸形成偏左工作小组；排练者以不对称的小群散布在前后景，留出真实通道。钢琴位于右侧中景，其旁的宽软凳为后续Cat合成保留完整支撑面。",
+        "palette": [
+          "褪色青灰墙面",
+          "蜂蜜色旧木地板",
+          "暗酒红窗帘",
+          "潮湿银蓝窗光"
+        ],
+        "lighting": "高窗漫射冷光与几盏暖钨丝顶灯混合，地板仅有柔和湿光反射，不营造舞台追光。",
+        "continuity": "阿遥保持短黑波波头、锈红围巾、橄榄绿外套、靛蓝长裤和帆布挎包；周岸保持深色微卷发、细矩形眼镜、卷袖海军蓝衬衫、沙色工装裤和皮质工具卷。",
+        "avoid": [
+          "等距排队或整齐复制动作",
+          "可识别舞步、歌舞片构图或标志性姿势",
+          "华丽舞台服、统一演出服或夸张礼帽",
+          "画面中的Cat",
+          "可读文字、海报、品牌、标志和既有作品元素"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "sourceArtIncluded": false,
+        "framing": "midground",
+        "pose": "sleep",
+        "poseDescription": "身体自然蜷卧，头贴前爪，完全没有随节奏动作",
+        "role": "安静显示舞厅仍可让旅人停歇；不参与排练或提示缺拍",
+        "narrativeWeight": "light-witness",
+        "perch": "立式钢琴右侧的宽软凳，四脚落地、凳面完整，远离琴键与踏板",
+        "action": "在排练声中持续熟睡，只在门开时轻动一次耳朵",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.07,
+          "max": 0.1
+        },
+        "compositionSlot": "右下中景软凳中央",
+        "safeBounds": {
+          "x": 0.72,
+          "y": 0.62,
+          "width": 0.16,
+          "height": 0.19
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "顾禾：约七十岁的退休舞者，银灰短发，普通深色针织衫与宽松长裤",
+          "向晴：社区排练召集人，普通当代便装",
+          "舞厅管理员",
+          "自然分组的社区排练者：不同年龄、体型与活动能力"
+        ],
+        "requiredProps": [
+          "奶油色与低饱和青绿色无标识折叠放映车",
+          "黄铜与深木手摇放映机",
+          "系梅紫布条的第七卷素面圆形片盒",
+          "手工回片检查台与接片工具",
+          "磨旧立式钢琴",
+          "软槌与无标识木箱",
+          "散放木椅"
+        ],
+        "environment": [
+          "起皮青灰墙面",
+          "修补痕迹明显的木地板",
+          "临河高窗",
+          "褪色暗酒红窗帘",
+          "通往二层的宽木楼梯"
+        ],
+        "effects": [
+          "门口雨水反光",
+          "高窗微尘",
+          "河风轻动窗帘",
+          "放映机金属上的低亮暖反射"
+        ]
+      },
+      "postcardNote": "河边的旧地板，比谁都先听见有人赶了一步。",
+      "continuityIn": "承接观测站对缺失小节的判断；旅行装备完整，片盒干燥并始终由阿遥保管。",
+      "continuityOut": "系梅紫布条的第七卷完成基础检查和一处接片加固；顾禾确认问题出在人们提前跨过的一拍，要求观看该卷片段后再解释。",
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original cinematic 4:3 Cat-free scene master, a worn contemporary community dance hall beside a river after rain, Aya with short black bob, rust-red scarf, olive field jacket and canvas satchel beside Zhou with wavy dark hair, thin rectangular glasses, rolled navy shirt and sand work overalls, brass-and-dark-wood hand-crank projector entering through a side door, a plain dented film tin tied with a muted plum cloth strip on a stable inspection table, mixed-age and mixed-ability residents rehearsing ordinary crossing, pausing and yielding movements in varied asymmetric clusters, upright piano and broad padded bench at right midground, faded teal walls, honey-worn floorboards, muted burgundy curtains, cool river window light mixed with warm practical lamps, grounded human warmth, no Cat in source art, no chorus line, no recognizable choreography, no costumes, no readable text, no logos, no brands, no actor likeness, no existing IP."
+    },
+    {
+      "id": "last-light--c07-s02",
+      "title": "听见安静",
+      "duration": "02:25",
+      "setting": {
+        "location": "河畔旧舞厅主厅与二层侧阳台",
+        "time": "入夜后的第一次试映",
+        "weather": "无雨，河雾贴近窗外"
+      },
+      "plotBeat": "顾禾观看完成基础修复的第七卷片段，凭身体记忆听出声轨中的安静不是损坏，而是被截短的完整停拍。",
+      "dramaticPurpose": "让退休舞者的经验成为不可替代的人类判断，同时明确机器只证明时长，不能解释那段沉默的意义。",
+      "actions": [
+        "周岸以稳定速度手摇放映机，完成基础修复的第七卷片段投在象牙色折叠幕上；画面里的原创旧日人群从不同方向穿过一间普通大厅，没有文字或可辨识作品图像。",
+        "顾禾坐在侧边而非舞池中央，第一次听到缺口时抬手示意停机；阿遥立即遮光，周岸让片带安全停在门片之外。",
+        "第二次播放时，顾禾不跳完整动作，只用两根手指在膝上标出进入与停顿，等银幕中一人回头后才落下最后一下。",
+        "周岸核对机械计数，确认转速稳定且片带没有断裂；阿遥发现现有声轨把原本完整的一拍压成了过早的下一声。",
+        "顾禾望向厅后储藏门，记起当年的无旋律排练提示曾被林灯单独留存。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "顾禾",
+          "line": "停。刚才那一段再来一次，别替它补声音。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "第七卷转速稳，片带也没断，安静一共四秒。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "现有声轨在这里提前进了下一声。"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "那四秒不是空白。我们要等银幕里的人先回头。"
+        },
+        {
+          "speaker": "向晴",
+          "line": "你还记得下一声怎么进吗？"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "记得手势。声音得去后面的储藏间找。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "以顾禾侧脸和膝上两指的中近景开场，切至放映机飞轮的稳定运动，再用广角把银幕、侧坐的顾禾和不规则分布的观看者放入同一画面。",
+        "composition": "银幕偏左，顾禾与阿遥位于右侧中景，周岸在后景放映机旁；观众以坐、站和倚墙的小组错落分布。二层阳台宽窗台作为远景Cat合成位，不能成为视觉中心。",
+        "palette": [
+          "投影乳白",
+          "深河蓝",
+          "旧木棕",
+          "低饱和暗红"
+        ],
+        "lighting": "主要由安全遮光罩控制的投影反射照亮面部，侧墙保留微弱暖灯，窗外河雾呈低对比蓝灰。",
+        "continuity": "放映机已完成空转检查；片盒远离人群通道。顾禾始终穿普通当代便装，只以手指计时，不进行完整舞蹈展示。",
+        "avoid": [
+          "把沉默表现成魔法或超自然讯号",
+          "银幕中出现可识别电影画面",
+          "夸张独舞、标志性舞姿或明星式特写",
+          "均匀排列的观众",
+          "画面中的Cat",
+          "可读字幕、片名、海报、品牌或标志"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "sourceArtIncluded": false,
+        "framing": "distant",
+        "pose": "gaze",
+        "poseDescription": "端坐远望，四足稳定收在身体下方",
+        "role": "从高处见证人们反复聆听；不数拍、不注视储藏门",
+        "narrativeWeight": "light-witness",
+        "perch": "二层侧阳台内侧的宽木窗台，外有完整护栏，表面平整且远离边缘",
+        "action": "安静望向银幕光斑，投影停止时转头看窗外河雾",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.03,
+          "max": 0.05
+        },
+        "compositionSlot": "右上远景阳台内侧",
+        "safeBounds": {
+          "x": 0.8,
+          "y": 0.25,
+          "width": 0.08,
+          "height": 0.11
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "顾禾",
+          "向晴",
+          "自然分组的社区排练者与旁观居民"
+        ],
+        "requiredProps": [
+          "黄铜与深木手摇放映机",
+          "象牙色折叠幕",
+          "系梅紫布条的第七卷素面片盒",
+          "放映机遮光罩",
+          "散放木椅"
+        ],
+        "environment": [
+          "旧舞厅主厅",
+          "二层侧阳台与完整护栏",
+          "临河高窗",
+          "后部储藏门"
+        ],
+        "effects": [
+          "可见但克制的投影光束",
+          "银幕柔和闪动",
+          "窗外低对比河雾",
+          "飞轮均匀运动"
+        ]
+      },
+      "postcardNote": "安静不是没有声音，有时是在等另一个人回头。",
+      "continuityIn": "顾禾从排练中辨认出被人跨过的一拍；第七卷完成基础检查与接片加固，放映设备状态稳定。",
+      "continuityOut": "技术检查排除断片和转速问题；顾禾明确旧排练提示存放在舞厅后部。",
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original cinematic 4:3 Cat-free scene master inside a worn riverside community hall at night, retired dancer Gu He in plain contemporary dark knitwear seated at the side, marking a pause with two fingers on her knee while Aya watches and Zhou steadily operates a brass-and-dark-wood hand-crank projector, ivory folding screen showing only an original indistinct archival crowd with no text, mixed-age residents seated and standing in naturally varied clusters, deep river-blue windows, warm wood, soft projection glow, broad protected balcony window ledge visible high at right for later compositing, restrained emotion, no Cat in source art, no iconic dance pose, no recognizable film imagery, no readable text or subtitles, no logos, no brands, no actor likeness, no existing IP."
+    },
+    {
+      "id": "last-light--c07-s03",
+      "title": "无字蜡筒",
+      "duration": "02:20",
+      "setting": {
+        "location": "旧舞厅后部干燥储藏间",
+        "time": "同夜稍晚",
+        "weather": "室外河雾加重，室内干燥稳定"
+      },
+      "plotBeat": "在顾禾的明确指引下，众人从储藏柜中找回一支素面蜡筒，并用匹配设备进行一次谨慎播放。",
+      "dramaticPurpose": "以可信的保存与操作过程找回无旋律的排练提示，证明缺失的一拍属于现场呼吸和相望，而非遗失的歌曲。",
+      "actions": [
+        "顾禾指出靠河墙、离地较高的一排柜子；向晴安排两人清出通道、两人稳住工作灯，阿遥按顾禾所说打开装旧排练器材的浅抽屉。",
+        "阿遥在无字素纸套内看见一支深棕色素面蜡筒，没有标签、图案或品牌；她不碰沟槽，只请周岸先确认状态。",
+        "周岸戴上干净丁腈手套，仅从内孔承托蜡筒，在斜射工作灯下检查裂纹、霉斑和变形；确认完好后，管理员先让匹配的机械蜡筒机空转至稳定速度。",
+        "蜡筒只播放一次：木板轻触两下、三次不等距脚步、一整拍房间气息与停顿、最后一记低沉琴键，没有旋律、歌词或说话声。",
+        "顾禾用掌心示意所有人保持那一整拍；阿遥记下计时。经舞厅管理员授权，周岸停止机器，把蜡筒放回原素纸套，再装入内衬软木的无字缓冲木盒，供后续档案同步核对。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "顾禾",
+          "line": "林灯把排练声放在靠河那排柜子里，不在演出道具中。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "这里有一支无字蜡筒，纸套也没有标记。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "先看裂纹和霉点。完好才放，而且只放一遍。"
+        },
+        {
+          "speaker": "舞厅管理员",
+          "line": "空转已经稳了，承筒和针头都是原来配套的。"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "听，脚步之后这一整拍，是留给换气和看人的。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "我们不补一首歌，只把这次停顿还给现场。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "以柜门开启的肩后镜头进入，切换蜡筒内孔承托和斜光检查的手部细节，播放时用静止中广角容纳围成松散半弧的人群。",
+        "composition": "阿遥与顾禾在左侧抽屉前，周岸与管理员在中央工作台，志愿者分散于通道和灯架两侧。右下中景保留一只盖紧的低木箱作为Cat合成支撑，不与蜡筒所在抽屉形成指向关系。",
+        "palette": [
+          "干木褐",
+          "深棕蜡色",
+          "工作灯暖黄",
+          "门缝河雾蓝"
+        ],
+        "lighting": "低温工作灯经柔光纸形成稳定斜光，仅用于目视检查；无强热源照射蜡筒。",
+        "continuity": "蜡筒始终由人类依照顾禾记忆找到并由周岸、管理员安全检查；播放后回到原素纸套和缓冲木盒，经保管人授权随行，不携带新的隐藏信息。",
+        "avoid": [
+          "Cat发现、嗅出、触碰或指向蜡筒",
+          "徒手摸沟槽、擦洗、加热或使用不匹配针头",
+          "蜡筒发出歌曲、歌词、对白或神秘讯息",
+          "杂乱人群堵塞通道",
+          "画面中的Cat",
+          "可读标签、库存文字、品牌和标志"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "sourceArtIncluded": false,
+        "framing": "midground",
+        "pose": "sit",
+        "poseDescription": "前爪并拢坐稳，头部略向上看尘埃",
+        "role": "为安静储藏空间提供微弱生活感；与线索搜寻完全无关",
+        "narrativeWeight": "light-witness",
+        "perch": "右侧靠墙的低矮木箱盖，箱盖扣紧、表面宽平，与工作台之间留有安全距离",
+        "action": "只追看工作灯里缓慢落下的灰尘，始终背对打开的抽屉",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.06,
+          "max": 0.09
+        },
+        "compositionSlot": "右下中景封闭木箱中央",
+        "safeBounds": {
+          "x": 0.75,
+          "y": 0.64,
+          "width": 0.13,
+          "height": 0.18
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "顾禾",
+          "向晴",
+          "舞厅管理员",
+          "四名自然分工的社区志愿者"
+        ],
+        "requiredProps": [
+          "无字深棕色素面蜡筒",
+          "无字素纸套",
+          "匹配的机械蜡筒播放机",
+          "干净丁腈手套",
+          "低温斜射工作灯",
+          "内衬软木的无字缓冲木盒",
+          "浅木抽屉与封闭低木箱"
+        ],
+        "environment": [
+          "干燥储藏间",
+          "架高的靠河墙储藏柜",
+          "清出的安全通道",
+          "门外旧舞厅走廊"
+        ],
+        "effects": [
+          "斜光中的少量微尘",
+          "机械蜡筒机均匀转动",
+          "门缝淡蓝河雾",
+          "克制的暖光阴影"
+        ]
+      },
+      "postcardNote": "灰尘下面没有旋律，只有一段被认真保存的呼吸。",
+      "continuityIn": "顾禾已指出排练提示位于后部储藏空间，声轨缺口长度为四秒。",
+      "continuityOut": "一次安全播放确认原创声音结构与完整停拍；经保管人授权，蜡筒装入原素纸套和缓冲木盒，众人带着计时结果回到主厅。",
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original cinematic 4:3 Cat-free scene master in a dry rear storage room of a worn riverside hall, Aya opening a raised shallow wooden drawer under retired dancer Gu He's direction, Zhou in clean nitrile gloves supporting a plain dark-brown wax cylinder only through its inner bore under a cool raking work light, hall custodian beside a matching unbranded mechanical cylinder player, volunteers naturally split between clearing the aisle and steadying lights, sealed low wooden chest at right midground for later Cat compositing, warm dry wood and a trace of blue river mist at the doorway, careful archival handling, no Cat in source art, no readable labels, no song imagery, no mystery glow, no logos, no brands, no actor likeness, no existing IP."
+    },
+    {
+      "id": "last-light--c07-s04",
+      "title": "把一拍还给彼此",
+      "duration": "03:10",
+      "setting": {
+        "location": "河畔旧舞厅主厅",
+        "time": "深夜公开排练",
+        "weather": "雾散，河面平静，门窗保持通风"
+      },
+      "plotBeat": "社区群舞通过一次次人工排练，与投影中的旧日动作在缺失的一拍上重新同步。",
+      "dramaticPurpose": "完成本章情感高潮：修复不是自动填补资料，而是当下的人愿意调整呼吸、速度与彼此关系，让旧影像重新有现场。",
+      "actions": [
+        "周岸依据蜡筒计时守住手摇速度，阿遥站在银幕侧边观察画面中的肩部转向，以一个朴素抬手作为入拍提示；没有自动同步设备。",
+        "向晴把参与者分成大小不一的组合，从前后左右分别进入：有人侧身让路，有人换位递出空椅，有人在完整一拍中停下相望，再各自转向投影光区，动作均来自当场原创排练。",
+        "第一遍仍有人抢先；顾禾没有代替他们表演，只走到边缘提醒大家听地板回声，并让速度较快的人等候使用助行杖的伙伴。",
+        "第二遍时，钢琴给出分离的低音单音，木箱软响与鞋底轻触保持无旋律节奏；所有小组在那一拍里保留不同姿态，却同时看见身边的人。",
+        "银幕中旧日人群回头的瞬间与现场自然衔接；第七卷片尾掠过一道在石墙上规律旋转的远光，一名穿普通雨衣的守灯人抬手遮光并朝海侧挥一下。阿遥放下提示手，门边、窗边和后排居民先后鼓掌，掌声并不整齐却逐渐汇成温暖声浪。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "向晴",
+          "line": "别排成一条线。两三个人一组，从自己的位置进。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "我守住机器，你们不用追着它跑。"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "那一拍里先看见对方，再决定往哪里走。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "银幕上的肩膀一回，我抬手；落脚由你们自己听。"
+        },
+        {
+          "speaker": "一名年长排练者",
+          "line": "这回不是谁跟着谁，是大家肯等到一起。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "以放映机曲柄和阿遥抬手的交叉近景起拍，随后使用不旋转的横移长镜头穿过多个小组，最终在银幕、现场人群和鼓掌观众同框的大全景停住。",
+        "composition": "不同规模的小组沿对角线和弧形路径自然交错，前后景均有真实空隙；无中心领舞、无整齐横排。周岸位于后方机器旁，顾禾在侧边，二层阳台宽内凳留作远景Cat合成位。",
+        "palette": [
+          "暖木金",
+          "河夜墨蓝",
+          "投影象牙白",
+          "褪色青绿",
+          "克制暗红"
+        ],
+        "lighting": "投影光与顶灯维持可辨面部的柔和曝光，光束不作舞台特效；门外月色只形成低亮蓝边。",
+        "continuity": "蜡筒已装入缓冲木盒且不再重复播放，现场仅凭记下的时长和人类排练同步。片带、放映机与电缆通道均由周岸看护，观众不穿越设备区。",
+        "avoid": [
+          "可识别舞种、经典队形、招牌踢腿或标志性手势",
+          "统一服装、礼帽、手杖表演或明星式中心领舞",
+          "自动、数字或魔法同步",
+          "Cat随节奏动作、领舞或成为掌声焦点",
+          "画面中的Cat",
+          "歌词、字幕、海报、品牌、标志或既有作品引用"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "sourceArtIncluded": false,
+        "framing": "distant",
+        "pose": "gaze",
+        "poseDescription": "伏坐在宽凳内侧，身体静止，目光朝向大厅",
+        "role": "从远处观看社区完成同步；不打拍、不模仿动作、不触发掌声",
+        "narrativeWeight": "light-witness",
+        "perch": "二层阳台靠墙的宽木内凳，凳面低于完整护栏且与楼梯口有距离",
+        "action": "全程安静伏坐，只在掌声响起时抬头",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.03,
+          "max": 0.04
+        },
+        "compositionSlot": "左上远景阳台内凳",
+        "safeBounds": {
+          "x": 0.09,
+          "y": 0.28,
+          "width": 0.07,
+          "height": 0.1
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "顾禾",
+          "向晴",
+          "一名钢琴手与一名软槌打击者，均为社区成员",
+          "不同年龄、体型与活动能力的社区排练者",
+          "以家庭、小组和独行者自然分布的居民观众"
+        ],
+        "requiredProps": [
+          "黄铜与深木手摇放映机",
+          "象牙色折叠幕",
+          "素面片盒",
+          "磨旧立式钢琴",
+          "软槌与无标识木箱",
+          "一把在动作中被自然传递的普通空木椅"
+        ],
+        "environment": [
+          "旧舞厅主厅",
+          "二层阳台完整护栏",
+          "敞开的临河侧门",
+          "安全隔开的放映设备区"
+        ],
+        "effects": [
+          "克制投影光束",
+          "飞轮稳定运动",
+          "河面低亮反光",
+          "不规则渐起的掌声"
+        ]
+      },
+      "postcardNote": "光走得不快，大家肯互相等，就会在同一刻相遇。",
+      "continuityIn": "众人已从蜡筒确认完整停拍和无旋律提示结构；蜡筒安全装盒，不再重复播放。",
+      "continuityOut": "现场与第七卷投影成功同步；片尾的旋转远光和守灯人手势与掌声一起唤起顾禾关于林灯最后离开舞厅那一夜的记忆。",
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original cinematic 4:3 Cat-free scene master, climactic human rehearsal in a worn contemporary riverside community hall at night, Aya at the edge of an ivory projection screen giving one simple timing hand cue, Zhou steadily cranking a brass-and-dark-wood projector in a protected rear equipment zone, retired dancer Gu He observing from the side, mixed-age and mixed-ability residents moving in varied small clusters through original everyday gestures of yielding, exchanging a plain chair, pausing to meet another person's gaze and turning toward the light, no central lead and no even rows, naturally grouped audience applauding from doorways and walls, the projection ending only as an indistinct original distant rotating light across a plain stone wall with a small rain-coated keeper making one ordinary hand gesture, warm worn wood against deep blue river night, no Cat in source art, no recognizable dance style or iconic pose, no costumes, no lyrics, no readable text, no logos, no brands, no actor likeness, no existing IP."
+    },
+    {
+      "id": "last-light--c07-s05",
+      "title": "掌声流向海口",
+      "duration": "02:20",
+      "setting": {
+        "location": "旧舞厅后门、河畔石铺步道与停放的放映车",
+        "time": "演练结束后的深夜至临近黎明",
+        "weather": "雾已散，海口方向起风"
+      },
+      "plotBeat": "第七卷片尾的旋转远光与守灯人手势伴随渐远掌声，触发顾禾对林灯最后一次离场的记忆；她确认外湾小岛守灯人保管着下一卷。",
+      "dramaticPurpose": "把集体完成的节奏转成下一段旅程的动机，以人的记忆而非物件机关指向灯塔，并让本章在安静河岸收束。",
+      "actions": [
+        "掌声从厅内分层传出：孩子先拍，窗边老人随后加入，收椅子的志愿者在后门停下回应；顾禾站在门槛外听着，没有走向中央谢幕。",
+        "声音与她的原创记忆叠化：多年前的同一扇后门，银发林灯穿奶油色衬衫、棕色马甲与藏青外套，握着黄铜怀表，抱一只系素布的无字片盒匆匆走向下游；画面不出现照片、文字或演员肖像。",
+        "顾禾认出片尾抬手的是外湾小岛的守灯人，并告诉阿遥，那夜林灯说对方替他保管一卷受潮风险很高的片带，待风浪缓和便亲自取回；她指出旧石阶渡口和清晨第一班船的口头路线。",
+        "周岸确认蜡筒连同素纸套已固定在缓冲木盒内，随后让放映机完全停转冷却；阿遥把前七卷的素面片盒和空白第十卷逐一固定在车内软垫架上。",
+        "人群三三两两散去，阿遥与周岸沿河步道走回放映车，顾禾留在后门目送；Cat仅在后期合成中沿干燥石面平行走过，不领先任何人。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "顾禾",
+          "line": "听见这样的掌声，我就想起林灯最后一次站在这扇后门。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "片尾抬手的人，就是他去找的人？"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "外湾的小岛。守灯人替他收着一卷，说风浪过去再交还。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "去岛上的渡口怎么走？"
+        },
+        {
+          "speaker": "顾禾",
+          "line": "顺河到旧石阶，等天亮第一班船。岛上只有一座仍有人值守的灯塔。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "蜡筒留在这里；我们带走的是该等的那一拍。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "由厅内不规则鼓掌的中广角缓慢退至后门，以掌声声桥短暂进入林灯离场的原创记忆，再切回河畔横向跟拍阿遥与周岸走向放映车。",
+        "composition": "现在时的顾禾位于后门暖光边缘，阿遥与周岸在河岸中景；散场居民以家庭、朋友和独行者分散向不同方向离开。最终镜头右下前景保留干燥石铺步道作为Cat合成位，不让该位置领先人物动线。",
+        "palette": [
+          "厅内蜂蜜暖光",
+          "夜河墨蓝",
+          "石面冷灰",
+          "车身奶油白与低饱和青绿",
+          "记忆中的柔暗棕蓝"
+        ],
+        "lighting": "后门暖光自然溢出，河岸由低位路灯与临黎明天光提供安全可见度；记忆只降低对比和饱和度，不使用梦幻光晕。",
+        "continuity": "林灯仅出现于顾禾的原创记忆，保持银发、奶油色衬衫、棕色马甲、藏青外套和黄铜怀表。蜡筒不随行，九卷片盒与空白第十卷全部固定回车内。",
+        "avoid": [
+          "将林灯塑造成现实演员或既有角色",
+          "灯塔发出密码光或超自然召唤",
+          "Cat带路、叼取物件或走在队伍最前",
+          "散场人群整齐同向排列",
+          "画面中的Cat",
+          "可读路牌、片盒文字、品牌、标志或既有作品引用"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "sourceArtIncluded": false,
+        "framing": "foreground",
+        "pose": "walk",
+        "poseDescription": "自然四足行走，尾巴放松，视线朝向脚下石面而非渡口",
+        "role": "作为旅程继续的轻微前景节奏；不引路、不回应灯塔线索",
+        "narrativeWeight": "light-witness",
+        "perch": "河畔步道右下方干燥平整的宽石铺路面，内侧有矮墙，与水边保持数米安全距离",
+        "action": "沿石缝缓慢横向走过，与阿遥、周岸的方向平行但落后半个画面",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.18,
+          "max": 0.23
+        },
+        "compositionSlot": "右下前景宽石铺步道",
+        "safeBounds": {
+          "x": 0.7,
+          "y": 0.67,
+          "width": 0.23,
+          "height": 0.27
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "顾禾",
+          "林灯：仅限原创记忆中的银发旅行放映员，不对应任何演员",
+          "自然散场的社区居民"
+        ],
+        "requiredProps": [
+          "奶油色与低饱和青绿色无标识折叠放映车",
+          "黄铜与深木手摇放映机",
+          "前七卷素面片盒，其中第七卷系梅紫布条",
+          "空白第十卷",
+          "装有无标识棕色蜡筒的缓冲木盒",
+          "林灯记忆中的黄铜怀表与无字片盒",
+          "车内软垫片盒架"
+        ],
+        "environment": [
+          "旧舞厅后门",
+          "宽阔干燥的河畔石铺步道",
+          "内侧安全矮墙",
+          "下游海口方向",
+          "停放在宽处的放映车"
+        ],
+        "effects": [
+          "从室内向河岸渐弱的掌声",
+          "克制低饱和记忆叠化",
+          "河面碎光",
+          "临黎明的冷蓝环境光"
+        ]
+      },
+      "postcardNote": "掌声沿河漂远，下一盏灯在海风里等着。",
+      "continuityIn": "公开排练已与第七卷投影同步，片尾出现旋转远光和守灯人手势，掌声刚刚响起；蜡筒已装入缓冲木盒。",
+      "continuityOut": "顾禾给出外湾小岛守灯人与旧石阶渡口的口头线索；前七卷、空白第十卷、蜡筒和设备均安全装车，下一章从清晨渡船驶向灯塔开始。",
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original cinematic 4:3 Cat-free scene master on a broad dry stone riverside promenade outside a worn community hall late at night, warm applause spilling through the open rear door, retired dancer Gu He standing in the doorway while Aya with rust-red scarf and Zhou in sand work overalls listen beside a generic cream-and-muted-teal fold-out cinema van, mixed-age residents leaving in naturally varied family groups, pairs and solo paths, calm dark river leading toward a windy estuary, safe inner parapet, generous empty foreground stone surface at lower right for later Cat compositing, restrained dawn-blue and honey light, no Cat in source art, no lighthouse code, no readable signs, no logos, no brands, no actor likeness, no existing IP."
+    }
+  ]
+}

@@ -64,6 +64,29 @@ const catalog: AssetCatalog = {
   },
 }
 
+const catalogWithAlternatePortrait: AssetCatalog = {
+  ...catalog,
+  portraitSetRevisions: {
+    ...catalog.portraitSetRevisions,
+    luna: 'portraits-luna-r1',
+  },
+  portraits: [
+    ...catalog.portraits,
+    {
+      id: 'luna',
+      name: 'Luna',
+      poses: {
+        sit: '/portraits/luna/sit.png',
+        sleep: '/portraits/luna/sleep.png',
+        walk: '/portraits/luna/walk.png',
+        eat: '/portraits/luna/eat.png',
+        play: '/portraits/luna/play.png',
+        gaze: '/portraits/luna/gaze.png',
+      },
+    },
+  ],
+}
+
 const destinations: readonly ItineraryDestination[] = [
   { id: 'kyoto', region: 'asia' },
 ]
@@ -79,8 +102,11 @@ const pack: readonly PackedItem[] = [
   { itemId: 'fish-biscuit', kind: 'snack' },
 ]
 
-const makeLifecycle = (randomValue = 0.5) => createTravelLifecycle({
-  catalog,
+const makeLifecycle = (
+  randomValue = 0.5,
+  lifecycleCatalog = catalog,
+) => createTravelLifecycle({
+  catalog: lifecycleCatalog,
   travelerCatId: 'minho',
   portraitId: 'minho',
   destinations,
@@ -256,6 +282,39 @@ describe('Travel lifecycle', () => {
     )
 
     expect(reopened).toBe(planned)
+  })
+
+  it('待出发时更换形象，出发后只让新旅行使用新形象', () => {
+    const lifecycle = makeLifecycle(0.5, catalogWithAlternatePortrait)
+    const waiting = lifecycle.advance(
+      { kind: 'home' },
+      { now: 1_000, pack },
+    )
+
+    const planned = lifecycle.advance(waiting, {
+      now: 1_150,
+      pack,
+      portraitId: 'luna',
+    })
+
+    expect(
+      planned.kind === 'planned'
+        ? planned.plan.content.postcards[0].recipe
+        : undefined,
+    ).toMatchObject({
+      travelerCatId: 'minho',
+      portrait: {
+        id: 'luna',
+        setRevision: 'portraits-luna-r1',
+      },
+      layers: [
+        { kind: 'scene' },
+        {
+          kind: 'portrait',
+          src: '/portraits/luna/gaze.png',
+        },
+      ],
+    })
   })
 
   it('出发时锁定车票、零食和玩具的最终去向', () => {

@@ -57,6 +57,30 @@ export interface Portrait {
 
 export type ItemKind = 'snack' | 'wish' | 'toy'
 
+export type ItemEffect =
+  | {
+    kind: 'travel-duration'
+    multiplier: number
+  }
+  | {
+    kind: 'second-postcard-chance'
+    bonus: number
+  }
+  | {
+    kind: 'companion-chance'
+    bonus: number
+  }
+  | {
+    kind: 'pose-weight'
+    pose: PortraitPose
+    multiplier: number
+  }
+  | {
+    kind: 'copy-tag-weight'
+    tag: string
+    multiplier: number
+  }
+
 export interface ItemDefinition {
   id: ItemId
   name: string
@@ -64,6 +88,7 @@ export interface ItemDefinition {
   price: number
   imageSrc: string
   effectHint: string
+  effects?: readonly ItemEffect[]
 }
 
 export interface SouvenirDefinition {
@@ -76,6 +101,7 @@ export interface SouvenirDefinition {
 
 export interface CopyLibrary {
   postcardNotes: readonly string[]
+  postcardNoteTags?: readonly (readonly string[])[]
   travelNotes: readonly string[]
 }
 
@@ -104,6 +130,54 @@ export const defineAssetCatalog = <TCatalog extends AssetCatalog>(
   }
   if (catalog.copy.travelNotes.length === 0) {
     throw new RangeError('出发字条文案库不能为空')
+  }
+  if (
+    catalog.copy.postcardNoteTags
+    && catalog.copy.postcardNoteTags.length !== catalog.copy.postcardNotes.length
+  ) {
+    throw new RangeError('明信片文案标签必须与文案逐条对应')
+  }
+
+  for (const item of catalog.items) {
+    for (const effect of item.effects ?? []) {
+      if (
+        (
+          effect.kind === 'travel-duration'
+          || effect.kind === 'pose-weight'
+          || effect.kind === 'copy-tag-weight'
+        )
+        && (!Number.isFinite(effect.multiplier) || effect.multiplier < 1)
+      ) {
+        throw new RangeError(`物品 ${item.id} 的权重倍率必须不小于 1`)
+      }
+      if (
+        effect.kind === 'second-postcard-chance'
+        && (
+          !Number.isFinite(effect.bonus)
+          || effect.bonus < 0
+          || effect.bonus > 0.2
+        )
+      ) {
+        throw new RangeError(
+          `物品 ${item.id} 的第二张明信片概率增量必须在 0–20% 之间`,
+        )
+      }
+      if (
+        effect.kind === 'companion-chance'
+        && (
+          !Number.isFinite(effect.bonus)
+          || effect.bonus < 0
+          || effect.bonus > 0.1
+        )
+      ) {
+        throw new RangeError(
+          `物品 ${item.id} 的旅伴概率增量必须在 0–10% 之间`,
+        )
+      }
+      if (effect.kind === 'copy-tag-weight' && !effect.tag.trim()) {
+        throw new RangeError(`物品 ${item.id} 的文案标签不能为空`)
+      }
+    }
   }
 
   for (const portrait of catalog.portraits) {

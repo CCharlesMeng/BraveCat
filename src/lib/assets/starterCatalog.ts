@@ -75,6 +75,13 @@ const starterCopy = {
     '人，咪在{destination}看见一只小鸟飞过去，抬头看了很久。',
     '人，咪在{destination}找到一段安静的路，踩着影子慢慢往前走。',
     '人，咪从{destination}捎来一点风，先放在明信片的角落。',
+    '人，咪在{destination}闻见一点香味，就停下来慢慢吃完。',
+    '人，咪在{destination}找到一口小点心，给回家的路留了一半。',
+  ],
+  postcardNoteTags: [
+    [], [], [], [], [], [], [], [], [], [],
+    ['food'],
+    ['food'],
   ],
   travelNotes: [
     '窗边有风，我出去看看。',

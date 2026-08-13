@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "last-light",
+  "seriesTitle": "最后一束光",
+  "chapterId": "last-light--c08",
+  "chapterNumber": 8,
+  "sceneCount": 5,
+  "estimatedDurationSeconds": 408,
+  "title": "暴风雨中的胶片",
+  "internalEnglishTitle": "The Storm Reel",
+  "genreMemory": "原创岛屿灯塔悬疑，以守序等待、协作搜寻和胶片保护形成张力，不复刻任何既有惊悚作品。",
+  "chapterPalette": [
+    "storm blue-gray",
+    "weathered ivory",
+    "muted teal",
+    "warm amber",
+    "wet slate"
+  ],
+  "sourceArtPolicy": {
+    "catFree": true,
+    "noReadableText": true,
+    "noLogosOrBrands": true,
+    "noActorLikeness": true,
+    "noExistingWorkDesigns": true
+  },
+  "originality": {
+    "declaration": "本章人物、岛屿、灯塔、情节、象征记号、对白、构图与道具组合均为《最后一束光》的原创表达。",
+    "guardrails": [
+      "只使用宽泛的海岛悬疑与风暴避险语法",
+      "不引用或暗示既有影视标题、台词、角色、服装、布景或标志性镜头",
+      "灯塔主灯仅承担真实航标功能，并只与胶片检查形成视觉平行",
+      "画面中的胶片、记录、仪表与标记均不得出现可读文字或伪文字"
+    ]
+  },
+  "catFramingPlan": {
+    "foreground": 0,
+    "midground": 2,
+    "distant": 3,
+    "rule": "Cat 始终位于安全、干燥且有真实支撑的 Perch；不进入积水、不发现胶片、不触发救援或解谜。"
+  },
+  "scenes": [
+    {
+      "id": "last-light--c08-s01",
+      "title": "逆风靠岛",
+      "duration": 72,
+      "setting": {
+        "location": "驶向灯塔岛的客运渡船封闭客舱与背风港口",
+        "time": "傍晚",
+        "weather": "强阵雨与横风，能见度受限；船长在运营安全范围内减速待泊"
+      },
+      "plotBeat": "阿遥与周岸循舞厅线索乘渡船前往灯塔岛；船只在风暴中先停留于背风水域，等待泊位和系缆条件确认。",
+      "dramaticPurpose": "用受控的延误建立悬念，也明确危险由专业船员和程序处理，主角不会以冒险换取进度。",
+      "actions": [
+        "阿遥与周岸已将奶油色与灰青色折叠影院车停入大陆渡口的有顶安全车棚；客运渡船转入岛屿背风面时，乘客全部留在封闭客舱。",
+        "船长在港外降低航速，与码头确认横风、泊位和系缆条件；远处灯塔主灯按固定节律穿过雨幕。",
+        "阿遥把装有既有胶片的防震箱平放在座椅下，周岸确认两人没有遗落工具后便远离舱门。",
+        "渡船靠上防波堤内侧，船员先完成首缆和尾缆，再允许乘客起身。",
+        "舱门开启后，灯塔值守员许澄在有护栏的码头通道尽头等待，引导众人按顺序下船。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "船长",
+          "line": "风正横着推，先在背风面等泊位确认。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "车在下层绑牢，我们留在舱里，别给船员添事。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "灯塔还在转。舞厅那位老人说的守塔人，应该就在那边。"
+        },
+        {
+          "speaker": "渡船船员",
+          "line": "缆绳全上桩再下船，谁也别提前开门。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "封闭客舱内的中广角建立镜头，透过被雨水切割的舷窗看见远处灯塔与背风港。",
+        "composition": "阿遥与周岸位于不对称中景，其他乘客以两三人的自然小组分散坐稳；窗外灯塔偏置在远景，车辆甲板只以低处局部暗示。",
+        "palette": "暴雨蓝灰、舱壁旧象牙、座椅低饱和青、围巾锈红与远处暖黄航标光。",
+        "lighting": "客舱稳定暖光与规律扫过雨幕的灯塔光形成冷暖层次；灯塔光不照入设备，也不具有超自然效果。",
+        "continuity": "阿遥保持短黑波波头、锈红围巾、橄榄色夹克、靛蓝长裤和帆布挎包；周岸保持深色卷发、细矩形眼镜、卷袖海军蓝衬衫、沙色工装与皮工具卷。",
+        "avoid": [
+          "乘客站在暴露甲板",
+          "渡船在不安全条件下强行靠岸",
+          "巨浪灾难奇观",
+          "规则整齐的人群",
+          "可读船名、航标编号、仪表文字、品牌或标志",
+          "Cat 出现在源场景图中"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "framing": "distant",
+        "pose": "sit",
+        "narrativeWeight": "light-witness",
+        "perch": "固定在客舱长椅下方、带透气网面的扣合软质旅行箱内",
+        "action": "随船轻微摇晃时收拢四爪，安静望向舷窗方向",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.02,
+          "max": 0.04
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "许澄",
+          "渡船船长",
+          "两至四名自然分组的乘客与船员"
+        ],
+        "requiredProps": [
+          "平放的胶片防震箱",
+          "帆布挎包",
+          "皮工具卷",
+          "固定式客舱座椅",
+          "扣合软质 Cat 旅行箱"
+        ],
+        "environment": [
+          "封闭客运渡船客舱",
+          "背风港与防波堤",
+          "远景岛屿灯塔",
+          "有护栏的码头通道"
+        ],
+        "effects": [
+          "斜向雨线",
+          "舷窗水痕",
+          "克制的船体摇摆",
+          "规律且真实的远距航标扫光"
+        ]
+      },
+      "postcardNote": "风把海面推斜，灯仍按自己的节拍转。",
+      "continuityIn": [
+        "舞厅补回的缺失一拍已确认",
+        "退休舞者指出岛上灯塔值守员保存着林灯的下一段线索",
+        "前七卷胶片、空白第十卷、手摇放映机与声轨材料均装入防震箱",
+        "折叠影院车停在大陆渡口有顶安全车棚，不随船冒险登岛"
+      ],
+      "continuityOut": [
+        "阿遥、周岸、随身胶片设备与 Cat 安全抵达灯塔岛",
+        "折叠影院车继续留在大陆渡口有顶安全车棚",
+        "许澄正式进入故事",
+        "渡船在专业程序下完成靠泊，风暴仍未解除"
+      ],
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original watercolor-and-colored-pencil cinematic scene, 4:3, inside a closed passenger-ferry cabin at stormy dusk, Chinese woman age 27 with short black bob, rust-red scarf, olive field jacket, indigo trousers and canvas satchel seated beside Chinese man age 32 with wavy dark hair, thin rectangular glasses, rolled navy shirt and sand work overalls, naturally scattered passengers seated in small asymmetric groups, rain-streaked window revealing a distant working island lighthouse and sheltered harbor, film equipment secured beneath the seats, physically believable ferry operations, restrained blue-gray and amber palette, source scene contains no cat, no readable text, no pseudo-text, no logo, no brand, no actor likeness, no existing film design."
+    },
+    {
+      "id": "last-light--c08-s02",
+      "title": "干燥的值守层",
+      "duration": 78,
+      "setting": {
+        "location": "灯塔站有护栏的上坡通道、服务入口与干燥值守室",
+        "time": "入夜",
+        "weather": "暴雨持续，阵风拍打外墙；室内供电与主灯运行稳定"
+      },
+      "plotBeat": "许澄提供避风处，并说明底层库房受风暴潮倒灌；林灯留下的密封运输罐可能仍在其中，但必须等潮退、隔离电路并排水后才能进入。",
+      "dramaticPurpose": "把守塔人的善意与职业边界同时建立起来，让等待成为主动的安全选择，并明确胶片线索来自人类记忆。",
+      "actions": [
+        "系缆完成后，许澄带众人沿有护栏的防滑通道进入服务层，先核对到岛人数与随身设备。",
+        "阿遥把湿外套放入滴水盘区域，周岸将工具卷和胶片箱移到远离门缝与地漏的高处干燥台。",
+        "许澄查看独立航标控制与备用电源状态，确认主灯按既定周期工作，没有把任何便携设备接入航标系统。",
+        "她说明海侧底层库房因外排水口受阻而进水，并回忆林灯曾把一只无字密封运输罐放在备用架后。",
+        "阿遥接受封闭库房的决定；三人铺开防洪流程图的背面进行口头分工，画面不展示任何可读内容。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "许澄",
+          "line": "先把人和设备都留在值守层。灯照常运行，下面的库房暂时谁也不进。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "林灯把胶片留在那间库房？"
+        },
+        {
+          "speaker": "许澄",
+          "line": "留的是一只密封运输罐。他说，缺掉的一拍补上后，你们会来。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "那就等潮退、隔离库房支路、排水。胶片晚几个小时，总比人冒险好。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "从服务入口向值守室内看的中景，湿冷外部被门框压在一侧，干燥暖室占据主要画面。",
+        "composition": "许澄在控制台侧后方履行值守，阿遥与周岸在另一侧整理设备；三人形成开放三角，不摆成审讯式直线。",
+        "palette": "旧象牙墙面、深海蓝窗外、暗木家具、锈红围巾、琥珀色室内灯。",
+        "lighting": "稳定室内工作灯为主，窗外每隔固定时间出现柔和扫光；控制面板只保留抽象色点，不显示可读字符。",
+        "continuity": "许澄为原创五十多岁中国女性灯塔值守员，银灰短发、深青防水外套、灰色针织衫、实用胶靴；主角服装与上一场一致且外层带雨水。",
+        "avoid": [
+          "把航标电源改作放映或烘干用途",
+          "人物未经评估进入积水区",
+          "戏剧化电火花或失控主灯",
+          "可读流程图、日志、按钮文字、品牌或徽记",
+          "Cat 接近湿门口或设备台",
+          "Cat 出现在源场景图中"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "framing": "midground",
+        "pose": "sleep",
+        "narrativeWeight": "light-witness",
+        "perch": "值守室内远离外门和设备的固定木长凳，上铺干燥折叠毯",
+        "action": "从已经打开的旅行箱中走到毯面，低头嗅一下便安静伏下",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.06,
+          "max": 0.08
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "许澄"
+        ],
+        "requiredProps": [
+          "胶片防震箱",
+          "皮工具卷",
+          "滴水盘与挂钩",
+          "无品牌航标控制台",
+          "干燥木长凳与折叠毯",
+          "无可读内容的防洪流程纸"
+        ],
+        "environment": [
+          "灯塔服务入口",
+          "干燥值守室",
+          "雨夜窗户",
+          "通往底层库房的关闭防火门"
+        ],
+        "effects": [
+          "门外风雨",
+          "衣物滴水",
+          "稳定暖光",
+          "规律掠过墙面的远距航标光"
+        ]
+      },
+      "postcardNote": "避雨不是停下，是先把每个人放到安全处。",
+      "continuityIn": [
+        "三人刚从完成系缆的渡船进入灯塔站",
+        "风暴仍在，底层空间状态未知"
+      ],
+      "continuityOut": [
+        "密封运输罐的位置被限定在受淹底层库房",
+        "许澄确认林灯预见到补回缺拍后会有人来取",
+        "三人决定严格等待潮退、隔离电路、排水和结构检查"
+      ],
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original restrained watercolor and colored-pencil lighthouse service-room scene at stormy night, 4:3, a practical Chinese female lighthouse keeper in her late fifties with short silver-gray hair and dark teal waterproof coat checks a generic navigation-light control area while a 27-year-old Chinese woman in olive field jacket and rust scarf and a 32-year-old Chinese man with rectangular glasses and sand overalls place film cases and a tool roll on a dry raised table, wet coats contained by a drip area, warm dry interior against cold rain outside, closed door to lower storage, believable lighthouse operations, no cat in source scene, no readable documents or controls, no pseudo-text, no logo, no brand, no actor likeness, no recognizable thriller design."
+    },
+    {
+      "id": "last-light--c08-s03",
+      "title": "退水后的库房",
+      "duration": 88,
+      "setting": {
+        "location": "灯塔底层海侧库房与上层干燥楼梯平台",
+        "time": "凌晨",
+        "weather": "潮位已下降，暴雨转为间歇阵雨；库房完成排水但地面仍湿"
+      },
+      "plotBeat": "按防洪流程完成隔离、排水、通风与检查后，阿遥、周岸和许澄在受淹库房中找到装有胶片的密封运输罐。",
+      "dramaticPurpose": "把搜寻的紧张感建立在有限视野、受损空间与严谨协作上；发现归功于守塔人的记忆、阿遥的观察和周岸的稳固处理。",
+      "actions": [
+        "潮位降到门槛以下后，许澄从干燥配电层隔离底层普通支路并验电；独立防洪回路的固定排水泵清除积水，库房经过通风和地面检查后才解除封闭。",
+        "三人穿防滑胶靴、手套与轻型安全帽，使用独立防水电池工作灯；许澄守在入口保持联络，阿遥和周岸始终结伴沿标出的稳固区域移动。",
+        "许澄指出原备用架位置，周岸先用可调支撑固定一组倾斜金属架，未固定前无人伸手。",
+        "阿遥在架后看见一圈无字金属边缘并叫停，确认它不是灯具备件，而是系着深海蓝布结的密封运输罐。",
+        "周岸与阿遥共同用托盘从侧面平移运输罐，保持水平送出库房；许澄在门外接手并记录口头状态。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "许澄",
+          "line": "支路已隔离，水也退到排水槽；只走确认过的区域，两人一起。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "架子先支稳，没固定前谁都不伸手。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "右下角有圆罐，不是灯具备件。"
+        },
+        {
+          "speaker": "许澄",
+          "line": "对，深海蓝布结还在。把外罐托平，别摇。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "从干燥门槛外向库房内看的低位广角，前景是托盘和门槛，中景为协作中的两人，远处架影制造有限纵深。",
+        "composition": "阿遥与周岸错位工作，许澄留在门口可见且保持监督；密封罐只露出一部分圆形边缘，不以夸张特写替代人类动作。",
+        "palette": "湿石板灰、氧化金属褐、工作灯柔白、深海蓝布结与远处少量航标暖光。",
+        "lighting": "独立电池工作灯照亮脚下与架体，窗缝外的主灯扫光只在高处墙面短暂经过，两种光源不连接。",
+        "continuity": "底层支路保持隔离；库房无站立积水，只留湿面、排水槽与低处反光；密封运输罐外层沾有盐泥，深海蓝布结仍牢固。",
+        "avoid": [
+          "任何人在未排水或未验电时涉水",
+          "Cat 进入底层、靠近湿区或发现罐子",
+          "裸露带电线、火花、倒塌追逐或单人冒险",
+          "使用灯塔光搜索或加热",
+          "罐体、货架或安全设备上的可读文字与品牌",
+          "Cat 出现在源场景图中"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "framing": "distant",
+        "pose": "sit",
+        "narrativeWeight": "light-witness",
+        "perch": "上层干燥楼梯平台的防滑踏面，位于关闭的玻璃内门之后",
+        "action": "隔着内门向下望一会儿，随后把尾巴绕到前爪旁",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.02,
+          "max": 0.03
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "许澄"
+        ],
+        "requiredProps": [
+          "无字密封金属运输罐",
+          "深海蓝色布结",
+          "可调货架支撑",
+          "低矮托盘",
+          "独立防水电池工作灯",
+          "防滑胶靴、手套与轻型安全帽"
+        ],
+        "environment": [
+          "完成排水的灯塔底层库房",
+          "排水槽",
+          "倾斜但已支稳的金属架",
+          "上层干燥平台与关闭玻璃内门"
+        ],
+        "effects": [
+          "湿地面克制反光",
+          "间歇雨声",
+          "通风气流轻动布结",
+          "局部工作灯光束"
+        ]
+      },
+      "postcardNote": "潮水退去后，答案仍要由人一步步找到。",
+      "continuityIn": [
+        "许澄记得运输罐位于旧备用架之后",
+        "搜寻必须等待潮退、隔离支路、排水、通风和结构检查完成"
+      ],
+      "continuityOut": [
+        "许澄、阿遥与周岸共同取出深海蓝布结密封运输罐",
+        "Cat 全程留在上层干燥隔离区，没有进入搜寻空间",
+        "运输罐保持水平并被送往清洁缓冲区"
+      ],
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original island-lighthouse suspense scene in delicate watercolor and colored pencil, 4:3, viewed from a dry threshold into a dewatered lower storeroom before dawn, wet slate floor but no standing floodwater, isolated electrical circuit, independent waterproof battery work lights, Chinese woman restorer with short black bob and rust scarf and Chinese male mechanic with thin glasses carefully work as a pair beside a stabilized leaning metal shelf, female lighthouse keeper supervises from the doorway, partially visible plain sealed round transport can with a deep-sea-blue cloth knot recovered onto a low tray, believable PPE and flood procedure, restrained tension, source art has no cat, no readable labels, no pseudo-text, no logos, no brands, no actor likeness, no sparks, no existing thriller imagery."
+    },
+    {
+      "id": "last-light--c08-s04",
+      "title": "缓慢打开",
+      "duration": 94,
+      "setting": {
+        "location": "灯塔干燥维护室的清洁检查台",
+        "time": "黎明前",
+        "weather": "雨势减弱，风仍强；航标主灯正常值守"
+      },
+      "plotBeat": "三人以室温缓冲、外罐去盐、手工回片台和低照度检查灯谨慎开启运输罐；第八卷片头的原创符号显示八卷应先进入城市档案补齐第九卷，再返回最初放映之地。",
+      "dramaticPurpose": "完成第八卷的安全恢复，并让灯塔扫光与胶片逐格检查形成纯视觉平行；答案来自片头符号和人物推理，而非设备奇技。",
+      "actions": [
+        "许澄先在独立清洁区用淡水冲去运输罐外部盐泥并擦干，随后让密封罐在缓冲区逐渐回到室温，三人不用热风、明火或航标光加速。",
+        "戴着无粉手套的阿遥在干燥台上开启外罐，取出一只系深海蓝布条的普通凹痕胶片盒；盒内主体干燥，仅片头边缘有轻微潮气。",
+        "周岸将胶片盒平放，先用吸水材料处理外缘，再以室温低速气流稳定；没有在湿片状态下投影或强行展开整卷。",
+        "阿遥把最前端引片放上手工回片检查台，只展开足够辨认的一小段，并用带遮光罩的低照度保护灯观察。",
+        "灯塔光束按航标周期掠过窗外与后墙，检查台始终由独立灯具照明，主灯没有被转向、改线或遮挡。",
+        "阿遥和周岸口头读出抽象序列：八个圆框沿片边进入横向格架，格架中留有第九个空位，九格再一起折回一扇开口；画面不展示可辨认的符号或文字。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "周岸",
+          "line": "外罐先淡水去盐，再在室温里慢慢回温；不烘，也不照强光。"
+        },
+        {
+          "speaker": "许澄",
+          "line": "主灯按航标节律运行，和这张桌子没有连接。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "内盒是干的，只有片头边缘受潮。先看引片，不放映。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "八个圆框进了横格，里面还空着第九格，最后九格一起折回一扇开口。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "先去城里档案架补齐第九卷，再回最初放映的地方。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "俯角中近景观察三人的手工检查流程，随后保持同一轴线看到窗外周期扫光，不切成可读线索特写。",
+        "composition": "胶片检查台位于画面下三分之一，阿遥主操作、周岸辅助、许澄在侧面观察；窗与墙面留出一条横向光带作为视觉平行。",
+        "palette": "干燥象牙、暗木、黄铜、深海蓝布条、锈红与克制琥珀光。",
+        "lighting": "带遮光罩的低照度保护灯只照检查区；远处主灯扫光掠过背景墙，不接触胶片、不改变设备状态。",
+        "continuity": "外层运输罐已去盐并擦干；内层仍是无字普通凹痕胶片盒；只展开片头短段，整卷保持在片芯上。",
+        "avoid": [
+          "用灯塔主灯烘干、投影、读取或供电",
+          "热风、日晒、明火、摩擦乳剂面或投影湿片",
+          "放大展示可读符号、文字、数字或伪文字",
+          "魔法光束、超自然解码或自动显影",
+          "Cat 登上检查台、接触胶片或参与解谜",
+          "Cat 出现在源场景图中"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "framing": "midground",
+        "pose": "sleep",
+        "narrativeWeight": "light-witness",
+        "perch": "维护室侧墙固定长凳上的干燥折叠毯，距检查台与门口均有明确间隔",
+        "action": "在规律扫光经过墙面时抬一下耳朵，随后继续侧卧",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.05,
+          "max": 0.07
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "许澄"
+        ],
+        "requiredProps": [
+          "已清洁的无字密封运输罐",
+          "系深海蓝布条的普通凹痕胶片盒",
+          "第八卷胶片与不可读的抽象片头记号",
+          "手工回片检查台",
+          "带遮光罩的低照度保护灯",
+          "无粉手套、吸水材料与低速室温风机",
+          "干燥木长凳与折叠毯"
+        ],
+        "environment": [
+          "灯塔干燥维护室",
+          "与航标设备物理分离的清洁检查区",
+          "可见风雨的厚玻璃窗"
+        ],
+        "effects": [
+          "低速室温气流",
+          "窗外残雨",
+          "规律扫过背景墙的航标光",
+          "胶片边缘细微反光"
+        ]
+      },
+      "postcardNote": "有些光负责指航，有些光只够看清一格胶片。",
+      "continuityIn": [
+        "密封运输罐已从完成排水的库房平稳移出",
+        "外罐带有盐泥，胶片实际受潮程度尚未确认"
+      ],
+      "continuityOut": [
+        "第八卷主体确认干燥，片头边缘完成初步稳定",
+        "三人只检查短段引片，没有投影或强行展开整卷",
+        "原创符号被口头解释为八卷先去城市档案补齐第九卷，再一起回最初放映地"
+      ],
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original watercolor-and-colored-pencil film-conservation scene inside a dry lighthouse maintenance room before dawn, 4:3, Chinese woman restorer with short black bob, rust scarf and olive jacket carefully examines only a short film leader on a manual rewind inspection bench, Chinese male mechanic with wavy hair, thin rectangular glasses and sand overalls assists, practical silver-gray-haired female lighthouse keeper observes, cleaned sealed outer transport can and a plain dented inner film tin tied with deep-sea-blue cloth, low-intensity hooded conservation lamp, room-temperature drying materials, the real lighthouse beam sweeps only across a distant background wall as a visual parallel and never touches equipment, symbolic marks remain too small and abstract to read, source art contains no cat, no readable text, no pseudo-text, no logo, no brand, no actor likeness, no existing film design."
+    },
+    {
+      "id": "last-light--c08-s05",
+      "title": "潮后航线",
+      "duration": 76,
+      "setting": {
+        "location": "灯塔值守室、岛上背风码头与返城渡船",
+        "time": "雨后清晨",
+        "weather": "云层开始抬升，外海仍有余浪；船方复核风速与航道后恢复慢速班次"
+      },
+      "plotBeat": "许澄确认片头的横格符号指向林灯存放第九卷交接记录的城市影像档案馆，并转述他要把聚来的光带回家的口信；众人等到航线正式放行，带着稳定后的第八卷返城。",
+      "dramaticPurpose": "把灯塔线索转化为清晰的人类行动计划：先由城市档案补齐九卷来路，再回旧影院所在的家完成放映。",
+      "actions": [
+        "阿遥把稳定后的第八卷放入洁净、干燥的通风片盒，再将片盒平放进带缓冲固定的运输箱；周岸复查其与其他胶片分隔。",
+        "许澄根据林灯当年的口头约定解释符号：八个圆框是已经聚来的八卷，横格是城里的影像档案保存架，空着的第九格在那里，最后的开口才是最初的旧影院。",
+        "阿遥将第八卷、补回的一拍和空白第十卷的线索串联起来，决定不直接赶回旧影院，而先去城市影像档案馆查清交接记录并补齐第九卷。",
+        "渡船船长确认外港风速降到安全范围且航道复核完成后恢复班次，船员将胶片运输箱固定在客舱行李约束位。",
+        "许澄留在码头继续值守；渡船离开背风港时，晨光使灯塔扫光逐渐不显眼，但航标仍按程序运行。"
+      ],
+      "dialogue": [
+        {
+          "speaker": "许澄",
+          "line": "林灯要我转告：把聚来的光带回家。八格先去城里档案架补齐第九格，开口才是你们出发的旧影院。"
+        },
+        {
+          "speaker": "阿遥",
+          "line": "所以不是直接回去。先让档案把九卷的来路接起来。"
+        },
+        {
+          "speaker": "周岸",
+          "line": "片盒固定好了。船方没放行前，我们不抢这段海。"
+        },
+        {
+          "speaker": "船长",
+          "line": "外港风降到安全范围，航道也复核完了，可以按慢速班次离岛。"
+        }
+      ],
+      "visualDirection": {
+        "shot": "由值守室打包中景过渡到背风码头的清晨广角，最终从渡船内回望灯塔。",
+        "composition": "打包时三人的手与片盒形成紧凑工作三角；码头上人员沿真实动线分散，许澄留在岸侧，主角携运输箱进入客运船舱，不排成告别队列。",
+        "palette": "雨后铅灰、淡青海面、旧象牙、灰青车身、锈红围巾与初晨浅金。",
+        "lighting": "漫射晨光逐渐取代夜间对比，灯塔光只在潮湿空气中留下很淡的周期亮度。",
+        "continuity": "第八卷改装入洁净通风片盒并平放运输；深海蓝布条保留在外层运输罐的独立证物袋中但画面不显示标签；折叠影院车仍停在大陆渡口安全车棚，主角服装保持连续。",
+        "avoid": [
+          "在船方放行前出航",
+          "把灯塔熄灭、改向或当作告别信号",
+          "把符号画成可读文字、地图、机构徽标或品牌",
+          "整齐排队的码头人群",
+          "Cat 驱动出发决定、携带片盒或走近车辆甲板边缘",
+          "Cat 出现在源场景图中"
+        ]
+      },
+      "cat": {
+        "presence": true,
+        "framing": "distant",
+        "pose": "gaze",
+        "narrativeWeight": "light-witness",
+        "perch": "扣合旅行箱内的平整软垫；旅行箱以安全带固定在渡船客舱长椅内侧",
+        "action": "在返航客舱背景里朝灯塔方向看，船开动后缓慢收回前爪",
+        "scaleBand": {
+          "unit": "frameHeight",
+          "min": 0.02,
+          "max": 0.04
+        }
+      },
+      "assets": {
+        "requiredCharacters": [
+          "阿遥",
+          "周岸",
+          "许澄",
+          "渡船船长与两名船员"
+        ],
+        "requiredProps": [
+          "第八卷胶片",
+          "洁净通风片盒",
+          "带缓冲固定的胶片运输箱",
+          "空白第十卷片盒",
+          "扣合软质 Cat 旅行箱与客舱安全带"
+        ],
+        "environment": [
+          "灯塔值守室",
+          "背风码头",
+          "客运渡船客舱与行李约束位",
+          "雨后灯塔岛与返城航道"
+        ],
+        "effects": [
+          "抬升云层",
+          "余浪与低速航迹",
+          "潮湿空气中的微弱航标扫光",
+          "柔和清晨漫射光"
+        ]
+      },
+      "postcardNote": "回家的路，先经过保存记忆的城。",
+      "continuityIn": [
+        "第八卷主体已确认干燥，片头完成低照度检查",
+        "八卷进入档案架补齐第九卷再回开口的原创符号序列已由阿遥与周岸初步理解"
+      ],
+      "continuityOut": [
+        "第八卷以洁净通风片盒和防震运输箱安全返城",
+        "折叠影院车仍在大陆渡口安全车棚，返抵后可按正常道路程序取车",
+        "下一站明确为城市影像档案馆",
+        "目标是在档案馆核对林灯的交接记录并汇合九卷，再回旧影院所在的家"
+      ],
+      "sourceArtCatFree": true,
+      "imagePromptSeed": "Original restrained watercolor and colored-pencil dawn departure from an island lighthouse, 4:3, Chinese woman film restorer with short black bob, rust-red scarf, olive field jacket and canvas satchel carries a clean plain vented film case secured inside a padded transport box beside Chinese male mechanic with wavy dark hair, thin rectangular glasses, rolled navy shirt and sand overalls, practical older female lighthouse keeper remains on a sheltered quay, generic passenger ferry waits after formal weather clearance, lifting clouds and residual waves, naturally spaced crew following real circulation, distant lighthouse still operating routinely, source scene contains no cat, no readable labels, no pseudo-text, no logos, no brands, no actor likeness, no copied finale or thriller composition."
+    }
+  ]
+}

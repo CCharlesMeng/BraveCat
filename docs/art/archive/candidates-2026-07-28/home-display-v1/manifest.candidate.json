@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "shippingEligible": false,
+  "styleIntensity": "B",
+  "sourceTreatment": "Generated against the Home v3 interior reference with a chroma-key matte; runtime derivatives remove the matte and are hash-locked by the production manifest.",
+  "fixtures": [
+    {
+      "id": "postcard-wall",
+      "path": "display--postcard-wall--candidate-v02.png",
+      "slots": 6,
+      "layout": "2-column by 3-row postcard holders"
+    },
+    {
+      "id": "souvenir-table",
+      "path": "display--souvenir-table--candidate-v02.png",
+      "slots": 3,
+      "layout": "tray, plinth, and woven mat"
+    }
+  ]
+}

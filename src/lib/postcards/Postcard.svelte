@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PostcardComposition } from './index'
+  import { renderPostcardCanvas } from './composer'
 
   let {
     composition,
@@ -11,44 +12,64 @@
     renderScene: boolean
   } = $props()
 
-  const portraitStyle = $derived([
-    `left: ${composition.portrait.anchorX * 100}%`,
-    `top: ${composition.portrait.anchorY * 100}%`,
-    `height: ${composition.portrait.heightScale * 100}%`,
-    `transform: translate(-50%, -100%) scaleX(${composition.portrait.flip ? -1 : 1})`,
-  ].join('; '))
+  let canvas = $state<HTMLCanvasElement>()
+  let renderFailed = $state(false)
+
+  $effect(() => {
+    if (!renderScene || !canvas) return
+    const target = canvas
+    const currentComposition = composition
+    const currentDestinationName = destinationName
+    let active = true
+    renderFailed = false
+
+    void renderPostcardCanvas(
+      target,
+      currentComposition,
+      currentDestinationName,
+    ).catch(() => {
+      if (active) renderFailed = true
+    })
+
+    return () => {
+      active = false
+    }
+  })
 </script>
 
-<article class="postcard">
-  <div class="picture">
-    {#if renderScene}
-      <img
-        class="scene"
-        src={composition.scene.src}
-        alt={`${destinationName}的旅行风景`}
-      />
-      <img
-        class="portrait"
-        src={composition.portrait.src}
-        alt=""
-        style={portraitStyle}
-      />
-    {:else}
+<article class:composited={renderScene} class="postcard">
+  {#if renderScene}
+    <div
+      class="composite-frame"
+      role="img"
+      aria-label={`${destinationName}的旅行明信片：${composition.note}`}
+    >
+      <canvas
+        bind:this={canvas}
+        class="composite"
+        aria-hidden="true"
+      ></canvas>
+    </div>
+    {#if renderFailed}
+      <p class="render-error">这张明信片暂时没有展开，请稍后再看。</p>
+    {/if}
+  {:else}
+    <div class="picture">
       <div class="non-shipping-preview" aria-label="场景仍在发布审核中">
         <span></span>
       </div>
-    {/if}
-  </div>
-
-  <div class="message">
-    <div>
-      <p>{composition.note}</p>
-      <small>{destinationName}</small>
     </div>
-    <span class="postmark" aria-label={`邮戳时间 ${composition.postmarkDate}`}>
-      {composition.postmarkDate.slice(5).replace('-', '.')}
-    </span>
-  </div>
+
+    <div class="message">
+      <div>
+        <p>{composition.note}</p>
+        <small>{destinationName}</small>
+      </div>
+      <span class="postmark" aria-label={`邮戳时间 ${composition.postmarkDate}`}>
+        {composition.postmarkDate.slice(5).replace('-', '.')}
+      </span>
+    </div>
+  {/if}
 </article>
 
 <style>
@@ -63,26 +84,36 @@
     box-shadow: 0 8px 18px rgba(72, 65, 47, 0.09);
   }
 
+  .postcard.composited {
+    aspect-ratio: 4 / 3;
+    background: #e8e3d4;
+  }
+
+  .composite-frame,
+  .composite {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .render-error {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 24px;
+    background: rgba(248, 239, 216, 0.92);
+    color: #727064;
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
   .picture {
     position: relative;
     aspect-ratio: 4 / 3;
     overflow: hidden;
     background: #e8e3d4;
-  }
-
-  .scene {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .portrait {
-    position: absolute;
-    width: auto;
-    object-fit: contain;
-    transform-origin: center;
-    filter: drop-shadow(0 5px 4px rgba(69, 65, 49, 0.14));
   }
 
   .non-shipping-preview {

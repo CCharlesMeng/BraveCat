@@ -11,6 +11,7 @@ import type {
   TripContent,
 } from './selection'
 import type { CatId, PortraitId } from './ids'
+import { resolvePackEffects } from './packEffects'
 
 export interface PlanTripRequest extends ItineraryRequest {
   travelerCatId: CatId
@@ -43,13 +44,21 @@ export const createPlanTrip = (
   request,
   random,
 ) => {
-  const itinerary = dependencies.planItinerary(request, random)
+  const packEffects = resolvePackEffects(
+    request.catalog.items,
+    request.packedItemIds,
+  )
+  const itinerary = dependencies.planItinerary({
+    ...request,
+    packEffects,
+  }, random)
   const content = dependencies.selectContent({
     itinerary,
     travelerCatId: request.travelerCatId,
     portraitId: request.portraitId,
     catalog: request.catalog,
     recentPostcardRecipes: request.recentPostcardRecipes,
+    packEffects,
   }, random)
 
   return { itinerary, content }

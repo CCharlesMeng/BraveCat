@@ -7,7 +7,7 @@ All 48 active scene candidates passed user visual review and were promoted for r
 - [Visual approval record](../../reviews/landmarks/visual-approval.v1.json)
 - [Rights and provenance review](../../reviews/landmarks/rights-review-v1.md)
 - [Machine-checkable rights decision](../../reviews/landmarks/rights-decision.v1.json)
-- [Composite approval record](../../reviews/landmarks/composites/approval.v1.json)
+- [Composite approval record (superseded v1)](../../reviews/landmarks/composites/approval.superseded.v1.json)
 - [Production manifest](../../production/landmarks/manifest.v1.json)
 
 ## Global QA overviews

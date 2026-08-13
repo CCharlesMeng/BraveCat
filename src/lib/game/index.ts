@@ -4,6 +4,11 @@ import {
   type EconomyState,
 } from '../economy'
 import type { AssetCatalog } from '../assets'
+import {
+  defaultHomeCustomization,
+  isHomeCustomization,
+  type HomeCustomization,
+} from '../homeTheme'
 import type { CatId, PortraitId } from '../ids'
 import {
   createInitialPostcardState,
@@ -23,7 +28,8 @@ import {
 } from '../souvenirs'
 import type { PlannedItemOutcome, TravelState } from '../travel'
 
-export const GAME_STATE_VERSION = 3 as const
+export const GAME_STATE_VERSION = 4 as const
+export const MAX_CATS_PER_HOME = 3
 
 export interface CatProfile {
   id: CatId
@@ -41,6 +47,8 @@ export interface GameState {
   activeCatId: CatId | null
   postcards: PostcardState
   souvenirs: SouvenirState
+  /** 全家共享的家外观选择；只存 ID，未知 ID 在解析时回退默认值。 */
+  homeCustomization: HomeCustomization
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (
@@ -340,8 +348,14 @@ export const isGameState = (value: unknown): value is GameState => {
     ))
     || !Array.isArray(value.cats)
     || !value.cats.every(isCatProfile)
+    || value.cats.length > MAX_CATS_PER_HOME
+    || new Set(value.cats.map(({ id }) => id)).size !== value.cats.length
+    || new Set(value.cats.map(
+      ({ portraitId }) => portraitId,
+    )).size !== value.cats.length
     || !isPostcardState(value.postcards)
     || !isSouvenirState(value.souvenirs)
+    || !isHomeCustomization(value.homeCustomization)
   ) return false
 
   return (
@@ -362,6 +376,7 @@ export const createInitialGameState = (now: number): GameState => ({
   activeCatId: null,
   postcards: createInitialPostcardState(),
   souvenirs: createInitialSouvenirState(),
+  homeCustomization: defaultHomeCustomization(),
 })
 
 export interface AdoptCatRequest extends CatProfile {}
@@ -372,6 +387,17 @@ export const adoptCat = (
 ): GameState => {
   const name = request.name.trim()
   if (name.length === 0) throw new RangeError('小猫名字不能为空')
+  if (state.cats.length >= MAX_CATS_PER_HOME) {
+    throw new RangeError(`一个家最多住 ${MAX_CATS_PER_HOME} 只小猫`)
+  }
+  if (state.cats.some(({ id }) => id === request.id)) {
+    throw new RangeError(`家中已经有这只小猫：${request.id}`)
+  }
+  if (state.cats.some(({ portraitId }) => (
+    portraitId === request.portraitId
+  ))) {
+    throw new RangeError(`形象已经属于另一只小猫：${request.portraitId}`)
+  }
 
   return {
     ...state,
@@ -380,6 +406,47 @@ export const adoptCat = (
       { ...request, name },
     ],
     activeCatId: request.id,
+  }
+}
+
+export const selectActiveCat = (
+  state: GameState,
+  catId: CatId,
+): GameState => {
+  if (!state.cats.some(({ id }) => id === catId)) {
+    throw new RangeError(`家中没有这只小猫：${catId}`)
+  }
+  if (state.activeCatId === catId) return state
+  return { ...state, activeCatId: catId }
+}
+
+export interface ChangeCatPortraitRequest {
+  catId: CatId
+  portraitId: PortraitId
+}
+
+export const changeCatPortrait = (
+  state: GameState,
+  request: ChangeCatPortraitRequest,
+  catalog: AssetCatalog,
+): GameState => {
+  const cat = state.cats.find(({ id }) => id === request.catId)
+  if (!cat) throw new RangeError(`家中没有这只小猫：${request.catId}`)
+  if (!catalog.portraits.some(({ id }) => id === request.portraitId)) {
+    throw new RangeError(`素材目录缺少形象：${request.portraitId}`)
+  }
+  if (!catalog.portraitSetRevisions[request.portraitId]?.trim()) {
+    throw new RangeError(`形象缺少 set revision：${request.portraitId}`)
+  }
+  if (cat.portraitId === request.portraitId) return state
+
+  return {
+    ...state,
+    cats: state.cats.map((profile) => (
+      profile.id === request.catId
+        ? { ...profile, portraitId: request.portraitId }
+        : profile
+    )),
   }
 }
 
@@ -425,6 +492,10 @@ export const restoreGameState = (
       activeCatId,
       postcards,
       souvenirs,
+      // 保留形状合法的旧选择（即使引用了已下架内容），解析时再回退。
+      homeCustomization: isHomeCustomization(stored.homeCustomization)
+        ? stored.homeCustomization
+        : defaultHomeCustomization(),
     }
   }
 
@@ -438,6 +509,7 @@ export const restoreGameState = (
       activeCatId: null,
       postcards: createInitialPostcardState(),
       souvenirs: createInitialSouvenirState(),
+      homeCustomization: defaultHomeCustomization(),
     }
   }
 
@@ -481,6 +553,39 @@ export interface AdvanceGameEventsInput {
   now: number
   economy: EconomyState
   travel: TravelState
+}
+
+export interface AdvanceAllGameEventsInput {
+  now: number
+  economy: EconomyState
+  travelByCat: Readonly<Partial<Record<CatId, TravelState>>>
+}
+
+export const advanceAllGameEvents = (
+  current: GameState,
+  input: AdvanceAllGameEventsInput,
+): GameState => {
+  const clockNow = Math.max(current.clockNow, input.now)
+  let next = (
+    input.economy === current.economy
+    && clockNow === current.clockNow
+  )
+    ? current
+    : { ...current, clockNow, economy: input.economy }
+
+  for (const cat of current.cats) {
+    const travel = input.travelByCat[cat.id]
+      ?? current.travelByCat[cat.id]
+      ?? { kind: 'home' }
+    next = advanceGameEvents(next, {
+      catId: cat.id,
+      now: input.now,
+      economy: next.economy,
+      travel,
+    })
+  }
+
+  return next
 }
 
 export const advanceGameEvents = (

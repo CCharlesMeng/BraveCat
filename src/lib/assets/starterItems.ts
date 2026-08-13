@@ -8,6 +8,10 @@ export const STARTER_ITEMS = [
     price: 4,
     imageSrc: '/assets/items/item--snack--fish-biscuit--v02.png',
     effectHint: '也许会想起沿路好吃的东西。',
+    effects: [
+      { kind: 'pose-weight', pose: 'eat', multiplier: 1.5 },
+      { kind: 'copy-tag-weight', tag: 'food', multiplier: 1.5 },
+    ],
   },
   {
     id: 'travel-tin',
@@ -16,6 +20,9 @@ export const STARTER_ITEMS = [
     price: 4,
     imageSrc: '/assets/items/item--snack--travel-tin--v02.png',
     effectHint: '带得足一点，路也许会走得远些。',
+    effects: [
+      { kind: 'travel-duration', multiplier: 1.25 },
+    ],
   },
   {
     id: 'small-blanket',
@@ -24,6 +31,9 @@ export const STARTER_ITEMS = [
     price: 6,
     imageSrc: '/assets/items/item--toy--small-blanket--v02.png',
     effectHint: '困了就找个安静的地方蜷起来。',
+    effects: [
+      { kind: 'pose-weight', pose: 'sleep', multiplier: 1.5 },
+    ],
   },
   {
     id: 'yarn-ball',
@@ -32,6 +42,9 @@ export const STARTER_ITEMS = [
     price: 6,
     imageSrc: '/assets/items/item--toy--yarn-ball--v02.png',
     effectHint: '路上也可以玩一会儿。',
+    effects: [
+      { kind: 'pose-weight', pose: 'play', multiplier: 1.5 },
+    ],
   },
   {
     id: 'small-bell',
@@ -40,6 +53,9 @@ export const STARTER_ITEMS = [
     price: 6,
     imageSrc: '/assets/items/item--toy--small-bell--v02.png',
     effectHint: '轻轻一响，也许会遇见新旅伴。',
+    effects: [
+      { kind: 'companion-chance', bonus: 0.1 },
+    ],
   },
   {
     id: 'small-camera',
@@ -48,6 +64,9 @@ export const STARTER_ITEMS = [
     price: 6,
     imageSrc: '/assets/items/item--toy--small-camera--v02.png',
     effectHint: '说不定会多寄一张风景回来。',
+    effects: [
+      { kind: 'second-postcard-chance', bonus: 0.2 },
+    ],
   },
   {
     id: 'small-telescope',
@@ -56,6 +75,9 @@ export const STARTER_ITEMS = [
     price: 6,
     imageSrc: '/assets/items/item--toy--small-telescope--v02.png',
     effectHint: '适合停下来，远远看一会儿。',
+    effects: [
+      { kind: 'pose-weight', pose: 'gaze', multiplier: 1.5 },
+    ],
   },
   {
     id: 'ticket',

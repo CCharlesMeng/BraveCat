@@ -10,6 +10,25 @@ import type {
   TripContent,
 } from '../selection'
 
+export {
+  POSTCARD_HEIGHT,
+  POSTCARD_RECIPE_VERSION,
+  POSTCARD_WIDTH,
+  calculatePortraitPlacement,
+  createPostcardPng,
+  findPixelBounds,
+  postcardFileName,
+  renderPostcardCanvas,
+  shareOrDownloadPostcard,
+} from './composer'
+export type {
+  PixelBounds,
+  PortraitPlacement,
+  PostcardRenderDependencies,
+  PostcardShareDependencies,
+  PostcardShareResult,
+} from './composer'
+
 export interface ReceivedPostcard extends SelectedPostcard {
   id: PostcardId
   tripId: TripId

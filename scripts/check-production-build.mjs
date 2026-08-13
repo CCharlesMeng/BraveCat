@@ -68,7 +68,7 @@ const sceneOutputRoot = path.join(distRoot, 'scenes')
 const developmentPreviewOutputRoot = path.join(distRoot, 'dev-art')
 const developmentHomeArtPreviewOutputRoot = path.join(
   developmentPreviewOutputRoot,
-  'home-v3',
+  'home-v4',
 )
 const serviceWorker = await readFile(path.join(distRoot, 'sw.js'), 'utf8')
 const applicationJavascript = (
@@ -98,7 +98,8 @@ assert(
   'service worker caches development-only art preview assets',
 )
 assert(
-  !serviceWorker.includes('dev-art/home-v3'),
+  !serviceWorker.includes('dev-art/home-v3')
+    && !serviceWorker.includes('dev-art/home-v4'),
   'service worker caches non-shipping home art preview assets',
 )
 if (landmarkManifest.shippingEligible) {

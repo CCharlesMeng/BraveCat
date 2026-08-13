@@ -12,6 +12,10 @@ import type {
   SceneVariantId,
   SouvenirId,
 } from '../ids'
+import {
+  EMPTY_PACK_EFFECTS,
+  type PackEffects,
+} from '../packEffects'
 
 export const POSTCARD_RECIPE_VERSION = 1 as const
 
@@ -58,6 +62,7 @@ export interface SelectionRequest {
   portraitId: PortraitId
   catalog: AssetCatalog
   recentPostcardRecipes?: readonly Pick<PostcardRecipe, 'scene' | 'copy'>[]
+  packEffects?: PackEffects
 }
 
 export interface SelectedPostcard {
@@ -259,6 +264,29 @@ const selectOne = <T>(
   return { value: values[index], index }
 }
 
+const selectWeighted = <T>(
+  values: readonly T[],
+  weightFor: (value: T) => number,
+  random: RandomSource,
+  emptyMessage: string,
+): { value: T; index: number } => {
+  if (values.length === 0) throw new RangeError(emptyMessage)
+  const weights = values.map((value) => Math.max(0, weightFor(value)))
+  const totalWeight = weights.reduce((total, weight) => total + weight, 0)
+  if (totalWeight <= 0) return selectOne(values, random, emptyMessage)
+
+  const target = Math.min(random(), 0.999_999_999) * totalWeight
+  let cumulativeWeight = 0
+  for (const [index, weight] of weights.entries()) {
+    cumulativeWeight += weight
+    if (target < cumulativeWeight) {
+      return { value: values[index], index }
+    }
+  }
+
+  return { value: values[values.length - 1], index: values.length - 1 }
+}
+
 const renderPostcardNote = (
   template: string,
   destinationName: string,
@@ -273,6 +301,7 @@ const TWO_SOUVENIR_THRESHOLD = 0.9
 const selectScenePool = (
   destination: AssetCatalog['destinations'][number],
   random: RandomSource,
+  companionChanceBonus: number,
 ) => {
   const ordinaryScenes = destination.sceneVariants.filter(
     ({ hasCompanion }) => !hasCompanion,
@@ -281,7 +310,10 @@ const selectScenePool = (
     ({ hasCompanion }) => hasCompanion,
   )
   const scenePool = ordinaryScenes.length > 0 && companionScenes.length > 0
-    ? (random() < COMPANION_SCENE_CHANCE
+    ? (random() < Math.min(
+      1,
+      COMPANION_SCENE_CHANCE + companionChanceBonus,
+    )
       ? companionScenes
       : ordinaryScenes)
     : destination.sceneVariants
@@ -299,6 +331,14 @@ interface PostcardSource {
   noteIndex: number
 }
 
+const copyWeightFor = (
+  tags: readonly string[],
+  tagWeights: PackEffects['copyTagWeights'],
+) => tags.reduce(
+  (weight, tag) => weight * (tagWeights[tag] ?? 1),
+  1,
+)
+
 const postcardSourceKey = (
   sceneId: SceneVariant['id'],
   copyId: string,
@@ -311,15 +351,32 @@ const selectPostcardSource = (
   usedCopyIds: ReadonlySet<string>,
   usedSourceKeys: ReadonlySet<string>,
   random: RandomSource,
+  effects: PackEffects,
+  noteTags: readonly (readonly string[])[],
 ): PostcardSource => {
-  const scenePool = selectScenePool(destination, random)
-  const { value: scene } = selectOne(
+  const scenePool = selectScenePool(
+    destination,
+    random,
+    effects.companionChanceBonus,
+  )
+  const { value: scene } = selectWeighted(
     scenePool,
+    ({ compositionSlot }) => (
+      effects.poseWeights[compositionSlot.pose] ?? 1
+    ),
     random,
     `目的地没有场景变体：${destination.id}`,
   )
-  const { value: note, index: noteIndex } = selectOne(
-    notes,
+  const noteChoices = notes.map((note, index) => ({
+    note,
+    tags: noteTags[index] ?? [],
+  }))
+  const {
+    value: { note },
+    index: noteIndex,
+  } = selectWeighted(
+    noteChoices,
+    ({ tags }) => copyWeightFor(tags, effects.copyTagWeights),
     random,
     '明信片文案库不能为空',
   )
@@ -338,6 +395,7 @@ const selectPostcardSource = (
       scene: candidateScene,
       note: candidateNote,
       noteIndex: candidateNoteIndex,
+      noteTags: noteTags[candidateNoteIndex] ?? [],
       copyId: `postcard-note-${candidateNoteIndex + 1}`,
     }))
   ))
@@ -347,12 +405,16 @@ const selectPostcardSource = (
   const distinctSource = unusedSources.filter(({ scene, copyId: candidateCopyId }) => (
     !usedSceneIds.has(scene.id) && !usedCopyIds.has(candidateCopyId)
   ))
-  const { value: selected } = selectOne(
+  const { value: selected } = selectWeighted(
     distinctSource.length > 0
       ? distinctSource
       : unusedSources.length > 0
         ? unusedSources
         : candidates,
+    ({ scene: candidateScene, noteTags: candidateNoteTags }) => (
+      (effects.poseWeights[candidateScene.compositionSlot.pose] ?? 1)
+      * copyWeightFor(candidateNoteTags, effects.copyTagWeights)
+    ),
     random,
     `目的地没有场景变体：${destination.id}`,
   )
@@ -387,6 +449,9 @@ const selectSouvenirIds = (
 }
 
 export const selectTripContent: ContentSelector = (request, random) => {
+  const effects = request.packEffects ?? EMPTY_PACK_EFFECTS
+  const noteTags = request.catalog.copy.postcardNoteTags
+    ?? request.catalog.copy.postcardNotes.map(() => [])
   const usedSceneIds = new Set(
     request.recentPostcardRecipes?.map(({ scene }) => scene.id) ?? [],
   )
@@ -413,6 +478,8 @@ export const selectTripContent: ContentSelector = (request, random) => {
       usedCopyIds,
       usedSourceKeys,
       random,
+      effects,
+      noteTags,
     )
     const copyId = `postcard-note-${noteIndex + 1}`
     usedSceneIds.add(scene.id)

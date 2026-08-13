@@ -1,13 +1,31 @@
-export type HomeActivity = 'sleep' | 'play' | 'eat'
-export type HomeTime = 'morning' | 'noon' | 'dusk' | 'late-night'
-
-const HOME_ART_PREVIEW_ROOT = '/dev-art/home-v3'
-
 /**
- * The candidate pack is intentionally preview-only. Production keeps using
- * the approved CSS room until this set receives a shipping approval.
+ * 家的日常节奏与抽屉 UI chrome。
+ *
+ * 房间外观（图层、坐标、投影）由 src/lib/homeTheme 的 resolveHomeScene
+ * 负责，本模块不再持有任何 form 相关的几何或资产路径。
  */
-export const HOME_ART_PREVIEW_SHIPPING_ELIGIBLE = false as const
+import type { HomeActivity, HomeTime } from './homeTheme'
+
+export type { HomeActivity, HomeTime } from './homeTheme'
+
+export const HOME_ACTIVITY_SEQUENCE = [
+  'sleep',
+  'play',
+  'eat',
+  'gaze',
+] as const satisfies readonly HomeActivity[]
+
+export const HOME_ACTIVITY_LABELS = {
+  sleep: '睡觉',
+  play: '玩耍',
+  eat: '吃饭',
+  gaze: '看窗外',
+} as const satisfies Record<HomeActivity, string>
+
+export const nextHomeActivity = (activity: HomeActivity): HomeActivity => {
+  const index = HOME_ACTIVITY_SEQUENCE.indexOf(activity)
+  return HOME_ACTIVITY_SEQUENCE[(index + 1) % HOME_ACTIVITY_SEQUENCE.length]
+}
 
 export const homeTimeFor = (date: Date): HomeTime => {
   const hour = date.getHours()
@@ -17,39 +35,29 @@ export const homeTimeFor = (date: Date): HomeTime => {
   return 'late-night'
 }
 
-export const homeArtPreview = {
-  exterior: {
-    morning: `${HOME_ART_PREVIEW_ROOT}/exterior-morning.png`,
-    noon: `${HOME_ART_PREVIEW_ROOT}/exterior-noon.png`,
-    dusk: `${HOME_ART_PREVIEW_ROOT}/exterior-dusk.png`,
-    'late-night': `${HOME_ART_PREVIEW_ROOT}/exterior-late-night.png`,
-  },
-  lighting: {
-    morning: `${HOME_ART_PREVIEW_ROOT}/lighting-morning.png`,
-    noon: null,
-    dusk: `${HOME_ART_PREVIEW_ROOT}/lighting-dusk.png`,
-    'late-night': `${HOME_ART_PREVIEW_ROOT}/lighting-late-night.png`,
-  },
-  interiorForeground: `${HOME_ART_PREVIEW_ROOT}/interior-foreground.png`,
-  catRects: {
-    sleep: { x: 480, y: 1001, width: 420, height: 420 },
-    play: { x: 485, y: 1014, width: 450, height: 450 },
-    eat: { x: 335, y: 864, width: 450, height: 450 },
-  },
-} as const
+export const homeActivityOverrideFor = (
+  isDevelopment: boolean,
+  search: string,
+): HomeActivity | null => {
+  if (!isDevelopment) return null
+  const activity = new URLSearchParams(search).get('homeActivity')
+  return activity === 'sleep'
+    || activity === 'play'
+    || activity === 'eat'
+    || activity === 'gaze'
+    ? activity
+    : null
+}
 
-export const canRenderHomeArtPreview = (isDevelopment: boolean) => (
-  isDevelopment && !HOME_ART_PREVIEW_SHIPPING_ELIGIBLE
+export type SouvenirDisplayKind = 'pin' | 'charm' | 'keepsake'
+
+export const souvenirDisplayKindFor = (souvenirId: string): SouvenirDisplayKind => (
+  souvenirId.endsWith('--postmark-pin')
+    ? 'pin'
+    : souvenirId.endsWith('--travel-charm')
+      ? 'charm'
+      : 'keepsake'
 )
-
-export const canvasStyle = (
-  rect: { x: number; y: number; width: number; height: number },
-) => [
-  `left: ${(rect.x / 1200) * 100}%`,
-  `top: ${(rect.y / 1600) * 100}%`,
-  `width: ${(rect.width / 1200) * 100}%`,
-  `height: ${(rect.height / 1600) * 100}%`,
-].join('; ')
 
 export const drawerArt = {
   nav: {
@@ -58,6 +66,7 @@ export const drawerArt = {
     album: '/assets/home/nav-album.png',
   },
   treat: '/assets/treat/treat-24.png',
+  treatLarge: '/assets/treat/treat-96.png',
   packBase: '/assets/pack/base-382.png',
   packRim: '/assets/pack/rim-382.png',
   albumEmpty: '/assets/album/empty.png',

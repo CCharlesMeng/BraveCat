@@ -1,0 +1,68 @@
+{
+  "viewport": {
+    "width": 470,
+    "height": 900
+  },
+  "states": [
+    {
+      "state": "empty",
+      "shellWidth": 470,
+      "postcardCount": 0,
+      "emptySlotCount": 6,
+      "souvenirCount": 0,
+      "departureNoteVisible": false,
+      "emptyTreatVisible": false,
+      "postcardHitTarget": null,
+      "postcardHitBlocker": null,
+      "souvenirHitTarget": null,
+      "souvenirHitBlocker": null,
+      "fixtureLoaded": true
+    },
+    {
+      "state": "partial",
+      "shellWidth": 470,
+      "postcardCount": 2,
+      "emptySlotCount": 4,
+      "souvenirCount": 2,
+      "departureNoteVisible": false,
+      "emptyTreatVisible": false,
+      "postcardHitTarget": true,
+      "postcardHitBlocker": "img.",
+      "souvenirHitTarget": true,
+      "souvenirHitBlocker": "img.",
+      "fixtureLoaded": true
+    },
+    {
+      "state": "full",
+      "shellWidth": 470,
+      "postcardCount": 6,
+      "emptySlotCount": 0,
+      "souvenirCount": 3,
+      "departureNoteVisible": false,
+      "emptyTreatVisible": false,
+      "postcardHitTarget": true,
+      "postcardHitBlocker": "img.",
+      "souvenirHitTarget": true,
+      "souvenirHitBlocker": "img.",
+      "fixtureLoaded": true
+    },
+    {
+      "state": "departure-note",
+      "shellWidth": 470,
+      "postcardCount": 2,
+      "emptySlotCount": 4,
+      "souvenirCount": 3,
+      "departureNoteVisible": true,
+      "emptyTreatVisible": false,
+      "postcardHitTarget": true,
+      "postcardHitBlocker": "img.",
+      "souvenirHitTarget": true,
+      "souvenirHitBlocker": "img.",
+      "fixtureLoaded": true
+    }
+  ],
+  "interactions": {
+    "postcard": true,
+    "souvenir": true
+  }
+}

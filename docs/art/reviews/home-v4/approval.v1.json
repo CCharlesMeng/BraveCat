@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "decision": "approved-for-development-preview",
+  "approvedAt": "2026-07-21",
+  "scope": [
+    "interior-foreground--candidate-v03.png",
+    "exterior-morning--candidate-v01.png",
+    "exterior-noon--candidate-v01.png",
+    "exterior-dusk--candidate-v01.png",
+    "exterior-late-night--candidate-v01.png",
+    "lighting-morning--candidate-v01.png",
+    "lighting-dusk--candidate-v01.png",
+    "lighting-late-night--candidate-v01.png"
+  ],
+  "shippingEligible": false,
+  "notes": [
+    "Approved after review of home-composite--candidate-v03--qa.png.",
+    "Approval covers the development Home preview only.",
+    "The geometry-neutral lighting layers were approved after four-time composite QA.",
+    "Multi-width runtime QA remains required."
+  ]
+}
