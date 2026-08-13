@@ -42,6 +42,12 @@ web 产物变更后重跑 `npm run build`（根目录）+ `npx cap sync` 即可�
   `@capacitor/share`（先经 `@capacitor/filesystem` 写入缓存），系统分享面板自带
   「存储图像」可存入相册；「下载」语义落为写入应用 Documents 目录，iOS 已开
   `UIFileSharingEnabled`，用户在「文件」App 里可见。
+- 存档导出/导入（已实现）：同在 `nativePorts.ts`，接线位是 `ports.ts` 的
+  `saveTransferPort`（浏览器里为 null，web 端仍走锚点下载 + `<input type=file>`）。
+  导出把存档 JSON 经 `@capacitor/filesystem` 写入缓存后交给 `@capacitor/share`
+  系统分享面板（可存文件 App / 隔空投送 / 发微信）；导入用
+  `@capawesome/capacitor-file-picker` 的系统文件选择器读取 JSON，校验与迁移
+  仍走 core 的 `SaveStore.import`。
 - IAP（只有骨架）：`apps/web/src/lib/platform/purchase.ts` 定义 `PurchasePort`，
   当前实现是 stub，见下面的接入清单。
 - 推送（未实现）：只留文档占位，见下。
@@ -92,8 +98,6 @@ SKU 只有两类（`docs/adr/0006-sell-ai-generation-not-game-currency.md`）：
 
 ## 已知待办
 
-- 存档导出/导入（App.svelte 的 `downloadBlob` 锚点下载 + `<input type=file>`）
-  在原生 WebView 里不可用，后续需换成 Filesystem/分享面板实现。
 - 状态栏样式（`@capacitor/status-bar`）与启动屏时序未调，目前用默认值。
 - 微信登录 / Apple 登录插件（计划 Phase 2 后半段，随账号系统接入）。
 

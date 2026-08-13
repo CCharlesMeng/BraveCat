@@ -10,7 +10,11 @@ import {
 } from '@bravecat/core'
 import { assetBaseUrl } from './assetBase'
 import { Capacitor } from '@capacitor/core'
-import { nativeShare } from './nativePorts'
+import {
+  nativeSaveTransfer,
+  nativeShare,
+  type SaveTransferPort,
+} from './nativePorts'
 
 /** Clock 端口用 core 默认的 Date.now；SaveStore 用 IndexedDB 实现。 */
 
@@ -63,3 +67,10 @@ export const installWebAssetResolver = () => {
 export const sharePort: SharePort = Capacitor.isNativePlatform()
   ? nativeShare
   : webShare
+
+/**
+ * 存档导出/导入的原生接线位：浏览器里为 null，App.svelte 照旧走
+ * 锚点下载 + <input type=file>；原生壳里换成分享面板 + 系统文件选择器。
+ */
+export const saveTransferPort: SaveTransferPort | null =
+  Capacitor.isNativePlatform() ? nativeSaveTransfer : null

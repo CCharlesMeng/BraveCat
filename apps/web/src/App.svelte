@@ -46,6 +46,7 @@
   import {
     downloadBlob,
     installWebAssetResolver,
+    saveTransferPort,
     sharePort,
     webPostcardCanvas,
     webRandom,
@@ -455,15 +456,27 @@
     void openDrawer('album')
   }
 
-  const exportGame = () => {
+  const exportGame = async () => {
     const document = controller.exportDocument()
-    const blob = new Blob(
-      [JSON.stringify(document, null, 2)],
-      { type: 'application/json' },
-    )
-    downloadBlob(blob, `bravecat-save-${new Date(document.exportedAt)
+    const json = JSON.stringify(document, null, 2)
+    const fileName = `bravecat-save-${new Date(document.exportedAt)
       .toISOString()
-      .slice(0, 10)}.json`)
+      .slice(0, 10)}.json`
+
+    // 原生壳里锚点下载不可用，改走缓存文件 + 系统分享面板。
+    if (saveTransferPort) {
+      try {
+        const result = await saveTransferPort.exportSave(json, fileName)
+        transferNotice = result === 'shared'
+          ? '完整存档已经导出。'
+          : '这次没有分享，存档没有导出。'
+      } catch {
+        transferNotice = '这次没能导出存档，请稍后再试。'
+      }
+      return
+    }
+
+    downloadBlob(new Blob([json], { type: 'application/json' }), fileName)
     transferNotice = '完整存档已经导出。'
   }
 
@@ -521,6 +534,24 @@
         : '没有导入：存档文件无法读取。'
     } finally {
       input.value = ''
+    }
+  }
+
+  // 原生壳里 <input type=file> 不可用，改走系统文件选择器；
+  // 校验与迁移仍是 controller.importDocument 里 core 的那条链。
+  const importGameFromPicker = async () => {
+    if (!saveTransferPort) return
+
+    try {
+      const text = await saveTransferPort.pickSaveFile()
+      if (text === null) return
+      await controller.importDocument(JSON.parse(text))
+      shopNotice = ''
+      transferNotice = '完整存档已经恢复。'
+    } catch (error) {
+      transferNotice = error instanceof Error
+        ? `没有导入：${error.message}`
+        : '没有导入：存档文件无法读取。'
     }
   }
 
@@ -1592,17 +1623,24 @@
                 <img src={asset(drawerArt.export)} alt="" aria-hidden="true" />
                 导出存档
               </button>
-              <label>
-                <span>
+              {#if saveTransferPort}
+                <button type="button" onclick={importGameFromPicker}>
                   <img src={asset(drawerArt.import)} alt="" aria-hidden="true" />
                   导入存档
-                </span>
-                <input
-                  type="file"
-                  accept="application/json,.json"
-                  onchange={importGame}
-                />
-              </label>
+                </button>
+              {:else}
+                <label>
+                  <span>
+                    <img src={asset(drawerArt.import)} alt="" aria-hidden="true" />
+                    导入存档
+                  </span>
+                  <input
+                    type="file"
+                    accept="application/json,.json"
+                    onchange={importGame}
+                  />
+                </label>
+              {/if}
             </div>
             {#if transferNotice}
               <p class="transfer-notice" aria-live="polite">{transferNotice}</p>
