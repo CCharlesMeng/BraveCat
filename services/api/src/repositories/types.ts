@@ -44,6 +44,42 @@ export interface SaveRepository {
   put(userId: string, save: StoredSave): Promise<void>
 }
 
+/** 生成次数账目类型：purchase/release 记正、hold/consume 记负；余额 = sum(amount)。 */
+export type CreditEntryKind = 'purchase' | 'hold' | 'release' | 'consume'
+
+export interface CreditEntry {
+  userId: string
+  /** 幂等键命名约定见 src/aigc/creditKeys.ts。 */
+  idempotencyKey: string
+  kind: CreditEntryKind
+  /** 带符号次数。 */
+  amount: number
+  /** 关联的生成 job（hold/release/consume）。 */
+  jobId?: string
+  /** 购买订单号（purchase）。 */
+  orderId?: string
+  /** 服务端入账时间（epoch 毫秒）。 */
+  recordedAt: number
+}
+
+/**
+ * 生成次数 entitlement 账本（ADR-0006：严格服务端权威，客户端无离线乐观记账）。
+ * 事务语义：提交生成即预扣（hold -1）；失败自动退回（release +1）；
+ * 确认时落定消耗（release +1 与 consume -1 成对入账，净额不变但消耗自此不可逆）。
+ */
+export interface GenerationCreditRepository {
+  /** 返回给定幂等键中已入账的子集。 */
+  findExistingIdempotencyKeys(
+    userId: string,
+    keys: readonly string[],
+  ): Promise<Set<string>>
+  /** 原子批量入账；(userId, idempotencyKey) 冲突时静默跳过（幂等兜底）。 */
+  insertMany(entries: readonly CreditEntry[]): Promise<void>
+  getBalance(userId: string): Promise<number>
+  /** 全量账目（审计与测试用）。 */
+  listByUser(userId: string): Promise<CreditEntry[]>
+}
+
 export interface LedgerRepository {
   /** 返回给定幂等键中已入账的子集。 */
   findExistingIdempotencyKeys(
@@ -62,4 +98,5 @@ export interface Repositories {
   tokens: TokenRepository
   saves: SaveRepository
   ledger: LedgerRepository
+  generationCredits: GenerationCreditRepository
 }

@@ -1,4 +1,5 @@
 import type {
+  CreditEntry,
   LedgerEntry,
   Repositories,
   StoredSave,
@@ -12,6 +13,8 @@ export const createMemoryRepositories = (): Repositories => {
   const saves = new Map<string, StoredSave>()
   const ledgerEntries: LedgerEntry[] = []
   const ledgerKeys = new Set<string>()
+  const creditEntries: CreditEntry[] = []
+  const creditKeys = new Set<string>()
 
   const compositeKey = (userId: string, idempotencyKey: string) =>
     `${userId}\u0000${idempotencyKey}`
@@ -63,6 +66,35 @@ export const createMemoryRepositories = (): Repositories => {
         ledgerEntries
           .filter((entry) => entry.userId === userId && entry.amount > 0)
           .reduce((sum, entry) => sum + entry.amount, 0),
+    },
+    generationCredits: {
+      findExistingIdempotencyKeys: async (userId, keys) => {
+        const existing = new Set<string>()
+        for (const key of keys) {
+          if (creditKeys.has(compositeKey(userId, key))) {
+            existing.add(key)
+          }
+        }
+        return existing
+      },
+      insertMany: async (entries) => {
+        for (const entry of entries) {
+          const key = compositeKey(entry.userId, entry.idempotencyKey)
+          if (creditKeys.has(key)) {
+            continue
+          }
+          creditKeys.add(key)
+          creditEntries.push({ ...entry })
+        }
+      },
+      getBalance: async (userId) =>
+        creditEntries
+          .filter((entry) => entry.userId === userId)
+          .reduce((sum, entry) => sum + entry.amount, 0),
+      listByUser: async (userId) =>
+        creditEntries
+          .filter((entry) => entry.userId === userId)
+          .map((entry) => ({ ...entry })),
     },
   }
 }

@@ -5,8 +5,9 @@ import type { EconomyValidator } from './economy/validator.js'
 import { sendError } from './http/replies.js'
 import { createAuthenticate } from './plugins/authenticate.js'
 import type { Repositories } from './repositories/types.js'
-import type { RouteDeps } from './routes/deps.js'
+import type { AigcDeps, RouteDeps } from './routes/deps.js'
 import { registerAuthRoutes } from './routes/auth.js'
+import { registerCreditRoutes } from './routes/credits.js'
 import { registerLedgerRoutes } from './routes/ledger.js'
 import { registerMetaRoutes } from './routes/meta.js'
 import { registerSaveRoutes } from './routes/save.js'
@@ -15,6 +16,8 @@ export interface BuildAppOptions {
   repositories: Repositories
   economyValidator: EconomyValidator
   platformMeta: MetaResponse['platforms']
+  /** AIGC 形象管线依赖（生产接线见 index.ts，测试接线见 test/helpers.ts）。 */
+  aigc: AigcDeps
   /** 可注入时钟，单测用；默认 Date.now。 */
   now?: () => number
   logger?: boolean
@@ -33,6 +36,7 @@ export const buildApp = (options: BuildAppOptions) => {
     platformMeta: options.platformMeta,
     authenticate: createAuthenticate(options.repositories.tokens),
     now: options.now ?? Date.now,
+    aigc: options.aigc,
   }
 
   app.setErrorHandler((error, request, reply) => {
@@ -66,6 +70,7 @@ export const buildApp = (options: BuildAppOptions) => {
       registerAuthRoutes(v1, deps)
       registerSaveRoutes(v1, deps)
       registerLedgerRoutes(v1, deps)
+      registerCreditRoutes(v1, deps)
       registerMetaRoutes(v1, deps)
     },
     { prefix: '/v1' },

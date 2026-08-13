@@ -1,4 +1,6 @@
 import type { AuthTokenResponse } from '@bravecat/contracts'
+import { createStubPurchaseVerifier } from '../src/aigc/fakes.js'
+import type { PurchaseVerifier } from '../src/aigc/ports.js'
 import { buildApp } from '../src/app.js'
 import { defaultPlatformMeta } from '../src/config.js'
 import { createRateCapValidator } from '../src/economy/validator.js'
@@ -24,13 +26,21 @@ export const createTestClock = (start = 1_755_000_000_000): TestClock => {
   }
 }
 
-export const createTestApp = () => {
+export interface TestAppOverrides {
+  purchaseVerifier?: PurchaseVerifier
+}
+
+export const createTestApp = (overrides: TestAppOverrides = {}) => {
   const clock = createTestClock()
   const repositories = createMemoryRepositories()
   const app = buildApp({
     repositories,
     economyValidator: createRateCapValidator(TEST_ECONOMY),
     platformMeta: defaultPlatformMeta,
+    aigc: {
+      purchaseVerifier:
+        overrides.purchaseVerifier ?? createStubPurchaseVerifier(),
+    },
     now: clock.now,
   })
   return { app, clock, repositories }
@@ -47,3 +57,22 @@ export const registerGuest = async (app: TestApp): Promise<AuthTokenResponse> =>
 }
 
 export const bearer = (token: string) => ({ authorization: `Bearer ${token}` })
+
+/** 用测试核销器的魔法凭证给账号充生成次数。 */
+export const redeemTestCredits = async (
+  app: TestApp,
+  token: string,
+  credits: number,
+  orderId = 'order-1',
+) => {
+  const response = await app.inject({
+    method: 'POST',
+    url: '/v1/credits/purchases',
+    headers: bearer(token),
+    payload: { platform: 'wechat', receipt: `test:${orderId}:${credits}` },
+  })
+  if (response.statusCode !== 200) {
+    throw new Error(`充值失败：${response.statusCode} ${response.body}`)
+  }
+  return response.json() as { status: string; balance: number }
+}

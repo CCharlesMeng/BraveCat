@@ -129,4 +129,67 @@ export const createPostgresRepositories = (pool: pg.Pool): Repositories => ({
       return Number(rows[0].earned)
     },
   },
+  generationCredits: {
+    findExistingIdempotencyKeys: async (userId, keys) => {
+      const { rows } = await pool.query(
+        `select idempotency_key from generation_credit_entries
+         where user_id = $1 and idempotency_key = any($2::text[])`,
+        [userId, [...keys]],
+      )
+      return new Set<string>(rows.map((row) => row.idempotency_key))
+    },
+    insertMany: async (entries) => {
+      const client = await pool.connect()
+      try {
+        await client.query('begin')
+        for (const entry of entries) {
+          await client.query(
+            `insert into generation_credit_entries
+               (user_id, idempotency_key, kind, amount, job_id, order_id, recorded_at)
+             values ($1, $2, $3, $4, $5, $6, $7)
+             on conflict (user_id, idempotency_key) do nothing`,
+            [
+              entry.userId,
+              entry.idempotencyKey,
+              entry.kind,
+              entry.amount,
+              entry.jobId ?? null,
+              entry.orderId ?? null,
+              entry.recordedAt,
+            ],
+          )
+        }
+        await client.query('commit')
+      } catch (error) {
+        await client.query('rollback')
+        throw error
+      } finally {
+        client.release()
+      }
+    },
+    getBalance: async (userId) => {
+      const { rows } = await pool.query(
+        `select coalesce(sum(amount), 0) as balance
+         from generation_credit_entries where user_id = $1`,
+        [userId],
+      )
+      return Number(rows[0].balance)
+    },
+    listByUser: async (userId) => {
+      const { rows } = await pool.query(
+        `select user_id, idempotency_key, kind, amount, job_id, order_id, recorded_at
+         from generation_credit_entries where user_id = $1 order by id`,
+        [userId],
+      )
+      return rows.map((row) => ({
+        userId: row.user_id,
+        idempotencyKey: row.idempotency_key,
+        kind: row.kind,
+        amount: Number(row.amount),
+        jobId: row.job_id ?? undefined,
+        orderId: row.order_id ?? undefined,
+        recordedAt: Number(row.recorded_at),
+      }))
+    },
+  },
 })

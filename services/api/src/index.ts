@@ -1,4 +1,5 @@
 import pg from 'pg'
+import { createUnavailablePurchaseVerifier } from './aigc/unavailable.js'
 import { buildApp } from './app.js'
 import { defaultPlatformMeta, loadConfig } from './config.js'
 import { createRateCapValidator } from './economy/validator.js'
@@ -20,6 +21,10 @@ const app = buildApp({
   repositories: createPostgresRepositories(pool),
   economyValidator: createRateCapValidator(config.economy),
   platformMeta: defaultPlatformMeta,
+  aigc: {
+    // 生产核销 adapter（Apple StoreKit / 微信支付）在 Phase 2/4 接入前保持 503。
+    purchaseVerifier: createUnavailablePurchaseVerifier(),
+  },
   logger: true,
 })
 
