@@ -178,11 +178,15 @@ src/lib/homeTheme/
 
 ## 需要补 ADR 的决策
 
-- Home 场景在运行时由选择 ID 解析，存档只存 ID、不存派生结果。
-- 家的美术按 form/finish/piece 分层出资产，不再新增整图背景变体
-  （取代 `interior-foreground-*` 模式）。
-- （待定，切片 0 期间验证）墙面投影采用 matrix3d homography 还是保留
-  clip-path 近似。
+**✅ 已全部落档（2026-08-13）**：
+
+- `docs/adr/0006-home-scene-resolves-from-selection-ids.md`：Home 场景
+  在运行时由选择 ID 解析，存档只存 ID、不存派生结果。
+- `docs/adr/0007-home-art-ships-as-form-finish-piece-layers.md`：家的
+  美术按 form/finish/piece 分层出资产，不再新增整图背景变体。
+- `docs/adr/0008-wall-projection-keeps-clip-path-approximation.md`：
+  墙面投影保留 clip-path + skew 近似（两个 form 验证够用），并记录
+  升级 matrix3d 的复审触发条件。
 
 ## 风险与开放问题
 
