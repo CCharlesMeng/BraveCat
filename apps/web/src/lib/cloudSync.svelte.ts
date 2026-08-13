@@ -4,7 +4,8 @@
  *
  * 同步节奏：
  * - 启动（hydrate 完成后）：静默创建游客账号 → pull 比较（决策逻辑见
- *   cloudSyncPolicy.ts）→ 以云端为准前先把本地导出为下载备份。
+ *   @bravecat/core/cloud 的 decideStartupSync）→ 以云端为准前先把
+ *   本地导出为下载备份。
  * - 会话内：controller 每次落盘经 notifyLocalSaved 通知，节流推送云端；
  *   推送失败只降级状态显示，改动仍在本地，下次落盘或下次启动时重试。
  * - 关闭页面时不做冲刺推送（unload 期间的请求不可靠）；尾窗内的改动
@@ -12,11 +13,11 @@
  */
 import {
   createCloudSyncClient,
+  decideStartupSync,
   type CloudCredentials,
   type SaveDocument,
 } from '@bravecat/core/cloud'
 import type { GameState } from '@bravecat/core/game'
-import { decideStartupSync } from './cloudSyncPolicy'
 
 const CREDENTIALS_KEY = 'bravecat.cloud.credentials'
 const LAST_LOCAL_CHANGE_KEY = 'bravecat.cloud.lastLocalChangeAt'
@@ -122,7 +123,7 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
 
   const pushNow = async (): Promise<'ok' | 'failed' | 'upgrade-required'> => {
     // exportedAt 写入「最后一次本地改动时间」而非推送时刻，
-    // 使跨设备的较新者胜比较有稳定语义（见 cloudSyncPolicy.ts）。
+    // 使跨设备的较新者胜比较有稳定语义（见 core/cloud 的 decideStartupSync）。
     const exportedAt = lastLocalChangeAt ?? now()
     if (lastLocalChangeAt === null) recordLocalChange(exportedAt)
     const exportLatest = latestExport ?? deps.exportDocument

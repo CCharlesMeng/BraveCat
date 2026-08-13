@@ -1,6 +1,10 @@
+// web 消费方视角的启动同步决策用例；实现在 @bravecat/core/cloud（原 web 本地实现已统一到 core）。
 import { describe, expect, it } from 'vitest'
-import { SAVE_SCHEMA_VERSION, type SaveDocument } from '@bravecat/core/cloud'
-import { decideStartupSync } from './cloudSyncPolicy'
+import {
+  SAVE_SCHEMA_VERSION,
+  decideStartupSync,
+  type SaveDocument,
+} from '@bravecat/core/cloud'
 
 const cloudDocument = (exportedAt: number): SaveDocument => ({
   schemaVersion: SAVE_SCHEMA_VERSION,
