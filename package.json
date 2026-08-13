@@ -14,6 +14,7 @@
     "preview": "npm run preview --workspace @bravecat/web",
     "test": "npm run test --workspaces --if-present && npm run test:scripts",
     "test:scripts": "node --test \"scripts/**/*.test.mjs\"",
+    "test:e2e": "npm run test:e2e --workspace @bravecat/web",
     "check": "npm run check --workspaces --if-present",
     "assets:archive": "node scripts/archive-assets.mjs --expansion-plan docs/art/landmark-expansion-v2.json --expansion-plan docs/art/landmark-expansion-v3.json --visual-approval docs/art/reviews/landmarks/visual-approval.v2.json --composite-approval docs/art/reviews/landmarks/composites/approval.v2.json --rights-review docs/art/reviews/landmarks/rights-review-v3-addendum.md --rights-decision docs/art/reviews/landmarks/rights-decision.v2.json --archive-output docs/art/archive/asset-archive.v2.json --archive-readme-output docs/art/archive/README.v2.md --review-index-output docs/art/candidates/landmarks/review-index.archive.v3.md",
     "assets:check": "npm run assets:archive -- --check",

@@ -16,6 +16,10 @@ dist-ssr
 .env
 .asset-publish/
 
+# Playwright E2E 产物
+test-results/
+playwright-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
