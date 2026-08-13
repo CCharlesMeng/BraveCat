@@ -107,6 +107,8 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
   let accountId = $state<string | null>(null)
   let creditsBalance = $state<number | null>(null)
   let notice = $state('')
+  /** 服务端 aigcAvatar 开关；关闭时「生成专属形象」入口不出现。 */
+  let aigcEnabled = $state(false)
 
   let started = false
   /** 启动同步完成且未触发版本护栏后才允许节流推送。 */
@@ -157,6 +159,15 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
     }, PUSH_THROTTLE_MS)
   }
 
+  /** 生成次数余额只是展示信息，拉取失败不影响同步。 */
+  const refreshCreditsBalance = async () => {
+    try {
+      creditsBalance = await client.getCreditsBalance()
+    } catch {
+      // 保留上一次的余额展示。
+    }
+  }
+
   /** 启动同步；在 controller.hydrate() 完成后调用一次。 */
   const start = async () => {
     started = true
@@ -167,6 +178,7 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
         status = 'server-off'
         return
       }
+      aigcEnabled = meta.platforms.web?.featureFlags?.aigcAvatar === true
 
       const credentials = await client.ensureGuestAccount()
       accountId = credentials.userId
@@ -198,11 +210,7 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
         status = 'synced'
       }
 
-      try {
-        creditsBalance = await client.getCreditsBalance()
-      } catch {
-        // 余额只是展示信息，拉取失败不影响同步。
-      }
+      await refreshCreditsBalance()
     } catch {
       status = 'error'
     }
@@ -234,7 +242,20 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
     get notice() {
       return notice
     },
+    get aigcEnabled() {
+      return aigcEnabled
+    },
     start,
     notifyLocalSaved,
+    refreshCreditsBalance,
+    /** AIGC 形象生成闭环的客户端方法（PortraitStudio 与形象列表用）。 */
+    portraits: {
+      upload: client.uploadPortraitPhoto,
+      submit: client.submitPortraitGeneration,
+      wait: client.waitForPortraitGeneration,
+      confirm: client.confirmPortraitGeneration,
+      list: client.listPortraits,
+      poseImage: client.getPortraitPoseImage,
+    },
   }
 }

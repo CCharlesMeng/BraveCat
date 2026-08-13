@@ -2,7 +2,12 @@
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   import type { PackItemRejectionReason } from '@bravecat/core/economy'
-  import type { ItemDefinition } from '@bravecat/core/assets'
+  import type {
+    AssetCatalog,
+    ItemDefinition,
+    Portrait,
+  } from '@bravecat/core/assets'
+  import type { PortraitPose, UserPortrait } from '@bravecat/core/cloud'
   import {
     LANDMARK_SCENES_SHIPPING_ELIGIBLE,
     PRODUCTION_STARTER_CATALOG,
@@ -44,7 +49,15 @@
   import type { TravelState } from '@bravecat/core/travel'
   import { bridgeGameController } from './lib/gameClient.svelte'
   import { createWebCloudSync } from './lib/cloudSync.svelte'
+  import PortraitStudio from './lib/PortraitStudio.svelte'
+  import {
+    cloudPortraitAssetPath,
+    cloudPortraitName,
+    cloudPortraitSetRevision,
+    toCatalogPortrait,
+  } from './lib/portraitStudio'
   import { apiBaseUrl } from './lib/platform/apiBase'
+  import { registerCloudAssetUrl } from './lib/platform/cloudAssetRegistry'
   import {
     downloadBlob,
     installWebAssetResolver,
@@ -122,6 +135,27 @@
       (portrait) => portrait.id === id,
     ),
   )
+  // 云端已确认的 AIGC 专属形象（ADR-0004 只向未来生效）；
+  // 默认构建（无 VITE_API_BASE_URL）恒为空，目录与行为与纯本地版一致。
+  let cloudPortraits = $state<Portrait[]>([])
+  const runtimeCatalog = {
+    ...STARTER_CATALOG,
+    get portraits() {
+      return cloudPortraits.length === 0
+        ? STARTER_CATALOG.portraits
+        : [...STARTER_CATALOG.portraits, ...cloudPortraits]
+    },
+    get portraitSetRevisions() {
+      return cloudPortraits.length === 0
+        ? STARTER_CATALOG.portraitSetRevisions
+        : {
+          ...STARTER_CATALOG.portraitSetRevisions,
+          ...Object.fromEntries(cloudPortraits.map(
+            ({ id }) => [id, cloudPortraitSetRevision(id)],
+          )),
+        }
+    },
+  } satisfies AssetCatalog
   const homeActivities = {
     sleep: {
       pose: 'sleep',
@@ -196,6 +230,8 @@
     },
     random: webRandom,
   }, {
+    // 目录含云端专属形象（getter 动态合并），无云时与 STARTER_CATALOG 等价。
+    catalog: runtimeCatalog,
     homeActivityOverride: readHomeActivityOverride,
     homeActivityPool: () => (
       (Object.keys(homeActivities) as HomeActivity[]).filter(
@@ -238,6 +274,7 @@
   let purchaseFlowBusy = $state(false)
   let shopNotice = $state('')
   let portraitChoicesOpen = $state(false)
+  let portraitStudioOpen = $state(false)
   let themeChoicesOpen = $state(false)
   let selectedWishDestinationId = $state<DestinationId>(
     controller.catalog.destinations[0].id,
@@ -262,12 +299,19 @@
   const catName = $derived(catProfile?.name ?? 'Minho')
   const activeHomeActivity = $derived(homeActivities[homeActivity])
   const activePortrait = $derived(
-    STARTER_CATALOG.portraits.find(
+    runtimeCatalog.portraits.find(
       ({ id }) => id === (catProfile?.portraitId ?? 'minho'),
     ) ?? STARTER_CATALOG.portraits[0],
   )
   const homePortraitSrc = $derived(
     resolveAssetUrl(activePortrait.poses[activeHomeActivity.pose]),
+  )
+  const selectablePortraits = $derived(
+    [...switchablePortraits, ...cloudPortraits],
+  )
+  // 「更换形象」在有多个可选形象、或可以生成新形象时出现。
+  const portraitChoicesAvailable = $derived(
+    selectablePortraits.length > 1 || (cloudSync?.aigcEnabled ?? false),
   )
   const homeTime = $derived(homeTimeFor(new Date(gameNow)))
   const homeScene = $derived(resolveHomeScene(
@@ -635,7 +679,7 @@
         hydrateNotice = '没有读到上次的家，暂时从这里开始。'
       }
       // 启动同步要等本地水合完成，pull 比较才有正确的本地基准。
-      void cloudSync?.start()
+      void cloudSync?.start().then(loadCloudPortraits)
     })
 
     const interval = window.setInterval(() => {
@@ -697,7 +741,7 @@
       portraitChoicesOpen = false
       if (result === 'unchanged') return
 
-      const portraitName = STARTER_CATALOG.portraits.find(
+      const portraitName = runtimeCatalog.portraits.find(
         ({ id }) => id === portraitId,
       )?.name ?? '新形象'
       activityNotice = travel.kind === 'planned'
@@ -708,6 +752,53 @@
         ? error.message
         : '这次没能更换形象。'
     }
+  }
+
+  /** 云端形象记录进目录：登记会话内图片 URL 后加入可选列表。 */
+  const adoptCloudPortrait = (
+    portrait: UserPortrait,
+    poseUrls: Partial<Record<PortraitPose, string>>,
+  ) => {
+    for (const [pose, storageKey] of Object.entries(portrait.poses)) {
+      const url = poseUrls[pose as PortraitPose]
+      if (url) registerCloudAssetUrl(cloudPortraitAssetPath(storageKey), url)
+    }
+    cloudPortraits = [
+      ...cloudPortraits,
+      toCatalogPortrait(portrait, cloudPortraitName(cloudPortraits.length)),
+    ]
+  }
+
+  /** 启动时恢复云端已确认形象：跨会话保持可选列表与存档引用可渲染。 */
+  const loadCloudPortraits = async () => {
+    if (!cloudSync?.accountId) return
+    try {
+      for (const portrait of await cloudSync.portraits.list()) {
+        if (cloudPortraits.some(({ id }) => id === portrait.id)) continue
+        const poseUrls: Partial<Record<PortraitPose, string>> = {}
+        for (const pose of Object.keys(portrait.poses) as PortraitPose[]) {
+          const image = await cloudSync.portraits.poseImage(
+            portrait.jobId,
+            pose,
+          )
+          poseUrls[pose] = URL.createObjectURL(
+            new Blob([image.bytes as BlobPart], { type: image.contentType }),
+          )
+        }
+        adoptCloudPortrait(portrait, poseUrls)
+      }
+    } catch {
+      // 云形象加载失败不影响本地玩法；引用它的存档暂以默认形象渲染。
+    }
+  }
+
+  const handlePortraitConfirmed = (
+    portrait: UserPortrait,
+    poseUrls: Partial<Record<PortraitPose, string>>,
+  ) => {
+    adoptCloudPortrait(portrait, poseUrls)
+    activityNotice =
+      '专属形象已经加入可选列表；换上后只对之后的旅行生效。'
   }
 
   const purchaseItem = async (item: ItemDefinition) => {
@@ -1149,7 +1240,7 @@
       <div class="room-copy">
         <div class="cat-name-row">
           <p class="cat-name">{catName}</p>
-          {#if switchablePortraits.length > 1}
+          {#if portraitChoicesAvailable}
             <button
               class="portrait-choice-toggle"
               type="button"
@@ -1183,9 +1274,9 @@
         </p>
       </div>
 
-      {#if portraitChoicesOpen && switchablePortraits.length > 1}
+      {#if portraitChoicesOpen && portraitChoicesAvailable}
         <div class="portrait-choices" aria-label={`为${catName}更换形象`}>
-          {#each switchablePortraits as portrait}
+          {#each selectablePortraits as portrait (portrait.id)}
             <button
               type="button"
               class:active={portrait.id === activePortrait.id}
@@ -1197,6 +1288,19 @@
               <span>{portrait.name}</span>
             </button>
           {/each}
+          {#if cloudSync?.aigcEnabled}
+            <button
+              type="button"
+              class="portrait-generate-entry"
+              onclick={() => {
+                portraitStudioOpen = true
+                portraitChoicesOpen = false
+              }}
+            >
+              <span class="portrait-generate-mark" aria-hidden="true">＋</span>
+              <span>用照片生成专属形象</span>
+            </button>
+          {/if}
         </div>
       {/if}
 
@@ -1720,5 +1824,14 @@
       </div>
     {/if}
   </dialog>
+{/if}
+
+{#if portraitStudioOpen && cloudSync}
+  <PortraitStudio
+    {cloudSync}
+    {catName}
+    onConfirmed={handlePortraitConfirmed}
+    onClose={() => portraitStudioOpen = false}
+  />
 {/if}
 {/if}

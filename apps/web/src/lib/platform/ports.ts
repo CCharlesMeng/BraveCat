@@ -9,6 +9,7 @@ import {
   type SharePort,
 } from '@bravecat/core'
 import { assetBaseUrl } from './assetBase'
+import { lookupCloudAssetUrl } from './cloudAssetRegistry'
 import { Capacitor } from '@capacitor/core'
 import {
   nativeSaveTransfer,
@@ -55,9 +56,15 @@ export const webShare: SharePort = {
   download: downloadBlob,
 }
 
-/** web 端默认相对根路径；设 VITE_ASSET_BASE_URL 后改走 CDN（见 assetBase.ts）。 */
+/**
+ * web 端默认相对根路径；设 VITE_ASSET_BASE_URL 后改走 CDN（见 assetBase.ts）。
+ * 云端形象的会话内 blob URL 优先（登记表默认为空，见 cloudAssetRegistry.ts）。
+ */
 export const installWebAssetResolver = () => {
-  configureAssetResolver(createBaseUrlAssetResolver(assetBaseUrl))
+  const base = createBaseUrlAssetResolver(assetBaseUrl)
+  configureAssetResolver({
+    resolve: (assetPath) => lookupCloudAssetUrl(assetPath) ?? base.resolve(assetPath),
+  })
 }
 
 /**

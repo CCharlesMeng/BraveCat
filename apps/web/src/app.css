@@ -1403,6 +1403,224 @@ main {
   object-fit: contain;
 }
 
+.portrait-choices .portrait-generate-entry {
+  border-style: dashed;
+  color: var(--ink-soft);
+}
+
+.portrait-generate-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px dashed rgba(90, 103, 73, 0.4);
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.portrait-studio-backdrop {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  border: 0;
+  background: rgba(62, 60, 47, 0.34);
+  cursor: pointer;
+}
+
+.portrait-studio {
+  position: fixed;
+  z-index: 31;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: min(420px, calc(100vw - 32px));
+  max-height: min(86vh, 640px);
+  gap: 14px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(82, 82, 67, 0.2);
+  border-radius: 22px;
+  background:
+    radial-gradient(rgba(105, 96, 72, 0.045) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
+    var(--paper);
+  box-shadow: 0 18px 42px rgba(56, 54, 41, 0.24);
+  color: var(--ink);
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+}
+
+.portrait-studio header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.portrait-studio header p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.67rem;
+  letter-spacing: 0.12em;
+}
+
+.portrait-studio header h2 {
+  margin: 3px 0 0;
+  font-size: 1.02rem;
+}
+
+.portrait-studio-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(90, 103, 73, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.portrait-studio-body {
+  display: grid;
+  gap: 12px;
+}
+
+.portrait-studio-intro {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.portrait-studio-picker {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px dashed rgba(90, 103, 73, 0.42);
+  border-radius: 16px;
+  background: rgba(255, 252, 241, 0.66);
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.68rem;
+  place-items: center;
+  text-align: center;
+}
+
+.portrait-studio-picker img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.portrait-studio-picker input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.portrait-studio-notice {
+  margin: 0;
+  color: #a06a52;
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.portrait-studio-progress {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-align: center;
+}
+
+.portrait-studio-failure {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.portrait-studio-facts {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(82, 82, 67, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 252, 241, 0.58);
+}
+
+.portrait-studio-facts p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.64rem;
+  line-height: 1.65;
+}
+
+.portrait-studio-facts strong {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.portrait-studio-poses {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  list-style: none;
+}
+
+.portrait-studio-poses li {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid rgba(90, 103, 73, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 252, 241, 0.7);
+  place-items: center;
+}
+
+.portrait-studio-poses img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.portrait-studio-poses span {
+  color: var(--ink-soft);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.56rem;
+}
+
+.portrait-studio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.portrait-studio-actions button {
+  min-height: 36px;
+  padding: 8px 16px;
+  border: 1px solid rgba(90, 103, 73, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.68rem;
+}
+
+.portrait-studio-actions button.primary {
+  border-color: rgba(90, 103, 73, 0.46);
+  background: rgba(228, 234, 216, 0.9);
+  font-weight: 650;
+}
+
+.portrait-studio-actions button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
 .room-copy p:last-child {
   color: #4f5144;
   font-size: 0.76rem;
