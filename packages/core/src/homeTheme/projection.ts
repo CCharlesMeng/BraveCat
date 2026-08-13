@@ -2,6 +2,10 @@
  * 画布投影工具：把设计画布坐标转换成响应式 CSS 定位。
  *
  * 所有函数以 form 的设计画布为参数，本身不携带任何具体房间的尺寸。
+ *
+ * 注：本模块（及 ResolvedHomeScene 里的 style 字段）输出 CSS 字符串，
+ * 属 web 表现约定；Phase 0 按务实原则随 homeTheme 整体进 core，
+ * 样式字符串输出未来按端口拆分（如小程序端换成结构化布局描述）。
  */
 import type {
   CanvasRect,
