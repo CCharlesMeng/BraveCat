@@ -45,6 +45,9 @@ export const buildApp = (options: BuildAppOptions) => {
     origin: [...(options.corsOrigins ?? DEFAULT_DEV_CORS_ORIGINS)],
   })
 
+  // 容器 / 负载均衡 / 反向代理探活：无鉴权、不触库，进程能响应即 200。
+  app.get('/healthz', async () => ({ status: 'ok' }))
+
   const deps: RouteDeps = {
     repositories: options.repositories,
     economyValidator: options.economyValidator,
