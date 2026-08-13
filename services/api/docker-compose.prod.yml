@@ -1,0 +1,53 @@
+# 生产部署（阿里云轻量服务器 / 容器服务）：api + Postgres。完整步骤见 docs/deployment.md。
+#
+#   cd services/api
+#   cp .env.example .env   # 填写 POSTGRES_PASSWORD 与 CORS_ALLOWED_ORIGINS
+#   docker compose -f docker-compose.prod.yml up -d --build
+#
+# 迁移（首次启动与每次升级后执行；重复执行安全）：
+#   docker compose -f docker-compose.prod.yml run --rm api node dist/migrate.js
+#
+# 冒烟：curl -fsS http://127.0.0.1:3000/healthz
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: services/api/Dockerfile
+    image: bravecat-api:${API_IMAGE_TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PORT: "3000"
+      HOST: 0.0.0.0
+      DATABASE_URL: postgres://bravecat:${POSTGRES_PASSWORD:?在 .env 中设置 POSTGRES_PASSWORD}@postgres:5432/bravecat
+      # 生产必填：逗号分隔的完整 origin 列表（如 https://app.example.com），
+      # 未配置时 api 只放行 localhost（dev 默认），线上 web 端会被 CORS 拦截。
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:?在 .env 中设置 CORS_ALLOWED_ORIGINS}
+      ECONOMY_MAX_EARN_PER_HOUR: ${ECONOMY_MAX_EARN_PER_HOUR:-600}
+      ECONOMY_INITIAL_EARN_ALLOWANCE: ${ECONOMY_INITIAL_EARN_ALLOWANCE:-100}
+      # AIGC 云服务凭证（全部可选，见 README「环境变量」）按需追加在此，
+      # 或改用 env_file 指向服务器上的私密文件。
+    ports:
+      # 只绑本机回环；公网流量经由反向代理做 HTTPS 终结（见 docs/deployment.md）。
+      - "127.0.0.1:3000:3000"
+
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bravecat
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?在 .env 中设置 POSTGRES_PASSWORD}
+      POSTGRES_DB: bravecat
+    volumes:
+      - bravecat-pgdata-prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bravecat -d bravecat"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  bravecat-pgdata-prod:

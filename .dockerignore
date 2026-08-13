@@ -1,0 +1,14 @@
+# services/api/Dockerfile 以仓库根为构建上下文；白名单式只放行镜像需要的内容，
+# 避免把 docs/art 的大量图片、apps 源码与本地 node_modules 送进构建上下文。
+*
+!package.json
+!package-lock.json
+!packages/contracts
+!packages/core/package.json
+!services/api
+!apps/web/package.json
+!apps/mobile/package.json
+!apps/miniprogram/package.json
+**/node_modules
+**/dist
+**/.env
