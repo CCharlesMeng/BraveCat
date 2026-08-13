@@ -7,7 +7,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const distRoot = path.join(root, 'dist')
+const distRoot = path.join(root, 'apps/web/dist')
 const productionRoot = path.join(root, 'docs/art/production/landmarks')
 
 const assert = (condition, message) => {

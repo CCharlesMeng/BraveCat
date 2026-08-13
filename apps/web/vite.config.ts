@@ -6,7 +6,8 @@ import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const repositoryRoot = path.dirname(fileURLToPath(import.meta.url))
+const appRoot = path.dirname(fileURLToPath(import.meta.url))
+const repositoryRoot = path.resolve(appRoot, '../..')
 const productionManifestRoot = path.join(
   repositoryRoot,
   'docs/art/production/landmarks',
@@ -156,12 +157,12 @@ export default defineConfig({
       name: 'strip-development-preview-and-non-shipping-scenes',
       apply: 'build',
       closeBundle() {
-        rmSync(path.join(repositoryRoot, 'dist/dev-art'), {
+        rmSync(path.join(appRoot, 'dist/dev-art'), {
           recursive: true,
           force: true,
         })
         if (!productionManifest.shippingEligible) {
-          rmSync(path.join(repositoryRoot, 'dist/scenes'), {
+          rmSync(path.join(appRoot, 'dist/scenes'), {
             recursive: true,
             force: true,
           })

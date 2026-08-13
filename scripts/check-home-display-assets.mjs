@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const webRoot = path.join(root, 'apps/web')
 const manifestPath = path.join(
   root,
   'docs/art/production/home-display/manifest.v2.json',
@@ -75,7 +76,7 @@ for (const asset of manifest.assets) {
   )
 
   const candidatePath = path.join(root, asset.candidate)
-  const runtimePath = path.join(root, 'public', asset.runtime)
+  const runtimePath = path.join(webRoot, 'public', asset.runtime)
   assert(await exists(runtimePath), `home display runtime asset is missing for ${asset.id}`)
 
   const bytes = await readFile(runtimePath)
@@ -247,16 +248,16 @@ assert(
 )
 
 assert(
-  !await exists(path.join(root, 'public', removedTableRuntime)),
+  !await exists(path.join(webRoot, 'public', removedTableRuntime)),
   'removed souvenir table runtime asset still exists',
 )
 
 for (const sourcePath of [
-  'src/App.svelte',
-  'src/app.css',
-  'src/lib/homeArt.ts',
-  'src/lib/homeTheme/forms/classic-v4.ts',
-  'src/lib/homeTheme/pieces/index.ts',
+  'apps/web/src/App.svelte',
+  'apps/web/src/app.css',
+  'apps/web/src/lib/homeArt.ts',
+  'apps/web/src/lib/homeTheme/forms/classic-v4.ts',
+  'apps/web/src/lib/homeTheme/pieces/index.ts',
 ]) {
   const source = await readFile(path.join(root, sourcePath), 'utf8')
   assert(
