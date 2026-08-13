@@ -1,16 +1,20 @@
 import { describe, expect, it } from 'vitest'
 import {
   ErrorCode,
+  MAX_PORTRAIT_PHOTO_BYTES,
   SAVE_SCHEMA_VERSION,
+  SETTLED_GENERATION_JOB_STATUSES,
   apiErrorResponseSchema,
   authTokenResponseSchema,
   generationJobSchema,
+  generationJobStatusSchema,
   metaResponseSchema,
   portraitGenerationPoses,
   redeemPurchaseRequestSchema,
   saveDocumentSchema,
   submitGenerationRequestSchema,
   submitTransactionsRequestSchema,
+  uploadPortraitPhotoRequestSchema,
   userPortraitSchema,
 } from '../src/index.js'
 
@@ -115,6 +119,39 @@ describe('portrait generation schemas', () => {
     expect(
       generationJobSchema.safeParse({ ...base, status: 'rendering' }).success,
     ).toBe(false)
+  })
+
+  it('照片上传请求只接受 PNG/JPEG 与非空 base64', () => {
+    expect(
+      uploadPortraitPhotoRequestSchema.safeParse({
+        contentType: 'image/png',
+        dataBase64: 'aGVsbG8=',
+      }).success,
+    ).toBe(true)
+    expect(
+      uploadPortraitPhotoRequestSchema.safeParse({
+        contentType: 'image/gif',
+        dataBase64: 'aGVsbG8=',
+      }).success,
+    ).toBe(false)
+    expect(
+      uploadPortraitPhotoRequestSchema.safeParse({
+        contentType: 'image/jpeg',
+        dataBase64: '',
+      }).success,
+    ).toBe(false)
+  })
+
+  it('照片上限与 5MB bodyLimit 兼容（base64 膨胀 ×4/3 后仍在限内）', () => {
+    expect(Math.ceil((MAX_PORTRAIT_PHOTO_BYTES * 4) / 3)).toBeLessThan(
+      5 * 1024 * 1024,
+    )
+  })
+
+  it('终态列表与 job 状态机枚举对齐', () => {
+    for (const status of SETTLED_GENERATION_JOB_STATUSES) {
+      expect(generationJobStatusSchema.options).toContain(status)
+    }
   })
 
   it('形象记录的姿势套图必须穷举全部姿势', () => {

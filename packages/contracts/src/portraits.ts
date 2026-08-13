@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { PORTRAIT_PHOTO_CONTENT_TYPES } from './portrait-generation.js'
 
 /**
  * Portrait 姿势 id 的 API 侧投影。
@@ -126,8 +127,45 @@ export const generationJobSchema = z.object({
 export type GenerationJob = z.infer<typeof generationJobSchema>
 
 /**
+ * POST /v1/portraits/photos 请求：最小照片上传端点。
+ * 走 JSON + base64 以复用现有 bodyLimit 与客户端字符串体 HTTP 端口；
+ * 大小上限见 portrait-generation.ts 的 MAX_PORTRAIT_PHOTO_BYTES。
+ * 生产接入 OSS 后可换成预签名 URL 直传，此端点随之退役。
+ */
+export const uploadPortraitPhotoRequestSchema = z.object({
+  contentType: z.enum(PORTRAIT_PHOTO_CONTENT_TYPES),
+  dataBase64: z.string().min(1),
+})
+
+export type UploadPortraitPhotoRequest = z.infer<
+  typeof uploadPortraitPhotoRequestSchema
+>
+
+/** POST /v1/portraits/photos 响应（201）：photoKey 供提交生成时引用。 */
+export const uploadPortraitPhotoResponseSchema = z.object({
+  photoKey: z.string(),
+})
+
+export type UploadPortraitPhotoResponse = z.infer<
+  typeof uploadPortraitPhotoResponseSchema
+>
+
+/**
+ * GET /v1/portraits/generations/:jobId/poses/:pose 响应：产出图字节的
+ * base64 投影（与上传同一取舍：复用 JSON 端口；生产换预签名 URL）。
+ */
+export const portraitPoseImageResponseSchema = z.object({
+  contentType: z.string(),
+  dataBase64: z.string(),
+})
+
+export type PortraitPoseImageResponse = z.infer<
+  typeof portraitPoseImageResponseSchema
+>
+
+/**
  * POST /v1/portraits/generations 请求。photoKey 为已上传照片的对象存储引用
- * （上传本身走客户端直传/预签名 URL，不经本服务转发字节）。
+ * （本地/小规模走 POST /v1/portraits/photos；生产可换客户端直传/预签名 URL）。
  */
 export const submitGenerationRequestSchema = z.object({
   idempotencyKey: z.string().min(1).max(128),
@@ -154,6 +192,13 @@ export const userPortraitSchema = z.object({
 })
 
 export type UserPortrait = z.infer<typeof userPortraitSchema>
+
+/** GET /v1/portraits 响应：当前账号全部已确认形象（按创建时间升序）。 */
+export const listPortraitsResponseSchema = z.object({
+  portraits: z.array(userPortraitSchema),
+})
+
+export type ListPortraitsResponse = z.infer<typeof listPortraitsResponseSchema>
 
 /** POST /v1/portraits/generations/:jobId/confirm 响应。 */
 export const confirmGenerationResponseSchema = z.object({
