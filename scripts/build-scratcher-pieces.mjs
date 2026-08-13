@@ -10,6 +10,7 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
+import { keyedPng, contactShadowSvg } from './lib/piece-utils.mjs'
 
 const width = 1200
 const height = 1600
@@ -23,27 +24,6 @@ const FORMS = [
   { slug: 'b-warm-walnut-gallery', source: 'scratcher-b-walnut-greenscreen-v01.png' },
   { slug: 'f-moonwhite-bluegray', source: 'scratcher-f-smokeblue-greenscreen-v01.png' },
 ]
-
-const keyedPng = async (sourcePath) => {
-  const { data, info } = await sharp(sourcePath).ensureAlpha().raw()
-    .toBuffer({ resolveWithObject: true })
-  for (let offset = 0; offset < data.length; offset += 4) {
-    const red = data[offset]
-    const green = data[offset + 1]
-    const blue = data[offset + 2]
-    const greenness = green - Math.max(red, blue)
-    if (greenness >= 70) {
-      data[offset + 3] = 0
-    } else if (greenness > 30) {
-      data[offset + 3] = Math.round(255 * (1 - (greenness - 30) / 40))
-    }
-    if (data[offset + 3] > 0) {
-      data[offset + 1] = Math.min(green, Math.round(Math.max(red, blue) * 1.15))
-    }
-  }
-  return sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
-    .png().toBuffer()
-}
 
 for (const { slug, source } of FORMS) {
   const geometry = JSON.parse(await readFile(
@@ -65,11 +45,24 @@ for (const { slug, source } of FORMS) {
   await sharp({
     create: { width, height, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
   })
-    .composite([{
-      input: await sharp(trimmed).resize(scaledWidth, scaledHeight).png().toBuffer(),
-      left,
-      top,
-    }])
+    .composite([
+      {
+        input: contactShadowSvg({
+          canvasWidth: width,
+          canvasHeight: height,
+          cx: left + scaledWidth / 2,
+          cy: top + scaledHeight + 4,
+          rx: Math.round(scaledWidth * 0.5),
+          ry: 22,
+          opacity: 0.28,
+        }),
+      },
+      {
+        input: await sharp(trimmed).resize(scaledWidth, scaledHeight).png().toBuffer(),
+        left,
+        top,
+      },
+    ])
     .png()
     .toFile(piecePath)
 

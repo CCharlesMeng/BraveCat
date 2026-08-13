@@ -114,12 +114,51 @@ F 白橡+烟蓝双平台）键控 → 等比缩放进 v02 scratcher socket regio
   与 postcard 框的 z 序为“框画在帘上”，物理上帘更近，帘布应拆进
   foreground occlusion——留待遮挡拆层轮。
 
+## 第四~六件：cabinet / rug / plant（还原修复轮）
+
+用户对 dressed v01 的判定是「跟效果图差太多」：房间空、无阴影、光照平。
+修复轮由 `scripts/build-room-furnishing-pieces.mjs` 一次装配三件
+（绿幕原稿归档为 `source--{cabinet,rug,plant}--imagegen-v01.png`）：
+
+- `piece--cabinet--candidate-v01.png`：A 藤编双门柜 245×303、B 胡桃
+  长矮柜 380×154、F 白橡移门柜 435×176。A/B 素材自带 3/4 视角，
+  不做 quad 二次透视 warp，按 region 底边对齐；右墙件要求侧板朝右、
+  顶面向左上（VP 方向）收——A 原稿即满足，**B 原稿水平翻转后落位**。
+- `piece--rug--candidate-v01.png`：三套主地毯（鼠尾草圆毯 / 陶土边
+  藤编椭圆毯 / 灰蓝月白滚边椭圆毯），region 内居中，平贴地面不加影。
+- `piece--plant--candidate-v01.png`：三套独立盆栽。**植物底部锚到
+  装配后的实际柜顶 +14px**，不用冻结 region 底边（冻结几何假设的
+  柜顶偏高，直接用会悬空）；放置结果写进
+  `placement--furnishings--v01.json` 供动态内容 QA 复用。
+- 落地件（cabinet、plant，及补装的 scratcher、feeding-set）在部件层内
+  垫径向渐变软椭圆接触阴影（`scripts/lib/piece-utils.mjs` 的
+  `contactShadowSvg`），解决 v01 的漂浮感。
+- `qa--piece-furnishings--v01.png`：三件 + socket region 对位证据。
+
+## 光照层（还原修复轮）
+
+`scripts/build-form-lighting.mjs` 按 v02 窗洞生成
+`piece--lighting--candidate-v01.png`（z 带 lighting，最后叠加）：
+窗心暖色径向光晕 + 地板暖光池 + 四周冷色 vignette，专治 v01 的
+「产品渲染感」平光。
+
 ## 全件穿戴 QA
 
 `scripts/build-dressed-room-qa.mjs` 把每套 form 当前全部候选部件按
 z 序（exterior → shell → window-frame → 轨/框 → scratcher →
 feeding-set）合成为 `qa--dressed-room--v01.png`，江湾 v03 以 1.10
 倍率居中作窗外景。仅证据用途，不是 runtime 合成器。
+
+**v02（还原修复轮）**：同脚本重写后输出 `qa--dressed-room--v02.png`
+与横向总览条 `qa--dressed-room--overview--v02.png`。z 序扩展为：
+exterior → shell → window-frame → 轨 → rug → cabinet → scratcher →
+feeding-set → plant → **六张明信片**（6 张外景母版裁片按 slot quad
+列线性 warp 贴入，B 为右墙透视）→ F 前景相框 → **柜顶纪念品**
+（postmark-pin / travel-charm，y 锚到实际柜顶）→ **窗台零食**
+（fish-biscuit 贴 treat 锚点）→ **rug 上睡猫**（sleep spritesheet
+第 0 帧，宽约 rug 46%）→ 光照层。动态内容直接取运行时资产
+（`apps/web/public/assets/`、`dev-art/home-v4/cat-animations/`），
+仅作合层证据，不固化进任何部件。
 
 ## Exterior 视差行程 QA（联动 home-exteriors 试点）
 

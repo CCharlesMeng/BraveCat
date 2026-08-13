@@ -238,6 +238,16 @@ production 未就绪**。
    cabinet。全件穿戴 QA 见 `production/*/qa--dressed-room--v01.png`。
    剩余件：`cabinet`（A/B 需右墙透视处理）→ `rug` → `plant`；
    遮挡拆层债务：窗台前沿 foreground、F 帘布压 postcard 框的 z 序。
+   **更新（2026-08-13 夜·还原修复轮）：**用户判定 dressed v01「跟
+   效果图差太多」（空、平光、漂浮、无生活感）。修复内容：cabinet /
+   rug / plant 三件三套齐（A/B 柜用自带 3/4 视角素材按 region 落位，
+   B 翻转；植物锚实际柜顶）；落地件统一垫接触阴影；每形态产出程序化
+   光照层（窗晕 + 地板光池 + vignette）；dressed v02 加入动态内容
+   （六张外景明信片按 slot quad warp、柜顶纪念品、窗台零食、rug 睡
+   猫）。证据：`production/*/qa--dressed-room--v02.png` 与
+   `production/qa--dressed-room--overview--v02.png`。全部仍为候选，
+   `runtimeEligible=false`。已知残债：B 矮柜偏薄、贴墙读感略悬浮；
+   plant/souvenir 冻结锚点的柜顶假设偏高，待 v03 冻结吸收实测柜顶。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前
