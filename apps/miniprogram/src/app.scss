@@ -1,0 +1,133 @@
+/* 全局设计基调：与 web 端 app.css 的暖纸色系对齐。 */
+page {
+  background: #f6f1e3;
+  color: #4d4b42;
+  font-size: 28px;
+  line-height: 1.6;
+}
+
+.brand-kicker {
+  display: block;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  color: #879b70;
+  text-transform: uppercase;
+}
+
+.page-title {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  color: #4d4b42;
+}
+
+.muted {
+  color: #727064;
+}
+
+.small {
+  font-size: 22px;
+}
+
+.notice {
+  display: block;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: rgba(135, 155, 112, 0.14);
+  color: #5d6b48;
+  font-size: 24px;
+}
+
+/* 列表卡片（行囊 / 小铺 / 相册共用）。 */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(91, 83, 64, 0.16);
+}
+
+.card-token {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+}
+
+.card-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #4d4b42;
+}
+
+.card-action {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: #879b70;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+
+  &.secondary {
+    background: rgba(135, 155, 112, 0.16);
+    color: #5d6b48;
+  }
+
+  &.disabled {
+    background: rgba(91, 83, 64, 0.12);
+    color: #a09d8f;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 20px;
+}
+
+.tab {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(91, 83, 64, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 26px;
+  color: #727064;
+
+  &.active {
+    background: #879b70;
+    border-color: #879b70;
+    color: #fff;
+  }
+}
+
+.section-title {
+  display: block;
+  margin: 24px 4px 12px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #4d4b42;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 24px;
+  text-align: center;
+
+  image {
+    width: 200px;
+    height: 200px;
+  }
+}

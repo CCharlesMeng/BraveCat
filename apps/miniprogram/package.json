@@ -1,0 +1,54 @@
+{
+  "name": "@bravecat/miniprogram",
+  "private": true,
+  "version": "0.0.0",
+  "description": "咪游记微信小程序表现层：Taro(React) 薄视图 + 平台端口适配器，领域逻辑全部来自 @bravecat/core",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "Sass",
+    "framework": "React"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "test": "vitest run",
+    "check": "tsc --noEmit"
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "@bravecat/core": "^0.1.0",
+    "@tarojs/components": "4.2.1",
+    "@tarojs/helper": "4.2.1",
+    "@tarojs/plugin-framework-react": "4.2.1",
+    "@tarojs/plugin-platform-weapp": "4.2.1",
+    "@tarojs/react": "4.2.1",
+    "@tarojs/runtime": "4.2.1",
+    "@tarojs/shared": "4.2.1",
+    "@tarojs/taro": "4.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-class-properties": "7.25.9",
+    "@babel/preset-react": "^7.27.1",
+    "@tarojs/cli": "4.2.1",
+    "@tarojs/vite-runner": "4.2.1",
+    "@types/node": "^24.13.2",
+    "@types/react": "^18.3.12",
+    "@vitejs/plugin-react": "^4.7.0",
+    "babel-preset-taro": "4.2.1",
+    "postcss": "^8.5.6",
+    "react-refresh": "^0.14.2",
+    "sass": "^1.75.0",
+    "terser": "^5.30.4",
+    "typescript": "~6.0.2",
+    "vite": "^4.5.14",
+    "vitest": "^4.1.10"
+  }
+}
