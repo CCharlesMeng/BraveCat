@@ -25,6 +25,10 @@ const FORMS = {
     slug: 'a-clear-sage',
     geometry: 'home-form--a-clear-sage--geometry-v01.json',
   },
+  b: {
+    slug: 'b-warm-walnut-gallery',
+    geometry: 'home-form--b-warm-walnut-gallery--geometry-v01.json',
+  },
   f: {
     slug: 'f-moonwhite-bluegray',
     geometry: 'home-form--f-moonwhite-bluegray--geometry-v01.json',

@@ -1,0 +1,413 @@
+{
+  "formId": "clear-sage",
+  "approvedDirection": "bravecat-home-theme-a--clear-sage--concept-v01.png",
+  "canvas": {
+    "width": 1200,
+    "height": 1600
+  },
+  "camera": {
+    "type": "one-point",
+    "horizonY": 880,
+    "vanishingPoint": [
+      600,
+      880
+    ]
+  },
+  "walls": {
+    "backWall": {
+      "left": 70,
+      "top": 210,
+      "right": 930,
+      "floorY": 1070
+    },
+    "rightWall": {
+      "cornerX": 906,
+      "nearX": 1200
+    }
+  },
+  "windowAperture": {
+    "x": 149,
+    "y": 299,
+    "width": 419,
+    "height": 614
+  },
+  "postcardSlots": [
+    {
+      "quad": [
+        [
+          618,
+          320
+        ],
+        [
+          738,
+          320
+        ],
+        [
+          738,
+          425
+        ],
+        [
+          618,
+          425
+        ]
+      ]
+    },
+    {
+      "quad": [
+        [
+          768,
+          320
+        ],
+        [
+          888,
+          320
+        ],
+        [
+          888,
+          425
+        ],
+        [
+          768,
+          425
+        ]
+      ]
+    },
+    {
+      "quad": [
+        [
+          618,
+          480
+        ],
+        [
+          738,
+          480
+        ],
+        [
+          738,
+          585
+        ],
+        [
+          618,
+          585
+        ]
+      ]
+    },
+    {
+      "quad": [
+        [
+          768,
+          480
+        ],
+        [
+          888,
+          480
+        ],
+        [
+          888,
+          585
+        ],
+        [
+          768,
+          585
+        ]
+      ]
+    },
+    {
+      "quad": [
+        [
+          618,
+          640
+        ],
+        [
+          738,
+          640
+        ],
+        [
+          738,
+          745
+        ],
+        [
+          618,
+          745
+        ]
+      ]
+    },
+    {
+      "quad": [
+        [
+          768,
+          640
+        ],
+        [
+          888,
+          640
+        ],
+        [
+          888,
+          745
+        ],
+        [
+          768,
+          745
+        ]
+      ]
+    }
+  ],
+  "rails": [
+    {
+      "x": 603,
+      "y": 432,
+      "width": 295
+    },
+    {
+      "x": 603,
+      "y": 592,
+      "width": 295
+    },
+    {
+      "x": 603,
+      "y": 752,
+      "width": 295
+    }
+  ],
+  "cabinetFrontQuad": [
+    [
+      930,
+      894
+    ],
+    [
+      1150,
+      903.4
+    ],
+    [
+      1150,
+      1221.5
+    ],
+    [
+      930,
+      1084.9
+    ]
+  ],
+  "sockets": [
+    {
+      "id": "window-frame",
+      "kind": "window-frame",
+      "region": {
+        "x": 100,
+        "y": 250,
+        "width": 500,
+        "height": 660
+      }
+    },
+    {
+      "id": "postcard-display",
+      "kind": "postcard-display",
+      "region": {
+        "x": 615,
+        "y": 300,
+        "width": 305,
+        "height": 475
+      }
+    },
+    {
+      "id": "scratcher",
+      "kind": "scratcher",
+      "region": {
+        "x": 55,
+        "y": 620,
+        "width": 185,
+        "height": 620
+      }
+    },
+    {
+      "id": "feeding-set",
+      "kind": "feeding-set",
+      "region": {
+        "x": 295,
+        "y": 1120,
+        "width": 250,
+        "height": 145
+      }
+    },
+    {
+      "id": "cabinet",
+      "kind": "cabinet",
+      "region": {
+        "x": 920,
+        "y": 840,
+        "width": 245,
+        "height": 385
+      }
+    },
+    {
+      "id": "rug",
+      "kind": "rug",
+      "region": {
+        "x": 255,
+        "y": 1265,
+        "width": 690,
+        "height": 275
+      }
+    },
+    {
+      "id": "plant",
+      "kind": "plant",
+      "region": {
+        "x": 1080,
+        "y": 690,
+        "width": 105,
+        "height": 212
+      }
+    }
+  ],
+  "souvenirAnchors": [
+    {
+      "id": "souvenir-1",
+      "x": 950,
+      "y": 852,
+      "width": 54,
+      "height": 46
+    },
+    {
+      "id": "souvenir-2",
+      "x": 1012,
+      "y": 854,
+      "width": 56,
+      "height": 48
+    },
+    {
+      "id": "souvenir-3",
+      "x": 1075,
+      "y": 858,
+      "width": 52,
+      "height": 44
+    }
+  ],
+  "treatAnchor": {
+    "id": "treat",
+    "x": 455,
+    "y": 830,
+    "width": 105,
+    "height": 84
+  },
+  "catZones": [
+    {
+      "label": "gaze（窗台/爬架顶）",
+      "polygon": [
+        [
+          70,
+          640
+        ],
+        [
+          330,
+          640
+        ],
+        [
+          330,
+          900
+        ],
+        [
+          70,
+          900
+        ]
+      ]
+    },
+    {
+      "label": "eat",
+      "polygon": [
+        [
+          280,
+          1080
+        ],
+        [
+          560,
+          1080
+        ],
+        [
+          560,
+          1290
+        ],
+        [
+          280,
+          1290
+        ]
+      ]
+    },
+    {
+      "label": "sleep（rug）",
+      "polygon": [
+        [
+          300,
+          1290
+        ],
+        [
+          900,
+          1290
+        ],
+        [
+          900,
+          1520
+        ],
+        [
+          300,
+          1520
+        ]
+      ]
+    },
+    {
+      "label": "play",
+      "polygon": [
+        [
+          70,
+          1290
+        ],
+        [
+          295,
+          1290
+        ],
+        [
+          295,
+          1560
+        ],
+        [
+          70,
+          1560
+        ]
+      ]
+    }
+  ],
+  "exclusionZones": [
+    {
+      "label": "plant 独占",
+      "polygon": [
+        [
+          1080,
+          690
+        ],
+        [
+          1185,
+          690
+        ],
+        [
+          1185,
+          902
+        ],
+        [
+          1080,
+          902
+        ]
+      ]
+    }
+  ],
+  "zBands": [
+    "shell",
+    "rear-pieces",
+    "cat",
+    "dynamic-content",
+    "piece-occlusion",
+    "lighting"
+  ],
+  "freezeLevel": "measured-freeze-v02",
+  "sourceShell": "shell--aperture-alpha--candidate-v01.png",
+  "cornerX": 906
+}

@@ -50,6 +50,19 @@ Home Exterior 是独立于房间 shell、窗框、HomeForm 和 Home Theme preset
 - 视差本身是运行时渲染层行为（exterior 层放大 + 偏移），不改变画布
   合同、form 几何与存档结构。
 
+### 新规格试点：江湾 v03（2026-08-13 下午）
+
+`scripts/build-exterior-remaster-pilot.mjs` 按上述规格重制了江湾母版：
+
+- 母版：`approved-direction-2026-08-13/masters/ext-riverbend-embankment--master--noon-clear--candidate-v03.png`
+  （1200×1600；生成件等宽放大到 1200×1800 后向上偏置裁切）。
+- 地平线机器实测 **y 580**，落在 y 520–640 带内（蓝度骤降行检测）。
+- 行程 QA：以 1.10 倍率、±60px 行程合成进 A/F clean shell 窗洞，
+  三联证据见 `approved-direction-2026-08-13/validation/riverbend-parallax/`；
+  两种窗型在行程两端均保持"上天空、中远岸小屋、下水面"构图，无露底。
+- 结论：新规格可执行；其余 9 地点母版按同一管线逐个重制，
+  时间/天气派生须以 v03 构图为新 reference 重新出图。
+
 ## 候选目录
 
 ```text

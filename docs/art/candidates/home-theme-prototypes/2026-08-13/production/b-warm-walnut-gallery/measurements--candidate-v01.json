@@ -1,0 +1,25 @@
+{
+  "form": "b-warm-walnut-gallery",
+  "aperturePixels": 372935,
+  "apertureBBox": {
+    "minX": 119,
+    "minY": 225,
+    "maxX": 659,
+    "maxY": 931
+  },
+  "apertureControl": {
+    "x": 95,
+    "y": 270,
+    "right": 655,
+    "bottom": 905
+  },
+  "apertureDelta": {
+    "left": 24,
+    "top": -45,
+    "right": 4,
+    "bottom": 26
+  },
+  "cornerMeasuredX": 783,
+  "cornerControlX": 690,
+  "cornerDeltaX": 93
+}

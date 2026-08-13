@@ -204,9 +204,18 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
    独立窗洞 mask 候选已产出并完成控制线对齐实测，见 `production/`；
    偏差与欠账记录于该目录 README，待用户核验后按实测冻结运行时
    坐标。逐平面 HomeFinish 未开始。
+   **更新（2026-08-13 下午）：**用户以“按顺序推进”签收 B 控制图，
+   B 的 clean shell / aperture alpha / mask / 实测已按同一管线产出
+   （转角实测 783 vs 控制 690，画廊须整体右移）。A/B/F 三套均已按实测
+   冻结为 `geometry--measured-freeze-v02.json` + v02 QA 叠图；后续部件
+   与运行时集成一律消费 v02。
 4. 每个 form 的透明 HomePiece 顺序：
    `postcard-display` → `scratcher` → `feeding-set` → `cabinet` →
    `window-frame` → `rug` → `plant`。
+   **进行中（2026-08-13 下午）：**A/F 的 postcard-display base 首件
+   （三条轨，绿幕键控 → v02 坐标落位）已产出候选与对位 QA，见
+   `production/*/piece--postcard-display-rails--candidate-v01.png`；
+   六卡空框/轨前沿 foreground 与 B 的透视轨条未产出。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前
@@ -350,3 +359,102 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
    support/exclusion 和中心 3:4 实际裁切验证完成前，不进入 runtime。
 3. 独立物件恢复生产前，仍须换用能输出真实 alpha 或可验证恒定 RGB 隔离底、
    并能从同一母版导出 base / foreground 的管线。
+
+## 2026-08-13 · A / F 第二批造型审阅源
+
+本批只签收 `feeding-set`、`cabinet`、`window-frame`、`rug` 与 `plant`
+的独立造型、材质和配色，不是 production alpha。十张主审阅图均使用米白
+纸面背景，生成请求为 1:1，实测全部为 **1024×1024**；没有误标为 3:4 或
+1200×1600。全部实测 `hasAlpha: no`，纸纹和轻微水彩接触影均已烘焙，
+不得抠图或复制到 runtime。
+
+### A · 清润鼠尾草
+
+- feeding-set：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--feeding-set-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：两只空置斑点青瓷系碗落在
+  单一浅鼠尾草椭圆垫上；无食物、水、第二张垫、脚垫或其他道具，边界完整。
+- cabinet：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--cabinet-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：浅白蜡木、双藤编门、独立
+  柜脚和完整柜顶成立；柜顶为空，无纪念品、书、篮筐、花瓶或附着房间结构。
+- window-frame：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02-blackmask-normalized-v01.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：浅木完整框、窗台和鼠尾草
+  亚麻罗马帘均未裁切，窗洞不含 exterior。黑窗洞归一化后实测
+  222,734 个 near-black 像素全部为精确 RGB `#000000`，不存在非精确
+  near-black 像素；这仍是不透明审阅遮罩，不是 aperture alpha。
+- rug：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--rug-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：单一低饱和鼠尾草椭圆编织
+  地毯完整居中；无地板、家具、玩具或第二张垫子。
+- plant：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--plant-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：单一象牙斑点陶瓶与纤细
+  鼠尾草枝叶形成克制安全轮廓；无第二容器或承托家具，尺寸未巨大遮墙。
+
+### F · 月白蓝灰错层
+
+- feeding-set：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--feeding-set-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：两只空置蓝白陶瓷碗落在
+  单一冷灰蓝椭圆承托垫上；无食物、水、第二张垫、脚垫、平台或其他道具。
+- cabinet v01：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--cabinet-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**复核后淘汰**：低矮独立柜体、空柜顶和冷灰蓝
+  拉手成立，但木作明显偏蜂蜜色暖橡，和 F 的月白/白橡/烟蓝色板冲突。
+- cabinet v02：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--cabinet-shape-review-source--candidate-v02-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：改为低饱和月白洗色白橡木，
+  月白门板与烟蓝灰拉手清楚；完整顶板、侧板、底框和短柜脚使其明确读成
+  独立柜体而非平台，柜顶为空。
+- window-frame：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02-blackmask-normalized-v01.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：白橡完整框、窗台、帘杆与
+  两侧轻薄蓝灰帘均未裁切，窗洞不含 exterior。黑窗洞归一化后实测
+  268,169 个 near-black 像素全部为精确 RGB `#000000`，不存在非精确
+  near-black 像素；这仍是不透明审阅遮罩，不是 aperture alpha。
+- rug：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--rug-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：单一冷灰蓝椭圆编织地毯
+  完整居中；无地板、平台、家具、玩具或第二张垫子。
+- plant：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--plant-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无。**造型审阅通过**：单一蓝白小陶瓶与克制枝叶
+  形成安全、疏朗的小尺度轮廓；无第二容器、平台或承托家具。
+
+### 窗洞失败与淘汰证据
+
+两套初稿和一次生成式重做的窗洞肉眼接近黑色，但机器实测仍混有 near-black
+渐变，因此全部淘汰并保留，未覆盖旧文件。主审阅路径改用从重做稿非破坏
+派生的黑遮罩归一化版本；归一化只把与窗洞中心连通且 RGB 最大通道值不超过
+96 的 aperture 区域压为 `#000000`，没有声称产生 alpha。
+
+- A 初稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--window-frame-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无；exact black 141,048，near-black 222,820，
+  其中 81,772 像素并非精确黑，**淘汰**。
+- A 重做原稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02.png`
+  — 1024×1024，alpha：无；exact black 175,848，near-black 221,905，
+  其中 46,057 像素并非精确黑，**淘汰**。
+- F 初稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--window-frame-shape-review-source--candidate-v01-not-alpha.png`
+  — 1024×1024，alpha：无；exact black 157,893，near-black 260,851，
+  其中 102,958 像素并非精确黑，**淘汰**。
+- F 重做原稿：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--window-frame-shape-review-source--candidate-v01-not-alpha--retry-v02.png`
+  — 1024×1024，alpha：无；exact black 179,483，near-black 266,620，
+  其中 87,137 像素并非精确黑，**淘汰**。
+
+### 本批统一 QA 与阻断
+
+- 十张主审阅图在本批范围内通过：每张只含一种完整物件组，主体居中且留白
+  充足，无裁切、房间、猫、UI、文字、水印或动态内容；未见额外部件。
+- A 的浅木、象牙与鼠尾草，以及 F 的月白、白橡与冷灰蓝保持一眼可区分；
+  两套物件的画面占比、柔和低饱和水彩和米白纸面语言一致。
+- 这些文件只解决造型、材质与配色审阅，**不能解决 socket、房间透视、
+  遮挡拆层、alpha 或像素注册阻断**；也没有提供锚点、support surface、
+  exclusion zone、base / foreground 同母版导出或猫动画叠层证据。
+- 在用户签收造型前继续留在外部候选目录；签收后仍需用可控管线按冻结
+  HomeForm 生产真实透明 base / foreground，并逐件完成注册与遮挡 QA。
