@@ -7,9 +7,15 @@
  *
  * 说明：A/B 柜体素材自带 3/4 视角，因此不做 cabinetFrontQuad 的
  * 二次透视 warp，直接按 region 底边对齐放置。右墙件要求侧板朝右、
- * 顶面向左上（VP 方向）收：A 原稿即满足，B 原稿需水平翻转。
+ * 顶面向左上（VP 方向）收：A 原稿与 B v02 斗柜原稿均满足，无需翻转
+ * （B v01 长矮柜需翻转，已被 v02 高身斗柜取代）。
  * 植物底部锚到装配后的实际柜顶（冻结几何的柜顶假设偏高），
  * 放置结果写进 placement--furnishings--v01.json 供后续 QA 复用。
+ *
+ * 布局调优轮（对照签收效果图）：rug/plant 的 socket region 尺寸与
+ * 效果图差距过大（rug 占地约 65–74% 画宽、plant 约 15% 画高），
+ * 以 LAYOUT_TUNING 内的调优 box 覆盖冻结 region；rug 允许 fill
+ * 拉伸到目标椭圆比。调优数值是 v03 几何冻结的输入。
  *
  * Usage:
  *   node scripts/build-room-furnishing-pieces.mjs
@@ -45,7 +51,7 @@ const SOURCES = {
     plant: { file: 'plant-a-celadon-greenscreen-v01.png' },
   },
   'b-warm-walnut-gallery': {
-    cabinet: { file: 'cabinet-b-walnut-greenscreen-v01.png', flop: true },
+    cabinet: { file: 'cabinet-b-walnut-dresser-greenscreen-v02.png', archiveVersion: 'v02' },
     rug: { file: 'rug-b-jute-greenscreen-v01.png' },
     plant: { file: 'plant-b-terracotta-greenscreen-v01.png' },
   },
@@ -53,6 +59,25 @@ const SOURCES = {
     cabinet: { file: 'cabinet-f-oak-greenscreen-v01.png' },
     rug: { file: 'rug-f-bluegrey-greenscreen-v01.png' },
     plant: { file: 'plant-f-moonwhite-greenscreen-v01.png' },
+  },
+}
+
+/** 布局调优 box：覆盖冻结 socket region；rug 用 fill 拉到目标椭圆比。 */
+const LAYOUT_TUNING = {
+  'a-clear-sage': {
+    rug: { x: 180, y: 1270, width: 840, height: 310, fit: 'fill' },
+    plant: { x: 1050, y: 600, width: 150, height: 280 },
+  },
+  'b-warm-walnut-gallery': {
+    /* 斗柜底边压到近端墙脚线（冻结 region 底边 1210 略悬）；
+       plant 让出右下 postcard 框（slot 右缘 x1105），贴斗柜右端。 */
+    cabinet: { x: 790, y: 875, width: 380, height: 360 },
+    rug: { x: 210, y: 1290, width: 780, height: 300, fit: 'fill' },
+    plant: { x: 1085, y: 600, width: 110, height: 230 },
+  },
+  'f-moonwhite-bluegray': {
+    rug: { x: 200, y: 1240, width: 800, height: 330, fit: 'fill' },
+    plant: { x: 950, y: 600, width: 130, height: 240 },
   },
 }
 
@@ -65,12 +90,13 @@ for (const [slug, sources] of Object.entries(SOURCES)) {
   const placements = {}
 
   for (const { kind, align, shadow } of PIECES) {
-    const { file, flop } = sources[kind]
-    const region = geometry.sockets.find(({ id }) => id === kind).region
+    const { file, flop, archiveVersion = 'v01' } = sources[kind]
+    const region = LAYOUT_TUNING[slug]?.[kind]
+      ?? geometry.sockets.find(({ id }) => id === kind).region
 
     await copyFile(
       path.join(stagingRoot, file),
-      path.join(productionRoot, slug, `source--${kind}--imagegen-v01.png`),
+      path.join(productionRoot, slug, `source--${kind}--imagegen-${archiveVersion}.png`),
     )
 
     let keyed = await keyedPng(path.join(stagingRoot, file))
@@ -78,8 +104,8 @@ for (const [slug, sources] of Object.entries(SOURCES)) {
     const trimmed = await sharp(keyed).trim({ threshold: 10 }).png().toBuffer()
     const meta = await sharp(trimmed).metadata()
     const scale = Math.min(region.width / meta.width, region.height / meta.height)
-    const scaledWidth = Math.round(meta.width * scale)
-    const scaledHeight = Math.round(meta.height * scale)
+    const scaledWidth = region.fit === 'fill' ? region.width : Math.round(meta.width * scale)
+    const scaledHeight = region.fit === 'fill' ? region.height : Math.round(meta.height * scale)
     const left = Math.round(region.x + (region.width - scaledWidth) / 2)
     let top = align === 'bottom'
       ? region.y + region.height - scaledHeight
@@ -104,7 +130,7 @@ for (const [slug, sources] of Object.entries(SOURCES)) {
       })
     }
     layers.push({
-      input: await sharp(trimmed).resize(scaledWidth, scaledHeight).png().toBuffer(),
+      input: await sharp(trimmed).resize(scaledWidth, scaledHeight, { fit: 'fill' }).png().toBuffer(),
       left,
       top,
     })

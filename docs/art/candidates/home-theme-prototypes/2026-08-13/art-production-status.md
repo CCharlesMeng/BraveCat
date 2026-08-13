@@ -248,6 +248,13 @@ production 未就绪**。
    `production/qa--dressed-room--overview--v02.png`。全部仍为候选，
    `runtimeEligible=false`。已知残债：B 矮柜偏薄、贴墙读感略悬浮；
    plant/souvenir 冻结锚点的柜顶假设偏高，待 v03 冻结吸收实测柜顶。
+   **更新（2026-08-13 夜·布局调优轮）：**以签收效果图为基准收敛
+   dressed v02：三套 rug 放大到效果图比例并 fill 拉伸；B 柜以高身
+   2×2 藤编斗柜 source v02 重制（长矮柜残债清偿，底边压墙脚线）；
+   植物三套放大、B 植物让出画架；A/B 爬架收矮、F 爬架与碗组按
+   效果图移上平台。全部调优数值收敛在装配脚本 `LAYOUT_TUNING`，
+   是 v03 冻结输入；证据仍看 `qa--dressed-room--v02.png` 三张与
+   总览条。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前

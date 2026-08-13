@@ -185,9 +185,9 @@ for (const slug of ['a-clear-sage', 'b-warm-walnut-gallery', 'f-moonwhite-bluegr
   /* 窗台零食。 */
   layers.push(await placeInto(treatBiscuit, geometry.treatAnchor))
 
-  /* rug 上的睡猫：宽度约为 rug 的 46%，卧在 rug 中带。 */
+  /* rug 上的睡猫：宽度约为 rug 的 40%，卧在 rug 中带。 */
   const rug = placements.rug
-  const catWidth = Math.round(rug.width * 0.46)
+  const catWidth = Math.round(rug.width * 0.4)
   layers.push(await placeInto(catSleep, {
     x: rug.left + Math.round((rug.width - catWidth) / 2),
     y: rug.top - 40,

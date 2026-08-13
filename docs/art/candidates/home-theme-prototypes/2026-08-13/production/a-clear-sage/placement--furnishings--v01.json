@@ -6,15 +6,15 @@
     "height": 303
   },
   "rug": {
-    "left": 255,
-    "top": 1283,
-    "width": 690,
-    "height": 239
+    "left": 180,
+    "top": 1270,
+    "width": 840,
+    "height": 310
   },
   "plant": {
-    "left": 1080,
-    "top": 778,
-    "width": 105,
-    "height": 158
+    "left": 1050,
+    "top": 711,
+    "width": 150,
+    "height": 225
   }
 }

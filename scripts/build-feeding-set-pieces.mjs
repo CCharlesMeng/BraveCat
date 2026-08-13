@@ -25,11 +25,21 @@ const FORMS = [
   { slug: 'f-moonwhite-bluegray', source: 'feeding-f-bluewhite-greenscreen-v01.png' },
 ]
 
+/**
+ * 布局调优 box（对照签收效果图，v03 冻结输入）：F 效果图的碗垫组
+ * 立在抬高平台上、窗前偏右（避开 x300–405 的 treat 锚点），
+ * 不在低层地面。A/B 维持冻结 region。
+ */
+const LAYOUT_TUNING = {
+  'f-moonwhite-bluegray': { x: 390, y: 895, width: 230, height: 95 },
+}
+
 for (const { slug, source } of FORMS) {
   const geometry = JSON.parse(await readFile(
     path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
   ))
-  const region = geometry.sockets.find(({ id }) => id === 'feeding-set').region
+  const region = LAYOUT_TUNING[slug]
+    ?? geometry.sockets.find(({ id }) => id === 'feeding-set').region
   const keyed = await keyedPng(path.join(stagingRoot, source))
   const trimmed = await sharp(keyed).trim({ threshold: 10 }).png().toBuffer()
   const meta = await sharp(trimmed).metadata()

@@ -25,11 +25,23 @@ const FORMS = [
   { slug: 'f-moonwhite-bluegray', source: 'scratcher-f-smokeblue-greenscreen-v01.png' },
 ]
 
+/**
+ * 布局调优 box（对照签收效果图，v03 冻结输入）：
+ * A/B 爬架比效果图高大，收矮并前移落地；F 效果图爬架立在抬高平台上
+ * （平台前沿左端 y≈990），不在低层地面。
+ */
+const LAYOUT_TUNING = {
+  'a-clear-sage': { x: 55, y: 850, width: 185, height: 440 },
+  'b-warm-walnut-gallery': { x: 70, y: 930, width: 170, height: 430 },
+  'f-moonwhite-bluegray': { x: 45, y: 535, width: 200, height: 440 },
+}
+
 for (const { slug, source } of FORMS) {
   const geometry = JSON.parse(await readFile(
     path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
   ))
-  const region = geometry.sockets.find(({ id }) => id === 'scratcher').region
+  const region = LAYOUT_TUNING[slug]
+    ?? geometry.sockets.find(({ id }) => id === 'scratcher').region
   const keyed = await keyedPng(path.join(stagingRoot, source))
   const trimmed = await sharp(keyed).trim({ threshold: 10 }).png().toBuffer()
   const meta = await sharp(trimmed).metadata()
