@@ -25,5 +25,7 @@ declare namespace NodeJS {
     TARO_APP_ID: string
     /** 运行时资产 CDN base URL；开发期可指向本地静态服务器（见 README）。 */
     TARO_APP_ASSET_BASE_URL?: string
+    /** 云功能 API 地址；留空 = 云同步整体关闭（见 README 云同步一节）。 */
+    TARO_APP_API_BASE_URL?: string
   }
 }

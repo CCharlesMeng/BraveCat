@@ -10,8 +10,9 @@ import { resolvePostcardComposition } from '@bravecat/core/postcards'
 import {
   LANDMARK_SCENES_SHIPPING_ELIGIBLE,
 } from '@bravecat/core/assets/starterCatalog'
-import { controller, hydrateOnce } from '../../game/controller'
+import { cloudSync, controller, hydrateOnce } from '../../game/controller'
 import { useGameSnapshot, useSettleLoop } from '../../game/useGameClient'
+import CloudSyncSection from './CloudSyncSection'
 import {
   findDestination,
   findSouvenir,
@@ -225,6 +226,8 @@ export default function Album() {
         </View>
         {transferNotice && <Text className="notice">{transferNotice}</Text>}
       </View>
+
+      {cloudSync && <CloudSyncSection sync={cloudSync} />}
     </View>
   )
 }
