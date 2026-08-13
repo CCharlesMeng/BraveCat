@@ -1,0 +1,23 @@
+{
+  "name": "@bravecat/mobile",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Capacitor shell packaging the @bravecat/web build for iOS and Android",
+  "scripts": {
+    "build:web": "npm --prefix ../web run build",
+    "sync": "cap sync",
+    "open:ios": "cap open ios",
+    "open:android": "cap open android"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/core": "^8.5.0",
+    "@capacitor/filesystem": "^8.1.2",
+    "@capacitor/ios": "^8.5.0",
+    "@capacitor/share": "^8.0.1"
+  }
+}
