@@ -46,6 +46,18 @@ export const createFakeCanvas = () => {
   return canvas
 }
 
+export interface MockRequestOptions {
+  url: string
+  method?: string
+  header?: Record<string, string>
+  data?: unknown
+}
+
+export interface MockRequestResponse {
+  statusCode: number
+  data: unknown
+}
+
 export const state = {
   randomValuesAvailable: true,
   randomBytes: null as Uint8Array | null,
@@ -56,6 +68,13 @@ export const state = {
   devicePlatform: 'android',
   writtenFiles: [] as { filePath: string, data: string, encoding: string }[],
   lastCreatedCanvas: null as ReturnType<typeof createFakeCanvas> | null,
+  /** wx.request 的响应脚本；null 时 request 按网络失败 reject。 */
+  requestHandler: null as
+    | ((options: MockRequestOptions) => MockRequestResponse)
+    | null,
+  /** 实际发出的请求记录，供断言 URL / 头 / body。 */
+  requests: [] as MockRequestOptions[],
+  loginCode: 'mock-wx-code',
 }
 
 export const resetTaroMock = () => {
@@ -69,6 +88,9 @@ export const resetTaroMock = () => {
   state.devicePlatform = 'android'
   state.writtenFiles = []
   state.lastCreatedCanvas = null
+  state.requestHandler = null
+  state.requests = []
+  state.loginCode = 'mock-wx-code'
   vi.clearAllMocks()
 }
 
@@ -84,6 +106,19 @@ const taro = {
   setStorage: vi.fn(async ({ key, data }: { key: string, data: unknown }) => {
     storage.set(key, data)
   }),
+  removeStorage: vi.fn(async ({ key }: { key: string }) => {
+    storage.delete(key)
+  }),
+
+  request: vi.fn(async (options: MockRequestOptions) => {
+    state.requests.push(options)
+    if (!state.requestHandler) {
+      throw { errMsg: 'request:fail mock 未配置响应' }
+    }
+    return state.requestHandler(options)
+  }),
+
+  login: vi.fn(async () => ({ code: state.loginCode })),
 
   get getRandomValues() {
     if (!state.randomValuesAvailable) return undefined
