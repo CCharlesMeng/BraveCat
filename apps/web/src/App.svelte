@@ -1,18 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
-  import {
-    getPackItemRejectionReason,
-    reduceEconomy,
-    type EconomyAction,
-    type PackItemRejectionReason,
-  } from '@bravecat/core/economy'
+  import type { PackItemRejectionReason } from '@bravecat/core/economy'
   import type { ItemDefinition } from '@bravecat/core/assets'
   import {
     LANDMARK_SCENES_SHIPPING_ELIGIBLE,
     PRODUCTION_STARTER_CATALOG,
     STARTER_CATALOG,
-    STARTER_DESTINATIONS,
   } from '@bravecat/core/assets/starterCatalog'
   import { STARTER_ITEMS } from '@bravecat/core/assets/starterItems'
   import {
@@ -36,42 +30,26 @@
   import HomeThemePicker from './lib/HomeThemePicker.svelte'
   // dev-only 家主题配置器，生产构建不会挂载。
   import ThemeLab from './lib/ThemeLab.svelte'
-  import {
-    advanceAllGameEvents,
-    adoptCat,
-    changeCatPortrait,
-    createInitialGameState,
-    isGameState,
-    restoreGameState,
-    selectActiveCat,
-    setHomeCustomization,
-    type GameState,
-  } from '@bravecat/core/game'
-  import { planItinerary } from '@bravecat/core/itinerary'
-  import { createPlanTrip } from '@bravecat/core/planTrip'
+  import { createGameController, resolveAssetUrl } from '@bravecat/core'
+  import type { GameState } from '@bravecat/core/game'
   import Postcard from './lib/Postcard.svelte'
   import {
     createPostcardPng,
     postcardFileName,
-    reducePostcards,
     resolvePostcardComposition,
     shareOrDownloadPostcard,
   } from '@bravecat/core/postcards'
   import { createIndexedDbSaveStore } from '@bravecat/core/save'
-  import { selectTripContent } from '@bravecat/core/selection'
-  import {
-    beginPurchaseChoice,
-    confirmPurchasedItemInPack,
-    keepPurchasedItemAtHome,
-    type PendingPurchase,
-  } from '@bravecat/core/shop'
-  import { createClock } from '@bravecat/core/time'
-  import {
-    createSeededRandom,
-    createTravelLifecycle,
-    type TravelState,
-  } from '@bravecat/core/travel'
   import type { DestinationId, PortraitId } from '@bravecat/core/ids'
+  import type { TravelState } from '@bravecat/core/travel'
+  import { bridgeGameController } from './lib/gameClient.svelte'
+  import {
+    downloadBlob,
+    installWebAssetResolver,
+    webPostcardCanvas,
+    webRandom,
+    webShare,
+  } from './lib/platform/ports'
   // PROTOTYPE — 右退深墙面原型，验证后随 wallLayoutPrototype.ts 一起删除。
   import WallLayoutPrototype from './lib/WallLayoutPrototype.svelte'
   import { wallPrototypeVariantKeyFor } from './lib/wallLayoutPrototype'
@@ -83,9 +61,6 @@
     kind: AlbumView
     id: string
   } | null
-  const INITIAL_CAT_ID = 'minho'
-  const PACK_CAPACITY = 3
-  const POSTCARD_VARIETY_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1_000
   const HOME_TRAVEL_STATE = { kind: 'home' } as const satisfies TravelState
   const isDevelopment = import.meta.env.DEV
   const readHomeActivityOverride = () => homeActivityOverrideFor(
@@ -197,93 +172,55 @@
   let albumView = $state<AlbumView>('postcards')
   let albumDetail = $state<AlbumDetail>(null)
   let shopCategory = $state<ShopCategory>('snack')
-  const clock = createClock()
-  const saveStore = createIndexedDbSaveStore<GameState>('bravecat', {
-    validateState: isGameState,
-    migrations: {
-      0: (document) => ({
-        ...document,
-        schemaVersion: 1,
-      }),
-      1: (document) => ({
-        ...document,
-        schemaVersion: 2,
-      }),
-      2: (document) => ({
-        ...document,
-        schemaVersion: 3,
-        state: restoreGameState(
-          document.state,
-          clock.now(),
-          STARTER_CATALOG,
-        ),
-      }),
-      // v4 起根存档携带全家共享的 homeCustomization；宽松恢复会注入默认预设。
-      3: (document) => ({
-        ...document,
-        schemaVersion: 4,
-        state: restoreGameState(
-          document.state,
-          clock.now(),
-          STARTER_CATALOG,
-        ),
-      }),
-    },
+
+  // web 端资产走相对根路径（恒等解析），行为与端口引入前一致。
+  installWebAssetResolver()
+  // 模板里直接引用素材目录路径时统一走 AssetResolver。
+  const asset = resolveAssetUrl
+  // 平台端口注入：IndexedDB 存档、crypto 随机源；编排逻辑都在 core。
+  const controller = createGameController({
+    createSaveStore: (options) => createIndexedDbSaveStore('bravecat', options),
+    random: webRandom,
+  }, {
+    homeActivityOverride: readHomeActivityOverride,
+    homeActivityPool: () => (
+      (Object.keys(homeActivities) as HomeActivity[]).filter(
+        (activity) => showHomeArtPreview || activity !== 'gaze',
+      )
+    ),
   })
-  const planTrip = createPlanTrip({
-    planItinerary,
-    selectContent: selectTripContent,
-  })
-  const tripRhythm = {
-      departureDelayMs: [30 * 60 * 1_000, 6 * 60 * 60 * 1_000],
-      travelDurationMs: [2 * 60 * 60 * 1_000, 24 * 60 * 60 * 1_000],
-      postcardCount: [1, 2],
-      secondPostcardChance: 0.3,
-  } as const
-  const createTripSeed = () => {
-    const values = new Uint32Array(1)
-    crypto.getRandomValues(values)
-    return values[0]
-  }
-  const travelLifecycleFor = (
-    travelerCatId: string,
-    portraitId: PortraitId,
-  ) => createTravelLifecycle({
-      catalog: STARTER_CATALOG,
-      travelerCatId,
-      portraitId,
-      destinations: STARTER_DESTINATIONS,
-      rhythm: tripRhythm,
-      planTrip,
-      createSeed: createTripSeed,
-      randomFromSeed: createSeededRandom,
-    })
-  let game = $state(createInitialGameState(clock.now()))
-  let gameNow = $state(clock.now())
-  let hydrated = $state(false)
+  const client = bridgeGameController(controller)
+  const PACK_CAPACITY = controller.packCapacity
+
   let adoptionName = $state('Minho')
   let adoptionNotice = $state('')
-  let homeActivity = $state<HomeActivity>('sleep')
+  let hydrateNotice = $state('')
   let activityNotice = $state('')
-  let persistenceNotice = $state('')
   let transferNotice = $state('')
   let postcardExportNotice = $state('')
   let postcardExportBusy = $state(false)
   let developmentGrantAmount = $state(24)
-  let pendingPurchase = $state<PendingPurchase | null>(null)
   let purchaseFlowBusy = $state(false)
   let shopNotice = $state('')
   let portraitChoicesOpen = $state(false)
   let themeChoicesOpen = $state(false)
   let selectedWishDestinationId = $state<DestinationId>(
-    STARTER_DESTINATIONS[0].id,
+    controller.catalog.destinations[0].id,
+  )
+  const game = $derived(client.snapshot.game)
+  const gameNow = $derived(client.snapshot.now)
+  const hydrated = $derived(client.snapshot.hydrated)
+  const homeActivity = $derived(client.snapshot.homeActivity)
+  const pendingPurchase = $derived(client.snapshot.pendingPurchase)
+  const persistenceNotice = $derived(
+    client.snapshot.saveFailed ? '这次没能保存，先别关闭页面。' : hydrateNotice,
   )
   const drawer = $derived(activeDrawer ? drawerDetails[activeDrawer] : null)
   const economy = $derived(game.economy)
   const activeCatId = $derived(
     game.activeCatId ?? game.cats[0]?.id ?? null,
   )
-  const activeCatKey = $derived(activeCatId ?? INITIAL_CAT_ID)
+  const activeCatKey = $derived(controller.activeCatKeyOf(game))
   const catProfile = $derived(
     game.cats.find(({ id }) => id === activeCatId) ?? null,
   )
@@ -295,7 +232,7 @@
     ) ?? STARTER_CATALOG.portraits[0],
   )
   const homePortraitSrc = $derived(
-    activePortrait.poses[activeHomeActivity.pose],
+    resolveAssetUrl(activePortrait.poses[activeHomeActivity.pose]),
   )
   const homeTime = $derived(homeTimeFor(new Date(gameNow)))
   const homeScene = $derived(resolveHomeScene(
@@ -335,10 +272,7 @@
     game.travelByCat[activeCatKey] ?? HOME_TRAVEL_STATE,
   )
   const travelPresence = $derived(
-    travelLifecycleFor(
-      activeCatKey,
-      catProfile?.portraitId ?? 'minho',
-    ).getPresence(travel, gameNow),
+    controller.presence(game, activeCatKey, gameNow),
   )
   const currentTripId = $derived(
     travel.kind === 'planned'
@@ -416,17 +350,13 @@
   )
   const pendingPurchasePackRejection = $derived(
     pendingPurchaseItem
-      ? getPackItemRejectionReason(game.economy, {
-        type: 'itemAddedToPack',
-        catId: activeCatKey,
-        itemId: pendingPurchaseItem.id,
-        itemKind: pendingPurchaseItem.kind,
-        wishDestinationId: pendingPurchaseItem.kind === 'wish'
+      ? controller.packRejectionFor(
+        client.snapshot,
+        pendingPurchaseItem,
+        pendingPurchaseItem.kind === 'wish'
           ? selectedWishDestinationId
           : undefined,
-        capacity: PACK_CAPACITY,
-        packLocked: isPackLocked,
-      })
+      )
       : undefined,
   )
   const findDestination = (destinationId?: string) => (
@@ -483,47 +413,19 @@
     activityNotice = message
   }
 
-  const saveGame = async () => {
-    try {
-      await saveStore.save($state.snapshot(game))
-      persistenceNotice = ''
-    } catch {
-      persistenceNotice = '这次没能保存，先别关闭页面。'
-    }
-  }
-
-  const chooseHomeActivity = () => {
-    const homeActivityOverride = readHomeActivityOverride()
-    if (homeActivityOverride) {
-      homeActivity = homeActivityOverride
-      return
-    }
-    const values = (Object.keys(homeActivities) as HomeActivity[]).filter(
-      (activity) => showHomeArtPreview || activity !== 'gaze',
-    )
-    const randomValue = new Uint32Array(1)
-    crypto.getRandomValues(randomValue)
-    homeActivity = values[randomValue[0] % values.length]
-  }
-
   const cycleHomeActivity = () => {
-    homeActivity = nextHomeActivity(homeActivity)
+    const nextActivity = nextHomeActivity(homeActivity)
+    controller.setHomeActivity(nextActivity)
     const url = new URL(window.location.href)
-    url.searchParams.set('homeActivity', homeActivity)
+    url.searchParams.set('homeActivity', nextActivity)
     window.history.replaceState(window.history.state, '', url)
   }
 
   const completeAdoption = async () => {
     try {
-      game = adoptCat(game, {
-        id: INITIAL_CAT_ID,
-        name: adoptionName,
-        portraitId: 'minho',
-        adoptedAt: clock.now(),
-      })
+      await controller.adopt(adoptionName)
       adoptionNotice = ''
-      chooseHomeActivity()
-      await saveGame()
+      hydrateNotice = ''
     } catch (error) {
       adoptionNotice = error instanceof Error
         ? error.message
@@ -531,58 +433,12 @@
     }
   }
 
-  const advanceGame = (
-    current: GameState,
-    nextEconomy: GameState['economy'],
-    now: number,
-  ): GameState => {
-    const recentPostcardRecipes = current.postcards.received
-      .filter(({ revealAt }) => (
-        revealAt <= now && now - revealAt < POSTCARD_VARIETY_COOLDOWN_MS
-      ))
-      .map(({ recipe }) => recipe)
-    const travelByCat = Object.fromEntries(current.cats.map((cat) => {
-      const currentTravel = current.travelByCat[cat.id] ?? HOME_TRAVEL_STATE
-      const nextPack = nextEconomy.packs[cat.id] ?? []
-      const nextTravel = travelLifecycleFor(
-        cat.id,
-        cat.portraitId,
-      ).advance(currentTravel, {
-        now,
-        pack: nextPack,
-        portraitId: cat.portraitId,
-        wishDestinationId: nextPack.find(
-          ({ kind, wishDestinationId }) => (
-            kind === 'wish' && wishDestinationId
-          ),
-        )?.wishDestinationId,
-        recentPostcardRecipes,
-      })
-      return [cat.id, nextTravel]
-    }))
-
-    return advanceAllGameEvents(current, {
-      now,
-      economy: nextEconomy,
-      travelByCat,
-    })
-  }
-
   const openDrawer = async (name: DrawerName) => {
     activeDrawer = name
     if (name !== 'album') albumDetail = null
     if (name !== 'album' || unreadPostcardCount === 0) return
 
-    let postcards = game.postcards
-    for (const postcard of postcards.received) {
-      if (postcard.isRead) continue
-      postcards = reducePostcards(postcards, {
-        type: 'postcardViewed',
-        postcardId: postcard.id,
-      })
-    }
-    game = { ...game, postcards }
-    await saveGame()
+    await controller.markAllPostcardsRead()
   }
 
   const openAlbumDetail = async (
@@ -600,19 +456,14 @@
   }
 
   const exportGame = () => {
-    const document = saveStore.export($state.snapshot(game))
+    const document = controller.exportDocument()
     const blob = new Blob(
       [JSON.stringify(document, null, 2)],
       { type: 'application/json' },
     )
-    const url = URL.createObjectURL(blob)
-    const anchor = window.document.createElement('a')
-    anchor.href = url
-    anchor.download = `bravecat-save-${new Date(document.exportedAt)
+    downloadBlob(blob, `bravecat-save-${new Date(document.exportedAt)
       .toISOString()
-      .slice(0, 10)}.json`
-    anchor.click()
-    URL.revokeObjectURL(url)
+      .slice(0, 10)}.json`)
     transferNotice = '完整存档已经导出。'
   }
 
@@ -633,10 +484,15 @@
         STARTER_CATALOG,
         selectedPostcard,
       )
-      const blob = await createPostcardPng(composition, destinationName)
+      const blob = await createPostcardPng(
+        composition,
+        destinationName,
+        webPostcardCanvas,
+      )
       const result = await shareOrDownloadPostcard(
         blob,
         postcardFileName(destinationName, composition.postmarkDate),
+        webShare,
       )
       postcardExportNotice = result === 'shared'
         ? '明信片已经交给系统分享。'
@@ -656,19 +512,8 @@
     if (!file) return
 
     try {
-      const imported = await saveStore.import(JSON.parse(await file.text()))
-      clock.setAcceleration(1)
-      clock.setNow(imported.clockNow)
-      const now = clock.now()
-      const settledEconomy = reduceEconomy(imported.economy, {
-        type: 'timePassed',
-        now,
-      })
-      gameNow = now
-      game = advanceGame(imported, settledEconomy, now)
-      pendingPurchase = null
+      await controller.importDocument(JSON.parse(await file.text()))
       shopNotice = ''
-      await saveGame()
       transferNotice = '完整存档已经恢复。'
     } catch (error) {
       transferNotice = error instanceof Error
@@ -680,62 +525,21 @@
   }
 
   const settleGame = async () => {
-    if (!hydrated) return
+    const { returnedCats } = await controller.settle()
+    if (returnedCats.length === 0) return
 
-    const now = clock.now()
-    gameNow = now
-    const settledEconomy = reduceEconomy(game.economy, {
-      type: 'timePassed',
-      now,
-    })
-    const previousTravelByCat = game.travelByCat
-    const next = advanceGame(game, settledEconomy, now)
-    if (next === game) {
-      if (persistenceNotice) await saveGame()
-      return
+    if (returnedCats.length === 1) {
+      const returnedCat = returnedCats[0]
+      activityNotice = returnedCat.souvenirCount > 0
+        ? `${returnedCat.name}回家了，还带回 ${returnedCat.souvenirCount} 件纪念品。`
+        : `${returnedCat.name}回家了，正在熟悉的垫子上休息。`
+    } else {
+      activityNotice = `${returnedCats.length} 只小猫先后回家了。`
     }
-
-    const returnedCats = game.cats.filter(({ id }) => (
-      previousTravelByCat[id]?.kind === 'planned'
-      && next.travelByCat[id]?.kind === 'home'
-    ))
-    game = next
-    if (returnedCats.length > 0) {
-      if (returnedCats.length === 1) {
-        const returnedCat = returnedCats[0]
-        const previousTravel = previousTravelByCat[returnedCat.id]
-        const tripId = previousTravel?.kind === 'planned'
-          ? `${returnedCat.id}-${previousTravel.plan.itinerary.departsAt}`
-          : null
-        const souvenirCount = tripId
-          ? next.souvenirs.received.filter(
-            (souvenir) => souvenir.tripId === tripId,
-          ).length
-          : 0
-        activityNotice = souvenirCount > 0
-          ? `${returnedCat.name}回家了，还带回 ${souvenirCount} 件纪念品。`
-          : `${returnedCat.name}回家了，正在熟悉的垫子上休息。`
-      } else {
-        activityNotice = `${returnedCats.length} 只小猫先后回家了。`
-      }
-      chooseHomeActivity()
-    }
-    await saveGame()
-  }
-
-  const applyEconomy = async (action: EconomyAction) => {
-    const nextEconomy = reduceEconomy(game.economy, action)
-    if (nextEconomy === game.economy) return false
-
-    const now = clock.now()
-    gameNow = now
-    game = advanceGame(game, nextEconomy, now)
-    await saveGame()
-    return true
   }
 
   const setTimeAcceleration = async (multiplier: number) => {
-    clock.setAcceleration(multiplier)
+    controller.setTimeAcceleration(multiplier)
     activityNotice = multiplier === 1
       ? '开发时钟已恢复为实时。'
       : `开发时钟已切换为 ${multiplier.toLocaleString()} 倍。`
@@ -751,7 +555,7 @@
       return
     }
 
-    const granted = await applyEconomy({
+    const granted = await controller.applyEconomyAction({
       type: 'treatsGranted',
       amount: developmentGrantAmount,
     })
@@ -761,41 +565,17 @@
   }
 
   onMount(() => {
-    let cancelled = false
-
-    void (async () => {
-      try {
-        const saved = await saveStore.load()
-        if (cancelled) return
-
-        const realNow = clock.now()
-        const restored = restoreGameState(saved, realNow, STARTER_CATALOG)
-        clock.setAcceleration(1)
-        clock.setNow(restored.clockNow)
-        const now = clock.now()
-        const settledEconomy = reduceEconomy(
-          restored.economy,
-          { type: 'timePassed', now },
-        )
-        gameNow = now
-        game = advanceGame(restored, settledEconomy, now)
-        chooseHomeActivity()
-        hydrated = true
-        await saveGame()
-      } catch {
-        if (!cancelled) {
-          hydrated = true
-          persistenceNotice = '没有读到上次的家，暂时从这里开始。'
-        }
+    void controller.hydrate().then(({ loadFailed }) => {
+      if (loadFailed) {
+        hydrateNotice = '没有读到上次的家，暂时从这里开始。'
       }
-    })()
+    })
 
     const interval = window.setInterval(() => {
       void settleGame()
     }, isDevelopment ? 250 : 60_000)
 
     return () => {
-      cancelled = true
       window.clearInterval(interval)
     }
   })
@@ -803,18 +583,12 @@
   const collectTreats = async () => {
     if (windowsillTreats === 0) return
 
-    await applyEconomy({
-      type: 'windowsillCollected',
-    })
+    await controller.collectTreats()
     activityNotice = `窗台空了。${catName}好像听见了小鱼干的声音。`
   }
 
   const describeCatPresence = (cat: GameState['cats'][number]) => {
-    const catTravel = game.travelByCat[cat.id] ?? HOME_TRAVEL_STATE
-    const presence = travelLifecycleFor(
-      cat.id,
-      cat.portraitId,
-    ).getPresence(catTravel, gameNow)
+    const presence = controller.presence(game, cat.id, gameNow)
     return presence === 'traveling'
       ? '在路上'
       : presence === 'waiting'
@@ -826,12 +600,9 @@
 
   const switchActiveCat = async (catId: string) => {
     try {
-      const next = selectActiveCat(game, catId)
-      if (next === game) return
-      game = next
+      const result = await controller.switchActiveCat(catId)
+      if (result === 'unchanged') return
       portraitChoicesOpen = false
-      chooseHomeActivity()
-      await saveGame()
     } catch (error) {
       activityNotice = error instanceof Error
         ? error.message
@@ -843,11 +614,9 @@
     customization: HomeCustomization,
   ) => {
     try {
-      const next = setHomeCustomization(game, customization)
-      if (next === game) return
-      game = next
+      const result = await controller.applyHomeCustomization(customization)
+      if (result === 'unchanged') return
       activityNotice = '家换上了新的布置。'
-      await saveGame()
     } catch (error) {
       activityNotice = error instanceof Error
         ? error.message
@@ -857,24 +626,16 @@
 
   const switchPortrait = async (portraitId: PortraitId) => {
     try {
-      const next = changeCatPortrait(game, {
-        catId: activeCatKey,
-        portraitId,
-      }, STARTER_CATALOG)
-      if (next === game) {
-        portraitChoicesOpen = false
-        return
-      }
-
-      game = next
+      const result = await controller.switchPortrait(portraitId)
       portraitChoicesOpen = false
+      if (result === 'unchanged') return
+
       const portraitName = STARTER_CATALOG.portraits.find(
         ({ id }) => id === portraitId,
       )?.name ?? '新形象'
       activityNotice = travel.kind === 'planned'
         ? `${catName}换好了${portraitName}形象；已出发的旅行仍保留原来的样子。`
         : `${catName}已经换好${portraitName}形象。`
-      await saveGame()
     } catch (error) {
       activityNotice = error instanceof Error
         ? error.message
@@ -892,20 +653,14 @@
     purchaseFlowBusy = true
     try {
       shopNotice = ''
-      const result = beginPurchaseChoice(
-        { game, pendingPurchase },
-        item,
-      )
-      if (result.status !== 'awaiting-choice') {
-        announceShopOutcome(result.status === 'purchase-rejected'
+      const status = await controller.purchaseItem(item)
+      if (status !== 'awaiting-choice') {
+        announceShopOutcome(status === 'purchase-rejected'
           ? '还差一些小鱼干，先看看别的吧。'
           : '先决定刚买下的物品放在哪里吧。')
         return
       }
 
-      game = result.state.game
-      await saveGame()
-      pendingPurchase = result.state.pendingPurchase
       activityNotice = `${item.name}已经买下。选一个去处吧。`
     } finally {
       purchaseFlowBusy = false
@@ -918,13 +673,7 @@
     purchaseFlowBusy = true
     try {
       const itemName = pendingPurchaseItem.name
-      const result = keepPurchasedItemAtHome({
-        game,
-        pendingPurchase,
-      })
-      game = result.state.game
-      pendingPurchase = result.state.pendingPurchase
-      await saveGame()
+      await controller.keepPurchasedItemAtHome()
       announceShopOutcome(`${itemName}已经留在家里。`)
     } finally {
       purchaseFlowBusy = false
@@ -937,62 +686,33 @@
     purchaseFlowBusy = true
     try {
       const item = pendingPurchaseItem
-      const result = confirmPurchasedItemInPack(
-        { game, pendingPurchase },
-        {
-          catId: activeCatKey,
-          capacity: PACK_CAPACITY,
-          packLocked: isPackLocked,
-          wishDestinationId: item.kind === 'wish'
-            ? selectedWishDestinationId
-            : undefined,
-        },
+      const result = await controller.packPurchasedItem(
+        item.kind === 'wish' ? selectedWishDestinationId : undefined,
       )
-      pendingPurchase = result.state.pendingPurchase
       if (result.status === 'packed') {
-        const now = clock.now()
-        gameNow = now
-        game = advanceGame(
-          result.state.game,
-          result.state.game.economy,
-          now,
-        )
         announceShopOutcome(`${item.name}已经放进行囊。`)
       } else {
-        game = result.state.game
         announceShopOutcome(
           describePackRejection(result.reason, item.name),
         )
       }
-      await saveGame()
     } finally {
       purchaseFlowBusy = false
     }
   }
 
   const addItemToPack = async (item: ItemDefinition) => {
-    const added = await applyEconomy({
-      type: 'itemAddedToPack',
-      catId: activeCatKey,
-      itemId: item.id,
-      itemKind: item.kind,
-      wishDestinationId: item.kind === 'wish'
-        ? selectedWishDestinationId
-        : undefined,
-      capacity: PACK_CAPACITY,
-      packLocked: isPackLocked,
-    })
+    const added = await controller.addItemToPack(
+      item,
+      item.kind === 'wish' ? selectedWishDestinationId : undefined,
+    )
     activityNotice = added
       ? `${item.name}已经放进行囊。`
       : '行囊没有变化。'
   }
 
   const removeItemFromPack = async (item: ItemDefinition) => {
-    const removed = await applyEconomy({
-      type: 'itemRemovedFromPack',
-      catId: activeCatKey,
-      itemId: item.id,
-    })
+    const removed = await controller.removeItemFromPack(item)
     if (removed) activityNotice = `${item.name}已经放回家里。`
   }
 
@@ -1045,7 +765,7 @@
     >
       <div class="adoption-portrait">
         <img
-          src="/portraits/minho/portrait--minho--sit--v01.png"
+          src={asset('/portraits/minho/portrait--minho--sit--v01.png')}
           alt="等待领养的 Minho 坐姿形象"
         />
         <span>已批准 · 六姿势完整</span>
@@ -1078,7 +798,7 @@
       <h1>咪游记</h1>
     </div>
     <div class="treat-balance" aria-label={`共有 ${treats} 条小鱼干`}>
-      <img src={drawerArt.treat} alt="" aria-hidden="true" />
+      <img src={asset(drawerArt.treat)} alt="" aria-hidden="true" />
       <strong>{treats}</strong>
     </div>
   </header>
@@ -1096,7 +816,7 @@
           onclick={() => void switchActiveCat(cat.id)}
         >
           {#if portrait}
-            <img src={portrait.poses.sit} alt="" aria-hidden="true" />
+            <img src={asset(portrait.poses.sit)} alt="" aria-hidden="true" />
           {/if}
           <span>{cat.name}</span>
           <small>{describeCatPresence(cat)}</small>
@@ -1219,7 +939,7 @@
         >
           <span class="treat-pile" aria-hidden="true">
             {#if windowsillTreats > 0}
-              <img src={drawerArt.treatLarge} alt="" />
+              <img src={asset(drawerArt.treatLarge)} alt="" />
               <strong>+{windowsillTreats}</strong>
             {:else}
               <span class="empty-sill-mark">·</span>
@@ -1305,7 +1025,7 @@
               >
                 <span class="souvenir-support" aria-hidden="true"></span>
                 {#if souvenir?.imageSrc}
-                  <img src={souvenir.imageSrc} alt="" aria-hidden="true" />
+                  <img src={asset(souvenir.imageSrc)} alt="" aria-hidden="true" />
                 {:else}
                   <span aria-hidden="true">{souvenir?.visualToken ?? '念'}</span>
                 {/if}
@@ -1406,7 +1126,7 @@
               aria-label={`使用${portrait.name}形象`}
               onclick={() => void switchPortrait(portrait.id)}
             >
-              <img src={portrait.poses.sit} alt="" aria-hidden="true" />
+              <img src={asset(portrait.poses.sit)} alt="" aria-hidden="true" />
               <span>{portrait.name}</span>
             </button>
           {/each}
@@ -1426,16 +1146,16 @@
     </section>
 
     <nav class="home-nav" aria-label="家里的去处">
-      <button type="button" onclick={() => void openDrawer('pack')}>
-        <img class="nav-icon" src={drawerArt.nav.pack} alt="" aria-hidden="true" />
-        <span>行囊</span>
-      </button>
-      <button type="button" onclick={() => void openDrawer('shop')}>
-        <img class="nav-icon" src={drawerArt.nav.shop} alt="" aria-hidden="true" />
-        <span>小铺</span>
-      </button>
-      <button type="button" onclick={openAlbum}>
-        <img class="nav-icon" src={drawerArt.nav.album} alt="" aria-hidden="true" />
+    <button type="button" onclick={() => void openDrawer('pack')}>
+      <img class="nav-icon" src={asset(drawerArt.nav.pack)} alt="" aria-hidden="true" />
+      <span>行囊</span>
+    </button>
+    <button type="button" onclick={() => void openDrawer('shop')}>
+      <img class="nav-icon" src={asset(drawerArt.nav.shop)} alt="" aria-hidden="true" />
+      <span>小铺</span>
+    </button>
+    <button type="button" onclick={openAlbum}>
+      <img class="nav-icon" src={asset(drawerArt.nav.album)} alt="" aria-hidden="true" />
         <span>相册</span>
         {#if unreadPostcardCount > 0}
           <span class="unread-badge" aria-label={`${unreadPostcardCount} 张未读明信片`}>
@@ -1483,7 +1203,7 @@
         type="button"
         aria-label={`关闭${drawer.title}`}
         onclick={() => activeDrawer = null}
-      ><img src={drawerArt.close} alt="" aria-hidden="true" /></button>
+      ><img src={asset(drawerArt.close)} alt="" aria-hidden="true" /></button>
     </header>
     {#if activeDrawer === 'shop'}
       <div class="drawer-content">
@@ -1504,7 +1224,7 @@
         <ul class="catalog-grid" aria-label={`${itemKindLabels[shopCategory]}物品`}>
           {#each shopItems as item}
             <li class="catalog-card">
-              <img class="item-token" src={item.imageSrc} alt="" aria-hidden="true" />
+              <img class="item-token" src={asset(item.imageSrc)} alt="" aria-hidden="true" />
               <div class="catalog-copy">
                 <div class="item-title">
                   <h3>{item.name}</h3>
@@ -1586,19 +1306,19 @@
         </div>
 
         <div class="pack-art" aria-label={`打开的行囊，已放入 ${pack.length} 件物品`}>
-          <img class="pack-layer" src={drawerArt.packBase} alt="" />
+          <img class="pack-layer" src={asset(drawerArt.packBase)} alt="" />
           {#each pack as packedItem, index}
             {@const item = findItem(packedItem.itemId)}
             {#if item}
               <img
                 class="pack-item"
-                src={item.imageSrc}
+                src={asset(item.imageSrc)}
                 alt={item.name}
                 style={packItemStyle(index, item.id)}
               />
             {/if}
           {/each}
-          <img class="pack-layer pack-rim" src={drawerArt.packRim} alt="" />
+          <img class="pack-layer pack-rim" src={asset(drawerArt.packRim)} alt="" />
         </div>
 
         <section class="pack-section" aria-labelledby="packed-title">
@@ -1616,7 +1336,7 @@
                 {#if item && packedItem}
                   <img
                     class="item-token"
-                    src={item.imageSrc}
+                    src={asset(item.imageSrc)}
                     alt=""
                     aria-hidden="true"
                     draggable={!isPackLocked}
@@ -1667,7 +1387,7 @@
                 <li class="pack-card">
                   <img
                     class="item-token"
-                    src={item.imageSrc}
+                    src={asset(item.imageSrc)}
                     alt=""
                     aria-hidden="true"
                     draggable={!isPackLocked && !itemAlreadyPacked}
@@ -1743,7 +1463,7 @@
               {@const souvenir = findSouvenir(selectedSouvenir.souvenirId)}
               <div class="souvenir-detail">
                 {#if souvenir?.imageSrc}
-                  <img src={souvenir.imageSrc} alt="" />
+                  <img src={asset(souvenir.imageSrc)} alt="" />
                 {:else}
                   <span aria-hidden="true">{souvenir?.visualToken ?? '念'}</span>
                 {/if}
@@ -1819,7 +1539,7 @@
               </ul>
             {:else}
               <div class="empty-state">
-                <img class="album-empty-art" src={drawerArt.albumEmpty} alt="" />
+                <img class="album-empty-art" src={asset(drawerArt.albumEmpty)} alt="" />
                 <h3>{drawer.empty}</h3>
                 <p>小猫寄回的明信片会收在这一页。</p>
               </div>
@@ -1840,7 +1560,7 @@
                     })}
                   >
                     {#if souvenir?.imageSrc}
-                      <img class="souvenir-art" src={souvenir.imageSrc} alt="" />
+                      <img class="souvenir-art" src={asset(souvenir.imageSrc)} alt="" />
                     {:else}
                       <span class="souvenir-token" aria-hidden="true">
                         {souvenir?.visualToken ?? '念'}
@@ -1856,7 +1576,7 @@
             </ul>
           {:else}
             <div class="empty-state">
-              <img class="album-empty-art" src={drawerArt.albumEmpty} alt="" />
+              <img class="album-empty-art" src={asset(drawerArt.albumEmpty)} alt="" />
               <h3>还没有带回纪念品</h3>
               <p>旅行结束回到家时，纪念品会收在这一页。</p>
             </div>
@@ -1869,12 +1589,12 @@
             </div>
             <div class="save-transfer-actions">
               <button type="button" onclick={exportGame}>
-                <img src={drawerArt.export} alt="" aria-hidden="true" />
+                <img src={asset(drawerArt.export)} alt="" aria-hidden="true" />
                 导出存档
               </button>
               <label>
                 <span>
-                  <img src={drawerArt.import} alt="" aria-hidden="true" />
+                  <img src={asset(drawerArt.import)} alt="" aria-hidden="true" />
                   导入存档
                 </span>
                 <input
@@ -1892,7 +1612,7 @@
       </div>
     {:else}
       <div class="empty-state">
-        <img class="album-empty-art" src={drawerArt.albumEmpty} alt="" />
+        <img class="album-empty-art" src={asset(drawerArt.albumEmpty)} alt="" />
         <h3>{drawer.empty}</h3>
         <p>{drawer.hint}</p>
       </div>

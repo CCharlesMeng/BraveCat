@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PostcardComposition } from '@bravecat/core/postcards'
   import { renderPostcardCanvas } from '@bravecat/core/postcards'
+  import { webPostcardCanvas } from './platform/ports'
 
   let {
     composition,
@@ -27,6 +28,7 @@
       target,
       currentComposition,
       currentDestinationName,
+      webPostcardCanvas,
     ).catch(() => {
       if (active) renderFailed = true
     })

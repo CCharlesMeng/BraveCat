@@ -18,6 +18,7 @@ import {
   homeCatSpriteStyle,
   homeCatStyle,
 } from './projection'
+import { resolveAssetUrl } from '../ports/assetResolver'
 import type {
   HomeCustomization,
   HomePiece,
@@ -73,13 +74,19 @@ export const resolveHomeScene = (
   const catPlacement = form.catPlacements[activity]
   const catAnimation = form.catAnimationsByPortrait[portraitId]?.[activity]
 
+  // form/finish/piece 数据记录根相对路径；输出层经 AssetResolver 解析。
   const backdrop: SceneImageLayer[] = []
   if (finish.exterior) {
-    backdrop.push({ id: `exterior-${time}`, src: finish.exterior[time] })
+    backdrop.push({
+      id: `exterior-${time}`,
+      src: resolveAssetUrl(finish.exterior[time]),
+    })
   }
   backdrop.push({
     id: 'shell',
-    src: finish.shell.activityVariants[activity] ?? finish.shell.default,
+    src: resolveAssetUrl(
+      finish.shell.activityVariants[activity] ?? finish.shell.default,
+    ),
   })
 
   // 逐 socket 解析部件；normalize 已保证条目合法，缺省用预设默认值。
@@ -103,7 +110,8 @@ export const resolveHomeScene = (
       pieceId: piece.id,
       pieceName: piece.name,
     })
-    const baseSrc = piece.art.activityVariants?.[activity] ?? piece.art.base
+    const rawBaseSrc = piece.art.activityVariants?.[activity] ?? piece.art.base
+    const baseSrc = rawBaseSrc === null ? null : resolveAssetUrl(rawBaseSrc)
     if (socket.kind === 'postcard-display') {
       // 画框墙 fixture 与明信片同区渲染，走 postcardDisplay 通道。
       postcardFixtureSrc = baseSrc
@@ -113,7 +121,7 @@ export const resolveHomeScene = (
       rearPieces.push({ id: `piece-${socket.id}`, src: baseSrc })
     }
     if (socket.kind === 'cabinet' && piece.art.foregroundOcclusion) {
-      souvenirOcclusionSrc = piece.art.foregroundOcclusion
+      souvenirOcclusionSrc = resolveAssetUrl(piece.art.foregroundOcclusion)
     }
   }
 
@@ -126,16 +134,20 @@ export const resolveHomeScene = (
     rearPieces,
     pieces: pieceSelections,
     lighting: lightingSrc
-      ? { id: `lighting-${time}`, src: lightingSrc }
+      ? { id: `lighting-${time}`, src: resolveAssetUrl(lightingSrc) }
       : null,
     cat: {
       placement: catPlacement,
       imageStyle: homeCatStyle(canvas, catPlacement),
       sprite: catAnimation
         ? {
-          src: catAnimation.src,
+          src: resolveAssetUrl(catAnimation.src),
           frameCount: catAnimation.frameCount,
-          style: homeCatSpriteStyle(canvas, catPlacement, catAnimation.src),
+          style: homeCatSpriteStyle(
+            canvas,
+            catPlacement,
+            resolveAssetUrl(catAnimation.src),
+          ),
         }
         : null,
     },

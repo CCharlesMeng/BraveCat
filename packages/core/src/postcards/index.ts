@@ -1,5 +1,6 @@
 import type { AssetCatalog } from '../assets'
 import type { Itinerary } from '../itinerary'
+import { resolveAssetUrl } from '../ports/assetResolver'
 import type {
   DestinationId,
   PostcardId,
@@ -82,10 +83,11 @@ export const resolvePostcardComposition = (
 
   return {
     scene: {
-      src: sceneLayer.src,
+      // 存档配方里记录根相对路径；产出可加载 URL 时经 AssetResolver 解析。
+      src: resolveAssetUrl(sceneLayer.src),
     },
     portrait: {
-      src: portraitLayer.src,
+      src: resolveAssetUrl(portraitLayer.src),
       anchorX: recipe.composition.x,
       anchorY: recipe.composition.y,
       heightScale: recipe.composition.scale,

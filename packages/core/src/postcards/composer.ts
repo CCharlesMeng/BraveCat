@@ -23,11 +23,19 @@ export interface PortraitPlacement {
   supportWidth: number
 }
 
+/**
+ * PostcardCanvas 平台端口：明信片合成所需的 canvas 与图片加载能力。
+ * 浏览器实现在 apps/web 的 platform/ports 中注入。
+ */
 export interface PostcardRenderDependencies {
   createCanvas: () => HTMLCanvasElement
   loadImage: (src: string) => Promise<HTMLImageElement>
 }
 
+/**
+ * SharePort 平台端口：系统分享与 Blob 下载（未来含存相册）。
+ * 浏览器实现在 apps/web 的 platform/ports 中注入。
+ */
 export interface PostcardShareDependencies {
   navigator: Pick<Navigator, 'canShare' | 'share'>
   createFile: (
@@ -39,45 +47,6 @@ export interface PostcardShareDependencies {
 }
 
 export type PostcardShareResult = 'shared' | 'downloaded' | 'cancelled'
-
-const defaultCreateCanvas = () => document.createElement('canvas')
-
-const defaultLoadImage = (src: string) => new Promise<HTMLImageElement>(
-  (resolve, reject) => {
-    const image = new Image()
-    image.decoding = 'async'
-    image.onload = () => resolve(image)
-    image.onerror = () => reject(new Error(`无法载入明信片图层：${src}`))
-    image.src = src
-  },
-)
-
-const defaultRenderDependencies: PostcardRenderDependencies = {
-  createCanvas: defaultCreateCanvas,
-  loadImage: defaultLoadImage,
-}
-
-const defaultDownload = (blob: Blob, fileName: string) => {
-  const url = URL.createObjectURL(blob)
-  const anchor = document.createElement('a')
-  anchor.href = url
-  anchor.download = fileName
-  anchor.hidden = true
-  document.body.append(anchor)
-  anchor.click()
-  anchor.remove()
-  window.setTimeout(() => URL.revokeObjectURL(url), 0)
-}
-
-const defaultShareDependencies = (): PostcardShareDependencies => ({
-  navigator,
-  createFile: (bits, fileName, options) => new File(
-    bits,
-    fileName,
-    options,
-  ),
-  download: defaultDownload,
-})
 
 const imageWidth = (image: HTMLImageElement) => (
   image.naturalWidth || image.width
@@ -369,7 +338,7 @@ export const renderPostcardCanvas = async (
   canvas: HTMLCanvasElement,
   composition: PostcardComposition,
   destinationName: string,
-  dependencies: PostcardRenderDependencies = defaultRenderDependencies,
+  dependencies: PostcardRenderDependencies,
 ) => {
   const [scene, portrait] = await Promise.all([
     dependencies.loadImage(composition.scene.src),
@@ -420,7 +389,7 @@ const canvasToBlob = (
 export const createPostcardPng = async (
   composition: PostcardComposition,
   destinationName: string,
-  dependencies: PostcardRenderDependencies = defaultRenderDependencies,
+  dependencies: PostcardRenderDependencies,
 ) => {
   const canvas = dependencies.createCanvas()
   await renderPostcardCanvas(
@@ -448,7 +417,7 @@ export const postcardFileName = (
 export const shareOrDownloadPostcard = async (
   blob: Blob,
   fileName: string,
-  dependencies: PostcardShareDependencies = defaultShareDependencies(),
+  dependencies: PostcardShareDependencies,
 ): Promise<PostcardShareResult> => {
   const file = dependencies.createFile(
     [blob],

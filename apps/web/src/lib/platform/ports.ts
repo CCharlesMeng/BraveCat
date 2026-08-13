@@ -1,0 +1,54 @@
+/**
+ * 五个平台端口的 web（浏览器）实现。接口定义见 @bravecat/core/ports。
+ */
+import {
+  configureAssetResolver,
+  createBaseUrlAssetResolver,
+  type PostcardCanvas,
+  type RandomPort,
+  type SharePort,
+} from '@bravecat/core'
+
+/** Clock 端口用 core 默认的 Date.now；SaveStore 用 IndexedDB 实现。 */
+
+export const webRandom: RandomPort = {
+  nextUint32: () => {
+    const values = new Uint32Array(1)
+    crypto.getRandomValues(values)
+    return values[0]
+  },
+}
+
+export const webPostcardCanvas: PostcardCanvas = {
+  createCanvas: () => document.createElement('canvas'),
+  loadImage: (src) => new Promise<HTMLImageElement>((resolve, reject) => {
+    const image = new Image()
+    image.decoding = 'async'
+    image.onload = () => resolve(image)
+    image.onerror = () => reject(new Error(`无法载入明信片图层：${src}`))
+    image.src = src
+  }),
+}
+
+export const downloadBlob = (blob: Blob, fileName: string) => {
+  const url = URL.createObjectURL(blob)
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.download = fileName
+  anchor.hidden = true
+  document.body.append(anchor)
+  anchor.click()
+  anchor.remove()
+  window.setTimeout(() => URL.revokeObjectURL(url), 0)
+}
+
+export const webShare: SharePort = {
+  navigator,
+  createFile: (bits, fileName, options) => new File(bits, fileName, options),
+  download: downloadBlob,
+}
+
+/** web 端资产走相对根路径，与端口引入前的行为一致。 */
+export const installWebAssetResolver = () => {
+  configureAssetResolver(createBaseUrlAssetResolver(''))
+}
