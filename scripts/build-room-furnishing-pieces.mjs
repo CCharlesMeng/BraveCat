@@ -23,7 +23,9 @@
 import { copyFile, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
-import { keyedPng, contactShadowSvg } from './lib/piece-utils.mjs'
+import {
+  keyedPng, contactShadowSvg, loadGeometry, resolveShell,
+} from './lib/piece-utils.mjs'
 
 const width = 1200
 const height = 1600
@@ -65,13 +67,16 @@ const SOURCES = {
 /** 布局调优 box：覆盖冻结 socket region；rug 用 fill 拉到目标椭圆比。 */
 const LAYOUT_TUNING = {
   'a-clear-sage': {
+    /* 柜体放大并下移落地：概念稿柜子更靠前、底边约 y1290，
+       原 region 底边 1225 使柜体读成壁挂。 */
+    cabinet: { x: 920, y: 960, width: 270, height: 330 },
     rug: { x: 180, y: 1270, width: 840, height: 310, fit: 'fill' },
-    plant: { x: 1050, y: 600, width: 150, height: 280 },
+    plant: { x: 1040, y: 600, width: 140, height: 280 },
   },
   'b-warm-walnut-gallery': {
-    /* 斗柜底边压到近端墙脚线（冻结 region 底边 1210 略悬）；
+    /* 斗柜放大并下移到概念稿位置（底边 ~1300、右缘贴画布边）；
        plant 让出右下 postcard 框（slot 右缘 x1105），贴斗柜右端。 */
-    cabinet: { x: 790, y: 875, width: 380, height: 360 },
+    cabinet: { x: 800, y: 920, width: 400, height: 380 },
     rug: { x: 210, y: 1290, width: 780, height: 300, fit: 'fill' },
     plant: { x: 1085, y: 600, width: 110, height: 230 },
   },
@@ -82,9 +87,7 @@ const LAYOUT_TUNING = {
 }
 
 for (const [slug, sources] of Object.entries(SOURCES)) {
-  const geometry = JSON.parse(await readFile(
-    path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
-  ))
+  const geometry = await loadGeometry(productionRoot, slug)
   const qaLayers = []
   const qaOutlines = []
   const placements = {}
@@ -161,7 +164,7 @@ for (const [slug, sources] of Object.entries(SOURCES)) {
   ${qaOutlines.join('\n  ')}
 </svg>
   `)
-  await sharp(path.join(productionRoot, slug, 'shell--aperture-alpha--candidate-v01.png'))
+  await sharp(await resolveShell(productionRoot, slug))
     .flatten({ background: '#9fc2d8' })
     .composite([...qaLayers, { input: outline }])
     .png()

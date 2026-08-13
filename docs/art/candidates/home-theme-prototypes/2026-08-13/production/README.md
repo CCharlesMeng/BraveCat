@@ -180,6 +180,45 @@ socket region，数值即 v03 几何冻结输入）：
   x300–405 的 treat 锚点）；「eat 低层」cat zone 判定随 v03 冻结
   改为平台。
 
+## 自查修复轮 v03（对照签收效果图逐项复核）
+
+对 dressed v02 与三张签收效果图做并排自查后确认四处实质不符，
+本轮全部修复并产出 `qa--dressed-room--v03.png` 与
+`qa--dressed-room--overview--v03.png`：
+
+- **F 正窗重制（结构级）**：v01 shell 沿用 control 阶段的左墙透视
+  窗，而签收效果图是「后墙左半直立矩形窗 + 直垂纱帘」。
+  `scripts/refit-f-upright-window.mjs` 处理正窗版生成件
+  （`source--clean-shell--imagegen-v02.png`）：窗洞实测
+  418×589 @ (91,237)、右墙角实测 x1070，产出
+  `shell--aperture-alpha--candidate-v02.png` 与
+  `geometry--measured-freeze-v03.json`（仅重冻结窗洞/墙面/
+  window socket/treat 锚点，平台、卡位、柜、锚点全部继承 v02，
+  经 `qa--control-overlay--candidate-v02.png` 复核仍然落位）。
+  部件脚本统一经 `piece-utils.mjs` 的 `loadGeometry`/`resolveShell`
+  取「v03 几何优先、v02 shell 优先」。窗框 piece 因窗洞变矩形
+  改走直映射，纱帘随之直垂，与效果图一致。
+- **B 明信片装框**：效果图右墙画廊是胡桃厚木框，v02 是无框白卡。
+  新增绿幕空框素材（归档为
+  `b-warm-walnut-gallery/source--postcard-frame--imagegen-v01.png`），
+  dressed 合成时照片按洞对位填入空框、随 slot quad 外扩 1.16 倍
+  透视 warp。
+  A 维持效果图的无框白卡，F 由既有前景白橡框压边。
+- **A/B 柜体落地**：v02 柜底虽压到名义墙脚线仍读成壁挂。调优 box
+  放大并下移：A 267×330 底边 y1290、B 400×373 底边 y1300
+  （右缘贴画布边，与效果图一致）。
+- **去模板化**：三套 dressed 此前共用同一外景、同序照片、同一睡猫，
+  是「同一布局放三个场景」读感的直接来源。v03 起每套配方独立
+  （`FORM_DRESS`）：外景 A=江湾 / B=杉溪 / F=静海湾；照片顺序
+  按 form 轮转偏移；猫行为 A=rug 睡、B=碗边进食、F=平台窗座望窗；
+  柜顶纪念品组合各不相同。
+- **B 窗顶斜缝**：画稿窗洞顶边斜差大于 A/F，窗框包边由 12 提到
+  20（`FORMS` 内逐 form 配置），卷帘上沿不再露出外景斜缝。
+
+残留差距（记录不掩盖）：A/B 窗洞比效果图偏大，属 shell 冻结期
+已记录的生成偏差，重画 shell 才能收敛；B 搁板比效果图的厚 ledge
+偏细；F 效果图无猫，QA 中的窗座猫是动态内容演示。
+
 ## Exterior 视差行程 QA（联动 home-exteriors 试点）
 
 江湾与静海湾母版 v03（按新规格重制，地平线实测均 y 580 ∈ 520–640 带，

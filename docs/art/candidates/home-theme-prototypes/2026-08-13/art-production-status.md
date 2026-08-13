@@ -252,9 +252,21 @@ production 未就绪**。
    dressed v02：三套 rug 放大到效果图比例并 fill 拉伸；B 柜以高身
    2×2 藤编斗柜 source v02 重制（长矮柜残债清偿，底边压墙脚线）；
    植物三套放大、B 植物让出画架；A/B 爬架收矮、F 爬架与碗组按
-   效果图移上平台。全部调优数值收敛在装配脚本 `LAYOUT_TUNING`，
+   效果图移上平台。   全部调优数值收敛在装配脚本 `LAYOUT_TUNING`，
    是 v03 冻结输入；证据仍看 `qa--dressed-room--v02.png` 三张与
    总览条。
+   **更新（2026-08-13 深夜·自查修复轮 v03）：**用户再次判定 v02
+   与效果图不符且「同一布局放三个场景」，并排自查确认四处实质
+   差距并全部修复：F shell 以正窗版重制（左墙透视窗与签收效果图
+   的「后墙直立窗 + 直垂纱帘」冲突；`refit-f-upright-window.mjs`
+   产出 shell v02 与 `geometry--measured-freeze-v03.json`，仅重冻结
+   窗/墙/treat，其余继承 v02）；B 明信片装入胡桃厚木框（绿幕空框
+   洞对位 + slot 外扩 1.16 透视 warp）；A/B 柜体放大下移真正落地；
+   动态内容按 `FORM_DRESS` 逐套差异化（外景 A=江湾/B=杉溪/F=静海湾、
+   照片轮转、猫行为 A 睡/B 食/F 望窗、纪念品组合不同）；B 窗框包边
+   12→20 消顶部斜缝。证据：`production/*/qa--dressed-room--v03.png`
+   与 `production/qa--dressed-room--overview--v03.png`。残留：A/B
+   窗洞偏大（shell 冻结期已记录）、B 搁板偏细，见 production README。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前

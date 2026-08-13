@@ -13,6 +13,9 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
+import {
+  keyedRaw, detectHole, loadGeometry, resolveShell,
+} from './lib/piece-utils.mjs'
 
 const width = 1200
 const height = 1600
@@ -21,74 +24,15 @@ const productionRoot = path.resolve(
   'docs/art/candidates/home-theme-prototypes/2026-08-13/production',
 )
 
+/* B 画稿窗洞顶边斜差更大，卷帘上沿曾露出斜缝，包边加大到 20。 */
 const FORMS = [
-  { slug: 'a-clear-sage', source: 'window-frame-a-sage-greenscreen-v01.png' },
-  { slug: 'b-warm-walnut-gallery', source: 'window-frame-b-walnut-greenscreen-v01.png' },
-  { slug: 'f-moonwhite-bluegray', source: 'window-frame-f-oak-greenscreen-v01.png' },
+  { slug: 'a-clear-sage', source: 'window-frame-a-sage-greenscreen-v01.png', overlap: 12 },
+  { slug: 'b-warm-walnut-gallery', source: 'window-frame-b-walnut-greenscreen-v01.png', overlap: 20 },
+  { slug: 'f-moonwhite-bluegray', source: 'window-frame-f-oak-greenscreen-v01.png', overlap: 12 },
 ]
 
-const keyedRaw = async (sourcePath) => {
-  const { data, info } = await sharp(sourcePath).ensureAlpha().raw()
-    .toBuffer({ resolveWithObject: true })
-  for (let offset = 0; offset < data.length; offset += 4) {
-    const red = data[offset]
-    const green = data[offset + 1]
-    const blue = data[offset + 2]
-    const greenness = green - Math.max(red, blue)
-    if (greenness >= 70) {
-      data[offset + 3] = 0
-    } else if (greenness > 30) {
-      data[offset + 3] = Math.round(255 * (1 - (greenness - 30) / 40))
-    }
-    if (data[offset + 3] > 0) {
-      data[offset + 1] = Math.min(green, Math.round(Math.max(red, blue) * 1.15))
-    }
-  }
-  return { data, width: info.width, height: info.height }
-}
-
-/** 找包含中心的透明洞：多行/多列取最宽 alpha=0 连续段。 */
-const detectHole = (src) => {
-  const alphaAt = (x, y) => src.data[(y * src.width + x) * 4 + 3]
-  const spanContaining = (values, isClear, center) => {
-    if (!isClear(center)) return null
-    let low = center
-    let high = center
-    while (low > 0 && isClear(low - 1)) low -= 1
-    while (high < values - 1 && isClear(high + 1)) high += 1
-    return { low, high }
-  }
-  let left = Infinity
-  let right = -Infinity
-  for (const fraction of [0.4, 0.45, 0.5, 0.55, 0.6]) {
-    const y = Math.round(src.height * fraction)
-    const span = spanContaining(
-      src.width, (x) => alphaAt(x, y) === 0, Math.round(src.width / 2),
-    )
-    if (span) {
-      left = Math.min(left, span.low)
-      right = Math.max(right, span.high)
-    }
-  }
-  let top = Infinity
-  let bottom = -Infinity
-  for (const fraction of [0.42, 0.5, 0.58]) {
-    const x = Math.round(left + (right - left) * fraction)
-    const span = spanContaining(
-      src.height, (y) => alphaAt(x, y) === 0, Math.round(src.height / 2),
-    )
-    if (span) {
-      top = Math.min(top, span.low)
-      bottom = Math.max(bottom, span.high)
-    }
-  }
-  return { left, right, top, bottom }
-}
-
-for (const { slug, source } of FORMS) {
-  const geometry = JSON.parse(await readFile(
-    path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
-  ))
+for (const { slug, source, overlap } of FORMS) {
+  const geometry = await loadGeometry(productionRoot, slug)
   const aperture = geometry.windowAperture
   const rawQuad = aperture.quad ?? [
     [aperture.x, aperture.y],
@@ -96,9 +40,8 @@ for (const { slug, source } of FORMS) {
     [aperture.x + aperture.width, aperture.y + aperture.height],
     [aperture.x, aperture.y + aperture.height],
   ]
-  // 框内沿相对实测窗洞向内包边 12px：真实窗套要盖住毛洞边缘，
+  // 框内沿相对实测窗洞向内包边：真实窗套要盖住毛洞边缘，
   // 也吸收画稿窗洞顶/底边不完全水平带来的楔形露边。
-  const overlap = 12
   const quad = [
     [rawQuad[0][0] + overlap, rawQuad[0][1] + overlap],
     [rawQuad[1][0] - overlap, rawQuad[1][1] + overlap],
@@ -161,7 +104,7 @@ for (const { slug, source } of FORMS) {
     fill="none" stroke="#2b5c8a" stroke-width="3"/>
 </svg>
   `)
-  await sharp(path.join(productionRoot, slug, 'shell--aperture-alpha--candidate-v01.png'))
+  await sharp(await resolveShell(productionRoot, slug))
     .flatten({ background: '#9fc2d8' })
     .composite([{ input: await readFile(piecePath) }, { input: outline }])
     .png()

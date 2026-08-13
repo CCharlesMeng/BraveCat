@@ -10,7 +10,9 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
-import { keyedPng, contactShadowSvg } from './lib/piece-utils.mjs'
+import {
+  keyedPng, contactShadowSvg, loadGeometry, resolveShell,
+} from './lib/piece-utils.mjs'
 
 const width = 1200
 const height = 1600
@@ -35,9 +37,7 @@ const LAYOUT_TUNING = {
 }
 
 for (const { slug, source } of FORMS) {
-  const geometry = JSON.parse(await readFile(
-    path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
-  ))
+  const geometry = await loadGeometry(productionRoot, slug)
   const region = LAYOUT_TUNING[slug]
     ?? geometry.sockets.find(({ id }) => id === 'feeding-set').region
   const keyed = await keyedPng(path.join(stagingRoot, source))
@@ -83,7 +83,7 @@ for (const { slug, source } of FORMS) {
     stroke-width="4" stroke-dasharray="12 8"/>
 </svg>
   `)
-  await sharp(path.join(productionRoot, slug, 'shell--aperture-alpha--candidate-v01.png'))
+  await sharp(await resolveShell(productionRoot, slug))
     .flatten({ background: '#9fc2d8' })
     .composite([{ input: await readFile(piecePath) }, { input: outline }])
     .png()

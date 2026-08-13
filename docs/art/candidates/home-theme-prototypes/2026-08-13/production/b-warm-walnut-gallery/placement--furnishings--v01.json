@@ -1,9 +1,9 @@
 {
   "cabinet": {
-    "left": 790,
-    "top": 880,
-    "width": 380,
-    "height": 355
+    "left": 800,
+    "top": 927,
+    "width": 400,
+    "height": 373
   },
   "rug": {
     "left": 210,
@@ -13,7 +13,7 @@
   },
   "plant": {
     "left": 1085,
-    "top": 686,
+    "top": 733,
     "width": 110,
     "height": 208
   }

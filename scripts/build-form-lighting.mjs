@@ -10,9 +10,9 @@
  * Usage:
  *   node scripts/build-form-lighting.mjs
  */
-import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
+import { loadGeometry } from './lib/piece-utils.mjs'
 
 const width = 1200
 const height = 1600
@@ -45,9 +45,7 @@ const apertureCenter = (aperture) => {
 }
 
 for (const slug of ['a-clear-sage', 'b-warm-walnut-gallery', 'f-moonwhite-bluegray']) {
-  const geometry = JSON.parse(await readFile(
-    path.join(productionRoot, slug, 'geometry--measured-freeze-v02.json'), 'utf8',
-  ))
+  const geometry = await loadGeometry(productionRoot, slug)
   const glow = apertureCenter(geometry.windowAperture)
   const pool = FLOOR_POOLS[slug]
 
