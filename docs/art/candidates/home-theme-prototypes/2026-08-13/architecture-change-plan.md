@@ -136,6 +136,16 @@ src/lib/homeTheme/
    总是成功。115 个测试、`npm run build`、6 状态像素回归全部通过。
 3. **切片 2 — Theme Lab + 第二个 form**：A 或 F 的 shell 进 dev-art，
    跑通 form 切换与动态内容重投影。
+   **✅ 已完成（2026-08-13）**。场景升级为数据驱动的 `backdrop` 图层
+   数组（fixture/occlusion/exterior 均可空）；第二个 form
+   `split-level-den`（原型 F）落地：shell 由控制图 + classic 风格
+   参考生成，归一化进 `public/dev-art/home-theme/split-level-den/`，
+   卡位行与柜沿锚点按画面实测重排并有灭点收敛测试锁定；
+   `?themeLab[=presetId]` 挂载 dev-only Theme Lab，支持主题切换、
+   下架回退演示与投影参考线。QA 证据见
+   `split-level-den/README.md`；classic 六状态像素回归保持一致。
+   欠账：F 的窗景/家具仍烘焙在 shell（切片 3/4 拆分），minho 动画
+   贴片暂复用 classic 的四套。
 4. **切片 3 — 部件拆分**：优先 `postcard-display`、`scratcher`、
    `feeding-set`、`cabinet` 四类，各出两款验证换装；per-piece occlusion
    接管后删除全局遮挡图。

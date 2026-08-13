@@ -3,6 +3,7 @@ export {
   normalizeHomeCustomization,
 } from './customization'
 export { CLASSIC_V4_FORM } from './forms/classic-v4'
+export { SPLIT_LEVEL_DEN_FORM } from './forms/split-level-den'
 export {
   canvasStyle,
   displayCanvasStyle,
@@ -14,6 +15,7 @@ export {
   CLASSIC_V4_PRESET,
   defaultHomeCustomization,
   HOME_THEME_PRESETS,
+  SPLIT_LEVEL_DEN_PRESET,
 } from './presets'
 export { listHomeForms, resolveHomeScene } from './resolveHomeScene'
 export type {

@@ -17,6 +17,7 @@ import type {
   HomeCustomization,
   HomeSceneContext,
   ResolvedHomeScene,
+  SceneImageLayer,
 } from './types'
 
 export const listHomeForms = () => Object.values(HOME_FORMS).map((form) => ({
@@ -42,15 +43,20 @@ export const resolveHomeScene = (
   const catPlacement = form.catPlacements[activity]
   const catAnimation = form.catAnimationsByPortrait[portraitId]?.[activity]
 
+  const backdrop: SceneImageLayer[] = []
+  if (form.exterior) {
+    backdrop.push({ id: `exterior-${time}`, src: form.exterior[time] })
+  }
+  backdrop.push({
+    id: 'shell',
+    src: form.shell.activityVariants[activity] ?? form.shell.default,
+  })
+
   return {
     formId: form.id,
     canvas,
     shippingEligible: form.shippingEligible,
-    exterior: { id: `exterior-${time}`, src: form.exterior[time] },
-    shell: {
-      id: 'shell',
-      src: form.shell.activityVariants[activity] ?? form.shell.default,
-    },
+    backdrop,
     lighting: lightingSrc
       ? { id: `lighting-${time}`, src: lightingSrc }
       : null,

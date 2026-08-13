@@ -25,7 +25,13 @@
     souvenirDisplayKindFor,
     type HomeActivity,
   } from './lib/homeArt'
-  import { resolveHomeScene } from './lib/homeTheme'
+  import {
+    HOME_THEME_PRESETS,
+    resolveHomeScene,
+    type HomeCustomization,
+  } from './lib/homeTheme'
+  // dev-only 家主题配置器，生产构建不会挂载。
+  import ThemeLab from './lib/ThemeLab.svelte'
   import {
     advanceAllGameEvents,
     adoptCat,
@@ -85,6 +91,25 @@
   const wallPrototypeVariantKey = wallPrototypeVariantKeyFor(
     isDevelopment,
     globalThis.location?.search ?? '',
+  )
+  // dev 环境 ?themeLab 打开家主题配置器；只覆盖内存选择，不写存档。
+  // ?themeLab=<presetId> 可直接预选主题，供截图与 QA 复现。
+  const themeLabParam = isDevelopment
+    ? new URLSearchParams(globalThis.location?.search ?? '').get('themeLab')
+    : null
+  const themeLabEnabled = themeLabParam !== null
+  const themeLabInitialPreset = HOME_THEME_PRESETS.find(
+    ({ id }) => id === themeLabParam,
+  )
+  let themeLabSelection = $state<HomeCustomization | null>(
+    themeLabInitialPreset
+      ? {
+        presetId: themeLabInitialPreset.id,
+        formId: themeLabInitialPreset.formId,
+        finishId: themeLabInitialPreset.finishId,
+        pieces: themeLabInitialPreset.pieces,
+      }
+      : null,
   )
   let wallPerspectiveBackground = $state<string | null>(null)
   onMount(() => {
@@ -256,19 +281,22 @@
     activePortrait.poses[activeHomeActivity.pose],
   )
   const homeTime = $derived(homeTimeFor(new Date(gameNow)))
-  const homeScene = $derived(resolveHomeScene(game.homeCustomization, {
-    time: homeTime,
-    activity: homeActivity,
-    portraitId: activePortrait.id,
-  }))
+  const homeScene = $derived(resolveHomeScene(
+    themeLabSelection ?? game.homeCustomization,
+    {
+      time: homeTime,
+      activity: homeActivity,
+      portraitId: activePortrait.id,
+    },
+  ))
   const showHomeArtPreview = $derived(
     isDevelopment && !homeScene.shippingEligible,
   )
-  const homeInteriorForegroundSrc = $derived(
-    wallPrototypeVariantKey && wallPerspectiveBackground
-      ? wallPerspectiveBackground
-      : homeScene.shell.src,
-  )
+  const homeBackdropLayers = $derived(homeScene.backdrop.map((layer) => (
+    layer.id === 'shell' && wallPrototypeVariantKey && wallPerspectiveBackground
+      ? { ...layer, src: wallPerspectiveBackground }
+      : layer
+  )))
   const treats = $derived(economy.treats)
   const windowsillTreats = $derived(economy.windowsillTreats)
   const pack = $derived(economy.packs[activeCatKey] ?? [])
@@ -1091,16 +1119,13 @@
     >
       {#if showHomeArtPreview}
         <div class="home-art-canvas" aria-hidden="true">
-          <img
-            class="home-art-layer"
-            src={homeScene.exterior.src}
-            alt=""
-          />
-          <img
-            class="home-art-layer"
-            src={homeInteriorForegroundSrc}
-            alt=""
-          />
+          {#each homeBackdropLayers as layer (layer.id)}
+            <img
+              class="home-art-layer"
+              src={layer.src}
+              alt=""
+            />
+          {/each}
           {#if !isCatAway}
             {#if homeScene.cat.sprite}
               <div
@@ -1161,12 +1186,14 @@
         />
       {:else}
       <section class="travel-wall home-display-canvas" aria-label="去过的地方">
-        <img
-          class="home-display-fixture postcard-wall-fixture"
-          src={homeScene.postcardDisplay.fixtureSrc}
-          alt=""
-          aria-hidden="true"
-        />
+        {#if homeScene.postcardDisplay.fixtureSrc}
+          <img
+            class="home-display-fixture postcard-wall-fixture"
+            src={homeScene.postcardDisplay.fixtureSrc}
+            alt=""
+            aria-hidden="true"
+          />
+        {/if}
         {#each homeScene.postcardDisplay.slots as slot, index}
           {@const postcard = displayedVisitedPlaces[index]}
           {#if postcard}
@@ -1231,12 +1258,14 @@
               </button>
             {/each}
           </div>
-          <img
-            class="souvenir-occlusion"
-            src={homeScene.souvenirDisplay.occlusionSrc}
-            alt=""
-            aria-hidden="true"
-          />
+          {#if homeScene.souvenirDisplay.occlusionSrc}
+            <img
+              class="souvenir-occlusion"
+              src={homeScene.souvenirDisplay.occlusionSrc}
+              alt=""
+              aria-hidden="true"
+            />
+          {/if}
         </section>
       {/if}
 
@@ -1246,6 +1275,16 @@
           src={homeScene.lighting.src}
           alt=""
           aria-hidden="true"
+        />
+      {/if}
+
+      {#if themeLabEnabled}
+        <ThemeLab
+          selection={themeLabSelection ?? game.homeCustomization}
+          scene={homeScene}
+          onSelect={(selection) => {
+            themeLabSelection = selection
+          }}
         />
       {/if}
 

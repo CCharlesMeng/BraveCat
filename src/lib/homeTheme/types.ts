@@ -101,7 +101,8 @@ export type HomeFormDefinition = {
   canvas: CanvasSize
   finishIds: readonly HomeFinishId[]
   socketIds: readonly string[]
-  exterior: Readonly<Record<HomeTime, string>>
+  /** 无独立窗外时间层的 form（窗景烘焙在 shell 里）为 null。 */
+  exterior: Readonly<Record<HomeTime, string>> | null
   lighting: Readonly<Record<HomeTime, string | null>>
   shell: {
     default: string
@@ -115,11 +116,14 @@ export type HomeFormDefinition = {
   >>
   treatPlacement: CanvasRect
   postcardDisplay: {
-    fixtureSrc: string
+    /** 展示架烘焙在 shell 里的 form 为 null。 */
+    fixtureSrc: string | null
     slots: readonly ProjectedDisplayRect[]
     wallPlane: {
       cornerX: number
-      cabinetPerspectiveReference: {
+      horizonY?: number
+      vanishingPointX?: number
+      cabinetPerspectiveReference?: {
         rearSlope: number
         frontSlope: number
       }
@@ -127,7 +131,8 @@ export type HomeFormDefinition = {
   }
   souvenirDisplay: {
     anchors: readonly DisplayRect[]
-    occlusionSrc: string
+    /** 前景遮挡烘焙在 shell 里或不需要时为 null。 */
+    occlusionSrc: string | null
     tableSkewY: number
   }
 }
@@ -139,8 +144,8 @@ export type ResolvedHomeScene = {
   formId: HomeFormId
   canvas: CanvasSize
   shippingEligible: boolean
-  exterior: SceneImageLayer
-  shell: SceneImageLayer
+  /** 猫与动态内容之下的静态图层，按 z 序排列；shell 层 id 固定为 'shell'。 */
+  backdrop: readonly SceneImageLayer[]
   lighting: SceneImageLayer | null
   cat: {
     placement: CatPlacement
@@ -156,7 +161,7 @@ export type ResolvedHomeScene = {
     style: string
   }
   postcardDisplay: {
-    fixtureSrc: string
+    fixtureSrc: string | null
     slots: readonly {
       quad: Quad
       contentSkewY: number
@@ -167,6 +172,6 @@ export type ResolvedHomeScene = {
     anchors: readonly {
       style: string
     }[]
-    occlusionSrc: string
+    occlusionSrc: string | null
   }
 }

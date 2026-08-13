@@ -8,7 +8,18 @@ export const CLASSIC_V4_PRESET = {
   pieces: {},
 } as const satisfies HomeThemePreset
 
-export const HOME_THEME_PRESETS = [CLASSIC_V4_PRESET] as const
+/** 错层窗台小屋（原型编号 F）的协调默认组合。 */
+export const SPLIT_LEVEL_DEN_PRESET = {
+  id: 'split-level-den',
+  formId: 'split-level-den',
+  finishId: 'split-level-den-watercolor',
+  pieces: {},
+} as const satisfies HomeThemePreset
+
+export const HOME_THEME_PRESETS = [
+  CLASSIC_V4_PRESET,
+  SPLIT_LEVEL_DEN_PRESET,
+] as const
 
 export const defaultHomeCustomization = (): HomeCustomization => ({
   presetId: CLASSIC_V4_PRESET.id,

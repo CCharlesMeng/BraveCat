@@ -8,6 +8,8 @@ import {
   normalizeHomeCustomization,
   paintedCanvasRect,
   resolveHomeScene,
+  SPLIT_LEVEL_DEN_FORM,
+  SPLIT_LEVEL_DEN_PRESET,
   type HomeSceneContext,
 } from './index'
 
@@ -21,19 +23,30 @@ const sceneFor = (context: Partial<HomeSceneContext> = {}) => resolveHomeScene(
   },
 )
 
+const shellSrcOf = (scene: ReturnType<typeof resolveHomeScene>) => (
+  scene.backdrop.find(({ id }) => id === 'shell')?.src
+)
+
 describe('resolveHomeScene', () => {
   it('resolves the default customization without knowing form internals', () => {
     const scene = sceneFor()
     expect(scene.formId).toBe('classic-v4')
     expect(scene.canvas).toEqual({ width: 1200, height: 1600 })
-    expect(scene.exterior.src).toBe('/dev-art/home-v4/exterior-noon.png')
-    expect(scene.shell.src).toBe('/dev-art/home-v4/interior-foreground.png')
+    expect(scene.backdrop).toEqual([
+      { id: 'exterior-noon', src: '/dev-art/home-v4/exterior-noon.png' },
+      { id: 'shell', src: '/dev-art/home-v4/interior-foreground.png' },
+    ])
   })
 
   it('keeps the non-shipping candidate pack out of production', () => {
     expect(sceneFor().shippingEligible).toBe(false)
     expect(listHomeForms()).toEqual([
       { id: 'classic-v4', name: '经典水彩小屋', shippingEligible: false },
+      {
+        id: 'split-level-den',
+        name: '错层窗台小屋',
+        shippingEligible: false,
+      },
     ])
   })
 
@@ -45,10 +58,10 @@ describe('resolveHomeScene', () => {
   })
 
   it('lets the eating shell variant own the bowl', () => {
-    expect(sceneFor({ activity: 'eat' }).shell.src).toBe(
+    expect(shellSrcOf(sceneFor({ activity: 'eat' }))).toBe(
       '/dev-art/home-v4/interior-foreground-eat.png',
     )
-    expect(sceneFor({ activity: 'sleep' }).shell.src).toBe(
+    expect(shellSrcOf(sceneFor({ activity: 'sleep' }))).toBe(
       '/dev-art/home-v4/interior-foreground.png',
     )
   })
@@ -93,7 +106,7 @@ describe('resolveHomeScene', () => {
       { ...customization, finishId: 'bare-plaster' },
       context,
     )
-    expect(fromRetiredFinish.shell.src)
+    expect(shellSrcOf(fromRetiredFinish))
       .toBe('/dev-art/home-v4/interior-foreground.png')
 
     // 指向不存在插槽的部件被丢弃，其余选择保留。
@@ -128,8 +141,9 @@ describe('resolveHomeScene', () => {
     })).toBe(false)
   })
 
-  it('ships one coordinated preset for the current home', () => {
-    expect(HOME_THEME_PRESETS).toHaveLength(1)
+  it('ships coordinated presets and keeps classic as the default', () => {
+    expect(HOME_THEME_PRESETS.map(({ id }) => id))
+      .toEqual(['classic-v4', 'split-level-den'])
     expect(defaultHomeCustomization()).toEqual({
       presetId: 'classic-v4',
       formId: 'classic-v4',
@@ -215,6 +229,56 @@ describe('classic-v4 form geometry', () => {
       expect(anchor.x + anchor.width).toBeLessThanOrEqual(1150)
       expect(anchor.y).toBeGreaterThanOrEqual(880)
       expect(anchor.y + anchor.height).toBeLessThanOrEqual(1020)
+    }
+  })
+
+  it('resolves the split-level den with baked window and shelves', () => {
+    const scene = resolveHomeScene(
+      {
+        presetId: SPLIT_LEVEL_DEN_PRESET.id,
+        formId: SPLIT_LEVEL_DEN_PRESET.formId,
+        finishId: SPLIT_LEVEL_DEN_PRESET.finishId,
+        pieces: {},
+      },
+      { time: 'dusk', activity: 'gaze', portraitId: 'minho' },
+    )
+    expect(scene.formId).toBe('split-level-den')
+    // 窗景烘焙在 shell 里：没有独立 exterior 与 lighting 层。
+    expect(scene.backdrop).toEqual([
+      { id: 'shell', src: '/dev-art/home-theme/split-level-den/shell.png' },
+    ])
+    expect(scene.lighting).toBeNull()
+    expect(scene.postcardDisplay.fixtureSrc).toBeNull()
+    expect(scene.souvenirDisplay.occlusionSrc).toBeNull()
+    expect(scene.postcardDisplay.slots).toHaveLength(6)
+    expect(scene.cat.sprite?.src).toContain('cat--minho--gaze')
+  })
+
+  it('keeps every split-level display edge on the shared wall plane', () => {
+    const { slots, wallPlane } = SPLIT_LEVEL_DEN_FORM.postcardDisplay
+    const { horizonY, vanishingPointX, cornerX } = wallPlane
+    const polygonArea = (quad: readonly (readonly [number, number])[]) => (
+      Math.abs(quad.reduce((sum, [x, y], index) => {
+        const [nextX, nextY] = quad[(index + 1) % quad.length]
+        return sum + x * nextY - nextX * y
+      }, 0)) / 2
+    )
+
+    for (const { quad } of slots) {
+      expect(quad.every(([x]) => x < cornerX)).toBe(true)
+      for (const [from, to] of [[quad[0], quad[1]], [quad[3], quad[2]]]) {
+        const [x1, y1] = from
+        const [x2, y2] = to
+        const yAtVanishingPoint = (
+          y1 + (y2 - y1) * (vanishingPointX! - x1) / (x2 - x1)
+        )
+        // 坐标保留 0.1px：外推 ~17 倍后舍入误差最多约 ±2px。
+        expect(Math.abs(yAtVanishingPoint - horizonY!)).toBeLessThan(2.5)
+      }
+    }
+    for (let row = 0; row < slots.length; row += 2) {
+      expect(polygonArea(slots[row + 1].quad))
+        .toBeLessThan(polygonArea(slots[row].quad))
     }
   })
 
