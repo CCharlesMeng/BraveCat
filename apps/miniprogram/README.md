@@ -34,6 +34,7 @@ vite 编译器）薄视图 + 平台端口适配器。领域逻辑、编排（Gam
 | 变量 | 说明 |
 | --- | --- |
 | `TARO_APP_ASSET_BASE_URL` | 运行时游戏美术的 base URL（不带尾斜杠）。生产取 OSS/CDN 发布脚本（`scripts/publish-assets-oss.mjs`）的 `ASSET_CDN_BASE_URL` 同值；开发指向本地静态服务器。留空 = 根相对路径，在小程序里无法加载，等于「无美术」。 |
+| `TARO_APP_API_BASE_URL` | 云功能 API 地址（不带尾斜杠），对应 web 端的 `VITE_API_BASE_URL`。**留空 = 云同步整体关闭**，构建产物不发起任何云端请求（ADR-0009 的 feature flag）。取值与域名要求见下方「云同步」一节。 |
 | `TARO_APP_ID` | 正式小程序 AppID（可选；开发者工具测试号可不填）。 |
 
 ## 目录结构
@@ -43,24 +44,62 @@ src/
   app.tsx / app.config.ts / app.scss   Taro 入口与全局样式
   game/
     controller.ts    GameController 单例接线（注入 wx 存档 + 随机源）
+    cloudSync.ts     云同步编排（启动 pull 比较 + 落盘节流推送，对齐 web 端）
     useGameClient.ts 快照 → React 桥（useSyncExternalStore）+ settle 主循环
     copy.ts          玩家可见文案（复用 web 端中文文案）与 UI chrome 素材表
     catalog.ts       素材目录查询小助手
-  platform/          五端口的小程序适配器（详见各文件头注释）
+  platform/          平台端口的小程序适配器（详见各文件头注释）
     saveStore.ts     wx storage 单 JSON blob（键 bravecat:current）
     postcardCanvas.ts OffscreenCanvas 2D + roundRect 兜底 + 临时文件导出
     share.ts         存相册（含授权流程）；会话分享走页面 onShareAppMessage
     random.ts        wx.getRandomValues 熵池 + Math.random 退化
     purchase.ts      PurchasePort 微信版接口（stub；iOS 禁虚拟支付 gating）
     assetBase.ts     TARO_APP_ASSET_BASE_URL → AssetResolver
+    apiBase.ts       TARO_APP_API_BASE_URL → 云功能 feature flag
+    cloudFetch.ts    CloudFetch 端口：包 Taro.request（域名白名单见下）
+    cloudCredentials.ts  CloudCredentialStore 端口：wx storage 存游客凭证
+    cloudBackup.ts   云端覆盖本地前的备份槽（时间戳键，保留最近 2 份）
+    wechatAuth.ts    wx.login → /v1/auth/bind/wechat 接线位（服务端 501 待开通）
     testing/taroMock.ts  vitest 用的 wx API 手工 mock
   pages/
     home/     家场景（homeTheme backdrop 图层渲染、窗台收小鱼干、领养流程）
     pack/     行囊（装入/取回、心愿地选择）
     shop/     小铺（分类、购买、去向选择；只收 Treat，ADR-0006）
-    album/    相册（明信片/纪念品列表、剪贴板导入导出存档）
+    album/    相册（明信片/纪念品列表、剪贴板导入导出存档、云同步小节）
     postcard/ 详情（canvas 合成展示、保存相册、会话分享）
 ```
+
+## 云同步（可选，默认关）
+
+`TARO_APP_API_BASE_URL` 非空才启用；默认构建不发起任何云端请求，
+行为与纯本地版完全一致（ADR-0009）。逻辑全部复用
+`@bravecat/core/cloud`（CloudSyncClient + `decideStartupSync` 决策纯函数），
+本端只提供 wx 适配器与接线，节奏与 web 端对齐：
+
+- **启动**（hydrate 完成后）：静默创建游客账号 → pull 云端存档比较
+  `exportedAt` 较新者胜 → 云端 schemaVersion 更高时触发版本护栏，
+  只提示升级、不覆盖不推送；
+- **云端较新覆盖本地前先备份**：小程序没有文件下载（web 端的备份手段），
+  改为把被覆盖的本地存档写进独立 storage 备份槽（键
+  `bravecat.cloud.backup:<时间戳>`，保留最近 2 份，写入失败则不覆盖），
+  相册页云同步小节提供「恢复备份」入口；
+- **会话内**：每次落盘后 10 秒节流合并推送；推送失败只降级状态显示，
+  改动仍在本地，下次落盘或下次启动重试；
+- **相册页云同步小节**：同步状态、账号（截短展示）、生成次数余额、
+  恢复备份；微信登录入口已留（`platform/wechatAuth.ts` 封装了
+  wx.login 换 code 绑定的完整客户端链路），服务端绑定路由目前是
+  501 骨架，入口标注「待开通」不实连。
+
+**域名白名单（wx.request 硬限制）**：
+
+- 开发期：起 `services/api`（`npm run dev --workspace @bravecat/api`，
+  见 services/api/README.md），`.env.development` 里取消注释
+  `TARO_APP_API_BASE_URL=http://127.0.0.1:3000`，并在微信开发者工具
+  「详情 → 本地设置」勾选「不校验合法域名」——否则 http 与
+  127.0.0.1 都会被拦截。
+- 生产：API 必须部署在**已 ICP 备案的 HTTPS 域名**上，并在小程序
+  后台「开发 → 开发设置 → 服务器域名」把它加入 request 合法域名，
+  才能通过审核与真机校验。
 
 ## 适配器取舍说明
 
@@ -90,6 +129,14 @@ src/
   （`POST /v1/credits/purchases`，platform='wechat'）。**iOS 端禁虚拟
   支付**：`canPurchase()` 在 iOS 返回 false，购买入口一律隐藏，只保留
   已购权益消费；两端消费方就绪后接口应上移 `@bravecat/core/ports`。
+- **CloudFetch / 凭证 / 备份槽**：`@bravecat/core/cloud` 的两个注入端口
+  分别落在 `Taro.request`（HTTP 状态码语义与 fetch 一致，网络层失败
+  才 reject）与 wx storage（键 `bravecat.cloud.credentials`，与 web 端
+  localStorage 同名对齐）。**「覆盖本地前备份」重定义**：web 端是导出
+  下载文件，小程序没有文件下载，改为独立 storage 备份键 + 相册页
+  「恢复备份」入口（恢复走 `controller.importDocument` 完整校验迁移链）；
+  取舍：备份随小程序数据清理一起丢失，但覆盖场景本身罕见（跨设备
+  且云端较新），保留 2 份 + 剪贴板导出兜底已够。
 
 ## 已知差异与限制
 
@@ -116,12 +163,18 @@ src/
 - `onShareAppMessage` 分享卡片图（imageUrl 用合成临时文件）。
 - clip-path / CSS 变量在真机 WebView 的一致性（开发者工具先行验证）。
 - 剪贴板导入导出在真机上的容量与权限表现。
+- 云同步整链在开发者工具/真机的表现（本地起 services/api 联调；
+  生产域名白名单与 HTTPS 证书）。
 
 ## 待办（Phase 4 收尾）
 
 - [ ] 微信支付接线（等 services/api 的下单/回调核销位）+ 付费入口页
       （独立于小铺；iOS 隐藏）。
-- [ ] 微信登录 + 云存档同步（Phase 1 后端能力接入）。
+- [x] 云存档同步（游客账号 + pull 比较 + 节流推送 + 备份槽，见上文
+      「云同步」一节）。
+- [ ] 微信登录：客户端链路已封装（`platform/wechatAuth.ts`），等
+      services/api 的 `/v1/auth/bind/wechat` 从 501 骨架落地后把相册页
+      入口从「待开通」放开。
 - [ ] 家主题美术过验收后入 CDN 发布清单，本端家场景切生产资产。
 - [ ] 小猫 sprite 动画（steps 动画 WXSS 适配或 canvas 帧动画）。
 - [ ] 更换形象 / 布置家 / 多猫切换。
