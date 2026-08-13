@@ -8,6 +8,7 @@ import {
   type RandomPort,
   type SharePort,
 } from '@bravecat/core'
+import { assetBaseUrl } from './assetBase'
 import { Capacitor } from '@capacitor/core'
 import { nativeShare } from './nativePorts'
 
@@ -50,9 +51,9 @@ export const webShare: SharePort = {
   download: downloadBlob,
 }
 
-/** web 端资产走相对根路径，与端口引入前的行为一致。 */
+/** web 端默认相对根路径；设 VITE_ASSET_BASE_URL 后改走 CDN（见 assetBase.ts）。 */
 export const installWebAssetResolver = () => {
-  configureAssetResolver(createBaseUrlAssetResolver(''))
+  configureAssetResolver(createBaseUrlAssetResolver(assetBaseUrl))
 }
 
 /**
