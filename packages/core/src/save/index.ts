@@ -1,12 +1,12 @@
 import Dexie, { type Table } from 'dexie'
+// 存档信封类型与版本常量的单一来源在 @bravecat/contracts（服务端共用）。
+import {
+  SAVE_SCHEMA_VERSION,
+  type SaveDocument,
+} from '@bravecat/contracts/save-document'
 
-export const SAVE_SCHEMA_VERSION = 4 as const
-
-export interface SaveDocument<TState> {
-  schemaVersion: number
-  exportedAt: number
-  state: TState
-}
+export { SAVE_SCHEMA_VERSION }
+export type { SaveDocument }
 
 export interface SaveStore<TState> {
   load(): Promise<TState | undefined>

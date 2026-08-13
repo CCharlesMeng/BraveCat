@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { saveDocumentSchema } from './save-document.js'
+import { saveDocumentSchema } from './save-document-schema.js'
 
 /**
  * GET /v1/save 查询参数：客户端必须声明自己支持的最高存档 schemaVersion，

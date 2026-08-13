@@ -1,5 +1,6 @@
 export * from './errors.js'
 export * from './save-document.js'
+export * from './save-document-schema.js'
 export * from './auth.js'
 export * from './save.js'
 export * from './ledger.js'
