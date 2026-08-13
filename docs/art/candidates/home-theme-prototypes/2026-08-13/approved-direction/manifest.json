@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "archiveId": "home-theme-abf-approved-direction-2026-08-13",
+  "approvedOn": "2026-08-13",
+  "approval": "visual-direction-approved",
+  "runtimeEligible": false,
+  "source": "cursor-session-candidate",
+  "blockers": {
+    "CONCEPT_FLATTENED": "The complete concept bakes exterior, HomeFinish, furniture, and dynamic display content into one image and cannot be used as separated runtime layers.",
+    "REVIEW_BOARD_NON_PRODUCTION": "The review board contains a paper background and composite layout and is not production alpha or a directly sliceable asset.",
+    "HOMEFORM_GEOMETRY_UNFROZEN": "A and B lack independent high-resolution 16:9 HomeForm controls, while F still needs final 16:9 geometry annotation.",
+    "RUNTIME_CONTRACT_MISSING": "Apertures, support surfaces, sockets, slot quads, anchors, hit areas, exclusion zones, z-bands, and foreground occlusion assets are not frozen or complete.",
+    "UI_DIRECTION_ONLY": "The UI image approves visual direction only; it does not authorize implementation and is not runtime UI art."
+  },
+  "assets": [
+    {
+      "id": "home-theme-a--clear-sage--concept--v01",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/concepts/bravecat-home-theme-a--clear-sage--concept-v01.png",
+      "originalFilename": "bravecat-home-theme-a--clear-sage--concept-v01.png",
+      "width": 546,
+      "height": 819,
+      "hasAlpha": true,
+      "sha256": "36778012025308a0f514deb3817ff9d862b25287fe7686a57ff529afb0b06cf4",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-theme-b--warm-walnut-travel-gallery--concept--v02",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/concepts/bravecat-home-theme-b-warm-walnut-travel-gallery-v02.png",
+      "originalFilename": "bravecat-home-theme-b-warm-walnut-travel-gallery-v02.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": false,
+      "sha256": "c1e09f383949da2f416dc965d42b87241b4ae5193b52b0a223fe583c1c7c3aaa",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-theme-f--moonwhite-bluegray--concept--v01",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/concepts/home-theme--f-moonwhite-bluegray--candidate-v01.png",
+      "originalFilename": "home-theme--f-moonwhite-bluegray--candidate-v01.png",
+      "width": 546,
+      "height": 819,
+      "hasAlpha": true,
+      "sha256": "4f959a4f6a2b78797e80c24953de42f037f8fc78eb984563c9a0cec919d7781a",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-part-set-a--clear-sage--review-board--v03",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/review-boards/bravecat-home-part-set-a-clear-sage-review-board-v03.png",
+      "originalFilename": "bravecat-home-part-set-a-clear-sage-review-board-v03.png",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "sha256": "5acb50649a298da46042087e2ec75950d5e23371c8f02ba3c1ea1ad21b06e568",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-part-set-b--warm-walnut-travel-gallery--review-board--v02",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/review-boards/bravecat-home-part-set-b-warm-walnut-travel-gallery-review-board-v02.png",
+      "originalFilename": "bravecat-home-part-set-b-warm-walnut-travel-gallery-review-board-v02.png",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "sha256": "73a64239c2e4b48c1c5b8c60033ef4cfea1fb36b04fb1e9ca244c4bf583b3952",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-part-suite-f--moonwhite-bluegray--review-board--v04",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/review-boards/home-part-suite--f-moonwhite-bluegray--review-board--v04.png",
+      "originalFilename": "home-part-suite--f-moonwhite-bluegray--review-board--v04.png",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "sha256": "7057cf37d2d5ef8a98276b30f081845af349cc10dc4f408305c66ae98d39c2c0",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "source": "cursor-session-candidate"
+    },
+    {
+      "id": "home-theme--ui-directions--v01",
+      "archivePath": "docs/art/candidates/home-theme-prototypes/2026-08-13/approved-direction/ui/bravecat-home-theme-ui-directions-v01.png",
+      "originalFilename": "bravecat-home-theme-ui-directions-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": false,
+      "sha256": "1c82da784fa301dfb9a1ab6a7b956ed70f629e7e4a66432554381767dab6421d",
+      "approval": "visual-direction-approved",
+      "runtimeEligible": false,
+      "knownBlockers": ["UI_DIRECTION_ONLY"],
+      "source": "cursor-session-candidate"
+    }
+  ]
+}
