@@ -135,6 +135,11 @@ export const createMemoryRepositories = (): Repositories => {
         }
         return undefined
       },
+      listByUser: async (userId) =>
+        [...userPortraits.values()]
+          .filter((portrait) => portrait.userId === userId)
+          .sort((left, right) => left.createdAt - right.createdAt)
+          .map((portrait) => structuredClone(portrait)),
     },
   }
 }

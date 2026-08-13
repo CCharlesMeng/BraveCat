@@ -305,5 +305,19 @@ export const createPostgresRepositories = (pool: pg.Pool): Repositories => ({
         createdAt: Number(row.created_at),
       }
     },
+    listByUser: async (userId) => {
+      const { rows } = await pool.query(
+        `select * from user_portraits
+         where user_id = $1 order by created_at asc`,
+        [userId],
+      )
+      return rows.map((row) => ({
+        id: row.id,
+        userId: row.user_id,
+        jobId: row.job_id,
+        poses: row.poses,
+        createdAt: Number(row.created_at),
+      }))
+    },
   },
 })

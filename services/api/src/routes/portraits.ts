@@ -2,10 +2,17 @@ import { randomUUID } from 'node:crypto'
 import type { FastifyInstance } from 'fastify'
 import {
   ErrorCode,
+  MAX_PORTRAIT_PHOTO_BYTES,
+  portraitPoseSchema,
   submitGenerationRequestSchema,
+  uploadPortraitPhotoRequestSchema,
   type ConfirmGenerationResponse,
   type GenerationJob,
   type GenerationJobResponse,
+  type ListPortraitsResponse,
+  type PortraitPhotoContentType,
+  type PortraitPoseImageResponse,
+  type UploadPortraitPhotoResponse,
   type UserPortrait,
 } from '@bravecat/contracts'
 import {
@@ -13,6 +20,7 @@ import {
   jobHoldKey,
   jobReleaseKey,
 } from '../aigc/creditKeys.js'
+import { parsePngHeader } from '../aigc/png.js'
 import { sendError, sendValidationError } from '../http/replies.js'
 import type {
   GenerationJobRecord,
@@ -30,18 +38,110 @@ const toApiPortrait = (record: UserPortraitRecord): UserPortrait => {
   return portrait
 }
 
+const BASE64_PATTERN = /^[A-Za-z0-9+/]*={0,2}$/
+
+/** Buffer.from 对非法字符过于宽容，先做字符集与长度校验再解码。 */
+const decodeBase64Strict = (text: string): Uint8Array | undefined => {
+  if (text.length % 4 !== 0 || !BASE64_PATTERN.test(text)) {
+    return undefined
+  }
+  return new Uint8Array(Buffer.from(text, 'base64'))
+}
+
+/** 魔数校验：不信任客户端声明的 contentType。 */
+const matchesContentType = (
+  bytes: Uint8Array,
+  contentType: PortraitPhotoContentType,
+): boolean =>
+  contentType === 'image/png'
+    ? parsePngHeader(bytes) !== undefined
+    : bytes.length > 3 &&
+      bytes[0] === 0xff &&
+      bytes[1] === 0xd8 &&
+      bytes[2] === 0xff
+
+const photoExtension = (contentType: PortraitPhotoContentType): string =>
+  contentType === 'image/png' ? 'png' : 'jpg'
+
 /**
  * AIGC 形象生成 job 管线（次数事务语义见 repositories/types.ts 的
  * GenerationCreditRepository 注释）：
+ * - POST   /portraits/photos                最小照片上传（JSON + base64）
  * - POST   /portraits/generations           提交（校验照片引用与余额，预扣 1 次）
  * - GET    /portraits/generations/:jobId    查询状态
+ * - GET    /portraits/generations/:jobId/poses/:pose  读取产出图（base64）
  * - POST   /portraits/generations/:jobId/confirm  确认（落定消耗，产出形象记录）
+ * - GET    /portraits                       已确认形象列表
  */
 export const registerPortraitRoutes = (
   app: FastifyInstance,
   deps: RouteDeps,
 ): void => {
   const { generationCredits, generationJobs, userPortraits } = deps.repositories
+
+  /**
+   * 最小照片上传端点：JSON + base64 落进 AssetStorage 端口，返回 photoKey。
+   * 走 JSON 是为了复用现有 5MB bodyLimit 与客户端字符串体 HTTP 端口；
+   * 生产接入 OSS 后可换预签名 URL 直传，本端点与响应类型随之退役。
+   */
+  app.post(
+    '/portraits/photos',
+    { preHandler: [deps.authenticate] },
+    async (request, reply) => {
+      const parsed = uploadPortraitPhotoRequestSchema.safeParse(request.body)
+      if (!parsed.success) {
+        return sendValidationError(reply, parsed.error)
+      }
+      const { contentType, dataBase64 } = parsed.data
+
+      const bytes = decodeBase64Strict(dataBase64)
+      if (!bytes || bytes.length === 0) {
+        return sendError(
+          reply,
+          400,
+          ErrorCode.ValidationFailed,
+          '照片数据不是合法的 base64',
+        )
+      }
+      if (bytes.length > MAX_PORTRAIT_PHOTO_BYTES) {
+        return sendError(
+          reply,
+          400,
+          ErrorCode.ValidationFailed,
+          `照片超过大小上限（${MAX_PORTRAIT_PHOTO_BYTES} 字节）`,
+        )
+      }
+      if (!matchesContentType(bytes, contentType)) {
+        return sendError(
+          reply,
+          400,
+          ErrorCode.ValidationFailed,
+          `照片内容与声明的格式不符：${contentType}`,
+        )
+      }
+
+      const photoKey =
+        `portraits/uploads/${request.userId}/` +
+        `${randomUUID()}.${photoExtension(contentType)}`
+      await deps.aigc.storage.put(photoKey, bytes, contentType)
+
+      const body: UploadPortraitPhotoResponse = { photoKey }
+      return reply.status(201).send(body)
+    },
+  )
+
+  /** 当前账号全部已确认形象（跨会话恢复可选列表用）。 */
+  app.get(
+    '/portraits',
+    { preHandler: [deps.authenticate] },
+    async (request, reply) => {
+      const portraits = await userPortraits.listByUser(request.userId)
+      const body: ListPortraitsResponse = {
+        portraits: portraits.map(toApiPortrait),
+      }
+      return reply.send(body)
+    },
+  )
 
   app.post(
     '/portraits/generations',
@@ -144,6 +244,35 @@ export const registerPortraitRoutes = (
         return sendError(reply, 404, ErrorCode.NotFound, '生成任务不存在')
       }
       const body: GenerationJobResponse = { job: toApiJob(job) }
+      return reply.send(body)
+    },
+  )
+
+  /**
+   * 读取产出图（确认页预览与已确认形象渲染共用；形象记录引用同一批对象）。
+   * base64 投影的取舍同上传端点：生产换 OSS 预签名 URL / CDN。
+   */
+  app.get(
+    '/portraits/generations/:jobId/poses/:pose',
+    { preHandler: [deps.authenticate] },
+    async (request, reply) => {
+      const { jobId, pose } = request.params as { jobId: string; pose: string }
+      const job = await generationJobs.findById(jobId)
+      if (!job || job.userId !== request.userId) {
+        return sendError(reply, 404, ErrorCode.NotFound, '生成任务不存在')
+      }
+      const parsedPose = portraitPoseSchema.safeParse(pose)
+      const key = parsedPose.success
+        ? job.result?.poses[parsedPose.data]
+        : undefined
+      const bytes = key ? await deps.aigc.storage.get(key) : undefined
+      if (!bytes) {
+        return sendError(reply, 404, ErrorCode.NotFound, '生成产出图不存在')
+      }
+      const body: PortraitPoseImageResponse = {
+        contentType: 'image/png',
+        dataBase64: Buffer.from(bytes).toString('base64'),
+      }
       return reply.send(body)
     },
   )

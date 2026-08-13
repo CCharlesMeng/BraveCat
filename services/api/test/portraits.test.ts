@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { ErrorCode, portraitGenerationPoses } from '@bravecat/contracts'
+import {
+  ErrorCode,
+  MAX_PORTRAIT_PHOTO_BYTES,
+  portraitGenerationPoses,
+} from '@bravecat/contracts'
 import {
   createFakeGenerationProvider,
   encodeSolidPng,
@@ -281,6 +285,190 @@ describe('POST /v1/portraits/generations/:jobId/confirm', () => {
     )
     // 失败已退回，确认失败不再改变余额。
     expect(await balanceOf(test, guest.token)).toBe(3)
+  })
+})
+
+describe('POST /v1/portraits/photos', () => {
+  const uploadPhoto = async (
+    test: TestApp,
+    token: string,
+    payload: Record<string, unknown>,
+  ) =>
+    test.app.inject({
+      method: 'POST',
+      url: '/v1/portraits/photos',
+      headers: bearer(token),
+      payload,
+    })
+
+  it('PNG 上传落进对象存储并返回 photoKey', async () => {
+    const test = createTestApp()
+    const guest = await registerGuest(test.app)
+    const photo = encodeSolidPng(1024, 1024, { alpha: false })
+
+    const response = await uploadPhoto(test, guest.token, {
+      contentType: 'image/png',
+      dataBase64: Buffer.from(photo).toString('base64'),
+    })
+
+    expect(response.statusCode).toBe(201)
+    const { photoKey } = response.json() as { photoKey: string }
+    expect(photoKey).toMatch(
+      new RegExp(`^portraits/uploads/${guest.userId}/[0-9a-f-]+\\.png$`),
+    )
+    expect(await test.storage.get(photoKey)).toEqual(photo)
+  })
+
+  it('上传的 photoKey 可直接提交生成并走完管线', async () => {
+    const test = createTestApp()
+    const guest = await registerGuest(test.app)
+    await redeemTestCredits(test.app, guest.token, 1)
+    const upload = await uploadPhoto(test, guest.token, {
+      contentType: 'image/jpeg',
+      dataBase64: Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0x00, 0x10]).toString(
+        'base64',
+      ),
+    })
+    expect(upload.statusCode).toBe(201)
+
+    const submitted = await submit(test, guest.token, {
+      photoKey: (upload.json() as { photoKey: string }).photoKey,
+    })
+    expect(submitted.statusCode).toBe(202)
+    await test.queue.onIdle()
+    const job = await getJob(test, guest.token, submitted.json().job.id)
+    expect(job.status).toBe('awaiting_confirm')
+  })
+
+  it('拒绝魔数与声明格式不符的照片', async () => {
+    const test = createTestApp()
+    const guest = await registerGuest(test.app)
+
+    const response = await uploadPhoto(test, guest.token, {
+      contentType: 'image/png',
+      dataBase64: Buffer.from([0xff, 0xd8, 0xff, 0xe0]).toString('base64'),
+    })
+
+    expect(response.statusCode).toBe(400)
+    expect(response.json().error.code).toBe(ErrorCode.ValidationFailed)
+  })
+
+  it('拒绝非法 base64 与超限照片', async () => {
+    const test = createTestApp()
+    const guest = await registerGuest(test.app)
+
+    const badBase64 = await uploadPhoto(test, guest.token, {
+      contentType: 'image/png',
+      dataBase64: '!!!not-base64!!!',
+    })
+    expect(badBase64.statusCode).toBe(400)
+
+    const oversized = Buffer.alloc(MAX_PORTRAIT_PHOTO_BYTES + 1)
+    oversized.set([0xff, 0xd8, 0xff])
+    const tooLarge = await uploadPhoto(test, guest.token, {
+      contentType: 'image/jpeg',
+      dataBase64: oversized.toString('base64'),
+    })
+    expect(tooLarge.statusCode).toBe(400)
+    expect(tooLarge.json().error.message).toContain('上限')
+  })
+
+  it('未认证请求被拒绝', async () => {
+    const test = createTestApp()
+
+    const response = await test.app.inject({
+      method: 'POST',
+      url: '/v1/portraits/photos',
+      payload: { contentType: 'image/png', dataBase64: 'aGVsbG8=' },
+    })
+
+    expect(response.statusCode).toBe(401)
+  })
+})
+
+describe('GET /v1/portraits/generations/:jobId/poses/:pose', () => {
+  const getPoseImage = async (
+    test: TestApp,
+    token: string,
+    jobId: string,
+    pose: string,
+  ) =>
+    test.app.inject({
+      method: 'GET',
+      url: `/v1/portraits/generations/${jobId}/poses/${pose}`,
+      headers: bearer(token),
+    })
+
+  it('返回产出图的 base64，解码后与对象存储一致', async () => {
+    const test = createTestApp()
+    const guest = await setupUser(test)
+    const jobId = (await submit(test, guest.token)).json().job.id
+    await test.queue.onIdle()
+    const job = await getJob(test, guest.token, jobId)
+
+    const response = await getPoseImage(test, guest.token, jobId, 'sit')
+
+    expect(response.statusCode).toBe(200)
+    const body = response.json() as { contentType: string; dataBase64: string }
+    expect(body.contentType).toBe('image/png')
+    expect(new Uint8Array(Buffer.from(body.dataBase64, 'base64'))).toEqual(
+      await test.storage.get(job.result.poses.sit),
+    )
+  })
+
+  it('未知姿势、无产出的失败 job 与他人 job 统一 404', async () => {
+    const test = createTestApp({
+      moderation: {
+        moderateImage: async () => ({ verdict: 'reject', reason: '拒绝' }),
+      },
+    })
+    const guest = await setupUser(test)
+    const jobId = (await submit(test, guest.token)).json().job.id
+    await test.queue.onIdle()
+
+    expect((await getPoseImage(test, guest.token, jobId, 'dance')).statusCode)
+      .toBe(404)
+    // 审核拒绝的 job 没有 result。
+    expect((await getPoseImage(test, guest.token, jobId, 'sit')).statusCode)
+      .toBe(404)
+    const stranger = await registerGuest(test.app)
+    expect((await getPoseImage(test, stranger.token, jobId, 'sit')).statusCode)
+      .toBe(404)
+  })
+})
+
+describe('GET /v1/portraits', () => {
+  const listPortraits = async (test: TestApp, token: string) => {
+    const response = await test.app.inject({
+      method: 'GET',
+      url: '/v1/portraits',
+      headers: bearer(token),
+    })
+    expect(response.statusCode).toBe(200)
+    return (response.json() as { portraits: Record<string, unknown>[] })
+      .portraits
+  }
+
+  it('确认前为空，确认后只返回自己的形象记录', async () => {
+    const test = createTestApp()
+    const guest = await setupUser(test)
+    expect(await listPortraits(test, guest.token)).toEqual([])
+
+    const jobId = (await submit(test, guest.token)).json().job.id
+    await test.queue.onIdle()
+    const confirmed = await confirm(test, guest.token, jobId)
+    expect(confirmed.statusCode).toBe(200)
+
+    const portraits = await listPortraits(test, guest.token)
+    expect(portraits).toHaveLength(1)
+    expect(portraits[0].id).toBe(confirmed.json().portrait.id)
+    expect(portraits[0].jobId).toBe(jobId)
+    expect(Object.keys(portraits[0].poses as object)).toHaveLength(10)
+    // 存储侧的归属字段不进 API 投影。
+    expect(portraits[0].userId).toBeUndefined()
+
+    const stranger = await registerGuest(test.app)
+    expect(await listPortraits(test, stranger.token)).toEqual([])
   })
 })
 

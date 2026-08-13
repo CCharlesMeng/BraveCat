@@ -109,6 +109,8 @@ export interface UserPortraitRepository {
   insert(portrait: UserPortraitRecord): Promise<void>
   /** 每个 job 至多产出一条形象记录（确认幂等的依据）。 */
   findByJobId(jobId: string): Promise<UserPortraitRecord | undefined>
+  /** 当前账号全部已确认形象，按创建时间升序（客户端可选列表）。 */
+  listByUser(userId: string): Promise<UserPortraitRecord[]>
 }
 
 export interface LedgerRepository {
