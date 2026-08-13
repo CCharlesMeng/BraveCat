@@ -22,25 +22,112 @@ import {
   SAVE_SCHEMA_VERSION,
   type SaveDocument,
 } from '@bravecat/contracts/save-document'
+import {
+  MAX_PORTRAIT_PHOTO_BYTES,
+  PORTRAIT_PHOTO_CONTENT_TYPES,
+  SETTLED_GENERATION_JOB_STATUSES,
+  type PortraitPhotoContentType,
+} from '@bravecat/contracts/portrait-generation'
 import type {
   ApiErrorCode,
   ApiErrorResponse,
   AuthTokenResponse,
+  ConfirmGenerationResponse,
   CreditBalanceResponse,
+  GenerationFailure,
+  GenerationJob,
+  GenerationJobResponse,
+  GenerationJobStatus,
   GetSaveResponse,
+  ListPortraitsResponse,
   MetaResponse,
+  PortraitPose,
+  PortraitPoseImageResponse,
   PutSaveRequest,
   PutSaveResponse,
+  SubmitGenerationRequest,
+  UploadPortraitPhotoRequest,
+  UploadPortraitPhotoResponse,
+  UserPortrait,
 } from '@bravecat/contracts'
 
-export { SAVE_SCHEMA_VERSION }
-export type { SaveDocument, MetaResponse }
+export {
+  MAX_PORTRAIT_PHOTO_BYTES,
+  PORTRAIT_PHOTO_CONTENT_TYPES,
+  SAVE_SCHEMA_VERSION,
+}
+export type {
+  ConfirmGenerationResponse,
+  GenerationFailure,
+  GenerationJob,
+  GenerationJobStatus,
+  MetaResponse,
+  PortraitPhotoContentType,
+  PortraitPose,
+  SaveDocument,
+  UserPortrait,
+}
 
 // 错误码字面量经类型注解与 contracts 对齐：contracts 改名时这里编译失败。
 // 不直接 import ErrorCode 常量，避免把 contracts 主入口的 zod 带进客户端 bundle。
 const SAVE_NOT_FOUND: ApiErrorCode = 'SAVE_NOT_FOUND'
 const SAVE_SCHEMA_TOO_NEW: ApiErrorCode = 'SAVE_SCHEMA_TOO_NEW'
 const INTERNAL_ERROR: ApiErrorCode = 'INTERNAL_ERROR'
+const VALIDATION_FAILED: ApiErrorCode = 'VALIDATION_FAILED'
+
+const BASE64_CHARS =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+const BASE64_INDEX = new Map(
+  [...BASE64_CHARS].map((char, index) => [char, index] as const),
+)
+
+/** 平台无关的 base64 编码（浏览器无 Buffer、btoa 对二进制不友好）。 */
+export const encodeBase64 = (bytes: Uint8Array): string => {
+  let output = ''
+  for (let i = 0; i < bytes.length; i += 3) {
+    const byte0 = bytes[i]
+    const byte1 = i + 1 < bytes.length ? bytes[i + 1] : 0
+    const byte2 = i + 2 < bytes.length ? bytes[i + 2] : 0
+    output += BASE64_CHARS[byte0 >> 2]
+    output += BASE64_CHARS[((byte0 & 0b11) << 4) | (byte1 >> 4)]
+    output += i + 1 < bytes.length
+      ? BASE64_CHARS[((byte1 & 0b1111) << 2) | (byte2 >> 6)]
+      : '='
+    output += i + 2 < bytes.length ? BASE64_CHARS[byte2 & 0b111111] : '='
+  }
+  return output
+}
+
+/** 平台无关的 base64 解码；非法字符抛错。 */
+export const decodeBase64 = (text: string): Uint8Array => {
+  const trimmed = text.replace(/=+$/u, '')
+  const bytes = new Uint8Array(Math.floor((trimmed.length * 3) / 4))
+  let cursor = 0
+  let buffer = 0
+  let bits = 0
+  for (const char of trimmed) {
+    const value = BASE64_INDEX.get(char)
+    if (value === undefined) {
+      throw new Error(`非法 base64 字符：${char}`)
+    }
+    buffer = (buffer << 6) | value
+    bits += 6
+    if (bits >= 8) {
+      bits -= 8
+      bytes[cursor] = (buffer >> bits) & 0xff
+      cursor += 1
+    }
+  }
+  return bytes
+}
+
+/** 生成 job 是否已到终态（轮询可以停止）。 */
+export const isGenerationJobSettled = (
+  status: GenerationJobStatus,
+): boolean =>
+  (SETTLED_GENERATION_JOB_STATUSES as readonly GenerationJobStatus[]).includes(
+    status,
+  )
 
 /** 最小化 HTTP 响应：只要求状态码与 JSON 解码。 */
 export interface CloudHttpResponse {
@@ -257,12 +344,151 @@ export const createCloudSyncClient = (options: CloudSyncClientOptions) => {
     return (await response.json()) as MetaResponse
   }
 
+  /**
+   * 上传形象生成用的照片，返回提交生成时引用的 photoKey。
+   * 字节走 JSON + base64（服务端复用 bodyLimit 与 AssetStorage 端口，
+   * 客户端复用字符串体的 CloudFetch 端口；生产接 OSS 后换预签名 URL）。
+   */
+  const uploadPortraitPhoto = async (input: {
+    bytes: Uint8Array
+    contentType: PortraitPhotoContentType
+  }): Promise<string> => {
+    if (input.bytes.length === 0) {
+      throw new CloudSyncError(VALIDATION_FAILED, '照片内容为空')
+    }
+    if (input.bytes.length > MAX_PORTRAIT_PHOTO_BYTES) {
+      throw new CloudSyncError(
+        VALIDATION_FAILED,
+        `照片超过大小上限（${MAX_PORTRAIT_PHOTO_BYTES} 字节）`,
+      )
+    }
+    const { token } = await requireCredentials()
+    const payload: UploadPortraitPhotoRequest = {
+      contentType: input.contentType,
+      dataBase64: encodeBase64(input.bytes),
+    }
+    const response = await options.fetch(url('/portraits/photos'), {
+      method: 'POST',
+      headers: { ...bearer(token), 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (response.status !== 201) return throwFrom(response)
+    return ((await response.json()) as UploadPortraitPhotoResponse).photoKey
+  }
+
+  /** 提交生成 job（预扣 1 次）；同幂等键重放返回同一 job（202 新建 / 200 重放）。 */
+  const submitPortraitGeneration = async (
+    input: SubmitGenerationRequest,
+  ): Promise<GenerationJob> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(url('/portraits/generations'), {
+      method: 'POST',
+      headers: { ...bearer(token), 'content-type': 'application/json' },
+      body: JSON.stringify(input),
+    })
+    if (response.status !== 202 && response.status !== 200) {
+      return throwFrom(response)
+    }
+    return ((await response.json()) as GenerationJobResponse).job
+  }
+
+  /** 查询生成 job 当前状态。 */
+  const getPortraitGeneration = async (
+    jobId: string,
+  ): Promise<GenerationJob> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(
+      url(`/portraits/generations/${jobId}`),
+      { headers: bearer(token) },
+    )
+    if (response.status !== 200) return throwFrom(response)
+    return ((await response.json()) as GenerationJobResponse).job
+  }
+
+  /**
+   * 轮询生成 job 直到终态（awaiting_confirm / confirmed / failed）。
+   * 每轮经 onUpdate 通知最新状态；isCancelled 返回 true 时提前停止
+   * 并返回最近一次状态（页面关闭等场景由调用方兜底）。
+   */
+  const waitForPortraitGeneration = async (
+    jobId: string,
+    waitOptions: {
+      intervalMs?: number
+      onUpdate?: (job: GenerationJob) => void
+      isCancelled?: () => boolean
+      /** 可注入睡眠，单测用；默认 setTimeout。 */
+      sleep?: (ms: number) => Promise<void>
+    } = {},
+  ): Promise<GenerationJob> => {
+    const intervalMs = waitOptions.intervalMs ?? 2_000
+    const sleep = waitOptions.sleep
+      ?? ((ms: number) => new Promise<void>((resolve) => {
+        setTimeout(resolve, ms)
+      }))
+    for (;;) {
+      const job = await getPortraitGeneration(jobId)
+      waitOptions.onUpdate?.(job)
+      if (isGenerationJobSettled(job.status) || waitOptions.isCancelled?.()) {
+        return job
+      }
+      await sleep(intervalMs)
+    }
+  }
+
+  /** 确认生成结果：落定消耗并产出形象记录（ADR-0004 只向未来生效）。 */
+  const confirmPortraitGeneration = async (
+    jobId: string,
+  ): Promise<ConfirmGenerationResponse> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(
+      url(`/portraits/generations/${jobId}/confirm`),
+      { method: 'POST', headers: bearer(token) },
+    )
+    if (response.status !== 200) return throwFrom(response)
+    return (await response.json()) as ConfirmGenerationResponse
+  }
+
+  /** 当前账号全部已确认形象（按创建时间升序）。 */
+  const listPortraits = async (): Promise<UserPortrait[]> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(url('/portraits'), {
+      headers: bearer(token),
+    })
+    if (response.status !== 200) return throwFrom(response)
+    return ((await response.json()) as ListPortraitsResponse).portraits
+  }
+
+  /** 读取某个 job 的姿势产出图字节（确认页预览与已确认形象渲染共用）。 */
+  const getPortraitPoseImage = async (
+    jobId: string,
+    pose: PortraitPose,
+  ): Promise<{ contentType: string; bytes: Uint8Array }> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(
+      url(`/portraits/generations/${jobId}/poses/${pose}`),
+      { headers: bearer(token) },
+    )
+    if (response.status !== 200) return throwFrom(response)
+    const body = (await response.json()) as PortraitPoseImageResponse
+    return {
+      contentType: body.contentType,
+      bytes: decodeBase64(body.dataBase64),
+    }
+  }
+
   return {
     ensureGuestAccount,
     pushSave,
     pullSave,
     getCreditsBalance,
     getMeta,
+    uploadPortraitPhoto,
+    submitPortraitGeneration,
+    getPortraitGeneration,
+    waitForPortraitGeneration,
+    confirmPortraitGeneration,
+    listPortraits,
+    getPortraitPoseImage,
   }
 }
 
