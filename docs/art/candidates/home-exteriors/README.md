@@ -58,10 +58,25 @@ Home Exterior 是独立于房间 shell、窗框、HomeForm 和 Home Theme preset
   （1200×1600；生成件等宽放大到 1200×1800 后向上偏置裁切）。
 - 地平线机器实测 **y 580**，落在 y 520–640 带内（蓝度骤降行检测）。
 - 行程 QA：以 1.10 倍率、±60px 行程合成进 A/F clean shell 窗洞，
-  三联证据见 `approved-direction-2026-08-13/validation/riverbend-parallax/`；
+  三联证据见 `approved-direction-2026-08-13/validation/riverbend-embankment-parallax/`
+  （管线泛化时目录由 `riverbend-parallax` 更名，旧目录已删除）；
   两种窗型在行程两端均保持"上天空、中远岸小屋、下水面"构图，无露底。
 - 结论：新规格可执行；其余 9 地点母版按同一管线逐个重制，
   时间/天气派生须以 v03 构图为新 reference 重新出图。
+
+### 第二地点：静海湾 v03（2026-08-13 傍晚；管线泛化）
+
+重制管线泛化为多地点：裁切偏置改由管线自动求解（在 1200×1800 放大稿
+上实测地平线后解出偏置，江湾自动解 196 与上轮手工值一致），地平线
+检测支持按地点限定采样列（海湾只在右半开阔海平线上检测，避开左山岬）。
+
+- 母版：`approved-direction-2026-08-13/masters/ext-quiet-sea-bay--master--noon-clear--candidate-v03.png`
+  （1200×1600；自动裁切偏置 198，地平线实测 y 580 在带内）。
+- 行程 QA 扩展到 A/B/F 三种窗型（B clean shell 本日已产出），
+  证据见 `validation/riverbend-embankment-parallax/` 与
+  `validation/quiet-sea-bay-parallax/`；
+  山岬、海平线在行程两端均可读，无露底。
+- 剩余 8 地点母版待按同一管线重制。
 
 ## 候选目录
 

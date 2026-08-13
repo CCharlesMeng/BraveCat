@@ -31,6 +31,9 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a--clear-sage--concept-v01.png`
 - 当前套装审阅板：
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-part-set-a-clear-sage-review-board-v03.png`
+- 当前完整合成审阅图：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-a-clear-sage--assembled-room-review--candidate-v01.png`
+  — 2026-08-13 用户以“ok”签收整体搭配方向；不签精确坐标或 runtime 分层。
 - `v03` 为 1920×1080；从 `v02` 只做非破坏性的画布比例规范化，未重画
   物件。两侧纸面留白属于审阅板，不属于任何资产。
 
@@ -51,6 +54,9 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
   `/Users/moon/Documents/Code/BraveCat/docs/art/candidates/home-theme-prototypes/2026-08-13/home-theme--f-split-level-den--control-v01.png`
 - 当前套装审阅板：
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/home-part-suite--f-moonwhite-bluegray--review-board--v04.png`
+- 当前完整合成审阅图：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--assembled-room-review--candidate-v01.png`
+  — 2026-08-13 用户以“ok”签收整体搭配方向；不签精确坐标或 runtime 分层。
 - `v04` 为 1920×1080；从纯黑窗洞修正版 `v03` 只做画布比例规范化，
   未重画物件。
 
@@ -216,6 +222,11 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
    （三条轨，绿幕键控 → v02 坐标落位）已产出候选与对位 QA，见
    `production/*/piece--postcard-display-rails--candidate-v01.png`；
    六卡空框/轨前沿 foreground 与 B 的透视轨条未产出。
+   **更新（2026-08-13 傍晚）：**postcard-display 三套齐——B 透视轨条
+   （逐列双线性变形）与 F 六空框 foreground 已产出；A/B 按 v02 几何
+   判定无需 occlusion 层（卡位底边在轨顶上方，无重叠）。scratcher
+   base A/F 已产出（A 靠窗 gaze-perch、F 低层地面），B 未产出；
+   perch/play 锚点待猫叠层验收轮量测。下一件：`feeding-set`。
 5. 每件先交 base，再交必要的 foreground occlusion，并同时提交锚点与
    support/exclusion 视觉 QA 图；缺任一项不得上架。
 6. 最后才做真实猫、六张明信片、三类纪念品和 Treat 的叠层验收；通过前
@@ -456,5 +467,18 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
 - 这些文件只解决造型、材质与配色审阅，**不能解决 socket、房间透视、
   遮挡拆层、alpha 或像素注册阻断**；也没有提供锚点、support surface、
   exclusion zone、base / foreground 同母版导出或猫动画叠层证据。
-- 在用户签收造型前继续留在外部候选目录；签收后仍需用可控管线按冻结
-  HomeForm 生产真实透明 base / foreground，并逐件完成注册与遮挡 QA。
+- 本轮十张主造型随 A / F 合成审阅图获得视觉方向签收；仍需用可控管线按
+  冻结 HomeForm 生产真实透明 base / foreground，并逐件完成注册与遮挡 QA。
+
+## 2026-08-13 · A / F 完整合成视觉签收
+
+用户以“ok”签收 A / F 两张完整合成审阅图，批准级别为
+`visual-direction-approved`。两图只确认 shell 与五个主造型的整体搭配、
+主题色板、相对视觉重量和空间读感；**不签精确坐标**、socket、support /
+exclusion geometry、z-band、遮挡拆层或像素注册。
+
+两图实测均为 `1024 × 1536`（2:3）、无 alpha，并继续保留黑窗洞和已合成
+审阅内容。它们不是 `1200 × 1600`（3:4）production 画布，不是可拆运行时
+层，也不能用来反推 runtime placement。A / F shell 的 alpha/aperture mask、
+主造型透明 base / foreground、socket 对位、比例裁切、逐层注册与猫动画
+遮挡 QA 仍为有效阻断；`runtimeEligible=false`。

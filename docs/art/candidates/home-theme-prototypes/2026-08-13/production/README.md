@@ -56,17 +56,41 @@ form 数据（与 classic-v4 / split-level-den 同一惯例）；本表偏差即
 v02 冻结的 rails 坐标：
 
 - `piece--postcard-display-rails--candidate-v01.png`：1200×1600 透明
-  部件层（base，仅三条轨；六卡空框与轨前沿 foreground 未产出）。
-- `qa--piece-postcard-rails--v01.png`：部件叠在 clean shell 上并画出
-  六个 slot quad 的对位证据；每排卡位正下方一条轨，无绿边。
-- B 的轨条在右墙透视上，须按 v02 的透视 quad 单独生产，本轮未做。
+  部件层（base，三条轨）。A/F 为正面直轨；**B 为右墙透视轨**，由同
+  脚本按 v02 透视 quad 做逐列双线性变形落位（近端加厚、向近端上扬）。
+- `piece--postcard-display-frames-foreground--candidate-v01.png`（仅 F）：
+  六个白橡空框 foreground occlusion 层，框外沿比 slot 各向大 8px，
+  动态卡片边缘滑入框后。
+- `qa--piece-postcard-rails--v01.png`：base（F 含 foreground）叠在
+  clean shell 上并画出六个 slot quad 的对位证据；每排卡位正下方一条
+  轨，无绿边。
+- **A 的 foreground 判定**：v02 冻结里卡位底边 y 425 在轨顶 y 432 之上
+  （7px 间隙，卡片悬于轨上方不重叠），按“foreground 按需”合同判定
+  A 的 postcard-display 无需 occlusion 层；后续真实卡片叠层验收若
+  推翻此判定，再补轨前沿层。
+- **B 的 foreground 判定同 A**：透视轨顶即 rail 线，slot quad 底边在
+  其上方，无重叠。
+
+## 第二件：scratcher base（件序第 2 件，A/F）
+
+`scripts/build-scratcher-pieces.mjs`：绿幕抓柱（A 浅木+鼠尾草双平台、
+F 白橡+烟蓝双平台）键控 → 等比缩放进 v02 scratcher socket region、
+底边中点对齐：
+
+- `piece--scratcher--candidate-v01.png`：A 实际落位 185×567 @ (55,673)，
+  靠窗立柱、顶台即窗边 gaze-perch；F 实际落位 148×500 @ (76,820)，
+  立于低层地面、贴平台前沿（部件在前正确遮挡平台立面）。
+- `qa--piece-scratcher--v01.png`：部件 + socket region 虚线对位证据。
+- 欠账：高低 perch 与 `play-target` 锚点未量测（待猫叠层验收轮）；
+  B 的 scratcher 未产出。
 
 ## Exterior 视差行程 QA（联动 home-exteriors 试点）
 
-江湾母版 v03（按新规格重制，地平线实测 y 580 ∈ 520–640 带）以
-1.10 倍率、±60px 行程合成进 A/F 窗洞的三联证据：
-`docs/art/candidates/home-exteriors/approved-direction-2026-08-13/validation/riverbend-parallax/`。
-两种窗型在行程两端均保持“上天空、中远岸、下水面”的可读构图，无露底。
+江湾与静海湾母版 v03（按新规格重制，地平线实测均 y 580 ∈ 520–640 带，
+裁切偏置由管线自动求解）以 1.10 倍率、±60px 行程合成进 A/B/F 窗洞的
+三联证据：
+`docs/art/candidates/home-exteriors/approved-direction-2026-08-13/validation/*-parallax/`。
+三种窗型在行程两端均保持“上天空、中地标、下水面”的可读构图，无露底。
 
 ## 已知欠账
 
