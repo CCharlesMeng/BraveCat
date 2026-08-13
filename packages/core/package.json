@@ -1,0 +1,29 @@
+{
+  "name": "@bravecat/core",
+  "private": true,
+  "version": "0.1.0",
+  "description": "咪游记平台无关领域核心：时间/旅行/经济/明信片/家主题、GameController 编排层与平台端口",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./ids": "./src/ids.ts",
+    "./planTrip": "./src/planTrip.ts",
+    "./assets/starterCatalog": "./src/assets/starterCatalog.ts",
+    "./assets/starterItems": "./src/assets/starterItems.ts",
+    "./*": "./src/*/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dexie": "^4.4.4"
+  },
+  "devDependencies": {
+    "@tsconfig/svelte": "^5.0.8",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "~6.0.2",
+    "vitest": "^4.1.10"
+  }
+}

@@ -10,10 +10,16 @@ import { fileURLToPath } from 'node:url'
 import {
   BASELINE_PORTRAIT_POSES,
   isPortraitPose,
-} from '../src/lib/assets/portraitPoseVocabulary.js'
+} from '../packages/core/src/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const artRoot = path.join(root, 'docs/art')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
+const artRoot = resolveRepoPath('docs/art')
 const landmarkRoot = path.join(artRoot, 'candidates/landmarks')
 const archiveRoot = path.join(artRoot, 'archive')
 const cliArgs = process.argv.slice(2)
@@ -90,7 +96,7 @@ const reviewIndexOutputPath = optionValue(
 )
 
 const readJson = async (repoPath) => JSON.parse(
-  await readFile(path.join(root, repoPath), 'utf8'),
+  await readFile(resolveRepoPath(repoPath), 'utf8'),
 )
 
 const readOptionalJson = async (repoPath) => {
@@ -176,7 +182,7 @@ const inspectScene = async ({
   let contents
 
   try {
-    contents = await readFile(path.join(root, repoPath))
+    contents = await readFile(resolveRepoPath(repoPath))
   } catch {
     errors.push(`${semanticId}: missing ${repoPath}`)
     return { errors }
@@ -412,7 +418,7 @@ const inspectPortrait = async () => {
   for (const [pose, artifact] of Object.entries(manifest.production.artifacts)) {
     let contents
     try {
-      contents = await readFile(path.join(root, artifact.repoPath))
+      contents = await readFile(resolveRepoPath(artifact.repoPath))
     } catch {
       errors.push(`${pose}: missing ${artifact.repoPath}`)
       continue
@@ -468,7 +474,7 @@ const inspectPortrait = async () => {
     })
   }
 
-  const portraitPublicDirectory = path.join(root, 'public/portraits/minho')
+  const portraitPublicDirectory = resolveRepoPath('public/portraits/minho')
   const expectedPublicFiles = Object.values(manifest.production.artifacts)
     .map(({ repoPath }) => path.posix.basename(repoPath))
     .sort()
@@ -479,7 +485,7 @@ const inspectPortrait = async () => {
     errors.push('public/portraits/minho contains missing or unexpected PNG files')
   }
   try {
-    inspectPng(await readFile(path.join(root, manifest.portrait.identityReferenceSrc)))
+    inspectPng(await readFile(resolveRepoPath(manifest.portrait.identityReferenceSrc)))
   } catch {
     errors.push('Minho identity reference is missing or invalid')
   }
@@ -611,7 +617,7 @@ const buildReviewIndex = (archive) => {
 }
 
 const writeOrCheck = async (repoPath, contents) => {
-  const absolutePath = path.join(root, repoPath)
+  const absolutePath = resolveRepoPath(repoPath)
   if (checkOnly) {
     let current
     try {
@@ -710,7 +716,7 @@ const landmarkRightsReviewRecords = landmarkRightsDecision
   : []
 const landmarkRightsReviewContents = await Promise.all(
   landmarkRightsReviewRecords.map(({ path: reviewPath }) => (
-    readFile(path.join(root, reviewPath))
+    readFile(resolveRepoPath(reviewPath))
   )),
 )
 const rightsByDestination = new Map(

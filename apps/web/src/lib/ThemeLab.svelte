@@ -12,7 +12,7 @@
     normalizeHomeCustomization,
     type HomeCustomization,
     type ResolvedHomeScene,
-  } from './homeTheme'
+  } from '@bravecat/core/homeTheme'
 
   let { selection, scene, onSelect }: {
     selection: HomeCustomization

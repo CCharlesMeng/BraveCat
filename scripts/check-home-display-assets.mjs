@@ -256,8 +256,8 @@ for (const sourcePath of [
   'apps/web/src/App.svelte',
   'apps/web/src/app.css',
   'apps/web/src/lib/homeArt.ts',
-  'apps/web/src/lib/homeTheme/forms/classic-v4.ts',
-  'apps/web/src/lib/homeTheme/pieces/index.ts',
+  'packages/core/src/homeTheme/forms/classic-v4.ts',
+  'packages/core/src/homeTheme/pieces/index.ts',
 ]) {
   const source = await readFile(path.join(root, sourcePath), 'utf8')
   assert(

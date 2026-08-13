@@ -5,7 +5,13 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const candidateRoot = path.join(root, 'docs/art/candidates/home-v4')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
+const candidateRoot = resolveRepoPath('docs/art/candidates/home-v4')
 const sourcePath = path.join(
   candidateRoot,
   'interior-foreground--candidate-v02.png',
@@ -24,7 +30,7 @@ const approvalPath = path.join(
   root,
   'docs/art/reviews/home-v4/approval.v1.json',
 )
-const runtimeRoot = path.join(root, 'public/dev-art/home-v4')
+const runtimeRoot = resolveRepoPath('public/dev-art/home-v4')
 const times = ['morning', 'noon', 'dusk', 'late-night']
 const lightingDefinitions = {
   morning: ['#fff4cf', 0.12, '#f2c781', 0.06],
@@ -197,7 +203,7 @@ const windowRect = {
 const exteriorCandidates = Object.fromEntries(await Promise.all(times.map(
   async (time) => {
     const scene = await sharp(
-      path.join(root, `public/dev-art/home-v3/exterior-${time}.png`),
+      resolveRepoPath(`public/dev-art/home-v3/exterior-${time}.png`),
     )
       .ensureAlpha()
       .trim({ background: { r: 0, g: 0, b: 0, alpha: 0 } })
@@ -253,7 +259,7 @@ const eatCat = await sharp(path.join(
   .png()
   .toBuffer()
 const treatPile = await sharp(
-  path.join(root, 'public/assets/treat/treat-96.png'),
+  resolveRepoPath('public/assets/treat/treat-96.png'),
 )
   .resize(96, 96, { fit: 'contain' })
   .png()
@@ -264,7 +270,7 @@ const qaComposites = Object.fromEntries(await Promise.all(times.map(
     const overlays = [
       { input: exteriorCandidates[time] },
       { input: candidate },
-      { input: path.join(root, 'public/assets/home/display--postcard-wall--v03.png') },
+      { input: resolveRepoPath('public/assets/home/display--postcard-wall--v03.png') },
       { input: gazeCat, left: 180, top: 623 },
     ]
     if (lightingCandidates[time]) {
@@ -293,7 +299,7 @@ const eatQaComposite = await sharp({
 }).composite([
   { input: exteriorCandidates.noon },
   { input: eatCandidate },
-  { input: path.join(root, 'public/assets/home/display--postcard-wall--v03.png') },
+  { input: resolveRepoPath('public/assets/home/display--postcard-wall--v03.png') },
   { input: eatCat, left: 335, top: 864 },
 ]).png().toBuffer()
 

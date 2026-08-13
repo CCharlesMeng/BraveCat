@@ -5,13 +5,19 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
 const previewRoot = 'public/dev-art/home-v4'
 const manifest = JSON.parse(await readFile(
-  path.join(root, 'docs/art/candidates/home-v4/manifest.candidate.json'),
+  resolveRepoPath('docs/art/candidates/home-v4/manifest.candidate.json'),
   'utf8',
 ))
 const approval = JSON.parse(await readFile(
-  path.join(root, 'docs/art/reviews/home-v4/approval.v1.json'),
+  resolveRepoPath('docs/art/reviews/home-v4/approval.v1.json'),
   'utf8',
 ))
 
@@ -58,7 +64,7 @@ const expectedCatAnimations = [
 ))
 
 for (const [filename, expectedHash] of Object.entries(expectedFiles)) {
-  const runtimePath = path.join(root, previewRoot, filename)
+  const runtimePath = resolveRepoPath(previewRoot, filename)
   const contents = await readFile(runtimePath).catch(() => {
     throw new Error(`${runtimePath} is missing`)
   })
@@ -77,7 +83,7 @@ for (const [filename, expectedHash] of Object.entries(expectedFiles)) {
 }
 
 for (const filename of expectedCatAnimations) {
-  const runtimePath = path.join(root, previewRoot, filename)
+  const runtimePath = resolveRepoPath(previewRoot, filename)
   const contents = await readFile(runtimePath).catch(() => {
     throw new Error(`${runtimePath} is missing`)
   })
@@ -114,13 +120,11 @@ for (const filename of expectedCatAnimations) {
   }
 }
 
-const normalInterior = await sharp(path.join(
-  root,
+const normalInterior = await sharp(resolveRepoPath(
   previewRoot,
   'interior-foreground.png',
 )).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
-const eatInterior = await sharp(path.join(
-  root,
+const eatInterior = await sharp(resolveRepoPath(
   previewRoot,
   'interior-foreground-eat.png',
 )).ensureAlpha().raw().toBuffer({ resolveWithObject: true })

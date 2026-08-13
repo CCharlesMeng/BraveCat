@@ -10,7 +10,8 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
-import { isPortraitPose } from '../src/lib/assets/portraitPoseVocabulary.js'
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+import { isPortraitPose } from '../packages/core/src/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -79,7 +80,7 @@ const productionManifestVersion = Number(
   path.posix.basename(productionManifestPath).match(/^manifest\.v(\d+)\.json$/)?.[1] ?? 1,
 )
 
-const absolute = (repoPath) => path.join(root, repoPath)
+const absolute = (repoPath) => path.join(root, movedRepoRelativePath(repoPath))
 
 const readContents = (repoPath) => readFile(absolute(repoPath))
 

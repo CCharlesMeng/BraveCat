@@ -7,6 +7,7 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -72,7 +73,7 @@ const outputReviewIndexPath = normalizeRepoPath(optionValue(
 
 const absolute = (repoPath) => {
   const normalized = normalizeRepoPath(repoPath)
-  const resolved = path.resolve(root, normalized)
+  const resolved = path.resolve(root, movedRepoRelativePath(normalized))
   if (resolved !== root && !resolved.startsWith(`${root}${path.sep}`)) {
     throw new Error(`${repoPath}: path must stay inside the repository`)
   }

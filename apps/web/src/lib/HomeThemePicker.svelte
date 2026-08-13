@@ -11,7 +11,7 @@
     listHomeForms,
     type HomeCustomization,
     type ResolvedHomeScene,
-  } from './homeTheme'
+  } from '@bravecat/core/homeTheme'
 
   let { customization, scene, isDevelopment, onApply }: {
     customization: HomeCustomization

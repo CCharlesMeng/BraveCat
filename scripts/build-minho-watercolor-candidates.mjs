@@ -10,9 +10,15 @@ import sharp from 'sharp'
 import {
   PORTRAIT_POSES,
   PORTRAIT_POSE_VOCABULARY,
-} from '../src/lib/assets/portraitPoseVocabulary.js'
+} from '../packages/core/src/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
 const cliArgs = process.argv.slice(2)
 const checkOnly = cliArgs.includes('--check')
 const poses = PORTRAIT_POSES
@@ -66,7 +72,7 @@ const identityLockSha256 = sha256(Buffer.from(
   `${JSON.stringify(identityLocks)}\n`,
 ))
 const poseVocabularyContents = await readFile(
-  path.join(root, poseVocabularyPath),
+  resolveRepoPath(poseVocabularyPath),
 )
 const poseVocabularySha256 = sha256(poseVocabularyContents)
 
@@ -317,7 +323,7 @@ const extractMagentaMatte = async (contents, pose) => {
 }
 
 const writeOrCheck = async (repoPath, contents) => {
-  const absolutePath = path.join(root, repoPath)
+  const absolutePath = resolveRepoPath(repoPath)
   if (checkOnly) {
     let current
     try {
@@ -350,7 +356,7 @@ for (const pose of poses) {
   const externalPath = matteInputs.get(pose)
   const matteContents = externalPath
     ? await readFile(externalPath)
-    : await readFile(path.join(root, mattePath))
+    : await readFile(resolveRepoPath(mattePath))
   await inspectPng(matteContents, `${pose} matte`)
   const {
     normalized,
@@ -403,7 +409,7 @@ const labelHeight = 44
 const buildContactSheet = async ({ splitBackground }) => {
   const tiles = await Promise.all(
     artifacts.map(async ({ pose, normalized }) => {
-      const portrait = await sharp(path.join(root, normalized.repoPath))
+      const portrait = await sharp(resolveRepoPath(normalized.repoPath))
         .resize(portraitDisplaySize, portraitDisplaySize, { fit: 'contain' })
         .png()
         .toBuffer()

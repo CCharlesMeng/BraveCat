@@ -6,15 +6,15 @@
     reduceEconomy,
     type EconomyAction,
     type PackItemRejectionReason,
-  } from './lib/economy'
-  import type { ItemDefinition } from './lib/assets'
+  } from '@bravecat/core/economy'
+  import type { ItemDefinition } from '@bravecat/core/assets'
   import {
     LANDMARK_SCENES_SHIPPING_ELIGIBLE,
     PRODUCTION_STARTER_CATALOG,
     STARTER_CATALOG,
     STARTER_DESTINATIONS,
-  } from './lib/assets/starterCatalog'
-  import { STARTER_ITEMS } from './lib/assets/starterItems'
+  } from '@bravecat/core/assets/starterCatalog'
+  import { STARTER_ITEMS } from '@bravecat/core/assets/starterItems'
   import {
     drawerArt,
     HOME_ACTIVITY_LABELS,
@@ -32,7 +32,7 @@
     listHomeForms,
     resolveHomeScene,
     type HomeCustomization,
-  } from './lib/homeTheme'
+  } from '@bravecat/core/homeTheme'
   import HomeThemePicker from './lib/HomeThemePicker.svelte'
   // dev-only 家主题配置器，生产构建不会挂载。
   import ThemeLab from './lib/ThemeLab.svelte'
@@ -46,32 +46,32 @@
     selectActiveCat,
     setHomeCustomization,
     type GameState,
-  } from './lib/game'
-  import { planItinerary } from './lib/itinerary'
-  import { createPlanTrip } from './lib/planTrip'
-  import Postcard from './lib/postcards/Postcard.svelte'
+  } from '@bravecat/core/game'
+  import { planItinerary } from '@bravecat/core/itinerary'
+  import { createPlanTrip } from '@bravecat/core/planTrip'
+  import Postcard from './lib/Postcard.svelte'
   import {
     createPostcardPng,
     postcardFileName,
     reducePostcards,
     resolvePostcardComposition,
     shareOrDownloadPostcard,
-  } from './lib/postcards'
-  import { createIndexedDbSaveStore } from './lib/save'
-  import { selectTripContent } from './lib/selection'
+  } from '@bravecat/core/postcards'
+  import { createIndexedDbSaveStore } from '@bravecat/core/save'
+  import { selectTripContent } from '@bravecat/core/selection'
   import {
     beginPurchaseChoice,
     confirmPurchasedItemInPack,
     keepPurchasedItemAtHome,
     type PendingPurchase,
-  } from './lib/shop'
-  import { createClock } from './lib/time'
+  } from '@bravecat/core/shop'
+  import { createClock } from '@bravecat/core/time'
   import {
     createSeededRandom,
     createTravelLifecycle,
     type TravelState,
-  } from './lib/travel'
-  import type { DestinationId, PortraitId } from './lib/ids'
+  } from '@bravecat/core/travel'
+  import type { DestinationId, PortraitId } from '@bravecat/core/ids'
   // PROTOTYPE — 右退深墙面原型，验证后随 wallLayoutPrototype.ts 一起删除。
   import WallLayoutPrototype from './lib/WallLayoutPrototype.svelte'
   import { wallPrototypeVariantKeyFor } from './lib/wallLayoutPrototype'
@@ -131,7 +131,7 @@
   onMount(() => {
     if (!import.meta.env.DEV || !wallPrototypeVariantKey) return
     void import(
-      '../docs/art/candidates/home-wall-prototype/2026-08-13-right-recede/interior-foreground--right-recede--candidate-v03.png?url'
+      '../../../docs/art/candidates/home-wall-prototype/2026-08-13-right-recede/interior-foreground--right-recede--candidate-v03.png?url'
     ).then(({ default: src }) => {
       wallPerspectiveBackground = src
     })

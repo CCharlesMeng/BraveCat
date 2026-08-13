@@ -9,9 +9,15 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import {
   PORTRAIT_POSES,
-} from '../src/lib/assets/portraitPoseVocabulary.js'
+} from '../packages/core/src/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
 const cliArgs = process.argv.slice(2)
 const checkOnly = cliArgs.includes('--check')
 const optionValue = (name, fallback) => {
@@ -68,7 +74,7 @@ const assert = (condition, message) => {
 
 const readOptionalJson = async (repoPath) => {
   try {
-    return JSON.parse(await readFile(path.join(root, repoPath), 'utf8'))
+    return JSON.parse(await readFile(resolveRepoPath(repoPath), 'utf8'))
   } catch (error) {
     if (error?.code === 'ENOENT') return null
     throw error
@@ -81,7 +87,7 @@ const escapeXml = (value) => value
   .replaceAll('>', '&gt;')
 
 const archive = JSON.parse(
-  await readFile(path.join(root, archivePath), 'utf8'),
+  await readFile(resolveRepoPath(archivePath), 'utf8'),
 )
 if (archive.review.machineQa !== 'pass') {
   throw new Error('asset archive machine QA must pass before composite QA')
@@ -98,12 +104,12 @@ if (!archive.portrait.shippingEligible) {
 
 const sceneCandidateManifest = sceneCandidateManifestPath
   ? JSON.parse(
-      await readFile(path.join(root, sceneCandidateManifestPath), 'utf8'),
+      await readFile(resolveRepoPath(sceneCandidateManifestPath), 'utf8'),
     )
   : null
 const sceneVisualApproval = sceneVisualApprovalPath
   ? JSON.parse(
-      await readFile(path.join(root, sceneVisualApprovalPath), 'utf8'),
+      await readFile(resolveRepoPath(sceneVisualApprovalPath), 'utf8'),
     )
   : null
 if (sceneCandidateManifest) {
@@ -152,7 +158,7 @@ const activeSceneContentSetSha256 = sceneCandidateManifest
   : archive.landmarkSet.activeSceneContentSetSha256
 const portraitCandidateManifest = portraitCandidateManifestPath
   ? JSON.parse(
-      await readFile(path.join(root, portraitCandidateManifestPath), 'utf8'),
+      await readFile(resolveRepoPath(portraitCandidateManifestPath), 'utf8'),
     )
   : null
 if (
@@ -188,7 +194,7 @@ if (portraitCandidateManifest) {
   )
   for (const artifact of portraitCandidateManifest.artifacts) {
     const contents = await readFile(
-      path.join(root, artifact.normalized.repoPath),
+      resolveRepoPath(artifact.normalized.repoPath),
     )
     assert(
       sha256(contents) === artifact.normalized.sha256,
@@ -235,7 +241,7 @@ const composeTile = async (scene, index) => {
     throw new Error(`${scene.id}: missing ${scene.compositionSlot.pose} portrait`)
   }
 
-  const sceneBuffer = await sharp(path.join(root, scene.imageSrc))
+  const sceneBuffer = await sharp(resolveRepoPath(scene.imageSrc))
     .resize(tileWidth, sceneHeight, { fit: 'fill' })
     .png()
     .toBuffer()
@@ -243,7 +249,7 @@ const composeTile = async (scene, index) => {
     1,
     Math.round(scene.compositionSlot.scale * sceneHeight),
   )
-  let portraitImage = sharp(path.join(root, portrait.repoPath))
+  let portraitImage = sharp(resolveRepoPath(portrait.repoPath))
     .trim({
       background: { r: 0, g: 0, b: 0, alpha: 0 },
       threshold: 2,
@@ -344,7 +350,7 @@ for (let sheetIndex = 0; sheetIndex < sheetCount; sheetIndex += 1) {
     })
   })
 
-  const absolutePath = path.join(root, repoPath)
+  const absolutePath = resolveRepoPath(repoPath)
   if (checkOnly) {
     const existing = await readFile(absolutePath)
     if (sha256(existing) !== sha256(sheetBuffer)) {
@@ -447,7 +453,7 @@ const manifest = {
     : 'user-composite-review-and-shipping-rights-review',
 }
 const manifestContents = `${JSON.stringify(manifest, null, 2)}\n`
-const manifestAbsolutePath = path.join(root, outputManifestPath)
+const manifestAbsolutePath = resolveRepoPath(outputManifestPath)
 if (checkOnly) {
   const existing = await readFile(manifestAbsolutePath, 'utf8')
   if (existing !== manifestContents) {

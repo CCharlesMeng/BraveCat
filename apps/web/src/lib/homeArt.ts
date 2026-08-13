@@ -4,9 +4,9 @@
  * 房间外观（图层、坐标、投影）由 src/lib/homeTheme 的 resolveHomeScene
  * 负责，本模块不再持有任何 form 相关的几何或资产路径。
  */
-import type { HomeActivity, HomeTime } from './homeTheme'
+import type { HomeActivity, HomeTime } from '@bravecat/core/homeTheme'
 
-export type { HomeActivity, HomeTime } from './homeTheme'
+export type { HomeActivity, HomeTime } from '@bravecat/core/homeTheme'
 
 export const HOME_ACTIVITY_SEQUENCE = [
   'sleep',

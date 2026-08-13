@@ -3,6 +3,13 @@ import { once } from 'node:events'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+// monorepo 拆分后领域模块在 packages/core，经 Vite dev server 的 /@fs/ 导入。
+const coreModule = (relativePath) => (
+  `/@fs${path.join(repoRoot, 'packages/core/src', relativePath)}`
+)
 
 const chromePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const outputRoot = path.resolve('docs/art/candidates/home-display-v2')
@@ -97,9 +104,9 @@ try {
     const result = await command('Runtime.evaluate', {
       expression: `
         (async () => {
-          const { adoptCat, createInitialGameState } = await import('/src/lib/game/index.ts')
-          const { STARTER_CATALOG } = await import('/src/lib/assets/starterCatalog.ts')
-          const { createIndexedDbSaveStore } = await import('/src/lib/save/index.ts')
+          const { adoptCat, createInitialGameState } = await import('${coreModule('game/index.ts')}')
+          const { STARTER_CATALOG } = await import('${coreModule('assets/starterCatalog.ts')}')
+          const { createIndexedDbSaveStore } = await import('${coreModule('save/index.ts')}')
           const now = Date.now()
           let state = adoptCat(createInitialGameState(now), {
             id: 'minho',

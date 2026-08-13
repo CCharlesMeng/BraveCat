@@ -7,7 +7,8 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
-import { isPortraitPose } from '../src/lib/assets/portraitPoseVocabulary.js'
+import { isPortraitPose } from '../packages/core/src/assets/portraitPoseVocabulary.js'
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const cliArgs = process.argv.slice(2)
@@ -44,7 +45,7 @@ const outputReviewIndexPath = optionValue(
   'docs/art/candidates/landmarks/review-index.candidates.v3.md',
 )
 
-const absolute = (repoPath) => path.join(root, repoPath)
+const absolute = (repoPath) => path.join(root, movedRepoRelativePath(repoPath))
 const sha256 = (contents) => (
   createHash('sha256').update(contents).digest('hex')
 )

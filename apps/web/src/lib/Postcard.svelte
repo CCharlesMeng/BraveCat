@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { PostcardComposition } from './index'
-  import { renderPostcardCanvas } from './composer'
+  import type { PostcardComposition } from '@bravecat/core/postcards'
+  import { renderPostcardCanvas } from '@bravecat/core/postcards'
 
   let {
     composition,

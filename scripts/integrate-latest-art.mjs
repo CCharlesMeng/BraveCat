@@ -9,7 +9,8 @@ import {
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
-import { PORTRAIT_POSES } from '../src/lib/assets/portraitPoseVocabulary.js'
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+import { PORTRAIT_POSES } from '../packages/core/src/assets/portraitPoseVocabulary.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const checkOnly = process.argv.includes('--check')
@@ -43,7 +44,7 @@ const absolute = (repoPath) => {
       && !normalized.startsWith('../'),
     `${repoPath}: path must stay inside the repository`,
   )
-  return path.join(root, normalized)
+  return path.join(root, movedRepoRelativePath(normalized))
 }
 const readJson = async (repoPath) => JSON.parse(
   await readFile(absolute(repoPath), 'utf8'),

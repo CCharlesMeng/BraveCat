@@ -5,7 +5,7 @@
   结论确认后连同该文件一起删除。
 -->
 <script lang="ts">
-  import { CLASSIC_V4_FORM, displayCanvasStyle } from './homeTheme'
+  import { CLASSIC_V4_FORM, displayCanvasStyle } from '@bravecat/core/homeTheme'
   import {
     WALL_PERSPECTIVE,
     WALL_PROTOTYPE_VARIANT_KEYS,

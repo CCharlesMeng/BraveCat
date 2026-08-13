@@ -10,10 +10,16 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const candidateRoot = path.join(root, 'docs/art/candidates/home-display-v2')
-const runtimeHomeRoot = path.join(root, 'public/assets/home')
-const runtimeSouvenirRoot = path.join(root, 'public/assets/souvenirs')
-const productionRoot = path.join(root, 'docs/art/production/home-display')
+import { movedRepoRelativePath } from './lib/monorepo-paths.mjs'
+// 清单里的历史仓库相对路径保持原样，文件访问时重定向到搬迁后位置。
+const resolveRepoPath = (...segments) => path.join(
+  root,
+  movedRepoRelativePath(path.posix.join(...segments)),
+)
+const candidateRoot = resolveRepoPath('docs/art/candidates/home-display-v2')
+const runtimeHomeRoot = resolveRepoPath('public/assets/home')
+const runtimeSouvenirRoot = resolveRepoPath('public/assets/souvenirs')
+const productionRoot = resolveRepoPath('docs/art/production/home-display')
 
 const sourcePaths = {
   wall: path.join(candidateRoot, 'source--postcard-wall--generated-v01.png'),
@@ -311,7 +317,7 @@ const buildSouvenir = async (half) => {
 }
 
 const buildOcclusion = async () => {
-  const interiorPath = path.join(root, 'public/dev-art/home-v4/interior-foreground.png')
+  const interiorPath = resolveRepoPath('public/dev-art/home-v4/interior-foreground.png')
   const mask = Buffer.from(`
     <svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="1600" fill="black"/>
@@ -375,8 +381,8 @@ const buildQaComposite = async ({
     },
   })
   const scenePaths = [
-    path.join(root, 'public/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp'),
-    path.join(root, 'public/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp'),
+    resolveRepoPath('public/scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp'),
+    resolveRepoPath('public/scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp'),
   ]
   const postcardOverlays = []
   for (let index = 0; index < scenePaths.length; index += 1) {
@@ -396,8 +402,8 @@ const buildQaComposite = async ({
   )
 
   return background.composite([
-    { input: path.join(root, 'public/dev-art/home-v4/exterior-noon.png') },
-    { input: path.join(root, 'public/dev-art/home-v4/interior-foreground.png') },
+    { input: resolveRepoPath('public/dev-art/home-v4/exterior-noon.png') },
+    { input: resolveRepoPath('public/dev-art/home-v4/interior-foreground.png') },
     ...postcardOverlays,
     { input: wall },
     ...souvenirOverlays,
