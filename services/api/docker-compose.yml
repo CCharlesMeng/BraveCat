@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: bravecat
+      POSTGRES_PASSWORD: bravecat
+      POSTGRES_DB: bravecat
+    ports:
+      - "5432:5432"
+    volumes:
+      - bravecat-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bravecat -d bravecat"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  bravecat-pgdata:
