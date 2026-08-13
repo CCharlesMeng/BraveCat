@@ -43,6 +43,8 @@
   import type { DestinationId, PortraitId } from '@bravecat/core/ids'
   import type { TravelState } from '@bravecat/core/travel'
   import { bridgeGameController } from './lib/gameClient.svelte'
+  import { createWebCloudSync } from './lib/cloudSync.svelte'
+  import { apiBaseUrl } from './lib/platform/apiBase'
   import {
     downloadBlob,
     installWebAssetResolver,
@@ -180,7 +182,18 @@
   const asset = resolveAssetUrl
   // 平台端口注入：IndexedDB 存档、crypto 随机源；编排逻辑都在 core。
   const controller = createGameController({
-    createSaveStore: (options) => createIndexedDbSaveStore('bravecat', options),
+    createSaveStore: (options) => {
+      const store = createIndexedDbSaveStore('bravecat', options)
+      if (!apiBaseUrl) return store
+      // 云同步接线：本地保存行为不变，落盘成功后另行通知节流推送。
+      return {
+        ...store,
+        save: async (state) => {
+          await store.save(state)
+          cloudSync?.notifyLocalSaved(() => store.export(state))
+        },
+      }
+    },
     random: webRandom,
   }, {
     homeActivityOverride: readHomeActivityOverride,
@@ -192,6 +205,27 @@
   })
   const client = bridgeGameController(controller)
   const PACK_CAPACITY = controller.packCapacity
+  // 云同步（feature flag：VITE_API_BASE_URL 非空才启用；默认构建下
+  // cloudSync 为 null，不发起任何云端请求，行为与纯本地版一致）。
+  const cloudSync = apiBaseUrl
+    ? createWebCloudSync({
+      baseUrl: apiBaseUrl,
+      exportDocument: () => controller.exportDocument(),
+      importDocument: (raw) => controller.importDocument(raw),
+      backupLocal: (document) => {
+        const fileName = `bravecat-save-backup-${new Date(document.exportedAt)
+          .toISOString()
+          .slice(0, 10)}.json`
+        downloadBlob(
+          new Blob([JSON.stringify(document, null, 2)], {
+            type: 'application/json',
+          }),
+          fileName,
+        )
+      },
+      hasLocalProgress: () => controller.getSnapshot().game.cats.length > 0,
+    })
+    : null
 
   let adoptionName = $state('Minho')
   let adoptionNotice = $state('')
@@ -600,6 +634,8 @@
       if (loadFailed) {
         hydrateNotice = '没有读到上次的家，暂时从这里开始。'
       }
+      // 启动同步要等本地水合完成，pull 比较才有正确的本地基准。
+      void cloudSync?.start()
     })
 
     const interval = window.setInterval(() => {
@@ -1646,6 +1682,34 @@
               <p class="transfer-notice" aria-live="polite">{transferNotice}</p>
             {/if}
           </section>
+
+          {#if cloudSync}
+            <section class="cloud-sync" aria-labelledby="cloud-sync-title">
+              <div>
+                <h3 id="cloud-sync-title">云同步</h3>
+                <p aria-live="polite">{cloudSync.statusText}</p>
+              </div>
+              <dl class="cloud-sync-facts">
+                <div>
+                  <dt>账号</dt>
+                  <dd title={cloudSync.accountId ?? undefined}>
+                    {cloudSync.accountId
+                      ? cloudSync.accountId.slice(0, 8)
+                      : '——'}
+                  </dd>
+                </div>
+                <div>
+                  <dt>生成次数</dt>
+                  <dd>{cloudSync.creditsBalance ?? '——'}</dd>
+                </div>
+              </dl>
+              {#if cloudSync.notice}
+                <p class="cloud-sync-notice" aria-live="polite">
+                  {cloudSync.notice}
+                </p>
+              {/if}
+            </section>
+          {/if}
         {/if}
       </div>
     {:else}

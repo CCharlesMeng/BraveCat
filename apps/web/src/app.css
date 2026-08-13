@@ -1779,6 +1779,64 @@ main {
   opacity: 0;
 }
 
+.cloud-sync {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 18px 2px 2px;
+  border-top: 1px solid rgba(82, 82, 67, 0.18);
+}
+
+.cloud-sync h3,
+.cloud-sync p {
+  margin: 0;
+}
+
+.cloud-sync h3 {
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.cloud-sync p {
+  margin-top: 5px;
+  color: var(--ink-soft);
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+.cloud-sync-facts {
+  display: flex;
+  gap: 9px;
+  margin: 0;
+}
+
+.cloud-sync-facts div {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid rgba(82, 82, 67, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 252, 241, 0.58);
+}
+
+.cloud-sync-facts dt {
+  color: var(--ink-soft);
+  font-size: 0.6rem;
+}
+
+.cloud-sync-facts dd {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.cloud-sync .cloud-sync-notice {
+  color: #69775c;
+}
+
 .item-list {
   display: grid;
   gap: 10px;
