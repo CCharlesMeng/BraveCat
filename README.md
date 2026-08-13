@@ -19,6 +19,13 @@ npm test
 npm run build
 ```
 
+E2E 冒烟测试（Playwright，首次先 `npx playwright install chromium`；
+会自动拉起 vite dev server，用例见 `apps/web/e2e/`）：
+
+```sh
+npm run test:e2e
+```
+
 素材流水线：
 
 ```sh
