@@ -5,6 +5,8 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "strict": true,
+    // 允许测试直接 import packages/core 的姿势词汇 .js（JSDoc 类型）做对齐断言。
+    "allowJs": true,
     "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
