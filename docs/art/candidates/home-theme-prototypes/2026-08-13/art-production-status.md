@@ -190,8 +190,13 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
 
 1. **已完成：**2026-08-13 已审批 A/B/F 完整概念的色板与物件造型；
    套装板只签“拆分方向”，不签 production 文件。
-2. 为 A、B 补独立 16:9 HomeForm 控制图；把 F 控制图统一到最终 16:9 相机。
-   同时冻结窗洞、平台/台阶、support surface、exclusion zone 和全部 socket。
+2. **已完成（2026-08-13）：**A/B/F 三套 HomeForm 控制图与几何 manifest
+   已产出，见 `form-controls/`；窗洞、平台/台阶、support surface、
+   exclusion zone、全部 socket、slot quad 与锚点均已按方向冻结。
+   **画布决议**：原文的“16:9 相机”与 `home-exteriors` 归档的
+   1200×1600（3:4）画布合同及运行时代码矛盾（16:9 可追溯到审阅板
+   画布格式），控制图按 3:4 合同执行；如需改判 16:9 属画布合同级
+   变更，须先落 ADR。
 3. A 与 F 作为首批真实 HomeForm，先产 clean shell、exterior aperture
    alpha/遮罩与逐平面 HomeFinish；逐张核验透视和边缘。B 在宽右墙控制图
    获批后进入同一流程。
@@ -281,7 +286,14 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
   之外，且未达到 15–20% 右墙目标，**重做后仍结构失败并淘汰**。窗右至
   内角的连续空白后墙约 550 px，视觉上足够划分六卡区与独立柜体 socket
   空区；连续平台、恰好一级立面、无柜体/柱子/中间平台/第二台阶也通过，
-  但这些局部通过不能替代主内角比例合格。当前 F 尚无通过的 clean shell。
+  但这些局部通过不能替代主内角比例合格。
+- clean shell v05：
+  `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--clean-shell-source--candidate-v05.png`
+  — 1024×1536（实际仍为 2:3），alpha：无。基于 v04 只修正房间内角和与其
+  相连的天花、踢脚线、平台边及右墙接缝；主内角视觉估算 x≈850（约 83.0%），
+  位于目标 x=835±35 内，右返回墙约 17.0%。宽后墙保留裸窗、六卡区和独立
+  柜体 socket 空区；连续抬高平台通过单一立面下降到前景，无柱子、柜体、
+  中间平台或第二台阶。**本轮结构审阅通过**。
 - postcard-display base v01：
   `/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/bravecat-home-theme-f-moonwhite-bluegray--postcard-display-base-source--candidate-v01-not-alpha.png`
   — 1024×1536，alpha：无。三条白橡/月白轨、六个空槽和烟蓝安装片完整，
@@ -309,12 +321,12 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
 
 ### 统一 QA 与 runtime 阻断
 
-- 通过：当前仅 A shell v02 通过控制图主内角比例、后墙 socket 容量、连续
-  表面、黑窗洞和动态内容去除。所有内角数值均为 1024 宽图上的视觉估算，
-  不是已注册的机器几何。
+- 通过：A shell v02 与 F shell v05 通过控制图主内角比例、后墙 socket
+  容量、连续表面、黑窗洞和动态内容去除。所有内角数值均为 1024 宽图上的
+  视觉估算，不是已注册的机器几何。
 - shell 失败证据：A v01 主内角约 62%；F v01 有额外层级；F v02 主内角约
   50% 且有深柱/宽右墙；F v03 主内角约 89.4%；F v04 约 86.9%，重做后仍
-  超出允许区间。上述文件全部保留且不覆盖。
+  超出允许区间。上述失败文件全部保留且不覆盖；F v05 为后续局部修正版。
 - HomePiece 状态不变：全部 postcard-display 和 scratcher 两轮仍因隔离
   背景非纯色、无 alpha 而淘汰；本轮没有继续生成这些物件。
 - shell 仍不能进 runtime：它们是 2:3 不透明概念 source，黑窗洞没有独立
