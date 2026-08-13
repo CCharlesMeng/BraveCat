@@ -12,7 +12,8 @@
     "dev": "npm run dev --workspace @bravecat/web",
     "build": "npm run build --workspace @bravecat/web && node scripts/check-home-display-assets.mjs && node scripts/check-production-build.mjs",
     "preview": "npm run preview --workspace @bravecat/web",
-    "test": "npm run test --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present && npm run test:scripts",
+    "test:scripts": "node --test \"scripts/**/*.test.mjs\"",
     "check": "npm run check --workspaces --if-present",
     "assets:archive": "node scripts/archive-assets.mjs --expansion-plan docs/art/landmark-expansion-v2.json --expansion-plan docs/art/landmark-expansion-v3.json --visual-approval docs/art/reviews/landmarks/visual-approval.v2.json --composite-approval docs/art/reviews/landmarks/composites/approval.v2.json --rights-review docs/art/reviews/landmarks/rights-review-v3-addendum.md --rights-decision docs/art/reviews/landmarks/rights-decision.v2.json --archive-output docs/art/archive/asset-archive.v2.json --archive-readme-output docs/art/archive/README.v2.md --review-index-output docs/art/candidates/landmarks/review-index.archive.v3.md",
     "assets:check": "npm run assets:archive -- --check",
@@ -27,6 +28,7 @@
     "assets:integrate-latest-art": "node scripts/integrate-latest-art.mjs",
     "assets:check-latest-art": "node scripts/integrate-latest-art.mjs --check",
     "assets:check-development-home-art": "node scripts/check-development-home-art.mjs",
+    "assets:publish": "node scripts/publish-assets-oss.mjs",
     "assets:build-home-v4-candidate": "node scripts/build-home-v4-candidate.mjs",
     "assets:integrate-home-v4": "node scripts/build-home-v4-candidate.mjs --integrate",
     "assets:build-home-display": "node scripts/build-home-display-v2.mjs",
@@ -47,6 +49,7 @@
     "story:check-cinematic": "node scripts/integrate-cinematic-story.mjs --check"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1109.0",
     "@types/node": "^24.13.2",
     "sharp": "^0.35.3"
   }

@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# 发布凭证与本地发布产物（模板见 .env.example）
+.env
+.asset-publish/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
