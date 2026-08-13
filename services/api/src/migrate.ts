@@ -1,3 +1,5 @@
+// 迁移执行器：按文件名顺序应用 migrations/*.sql，已应用记录在 schema_migrations 表。
+// 开发环境跑 `npm run migrate`（tsx）；生产容器内跑编译产物 `node dist/migrate.js`。
 import { readdir, readFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
