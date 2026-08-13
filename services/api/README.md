@@ -55,15 +55,15 @@ docker compose up -d            # 起本地 Postgres（bravecat/bravecat）
 cp .env.example .env            # 按需修改
 export DATABASE_URL=postgres://bravecat:bravecat@localhost:5432/bravecat
 npm run migrate                 # 应用 migrations/*.sql
-DATABASE_URL=$DATABASE_URL npm run dev   # tsx watch，监听 :3000
+DATABASE_URL=$DATABASE_URL PORT=19080 npm run dev   # tsx watch，监听 :19080（PORT 默认 3000，示例用高位端口避开本机常用服务）
 ```
 
 冒烟：
 
 ```bash
-curl -s localhost:3000/v1/meta | jq
-TOKEN=$(curl -s -X POST localhost:3000/v1/auth/guest | jq -r .token)
-curl -s localhost:3000/v1/ledger/balance -H "Authorization: Bearer $TOKEN"
+curl -s localhost:19080/v1/meta | jq
+TOKEN=$(curl -s -X POST localhost:19080/v1/auth/guest | jq -r .token)
+curl -s localhost:19080/v1/ledger/balance -H "Authorization: Bearer $TOKEN"
 ```
 
 无库演示模式（内存仓库 + 内存对象存储 + fake AIGC providers，
@@ -78,11 +78,11 @@ npm run dev:fake        # 不需要 Postgres 与云凭证；重启即清空数�
 
 ## 与 apps/web 本地联调（云同步）
 
-1. 按上文「本地启动」把 api 跑起来（默认监听 `:3000`）。
+1. 按上文「本地启动」把 api 跑起来（示例监听 `:19080`；不传 `PORT` 则默认 `:3000`）。
 2. 回到仓库根目录，带上 API 地址起 web dev server：
 
 ```bash
-VITE_API_BASE_URL=http://localhost:3000 npm run dev
+VITE_API_BASE_URL=http://localhost:19080 npm run dev
 ```
 
 web 端只有 `VITE_API_BASE_URL` 非空才启用云功能：首次进入静默创建

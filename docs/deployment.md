@@ -111,16 +111,17 @@ npm run build
 状态机与自动 QA），并放开 `aigcAvatar` 功能开关、给新游客自动赠送
 5 次生成次数（可用 `DEV_INITIAL_CREDITS` 调整）。
 
-1. 起 api（演示模式，监听 `:3000`，进程重启即清空数据）：
+1. 起 api（演示模式，监听 `:19080`，进程重启即清空数据；
+   端口读 `PORT` 环境变量，默认 3000，示例显式用高位端口避开本机常用服务）：
 
 ```bash
-npm run dev:fake --workspace @bravecat/api
+PORT=19080 npm run dev:fake --workspace @bravecat/api
 ```
 
 2. 另开终端，带 API 地址起 web dev server：
 
 ```bash
-VITE_API_BASE_URL=http://localhost:3000 npm run dev
+VITE_API_BASE_URL=http://localhost:19080 npm run dev
 ```
 
 3. 浏览器里完整走一遍生成闭环：

@@ -10,7 +10,7 @@
  *   由 CloudSync 客户端的 parseError 兜底；
  * - **域名白名单**：wx.request 只允许访问小程序后台配置的 request
  *   合法域名（须 HTTPS + ICP 备案）。开发期在开发者工具「详情 →
- *   本地设置」勾选「不校验合法域名」即可连 http://127.0.0.1:3000；
+ *   本地设置」勾选「不校验合法域名」即可连本地 api（如 http://127.0.0.1:19080）；
  *   生产必须把 API 域名加入白名单（见 README 云同步一节）。
  */
 import Taro from '@tarojs/taro'

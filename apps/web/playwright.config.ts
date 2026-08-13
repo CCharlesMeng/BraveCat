@@ -4,8 +4,10 @@ import { defineConfig, devices } from '@playwright/test'
  * E2E 冒烟测试跑在 vite dev server 上：
  * - 种子存档注入依赖 dev server 的 /@fs 模块直连（见 e2e/seed.ts）；
  * - 「小猫出发」用例依赖 dev 构建的时钟加速按钮与 250ms 结算节拍。
+ *
+ * 端口默认 19173（高位端口，避开本机常用服务），可用 E2E_WEB_PORT 覆盖。
  */
-const port = 5273
+const port = Number(process.env.E2E_WEB_PORT ?? 19173)
 
 export default defineConfig({
   testDir: './e2e',

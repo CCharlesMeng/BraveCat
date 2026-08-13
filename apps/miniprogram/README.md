@@ -92,9 +92,9 @@ src/
 
 **域名白名单（wx.request 硬限制）**：
 
-- 开发期：起 `services/api`（`npm run dev --workspace @bravecat/api`，
+- 开发期：起 `services/api`（`PORT=19080 npm run dev --workspace @bravecat/api`，
   见 services/api/README.md），`.env.development` 里取消注释
-  `TARO_APP_API_BASE_URL=http://127.0.0.1:3000`，并在微信开发者工具
+  `TARO_APP_API_BASE_URL=http://127.0.0.1:19080`，并在微信开发者工具
   「详情 → 本地设置」勾选「不校验合法域名」——否则 http 与
   127.0.0.1 都会被拦截。
 - 生产：API 必须部署在**已 ICP 备案的 HTTPS 域名**上，并在小程序
