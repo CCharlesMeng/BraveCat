@@ -1,0 +1,56 @@
+# 主 CI：类型检查 + 全 workspace 测试 + web 生产构建（含资产门禁）+ 小程序构建。
+# 端到端测试在独立的 e2e.yml 中维护。
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-and-test:
+    name: Check and test (all workspaces)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      # npm ci 期间 @bravecat/contracts 的 prepare 钩子会构建 dist，
+      # 后续 workspace 的类型检查与测试都依赖它。
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+
+  build-web:
+    name: Build web (with asset gates)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # 根 build = vite build（构建尾部 rmSync 剔除 dist/dev-art 与未放行场景）
+      # + check-home-display-assets + check-production-build 两道资产门禁。
+      - run: npm run build
+
+  build-miniprogram:
+    name: Build miniprogram (weapp)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:weapp --workspace @bravecat/miniprogram
