@@ -2,7 +2,7 @@
   "name": "@bravecat/api",
   "version": "0.1.0",
   "private": true,
-  "description": "咪游记服务端单体骨架：账号 / 云存档 / 经济账本 / 版本元信息（Fastify + Postgres）",
+  "description": "咪游记服务端单体：账号 / 云存档 / 经济账本 / AIGC 形象管线 / 版本元信息（Fastify + Postgres）",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -14,6 +14,7 @@
     "migrate": "tsx scripts/migrate.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1109.0",
     "@bravecat/contracts": "^0.1.0",
     "fastify": "^5.11.3",
     "pg": "^8.23.0",

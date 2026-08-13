@@ -1,4 +1,7 @@
 import pg from 'pg'
+import { createAliyunModerationProviderFromEnv } from './aigc/adapters/aliyunModeration.js'
+import { createBailianGenerationProviderFromEnv } from './aigc/adapters/bailianGeneration.js'
+import { createS3AssetStorageFromEnv } from './aigc/adapters/s3AssetStorage.js'
 import { createGenerationJobExecutor } from './aigc/executor.js'
 import { createMemoryAssetStorage } from './aigc/fakes.js'
 import { createBaselinePortraitQa } from './aigc/qa.js'
@@ -26,14 +29,27 @@ if (!config.databaseUrl) {
 const pool = new pg.Pool({ connectionString: config.databaseUrl })
 const repositories = createPostgresRepositories(pool)
 
-// AIGC 管线接线：真实云 provider 未配置时注入占位实现
-// （审核/生成调用即失败并自动退回次数），服务照常启动。
-const storage = createMemoryAssetStorage()
+// AIGC 管线接线：按环境变量选择生产 adapter；未配置的 provider 注入占位实现
+// （审核/生成调用即失败并自动退回次数），服务照常启动（aigcAvatar 开关本就未放开）。
+const s3Storage = createS3AssetStorageFromEnv(process.env)
+const moderation = createAliyunModerationProviderFromEnv(process.env)
+const generation = createBailianGenerationProviderFromEnv(process.env)
+for (const [name, configured] of [
+  ['对象存储（ASSET_STORAGE_*）', s3Storage],
+  ['内容审核（ALIYUN_*）', moderation],
+  ['形象生成（DASHSCOPE_API_KEY）', generation],
+] as const) {
+  if (!configured) {
+    console.warn(`AIGC ${name} 未配置，使用占位实现`)
+  }
+}
+
+const storage = s3Storage ?? createMemoryAssetStorage()
 const executor = createGenerationJobExecutor({
   repositories,
   storage,
-  moderation: createUnavailableModerationProvider(),
-  generation: createUnavailableGenerationProvider(),
+  moderation: moderation ?? createUnavailableModerationProvider(),
+  generation: generation ?? createUnavailableGenerationProvider(),
   qa: createBaselinePortraitQa(),
   now: Date.now,
 })
