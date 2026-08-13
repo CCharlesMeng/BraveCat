@@ -200,6 +200,10 @@ socket、quad、锚点、遮挡与透明分层均未冻结或未生产。
 3. A 与 F 作为首批真实 HomeForm，先产 clean shell、exterior aperture
    alpha/遮罩与逐平面 HomeFinish；逐张核验透视和边缘。B 在宽右墙控制图
    获批后进入同一流程。
+   **进行中（2026-08-13）：**A/F 的 clean shell + aperture alpha +
+   独立窗洞 mask 候选已产出并完成控制线对齐实测，见 `production/`；
+   偏差与欠账记录于该目录 README，待用户核验后按实测冻结运行时
+   坐标。逐平面 HomeFinish 未开始。
 4. 每个 form 的透明 HomePiece 顺序：
    `postcard-display` → `scratcher` → `feeding-set` → `cabinet` →
    `window-frame` → `rug` → `plant`。

@@ -1,0 +1,25 @@
+{
+  "form": "a-clear-sage",
+  "aperturePixels": 258288,
+  "apertureBBox": {
+    "minX": 149,
+    "minY": 299,
+    "maxX": 568,
+    "maxY": 913
+  },
+  "apertureControl": {
+    "x": 130,
+    "y": 290,
+    "right": 560,
+    "bottom": 850
+  },
+  "apertureDelta": {
+    "left": 19,
+    "top": 9,
+    "right": 8,
+    "bottom": 63
+  },
+  "cornerMeasuredX": 906,
+  "cornerControlX": 930,
+  "cornerDeltaX": -24
+}

@@ -1,0 +1,25 @@
+{
+  "form": "f-moonwhite-bluegray",
+  "aperturePixels": 400359,
+  "apertureBBox": {
+    "minX": 50,
+    "minY": 92,
+    "maxX": 551,
+    "maxY": 992
+  },
+  "apertureControl": {
+    "x": 40,
+    "y": 180.8,
+    "right": 515,
+    "bottom": 938.9
+  },
+  "apertureDelta": {
+    "left": 10,
+    "top": -88.80000000000001,
+    "right": 36,
+    "bottom": 53.10000000000002
+  },
+  "cornerMeasuredX": 652,
+  "cornerControlX": 560,
+  "cornerDeltaX": 92
+}
