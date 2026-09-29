@@ -150,6 +150,33 @@ describe('Save', () => {
     await expect(store.load()).resolves.toEqual(imported)
   })
 
+  it('导入主干 v1 旧存档时恢复纪念品并迁移至当前版本', async () => {
+    const { souvenirs: _discarded, ...legacyState } = createInitialGameState(1_000)
+    const store = createIndexedDbSaveStore<GameState>(
+      `bravecat-test-${crypto.randomUUID()}`,
+      {
+        validateState: isGameState,
+        migrations: {
+          1: (document) => ({
+            ...document,
+            schemaVersion: 2,
+            state: restoreGameState(document.state, 9_000),
+          }),
+          2: (document) => ({ ...document, schemaVersion: 3 }),
+          3: (document) => ({ ...document, schemaVersion: 4 }),
+        },
+      },
+    )
+    const imported = await store.import({
+      schemaVersion: 1,
+      exportedAt: 2_000,
+      state: { ...legacyState, stateVersion: 1 },
+    })
+    expect(imported.souvenirs).toEqual({ received: [] })
+    expect(imported.stateVersion).toBe(4)
+    await expect(store.load()).resolves.toEqual(imported)
+  })
+
   it('JSON 导出再导入会恢复完整行为状态', async () => {
     const state: GameState = {
       ...createInitialGameState(1_000),

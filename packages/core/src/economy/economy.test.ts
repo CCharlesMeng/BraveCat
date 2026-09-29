@@ -303,8 +303,9 @@ describe('Economy', () => {
     expect(result).toBe(economy)
   })
 
-  it('回家结算清空已锁定行囊、返还可返还物品且可安全重试', () => {
+  it('回家结算清空已锁定行囊、累加返还物品且可安全重试', () => {
     const economy = createEconomy({
+      ownedItems: { 'small-blanket': 1 },
       packs: {
         'first-cat': [
           { itemId: 'ticket', kind: 'wish' },
@@ -335,7 +336,7 @@ describe('Economy', () => {
     })
 
     expect(returned.packs['first-cat']).toEqual([])
-    expect(returned.ownedItems).toEqual({ 'small-blanket': 1 })
+    expect(returned.ownedItems).toEqual({ 'small-blanket': 2 })
     expect(retried).toBe(returned)
   })
 })
