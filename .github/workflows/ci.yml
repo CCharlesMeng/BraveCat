@@ -46,6 +46,8 @@ jobs:
         with:
           name: web-pwa-candidate
           path: .asset-publish/web-pwa-rc-*/
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 14
 
   build-miniprogram:
