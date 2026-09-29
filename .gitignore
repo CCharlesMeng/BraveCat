@@ -30,3 +30,6 @@ playwright-report/
 *.njsproj
 *.sln
 *.sw?
+
+# Netlify 本地站点关联（不包含在源代码发行中）
+.netlify/

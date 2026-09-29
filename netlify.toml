@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "apps/web/dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# 首发采用 CI 通过后的手动产物发布，不连接 main 自动生产部署。
+# HTTP headers 随 apps/web/public/_headers 进入产物，手动上传也会生效。
+# 当前应用只使用根路径；不设置吞掉缺失图片的全站 SPA fallback。
