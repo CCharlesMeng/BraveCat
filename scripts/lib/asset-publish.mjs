@@ -68,7 +68,7 @@ export const evaluateLandmarkShippingGate = ({
     manifest.shippingEligible === true
     && (
       rightsDecision?.shippingEligible !== true
-      || rightsDecision?.decision !== 'cleared-for-shipping'
+      || !['cleared-for-shipping', 'user-authorized-for-shipping'].includes(rightsDecision?.decision ?? '')
       || (rightsDecision?.remainingGates?.length ?? 0) > 0
       || manifest.review?.shippingApproval !== 'approved'
       || (manifest.remainingGates?.length ?? 0) > 0

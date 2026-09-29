@@ -51,6 +51,17 @@ describe('evaluateLandmarkShippingGate', () => {
     assert.deepEqual(gate.violations, [])
   })
 
+  it('accepts fingerprinted user shipping authorization and rejects stale fingerprints', () => {
+    const input = {
+      manifestName: 'manifest.v9.json',
+      manifest: landmarkManifest({ shippingEligible: true, decisionRecordSha256: 'fp' }),
+      rightsDecision: { decision: 'user-authorized-for-shipping', shippingEligible: true, remainingGates: [] },
+      rightsDecisionSha256: 'fp',
+    }
+    assert.equal(evaluateLandmarkShippingGate(input).eligible, true)
+    assert.equal(evaluateLandmarkShippingGate({ ...input, rightsDecisionSha256: 'stale' }).eligible, false)
+  })
+
   it('treats an uncleaned rights decision as a clean exclusion, not a violation', () => {
     const gate = evaluateLandmarkShippingGate({
       manifestName: 'manifest.v9.json',

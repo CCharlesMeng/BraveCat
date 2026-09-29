@@ -1,4 +1,4 @@
-import { hasClearedLandmarkRights } from './lib/landmark-shipping-gate.mjs'
+import { hasLandmarkShippingAuthorization } from './lib/landmark-shipping-gate.mjs'
 import { createHash } from 'node:crypto'
 import {
   copyFile,
@@ -332,10 +332,20 @@ if (visualApproval.schemaVersion >= 2) {
   )
 }
 
-const rightsCleared = hasClearedLandmarkRights(rightsDecision)
-if (rightsCleared) {
+const shippingAuthorized = hasLandmarkShippingAuthorization(rightsDecision)
+if (shippingAuthorized && rightsDecision.decision === 'cleared-for-shipping') {
   for (const evidence of rightsDecision.clearanceEvidence) {
     assert(sha256(await readContents(evidence.path)) === evidence.sha256, `Stale rights clearance evidence: ${evidence.path}`)
+  }
+}
+const userAuthorized = shippingAuthorized && rightsDecision.decision === 'user-authorized-for-shipping'
+if (userAuthorized) {
+  const record = rightsDecision.authorization
+  const inventoryBytes = await readContents(record.approvalInventory)
+  assert(sha256(inventoryBytes) === record.approvalInventorySha256, 'stale user shipping approval inventory')
+  const inventory = JSON.parse(inventoryBytes)
+  for (const { scene } of activeEntries) {
+    assert(inventory.entries.some(entry => entry.source === 'main' && entry.sha256 === scene.sha256), `${scene.id}: source bytes absent from approval inventory`)
   }
 }
 const rightsByDestination = new Map()
@@ -343,9 +353,8 @@ let derivedRiskSummary = null
 if (rightsDecision) {
   assert(
     rightsDecision.schemaVersion >= 1
-      && rightsDecision.reviewKind
-        === 'landmark-rights-and-provenance-product-risk-review'
-      && (rightsCleared || (rightsDecision.decision === 'review-complete-not-cleared'
+      && ['landmark-rights-and-provenance-product-risk-review', 'landmark-user-shipping-authorization'].includes(rightsDecision.reviewKind)
+      && (shippingAuthorized || (rightsDecision.decision === 'review-complete-not-cleared'
         && rightsDecision.shippingEligible === false)),
     'rights decision must fail closed until explicit shipping approval',
   )
@@ -374,7 +383,7 @@ if (rightsDecision) {
   assert(
     Array.isArray(rightsDecision.globalGates)
       && rightsDecision.globalGates.length > 0
-      && rightsDecision.globalGates.every((gate) => gate.status === (rightsCleared ? 'closed' : 'open')),
+      && rightsDecision.globalGates.every((gate) => gate.status === (shippingAuthorized && !userAuthorized ? 'closed' : 'open')),
     'rights decision must enumerate every open global gate',
   )
 
@@ -407,7 +416,7 @@ if (rightsDecision) {
     assert(rights, `${destination.id}: missing rights decision`)
     assert(
       ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
-        && rights.shippingEligible === rightsCleared
+        && rights.shippingEligible === shippingAuthorized
         && typeof rights.disposition === 'string'
         && rights.disposition.length > 0
         && rights.sceneCount === destination.activeSceneVariantIds.length,
@@ -490,7 +499,7 @@ if (
   )
 }
 
-const shippingEligible = rightsCleared && compositeReviewApproved
+const shippingEligible = shippingAuthorized && compositeReviewApproved
 
 const archiveContentKeys = archive.landmarks.flatMap((destination) => (
   destination.scenes.map((scene) => (
@@ -775,7 +784,7 @@ const productionManifest = {
   manifestKind: 'landmark-production',
   catalogId: `miaoyouji-landmarks-production-v${productionManifestVersion}-2026-07-20`,
   generatedAt: '2026-07-20',
-  status: shippingEligible ? 'cleared-for-shipping' : rightsDecision
+  status: shippingEligible ? rightsDecision.decision : rightsDecision
     ? (
         compositeReviewApproved
           ? 'visual-composite-and-rights-reviewed-not-cleared-runtime-integrated'

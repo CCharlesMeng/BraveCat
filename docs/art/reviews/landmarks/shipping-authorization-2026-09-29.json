@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "reviewKind": "landmark-user-shipping-authorization",
+  "decision": "user-authorized-for-shipping",
+  "reviewer": "user",
+  "reviewedAt": "2026-09-29",
+  "shippingEligible": true,
+  "legalDisclaimer": "User release authorization; does not assert third-party permission or legal clearance. Historical risk observations are retained without blocking this release.",
+  "sourceReviews": [
+    {
+      "path": "docs/art/reviews/landmarks/rights-review-v1.md",
+      "sha256": "9bbec7b21f4c1eaef930c18628870bebd7a93251e39e9cefa1e4b45a3d49008e",
+      "destinationCount": 20,
+      "sceneCount": 48
+    },
+    {
+      "path": "docs/art/reviews/landmarks/rights-review-v3-addendum.md",
+      "sha256": "d764996981da8bf1014f3c7f6812110ef12a009a921bdf9ea3b124cffbcbe787",
+      "destinationCount": 5,
+      "sceneCount": 13
+    }
+  ],
+  "scope": {
+    "candidateManifest": "docs/art/candidates/landmarks/manifest.candidates.v3.json",
+    "candidateManifestSha256": "fcb805edf8828d32fc5e5c8afd5d0226e79a199b5f64672c775068341c47673c",
+    "activeSceneSetSha256": "82a510edcc56afbca17dfba49d0f902f9d77b0067ee189d785a99802e5a66ada",
+    "activeSceneContentSetSha256": "a818cdb6f3b665d4c411bf8db982bb0ddc475cfa66b5a63b7b2f4fa2be7fd525",
+    "destinationCount": 25,
+    "activeSceneVariantCount": 61
+  },
+  "globalGates": [
+    {
+      "id": "style-reference-rights",
+      "status": "open",
+      "assetCount": 61,
+      "requiredAction": "signed-author-license-acquisition-records"
+    },
+    {
+      "id": "generator-terms-provenance",
+      "status": "open",
+      "assetCount": 61,
+      "requiredAction": "dated-terms-account-plan-provider-record"
+    },
+    {
+      "id": "reverse-image-and-similarity-review",
+      "status": "open",
+      "assetCount": 61,
+      "requiredAction": "reverse-image-and-human-similarity-review"
+    },
+    {
+      "id": "trademark-clearance",
+      "status": "open",
+      "assetCount": 61,
+      "requiredAction": "territory-class-search-and-no-endorsement-qa"
+    }
+  ],
+  "summary": {
+    "low": {
+      "destinationCount": 7,
+      "sceneCount": 15
+    },
+    "medium": {
+      "destinationCount": 8,
+      "sceneCount": 22
+    },
+    "high": {
+      "destinationCount": 3,
+      "sceneCount": 6
+    },
+    "blocked": {
+      "destinationCount": 7,
+      "sceneCount": 18
+    },
+    "plausibleAfterRemediation": {
+      "destinationCount": 15,
+      "sceneCount": 37
+    }
+  },
+  "destinations": [
+    {
+      "id": "china-beijing-forbidden-city-corner-tower",
+      "sceneCount": 2,
+      "risk": "medium",
+      "disposition": "plausible-after-cc-compliance",
+      "shippingEligible": true
+    },
+    {
+      "id": "japan-kyoto-fushimi-inari-taisha",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-site-policy-review",
+      "shippingEligible": true
+    },
+    {
+      "id": "singapore-singapore-merlion",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "stb-permission-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "australia-sydney-opera-house",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "soht-license-or-counsel-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "france-paris-eiffel-tower",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-if-no-protected-lighting",
+      "shippingEligible": true
+    },
+    {
+      "id": "united-kingdom-london-tower-bridge",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "italy-rome-colosseum",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "park-authorization-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "egypt-giza-pyramids",
+      "sceneCount": 3,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "united-states-new-york-brooklyn-bridge",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "peru-cusco-machu-picchu",
+      "sceneCount": 2,
+      "risk": "high",
+      "disposition": "peru-counsel-and-authority-scope-confirmation",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-beijing-mutianyu-great-wall",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-shanghai-the-bund",
+      "sceneCount": 2,
+      "risk": "medium",
+      "disposition": "plausible-after-building-signage-inventory",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-xian-giant-wild-goose-pagoda",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-guilin-elephant-trunk-hill",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-cc-compliance",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-dongguan-xiliubeipo-village",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "huawei-permission-or-replace",
+      "shippingEligible": true
+    },
+    {
+      "id": "china-hangzhou-west-lake-leifeng-pagoda",
+      "sceneCount": 2,
+      "risk": "high",
+      "disposition": "china-counsel-and-cc-adaptation-resolution",
+      "shippingEligible": true
+    },
+    {
+      "id": "india-agra-taj-mahal",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-similarity-review",
+      "shippingEligible": true
+    },
+    {
+      "id": "turkey-istanbul-hagia-sophia",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-site-review",
+      "shippingEligible": true
+    },
+    {
+      "id": "brazil-rio-de-janeiro-christ-the-redeemer",
+      "sceneCount": 2,
+      "risk": "blocked",
+      "disposition": "sanctuary-license-or-brazil-counsel-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "south-africa-cape-town-table-mountain",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-source-map-and-similarity-review",
+      "shippingEligible": true
+    },
+    {
+      "id": "mexico-yucatan-chichen-itza",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "inah-permission-registration-legend-and-counsel-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "cambodia-siem-reap-angkor-wat",
+      "sceneCount": 3,
+      "risk": "blocked",
+      "disposition": "apsara-and-mcfa-written-approval-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "morocco-ouarzazate-ait-benhaddou",
+      "sceneCount": 2,
+      "risk": "high",
+      "disposition": "morocco-counsel-and-authority-determination-required",
+      "shippingEligible": true
+    },
+    {
+      "id": "jordan-petra-al-khazneh",
+      "sceneCount": 2,
+      "risk": "low",
+      "disposition": "plausible-after-common-gates",
+      "shippingEligible": true
+    },
+    {
+      "id": "new-zealand-fiordland-milford-sound",
+      "sceneCount": 3,
+      "risk": "medium",
+      "disposition": "plausible-after-cultural-and-source-review",
+      "shippingEligible": true
+    }
+  ],
+  "remainingGates": [],
+  "authorization": {
+    "userStatement": "图片全部放通",
+    "approvalInventory": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json",
+    "approvalInventorySha256": "d40fdf48f1a12cac1f1d1949bea75448c6d4305470229cd0704c27a9e9923963",
+    "rightsClearanceClaim": false,
+    "historicalRightsDecision": "docs/art/reviews/landmarks/rights-decision.v2.json",
+    "historicalRightsDecisionSha256": "b371c8d6e1fdca2490b63382c9e7e692e9ab04d6a83374e553725da7997730c6"
+  }
+}

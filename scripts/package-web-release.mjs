@@ -33,7 +33,7 @@ const manifest = {
   commit, status: 'candidate-not-for-public-launch',
   archive: 'web-pwa.tar.gz', sha256: createHash('sha256').update(bytes).digest('hex'),
   assetOrigin: 'same-origin', saveSchemaVersion: 5, localOnly: true,
-  pending: ['landmark rights clearance', 'real mobile installation and system sharing acceptance', 'production HTTPS host and domain'],
+  pending: ['functional gaps recorded in docs/audits/web-pwa-functional-gaps-2026-09-29.md', 'real mobile installation and system sharing acceptance', 'production HTTPS host and domain'],
   files,
 }
 await writeFile(path.join(output, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n')

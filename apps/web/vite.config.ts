@@ -86,7 +86,7 @@ if (
   productionManifest.shippingEligible
   && (
     rightsDecision?.shippingEligible !== true
-    || rightsDecision?.decision !== 'cleared-for-shipping'
+    || !['cleared-for-shipping', 'user-authorized-for-shipping'].includes(rightsDecision?.decision ?? '')
     || (rightsDecision?.remainingGates?.length ?? 0) > 0
     || productionManifest.review?.shippingApproval !== 'approved'
     || (productionManifest.remainingGates?.length ?? 0) > 0
