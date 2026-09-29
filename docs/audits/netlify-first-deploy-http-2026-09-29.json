@@ -1,0 +1,679 @@
+{
+  "url": "https://bravecat.netlify.app/",
+  "commit": "bba26ffa1f7efb84218ef04b6c02bc00e4cce274",
+  "deployId": "6abb7e83e833b356f0ac065a",
+  "complete": false,
+  "reason": "67 files fetched and matched (index normalized for Netlify branding); further requests failed TLS connection. Manifest MIME needs explicit override. This is first-deployment evidence, not final-deployment revalidation.",
+  "files": [
+    {
+      "path": "assets/album/empty.png",
+      "status": 200,
+      "bytes": 38713,
+      "sha256": "0c6f350527d4fe060f64563a64879f5a0bf1062c31dbd24abfe4726820cee570",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/close.svg",
+      "status": 200,
+      "bytes": 303,
+      "sha256": "986fe8b483cf9892d62c423a6b3681f9e6d04090ec85af5056eebe5409703d2e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "status": 200,
+      "bytes": 15633,
+      "sha256": "1db64a0f557080e6234d045e0f8ea8ff7ac710d861fdf2d0f2ae2a261912a331",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/export.svg",
+      "status": 200,
+      "bytes": 354,
+      "sha256": "0b77ab177995ed05d2246fb3c18ef7f85003dfd429810a1630a4fba9a68a44da",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/import.svg",
+      "status": 200,
+      "bytes": 355,
+      "sha256": "755086bbddd3ff769e3bb4553910eaeb0536cc5b61ea110c1dda7c0c2101729a",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/lock.svg",
+      "status": 200,
+      "bytes": 369,
+      "sha256": "54dc11d93ff77daa1978c24d5975e3acdeede61651707f5f2776d57fed1a734f",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/retry.svg",
+      "status": 200,
+      "bytes": 328,
+      "sha256": "61e7854a40ff1e76c037c355d56dafc02ffe03762496db8a994b025797e67d3e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v02.png",
+      "status": 200,
+      "bytes": 178202,
+      "sha256": "e11c56e978e9b539a79a500973996016825dbc8e253e6c37a50d689ccd5832d6",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v03.png",
+      "status": 200,
+      "bytes": 167229,
+      "sha256": "a4f7109c73664e12aca3506134922100b8ba9402829981e3b2ab9769aaedf12f",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-album.png",
+      "status": 200,
+      "bytes": 20672,
+      "sha256": "1386420c56b827cb1f474811ca6f8e924c8f0b2d509d62f1ab7eb756f2ba50c1",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--souvenir-occlusion--v01.png",
+      "status": 200,
+      "bytes": 96166,
+      "sha256": "98c0bace2e2f7352c0d6fe5c9d24d594f1898ad01af5da166d698ae91b3d5c65",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v01.png",
+      "status": 200,
+      "bytes": 1289929,
+      "sha256": "40301a6f89e510466fa28d57e07eb819be02481987d601916ceac628596f5bc0",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-shop.png",
+      "status": 200,
+      "bytes": 20586,
+      "sha256": "558e6d85bace4daedf1e6551e69d4b197bc10951b9a0afae7fa248a59dd183aa",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-pack.png",
+      "status": 200,
+      "bytes": 22524,
+      "sha256": "1dc210c980f088878ab122c289b304794f55d8f93aa310d009f53d17332fc51b",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/index-CqeSEnSo.css",
+      "status": 200,
+      "bytes": 49677,
+      "sha256": "17cf3995ec0fcf4e48c4a18731f755c403e7c00d22102ab2797a3b76d48fb135",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "text/css; charset=UTF-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/items/item--snack--fish-biscuit--v02.png",
+      "status": 200,
+      "bytes": 10687,
+      "sha256": "5fdfc1427c15c878fd6810db05f6f5e28585b909364bb329d1a2def1d3c7534d",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--snack--travel-tin--v02.png",
+      "status": 200,
+      "bytes": 11060,
+      "sha256": "06ac51251237a801236a2e04bfd8313758b16738b37200c4ff29147b08546a9e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-bell--v02.png",
+      "status": 200,
+      "bytes": 8451,
+      "sha256": "8158e364e0360c60c2bf52a682b35c4dd337d276ca60cf61e4ccb1a86acb7cbe",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/index-BafdDtLB.js",
+      "status": 200,
+      "bytes": 303979,
+      "sha256": "c65f52d5d6bc9263ea255926978ba66c037b47a90aaaa2ca0239c5539181de4e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "application/javascript; charset=UTF-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/items/item--toy--small-blanket--v02.png",
+      "status": 200,
+      "bytes": 14504,
+      "sha256": "b153270a753b5abeb5c37dd5e10049042883bb8370091860658e10c5693d4c76",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-camera--v02.png",
+      "status": 200,
+      "bytes": 15332,
+      "sha256": "15ade73e54b4a0e1fff67da56ccd813af485080635ccb632afaacc90c406233e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-telescope--v02.png",
+      "status": 200,
+      "bytes": 6625,
+      "sha256": "0277c904b9babe7c136c2b6f73df8d3ed56f997fbdfe37477d4af36daa1b3112",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--yarn-ball--v02.png",
+      "status": 200,
+      "bytes": 10566,
+      "sha256": "468a993d4f2d341173b0809ae82ad2e11c0438153da95f5e93c0660f79ee5c4e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--wish--ticket--v02.png",
+      "status": 200,
+      "bytes": 11337,
+      "sha256": "19c2ea6e45876cb3a4d5b734db01b50e1aa3835f85357fb2373e8fb6358243fe",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/base-342.png",
+      "status": 200,
+      "bytes": 127213,
+      "sha256": "eca5528396995d7ae00b45b2b37b9c6df5d6fcac34f47b8bf06327ecc0391376",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/base-382.png",
+      "status": 200,
+      "bytes": 159391,
+      "sha256": "2e6a11b5a2a19826a991a1dc7b7da3a11b1212b1c42c047af822cc1ce914cbd7",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/rim-342.png",
+      "status": 200,
+      "bytes": 59051,
+      "sha256": "ed38305baf6a35d5bcf62a379a9a0d97d5156c1fdb9e2c1f1e3d9ecdf04d28f4",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/rim-382.png",
+      "status": 200,
+      "bytes": 73372,
+      "sha256": "1f97a15c2b146629d7c7699449423ceca39385e9ed524198cb0d5f0e4da67812",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/souvenirs/souvenir--travel-charm--v01.png",
+      "status": 200,
+      "bytes": 185880,
+      "sha256": "3f326e112df2ca5c0c3cb6a4f8f00deec710ab8502bc201743f52023c93ac0c6",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/souvenirs/souvenir--postmark-pin--v01.png",
+      "status": 200,
+      "bytes": 411757,
+      "sha256": "e1afc70568dafce724e5dbc79162170ffcdabdedbc0b395529ab788b8317c68a",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-24.png",
+      "status": 200,
+      "bytes": 1010,
+      "sha256": "e69c0004e1c8239622a21611d3c91d6ce105599553452edd145b88409357290c",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-32.png",
+      "status": 200,
+      "bytes": 1528,
+      "sha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-96.png",
+      "status": 200,
+      "bytes": 9076,
+      "sha256": "98e1450e16e6f531dec8ba1b9b71979444d4397f576ed22b28dcf1bad9c70de2",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/web-BTEr6jr4.js",
+      "status": 200,
+      "bytes": 8438,
+      "sha256": "1d193c221d4902dd2c636e7eba3cd370fcea63e811d4b3b9f2be557bd91dba3f",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "application/javascript; charset=UTF-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/web-Dvr9_V33.js",
+      "status": 200,
+      "bytes": 365,
+      "sha256": "b264a057323f7030f930a7d243604772c0e5981522e74d710272a9f3224c0100",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "application/javascript; charset=UTF-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "bytes": 199124,
+      "sha256": "b06c1254b3ee97f291971b7684071a3efc5728dfe7fe833d91b1da034b1e16b4",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "bytes": 422704,
+      "sha256": "5c541494b1ec06db337e936b2d7d9f9072d58371b16cccf9f0bf84412b22373b",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "bytes": 1753994,
+      "sha256": "3ca6a78b3d72347097e213a321c31d2ade88635f4867eadb9a7341da44b80be4",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "bytes": 262730,
+      "sha256": "c3cc8d22d80327319d0d86131d10992583b07b2d3c89350d045a76615bd6c9e0",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "bytes": 575736,
+      "sha256": "a256500f8c483a0ba23d5ac1baf8702f4fdb4ebcfd495ad885f0ae6092d9cafe",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/lighting.webp",
+      "status": 200,
+      "bytes": 149498,
+      "sha256": "be4e8dba37e5e82e7f862b17ad03ee5084b70b64f3f93441f524ecf77b374068",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "bytes": 1854562,
+      "sha256": "0c73856a92e84695813a4c5b435ff9d6c30c59aac5a1afce118ca0c20055f37f",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "bytes": 377486,
+      "sha256": "bd2b6ed848c15b4a7690886a156ebb93839a1e26b9bab34b4b1a628fc3096ef9",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "bytes": 176370,
+      "sha256": "34ad0b1213809afa2d5b2810ffd5defa5f5de0ca434a614f0d7bf37b7b2ea96d",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/exterior-noon.webp",
+      "status": 200,
+      "bytes": 1836686,
+      "sha256": "0289869ed10a0cc8d6e93791ff1794b40a1f777c6b156b83d507c36459e750ac",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "bytes": 165908,
+      "sha256": "1f00ebe308ce7d78b09420fe3a2af93638aecb7ee957baf4ae8eca348e190ff4",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "bytes": 358730,
+      "sha256": "98af9c957acf5768ceb60bda0eac5fe30ef5625ee92bec9982a33fa111f60908",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/lighting.webp",
+      "status": 200,
+      "bytes": 152772,
+      "sha256": "f04a9f760d02df1415e53abdad0327fdb170af5a9118ddaa2deb87d60cd272d3",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/exterior-noon.webp",
+      "status": 200,
+      "bytes": 2137424,
+      "sha256": "c61c20f5b71776f28fff891d46a5fa69b3f86fd28f9bf39aacd237d12e3c6328",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "bytes": 265646,
+      "sha256": "d92a65cfb07cf457a729ad6eafd7e66f166068312f9c4db7c4e6d65d891d9cdc",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "bytes": 1710966,
+      "sha256": "d057ae39b7ffc452f279035714e7b0d3b52360ea2dc5e3218c201ee93841c758",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "bytes": 146726,
+      "sha256": "daf629fbb1fc522d9c532a1b393f4a8050995bcf594dea6b9071adc2a4bc1dfe",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/exterior-noon.webp",
+      "status": 200,
+      "bytes": 2052212,
+      "sha256": "2d6a47873d4b346dcd577ee0de1c00b7ac09f74b735cff3c54af2c88ad5ff0ac",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "bytes": 322012,
+      "sha256": "77dea6f70e9a50a1654571b8a7e0645e0453a760c422148bd449595408220708",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "bytes": 125660,
+      "sha256": "124bee4293f438da611158f7ecd1c4ef76b51f4df929b10372752d7eee8c164e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--eat--ambient--poster--v03.webp",
+      "status": 200,
+      "bytes": 141678,
+      "sha256": "1d4f348533f111dd7f681d150ae02dd835e0baac4c6652447a5b1c095bfa116e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/lighting.webp",
+      "status": 200,
+      "bytes": 141680,
+      "sha256": "4bbad33697965e48bbb1687fd4aefa3e3c67d4111e12e5106fcb159e4a35b32a",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--gaze--ambient--poster--v03.webp",
+      "status": 200,
+      "bytes": 112810,
+      "sha256": "84ab229740a553d1f5ca2aab42f7ee2543b5d7b18c5af8c5cc54e40bca13ca80",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--play--ambient--poster--v03.webp",
+      "status": 200,
+      "bytes": 120646,
+      "sha256": "187fd4dbf1a4c2351affabe5b69593de558d6f821af146740f1d9593dc3f9d4e",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--gaze--ambient--v03.webp",
+      "status": 200,
+      "bytes": 588364,
+      "sha256": "90efef26982d9bdde70b27ee7cf84e160008354e37e3a05dca896b30d5bdd462",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--sleep--ambient--poster--v03.webp",
+      "status": 200,
+      "bytes": 169302,
+      "sha256": "db825f666823d195b5ec5a5ee1a59cfd3330a43572ea5addd2e9c70cd2a385fb",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--eat--ambient--v03.webp",
+      "status": 200,
+      "bytes": 2652172,
+      "sha256": "e4258a9e0027a387174acf9ad7800a31c2d2db3752f583042254bbd3e92e69dc",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--sleep--ambient--v03.webp",
+      "status": 200,
+      "bytes": 1776638,
+      "sha256": "75167d6ef9cf2c82b8f2971770ada455b5f8ffb844e80b6e3b0f5c93cb6ee896",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "icon-192.png",
+      "status": 200,
+      "bytes": 16877,
+      "sha256": "ceca75ce5e8d8dc4fc0a29163be6d019e127b4d5e91d93ef2f393db69b21fcd5",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "icon.svg",
+      "status": 200,
+      "bytes": 1254,
+      "sha256": "cd51289ccbb7524e659a363d5318bbfcba815753526d9206bca836ad5bd82f46",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1273,
+      "sha256": "88e5000daa597e87448c5c777d52faf550ede182ed6132a0cb3232d711bd2027",
+      "matches": false,
+      "matchesAfterNetlifyBrandingRemoval": true,
+      "contentType": "text/html; charset=UTF-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 443,
+      "sha256": "48c2d393c3d91ee6404c5190f4611026b9f13f0837246c4ca5daee64b1867ada",
+      "matches": true,
+      "matchesAfterNetlifyBrandingRemoval": false,
+      "contentType": "application/octet-stream",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    }
+  ]
+}

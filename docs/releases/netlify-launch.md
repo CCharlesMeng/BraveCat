@@ -21,6 +21,26 @@
 
 ## 当前状态
 
-部署配置已准备；尚未创建或发布公网站点，等待 Netlify 账号登录。此文件不构成公网验收证明。
+2026-09-29 已公开发布：[bravecat.netlify.app](https://bravecat.netlify.app/)。仅静态免费本机存档版本，无账号服务；未创建付费订阅或连接 GitHub 自动部署。
+
+- Site ID：`2a965a34-74ab-457c-89f6-de16a1286d87`。
+- 当前生产部署：[6abb80acb64cd80d2acb4098](https://app.netlify.com/projects/bravecat/deploys/6abb80acb64cd80d2acb4098)，控制台确认 Public / published、148 文件、8 条响应头规则全部处理成功。
+- 部署代码：`ce600e654045f2e6441e2814de15a046b3550790`。`npm run build`、[CI](https://github.com/CCharlesMeng/BraveCat/actions/runs/36547118719)、[E2E](https://github.com/CCharlesMeng/BraveCat/actions/runs/36547118720) 成功，包含正式构建离线故事测试。CI 不代替公网测试。
+- 上传包：`.asset-publish/web-pwa-rc-ce600e654045/netlify-upload.zip`，43,076,032 bytes，SHA-256 `bfe531548d95dfcf60ab23770a639c6cc32ead853b3292547a9f009176dbc996`。
+- 对应 tar.gz SHA-256：`4b69538383e373f154c2f6534d5c85848245334791a89f30a52bef1059371fc9`；逐文件 manifest 与 ZIP 同目录归档。
+- 上一部署 `6abb7e83e833b356f0ac065a` 保留在 Netlify，代码 `bba26ffa1f7efb84218ef04b6c02bc00e4cce274`。两包仅 `_headers` 不同，新版明确 manifest MIME 为 `application/manifest+json`；业务代码、SW 和素材字节均相同。
+
+### 公网证据与限制
+
+- 首次部署时 HTTPS 首页返回 200；领养 Minho、五张首页图片正常加载、刷新后保留名字与 12 条小鱼干均通过。相册与备份入口可见；导出出现成功提示，但自动下载监听超时，未取得下载文件验证，不能计为完整备份验收。
+- 首次部署成功获取 67/147 个公开文件，逐文件指纹匹配；首页仅在移除已识别的 Netlify 托管注释与平台徽章脚本后匹配。原始结果见 [HTTP 部分验收](../audits/netlify-first-deploy-http-2026-09-29.json)。站点显示 Powered by Netlify 标识。
+- 原 manifest 为 `application/octet-stream`，已补配置并重新发布。新版部署专属链接的 **147/147 公开文件**已成功获取并校验指纹，首页仅扣除平台标识注入差异；全部 WebP MIME 正确，SW/注册脚本为 JavaScript，manifest 为 `application/manifest+json; charset=utf-8`，缺失素材返回 404。缓存头符合配置。详见 [新版 HTTP 验收](../audits/netlify-production-http-2026-09-29.json)。
+- 校验期间发生间歇性 TLS 连接失败，重试后完成部署专属链接全量校验；主域名 manifest 后续复查也返回 200 和正确 MIME。浏览器一度出现连接关闭错误；该网络波动不能解释为持续健康，也不能据此断言故障原因。未绕过 TLS。
+- 公网离线重开、完整旅行与备份文件往返、移动真机安装/系统分享仍待验证；本地与 CI 已通过的离线测试不替代这些项目。
+- 首次公网首页截图：`.asset-publish/web-pwa-rc-bba26ffa1f7e/netlify-live-home.png`。发布已完成，全面公网验收尚未完成。
+
+### 后续发布
+
+固定使用该生产域名；在通过 CI 的提交上构建、打包，上传现有 bravecat 项目，记录新的 deploy ID 与包指纹。每次发布后复核上述 HTTP 与实际浏览器行为。文档归档提交不触发生产更新。
 
 官方配置依据：[配置文件](https://docs.netlify.com/build/configure-builds/file-based-configuration/)、[自定义响应头](https://docs.netlify.com/manage/routing/headers/)。
