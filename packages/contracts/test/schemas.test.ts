@@ -20,7 +20,7 @@ import {
 
 describe('save-document schema', () => {
   it('与客户端当前存档版本对齐', () => {
-    expect(SAVE_SCHEMA_VERSION).toBe(4)
+    expect(SAVE_SCHEMA_VERSION).toBe(5)
   })
 
   it('接受结构完整的存档文档，state 为黑盒', () => {

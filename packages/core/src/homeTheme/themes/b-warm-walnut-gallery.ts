@@ -11,9 +11,9 @@ import {
   postcardSlotsFromQuads,
 } from './shared'
 
-const ART = '/dev-art/home-theme/b-warm-walnut-gallery'
-const EXTERIOR = `${ART}/exterior-noon.png`
-const LIGHTING = `${ART}/lighting.png`
+const ART = '/home-release/b-warm-walnut-gallery'
+const EXTERIOR = `${ART}/exterior-noon.webp`
+const LIGHTING = `${ART}/lighting.webp`
 
 const POSTCARD_QUADS = [
   [[831, 236], [908, 210], [908, 322], [831, 333]],
@@ -28,9 +28,9 @@ export const B_WARM_WALNUT_GALLERY_THEME = {
   kind: 'base-plate',
   id: 'b-warm-walnut-gallery',
   name: '暖胡桃旅行陈列',
-  shippingEligible: false,
+  shippingEligible: true,
   canvas: { width: 1200, height: 1600 },
-  basePlate: `${ART}/base-plate--aperture-alpha.png`,
+  basePlate: `${ART}/base-plate--aperture-alpha.webp`,
   exterior: exteriorAllTimes(EXTERIOR),
   lighting: lightingExceptNoon(LIGHTING),
   postcardDisplay: {

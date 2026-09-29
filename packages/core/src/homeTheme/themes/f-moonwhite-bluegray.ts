@@ -12,9 +12,9 @@ import {
   postcardSlotsFromQuads,
 } from './shared'
 
-const ART = '/dev-art/home-theme/f-moonwhite-bluegray'
-const EXTERIOR = `${ART}/exterior-noon.png`
-const LIGHTING = `${ART}/lighting.png`
+const ART = '/home-release/f-moonwhite-bluegray'
+const EXTERIOR = `${ART}/exterior-noon.webp`
+const LIGHTING = `${ART}/lighting.webp`
 
 const POSTCARD_QUADS = [
   [[700, 280], [790, 280], [790, 362], [700, 362]],
@@ -29,9 +29,9 @@ export const F_MOONWHITE_BLUEGRAY_THEME = {
   kind: 'base-plate',
   id: 'f-moonwhite-bluegray',
   name: '月白蓝灰错层',
-  shippingEligible: false,
+  shippingEligible: true,
   canvas: { width: 1200, height: 1600 },
-  basePlate: `${ART}/base-plate--aperture-alpha.png`,
+  basePlate: `${ART}/base-plate--aperture-alpha.webp`,
   exterior: exteriorAllTimes(EXTERIOR),
   lighting: lightingExceptNoon(LIGHTING),
   postcardDisplay: {

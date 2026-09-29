@@ -9,6 +9,7 @@
  * 不使用任何框架响应式原语：状态经 `subscribe` 以不可变快照下发，
  * web 端用薄适配把快照桥到 Svelte runes。
  */
+import { createInitialStoryState } from '../stories'
 import type { AssetCatalog, ItemDefinition } from '../assets'
 import {
   STARTER_CATALOG,
@@ -28,6 +29,7 @@ import {
   createInitialGameState,
   isGameState,
   restoreGameState,
+  migrateGameStateForImport,
   selectActiveCat,
   setHomeCustomization,
   type GameState,
@@ -91,6 +93,8 @@ export interface GameControllerPorts {
 }
 
 export interface GameControllerOptions {
+  /** 端侧提供故事相册后再启用；首发由 Web 接入。 */
+  storiesEnabled?: boolean
   catalog?: AssetCatalog
   destinations?: readonly ItineraryDestination[]
   items?: readonly ItemDefinition[]
@@ -142,10 +146,17 @@ export const createGameController = (
   const clock = createClock({ realNow: ports.realNow })
   const createTripSeed = () => ports.random.nextUint32()
 
-  // 存档迁移表：版本链 v0→…→v4，宽松恢复统一走 restoreGameState。
+  // 存档迁移表：版本链 v0→…→v5，宽松恢复统一走 restoreGameState。
   const saveStore = ports.createSaveStore({
     validateState: isGameState,
     migrations: {
+      4: (document) => {
+        const state = document.state
+        if (typeof state !== 'object' || state === null) throw new TypeError('存档内容不完整或已损坏')
+        const migrated = { ...state, stateVersion: 5, stories: 'stories' in state ? state.stories : createInitialStoryState() }
+        if (!isGameState(migrated)) throw new TypeError('存档内容不完整或已损坏')
+        return { ...document, schemaVersion: 5, state: migrated }
+      },
       0: (document) => ({
         ...document,
         schemaVersion: 1,
@@ -157,13 +168,13 @@ export const createGameController = (
       2: (document) => ({
         ...document,
         schemaVersion: 3,
-        state: restoreGameState(document.state, clock.now(), catalog),
+        state: migrateGameStateForImport(document.state, clock.now(), catalog),
       }),
       // v4 起根存档携带全家共享的 homeCustomization；宽松恢复会注入默认预设。
       3: (document) => ({
         ...document,
         schemaVersion: 4,
-        state: restoreGameState(document.state, clock.now(), catalog),
+        state: migrateGameStateForImport(document.state, clock.now(), catalog),
       }),
     },
   })
@@ -254,7 +265,8 @@ export const createGameController = (
         revealAt <= now && now - revealAt < POSTCARD_VARIETY_COOLDOWN_MS
       ))
       .map(({ recipe }) => recipe)
-    const travelByCat = Object.fromEntries(current.cats.map((cat) => {
+    const travelByCat = { ...current.travelByCat }
+    for (const cat of [...current.cats].sort((a, b) => a.id.localeCompare(b.id, 'en'))) {
       const currentTravel = current.travelByCat[cat.id] ?? HOME_TRAVEL_STATE
       const nextPack = nextEconomy.packs[cat.id] ?? []
       const nextTravel = travelLifecycleFor(cat.id, cat.portraitId).advance(
@@ -269,10 +281,17 @@ export const createGameController = (
             ),
           )?.wishDestinationId,
           recentPostcardRecipes,
+          travelerName: cat.name,
+          storyContext: options.storiesEnabled ? {
+            completedStoryIds: current.stories.collections.filter((entry) => entry.acts.length === 4).map((entry) => entry.storyId),
+            reservedStoryIds: Object.values(travelByCat).flatMap((travel) => travel?.kind === 'planned' && travel.plan.story ? [travel.plan.story.storyId] : []),
+            lastCompletedStoryId: [...current.stories.collections].filter((entry) => entry.acts.length === 4).sort((a, b) => b.acts[3].revealAt - a.acts[3].revealAt)[0]?.storyId,
+            needsOrdinaryTrip: current.stories.lastTripByCat[cat.id] === 'story',
+          } : undefined,
         },
       )
-      return [cat.id, nextTravel]
-    }))
+      travelByCat[cat.id] = nextTravel
+    }
 
     return advanceAllGameEvents(current, {
       now,
@@ -547,8 +566,11 @@ export const createGameController = (
           postcardId: postcard.id,
         })
       }
-      if (postcards === game.postcards) return
-      game = { ...game, postcards }
+      const hasUnreadStory = game.stories.collections.some((entry) => entry.acts.some((act) => !act.isRead))
+      if (postcards === game.postcards && !hasUnreadStory) return
+      game = { ...game, postcards, stories: hasUnreadStory ? {
+        ...game.stories, collections: game.stories.collections.map((entry) => ({ ...entry, acts: entry.acts.map((act) => ({ ...act, isRead: true })) })),
+      } : game.stories }
       await saveGame()
       emit()
     },

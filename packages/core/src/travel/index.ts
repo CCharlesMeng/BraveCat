@@ -1,3 +1,4 @@
+import type { StorySelectionContext } from '../stories'
 import type { AssetCatalog } from '../assets'
 import type { PackedItem } from '../economy'
 import {
@@ -43,6 +44,8 @@ export type TravelState =
   }
 
 export interface TravelAdvanceInput {
+  storyContext?: StorySelectionContext
+  travelerName?: string
   now: number
   pack: readonly PackedItem[]
   portraitId?: PortraitId
@@ -82,6 +85,8 @@ export const createTravelLifecycle = (
 
       const random = config.randomFromSeed(state.tripSeed)
       const plan = config.planTrip({
+        storyContext: input.storyContext,
+        travelerName: input.travelerName,
         departsAt: state.schedule.departsAt,
         destinations: config.destinations,
         packedItemIds: input.pack.map(({ itemId }) => itemId),

@@ -135,11 +135,11 @@ test('布置家切到主题 A 后 reload 选择仍在', async ({ page }) => {
   await themePanel.getByRole('button', { name: '鼠尾草清水小屋' }).click()
 
   await expect(
-    page.locator('.room img[src*="/dev-art/home-theme/a-clear-sage/"]'),
+    page.locator('.room img[src*="/home-release/a-clear-sage/"]'),
   ).not.toHaveCount(0)
   await expect(
     page.locator(
-      '.room img[src*="cat-item--play-soft-tunnel--base.png"]',
+      '.room img[src*="cat-item--play-soft-tunnel--base.webp"]',
     ),
   ).toHaveCount(1)
 
@@ -147,17 +147,17 @@ test('布置家切到主题 A 后 reload 选择仍在', async ({ page }) => {
   await expect(page.locator('.room')).toBeVisible()
   await expect(
     page.locator(
-      '.room img[src*="/dev-art/home-theme/a-clear-sage/base-plate"]',
+      '.room img[src*="/home-release/a-clear-sage/base-plate"]',
     ),
   ).toHaveCount(1)
   await expect(
     page.locator(
-      '.room img[src*="cat-item--rest-cloud-bed--base.png"]',
+      '.room img[src*="cat-item--rest-cloud-bed--base.webp"]',
     ),
   ).toHaveCount(1)
   await expect(
     page.locator(
-      '.room img[src*="cat-item--play-soft-tunnel--base.png"]',
+      '.room img[src*="cat-item--play-soft-tunnel--base.webp"]',
     ),
   ).toHaveCount(1)
 

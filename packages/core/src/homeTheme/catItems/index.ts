@@ -5,7 +5,7 @@
 import type { CatItemDefinition, CatItemThemeAdapter } from '../types'
 
 const art = (themeId: string, item: string, kind: 'base' | 'occlusion') => (
-  `/dev-art/home-theme/${themeId}/cat-item--${item}--${kind}.png`
+  `/home-release/${themeId}/cat-item--${item}--${kind}.webp`
 )
 
 const adapter = (

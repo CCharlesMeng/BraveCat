@@ -41,6 +41,12 @@ jobs:
       # 根 build = vite build（构建尾部 rmSync 剔除 dist/dev-art 与未放行场景）
       # + check-home-display-assets + check-production-build 两道资产门禁。
       - run: npm run build
+      - run: node scripts/package-web-release.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-pwa-candidate
+          path: .asset-publish/web-pwa-rc-*/
+          retention-days: 14
 
   build-miniprogram:
     name: Build miniprogram (weapp)

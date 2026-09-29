@@ -152,3 +152,7 @@ The previously approved 48-scene v2 subset is preserved byte-for-byte. Visual ap
 4. [Composite sheet 4 of 4](../../reviews/landmarks/composites/contact-sheet--minho-composites--04-of-04--non-shipping.png)
 
 Composite review decision: **partial** — sheet 4's 13 v3 composites were approved by the user; sheets 1–3 (48 composites) remain pending renewed review.
+
+## 2026-09-29 approval supplement
+
+All current composite sheet bytes are covered by [the user approval inventory](../../reviews/all-existing-assets-approval-2026-09-29.json). Historical partial approvals above are retained; renewed user review is no longer a gate. Rights clearance remains independently required.

@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "shippingEligible": true,
+  "approval": {
+    "path": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json",
+    "sha256": "d40fdf48f1a12cac1f1d1949bea75448c6d4305470229cd0704c27a9e9923963"
+  },
+  "transformation": "lossless PNG to WebP; approved animations copied byte-for-byte",
+  "artifacts": [
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/base-plate--aperture-alpha.png",
+      "sourceSha256": "15eecc882bdc2bbe2f3dc464adc98ebacf2011f40913625e82ee95c336ab57af",
+      "src": "/home-release/a-clear-sage/base-plate--aperture-alpha.webp",
+      "sha256": "3ca6a78b3d72347097e213a321c31d2ade88635f4867eadb9a7341da44b80be4",
+      "byteLength": 1753994
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/exterior-noon.png",
+      "sourceSha256": "77b6261175b23b456331b3c8ee1b3524eea3979fa40671a31f372d74ceaff671",
+      "src": "/home-release/a-clear-sage/exterior-noon.webp",
+      "sha256": "0289869ed10a0cc8d6e93791ff1794b40a1f777c6b156b83d507c36459e750ac",
+      "byteLength": 1836686
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/lighting.png",
+      "sourceSha256": "cf5b8f9a07ebb79cabbc551a676f8512e6cd9ef4c14f49e938128235f5fe245c",
+      "src": "/home-release/a-clear-sage/lighting.webp",
+      "sha256": "be4e8dba37e5e82e7f862b17ad03ee5084b70b64f3f93441f524ecf77b374068",
+      "byteLength": 149498
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/cat-item--rest-cloud-bed--base.png",
+      "sourceSha256": "4b3be96e11f3e6b3a8b3e1d385616a022c30c3affc1a6916c2876525dee00bf3",
+      "src": "/home-release/a-clear-sage/cat-item--rest-cloud-bed--base.webp",
+      "sha256": "a256500f8c483a0ba23d5ac1baf8702f4fdb4ebcfd495ad885f0ae6092d9cafe",
+      "byteLength": 575736
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/cat-item--rest-cloud-bed--occlusion.png",
+      "sourceSha256": "9b3229656c7e8a92b4791f04f63bd4ff4667e00ea32d7291776f32206f907990",
+      "src": "/home-release/a-clear-sage/cat-item--rest-cloud-bed--occlusion.webp",
+      "sha256": "c3cc8d22d80327319d0d86131d10992583b07b2d3c89350d045a76615bd6c9e0",
+      "byteLength": 262730
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/cat-item--play-soft-tunnel--base.png",
+      "sourceSha256": "931193e357a426b5b4af181b6a89e8c2e941d9c91138568f94f7c8130f5d61c7",
+      "src": "/home-release/a-clear-sage/cat-item--play-soft-tunnel--base.webp",
+      "sha256": "5c541494b1ec06db337e936b2d7d9f9072d58371b16cccf9f0bf84412b22373b",
+      "byteLength": 422704
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/a-clear-sage/cat-item--play-soft-tunnel--occlusion.png",
+      "sourceSha256": "d94d0e2fbb894ca166e77bc1867b9774e368b4525801fb72324aca517d97ca73",
+      "src": "/home-release/a-clear-sage/cat-item--play-soft-tunnel--occlusion.webp",
+      "sha256": "b06c1254b3ee97f291971b7684071a3efc5728dfe7fe833d91b1da034b1e16b4",
+      "byteLength": 199124
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/base-plate--aperture-alpha.png",
+      "sourceSha256": "a2cf3edf0b0c55a98ffff86d30e3177cebf18d0bf9220a9547d8d9e2f93da211",
+      "src": "/home-release/b-warm-walnut-gallery/base-plate--aperture-alpha.webp",
+      "sha256": "0c73856a92e84695813a4c5b435ff9d6c30c59aac5a1afce118ca0c20055f37f",
+      "byteLength": 1854562
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/exterior-noon.png",
+      "sourceSha256": "4fefb33a3b6533d25bf2298b7d057905e0d551c4a7bfe9339ff714dd1ba26f5f",
+      "src": "/home-release/b-warm-walnut-gallery/exterior-noon.webp",
+      "sha256": "c61c20f5b71776f28fff891d46a5fa69b3f86fd28f9bf39aacd237d12e3c6328",
+      "byteLength": 2137424
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/lighting.png",
+      "sourceSha256": "a62bc5a3b4d7275fb140b89e7064bc084cb62396e687870792868d57943366cc",
+      "src": "/home-release/b-warm-walnut-gallery/lighting.webp",
+      "sha256": "f04a9f760d02df1415e53abdad0327fdb170af5a9118ddaa2deb87d60cd272d3",
+      "byteLength": 152772
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/cat-item--rest-cloud-bed--base.png",
+      "sourceSha256": "331fe4516c52d5eb1e69bc661707b3082ebdb5083956c8bf819ff5ec0d5763e9",
+      "src": "/home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--base.webp",
+      "sha256": "98af9c957acf5768ceb60bda0eac5fe30ef5625ee92bec9982a33fa111f60908",
+      "byteLength": 358730
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/cat-item--rest-cloud-bed--occlusion.png",
+      "sourceSha256": "87ae039ce39357111dceedc1f48d525431790173a0ebbf2f66e2035e29688b2b",
+      "src": "/home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--occlusion.webp",
+      "sha256": "1f00ebe308ce7d78b09420fe3a2af93638aecb7ee957baf4ae8eca348e190ff4",
+      "byteLength": 165908
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/cat-item--play-soft-tunnel--base.png",
+      "sourceSha256": "4e0f2f35b987a4e363ec678e582993bfa92937618dbba020de1a21bdeab8fcab",
+      "src": "/home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--base.webp",
+      "sha256": "bd2b6ed848c15b4a7690886a156ebb93839a1e26b9bab34b4b1a628fc3096ef9",
+      "byteLength": 377486
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/b-warm-walnut-gallery/cat-item--play-soft-tunnel--occlusion.png",
+      "sourceSha256": "93f467cf1320f4c4501975d07d3927ece3c9700d84eaca0aa19f803fc344e385",
+      "src": "/home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--occlusion.webp",
+      "sha256": "34ad0b1213809afa2d5b2810ffd5defa5f5de0ca434a614f0d7bf37b7b2ea96d",
+      "byteLength": 176370
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/base-plate--aperture-alpha.png",
+      "sourceSha256": "d14ca863147b57bbf38b7e6352cf9276d3ab0be0b56fee6e8dcb18c8cdc709fa",
+      "src": "/home-release/f-moonwhite-bluegray/base-plate--aperture-alpha.webp",
+      "sha256": "d057ae39b7ffc452f279035714e7b0d3b52360ea2dc5e3218c201ee93841c758",
+      "byteLength": 1710966
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/exterior-noon.png",
+      "sourceSha256": "f7bc449a4e85331b451d4280551abae5e1bb8f84fd5a33ed56d6a006c1bab74a",
+      "src": "/home-release/f-moonwhite-bluegray/exterior-noon.webp",
+      "sha256": "2d6a47873d4b346dcd577ee0de1c00b7ac09f74b735cff3c54af2c88ad5ff0ac",
+      "byteLength": 2052212
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/lighting.png",
+      "sourceSha256": "cffdde3d707bc9de002be0b2237c0d9de40c0e524867b114d57acbb56df5bdfe",
+      "src": "/home-release/f-moonwhite-bluegray/lighting.webp",
+      "sha256": "4bbad33697965e48bbb1687fd4aefa3e3c67d4111e12e5106fcb159e4a35b32a",
+      "byteLength": 141680
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/cat-item--rest-cloud-bed--base.png",
+      "sourceSha256": "e06674e011cef4a050db2e3ae9496a0f0457ce2ef4557dc7d7510281d0bda1e5",
+      "src": "/home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--base.webp",
+      "sha256": "77dea6f70e9a50a1654571b8a7e0645e0453a760c422148bd449595408220708",
+      "byteLength": 322012
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/cat-item--rest-cloud-bed--occlusion.png",
+      "sourceSha256": "31ae17b583e95830f501b093c96b9607c5810e09e3f4e29431e9471bbd02bc33",
+      "src": "/home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--occlusion.webp",
+      "sha256": "daf629fbb1fc522d9c532a1b393f4a8050995bcf594dea6b9071adc2a4bc1dfe",
+      "byteLength": 146726
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/cat-item--play-soft-tunnel--base.png",
+      "sourceSha256": "8cdafb85dab700cea6aa0e1cca4102ae0064b40cf82e7fc7aaadc7c6d176d5bf",
+      "src": "/home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--base.webp",
+      "sha256": "d92a65cfb07cf457a729ad6eafd7e66f166068312f9c4db7c4e6d65d891d9cdc",
+      "byteLength": 265646
+    },
+    {
+      "source": "apps/web/public/dev-art/home-theme/f-moonwhite-bluegray/cat-item--play-soft-tunnel--occlusion.png",
+      "sourceSha256": "295b43b2167283dfd2a50a9c541df257e1613201e2ec384a78e26af6c9cee240",
+      "src": "/home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--occlusion.webp",
+      "sha256": "124bee4293f438da611158f7ecd1c4ef76b51f4df929b10372752d7eee8c164e",
+      "byteLength": 125660
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--sleep--ambient--v03.webp",
+      "sourceSha256": "75167d6ef9cf2c82b8f2971770ada455b5f8ffb844e80b6e3b0f5c93cb6ee896",
+      "src": "/home-release/minho/cat--minho--sleep--ambient--v03.webp",
+      "sha256": "75167d6ef9cf2c82b8f2971770ada455b5f8ffb844e80b6e3b0f5c93cb6ee896",
+      "byteLength": 1776638
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--sleep--ambient--poster--v03.webp",
+      "sourceSha256": "db825f666823d195b5ec5a5ee1a59cfd3330a43572ea5addd2e9c70cd2a385fb",
+      "src": "/home-release/minho/cat--minho--sleep--ambient--poster--v03.webp",
+      "sha256": "db825f666823d195b5ec5a5ee1a59cfd3330a43572ea5addd2e9c70cd2a385fb",
+      "byteLength": 169302
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--play--ambient--v03.webp",
+      "sourceSha256": "342c21cdd466d136022274bb400714e2324da11e9200b22fcdeec7c92ead67b4",
+      "src": "/home-release/minho/cat--minho--play--ambient--v03.webp",
+      "sha256": "342c21cdd466d136022274bb400714e2324da11e9200b22fcdeec7c92ead67b4",
+      "byteLength": 2550400
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--play--ambient--poster--v03.webp",
+      "sourceSha256": "187fd4dbf1a4c2351affabe5b69593de558d6f821af146740f1d9593dc3f9d4e",
+      "src": "/home-release/minho/cat--minho--play--ambient--poster--v03.webp",
+      "sha256": "187fd4dbf1a4c2351affabe5b69593de558d6f821af146740f1d9593dc3f9d4e",
+      "byteLength": 120646
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--eat--ambient--v03.webp",
+      "sourceSha256": "e4258a9e0027a387174acf9ad7800a31c2d2db3752f583042254bbd3e92e69dc",
+      "src": "/home-release/minho/cat--minho--eat--ambient--v03.webp",
+      "sha256": "e4258a9e0027a387174acf9ad7800a31c2d2db3752f583042254bbd3e92e69dc",
+      "byteLength": 2652172
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--eat--ambient--poster--v03.webp",
+      "sourceSha256": "1d4f348533f111dd7f681d150ae02dd835e0baac4c6652447a5b1c095bfa116e",
+      "src": "/home-release/minho/cat--minho--eat--ambient--poster--v03.webp",
+      "sha256": "1d4f348533f111dd7f681d150ae02dd835e0baac4c6652447a5b1c095bfa116e",
+      "byteLength": 141678
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--gaze--ambient--v03.webp",
+      "sourceSha256": "90efef26982d9bdde70b27ee7cf84e160008354e37e3a05dca896b30d5bdd462",
+      "src": "/home-release/minho/cat--minho--gaze--ambient--v03.webp",
+      "sha256": "90efef26982d9bdde70b27ee7cf84e160008354e37e3a05dca896b30d5bdd462",
+      "byteLength": 588364
+    },
+    {
+      "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--gaze--ambient--poster--v03.webp",
+      "sourceSha256": "84ab229740a553d1f5ca2aab42f7ee2543b5d7b18c5af8c5cc54e40bca13ca80",
+      "src": "/home-release/minho/cat--minho--gaze--ambient--poster--v03.webp",
+      "sha256": "84ab229740a553d1f5ca2aab42f7ee2543b5d7b18c5af8c5cc54e40bca13ca80",
+      "byteLength": 112810
+    }
+  ]
+}

@@ -104,7 +104,8 @@ const catalogWithAlternatePortrait: AssetCatalog = {
 describe('Game state', () => {
   it('新存档同时建立经济与多猫旅行状态容器', () => {
     expect(createInitialGameState(1_000)).toEqual({
-      stateVersion: 4,
+      stateVersion: 5,
+      stories: { collections: [], lastTripByCat: {} },
       clockNow: 1_000,
       economy: createInitialEconomyState(1_000),
       travelByCat: {},
@@ -124,7 +125,8 @@ describe('Game state', () => {
     }
 
     expect(restoreGameState(legacyEconomy, 9_000)).toEqual({
-      stateVersion: 4,
+      stateVersion: 5,
+      stories: { collections: [], lastTripByCat: {} },
       clockNow: 9_000,
       economy: legacyEconomy,
       travelByCat: {},
@@ -566,7 +568,7 @@ describe('Game state', () => {
       catalogWithRevisedScenePose,
     )
 
-    expect(restored.stateVersion).toBe(4)
+    expect(restored.stateVersion).toBe(5)
     expect(
       restored.travelByCat.minho?.kind === 'planned'
         ? restored.travelByCat.minho.plan.content.postcards[0]

@@ -460,11 +460,11 @@ describe('base-plate home themes', () => {
       expect(scene.formId).toBe(themeId)
       expect(scene.backdrop[0]).toEqual({
         id: 'exterior-noon',
-        src: `/dev-art/home-theme/${themeId}/exterior-noon.png`,
+        src: `/home-release/${themeId}/exterior-noon.webp`,
       })
       expect(scene.backdrop[1]).toEqual({
         id: 'shell',
-        src: `/dev-art/home-theme/${themeId}/base-plate--aperture-alpha.png`,
+        src: `/home-release/${themeId}/base-plate--aperture-alpha.webp`,
       })
       expect(scene.rearPieces).toEqual([])
       expect(scene.catItems.map(({ slot, itemId, src }) => (
@@ -473,22 +473,22 @@ describe('base-plate home themes', () => {
         [
           'rest',
           'rest-cloud-bed',
-          `/dev-art/home-theme/${themeId}/cat-item--rest-cloud-bed--base.png`,
+          `/home-release/${themeId}/cat-item--rest-cloud-bed--base.webp`,
         ],
         [
           'play',
           'play-soft-tunnel',
-          `/dev-art/home-theme/${themeId}/cat-item--play-soft-tunnel--base.png`,
+          `/home-release/${themeId}/cat-item--play-soft-tunnel--base.webp`,
         ],
       ])
       expect(scene.catItemOcclusion.map(({ id, src }) => [id, src])).toEqual([
         [
           'cat-item-occlusion-rest',
-          `/dev-art/home-theme/${themeId}/cat-item--rest-cloud-bed--occlusion.png`,
+          `/home-release/${themeId}/cat-item--rest-cloud-bed--occlusion.webp`,
         ],
         [
           'cat-item-occlusion-play',
-          `/dev-art/home-theme/${themeId}/cat-item--play-soft-tunnel--occlusion.png`,
+          `/home-release/${themeId}/cat-item--play-soft-tunnel--occlusion.webp`,
         ],
       ])
       expect(scene.pieces).toEqual([])

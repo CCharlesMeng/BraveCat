@@ -1,3 +1,4 @@
+import { hasClearedLandmarkRights } from './lib/landmark-shipping-gate.mjs'
 import { createHash } from 'node:crypto'
 import {
   copyFile,
@@ -331,6 +332,12 @@ if (visualApproval.schemaVersion >= 2) {
   )
 }
 
+const rightsCleared = hasClearedLandmarkRights(rightsDecision)
+if (rightsCleared) {
+  for (const evidence of rightsDecision.clearanceEvidence) {
+    assert(sha256(await readContents(evidence.path)) === evidence.sha256, `Stale rights clearance evidence: ${evidence.path}`)
+  }
+}
 const rightsByDestination = new Map()
 let derivedRiskSummary = null
 if (rightsDecision) {
@@ -338,8 +345,8 @@ if (rightsDecision) {
     rightsDecision.schemaVersion >= 1
       && rightsDecision.reviewKind
         === 'landmark-rights-and-provenance-product-risk-review'
-      && rightsDecision.decision === 'review-complete-not-cleared'
-      && rightsDecision.shippingEligible === false,
+      && (rightsCleared || (rightsDecision.decision === 'review-complete-not-cleared'
+        && rightsDecision.shippingEligible === false)),
     'rights decision must fail closed until explicit shipping approval',
   )
   assert(
@@ -367,7 +374,7 @@ if (rightsDecision) {
   assert(
     Array.isArray(rightsDecision.globalGates)
       && rightsDecision.globalGates.length > 0
-      && rightsDecision.globalGates.every((gate) => gate.status === 'open'),
+      && rightsDecision.globalGates.every((gate) => gate.status === (rightsCleared ? 'closed' : 'open')),
     'rights decision must enumerate every open global gate',
   )
 
@@ -400,7 +407,7 @@ if (rightsDecision) {
     assert(rights, `${destination.id}: missing rights decision`)
     assert(
       ['low', 'medium', 'high', 'blocked'].includes(rights.risk)
-        && rights.shippingEligible === false
+        && rights.shippingEligible === rightsCleared
         && typeof rights.disposition === 'string'
         && rights.disposition.length > 0
         && rights.sceneCount === destination.activeSceneVariantIds.length,
@@ -439,7 +446,26 @@ assert(
   'asset archive does not resolve to the approved visual-review scope',
 )
 
-const compositeReviewApproved = Boolean(
+const bulkApprovalPath = 'docs/art/reviews/all-existing-assets-approval-2026-09-29.json'
+const bulkApprovalContents = await readOptionalContents(bulkApprovalPath)
+const bulkApproval = bulkApprovalContents ? JSON.parse(bulkApprovalContents) : null
+let bulkCompositeApproved = Boolean(
+  bulkApproval?.decision === 'approved' && bulkApproval.reviewer === 'user'
+  && compositeManifest?.activeSceneSetSha256 === approvedActiveSceneSetSha256
+  && compositeManifest?.activeSceneContentSetSha256 === approvedActiveSceneContentSetSha256
+  && compositeManifest?.sceneCount === activeEntries.length
+  && compositeManifest?.sheets?.length > 0,
+)
+if (bulkCompositeApproved) {
+  for (const sheet of compositeManifest.sheets) {
+    const fingerprint = sha256(await readContents(sheet.repoPath))
+    if (fingerprint !== sheet.sha256 || !bulkApproval.entries.some(entry => entry.source === 'main' && entry.path === sheet.repoPath && entry.sha256 === fingerprint)) {
+      bulkCompositeApproved = false
+      break
+    }
+  }
+}
+const compositeReviewApproved = bulkCompositeApproved || Boolean(
   compositeManifest
     && compositeApproval
     && compositeApproval.status !== 'superseded'
@@ -463,6 +489,8 @@ if (
     'Minho composite approval does not match the active candidate set',
   )
 }
+
+const shippingEligible = rightsCleared && compositeReviewApproved
 
 const archiveContentKeys = archive.landmarks.flatMap((destination) => (
   destination.scenes.map((scene) => (
@@ -605,7 +633,7 @@ for (const { scene } of activeEntries) {
     variantId: scene.variantId,
     version: scene.version,
     status: 'approved-for-runtime-integration',
-    shippingEligible: false,
+    shippingEligible,
     imageSrc,
     repoPath: runtimeRepoPath,
     sha256: runtimeSha256,
@@ -747,7 +775,7 @@ const productionManifest = {
   manifestKind: 'landmark-production',
   catalogId: `miaoyouji-landmarks-production-v${productionManifestVersion}-2026-07-20`,
   generatedAt: '2026-07-20',
-  status: rightsDecision
+  status: shippingEligible ? 'cleared-for-shipping' : rightsDecision
     ? (
         compositeReviewApproved
           ? 'visual-composite-and-rights-reviewed-not-cleared-runtime-integrated'
@@ -758,7 +786,7 @@ const productionManifest = {
           ? 'visual-and-composite-approved-rights-pending-runtime-integrated'
           : 'visual-approved-rights-pending-runtime-integrated'
       ),
-  shippingEligible: false,
+  shippingEligible,
   source: {
     candidateManifest: {
       path: candidateManifestPath,
@@ -805,10 +833,10 @@ const productionManifest = {
             compositeSetSha256: compositeManifest.compositeSetSha256,
           },
           compositeApproval: {
-            path: compositeApprovalPath,
-            sha256: sha256(compositeApprovalContents),
-            reviewer: compositeApproval.reviewer,
-            reviewedAt: compositeApproval.reviewedAt,
+            path: bulkCompositeApproved ? bulkApprovalPath : compositeApprovalPath,
+            sha256: sha256(bulkCompositeApproved ? bulkApprovalContents : compositeApprovalContents),
+            reviewer: 'user',
+            reviewedAt: bulkCompositeApproved ? bulkApproval.approvedOn : compositeApproval.reviewedAt,
           },
         }
       : {}),
@@ -835,7 +863,7 @@ const productionManifest = {
           decision: rightsDecision.decision,
           reviewedAt: rightsDecision.reviewedAt,
           reviewer: rightsDecision.reviewer,
-          globalGatesOpen: rightsDecision.globalGates.map(({ id }) => id),
+          globalGatesOpen: rightsDecision.globalGates.filter(({ status }) => status === 'open').map(({ id }) => id),
           riskSummary: derivedRiskSummary,
         }
       : {
@@ -844,7 +872,7 @@ const productionManifest = {
     finalRealPortraitCompositeReview: compositeReviewApproved
       ? 'approved'
       : 'pending',
-    shippingApproval: 'blocked-pending-remaining-gates',
+    shippingApproval: shippingEligible ? 'approved' : 'blocked-pending-remaining-gates',
   },
   remainingGates: [
     ...(!compositeReviewApproved ? ['final-real-minho-composite-review'] : []),
@@ -877,7 +905,7 @@ const productionManifest = {
     id: destination.id,
     name: destination.name,
     status: 'approved-for-runtime-integration',
-    shippingEligible: false,
+    shippingEligible,
     rightsReview: rightsByDestination.get(destination.id).risk,
     rightsDisposition: rightsByDestination.get(destination.id).disposition,
     scenes: runtimeScenes.filter((scene) => scene.destinationId === destination.id),
@@ -898,7 +926,7 @@ const reviewIndex = await readFile(absolute(reviewIndexPath), 'utf8')
 const sceneCount = runtimeScenes.length
 let approvedReviewIndex = reviewIndex
   .replace(
-    `All ${sceneCount} active scene candidates are non-shipping and pending human approval. Machine QA does not authorize promotion; human visual review, rights review, and final real-Portrait composite review remain pending.`,
+    shippingEligible ? `All ${sceneCount} active scenes have passed visual, composite and evidence-backed rights shipping gates.` : `All ${sceneCount} active scene candidates are non-shipping and pending human approval. Machine QA does not authorize promotion; human visual review, rights review, and final real-Portrait composite review remain pending.`,
     `All ${sceneCount} active scene candidates passed user visual review and were promoted for runtime integration. Shipping remains blocked until rights review and final real-Portrait composite review pass.`,
   )
   .replaceAll('pending review', 'visual approved')
@@ -941,7 +969,7 @@ const productionManifestLink = path.posix.relative(
 )
 const compositeApprovalLink = path.posix.relative(
   reviewIndexDirectory,
-  compositeApprovalPath,
+  bulkCompositeApproved ? bulkApprovalPath : compositeApprovalPath,
 )
 const rightsReviewLink = path.posix.relative(
   reviewIndexDirectory,
@@ -1000,6 +1028,9 @@ if (
       + `- [Rights and provenance review](${rightsReviewLink})\n`
       + `- [Machine-checkable rights decision](${rightsDecisionLink})`,
   )
+}
+if (bulkCompositeApproved && !approvedReviewIndex.includes('## 2026-09-29 approval supplement')) {
+  approvedReviewIndex += `\n## 2026-09-29 approval supplement\n\nAll current composite sheet bytes are covered by [the user approval inventory](${path.posix.relative(reviewIndexDirectory, bulkApprovalPath)}). Historical partial approvals above are retained; renewed user review is no longer a gate. Rights clearance remains independently required.\n`
 }
 assert(
   approvedReviewIndex.includes('passed user visual review')

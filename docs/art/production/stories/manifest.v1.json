@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1",
+  "shippingEligible": true,
+  "approval": {
+    "path": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json",
+    "sha256": "d40fdf48f1a12cac1f1d1949bea75448c6d4305470229cd0704c27a9e9923963"
+  },
+  "transformation": "sRGB, contain 1200x660 on ivory, WebP quality 90; no crop or redraw",
+  "artifacts": [
+    {
+      "storyId": "night-watch-stargazing",
+      "source": "docs/art/candidates/cinematic-v6/night-watch-stargazing/selected-four-act-v01/scene-01-arrival.png",
+      "sourceSha256": "bbc9e46405bfd5c8579e917421d43364fc1b07c30ba6faa4115189167f6b3ae1",
+      "src": "/stories/night-watch-stargazing/v1/scene-01-arrival.webp",
+      "sha256": "e30ca1bd0ecd3806fa0cfe1a275f0b11288bb6ac18d81df5aa1b6ba992652a66",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "night-watch-stargazing",
+      "source": "docs/art/candidates/cinematic-v6/night-watch-stargazing/selected-four-act-v01/scene-02-ascent.png",
+      "sourceSha256": "619916865c16cdfda1d70118e4e8c28e51cbb802c3e61d228ed18578ecbba9f2",
+      "src": "/stories/night-watch-stargazing/v1/scene-02-ascent.webp",
+      "sha256": "afe31e3787c9e87f23455e90af0d8753513dc000fd564065830ed497cb12c25d",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "night-watch-stargazing",
+      "source": "docs/art/candidates/cinematic-v6/night-watch-stargazing/selected-four-act-v01/scene-03-stargazing.png",
+      "sourceSha256": "debbe5c84121c16839441083cf232e9c278c3cf8739282993648be95ecb8e29e",
+      "src": "/stories/night-watch-stargazing/v1/scene-03-stargazing.webp",
+      "sha256": "5429e7d0ef451f42ab42c2747f8826ed9db4557f0eedcf4de904af3c2aedfd52",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "night-watch-stargazing",
+      "source": "docs/art/candidates/cinematic-v6/night-watch-stargazing/selected-four-act-v01/scene-04-dawn-rest.png",
+      "sourceSha256": "905796d632695afcd858d629ac12d46c7a51c1b6e092fe2f34da3765de93bc4d",
+      "src": "/stories/night-watch-stargazing/v1/scene-04-dawn-rest.webp",
+      "sha256": "8b8b4ae1007854cbfa3da22fbe87a2bb315bbb6c1b60a75a43dbfef9386d58e1",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "mist-harbor-returning-boats",
+      "source": "docs/art/candidates/cinematic-v6/mist-harbor-returning-boats/selected-four-act-v01/scene-01-sunrise-harbor.png",
+      "sourceSha256": "ba5b35befd9a817183657558f9d858e3943ad7c2cd799ec9fc4d1e762acfb5ff",
+      "src": "/stories/mist-harbor-returning-boats/v1/scene-01-sunrise-harbor.webp",
+      "sha256": "72acd56bb78dd9d6d92cc857d989bc63c531039637c7cefec36fd06871e6a62f",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "mist-harbor-returning-boats",
+      "source": "docs/art/candidates/cinematic-v6/mist-harbor-returning-boats/selected-four-act-v01/scene-02-indoor-rain-wait.png",
+      "sourceSha256": "ce7d8f3dcbc49df93003a5253f6123bdda026d4b116179ffa71cfb4353baf53b",
+      "src": "/stories/mist-harbor-returning-boats/v1/scene-02-indoor-rain-wait.webp",
+      "sha256": "781354542b32dbbcabd5d494f62e53cc542d4e25582b56dc0ce8bd7c1723853b",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "mist-harbor-returning-boats",
+      "source": "docs/art/candidates/cinematic-v6/mist-harbor-returning-boats/selected-four-act-v01/scene-03-fisherman-fish-gift.png",
+      "sourceSha256": "35c285b340a31b36319b3ad4f4403221a5e945e8e9d1985785741f841bb22e8e",
+      "src": "/stories/mist-harbor-returning-boats/v1/scene-03-fisherman-fish-gift.webp",
+      "sha256": "637806c3f2d61fc10f12700700a67c968f8c367bcd4116220afa51812a99890f",
+      "width": 1200,
+      "height": 660
+    },
+    {
+      "storyId": "mist-harbor-returning-boats",
+      "source": "docs/art/candidates/cinematic-v6/mist-harbor-returning-boats/selected-four-act-v01/scene-04-dried-fish-sleep.png",
+      "sourceSha256": "184103316840607f367c807c0fbecfc343d370521a2c3e18d10fa1f2428f3fc0",
+      "src": "/stories/mist-harbor-returning-boats/v1/scene-04-dried-fish-sleep.webp",
+      "sha256": "560edcc432dd5476720a0bbd4c4b3194620a280699f9f6a210e6586596d931f1",
+      "width": 1200,
+      "height": 660
+    }
+  ]
+}

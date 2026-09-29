@@ -7,7 +7,7 @@ export const STARTER_ITEMS = [
     kind: 'snack',
     price: 4,
     imageSrc: '/assets/items/item--snack--fish-biscuit--v02.png',
-    effectHint: '也许会想起沿路好吃的东西。',
+    effectHint: '普通旅行也许会想起好吃的，也更容易偶遇《雾港看归船》，不保证遇到。',
     effects: [
       { kind: 'pose-weight', pose: 'eat', multiplier: 1.5 },
       { kind: 'copy-tag-weight', tag: 'food', multiplier: 1.5 },
@@ -74,7 +74,7 @@ export const STARTER_ITEMS = [
     kind: 'toy',
     price: 6,
     imageSrc: '/assets/items/item--toy--small-telescope--v02.png',
-    effectHint: '适合停下来，远远看一会儿。',
+    effectHint: '普通旅行适合眺望，也更容易偶遇《值夜观星》，不保证遇到。',
     effects: [
       { kind: 'pose-weight', pose: 'gaze', multiplier: 1.5 },
     ],

@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import {
   access,
   readFile,
@@ -136,3 +137,20 @@ console.log(
     landmarkManifest.shippingEligible ? 'included' : 'excluded'
   }, ${Object.keys(portraitManifest.portrait.poses).length} portrait poses included`,
 )
+
+const storyManifest = JSON.parse(await readFile(path.join(root, 'docs/art/production/stories/manifest.v1.json'), 'utf8'))
+assert(storyManifest.shippingEligible === true && storyManifest.artifacts.length === 8, 'story release manifest is incomplete')
+for (const artifact of storyManifest.artifacts) {
+  const bytes = await readFile(path.join(distRoot, artifact.src))
+  assert(createHash('sha256').update(bytes).digest('hex') === artifact.sha256, `story output differs: ${artifact.src}`)
+  assert(serviceWorker.includes(artifact.src.slice(1)), `story frame is missing from offline precache: ${artifact.src}`)
+}
+console.log('All 8 approved story frames verified in production and offline precache')
+const homeManifest = JSON.parse(await readFile(path.join(root, 'docs/art/production/home-release/manifest.v1.json'), 'utf8'))
+assert(homeManifest.shippingEligible === true && homeManifest.artifacts.length === 29, 'home release manifest is incomplete')
+for (const artifact of homeManifest.artifacts) {
+  const bytes = await readFile(path.join(distRoot, artifact.src))
+  assert(createHash('sha256').update(bytes).digest('hex') === artifact.sha256, `home output differs: ${artifact.src}`)
+  assert(serviceWorker.includes(artifact.src.slice(1)), `home asset is missing from offline precache: ${artifact.src}`)
+}
+console.log('A/B/F homes, Cat Items and Minho animations verified in production and offline precache')

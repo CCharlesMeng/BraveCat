@@ -1,4 +1,11 @@
 import {
+  createInitialStoryState,
+  isStoryState,
+  isStoryPlan,
+  revealStory,
+  type StoryState,
+} from '../stories'
+import {
   createInitialEconomyState,
   reduceEconomy,
   type EconomyState,
@@ -28,7 +35,7 @@ import {
 } from '../souvenirs'
 import type { PlannedItemOutcome, TravelState } from '../travel'
 
-export const GAME_STATE_VERSION = 4 as const
+export const GAME_STATE_VERSION = 5 as const
 export const MAX_CATS_PER_HOME = 3
 
 export interface CatProfile {
@@ -39,6 +46,7 @@ export interface CatProfile {
 }
 
 export interface GameState {
+  stories: StoryState
   stateVersion: typeof GAME_STATE_VERSION
   clockNow: number
   economy: EconomyState
@@ -94,6 +102,16 @@ const isTravelState = (value: unknown): value is TravelState => {
     && typeof value.plan.itinerary.returnsAt === 'number'
     && Array.isArray(value.plan.itinerary.postcardSlots)
     && isTripContent(value.plan.content)
+    && (value.plan.story === undefined ? value.plan.itinerary.routeKind !== 'story' : (
+      isStoryPlan(value.plan.story)
+      && value.plan.story.departsAt === value.plan.itinerary.departsAt
+      && value.plan.story.returnsAt === value.plan.itinerary.returnsAt
+      && value.plan.itinerary.destinationId === `story:${value.plan.story.storyId}`
+      && value.plan.itinerary.routeKind === 'story'
+      && value.plan.itinerary.postcardSlots.length === 0
+      && value.plan.content.postcards.length === 0
+      && value.plan.content.souvenirIds.length === 0
+    ))
     && typeof value.note === 'string'
     && Array.isArray(value.packedItems)
     && value.packedItems.every(isPackedItem)
@@ -182,6 +200,11 @@ const restoreTravelState = (
   travelerCatId: CatId,
   catalog?: AssetCatalog,
 ): TravelState | undefined => {
+  if (isRecord(value) && value.kind === 'planned' && isRecord(value.plan) && value.plan.story !== undefined) {
+    if (!isTravelState(value) || value.kind !== 'planned' || value.plan.story?.travelerCatId !== travelerCatId) {
+      throw new TypeError('故事旅行存档不完整或旅行者不匹配')
+    }
+  }
   if (
     isTravelState(value)
     && (
@@ -341,9 +364,9 @@ export const isGameState = (value: unknown): value is GameState => {
       isTravelState(travel)
       && (
         travel.kind !== 'planned'
-        || travel.plan.content.postcards.every(
+        || ((!travel.plan.story || travel.plan.story.travelerCatId === catId) && travel.plan.content.postcards.every(
           ({ recipe }) => recipe.travelerCatId === catId,
-        )
+        ))
       )
     ))
     || !Array.isArray(value.cats)
@@ -353,6 +376,7 @@ export const isGameState = (value: unknown): value is GameState => {
     || new Set(value.cats.map(
       ({ portraitId }) => portraitId,
     )).size !== value.cats.length
+    || !isStoryState(value.stories)
     || !isPostcardState(value.postcards)
     || !isSouvenirState(value.souvenirs)
     || !isHomeCustomization(value.homeCustomization)
@@ -369,6 +393,7 @@ export const isGameState = (value: unknown): value is GameState => {
 
 export const createInitialGameState = (now: number): GameState => ({
   stateVersion: GAME_STATE_VERSION,
+  stories: createInitialStoryState(),
   clockNow: now,
   economy: createInitialEconomyState(now),
   travelByCat: {},
@@ -472,6 +497,9 @@ export const restoreGameState = (
   now: number,
   catalog?: AssetCatalog,
 ): GameState => {
+  if (isRecord(stored) && ((typeof stored.stateVersion === 'number' && stored.stateVersion > GAME_STATE_VERSION) || (stored.stories !== undefined && !isStoryState(stored.stories)))) {
+    throw new TypeError('存档内容不完整或版本不受支持')
+  }
   if (
     isRecord(stored)
     && isEconomyState(stored.economy)
@@ -504,6 +532,7 @@ export const restoreGameState = (
       stateVersion: GAME_STATE_VERSION,
       clockNow: inferStoredClockNow(stored, now),
       economy: stored.economy,
+      stories: isStoryState(stored.stories) ? stored.stories : createInitialStoryState(),
       travelByCat,
       cats,
       activeCatId,
@@ -519,6 +548,7 @@ export const restoreGameState = (
   if (isEconomyState(stored)) {
     return {
       stateVersion: GAME_STATE_VERSION,
+      stories: createInitialStoryState(),
       clockNow: now,
       economy: stored,
       travelByCat: {},
@@ -531,6 +561,26 @@ export const restoreGameState = (
   }
 
   return createInitialGameState(now)
+}
+
+/** 导入不能把损坏数据的宽松恢复结果当成成功，避免覆盖当前进度。 */
+export const migrateGameStateForImport = (
+  stored: unknown,
+  now: number,
+  catalog?: AssetCatalog,
+): GameState => {
+  if (!isRecord(stored) || (!isEconomyState(stored.economy) && !isEconomyState(stored))) {
+    throw new TypeError('存档内容不完整或已损坏')
+  }
+  const restored = restoreGameState(stored, now, catalog)
+  if (!isGameState(restored)
+    || (Array.isArray(stored.cats) && stored.cats.length !== restored.cats.length)
+    || (isRecord(stored.travelByCat) && Object.keys(stored.travelByCat).length !== Object.keys(restored.travelByCat).length)
+    || (isRecord(stored.postcards) && Array.isArray(stored.postcards.received) && stored.postcards.received.length !== restored.postcards.received.length)
+    || (stored.souvenirs !== undefined && !isSouvenirState(stored.souvenirs))) {
+    throw new TypeError('存档内容不完整或已损坏')
+  }
+  return restored
 }
 
 const inferStoredClockNow = (
@@ -609,13 +659,15 @@ export const advanceGameEvents = (
   current: GameState,
   input: AdvanceGameEventsInput,
 ): GameState => {
+  let stories = current.stories
   let postcards = current.postcards
   let souvenirs = current.souvenirs
   let economy = input.economy
   let travel = input.travel
 
   if (travel.kind === 'planned') {
-    const { content, itinerary } = travel.plan
+    const { content, itinerary, story } = travel.plan
+    if (story) stories = revealStory(stories, story, input.now)
     const tripId = `${input.catId}-${itinerary.departsAt}`
     postcards = reducePostcards(postcards, {
       type: 'timePassed',
@@ -638,6 +690,7 @@ export const advanceGameEvents = (
         catId: input.catId,
         itemOutcomes: travel.itemOutcomes,
       })
+      stories = { ...stories, lastTripByCat: { ...stories.lastTripByCat, [input.catId]: story ? 'story' : 'ordinary' } }
       travel = { kind: 'home' }
     }
   }
@@ -647,6 +700,7 @@ export const advanceGameEvents = (
   if (
     economy === current.economy
     && travel === currentTravel
+    && stories === current.stories
     && postcards === current.postcards
     && souvenirs === current.souvenirs
     && clockNow === current.clockNow
@@ -656,6 +710,7 @@ export const advanceGameEvents = (
     ...current,
     clockNow,
     economy,
+    stories,
     postcards,
     souvenirs,
     travelByCat: {

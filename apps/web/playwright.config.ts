@@ -11,6 +11,7 @@ const port = Number(process.env.E2E_WEB_PORT ?? 19173)
 
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: /production\.e2e\.ts/,
   testMatch: /.*\.e2e\.ts/,
   timeout: 60_000,
   fullyParallel: true,

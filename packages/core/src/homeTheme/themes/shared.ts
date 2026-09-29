@@ -9,7 +9,7 @@ import type {
   Quad,
 } from '../types'
 
-export const CLASSIC_ANIMATION_ROOT = '/dev-art/home-v4/cat-animations'
+export const CLASSIC_ANIMATION_ROOT = '/home-release/minho'
 
 export const MINHO_ANIMATIONS = {
   sleep: {

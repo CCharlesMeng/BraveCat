@@ -11,9 +11,9 @@ import {
   postcardSlotsFromQuads,
 } from './shared'
 
-const ART = '/dev-art/home-theme/a-clear-sage'
-const EXTERIOR = `${ART}/exterior-noon.png`
-const LIGHTING = `${ART}/lighting.png`
+const ART = '/home-release/a-clear-sage'
+const EXTERIOR = `${ART}/exterior-noon.webp`
+const LIGHTING = `${ART}/lighting.webp`
 
 const POSTCARD_QUADS = [
   [[589, 337], [677, 337], [677, 413], [589, 413]],
@@ -28,9 +28,9 @@ export const A_CLEAR_SAGE_THEME = {
   kind: 'base-plate',
   id: 'a-clear-sage',
   name: '鼠尾草清水小屋',
-  shippingEligible: false,
+  shippingEligible: true,
   canvas: { width: 1200, height: 1600 },
-  basePlate: `${ART}/base-plate--aperture-alpha.png`,
+  basePlate: `${ART}/base-plate--aperture-alpha.webp`,
   exterior: exteriorAllTimes(EXTERIOR),
   lighting: lightingExceptNoon(LIGHTING),
   postcardDisplay: {

@@ -1,3 +1,4 @@
+import { chooseStory, lockStory, type StoryPlan, type StorySelectionContext } from './stories'
 import type { AssetCatalog } from './assets'
 import type {
   Itinerary,
@@ -14,6 +15,8 @@ import type { CatId, PortraitId } from './ids'
 import { resolvePackEffects } from './packEffects'
 
 export interface PlanTripRequest extends ItineraryRequest {
+  storyContext?: StorySelectionContext
+  travelerName?: string
   travelerCatId: CatId
   portraitId: PortraitId
   catalog: AssetCatalog
@@ -21,6 +24,7 @@ export interface PlanTripRequest extends ItineraryRequest {
 }
 
 export interface PlannedTrip {
+  story?: StoryPlan
   itinerary: Itinerary
   content: TripContent
 }
@@ -52,6 +56,16 @@ export const createPlanTrip = (
     ...request,
     packEffects,
   }, random)
+  const story = request.storyContext && itinerary.routeKind !== 'wish'
+    ? chooseStory(request.storyContext, request.packedItemIds, random)
+    : undefined
+  if (story) {
+    return {
+      story: lockStory(story, request.travelerCatId, request.travelerName ?? request.travelerCatId, itinerary.departsAt, itinerary.returnsAt),
+      itinerary: { ...itinerary, destinationId: `story:${story.id}`, routeKind: 'story', isDetour: false, postcardSlots: [] },
+      content: { postcards: [], souvenirIds: [] },
+    }
+  }
   const content = dependencies.selectContent({
     itinerary,
     travelerCatId: request.travelerCatId,

@@ -20,9 +20,11 @@ export {
   findPixelBounds,
   postcardFileName,
   renderPostcardCanvas,
+  resolveStoryComposition,
   shareOrDownloadPostcard,
 } from './composer'
 export type {
+  StoryPostcardComposition,
   PixelBounds,
   PortraitPlacement,
   PostcardRenderDependencies,

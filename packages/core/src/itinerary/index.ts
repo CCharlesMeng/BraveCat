@@ -75,6 +75,7 @@ export interface PostcardSlot {
 }
 
 export type RouteKind =
+  | 'story'
   | 'unwished'
   | 'wish'
   | 'regional-detour'

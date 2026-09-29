@@ -5,7 +5,7 @@
  * 类型与版本常量。本文件刻意不依赖 zod，客户端引用零运行时成本；
  * 服务端校验 schema 见 save-document-schema.ts。
  */
-export const SAVE_SCHEMA_VERSION = 4 as const
+export const SAVE_SCHEMA_VERSION = 5 as const
 
 export interface SaveDocument<TState = unknown> {
   schemaVersion: number

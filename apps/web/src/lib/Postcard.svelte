@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PostcardComposition } from '@bravecat/core/postcards'
+  import type { PostcardComposition, StoryPostcardComposition } from '@bravecat/core/postcards'
   import { renderPostcardCanvas } from '@bravecat/core/postcards'
   import { webPostcardCanvas } from './platform/ports'
 
@@ -8,7 +8,7 @@
     destinationName,
     renderScene,
   }: {
-    composition: PostcardComposition
+    composition: PostcardComposition | StoryPostcardComposition
     destinationName: string
     renderScene: boolean
   } = $props()

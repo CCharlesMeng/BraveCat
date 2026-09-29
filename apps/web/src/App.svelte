@@ -41,6 +41,7 @@
   import { createGameController, resolveAssetUrl } from '@bravecat/core'
   import type { GameState } from '@bravecat/core/game'
   import Postcard from './lib/Postcard.svelte'
+  import StoryAlbum from './lib/StoryAlbum.svelte'
   import {
     createPostcardPng,
     postcardFileName,
@@ -75,7 +76,7 @@
   import { wallPrototypeVariantKeyFor } from './lib/wallLayoutPrototype'
 
   type DrawerName = 'pack' | 'shop' | 'album'
-  type AlbumView = 'postcards' | 'souvenirs'
+  type AlbumView = 'postcards' | 'souvenirs' | 'stories'
   type ShopCategory = ItemDefinition['kind']
   type AlbumDetail = {
     kind: AlbumView
@@ -256,6 +257,7 @@
   }, {
     // 目录含云端专属形象（getter 动态合并），无云时与 STARTER_CATALOG 等价。
     catalog: runtimeCatalog,
+    storiesEnabled: true,
     homeActivityOverride: readHomeActivityOverride,
     homeActivityPool: () => (
       (Object.keys(homeActivities) as HomeActivity[]).filter(
@@ -341,7 +343,8 @@
   )
   const homeTime = $derived(homeTimeFor(new Date(gameNow)))
   const homeScene = $derived(resolveHomeScene(
-    themeLabSelection ?? game.homeCustomization,
+    themeLabSelection ?? (!isDevelopment && !game.homeCustomization.homeThemeId
+      ? customizationForHomeTheme('a-clear-sage')! : game.homeCustomization),
     {
       time: homeTime,
       activity: homeActivity,
@@ -349,7 +352,7 @@
     },
   ))
   const showHomeArtPreview = $derived(
-    isDevelopment && !homeScene.shippingEligible,
+    isDevelopment || homeScene.shippingEligible,
   )
   // 有多于一个可选主题/风格/部件/用品才展示「布置家」；生产环境按放行过滤。
   const themeChoicesAvailable = $derived.by(() => {
@@ -398,7 +401,8 @@
       : 0,
   )
   const unreadPostcardCount = $derived(
-    game.postcards.received.filter(({ isRead }) => !isRead).length,
+    game.postcards.received.filter(({ isRead }) => !isRead).length
+      + game.stories.collections.reduce((sum, entry) => sum + entry.acts.filter((act) => !act.isRead).length, 0),
   )
   const isCatAway = $derived(travelPresence === 'traveling')
   const isPackLocked = $derived(travelPresence === 'traveling')
@@ -1720,6 +1724,7 @@
           </section>
         {:else}
           <div class="album-tabs" aria-label="相册分类">
+            <button type="button" class:active={albumView === 'stories'} aria-pressed={albumView === 'stories'} onclick={() => albumView = 'stories'}>小故事 <span>{game.stories.collections.length}</span></button>
             <button
               type="button"
               class:active={albumView === 'postcards'}
@@ -1740,7 +1745,9 @@
             </button>
           </div>
 
-          {#if albumView === 'postcards'}
+          {#if albumView === 'stories'}
+            <StoryAlbum collections={game.stories.collections} />
+          {:else if albumView === 'postcards'}
             {#if postcardsByPostmark.length > 0}
               <p class="drawer-intro">按邮戳时间排列，最近寄到家的在前。</p>
               <ul class="collection-grid" aria-label="收到的明信片">
@@ -1828,7 +1835,7 @@
           <section class="save-transfer" aria-labelledby="save-transfer-title">
             <div>
               <h3 id="save-transfer-title">带走这个家</h3>
-              <p>导出会包含小猫、行囊、旅行、相册和未读状态。</p>
+              <p>进度仅保存在这台设备的浏览器里。导出包含小猫、行囊、旅行、小故事、相册和未读状态；换设备或清除浏览器数据前，请先导出备份。</p>
             </div>
             <div class="save-transfer-actions">
               <button type="button" onclick={exportGame}>

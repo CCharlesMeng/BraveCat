@@ -1,4 +1,17 @@
+import type { StoryAct } from '../stories'
+import { resolveAssetUrl } from '../ports/assetResolver'
 import type { PostcardComposition } from './index'
+
+export interface StoryPostcardComposition {
+  kind: 'story-frame'
+  src: string
+  note: string
+  postmarkDate: string
+}
+export const resolveStoryComposition = (act: StoryAct): StoryPostcardComposition => ({
+  kind: 'story-frame', src: resolveAssetUrl(act.recipe.src), note: act.recipe.copy,
+  postmarkDate: new Date(act.revealAt).toISOString().slice(0, 16).replace('T', ' '),
+})
 
 export const POSTCARD_WIDTH = 1_200
 export const POSTCARD_HEIGHT = 900
@@ -276,12 +289,12 @@ const wrapText = (
 
 const drawMessage = (
   context: CanvasRenderingContext2D,
-  composition: PostcardComposition,
+  composition: PostcardComposition | StoryPostcardComposition,
   destinationName: string,
 ) => {
   const panelWidth = 560
   const panelHeight = 190
-  const panelX = composition.portrait.anchorX < 0.5
+  const panelX = 'portrait' in composition && composition.portrait.anchorX < 0.5
     ? POSTCARD_WIDTH - panelWidth - 38
     : 38
   const panelY = POSTCARD_HEIGHT - panelHeight - 34
@@ -336,10 +349,23 @@ const drawMessage = (
 
 export const renderPostcardCanvas = async (
   canvas: HTMLCanvasElement,
-  composition: PostcardComposition,
+  composition: PostcardComposition | StoryPostcardComposition,
   destinationName: string,
   dependencies: PostcardRenderDependencies,
 ) => {
+  if ('kind' in composition && composition.kind === 'story-frame') {
+    const frame = await dependencies.loadImage(composition.src)
+    canvas.width = POSTCARD_WIDTH
+    canvas.height = POSTCARD_HEIGHT
+    const context = canvas.getContext('2d')
+    if (!context) throw new Error('当前设备无法展开故事明信片')
+    context.fillStyle = '#f8efd8'
+    context.fillRect(0, 0, POSTCARD_WIDTH, POSTCARD_HEIGHT)
+    context.drawImage(frame, 0, 0, POSTCARD_WIDTH, 660)
+    drawMessage(context, composition, destinationName)
+    return
+  }
+  if (!('portrait' in composition)) return
   const [scene, portrait] = await Promise.all([
     dependencies.loadImage(composition.scene.src),
     dependencies.loadImage(composition.portrait.src),
@@ -387,7 +413,7 @@ const canvasToBlob = (
 })
 
 export const createPostcardPng = async (
-  composition: PostcardComposition,
+  composition: PostcardComposition | StoryPostcardComposition,
   destinationName: string,
   dependencies: PostcardRenderDependencies,
 ) => {

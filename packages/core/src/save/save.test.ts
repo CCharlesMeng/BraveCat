@@ -74,7 +74,7 @@ describe('Save', () => {
     await store.save(current)
 
     await expect(store.import({
-      schemaVersion: 4,
+      schemaVersion: 5,
       exportedAt: 2_000,
       state: { treats: '很多' },
     })).rejects.toThrow('存档内容不完整或已损坏')
@@ -90,6 +90,7 @@ describe('Save', () => {
         && typeof (value as { treats?: unknown }).treats === 'number'
       ),
       migrations: {
+        4: (document) => ({ ...document, schemaVersion: 5 }),
         0: (document) => ({
           ...document,
           schemaVersion: 1,
@@ -120,7 +121,7 @@ describe('Save', () => {
     await expect(store.load()).resolves.toEqual({ treats: 12 })
   })
 
-  it('把 v3 根存档迁移为带家外观选择的 v4', async () => {
+  it('把 v3 根存档迁移为带家外观选择的当前版本', async () => {
     const {
       homeCustomization: _dropped,
       ...v3State
@@ -130,6 +131,7 @@ describe('Save', () => {
       {
         validateState: isGameState,
         migrations: {
+        4: (document) => ({ ...document, schemaVersion: 5 }),
           3: (document) => ({
             ...document,
             schemaVersion: 4,
@@ -145,7 +147,7 @@ describe('Save', () => {
       state: { ...v3State, stateVersion: 3 },
     })
 
-    expect(imported.stateVersion).toBe(4)
+    expect(imported.stateVersion).toBe(5)
     expect(imported.homeCustomization).toEqual(defaultHomeCustomization())
     await expect(store.load()).resolves.toEqual(imported)
   })
@@ -157,6 +159,7 @@ describe('Save', () => {
       {
         validateState: isGameState,
         migrations: {
+        4: (document) => ({ ...document, schemaVersion: 5 }),
           1: (document) => ({
             ...document,
             schemaVersion: 2,
@@ -173,7 +176,7 @@ describe('Save', () => {
       state: { ...legacyState, stateVersion: 1 },
     })
     expect(imported.souvenirs).toEqual({ received: [] })
-    expect(imported.stateVersion).toBe(4)
+    expect(imported.stateVersion).toBe(5)
     await expect(store.load()).resolves.toEqual(imported)
   })
 
@@ -256,7 +259,7 @@ describe('Save', () => {
     const imported = await target.import(JSON.parse(json))
 
     expect(JSON.parse(json)).toMatchObject({
-      schemaVersion: 4,
+      schemaVersion: 5,
       exportedAt: 5_000,
     })
     expect(imported).toEqual(state)

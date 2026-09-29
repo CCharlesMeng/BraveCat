@@ -49,7 +49,15 @@
     "assets:composite-qa:minho-watercolor": "npm run assets:check-minho-watercolor && node scripts/build-composite-qa.mjs --archive docs/art/archive/asset-archive.v2.json --portrait-candidate-manifest docs/art/candidates/portraits/minho-watercolor-v2/manifest.candidate.json --output-root docs/art/reviews/portraits/minho-watercolor-v2/composites --output-manifest docs/art/reviews/portraits/minho-watercolor-v2/composites/manifest.json --approval docs/art/reviews/portraits/minho-watercolor-v2/composites/approval.json",
     "assets:composite-check:minho-watercolor": "npm run assets:composite-qa:minho-watercolor -- --check",
     "story:integrate-cinematic": "node scripts/integrate-cinematic-story.mjs",
-    "story:check-cinematic": "node scripts/integrate-cinematic-story.mjs --check"
+    "story:check-cinematic": "node scripts/integrate-cinematic-story.mjs --check",
+    "precheck": "npm run build --workspace @bravecat/contracts",
+    "pretest": "npm run build --workspace @bravecat/contracts",
+    "prebuild": "npm run build --workspace @bravecat/contracts && node scripts/promote-stories.mjs --check && node scripts/promote-home-release.mjs --check",
+    "assets:promote-stories": "node scripts/promote-stories.mjs",
+    "assets:check-stories": "node scripts/promote-stories.mjs --check",
+    "assets:promote-home-release": "node scripts/promote-home-release.mjs",
+    "assets:check-home-release": "node scripts/promote-home-release.mjs --check",
+    "release:package": "npm run build && node scripts/package-web-release.mjs"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1109.0",
