@@ -73,5 +73,11 @@
     "worktree": "/Users/moon/Documents/Code/BraveCat-home-screen-v1",
     "snapshot": "72e64f5dbe649ba9c1aefeccb3e1e3e0abebf63f",
     "archiveTag": "archive/2026-09-29/working-tree/home-screen-v1"
+  },
+  {
+    "ref": "refs/heads/feat/v3-landmark-review",
+    "sha": "a7d75285dd71f60f4d582abf161d912e4834bdf6",
+    "archiveTag": "archive/2026-09-29/final/feat/v3-landmark-review",
+    "phase": "final-before-retirement"
   }
 ]
