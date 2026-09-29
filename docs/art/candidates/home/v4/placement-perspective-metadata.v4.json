@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 4,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "scope": "home-state physical-plausibility correction only",
+  "coordinateConvention": {
+    "units": "pixels",
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "origin": "top-left",
+    "polygon": "ordered [x, y] vertices in room-canvas pixels"
+  },
+  "approvedV3Reuse": {
+    "room": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "roomModified": false,
+    "navigation": "pixel-reused from each corresponding v3 mobile review",
+    "navigationModified": false,
+    "minho": "public/portraits/minho/portrait--minho--sleep--v01.png",
+    "minhoModified": false
+  },
+  "generationReferences": [
+    "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-postcard.png",
+    "docs/art/style-ref-poses.png"
+  ],
+  "sourceAssets": {
+    "awayNoteMemoStand": {
+      "file": "state-art/away-note-with-wood-memo-stand--blank--master-512x640--non-shipping-v04.png",
+      "canvas": {
+        "width": 512,
+        "height": 640
+      },
+      "pixelMode": "RGBA",
+      "alpha": "straight",
+      "textFree": true,
+      "artMethod": "generated watercolor prop, white-matte extraction, hand-tuned alpha and restrained contact shadow",
+      "physicalRead": "card lower edge is occluded by and inserted into the wooden stand slot",
+      "memoMasterMapping": {
+        "rawCrop": [
+          120,
+          260,
+          900,
+          1140
+        ],
+        "rawToMasterScale": 0.6025641025641025,
+        "masterPlacement": {
+          "x": 21,
+          "y": 32
+        },
+        "blankCardApproximatePolygon": [
+          [
+            90,
+            44
+          ],
+          [
+            434,
+            48
+          ],
+          [
+            422,
+            463
+          ],
+          [
+            81,
+            451
+          ]
+        ]
+      }
+    },
+    "driedFishSillTray": {
+      "master": "state-art/dried-fish-sill-tray--master-512--non-shipping-v04.png",
+      "runtimeDerivative": "state-art/dried-fish-sill-tray--runtime-128--non-shipping-v04.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "runtimeCanvas": {
+        "width": 128,
+        "height": 128
+      },
+      "pixelMode": "RGBA",
+      "alpha": "straight",
+      "textFree": true,
+      "artMethod": "generated watercolor prop, white-matte extraction, compact perspective fit and restrained contact shadow"
+    }
+  },
+  "awayPresentation": {
+    "supportSurface": {
+      "id": "right-cabinet-tabletop",
+      "polygon": [
+        [
+          958,
+          944
+        ],
+        [
+          1200,
+          999
+        ],
+        [
+          1200,
+          1036
+        ],
+        [
+          958,
+          980
+        ]
+      ]
+    },
+    "memoStandBaseContactPolygon": [
+      [
+        972,
+        956
+      ],
+      [
+        1068,
+        978
+      ],
+      [
+        1066,
+        991
+      ],
+      [
+        971,
+        969
+      ]
+    ],
+    "baseSupportValidation": {
+      "allContactCornersInside": true,
+      "sourceCornerMarginsPx": [
+        8.599,
+        8.776,
+        13.632,
+        13.0
+      ],
+      "sourceMinimumMarginPx": 8.599,
+      "tabletopBackEdgeSlope": 0.227273,
+      "memoBaseLongEdgeSlope": 0.229167,
+      "perspectiveSlopeDelta": 0.001894,
+      "viewports": {
+        "390x844": {
+          "allContactCornersInside": true,
+          "cornerMarginsPx": [
+            3.311,
+            3.379,
+            5.248,
+            5.005
+          ],
+          "minimumMarginPx": 3.311
+        },
+        "430x932": {
+          "allContactCornersInside": true,
+          "cornerMarginsPx": [
+            3.784,
+            3.862,
+            5.998,
+            5.72
+          ],
+          "minimumMarginPx": 3.784
+        }
+      }
+    },
+    "notePlanePolygon": [
+      [
+        977,
+        842
+      ],
+      [
+        1057,
+        858
+      ],
+      [
+        1055,
+        951
+      ],
+      [
+        977,
+        935
+      ]
+    ],
+    "occlusion": "wooden slot/front lip renders over the lower paper edge",
+    "contactShadow": "integrated, short, low-opacity, cast back-right on tabletop plane",
+    "reviewTransform": {
+      "masterCrop": [
+        18,
+        24,
+        500,
+        612
+      ],
+      "roomResize": [
+        122,
+        149
+      ],
+      "affineShearY": 20,
+      "roomPlacement": {
+        "x": 954,
+        "bottomY": 998
+      }
+    },
+    "reviewOnlyText": {
+      "copy": [
+        "出去走走",
+        "晚一点",
+        "回来。"
+      ],
+      "bakedIntoSource": false,
+      "planeAgreement": "text is drawn on the blank master before the same resize and affine shear as the card"
+    }
+  },
+  "collectiblePresentation": {
+    "supportSurface": {
+      "id": "real-window-sill-top-plane",
+      "polygon": [
+        [
+          0,
+          950
+        ],
+        [
+          790,
+          968
+        ],
+        [
+          790,
+          1002
+        ],
+        [
+          0,
+          1050
+        ]
+      ],
+      "frontFaceExcluded": true
+    },
+    "trayFootprintPolygon": [
+      [
+        336,
+        974
+      ],
+      [
+        475,
+        977
+      ],
+      [
+        470,
+        1003
+      ],
+      [
+        331,
+        1001
+      ]
+    ],
+    "contactShadow": "integrated and restrained; remains inside the sill top",
+    "reviewTransform": {
+      "masterCrop": [
+        12,
+        145,
+        500,
+        382
+      ],
+      "roomResize": [
+        162,
+        50
+      ],
+      "affineShearY": 2,
+      "roomPlacement": {
+        "x": 323,
+        "y": 966
+      }
+    },
+    "safetyMargins": {
+      "390x844": {
+        "scale": 0.385,
+        "allFootprintCornersInside": true,
+        "cornerMarginsPx": [
+          6.291,
+          6.227,
+          7.087,
+          11.102
+        ],
+        "minimumMarginPx": 6.227
+      },
+      "430x932": {
+        "scale": 0.44,
+        "allFootprintCornersInside": true,
+        "cornerMarginsPx": [
+          7.19,
+          7.116,
+          8.1,
+          12.688
+        ],
+        "minimumMarginPx": 7.116
+      }
+    }
+  },
+  "mobileReview": {
+    "layoutEvidence": {
+      "topbarHeight": 82,
+      "homeNavigationHeight": 112,
+      "statusLineHeight": 34,
+      "roomSizing": "centered cover crop using the unchanged 1200x1600 v3 room"
+    },
+    "outputs": {
+      "390x844": {
+        "away": "reviews/mobile-review--390x844--away-grounded--non-shipping-v04.png",
+        "collectibleReady": "reviews/mobile-review--390x844--collectible-sill-safe--non-shipping-v04.png"
+      },
+      "430x932": {
+        "away": "reviews/mobile-review--430x932--away-grounded--non-shipping-v04.png",
+        "collectibleReady": "reviews/mobile-review--430x932--collectible-sill-safe--non-shipping-v04.png"
+      }
+    }
+  }
+}

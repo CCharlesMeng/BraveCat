@@ -1,0 +1,135 @@
+{
+  "blueWhiteIdentity" : {
+    "allPass" : true,
+    "poseChecks" : [
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "sit",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      },
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "sleep",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      },
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "walk",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      },
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "eat",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      },
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "play",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      },
+      {
+        "blueCap" : "pass",
+        "blueSaddle" : "pass",
+        "evidence" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+        "leftShoulderSpot" : "pass; retained exactly with pose-appropriate foreshortening",
+        "pass" : true,
+        "pose" : "gaze",
+        "whiteTailTip" : "pass; retained exactly with pose-appropriate occlusion"
+      }
+    ],
+    "requiredMap" : "blue cap; blue saddle; one left-shoulder spot; blue tail with white tip"
+  },
+  "checks" : {
+    "allV1CatMastersByteImmutable" : true,
+    "bottomCenterAnchorRecorded" : true,
+    "eatBowlGroundedAndCatContact" : true,
+    "fixedMinhoRelativeScaleAcrossAllPosesAndWidths" : true,
+    "furnitureNavigationAndSafeAreaClear" : true,
+    "noArbitraryPoseScaling" : true,
+    "noDuplicateRoomBowls" : true,
+    "noExtraLimbs" : true,
+    "noFloating" : true,
+    "noFurniturePenetration" : true,
+    "playYarnGroundedAndPawContact" : true,
+    "rugSupport" : true,
+    "viewportCropAndEdgeCompatibility" : true,
+    "visibleAndOpaqueBoundsRecorded" : true
+  },
+  "coverage" : {
+    "failed" : 0,
+    "passed" : 72,
+    "required" : 72,
+    "reviewed" : 72
+  },
+  "failures" : [
+
+  ],
+  "ok" : true,
+  "retentionDecision" : {
+    "reason" : "No pose materially fails identity, anatomy, contact, scale, or home-fit review.",
+    "regeneratedPoses" : [
+
+    ],
+    "retainedV1Poses" : [
+      "golden-shaded/sit",
+      "golden-shaded/sleep",
+      "golden-shaded/walk",
+      "golden-shaded/eat",
+      "golden-shaded/play",
+      "golden-shaded/gaze",
+      "blue-golden-shaded/sit",
+      "blue-golden-shaded/sleep",
+      "blue-golden-shaded/walk",
+      "blue-golden-shaded/eat",
+      "blue-golden-shaded/play",
+      "blue-golden-shaded/gaze",
+      "solid-blue/sit",
+      "solid-blue/sleep",
+      "solid-blue/walk",
+      "solid-blue/eat",
+      "solid-blue/play",
+      "solid-blue/gaze",
+      "blue-white-bicolor/sit",
+      "blue-white-bicolor/sleep",
+      "blue-white-bicolor/walk",
+      "blue-white-bicolor/eat",
+      "blue-white-bicolor/play",
+      "blue-white-bicolor/gaze"
+    ]
+  },
+  "schemaVersion" : 2,
+  "solidBlueReadabilityOnSage" : {
+    "evidence" : "qa/visibility-metrics.v2.json and all three by-width contact matrices",
+    "minimumMeanContrastRatio" : 1.488,
+    "note" : "Uniform slate silhouette, copper eyes, and cobby mass remain legible against the sage rug at all required widths.",
+    "posesReviewed" : 6,
+    "result" : "pass"
+  },
+  "status" : "NON-SHIPPING / ACCEPTANCE-EVIDENCE-ONLY",
+  "style" : {
+    "comparison" : "reviews/style/style-comparison--minho-and-four-british-shorthairs--390x844-1to1--non-shipping-v02.png",
+    "display" : "390x844 at 1:1 normal mobile size",
+    "note" : "Naturalistic fur is denser than production Minho and the room wash, but restrained color, soft alpha, and quiet contrast prevent a material hard-cutout read.",
+    "result" : "pass-with-retained-detail-warning"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 4,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "visualInspection": {
+    "performed": true,
+    "memo": "Blank note is visibly inserted into the wooden slot; the base and restrained shadow land on the right cabinet top. Review-only copy follows the card plane.",
+    "fish": "Compact tray, fish, and restrained contact shadow remain on the sill top with no frame penetration, front-face overhang, floating gap, or impossible gravity.",
+    "sourceArt": "Both corrected source PNGs are polished generated watercolor art, not primitives."
+  },
+  "sourceChecks": [
+    {
+      "path": "state-art/away-note-with-wood-memo-stand--blank--master-512x640--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 512,
+      "height": 640,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true
+    },
+    {
+      "path": "state-art/dried-fish-sill-tray--master-512--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true
+    },
+    {
+      "path": "state-art/dried-fish-sill-tray--runtime-128--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 128,
+      "height": 128,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true
+    }
+  ],
+  "reviewChecks": [
+    {
+      "path": "reviews/mobile-review--390x844--away-grounded--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--collectible-sill-safe--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--away-grounded--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--collectible-sill-safe--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/before-after--home-state-physical-plausibility--1200x1600--non-shipping-v04.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  ],
+  "fishToSillSafetyMargins": {
+    "390x844": {
+      "scale": 0.385,
+      "allFootprintCornersInside": true,
+      "cornerMarginsPx": [
+        6.291,
+        6.227,
+        7.087,
+        11.102
+      ],
+      "minimumMarginPx": 6.227
+    },
+    "430x932": {
+      "scale": 0.44,
+      "allFootprintCornersInside": true,
+      "cornerMarginsPx": [
+        7.19,
+        7.116,
+        8.1,
+        12.688
+      ],
+      "minimumMarginPx": 7.116
+    }
+  },
+  "memoToTabletopSupport": {
+    "allContactCornersInside": true,
+    "sourceCornerMarginsPx": [
+      8.599,
+      8.776,
+      13.632,
+      13.0
+    ],
+    "sourceMinimumMarginPx": 8.599,
+    "tabletopBackEdgeSlope": 0.227273,
+    "memoBaseLongEdgeSlope": 0.229167,
+    "perspectiveSlopeDelta": 0.001894,
+    "viewports": {
+      "390x844": {
+        "allContactCornersInside": true,
+        "cornerMarginsPx": [
+          3.311,
+          3.379,
+          5.248,
+          5.005
+        ],
+        "minimumMarginPx": 3.311
+      },
+      "430x932": {
+        "allContactCornersInside": true,
+        "cornerMarginsPx": [
+          3.784,
+          3.862,
+          5.998,
+          5.72
+        ],
+        "minimumMarginPx": 3.784
+      }
+    }
+  },
+  "pixelIsolationChecks": {
+    "390x844": {
+      "awayNavigationAndStatusMaxPixelDeltaVsV3": 0,
+      "collectibleNavigationAndStatusMaxPixelDeltaVsV3": 0,
+      "oldWallNoteZoneMaxPixelDeltaVsAtHome": 0,
+      "minhoRegionMaxPixelDeltaVsV3": 0
+    },
+    "430x932": {
+      "awayNavigationAndStatusMaxPixelDeltaVsV3": 0,
+      "collectibleNavigationAndStatusMaxPixelDeltaVsV3": 0,
+      "oldWallNoteZoneMaxPixelDeltaVsAtHome": 0,
+      "minhoRegionMaxPixelDeltaVsV3": 0
+    }
+  },
+  "textPolicy": {
+    "sourceAssetsTextFree": true,
+    "representativeAwayCopyReviewOnly": true,
+    "reviewCopyFollowsCardPlane": true
+  },
+  "reuseChecks": {
+    "v3RoomSource": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "v3RoomSha256": "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+    "v3NavigationReusedPixelExactlyInReviews": true,
+    "productionMinhoSource": "public/portraits/minho/portrait--minho--sleep--v01.png",
+    "productionMinhoSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+    "productionMinhoModified": false,
+    "minhoReviewRegionPixelExact": true
+  }
+}

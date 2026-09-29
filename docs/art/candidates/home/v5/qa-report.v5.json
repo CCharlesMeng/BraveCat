@@ -1,0 +1,586 @@
+{
+  "schemaVersion": 5,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "auditFinding": {
+    "id": "AA-002",
+    "source": "docs/art/candidates/asset-audit/v1/asset-audit.v1.json",
+    "closedByThisPack": true
+  },
+  "visualInspection": {
+    "performedForEveryComposite": true,
+    "away": "memo is large, fully visible, physically supported on the sill, and readable at 320/390/430",
+    "sleep": "compressed body and paws meet rug directly without a generated shadow",
+    "play": "body, paws, tail, and baked yarn clear cat tree, room bowls, cabinet, and nav reserve",
+    "eat": "same-room floor occlusion removes the room bowl pair beneath the pose; the baked bowl becomes the only visible feeding vessel",
+    "hardCutoutEdgesObserved": false,
+    "extraShadowsObserved": false,
+    "floatingObserved": false,
+    "rugPenetrationObserved": false,
+    "propPenetrationObserved": false,
+    "arbitraryScaleJumpObserved": false
+  },
+  "posePlacement": {
+    "sleep": {
+      "source": "public/portraits/minho/portrait--minho--sleep--v01.png",
+      "sourceSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "sourceModified": false,
+      "sourceAlphaBounds": [
+        64,
+        391,
+        960,
+        960
+      ],
+      "sourceOpaqueBounds": [
+        66,
+        394,
+        955,
+        958
+      ],
+      "sourcePartialAlphaPixelCount": 11005,
+      "canvasRect": {
+        "x": 480,
+        "y": 1001,
+        "width": 420,
+        "height": 420
+      },
+      "placedAlphaBounds": [
+        506.25,
+        1161.371,
+        873.75,
+        1394.75
+      ],
+      "placedOpaqueBounds": [
+        507.07,
+        1162.602,
+        871.699,
+        1393.93
+      ],
+      "bottomCenterAnchor": [
+        689.385,
+        1393.93
+      ],
+      "groundingBottomDeltaPx": -0.07,
+      "contactPoints": [
+        {
+          "point": [
+            551,
+            1385
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            690,
+            1394
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            840,
+            1390
+          ],
+          "support": "rug",
+          "supported": true
+        }
+      ],
+      "grounding": "compressed chest, forepaws, and curled tail rest directly on woven rug",
+      "viewportFit": {
+        "320x700": {
+          "leftPx": 130.645,
+          "rightPx": 74.282,
+          "topRoomPx": 363.654,
+          "bottomRoomPx": 64.269,
+          "fullyVisible": true
+        },
+        "390x844": {
+          "leftPx": 158.906,
+          "rightPx": 89.606,
+          "topRoomPx": 447.128,
+          "bottomRoomPx": 79.021,
+          "fullyVisible": true
+        },
+        "430x932": {
+          "leftPx": 173.75,
+          "rightPx": 94.55,
+          "topRoomPx": 511.003,
+          "bottomRoomPx": 90.31,
+          "fullyVisible": true
+        }
+      },
+      "contactShadowCreated": false
+    },
+    "play": {
+      "source": "public/portraits/minho/portrait--minho--play--v01.png",
+      "sourceSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+      "sourceModified": false,
+      "sourceAlphaBounds": [
+        64,
+        218,
+        960,
+        960
+      ],
+      "sourceOpaqueBounds": [
+        66,
+        220,
+        958,
+        959
+      ],
+      "sourcePartialAlphaPixelCount": 15378,
+      "canvasRect": {
+        "x": 485,
+        "y": 1014,
+        "width": 450,
+        "height": 450
+      },
+      "placedAlphaBounds": [
+        513.125,
+        1109.801,
+        906.875,
+        1435.875
+      ],
+      "placedOpaqueBounds": [
+        514.004,
+        1110.68,
+        905.996,
+        1435.436
+      ],
+      "bottomCenterAnchor": [
+        710.0,
+        1435.436
+      ],
+      "groundingBottomDeltaPx": 0.436,
+      "contactPoints": [
+        {
+          "point": [
+            564,
+            1435
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            640,
+            1420
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            826,
+            1430
+          ],
+          "support": "rug",
+          "supported": true
+        }
+      ],
+      "grounding": "yarn, reaching forepaws, and rear load-bearing paw meet woven rug",
+      "viewportFit": {
+        "320x700": {
+          "leftPx": 132.797,
+          "rightPx": 63.91,
+          "topRoomPx": 347.506,
+          "bottomRoomPx": 51.392,
+          "fullyVisible": true
+        },
+        "390x844": {
+          "leftPx": 161.553,
+          "rightPx": 76.853,
+          "topRoomPx": 427.273,
+          "bottomRoomPx": 63.188,
+          "fullyVisible": true
+        },
+        "430x932": {
+          "leftPx": 176.775,
+          "rightPx": 79.975,
+          "topRoomPx": 488.312,
+          "bottomRoomPx": 72.215,
+          "fullyVisible": true
+        }
+      },
+      "contactShadowCreated": false
+    },
+    "eat": {
+      "source": "public/portraits/minho/portrait--minho--eat--v01.png",
+      "sourceSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+      "sourceModified": false,
+      "sourceAlphaBounds": [
+        64,
+        389,
+        960,
+        960
+      ],
+      "sourceOpaqueBounds": [
+        65,
+        390,
+        958,
+        959
+      ],
+      "sourcePartialAlphaPixelCount": 15182,
+      "canvasRect": {
+        "x": 236,
+        "y": 954,
+        "width": 450,
+        "height": 450
+      },
+      "placedAlphaBounds": [
+        264.125,
+        1124.947,
+        657.875,
+        1375.875
+      ],
+      "placedOpaqueBounds": [
+        264.564,
+        1125.387,
+        656.996,
+        1375.436
+      ],
+      "bottomCenterAnchor": [
+        460.78,
+        1375.436
+      ],
+      "groundingBottomDeltaPx": 3.436,
+      "contactPoints": [
+        {
+          "point": [
+            345,
+            1372
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            432,
+            1367
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            547,
+            1368
+          ],
+          "support": "rug",
+          "supported": true
+        },
+        {
+          "point": [
+            602,
+            1365
+          ],
+          "support": "rug",
+          "supported": true
+        }
+      ],
+      "grounding": "baked bowl base and load-bearing paws meet floor/rug at existing bowl area",
+      "viewportFit": {
+        "320x700": {
+          "leftPx": 54.829,
+          "rightPx": 141.878,
+          "topRoomPx": 352.249,
+          "bottomRoomPx": 70.179,
+          "fullyVisible": true
+        },
+        "390x844": {
+          "leftPx": 65.688,
+          "rightPx": 172.718,
+          "topRoomPx": 433.105,
+          "bottomRoomPx": 86.288,
+          "fullyVisible": true
+        },
+        "430x932": {
+          "leftPx": 67.215,
+          "rightPx": 189.535,
+          "topRoomPx": 494.977,
+          "bottomRoomPx": 98.615,
+          "fullyVisible": true
+        }
+      },
+      "contactShadowCreated": false
+    },
+    "relativeScale": {
+      "minimumCanvasPx": 420,
+      "maximumCanvasPx": 450,
+      "maxToMinRatio": 1.071429,
+      "arbitraryScaleJump": false
+    }
+  },
+  "playObstacleIntersectionAreaPx": {
+    "catTree": 0.0,
+    "roomBowls": 0.0,
+    "cabinet": 0.0,
+    "navigationReserve": 0.0
+  },
+  "playObstacleClearancePx": {
+    "catTree": 208.125,
+    "roomBowls": 23.125,
+    "cabinet": 51.125,
+    "navigationReserve": 34.125
+  },
+  "eatPoseAlphaCoverageOfRoomBowlZonesPercent": {
+    "waterBowl": 41.536,
+    "foodBowl": 97.929
+  },
+  "eatDuplicationResolution": "deterministic same-room floor occlusion removes the existing pair beneath the approved baked bowl",
+  "memoToSillSafetyMargins": {
+    "320x700": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        4.589,
+        4.478,
+        4.411,
+        4.479
+      ],
+      "minimumMarginPx": 4.411
+    },
+    "390x844": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        5.642,
+        5.506,
+        5.424,
+        5.508
+      ],
+      "minimumMarginPx": 5.424
+    },
+    "430x932": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        6.448,
+        6.292,
+        6.199,
+        6.294
+      ],
+      "minimumMarginPx": 6.199
+    }
+  },
+  "memoResponsiveCrop": {
+    "320x700": {
+      "fullyVisible": true,
+      "leftPx": 96.436,
+      "rightPx": 141.213,
+      "topRoomPx": 217.309,
+      "bottomRoomPx": 186.623,
+      "liveZoneWidthPx": 41.959,
+      "liveZoneHeightPx": 46.656
+    },
+    "390x844": {
+      "fullyVisible": true,
+      "leftPx": 116.845,
+      "rightPx": 171.9,
+      "topRoomPx": 267.19,
+      "bottomRoomPx": 229.46,
+      "liveZoneWidthPx": 51.59,
+      "liveZoneHeightPx": 57.365
+    },
+    "430x932": {
+      "fullyVisible": true,
+      "leftPx": 125.68,
+      "rightPx": 188.6,
+      "topRoomPx": 305.36,
+      "bottomRoomPx": 262.24,
+      "liveZoneWidthPx": 58.96,
+      "liveZoneHeightPx": 65.56
+    }
+  },
+  "fishToSillSafetyMargins": {
+    "320x700": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        5.116,
+        5.064,
+        5.764,
+        9.029
+      ],
+      "minimumMarginPx": 5.064
+    },
+    "390x844": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        6.291,
+        6.227,
+        7.087,
+        11.102
+      ],
+      "minimumMarginPx": 6.227
+    },
+    "430x932": {
+      "allCornersInside": true,
+      "cornerMarginsPx": [
+        7.19,
+        7.116,
+        8.1,
+        12.688
+      ],
+      "minimumMarginPx": 7.116
+    }
+  },
+  "optionalContactShadow": {
+    "created": false,
+    "reason": "direct compositing visibly grounds every pose and both sill props"
+  },
+  "reviewChecks": [
+    {
+      "path": "reviews/mobile-review--320x700--sleep--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--320x700--play--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--320x700--eat--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--320x700--away--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--320x700--collectible-ready--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--sleep--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--play--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--eat--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--away--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--collectible-ready--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--sleep--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--play--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--eat--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--away--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--collectible-ready--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/physical-review--home-activities--1200x1600--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/physical-review--away-and-treat-responsive--1200x1600--non-shipping-v05.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  ],
+  "sourceReuse": {
+    "room": {
+      "path": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+      "sha256": "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+      "modified": false
+    },
+    "memo": {
+      "path": "docs/art/candidates/home/v4/state-art/away-note-with-wood-memo-stand--blank--master-512x640--non-shipping-v04.png",
+      "sha256": "6ac92a6fb57b1fe0541d6486a073d5b54738572a2db6a1c84105910c17f50cca",
+      "modified": false
+    },
+    "fish": {
+      "path": "docs/art/candidates/home/v4/state-art/dried-fish-sill-tray--master-512--non-shipping-v04.png",
+      "sha256": "f2bac96995b164d7fb12ac798001eb0f82ce613b198e0a7e7bf17ae69e64a9ce",
+      "modified": false
+    },
+    "navigation": "approved v3 runtime icons reused unchanged"
+  }
+}

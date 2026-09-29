@@ -1,0 +1,1188 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "collectionId": "pack-physical-insertion-v2",
+  "canvas": {
+    "width": 1536,
+    "height": 1536
+  },
+  "coordinateSystem": "pixels from top-left",
+  "sourceLayers": {
+    "base": "docs/art/candidates/pack/v1/masters/pack-opened-base--master-1536--non-shipping-v01.png",
+    "foregroundRim": "docs/art/candidates/pack/v1/masters/pack-opened-foreground-rim--master-1536--non-shipping-v01.png",
+    "v1Metadata": "docs/art/candidates/pack/v1/composition-metadata.v1.json",
+    "modified": false
+  },
+  "layerOrder": [
+    {
+      "z": 0,
+      "role": "unchanged v1 opened-bag base"
+    },
+    {
+      "z": 10,
+      "role": "referenced catalog item masters transformed by this metadata"
+    },
+    {
+      "z": 20,
+      "role": "unchanged v1 foreground rim/pocket occlusion"
+    },
+    {
+      "z": 30,
+      "role": "review/application UI only"
+    }
+  ],
+  "sourceItemPolicy": {
+    "root": "docs/art/candidates/postcard-gifts/v1/masters/items",
+    "itemFilesCopiedIntoV2": false,
+    "itemFilesRedrawn": false,
+    "itemDerivativesExported": false,
+    "placementCompositesAreFlattenedTextFreeStudies": true
+  },
+  "slots": {
+    "left-inner-sleeve": {
+      "bounds": {
+        "x": 354,
+        "y": 642,
+        "width": 312,
+        "height": 356
+      },
+      "polygon": [
+        [
+          354,
+          690
+        ],
+        [
+          430,
+          642
+        ],
+        [
+          618,
+          656
+        ],
+        [
+          666,
+          754
+        ],
+        [
+          654,
+          998
+        ],
+        [
+          372,
+          998
+        ]
+      ]
+    },
+    "center-deep-pocket": {
+      "bounds": {
+        "x": 584,
+        "y": 628,
+        "width": 384,
+        "height": 412
+      },
+      "polygon": [
+        [
+          584,
+          700
+        ],
+        [
+          650,
+          642
+        ],
+        [
+          884,
+          628
+        ],
+        [
+          960,
+          684
+        ],
+        [
+          968,
+          1018
+        ],
+        [
+          606,
+          1040
+        ]
+      ]
+    },
+    "right-inner-sleeve": {
+      "bounds": {
+        "x": 902,
+        "y": 634,
+        "width": 336,
+        "height": 358
+      },
+      "polygon": [
+        [
+          902,
+          680
+        ],
+        [
+          984,
+          634
+        ],
+        [
+          1170,
+          654
+        ],
+        [
+          1238,
+          740
+        ],
+        [
+          1214,
+          966
+        ],
+        [
+          944,
+          992
+        ]
+      ]
+    }
+  },
+  "kits": {
+    "outing-kit": {
+      "label": "OUTING KIT",
+      "description": "Travel tin, folded blanket and camera",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [],
+      "wishConstraint": null,
+      "sourceComposite": "composites/pack-filled--outing-kit--master-1536--non-shipping-v02.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "small-blanket",
+            "travel-tin"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "small-blanket",
+            "small-camera"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "travel-tin",
+            "small-camera"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "small-blanket",
+          "slotId": "center-deep-pocket",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            768,
+            1080
+          ],
+          "scale": 0.61,
+          "rotationDegreesClockwise": 2.5,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-blanket--master-512--non-shipping-v01.png",
+          "sourceSha256": "ab2bd9823e5285f5c427377f0493c34537b50749fbb51329f11cf5b1e7cc017a",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "affineForward": [
+            0.6094194,
+            -0.0266078,
+            624.3346611,
+            0.0266078,
+            0.6094194,
+            790.4177878
+          ],
+          "affineInverse": [
+            1.637784,
+            0.0715072,
+            -1079.0458566,
+            -0.0715072,
+            1.637784,
+            -1249.8891636
+          ],
+          "transformedAlphaBounds": {
+            "x": 646,
+            "y": 867,
+            "width": 255,
+            "height": 166
+          },
+          "containmentClippedPercent": 0.744,
+          "occludedPercent": 27.87,
+          "visiblePercent": 72.13,
+          "alphaWeightedCenterOfGravity": {
+            "x": 770.22,
+            "y": 949.21
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 141,
+                "y": 191,
+                "width": 61,
+                "height": 30
+              },
+              "visibleAlphaWeight": 248813
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 158,
+                "y": 213,
+                "width": 68,
+                "height": 33
+              },
+              "visibleAlphaWeight": 310424
+            }
+          }
+        },
+        {
+          "itemId": "travel-tin",
+          "slotId": "left-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            506,
+            1005
+          ],
+          "scale": 0.52,
+          "rotationDegreesClockwise": -6.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--travel-tin--master-512--non-shipping-v01.png",
+          "sourceSha256": "877e8777c1dbf040dc52f2a4ef579307ff5fccaef482c606313293af4695a505",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "affineForward": [
+            0.5171514,
+            0.0543548,
+            348.3886177,
+            -0.0543548,
+            0.5171514,
+            778.9565861
+          ],
+          "affineInverse": [
+            1.9125421,
+            -0.2010163,
+            -509.724949,
+            0.2010163,
+            1.9125421,
+            -1559.8190524
+          ],
+          "transformedAlphaBounds": {
+            "x": 384,
+            "y": 815,
+            "width": 218,
+            "height": 166
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 19.51,
+          "visiblePercent": 80.49,
+          "alphaWeightedCenterOfGravity": {
+            "x": 496.01,
+            "y": 895.46
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 83,
+                "y": 179,
+                "width": 53,
+                "height": 38
+              },
+              "visibleAlphaWeight": 289892
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 93,
+                "y": 200,
+                "width": 59,
+                "height": 42
+              },
+              "visibleAlphaWeight": 361638
+            }
+          }
+        },
+        {
+          "itemId": "small-camera",
+          "slotId": "right-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            1068,
+            954
+          ],
+          "scale": 0.54,
+          "rotationDegreesClockwise": 5.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-camera--master-512--non-shipping-v01.png",
+          "sourceSha256": "172969b9c2e15eed9317f76e28ee45483f361365c08bd32ad9101da8debd3b25",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "affineForward": [
+            0.5379451,
+            -0.0470641,
+            952.1237878,
+            0.0470641,
+            0.5379451,
+            692.3450466
+          ],
+          "affineInverse": [
+            1.844805,
+            0.1613995,
+            -1868.2268817,
+            -0.1613995,
+            1.844805,
+            -1123.5692754
+          ],
+          "transformedAlphaBounds": {
+            "x": 962,
+            "y": 745,
+            "width": 224,
+            "height": 192
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 12.2,
+          "visiblePercent": 87.8,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1064.69,
+            "y": 843.59
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 212,
+                "y": 163,
+                "width": 52,
+                "height": 44
+              },
+              "visibleAlphaWeight": 321104
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 237,
+                "y": 183,
+                "width": 57,
+                "height": 49
+              },
+              "visibleAlphaWeight": 400638
+            }
+          }
+        }
+      ]
+    },
+    "play-kit": {
+      "label": "PLAY KIT",
+      "description": "Yarn ball, bell and fish biscuit",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [],
+      "wishConstraint": null,
+      "sourceComposite": "composites/pack-filled--play-kit--master-1536--non-shipping-v02.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "fish-biscuit",
+            "yarn-ball"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "fish-biscuit",
+            "small-bell"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "yarn-ball",
+            "small-bell"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "fish-biscuit",
+          "slotId": "center-deep-pocket",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            770,
+            1055
+          ],
+          "scale": 0.54,
+          "rotationDegreesClockwise": 3.5,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+          "sourceSha256": "c5dff36c9d3b92253b4b437fcc6ba58688eabeec91719a8c0580dfd3a949a9a6",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "affineForward": [
+            0.5389928,
+            -0.0329662,
+            647.3141675,
+            0.0329662,
+            0.5389928,
+            796.4679948
+          ],
+          "affineInverse": [
+            1.8483978,
+            0.1130529,
+            -1286.5370444,
+            -0.1130529,
+            1.8483978,
+            -1399.0089572
+          ],
+          "transformedAlphaBounds": {
+            "x": 666,
+            "y": 866,
+            "width": 224,
+            "height": 156
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 20.7,
+          "visiblePercent": 79.3,
+          "alphaWeightedCenterOfGravity": {
+            "x": 774.32,
+            "y": 940.97
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 146,
+                "y": 190,
+                "width": 55,
+                "height": 31
+              },
+              "visibleAlphaWeight": 227848
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 163,
+                "y": 213,
+                "width": 61,
+                "height": 33
+              },
+              "visibleAlphaWeight": 284368
+            }
+          }
+        },
+        {
+          "itemId": "yarn-ball",
+          "slotId": "left-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            475,
+            974
+          ],
+          "scale": 0.49,
+          "rotationDegreesClockwise": -7.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--yarn-ball--master-512--non-shipping-v01.png",
+          "sourceSha256": "a6923de2bea94754fd312f5119c3783b019c7d9870fd36b0e13aed03fdcd5d42",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "affineForward": [
+            0.4863476,
+            0.059716,
+            322.7867968,
+            -0.059716,
+            0.4863476,
+            763.6219974
+          ],
+          "affineInverse": [
+            2.0256044,
+            -0.2487129,
+            -463.9156766,
+            0.2487129,
+            2.0256044,
+            -1627.0773262
+          ],
+          "transformedAlphaBounds": {
+            "x": 361,
+            "y": 795,
+            "width": 212,
+            "height": 150
+          },
+          "containmentClippedPercent": 0.649,
+          "occludedPercent": 14.01,
+          "visiblePercent": 85.98,
+          "alphaWeightedCenterOfGravity": {
+            "x": 442.35,
+            "y": 874.32
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 79,
+                "y": 175,
+                "width": 51,
+                "height": 37
+              },
+              "visibleAlphaWeight": 198623
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 88,
+                "y": 195,
+                "width": 57,
+                "height": 42
+              },
+              "visibleAlphaWeight": 247744
+            }
+          }
+        },
+        {
+          "itemId": "small-bell",
+          "slotId": "right-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            1060,
+            950
+          ],
+          "scale": 0.54,
+          "rotationDegreesClockwise": 5.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-bell--master-512--non-shipping-v01.png",
+          "sourceSha256": "803ac79a5d4ff006db7cfccdc3522b09278d44e35595fdedc163decab3c8ff0c",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "affineForward": [
+            0.5379451,
+            -0.0470641,
+            944.1237878,
+            0.0470641,
+            0.5379451,
+            688.3450466
+          ],
+          "affineInverse": [
+            1.844805,
+            0.1613995,
+            -1852.8228437,
+            -0.1613995,
+            1.844805,
+            -1117.4812516
+          ],
+          "transformedAlphaBounds": {
+            "x": 977,
+            "y": 728,
+            "width": 186,
+            "height": 223
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 13.4,
+          "visiblePercent": 86.6,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1065.99,
+            "y": 854.71
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 215,
+                "y": 160,
+                "width": 46,
+                "height": 51
+              },
+              "visibleAlphaWeight": 213546
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 241,
+                "y": 179,
+                "width": 51,
+                "height": 56
+              },
+              "visibleAlphaWeight": 266565
+            }
+          }
+        }
+      ]
+    },
+    "wish-observation-kit": {
+      "label": "WISH / OBSERVATION KIT",
+      "description": "One ticket, telescope and fish biscuit",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [
+        "ticket"
+      ],
+      "wishConstraint": {
+        "maxWishItems": 1,
+        "wishItemId": "ticket",
+        "requiresWishDestinationId": true,
+        "destinationValueBakedIntoArt": false
+      },
+      "sourceComposite": "composites/pack-filled--wish-observation-kit--master-1536--non-shipping-v02.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "ticket",
+            "fish-biscuit"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "ticket",
+            "small-telescope"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "fish-biscuit",
+            "small-telescope"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "ticket",
+          "slotId": "center-deep-pocket",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            768,
+            1070
+          ],
+          "scale": 0.6,
+          "rotationDegreesClockwise": -3.0,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--wish--ticket--master-512--non-shipping-v01.png",
+          "sourceSha256": "93704750186d861ddf3bfbdd1b2cf6bee6fa6f3f6f6ad7a04a793986a21858df",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "affineForward": [
+            0.5991777,
+            0.0314016,
+            600.0401732,
+            -0.0314016,
+            0.5991777,
+            800.0203404
+          ],
+          "affineInverse": [
+            1.6643826,
+            -0.0872266,
+            -928.9133492,
+            0.0872266,
+            1.6643826,
+            -1383.879361
+          ],
+          "transformedAlphaBounds": {
+            "x": 638,
+            "y": 868,
+            "width": 247,
+            "height": 154
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 24.64,
+          "visiblePercent": 75.36,
+          "alphaWeightedCenterOfGravity": {
+            "x": 761.65,
+            "y": 943.99
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 140,
+                "y": 191,
+                "width": 59,
+                "height": 30
+              },
+              "visibleAlphaWeight": 266547
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 157,
+                "y": 214,
+                "width": 66,
+                "height": 32
+              },
+              "visibleAlphaWeight": 332589
+            }
+          }
+        },
+        {
+          "itemId": "fish-biscuit",
+          "slotId": "left-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            535,
+            1020
+          ],
+          "scale": 0.49,
+          "rotationDegreesClockwise": -9.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+          "sourceSha256": "c5dff36c9d3b92253b4b437fcc6ba58688eabeec91719a8c0580dfd3a949a9a6",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "affineForward": [
+            0.4839673,
+            0.0766529,
+            375.5374346,
+            -0.0766529,
+            0.4839673,
+            815.0623182
+          ],
+          "affineInverse": [
+            2.0156905,
+            -0.319254,
+            -496.7553222,
+            0.319254,
+            2.0156905,
+            -1762.8051963
+          ],
+          "transformedAlphaBounds": {
+            "x": 415,
+            "y": 856,
+            "width": 204,
+            "height": 123
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 22.37,
+          "visiblePercent": 77.63,
+          "alphaWeightedCenterOfGravity": {
+            "x": 516.46,
+            "y": 917.97
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 90,
+                "y": 188,
+                "width": 50,
+                "height": 30
+              },
+              "visibleAlphaWeight": 183788
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 101,
+                "y": 210,
+                "width": 55,
+                "height": 33
+              },
+              "visibleAlphaWeight": 229187
+            }
+          }
+        },
+        {
+          "itemId": "small-telescope",
+          "slotId": "right-inner-sleeve",
+          "sourceAnchor": [
+            256,
+            464
+          ],
+          "destinationAnchor": [
+            1070,
+            1000
+          ],
+          "scale": 0.49,
+          "rotationDegreesClockwise": -18.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-telescope--master-512--non-shipping-v01.png",
+          "sourceSha256": "4e9563760e3b36b1784a2355c1a9322fe983780e8dcda0c8d012ead5af1d7db3",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "affineForward": [
+            0.4660177,
+            0.1514183,
+            880.4413668,
+            -0.1514183,
+            0.4660177,
+            822.5308822
+          ],
+          "affineInverse": [
+            1.9409317,
+            -0.6306469,
+            -1190.1499552,
+            0.6306469,
+            1.9409317,
+            -2151.7238781
+          ],
+          "transformedAlphaBounds": {
+            "x": 928,
+            "y": 854,
+            "width": 223,
+            "height": 97
+          },
+          "containmentClippedPercent": 0.262,
+          "occludedPercent": 29.91,
+          "visiblePercent": 70.09,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1034.05,
+            "y": 902.52
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "342": {
+              "visibleBounds": {
+                "x": 204,
+                "y": 188,
+                "width": 45,
+                "height": 21
+              },
+              "visibleAlphaWeight": 94110
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 229,
+                "y": 210,
+                "width": 49,
+                "height": 23
+              },
+              "visibleAlphaWeight": 117398
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ticketConstraint": {
+    "maximumTicketsPerPack": 1,
+    "kind": "wish",
+    "requiresWishDestinationId": true,
+    "destinationStoredInGameState": true,
+    "destinationBakedIntoArt": false
+  },
+  "reviewMapping": {
+    "populated": "outing-kit",
+    "selected": "wish-observation-kit",
+    "scroll": "play-kit",
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ]
+    ]
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "checks": {
+    "pngCount": 40,
+    "itemMasters": 9,
+    "presentationMasters": 4,
+    "runtimeDerivatives": 19,
+    "reviewComposites": 6,
+    "contactSheets": 1,
+    "qaImages": 1
+  },
+  "errors": [],
+  "files": [
+    {
+      "path": "masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 78882,
+      "bounds": {
+        "left": 48,
+        "top": 119,
+        "right": 463,
+        "bottom": 393,
+        "width": 416,
+        "height": 275
+      },
+      "sha256": "c5dff36c9d3b92253b4b437fcc6ba58688eabeec91719a8c0580dfd3a949a9a6"
+    },
+    {
+      "path": "masters/items/item--snack--travel-tin--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 106286,
+      "bounds": {
+        "left": 48,
+        "top": 90,
+        "right": 463,
+        "bottom": 422,
+        "width": 416,
+        "height": 333
+      },
+      "sha256": "877e8777c1dbf040dc52f2a4ef579307ff5fccaef482c606313293af4695a505"
+    },
+    {
+      "path": "masters/items/item--toy--small-bell--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 68439,
+      "bounds": {
+        "left": 96,
+        "top": 48,
+        "right": 415,
+        "bottom": 463,
+        "width": 320,
+        "height": 416
+      },
+      "sha256": "803ac79a5d4ff006db7cfccdc3522b09278d44e35595fdedc163decab3c8ff0c"
+    },
+    {
+      "path": "masters/items/item--toy--small-blanket--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 74657,
+      "bounds": {
+        "left": 48,
+        "top": 118,
+        "right": 463,
+        "bottom": 393,
+        "width": 416,
+        "height": 276
+      },
+      "sha256": "ab2bd9823e5285f5c427377f0493c34537b50749fbb51329f11cf5b1e7cc017a"
+    },
+    {
+      "path": "masters/items/item--toy--small-camera--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 100169,
+      "bounds": {
+        "left": 48,
+        "top": 89,
+        "right": 463,
+        "bottom": 423,
+        "width": 416,
+        "height": 335
+      },
+      "sha256": "172969b9c2e15eed9317f76e28ee45483f361365c08bd32ad9101da8debd3b25"
+    },
+    {
+      "path": "masters/items/item--toy--small-telescope--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 45136,
+      "bounds": {
+        "left": 48,
+        "top": 107,
+        "right": 463,
+        "bottom": 405,
+        "width": 416,
+        "height": 299
+      },
+      "sha256": "4e9563760e3b36b1784a2355c1a9322fe983780e8dcda0c8d012ead5af1d7db3"
+    },
+    {
+      "path": "masters/items/item--toy--yarn-ball--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 77846,
+      "bounds": {
+        "left": 48,
+        "top": 93,
+        "right": 463,
+        "bottom": 418,
+        "width": 416,
+        "height": 326
+      },
+      "sha256": "a6923de2bea94754fd312f5119c3783b019c7d9870fd36b0e13aed03fdcd5d42"
+    },
+    {
+      "path": "masters/items/item--wish--ticket--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 78595,
+      "bounds": {
+        "left": 48,
+        "top": 120,
+        "right": 463,
+        "bottom": 391,
+        "width": 416,
+        "height": 272
+      },
+      "sha256": "93704750186d861ddf3bfbdd1b2cf6bee6fa6f3f6f6ad7a04a793986a21858df"
+    },
+    {
+      "path": "masters/items/reward--treat--dried-fish--master-512--non-shipping-v01.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 68732,
+      "bounds": {
+        "left": 48,
+        "top": 126,
+        "right": 463,
+        "bottom": 386,
+        "width": 416,
+        "height": 261
+      },
+      "sha256": "a48b7962441f21f2da76ce08e8dfed65ea12265ef68c3af0292b247f145ae644"
+    },
+    {
+      "path": "masters/presentation/presentation--blank-postcard-back--master-1200x900--non-shipping-v01.png",
+      "width": 1200,
+      "height": 900,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 841541,
+      "bounds": {
+        "left": 30,
+        "top": 79,
+        "right": 1169,
+        "bottom": 821,
+        "width": 1140,
+        "height": 743
+      },
+      "sha256": "0f974802582f5b8e20641feb63478599a109490987b3c2bdcf6ca7b103149251"
+    },
+    {
+      "path": "masters/presentation/presentation--envelope-pocket-back--master-1200x900--non-shipping-v01.png",
+      "width": 1200,
+      "height": 900,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 585759,
+      "bounds": {
+        "left": 165,
+        "top": 40,
+        "right": 1034,
+        "bottom": 859,
+        "width": 870,
+        "height": 820
+      },
+      "sha256": "33da7bb0fc5b8242bd2a98a0100e28deff3755b2f05ace9252cb61d85f45a6b5"
+    },
+    {
+      "path": "masters/presentation/presentation--envelope-pocket-front--master-1200x900--non-shipping-v01.png",
+      "width": 1200,
+      "height": 900,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 203559,
+      "bounds": {
+        "left": 165,
+        "top": 626,
+        "right": 1034,
+        "bottom": 859,
+        "width": 870,
+        "height": 234
+      },
+      "sha256": "e0610dfa6c007284463bc2e13cd5d27461f18ade9f9d19d307c478e7d6561b59"
+    },
+    {
+      "path": "masters/presentation/presentation--postcard-stack-holder--master-1200x900--non-shipping-v01.png",
+      "width": 1200,
+      "height": 900,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 801119,
+      "bounds": {
+        "left": 44,
+        "top": 40,
+        "right": 1156,
+        "bottom": 859,
+        "width": 1113,
+        "height": 820
+      },
+      "sha256": "7894ebbb16661c85caf2b9544bd6511d12e1a860dce5259bd4848ecf81c8721c"
+    },
+    {
+      "path": "qa/mobile-readability--390x420--non-shipping.png",
+      "width": 390,
+      "height": 420,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 163800,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 389,
+        "bottom": 419,
+        "width": 390,
+        "height": 420
+      },
+      "sha256": "f78c0fa79af211798011933794b8ba6c12e084f1237e2b570503ef44d52ac580"
+    },
+    {
+      "path": "reviews/390/review--album-postcard--390x844--non-shipping-v01.png",
+      "width": 390,
+      "height": 844,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 329160,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 389,
+        "bottom": 843,
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "ce85d1fc6546514851097ba41aa84cdedec65ec5273fdd729ac3f778a424250f"
+    },
+    {
+      "path": "reviews/390/review--gift-detail--390x844--non-shipping-v01.png",
+      "width": 390,
+      "height": 844,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 329160,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 389,
+        "bottom": 843,
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "5874dea45bb8eea00cb1af12c5b3e132311dbe26d3ebbc3a7c34047a5560f4ef"
+    },
+    {
+      "path": "reviews/390/review--gift-receive--390x844--non-shipping-v01.png",
+      "width": 390,
+      "height": 844,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 329160,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 389,
+        "bottom": 843,
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "fd4e55e86011067593e73d9fecf0afc5fa001141ea6acd348e36804cdc8adad6"
+    },
+    {
+      "path": "reviews/430/review--album-postcard--430x932--non-shipping-v01.png",
+      "width": 430,
+      "height": 932,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 400760,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 429,
+        "bottom": 931,
+        "width": 430,
+        "height": 932
+      },
+      "sha256": "dcaddba503c82783ff0ac8229855b4a4dcfe2e520ea4492a716318a5e73ad863"
+    },
+    {
+      "path": "reviews/430/review--gift-detail--430x932--non-shipping-v01.png",
+      "width": 430,
+      "height": 932,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 400760,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 429,
+        "bottom": 931,
+        "width": 430,
+        "height": 932
+      },
+      "sha256": "cbeb06769274433625eab78c28b368c0d856a1fff1c8d50924903641b5381888"
+    },
+    {
+      "path": "reviews/430/review--gift-receive--430x932--non-shipping-v01.png",
+      "width": 430,
+      "height": 932,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 400760,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 429,
+        "bottom": 931,
+        "width": 430,
+        "height": 932
+      },
+      "sha256": "f78ffb91b713b08c77c3d75c164b1fb018fd02c62a86b9fb8ee6666de2496a42"
+    },
+    {
+      "path": "reviews/contact-sheet--postcard-gifts-v1--1200x1600--non-shipping.png",
+      "width": 1200,
+      "height": 1600,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 1920000,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "right": 1199,
+        "bottom": 1599,
+        "width": 1200,
+        "height": 1600
+      },
+      "sha256": "c5c9a7031399af88b1057f0981a2fbf53109cf645981a3e38b6a51e9228c64ed"
+    },
+    {
+      "path": "runtime/items/item--snack--fish-biscuit--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2848,
+      "bounds": {
+        "left": 9,
+        "top": 22,
+        "right": 86,
+        "bottom": 73,
+        "width": 78,
+        "height": 52
+      },
+      "sha256": "f0e3ba87d9f8abd7865b2e74e053f787194457151ada2a04582c7dbf292bfe46"
+    },
+    {
+      "path": "runtime/items/item--snack--travel-tin--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 3812,
+      "bounds": {
+        "left": 9,
+        "top": 16,
+        "right": 87,
+        "bottom": 79,
+        "width": 79,
+        "height": 64
+      },
+      "sha256": "76b5edebb4c62267185edb4f31a4eb82d0c7684db63ec0ba1bbf00942b5c56a2"
+    },
+    {
+      "path": "runtime/items/item--toy--small-bell--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2502,
+      "bounds": {
+        "left": 18,
+        "top": 8,
+        "right": 78,
+        "bottom": 86,
+        "width": 61,
+        "height": 79
+      },
+      "sha256": "0f6326be081aff06883b40492e5c8bc64744e432e2edc915dd434ef5d6234133"
+    },
+    {
+      "path": "runtime/items/item--toy--small-blanket--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2703,
+      "bounds": {
+        "left": 8,
+        "top": 22,
+        "right": 87,
+        "bottom": 73,
+        "width": 80,
+        "height": 52
+      },
+      "sha256": "c9a42b9f0864a32854a3241ea506ece74e7ff2392f09b57866dbcd33ec0cb00c"
+    },
+    {
+      "path": "runtime/items/item--toy--small-camera--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 3648,
+      "bounds": {
+        "left": 8,
+        "top": 16,
+        "right": 87,
+        "bottom": 79,
+        "width": 80,
+        "height": 64
+      },
+      "sha256": "960906b7e6d3ecd0390ce458c508a51629d42bb56ff6e44fd854da180600f622"
+    },
+    {
+      "path": "runtime/items/item--toy--small-telescope--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 1660,
+      "bounds": {
+        "left": 8,
+        "top": 19,
+        "right": 87,
+        "bottom": 76,
+        "width": 80,
+        "height": 58
+      },
+      "sha256": "79c0d8960993d634419f4e4feeadd359aec700344e1fc888fea2f4bd9e4aa7d1"
+    },
+    {
+      "path": "runtime/items/item--toy--yarn-ball--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2837,
+      "bounds": {
+        "left": 9,
+        "top": 17,
+        "right": 86,
+        "bottom": 78,
+        "width": 78,
+        "height": 62
+      },
+      "sha256": "437d2c82a672cc7ea0af87f58a7833614c91ae7f6562f46194e86d2a19ba2b56"
+    },
+    {
+      "path": "runtime/items/item--wish--ticket--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2866,
+      "bounds": {
+        "left": 9,
+        "top": 22,
+        "right": 87,
+        "bottom": 73,
+        "width": 79,
+        "height": 52
+      },
+      "sha256": "be6299e0ad2aa9f1368a1bfb4a0b7cbcd75117f875704d74e477c85184bb324f"
+    },
+    {
+      "path": "runtime/items/reward--treat--dried-fish--runtime-24--non-shipping-v01.png",
+      "width": 24,
+      "height": 24,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 194,
+      "bounds": {
+        "left": 2,
+        "top": 5,
+        "right": 21,
+        "bottom": 18,
+        "width": 20,
+        "height": 14
+      },
+      "sha256": "e69c0004e1c8239622a21611d3c91d6ce105599553452edd145b88409357290c"
+    },
+    {
+      "path": "runtime/items/reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+      "width": 32,
+      "height": 32,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 319,
+      "bounds": {
+        "left": 3,
+        "top": 7,
+        "right": 28,
+        "bottom": 24,
+        "width": 26,
+        "height": 18
+      },
+      "sha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566"
+    },
+    {
+      "path": "runtime/items/reward--treat--dried-fish--runtime-96--non-shipping-v01.png",
+      "width": 96,
+      "height": 96,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 2537,
+      "bounds": {
+        "left": 9,
+        "top": 23,
+        "right": 87,
+        "bottom": 72,
+        "width": 79,
+        "height": 50
+      },
+      "sha256": "98e1450e16e6f531dec8ba1b9b71979444d4397f576ed22b28dcf1bad9c70de2"
+    },
+    {
+      "path": "runtime/presentation/presentation--blank-postcard-back--runtime-338x254--non-shipping-v01.png",
+      "width": 338,
+      "height": 254,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 67366,
+      "bounds": {
+        "left": 8,
+        "top": 22,
+        "right": 329,
+        "bottom": 232,
+        "width": 322,
+        "height": 211
+      },
+      "sha256": "ca3d8a7ead7889dbb4c05aef68c1c2ef33bfdf947a92716fbe0a936d38c7fe4c"
+    },
+    {
+      "path": "runtime/presentation/presentation--blank-postcard-back--runtime-378x284--non-shipping-v01.png",
+      "width": 378,
+      "height": 284,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 84095,
+      "bounds": {
+        "left": 9,
+        "top": 24,
+        "right": 368,
+        "bottom": 259,
+        "width": 360,
+        "height": 236
+      },
+      "sha256": "ef44e5e48da6169d0d527abddb624d6c1e4e1200da69c89fd3e91b4522e7a282"
+    },
+    {
+      "path": "runtime/presentation/presentation--envelope-pocket-back--runtime-338x254--non-shipping-v01.png",
+      "width": 338,
+      "height": 254,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 46884,
+      "bounds": {
+        "left": 46,
+        "top": 11,
+        "right": 291,
+        "bottom": 242,
+        "width": 246,
+        "height": 232
+      },
+      "sha256": "e013c10e6adb0a7fe4cea8dce803a2b4697d1daeff4c3856585bb3179652b934"
+    },
+    {
+      "path": "runtime/presentation/presentation--envelope-pocket-back--runtime-378x284--non-shipping-v01.png",
+      "width": 378,
+      "height": 284,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 58644,
+      "bounds": {
+        "left": 51,
+        "top": 12,
+        "right": 326,
+        "bottom": 271,
+        "width": 276,
+        "height": 260
+      },
+      "sha256": "e8265539dbe43af8a2513375a1ea562c5fac470379f6f27e2b2a724ffb26c490"
+    },
+    {
+      "path": "runtime/presentation/presentation--envelope-pocket-front--runtime-338x254--non-shipping-v01.png",
+      "width": 338,
+      "height": 254,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 16480,
+      "bounds": {
+        "left": 46,
+        "top": 176,
+        "right": 291,
+        "bottom": 242,
+        "width": 246,
+        "height": 67
+      },
+      "sha256": "aac365783d9ad42531c28437cfaa52f0b221915469241f9e7f97b4c96c5c7ec9"
+    },
+    {
+      "path": "runtime/presentation/presentation--envelope-pocket-front--runtime-378x284--non-shipping-v01.png",
+      "width": 378,
+      "height": 284,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 20609,
+      "bounds": {
+        "left": 51,
+        "top": 197,
+        "right": 326,
+        "bottom": 271,
+        "width": 276,
+        "height": 75
+      },
+      "sha256": "f0291c3a25f056853df5edc197c334112ee690d96db3a9a8fb084453511d658d"
+    },
+    {
+      "path": "runtime/presentation/presentation--postcard-stack-holder--runtime-338x254--non-shipping-v01.png",
+      "width": 338,
+      "height": 254,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 64054,
+      "bounds": {
+        "left": 12,
+        "top": 11,
+        "right": 325,
+        "bottom": 242,
+        "width": 314,
+        "height": 232
+      },
+      "sha256": "4179c1b2b4de821de1b467e3c9245aa20f40fd229442bc13681623272aba2d6a"
+    },
+    {
+      "path": "runtime/presentation/presentation--postcard-stack-holder--runtime-378x284--non-shipping-v01.png",
+      "width": 378,
+      "height": 284,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentRgbNonZero": 0,
+      "opaquePixels": 80124,
+      "bounds": {
+        "left": 13,
+        "top": 12,
+        "right": 364,
+        "bottom": 271,
+        "width": 352,
+        "height": 260
+      },
+      "sha256": "d86951c9e90172bfbcdcd49aa380c6209993a013b7d8bd9ea0cbdf832c6743b4"
+    }
+  ]
+}

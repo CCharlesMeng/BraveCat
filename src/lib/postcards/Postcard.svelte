@@ -35,7 +35,10 @@
       />
     {:else}
       <div class="non-shipping-preview" aria-label="场景仍在发布审核中">
-        <span></span>
+        <img
+          src="/assets/postcards/scene-unavailable.png"
+          alt="场景仍在发布审核中"
+        />
       </div>
     {/if}
   </div>
@@ -46,7 +49,8 @@
       <small>{destinationName}</small>
     </div>
     <span class="postmark" aria-label={`邮戳日期 ${composition.postmarkDate}`}>
-      {composition.postmarkDate.slice(5).replace('-', '.')}
+      <img src="/assets/postcards/postmark.png" alt="" aria-hidden="true" />
+      <span>{composition.postmarkDate.slice(5).replace('-', '.')}</span>
     </span>
   </div>
 </article>
@@ -58,6 +62,7 @@
     border: 1px solid rgba(91, 83, 64, 0.3);
     border-radius: 8px;
     background:
+      url("/assets/postcards/blank-back-378.png") center / cover,
       radial-gradient(rgba(97, 89, 69, 0.045) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
       #f8efd8;
     box-shadow: 0 8px 18px rgba(72, 65, 47, 0.09);
@@ -89,20 +94,14 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    background:
-      linear-gradient(168deg, transparent 58%, rgba(116, 137, 97, 0.34) 59% 72%, transparent 73%),
-      linear-gradient(188deg, transparent 48%, rgba(137, 158, 116, 0.28) 49% 67%, transparent 68%),
-      linear-gradient(#dce8e2, #f0dfbc);
+    background: #eee5d1;
   }
 
-  .non-shipping-preview span {
-    position: absolute;
-    top: 14%;
-    right: 12%;
-    width: 18%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: rgba(240, 193, 113, 0.4);
+  .non-shipping-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .message {
@@ -134,15 +133,25 @@
   }
 
   .postmark {
+    position: relative;
     display: grid;
     width: 51px;
     height: 51px;
     place-items: center;
     transform: rotate(-8deg);
-    border: 2px solid rgba(161, 100, 82, 0.48);
-    border-radius: 50%;
-    color: rgba(142, 84, 69, 0.72);
+    color: #8e5445;
     font-family: ui-sans-serif, system-ui, sans-serif;
     font-size: 0.56rem;
+  }
+
+  .postmark img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .postmark span {
+    position: relative;
   }
 </style>

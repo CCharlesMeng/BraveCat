@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "reviewKind": "static-cat-candidate-visual-qa",
+  "status": "PASS FOR USER VISUAL APPROVAL",
+  "shippingEligible": false,
+  "reviewedAt": "2026-07-21",
+  "scope": "24 generated pose masters, 24 runtime-review derivatives, four six-pose contact sheets, one cross-individual comparison sheet, four room composites, and eight mobile home mockups",
+  "hardFailures": [],
+  "automatedChecks": {
+    "report": "alpha-and-layout-report.v1.json",
+    "sourceCount": 24,
+    "sourceDimensions": "1024x1024",
+    "runtimeDerivativeCount": 24,
+    "runtimeDimensions": "512x512",
+    "sourcePixelMode": "RGBA",
+    "minimumSafeMarginPx": 64,
+    "transparentCorners": true,
+    "hiddenRgbUnderZeroAlpha": "all zero",
+    "opaqueMagentaPixels": "none detected",
+    "partiallyTransparentEdgePixels": "present in every master",
+    "result": "pass"
+  },
+  "identityConsistency": {
+    "golden-shaded": {
+      "verdict": "pass",
+      "evidence": "Emerald eyes, warm gold undercoat, charcoal crown/back/tail tipping, dark tail tip, petite-cobby frame, and modest cheeks remain readable across all six poses."
+    },
+    "blue-golden-shaded": {
+      "verdict": "pass",
+      "evidence": "Olive eyes, broad mature muzzle, heavier chest, pale honey undercoat, cool blue-gray veil, brow arcs, and charcoal-blue tail tip remain stable across all six poses."
+    },
+    "solid-blue": {
+      "verdict": "pass",
+      "evidence": "Copper eyes, tiny wide-set ears, massive jowls, uniform slate coat, barrel torso, short thick legs, and very thick tail remain stable; no tabby or white markings appear."
+    },
+    "blue-white-bicolor": {
+      "verdict": "pass",
+      "evidence": "Amber eyes, pink nose, centered inverted-V blaze, blue cap and saddle, single rounded left-shoulder spot, white legs, blue tail, and white tail tip remain recognizable through pose turns."
+    },
+    "crossIndividualDistinctness": {
+      "verdict": "pass",
+      "evidence": "The comparison sheet shows four separate faces and body conditions rather than one recolored silhouette: petite golden female, broad mature blue-golden male, heaviest solid-blue male, and athletic blue-white female."
+    }
+  },
+  "physicalLawReview": {
+    "golden-shaded": {
+      "sit": "pass — paired forepaws and seated haunches carry weight; tail joins rump and wraps on baseline.",
+      "sleep": "pass — ribcage and spine form a believable curl; head rests on forepaws; tail follows the outer body without a break.",
+      "walk": "pass — one forepaw advances while the other forepaw and hind support remain grounded; short legs share a baseline.",
+      "eat": "pass — low crouch, continuous neck/back, grounded paws, bowl contact, and muzzle-to-rim interaction are believable.",
+      "play": "pass — one forepaw contacts yarn while the other forepaw and hindquarters support the body; raised tail has a continuous base.",
+      "gaze": "pass — seated pelvis supports a gentle spinal/neck turn; forepaw and tail placement keep the center of gravity inside the base."
+    },
+    "blue-golden-shaded": {
+      "sit": "pass — broad chest centers over sturdy forepaws and loaded haunches; tail is continuously attached.",
+      "sleep": "pass — broad oval curl retains heavy torso volume; crossed forepaws, tucked hindquarters, and wrapped tail read physically.",
+      "walk": "pass — four-leg gait is readable with a forward forepaw and three supporting/transitioning limbs; no duplicated paws.",
+      "eat": "pass — all four short legs are accounted for with natural far-side occlusion; bowl and paws share a baseline.",
+      "play": "pass — seated haunches and planted forepaw support the raised paw on the yarn; tail counterbalances without floating.",
+      "gaze": "pass — broad grounded haunches support the upward head turn; spine and tail remain continuous."
+    },
+    "solid-blue": {
+      "sit": "pass — the heaviest torso remains centered over paired forepaws and haunches; tail forms a grounded counterweight.",
+      "sleep": "pass — deep curl compresses the barrel torso believably; stacked forepaws and outer tail support the silhouette.",
+      "walk": "pass — low slow gait preserves cobby mass, short load-bearing legs, level spine, and a continuous low tail.",
+      "eat": "pass — low center of gravity, broad shoulder support, tucked hindquarters, bowl contact, and tail continuity are plausible.",
+      "play": "pass — sphinx-like crouch keeps chest and hindquarters grounded while one forepaw touches the yarn.",
+      "gaze": "pass — broad seated base supports the profile head turn; one forepaw is visible and hidden limbs are plausibly occluded."
+    },
+    "blue-white-bicolor": {
+      "sit": "pass — upright torso, paired white forepaws, haunches, and wrapped tail create a stable seated base.",
+      "sleep": "pass — cheek rests on forepaws; hindquarters and continuous blue tail form a grounded crescent.",
+      "walk": "pass — lifted forward forepaw is balanced by three grounded limbs; shoulder, pelvis, and tail alignment are believable.",
+      "eat": "pass — four legs are present with natural far-side occlusion; bowl and paws share one baseline and the muzzle clears the rim.",
+      "play": "pass — one forepaw contacts the yarn, opposite forepaw and both hindquarters support the bow, and tail rises continuously from the rump.",
+      "gaze": "pass — seated base, visible forepaw, neck turn, and low wrapped tail keep the center of gravity stable."
+    },
+    "sharedFailureChecks": {
+      "extraLimbs": "none observed",
+      "missingLoadBearingPaws": "none observed; hidden limbs use plausible pose occlusion",
+      "brokenSpineOrTail": "none observed",
+      "furOrBodyClipping": "none observed",
+      "floatingOrBaselineMismatch": "none observed",
+      "bakedFloorPatchOrShadow": "none present",
+      "detachedEffects": "none present; bowls and yarn balls are state-relevant props in physical contact"
+    }
+  },
+  "homeRugCompositeReview": {
+    "roomSourceModified": false,
+    "anchor": {
+      "x": 690,
+      "y": 1395
+    },
+    "contactShadowAdded": false,
+    "golden-shaded": {
+      "scaleRelativeToMinho": 0.96,
+      "mobile390": "pass — sleep silhouette rests on the rug with no visible gap and remains clear of bowls, cat tree, table, and navigation.",
+      "mobile430": "pass — scale remains petite but breed-readable; baseline and rug contact remain stable."
+    },
+    "blue-golden-shaded": {
+      "scaleRelativeToMinho": 1.05,
+      "mobile390": "pass — broader sleep silhouette is grounded and remains inside the rug safe area.",
+      "mobile430": "pass — mature body volume reads correctly without crowding props or navigation."
+    },
+    "solid-blue": {
+      "scaleRelativeToMinho": 1.1,
+      "mobile390": "pass — largest silhouette remains grounded, centered, and clear of room props.",
+      "mobile430": "pass — heavy body condition reads intentionally while staying proportional to the rug and room."
+    },
+    "blue-white-bicolor": {
+      "scaleRelativeToMinho": 1.0,
+      "mobile390": "pass — compact crescent sits directly on the rug and the white/blue identity remains readable.",
+      "mobile430": "pass — baseline, scale, and prop clearances remain stable."
+    }
+  },
+  "styleReview": {
+    "verdict": "pass with visual-approval note",
+    "evidence": "All poses use restrained, desaturated naturalistic watercolor/dry-brush fur, soft alpha edges, and quiet contrast against the approved room. They intentionally preserve more breed anatomy and coat detail than the simplified chibi cat in style-ref-poses.png.",
+    "userApprovalFocus": "Confirm the chosen naturalistic watercolor detail level and the four relative body scales before any production promotion."
+  },
+  "sourceCleanliness": {
+    "labelsOrText": "none in source pose masters",
+    "uiOrScenery": "none in source pose masters",
+    "floorPatchOrBakedShadow": "none",
+    "watermark": "none",
+    "reviewLabelsLocation": "contact sheets and mockups only"
+  },
+  "disposition": "Stop at visual approval. Do not integrate, promote, replace Minho, edit app code, or commit."
+}

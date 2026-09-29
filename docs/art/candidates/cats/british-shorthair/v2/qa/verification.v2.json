@@ -1,0 +1,16 @@
+{
+  "coverage" : "72/72",
+  "coveredSlots" : 72,
+  "failures" : [
+
+  ],
+  "invalidPartialArtifactsRemoved" : 26,
+  "passedSlots" : 72,
+  "requiredSlots" : 72,
+  "schemaVersion" : 2,
+  "status" : "pass",
+  "v1AllMatch" : true,
+  "v1HashReferencedSlots" : 8,
+  "v1ProtectedFileCount" : 36,
+  "v2CompositeSlots" : 64
+}

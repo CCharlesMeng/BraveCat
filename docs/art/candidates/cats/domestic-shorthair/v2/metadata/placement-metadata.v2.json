@@ -1,0 +1,5152 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "shippingEligible": false,
+  "sourceMasters": "v1 hash-verified masters; no regeneration or recoloring",
+  "masterAnchor": {
+    "x": 512,
+    "y": 960,
+    "kind": "bottom-center"
+  },
+  "roomGeometry": {
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "safeBounds": {
+      "left": 48,
+      "top": 48,
+      "right": 1152,
+      "bottom": 1440
+    },
+    "bottomNavigationReserve": {
+      "left": 0,
+      "top": 1470,
+      "right": 1200,
+      "bottom": 1600
+    },
+    "rugSupportEllipse": {
+      "centerX": 660,
+      "centerY": 1415,
+      "radiusX": 520,
+      "radiusY": 190
+    },
+    "fixtures": {
+      "catTreeAndWand": {
+        "left": 0,
+        "top": 840,
+        "right": 315,
+        "bottom": 1440
+      },
+      "fixedRoomBowls": {
+        "left": 195,
+        "top": 1140,
+        "right": 465,
+        "bottom": 1335
+      },
+      "sideTable": {
+        "left": 955,
+        "top": 900,
+        "right": 1200,
+        "bottom": 1440
+      }
+    }
+  },
+  "placementAnchors": {
+    "sit": {
+      "x": 690,
+      "y": 1395,
+      "reason": "Approved shared home bottom-center anchor."
+    },
+    "sleep": {
+      "x": 690,
+      "y": 1395,
+      "reason": "Approved shared home bottom-center anchor."
+    },
+    "walk": {
+      "x": 690,
+      "y": 1395,
+      "reason": "Approved shared home bottom-center anchor."
+    },
+    "eat": {
+      "x": 720,
+      "y": 1395,
+      "reason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale."
+    },
+    "play": {
+      "x": 720,
+      "y": 1395,
+      "reason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale."
+    },
+    "gaze": {
+      "x": 690,
+      "y": 1395,
+      "reason": "Approved shared home bottom-center anchor."
+    }
+  },
+  "breedScale": {
+    "orange-tabby": {
+      "englishName": "Orange tabby",
+      "chineseName": "橘猫",
+      "displayCanvasPx": 441,
+      "physicalScaleVsMinho": 1.05,
+      "morphology": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby."
+    },
+    "li-hua": {
+      "englishName": "Chinese Li Hua",
+      "chineseName": "狸花猫",
+      "displayCanvasPx": 420,
+      "physicalScaleVsMinho": 1,
+      "morphology": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened."
+    }
+  },
+  "viewportSpecs": [
+    {
+      "key": "320x700",
+      "width": 320,
+      "height": 700,
+      "topbarHeight": 70,
+      "navigationHeight": 95,
+      "statusHeight": 34,
+      "iconSize": 42,
+      "compactHeightMode": true
+    },
+    {
+      "key": "390x844",
+      "width": 390,
+      "height": 844,
+      "topbarHeight": 82,
+      "navigationHeight": 112,
+      "statusHeight": 34,
+      "iconSize": 48,
+      "compactHeightMode": false
+    },
+    {
+      "key": "430x932",
+      "width": 430,
+      "height": 932,
+      "topbarHeight": 82,
+      "navigationHeight": 112,
+      "statusHeight": 34,
+      "iconSize": 52,
+      "compactHeightMode": false
+    }
+  ],
+  "contactShadowPolicy": {
+    "created": false,
+    "necessary": false,
+    "reason": "All 36 placements visibly meet the rug baseline through paws, compressed resting body, tail, bowl, or yarn; adding a shadow would duplicate grounding already supplied by the watercolor edge and woven surface."
+  },
+  "placements": [
+    {
+      "id": "320x700--orange-tabby--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sit--master-1024--non-shipping-v01.png",
+        "sha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 218,
+          "top": 72,
+          "right": 805,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 219,
+          "top": 75,
+          "right": 803,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 12874
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 563.38,
+          "top": 1012.57,
+          "right": 816.18,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 563.82,
+          "top": 1013.86,
+          "right": 815.32,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 571.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 808.18,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 98.38,
+        "catTreeAndWandPx": 248.38,
+        "sideTablePx": 138.82
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 148.53,
+          "top": 387.06,
+          "right": 227.69,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 248.38,
+        "fixedRoomBowlsClearancePx": 98.38,
+        "sideTableClearancePx": 138.82,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 424,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 71,
+          "top": 427,
+          "right": 954,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 10656
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1164.16,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 500.08,
+          "top": 1165.46,
+          "right": 880.35,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 128.31,
+          "top": 434.53,
+          "right": 248.05,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--walk--master-1024--non-shipping-v01.png",
+        "sha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 359,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 79,
+          "top": 360,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 16115
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1136.17,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 503.52,
+          "top": 1136.6,
+          "right": 880.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 128.31,
+          "top": 425.76,
+          "right": 248.05,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+        "sha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 433,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 437,
+          "right": 953,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 15229
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1168.04,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.22,
+          "top": 1169.76,
+          "right": 909.92,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 137.7,
+          "top": 435.74,
+          "right": 257.45,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 63.79,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+        "sha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 120,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 121,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 19971
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1033.24,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.65,
+          "top": 1033.67,
+          "right": 910.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 137.7,
+          "top": 393.53,
+          "right": 257.45,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 63.79,
+        "catTreeAndWandClearancePx": 213.79,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 247,
+          "top": 72,
+          "right": 776,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 270,
+          "top": 73,
+          "right": 773,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 11224
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 575.87,
+          "top": 1012.57,
+          "right": 803.7,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 585.78,
+          "top": 1013,
+          "right": 802.4,
+          "bottom": 1394.14
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.86,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 583.87,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 795.7,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 110.87,
+        "catTreeAndWandPx": 260.87,
+        "sideTablePx": 151.3
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 152.44,
+          "top": 387.06,
+          "right": 223.78,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 260.87,
+        "fixedRoomBowlsClearancePx": 110.87,
+        "sideTableClearancePx": 151.3,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sit--master-1024--non-shipping-v01.png",
+        "sha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 171,
+          "top": 72,
+          "right": 853,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 173,
+          "top": 73,
+          "right": 852,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 16339
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 550.14,
+          "top": 1030.78,
+          "right": 829.86,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 550.96,
+          "top": 1031.19,
+          "right": 829.45,
+          "bottom": 1394.59
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.41,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 558.14,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 821.86,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 85.14,
+        "catTreeAndWandPx": 235.14,
+        "sideTablePx": 125.14
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 144.39,
+          "top": 392.76,
+          "right": 231.97,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 235.14,
+        "fixedRoomBowlsClearancePx": 85.14,
+        "sideTableClearancePx": 125.14,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 390,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 391,
+          "right": 956,
+          "bottom": 960
+        },
+        "partialAlphaPixelCount": 14417
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 507.89,
+          "top": 1161.21,
+          "right": 872.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 508.71,
+          "top": 1161.62,
+          "right": 872.11,
+          "bottom": 1395
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 515.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 864.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 42.89,
+        "catTreeAndWandPx": 192.89,
+        "sideTablePx": 82.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 131.16,
+          "top": 433.6,
+          "right": 245.2,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 192.89,
+        "fixedRoomBowlsClearancePx": 42.89,
+        "sideTableClearancePx": 82.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--walk--master-1024--non-shipping-v01.png",
+        "sha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 96,
+          "top": 72,
+          "right": 927,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 97,
+          "top": 74,
+          "right": 910,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 23822
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 519.38,
+          "top": 1030.78,
+          "right": 860.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 519.79,
+          "top": 1031.6,
+          "right": 853.24,
+          "bottom": 1393.77
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.23,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 527.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 852.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 54.38,
+        "catTreeAndWandPx": 204.38,
+        "sideTablePx": 94.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 134.76,
+          "top": 392.76,
+          "right": 241.48,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 204.38,
+        "fixedRoomBowlsClearancePx": 54.38,
+        "sideTableClearancePx": 94.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+        "sha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 323,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 324,
+          "right": 954,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 20943
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 537.89,
+          "top": 1133.73,
+          "right": 902.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.3,
+          "top": 1134.14,
+          "right": 901.29,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 545.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 894.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 72.89,
+        "catTreeAndWandPx": 222.89,
+        "sideTablePx": 52.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 140.55,
+          "top": 425,
+          "right": 254.6,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 222.89,
+        "fixedRoomBowlsClearancePx": 72.89,
+        "sideTableClearancePx": 52.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 72.89,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+        "sha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 136,
+          "top": 72,
+          "right": 887,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 139,
+          "top": 74,
+          "right": 885,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 18526
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 565.78,
+          "top": 1030.78,
+          "right": 873.81,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 567.01,
+          "top": 1031.6,
+          "right": 872.99,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 573.78,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 865.81,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 100.78,
+        "catTreeAndWandPx": 250.78,
+        "sideTablePx": 81.19
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 149.28,
+          "top": 392.76,
+          "right": 245.74,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 250.78,
+        "fixedRoomBowlsClearancePx": 100.78,
+        "sideTableClearancePx": 81.19,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 100.78,
+        "catTreeAndWandClearancePx": 250.78,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 142,
+          "top": 72,
+          "right": 882,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 142,
+          "top": 73,
+          "right": 880,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 22198
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 538.24,
+          "top": 1030.78,
+          "right": 841.76,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.24,
+          "top": 1031.19,
+          "right": 840.94,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 546.24,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 833.76,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 73.24,
+        "catTreeAndWandPx": 223.24,
+        "sideTablePx": 113.24
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 501,
+        "coverScale": 0.31,
+        "cropOffset": {
+          "x": 27.88,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 140.66,
+          "top": 392.76,
+          "right": 235.7,
+          "bottom": 506.81
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 223.24,
+        "fixedRoomBowlsClearancePx": 73.24,
+        "sideTableClearancePx": 113.24,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sit--master-1024--non-shipping-v01.png",
+        "sha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 218,
+          "top": 72,
+          "right": 805,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 219,
+          "top": 75,
+          "right": 803,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 12874
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 563.38,
+          "top": 1012.57,
+          "right": 816.18,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 563.82,
+          "top": 1013.86,
+          "right": 815.32,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 571.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 808.18,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 98.38,
+        "catTreeAndWandPx": 248.38,
+        "sideTablePx": 138.82
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 180.9,
+          "top": 471.84,
+          "right": 278.23,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 248.38,
+        "fixedRoomBowlsClearancePx": 98.38,
+        "sideTableClearancePx": 138.82,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 424,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 71,
+          "top": 427,
+          "right": 954,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 10656
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1164.16,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 500.08,
+          "top": 1165.46,
+          "right": 880.35,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 156.03,
+          "top": 530.2,
+          "right": 303.27,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--walk--master-1024--non-shipping-v01.png",
+        "sha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 359,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 79,
+          "top": 360,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 16115
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1136.17,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 503.52,
+          "top": 1136.6,
+          "right": 880.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 156.03,
+          "top": 519.43,
+          "right": 303.27,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+        "sha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 433,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 437,
+          "right": 953,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 15229
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1168.04,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.22,
+          "top": 1169.76,
+          "right": 909.92,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 167.58,
+          "top": 531.7,
+          "right": 314.82,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 63.79,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+        "sha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 120,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 121,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 19971
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1033.24,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.65,
+          "top": 1033.67,
+          "right": 910.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 167.58,
+          "top": 479.8,
+          "right": 314.82,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 63.79,
+        "catTreeAndWandClearancePx": 213.79,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 247,
+          "top": 72,
+          "right": 776,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 270,
+          "top": 73,
+          "right": 773,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 11224
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 575.87,
+          "top": 1012.57,
+          "right": 803.7,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 585.78,
+          "top": 1013,
+          "right": 802.4,
+          "bottom": 1394.14
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.86,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 583.87,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 795.7,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 110.87,
+        "catTreeAndWandPx": 260.87,
+        "sideTablePx": 151.3
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 185.71,
+          "top": 471.84,
+          "right": 273.42,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 260.87,
+        "fixedRoomBowlsClearancePx": 110.87,
+        "sideTableClearancePx": 151.3,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sit--master-1024--non-shipping-v01.png",
+        "sha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 171,
+          "top": 72,
+          "right": 853,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 173,
+          "top": 73,
+          "right": 852,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 16339
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 550.14,
+          "top": 1030.78,
+          "right": 829.86,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 550.96,
+          "top": 1031.19,
+          "right": 829.45,
+          "bottom": 1394.59
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.41,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 558.14,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 821.86,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 85.14,
+        "catTreeAndWandPx": 235.14,
+        "sideTablePx": 125.14
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 175.8,
+          "top": 478.85,
+          "right": 283.5,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 235.14,
+        "fixedRoomBowlsClearancePx": 85.14,
+        "sideTableClearancePx": 125.14,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 390,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 391,
+          "right": 956,
+          "bottom": 960
+        },
+        "partialAlphaPixelCount": 14417
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 507.89,
+          "top": 1161.21,
+          "right": 872.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 508.71,
+          "top": 1161.62,
+          "right": 872.11,
+          "bottom": 1395
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 515.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 864.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 42.89,
+        "catTreeAndWandPx": 192.89,
+        "sideTablePx": 82.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 159.54,
+          "top": 529.07,
+          "right": 299.76,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 192.89,
+        "fixedRoomBowlsClearancePx": 42.89,
+        "sideTableClearancePx": 82.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--walk--master-1024--non-shipping-v01.png",
+        "sha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 96,
+          "top": 72,
+          "right": 927,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 97,
+          "top": 74,
+          "right": 910,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 23822
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 519.38,
+          "top": 1030.78,
+          "right": 860.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 519.79,
+          "top": 1031.6,
+          "right": 853.24,
+          "bottom": 1393.77
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.23,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 527.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 852.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 54.38,
+        "catTreeAndWandPx": 204.38,
+        "sideTablePx": 94.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 163.96,
+          "top": 478.85,
+          "right": 295.18,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 204.38,
+        "fixedRoomBowlsClearancePx": 54.38,
+        "sideTableClearancePx": 94.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+        "sha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 323,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 324,
+          "right": 954,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 20943
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 537.89,
+          "top": 1133.73,
+          "right": 902.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.3,
+          "top": 1134.14,
+          "right": 901.29,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 545.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 894.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 72.89,
+        "catTreeAndWandPx": 222.89,
+        "sideTablePx": 52.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 171.09,
+          "top": 518.49,
+          "right": 311.31,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 222.89,
+        "fixedRoomBowlsClearancePx": 72.89,
+        "sideTableClearancePx": 52.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 72.89,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+        "sha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 136,
+          "top": 72,
+          "right": 887,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 139,
+          "top": 74,
+          "right": 885,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 18526
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 565.78,
+          "top": 1030.78,
+          "right": 873.81,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 567.01,
+          "top": 1031.6,
+          "right": 872.99,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 573.78,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 865.81,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 100.78,
+        "catTreeAndWandPx": 250.78,
+        "sideTablePx": 81.19
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 181.83,
+          "top": 478.85,
+          "right": 300.42,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 250.78,
+        "fixedRoomBowlsClearancePx": 100.78,
+        "sideTableClearancePx": 81.19,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 100.78,
+        "catTreeAndWandClearancePx": 250.78,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 142,
+          "top": 72,
+          "right": 882,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 142,
+          "top": 73,
+          "right": 880,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 22198
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 538.24,
+          "top": 1030.78,
+          "right": 841.76,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.24,
+          "top": 1031.19,
+          "right": 840.94,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 546.24,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 833.76,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 73.24,
+        "catTreeAndWandPx": 223.24,
+        "sideTablePx": 113.24
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 616,
+        "coverScale": 0.39,
+        "cropOffset": {
+          "x": 36,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 171.22,
+          "top": 478.85,
+          "right": 288.08,
+          "bottom": 619.08
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 223.24,
+        "fixedRoomBowlsClearancePx": 73.24,
+        "sideTableClearancePx": 113.24,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sit--master-1024--non-shipping-v01.png",
+        "sha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 218,
+          "top": 72,
+          "right": 805,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 219,
+          "top": 75,
+          "right": 803,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 12874
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 563.38,
+          "top": 1012.57,
+          "right": 816.18,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 563.82,
+          "top": 1013.86,
+          "right": 815.32,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 571.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 808.18,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 98.38,
+        "catTreeAndWandPx": 248.38,
+        "sideTablePx": 138.82
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 198.89,
+          "top": 527.53,
+          "right": 310.12,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 248.38,
+        "fixedRoomBowlsClearancePx": 98.38,
+        "sideTableClearancePx": 138.82,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 424,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 71,
+          "top": 427,
+          "right": 954,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 10656
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1164.16,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 500.08,
+          "top": 1165.46,
+          "right": 880.35,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 170.47,
+          "top": 594.23,
+          "right": 338.73,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--walk--master-1024--non-shipping-v01.png",
+        "sha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 359,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 79,
+          "top": 360,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 16115
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 498.79,
+          "top": 1136.17,
+          "right": 881.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 503.52,
+          "top": 1136.6,
+          "right": 880.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 506.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 873.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 33.79,
+        "catTreeAndWandPx": 183.79,
+        "sideTablePx": 73.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 170.47,
+          "top": 581.91,
+          "right": 338.73,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 183.79,
+        "fixedRoomBowlsClearancePx": 33.79,
+        "sideTableClearancePx": 73.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+        "sha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 433,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 437,
+          "right": 953,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 15229
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1168.04,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.22,
+          "top": 1169.76,
+          "right": 909.92,
+          "bottom": 1394.57
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.43,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 183.67,
+          "top": 595.94,
+          "right": 351.93,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 63.79,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+        "sha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 120,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 121,
+          "right": 954,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 19971
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 528.79,
+          "top": 1033.24,
+          "right": 911.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 529.65,
+          "top": 1033.67,
+          "right": 910.35,
+          "bottom": 1393.71
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.29,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 536.79,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 903.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 63.79,
+        "catTreeAndWandPx": 213.79,
+        "sideTablePx": 43.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 183.67,
+          "top": 536.63,
+          "right": 351.93,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 213.79,
+        "fixedRoomBowlsClearancePx": 63.79,
+        "sideTableClearancePx": 43.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 63.79,
+        "catTreeAndWandClearancePx": 213.79,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 247,
+          "top": 72,
+          "right": 776,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 270,
+          "top": 73,
+          "right": 773,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 11224
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 441,
+        "minhoRelativePhysicalScale": 1.05,
+        "morphologyPolicy": "Substantial adult body remains visibly heavier than Minho and Li Hua without becoming British-cobby.",
+        "visibleBoundsInRoom": {
+          "left": 575.87,
+          "top": 1012.57,
+          "right": 803.7,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 585.78,
+          "top": 1013,
+          "right": 802.4,
+          "bottom": 1394.14
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.86,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 583.87,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 795.7,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 110.87,
+        "catTreeAndWandPx": 260.87,
+        "sideTablePx": 151.3
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 204.38,
+          "top": 527.53,
+          "right": 304.63,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": false,
+        "catTreeAndWandClearancePx": 260.87,
+        "fixedRoomBowlsClearancePx": 110.87,
+        "sideTableClearancePx": 151.3,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sit--master-1024--non-shipping-v01.png",
+        "sha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 171,
+          "top": 72,
+          "right": 853,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 173,
+          "top": 73,
+          "right": 852,
+          "bottom": 959
+        },
+        "partialAlphaPixelCount": 16339
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 550.14,
+          "top": 1030.78,
+          "right": 829.86,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 550.96,
+          "top": 1031.19,
+          "right": 829.45,
+          "bottom": 1394.59
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.41,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 558.14,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 821.86,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 85.14,
+        "catTreeAndWandPx": 235.14,
+        "sideTablePx": 125.14
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 193.06,
+          "top": 535.54,
+          "right": 316.14,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 235.14,
+        "fixedRoomBowlsClearancePx": 85.14,
+        "sideTableClearancePx": 125.14,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+        "sha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 390,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 70,
+          "top": 391,
+          "right": 956,
+          "bottom": 960
+        },
+        "partialAlphaPixelCount": 14417
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 507.89,
+          "top": 1161.21,
+          "right": 872.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 508.71,
+          "top": 1161.62,
+          "right": 872.11,
+          "bottom": 1395
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 515.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 864.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 42.89,
+        "catTreeAndWandPx": 192.89,
+        "sideTablePx": 82.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 174.47,
+          "top": 592.93,
+          "right": 334.73,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 192.89,
+        "fixedRoomBowlsClearancePx": 42.89,
+        "sideTableClearancePx": 82.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--walk--master-1024--non-shipping-v01.png",
+        "sha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 96,
+          "top": 72,
+          "right": 927,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 97,
+          "top": 74,
+          "right": 910,
+          "bottom": 957
+        },
+        "partialAlphaPixelCount": 23822
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 519.38,
+          "top": 1030.78,
+          "right": 860.21,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 519.79,
+          "top": 1031.6,
+          "right": 853.24,
+          "bottom": 1393.77
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 1.23,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 527.38,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 852.21,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 54.38,
+        "catTreeAndWandPx": 204.38,
+        "sideTablePx": 94.79
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 179.53,
+          "top": 535.54,
+          "right": 329.49,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 204.38,
+        "fixedRoomBowlsClearancePx": 54.38,
+        "sideTableClearancePx": 94.79,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+        "sha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 68,
+          "top": 323,
+          "right": 956,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 69,
+          "top": 324,
+          "right": 954,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 20943
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 537.89,
+          "top": 1133.73,
+          "right": 902.11,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.3,
+          "top": 1134.14,
+          "right": 901.29,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "integrated-bowl-side",
+            "x": 545.89,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 894.11,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 72.89,
+        "catTreeAndWandPx": 222.89,
+        "sideTablePx": 52.89
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 187.67,
+          "top": 580.84,
+          "right": 347.93,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 222.89,
+        "fixedRoomBowlsClearancePx": 72.89,
+        "sideTableClearancePx": 52.89,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one matte food bowl",
+        "roomBowlClearancePx": 72.89,
+        "bowlRestsOnRug": true,
+        "duplicateRoomBowlSetAvoided": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+        "sha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 136,
+          "top": 72,
+          "right": 887,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 139,
+          "top": 74,
+          "right": 885,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 18526
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 720,
+          "y": 1395
+        },
+        "anchorReason": "50 px right shift separates the integrated bowl/yarn from the fixed room bowls while retaining breed scale.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 565.78,
+          "top": 1030.78,
+          "right": 873.81,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 567.01,
+          "top": 1031.6,
+          "right": 872.99,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 720,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "yarn-side",
+            "x": 573.78,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 865.81,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 100.78,
+        "catTreeAndWandPx": 250.78,
+        "sideTablePx": 81.19
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 199.94,
+          "top": 535.54,
+          "right": 335.48,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 250.78,
+        "fixedRoomBowlsClearancePx": 100.78,
+        "sideTableClearancePx": 81.19,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": "one yarn ball with attached short strand",
+        "roomBowlClearancePx": 100.78,
+        "catTreeAndWandClearancePx": 250.78,
+        "yarnRestsOnRug": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "master": {
+        "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--gaze--master-1024--non-shipping-v01.png",
+        "sha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+        "unchanged": true,
+        "visibleAlphaBounds": {
+          "left": 142,
+          "top": 72,
+          "right": 882,
+          "bottom": 960
+        },
+        "opaqueAlphaBoundsAt250": {
+          "left": 142,
+          "top": 73,
+          "right": 880,
+          "bottom": 958
+        },
+        "partialAlphaPixelCount": 22198
+      },
+      "placement": {
+        "masterBottomCenterAnchor": {
+          "x": 512,
+          "y": 960
+        },
+        "roomBottomCenterAnchor": {
+          "x": 690,
+          "y": 1395
+        },
+        "anchorReason": "Approved shared home bottom-center anchor.",
+        "displayCanvasPx": 420,
+        "minhoRelativePhysicalScale": 1,
+        "morphologyPolicy": "Adult skeletal scale stays at the Minho baseline while long legs, narrow waist, defined shoulders, and lower body mass remain unthickened.",
+        "visibleBoundsInRoom": {
+          "left": 538.24,
+          "top": 1030.78,
+          "right": 841.76,
+          "bottom": 1395
+        },
+        "opaqueBoundsInRoomAt250": {
+          "left": 538.24,
+          "top": 1031.19,
+          "right": 840.94,
+          "bottom": 1394.18
+        }
+      },
+      "support": {
+        "surface": "woven-rug",
+        "visibleSupportGapPx": 0,
+        "opaqueSupportGapPx": 0.82,
+        "points": [
+          {
+            "id": "master-anchor",
+            "x": 690,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "left-support",
+            "x": 546.24,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          },
+          {
+            "id": "right-support",
+            "x": 833.76,
+            "y": 1395,
+            "surface": "woven-rug",
+            "insideSupportEllipse": true
+          }
+        ],
+        "pass": true
+      },
+      "clearance": {
+        "fixedRoomBowlsPx": 73.24,
+        "catTreeAndWandPx": 223.24,
+        "sideTablePx": 113.24
+      },
+      "collision": {
+        "fixtures": {
+          "catTreeAndWand": false,
+          "fixedRoomBowls": false,
+          "sideTable": false
+        },
+        "bottomNavigationReserve": false,
+        "safeAreaPass": true,
+        "furnitureCollisionPass": true
+      },
+      "viewportMapping": {
+        "roomHeight": 704,
+        "coverScale": 0.44,
+        "cropOffset": {
+          "x": 49,
+          "y": 0
+        },
+        "mappedBounds": {
+          "left": 187.83,
+          "top": 535.54,
+          "right": 321.37,
+          "bottom": 695.8
+        },
+        "cropped": false,
+        "pass": true
+      },
+      "hardEdgeAppearance": {
+        "result": "soft-alpha-pass-with-dense-detail-warning",
+        "pass": true,
+        "note": "The unchanged v1 partial-alpha edge remains soft at normal mobile size. Fine fur detail is denser than the room wash but does not materially read as a hard photoreal cutout."
+      },
+      "activeTailAudit": {
+        "applicable": true,
+        "catTreeAndWandClearancePx": 223.24,
+        "fixedRoomBowlsClearancePx": 73.24,
+        "sideTableClearancePx": 113.24,
+        "safeAreaPass": true,
+        "noFixtureIntersection": true,
+        "pass": true
+      },
+      "contactShadow": {
+        "used": false,
+        "necessary": false,
+        "reason": "Visible alpha reaches the rug baseline, load-bearing paws/torso or integrated prop visibly contact the woven texture, and no floating gap appears."
+      },
+      "poseSpecific": {
+        "integratedProp": null,
+        "pass": true
+      },
+      "pass": true
+    }
+  ]
+}

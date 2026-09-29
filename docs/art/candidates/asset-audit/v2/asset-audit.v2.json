@@ -1,0 +1,1103 @@
+{
+  "schemaVersion": 2,
+  "auditId": "bravecat-generation-closure-audit-v2",
+  "status": "NON-SHIPPING / AUDIT-ONLY",
+  "auditedAt": "2026-07-21",
+  "repository": {
+    "worktree": "/Users/moon/Documents/Code/BraveCat-home-screen-v1",
+    "branch": "art/home-screen-v1",
+    "head": "8b2d00e3dd1272e9a3dde885ba4b31e39b004a2d"
+  },
+  "deliverables": {
+    "humanReadable": "docs/art/candidates/asset-audit/v2/README.md",
+    "machineReadable": "docs/art/candidates/asset-audit/v2/asset-audit.v2.json"
+  },
+  "closureVerdict": {
+    "value": "GENERATION_CLOSED",
+    "launchNowImageArtBatchCount": 0,
+    "launchNowImageArtBatches": [],
+    "remainingDecisionFreeUserVisibleArtAssets": [],
+    "remainingDecisionFreeRequiredAcceptanceArtifacts": [],
+    "statement": "No launch-now image or art batch remains. All decision-free candidate generation and required generation QA identified by audit v1 has materialized. Issue #19 is not shipping-closed because visual approval, integration, policy, licensing, rights, and Souvenir-content gates remain."
+  },
+  "statusLegend": {
+    "complete": "No additional art, acceptance artifact, selection, or integration action is required for this row.",
+    "needs-human-selection": "Candidate art and machine evidence are complete; a user must select or approve the visual result before integration.",
+    "launch-now": "A decision-free image or art batch is still missing and can be started immediately.",
+    "blocked": "A product, content-policy, legal, licensing, or user decision must occur before the next art or shipping step.",
+    "integration-only": "Art and approvals are complete; only app or production integration remains.",
+    "superseded": "The evidence or candidate family is noncanonical and retained only for provenance."
+  },
+  "scope": {
+    "sourceAudit": "docs/art/candidates/asset-audit/v1/",
+    "assetNeedCount": 19,
+    "screenStateCount": 45,
+    "sourcesRead": [
+      "AGENTS.md and docs/agents/issue-tracker.md",
+      "README.md and CONTEXT.md",
+      "GitHub issues #1, #2, #7, and #19, including comments",
+      "docs/adr/0001-postcards-are-composited-not-generated.md",
+      "docs/adr/0002-local-first-no-accounts.md",
+      "docs/adr/0003-schedule-departure-before-planning-trip.md",
+      "docs/art/calibration-production-v1.md",
+      "docs/art/prompt-pack.calibration.v1.json",
+      "docs/art/asset-manifest.v1.template.json",
+      "tracked landmark archive, production manifests, visual/composite approvals, supersession, and rights review",
+      "all 29 files under src/",
+      "index.html, vite.config.ts, public/icon.svg, and current asset declarations",
+      "every completed candidate pack listed in completedCandidateRoots"
+    ],
+    "completedCandidateRoots": [
+      "docs/art/candidates/home/v1/",
+      "docs/art/candidates/home/v2/",
+      "docs/art/candidates/home/v3/",
+      "docs/art/candidates/home/v4/",
+      "docs/art/candidates/home/v5/",
+      "docs/art/candidates/home/v6/",
+      "docs/art/candidates/shop/v1/",
+      "docs/art/candidates/shop/v2/",
+      "docs/art/candidates/pack/v1/",
+      "docs/art/candidates/pack/v2/",
+      "docs/art/candidates/pack/v3/",
+      "docs/art/candidates/postcard-gifts/v1/",
+      "docs/art/candidates/postcard-status/v1/",
+      "docs/art/candidates/app-identity/v1/",
+      "docs/art/candidates/adoption/v1/",
+      "docs/art/candidates/system-states/v1/",
+      "docs/art/candidates/ui-surfaces/v1/",
+      "docs/art/candidates/ui-glyphs/v1/",
+      "docs/art/candidates/cats/british-shorthair/v1/",
+      "docs/art/candidates/cats/british-shorthair/v2/",
+      "docs/art/candidates/cats/domestic-shorthair/v1/",
+      "docs/art/candidates/cats/domestic-shorthair/v2/",
+      "docs/art/candidates/cats/silhouette-variety/v1/",
+      "docs/art/candidates/cats/silhouette-variety/v2/",
+      "docs/art/candidates/cats/cross-time-qa/v1/"
+    ],
+    "completedCandidateFileCountIncludingHygieneFindings": 938
+  },
+  "canonicalOwnership": {
+    "starterItems": {
+      "status": "verified",
+      "canonicalCandidateFamily": "docs/art/candidates/shop/v2/",
+      "canonicalMasterRoot": "docs/art/candidates/shop/v2/masters/",
+      "canonicalFamilyIsSolePromotionSource": true,
+      "ids": [
+        "fish-biscuit",
+        "travel-tin",
+        "small-blanket",
+        "yarn-ball",
+        "small-bell",
+        "small-camera",
+        "small-telescope",
+        "ticket"
+      ],
+      "consumer": "docs/art/candidates/pack/v3/",
+      "consumerHashValidation": "pass: 8/8 shop/v2 master hashes match pack/v3 placement-transforms.v3.json and qa-report.v3.json",
+      "supersededFamilies": [
+        {
+          "path": "docs/art/candidates/shop/v1/",
+          "state": "SUPERSEDED",
+          "reason": "shop/v2 manifest explicitly supersedes shop/v1 after deterministic edge cleanup"
+        },
+        {
+          "path": "docs/art/candidates/postcard-gifts/v1/masters/items/",
+          "state": "SUPERSEDED FOR STARTER-ITEM PRODUCT CONTENT",
+          "reason": "the eight starter-item files are byte-different duplicate candidates and are prohibited as a Shop or Pack promotion source"
+        },
+        {
+          "path": "docs/art/candidates/pack/v2/",
+          "state": "SUPERSEDED FOR PRODUCT CONTENT",
+          "reason": "pack/v2 consumed postcard-gifts duplicate starter items; pack/v3 retains only its capacity, containment, z-order, occlusion, and visibility method"
+        }
+      ],
+      "records": [
+        "docs/art/candidates/shop/v2/manifest.v2.json",
+        "docs/art/candidates/shop/v2/data-key-image-mapping.v2.json",
+        "docs/art/candidates/pack/v3/manifest.v3.json",
+        "docs/art/candidates/pack/v3/placement-transforms.v3.json",
+        "docs/art/candidates/pack/v3/supersession.v3.json",
+        "docs/art/candidates/pack/v3/qa-report.v3.json"
+      ]
+    },
+    "treatCurrency": {
+      "smallGlyphRoot": "docs/art/candidates/postcard-gifts/v1/runtime/items/",
+      "shopV2Dependency": "reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+      "windowsillTrayRoot": "docs/art/candidates/home/v4/state-art/",
+      "note": "The single-fish currency glyph and the perspective-matched sill tray are complementary roles, not duplicate starter-item families."
+    }
+  },
+  "coverageClosure": {
+    "requiredViewports": {
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "result": "complete-for-defined-batch-contracts",
+      "evidence": [
+        "Home v5: sleep, play, eat, away, and collectible-ready at 320x700, 390x844, and 430x932",
+        "Home v6: corrected eat state at 320x700, 390x844, and 430x932",
+        "Shop v2: 320x700, 390x844, and 430x932",
+        "Pack v3: empty, populated, selected, and scroll at all three widths",
+        "Postcard-status v1: unavailable Postcard and Album-empty at all three widths",
+        "Adoption v1: 320 validation and keyboard states, 390 default, and 430 transition",
+        "System-states v1: both loading candidates at 320, 390, and 430",
+        "All cat v2 supplements: every identity and all six poses at 320, 390, and 430",
+        "Cross-time QA: exhaustive 390 coverage plus defined 320/430 late-night stress coverage"
+      ]
+    },
+    "homeTimeStates": {
+      "states": [
+        "morning",
+        "noon",
+        "dusk",
+        "late-night"
+      ],
+      "result": "complete-pending-human-approval",
+      "evidence": [
+        "home/v3 reconstructs every approved v2 state pixel-exactly",
+        "cross-time-qa primary grid passes 120/120: ten cats x three Home activities x four times at 390x844",
+        "cross-time-qa late-night stress grid passes 18/18 at 320x700 and 430x932"
+      ]
+    },
+    "homeActivities": {
+      "states": [
+        "sleep",
+        "play",
+        "eat"
+      ],
+      "result": "complete-pending-human-approval",
+      "evidence": [
+        "home/v5 closes AA-002 for all three activities and three required widths",
+        "home/v6 supersedes only v5 eat evidence and leaves v5 sleep/play evidence canonical",
+        "home/v6 shows exactly two visible vessels with zero changed pixels outside the declared patch"
+      ]
+    },
+    "physicalLawCorrections": {
+      "result": "complete-pending-human-approval",
+      "evidence": [
+        "away Note is supported on the Windowsill at 320/390/430 with minimum margins 4.411/5.424/6.199 px",
+        "Treat tray remains inside the sill at 320/390/430 with minimum margins 5.064/6.227/7.116 px",
+        "v6 preserves the room water bowl and Minho baked bowl, removes only the superseded food bowl, and keeps 9.439 px minimum rug-edge clearance",
+        "Pack v3 validates three non-overlapping slots, centers of gravity, and foreground-rim occlusion"
+      ]
+    },
+    "tenCatCoverage": {
+      "result": "complete-as-candidate-evidence-blocked-from-promotion",
+      "identityCount": 10,
+      "identities": [
+        "minho",
+        "golden-shaded",
+        "blue-golden-shaded",
+        "solid-blue",
+        "blue-white-bicolor",
+        "orange-tabby",
+        "li-hua",
+        "maine-coon",
+        "ragdoll",
+        "siamese"
+      ],
+      "poseMasterCount": 60,
+      "candidatePoseMasterCount": 54,
+      "productionMinhoPoseMasterCount": 6,
+      "perFamilyAcceptance": {
+        "britishShorthair": "72/72",
+        "domesticShorthair": "36/36",
+        "silhouetteVariety": "54/54",
+        "crossTimePrimary": "120/120",
+        "crossTimeLateNightResponsiveStress": "18/18"
+      },
+      "promotionBlocker": "Issue #2 prohibits invented preset cats until an explicit content-policy change is recorded."
+    }
+  },
+  "assetNeeds": [
+    {
+      "id": "AA-001",
+      "title": "Home room and four time-state layers",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "home/v3 layer-ready interior, four exteriors, three lighting overlays, and four exact reconstructions",
+        "cross-time-qa 120/120 four-time activity grid"
+      ],
+      "gates": [
+        "final Home visual approval",
+        "production export and runtime integration"
+      ]
+    },
+    {
+      "id": "AA-002",
+      "title": "Home activity grounding and per-pose fit",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "home/v5 marks AA-002 closed",
+        "home/v6 is the canonical eat correction; v5 remains canonical for sleep and play"
+      ],
+      "gates": [
+        "final Home visual approval",
+        "runtime placement integration"
+      ]
+    },
+    {
+      "id": "AA-003",
+      "title": "Physically supported away Note",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "home/v5 supported Windowsill placement at all required widths",
+        "live-copy safe zone and support margins are recorded"
+      ],
+      "gates": [
+        "final Home visual approval",
+        "live text transform integration"
+      ]
+    },
+    {
+      "id": "AA-004",
+      "title": "Treat currency and Windowsill collectible family",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "postcard-gifts/v1 has 24, 32, and 96 px dried-fish derivatives",
+        "home/v4-v5 has the perspective-matched 512/128 sill tray",
+        "shop/v2 hash-verifies and reuses the shared 32 px Treat glyph"
+      ],
+      "gates": [
+        "visual approval",
+        "emoji replacement and runtime integration"
+      ]
+    },
+    {
+      "id": "AA-005",
+      "title": "Home navigation icon family",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "home/v3 has Pack, Shop, and Album 512/128 candidates",
+        "home/v5 reuses them at 320, 390, and 430"
+      ],
+      "gates": [
+        "visual approval",
+        "Unicode-token replacement"
+      ]
+    },
+    {
+      "id": "AA-006",
+      "title": "Bootstrap loading vignette",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "system-states/v1 contains letter-tray and house-box candidates with 512/256/128 exports",
+        "both candidates pass 320, 390, and 430 loading evidence with zero layout jump"
+      ],
+      "gates": [
+        "choose letter-tray or house-box",
+        "loading-state integration"
+      ]
+    },
+    {
+      "id": "AA-007",
+      "title": "Eight starter-item icons and Shop thumbnails",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "shop/v2 is the canonical 8/8 family",
+        "46 px legibility and 320/390/430 reviews pass",
+        "pack/v3 consumes only shop/v2 hashes"
+      ],
+      "gates": [
+        "visual approval",
+        "public runtime export and imageSrc rendering"
+      ]
+    },
+    {
+      "id": "AA-008",
+      "title": "Shop shelf and product-card accents",
+      "status": "complete",
+      "generationRemaining": false,
+      "evidence": [
+        "shop/v1-v2 review found no demonstrated need for a separate shelf, blank card, lock, or purchase-state accent",
+        "responsive semantic card chrome remains correctly owned by CSS"
+      ],
+      "gates": []
+    },
+    {
+      "id": "AA-009",
+      "title": "Open Pack layered container",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "pack/v1 provides the retained base, hinge, three-slot contract, and foreground rim",
+        "pack/v3 supplies canonical shop/v2 population evidence and 12 mobile reviews"
+      ],
+      "gates": [
+        "visual approval",
+        "Pack compositor and drawer integration"
+      ]
+    },
+    {
+      "id": "AA-010",
+      "title": "Postcard stationery, holder, postmark, and unavailable presentation",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "postcard-gifts/v1 provides stationery, stack, and envelope/pocket layers",
+        "postcard-status/v1 provides postmark and intentional unavailable fallback at 320/390/430"
+      ],
+      "gates": [
+        "visual approval",
+        "Postcard component integration",
+        "landmark shipping remains a separate AA-013 blocker"
+      ]
+    },
+    {
+      "id": "AA-011",
+      "title": "Album empty and incoming-Postcard illustration",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "postcard-status/v1 documents reuse rejection and a dedicated open-empty Album",
+        "zero-Postcard reviews pass at 320/390/430"
+      ],
+      "gates": [
+        "visual approval",
+        "Album empty-state integration"
+      ]
+    },
+    {
+      "id": "AA-012",
+      "title": "Destination Souvenir art",
+      "status": "blocked",
+      "generationRemaining": false,
+      "evidence": [
+        "STARTER_CATALOG.souvenirs is empty",
+        "selectTripContent returns souvenirIds: []",
+        "no receive/list/detail renderer exists"
+      ],
+      "gates": [
+        "destination-to-Souvenir roster",
+        "stable IDs and names",
+        "object-specific cultural and rights briefs",
+        "selection and Album product behavior"
+      ]
+    },
+    {
+      "id": "AA-013",
+      "title": "Shipping-eligible Postcard Scene set",
+      "status": "blocked",
+      "generationRemaining": false,
+      "evidence": [
+        "20-destination/48-scene runtime set exists but shippingEligible is false",
+        "current 48-scene Minho composite sheets exist and await approval because the earlier approval was superseded after Portrait bytes changed",
+        "25-destination/61-scene v3 candidate set includes 13 new scenes pending visual, composite, and rights review"
+      ],
+      "gates": [
+        "global provenance remediation",
+        "destination-specific rights remediation",
+        "counsel or permission for high/blocked landmarks",
+        "exact-set visual and composite approval",
+        "explicit shipping approval"
+      ]
+    },
+    {
+      "id": "AA-014",
+      "title": "App identity and install-icon suite",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "app-identity/v1 contains complete Candidate A and B master/runtime/proof/mockup suites",
+        "mask and 32/48 px checks pass"
+      ],
+      "gates": [
+        "choose Candidate A or B",
+        "favicon, Apple, and PWA manifest integration"
+      ]
+    },
+    {
+      "id": "AA-015",
+      "title": "First-run adoption presentation",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "adoption/v1 contains a 1200x1600 base, layer metadata, and 320/390/430 state evidence",
+        "Minho remains hash-verified and unchanged"
+      ],
+      "gates": [
+        "visual approval",
+        "adoption layout integration"
+      ]
+    },
+    {
+      "id": "AA-016",
+      "title": "Offline handwriting and stamp typography",
+      "status": "blocked",
+      "generationRemaining": false,
+      "evidence": [
+        "runtime still uses generic Songti/system stacks",
+        "no licensed bundled handwriting or stamp font is declared"
+      ],
+      "gates": [
+        "font selection",
+        "license and provenance record",
+        "CJK subset and layout QA",
+        "offline cache integration"
+      ]
+    },
+    {
+      "id": "AA-017",
+      "title": "Reusable paper and wash surface textures",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "ui-surfaces/v1 contains seamless 1x/2x paper and sage wash candidates",
+        "seam, repetition, decoded-pixel, determinism, and contrast checks pass"
+      ],
+      "gates": [
+        "visual approval",
+        "CSS integration",
+        "pre-existing small-caption contrast fixes during integration"
+      ]
+    },
+    {
+      "id": "AA-018",
+      "title": "Utility glyph family",
+      "status": "needs-human-selection",
+      "generationRemaining": false,
+      "evidence": [
+        "ui-glyphs/v1 contains five canonical SVGs and 24/32/128 proofs",
+        "structure, clipping, topology, and contrast checks pass"
+      ],
+      "gates": [
+        "human semantic recognition approval",
+        "accessible-label and control integration",
+        "focus-outline contrast fix during integration"
+      ]
+    },
+    {
+      "id": "AA-019",
+      "title": "Additional Portrait candidate packs",
+      "status": "blocked",
+      "generationRemaining": false,
+      "evidence": [
+        "nine candidate identities each have all six required masters",
+        "all family viewport grids and ten-cat cross-time grids pass"
+      ],
+      "gates": [
+        "explicit change to issue #2 no-invented-presets policy",
+        "user visual selection and approval",
+        "catalog and Portrait chooser integration"
+      ]
+    }
+  ],
+  "screenStates": [
+    {
+      "id": "COV-001",
+      "screenState": "bootstrap/hydrating",
+      "status": "needs-human-selection",
+      "evidence": "system-states/v1 has two complete 320/390/430 candidates"
+    },
+    {
+      "id": "COV-002",
+      "screenState": "adoption/default",
+      "status": "needs-human-selection",
+      "evidence": "adoption/v1 default review and base are complete"
+    },
+    {
+      "id": "COV-003",
+      "screenState": "adoption/validation-error",
+      "status": "needs-human-selection",
+      "evidence": "adoption/v1 320 validation and keyboard safety pass"
+    },
+    {
+      "id": "COV-004",
+      "screenState": "home/sleep",
+      "status": "needs-human-selection",
+      "evidence": "home/v5 and cross-time evidence complete"
+    },
+    {
+      "id": "COV-005",
+      "screenState": "home/play",
+      "status": "needs-human-selection",
+      "evidence": "home/v5 and cross-time evidence complete"
+    },
+    {
+      "id": "COV-006",
+      "screenState": "home/eat",
+      "status": "needs-human-selection",
+      "evidence": "home/v6 and cross-time evidence complete"
+    },
+    {
+      "id": "COV-007",
+      "screenState": "home/waiting",
+      "status": "needs-human-selection",
+      "evidence": "reuses approved activity composition with live copy"
+    },
+    {
+      "id": "COV-008",
+      "screenState": "home/traveling-away",
+      "status": "needs-human-selection",
+      "evidence": "home/v5 supported Note evidence complete"
+    },
+    {
+      "id": "COV-009",
+      "screenState": "home/returned",
+      "status": "needs-human-selection",
+      "evidence": "reuses approved activity composition with live copy"
+    },
+    {
+      "id": "COV-010",
+      "screenState": "windowsill/empty-disabled",
+      "status": "needs-human-selection",
+      "evidence": "bare sill is covered by the pending Home visual approval"
+    },
+    {
+      "id": "COV-011",
+      "screenState": "windowsill/collectible-1-to-24",
+      "status": "needs-human-selection",
+      "evidence": "home/v5 tray evidence passes all required widths"
+    },
+    {
+      "id": "COV-012",
+      "screenState": "topbar/treat-balance",
+      "status": "needs-human-selection",
+      "evidence": "shared dried-fish glyph family is complete"
+    },
+    {
+      "id": "COV-013",
+      "screenState": "topbar/unread-count-and-title",
+      "status": "complete",
+      "evidence": "live numeric UI is the correct implementation"
+    },
+    {
+      "id": "COV-014",
+      "screenState": "home-nav/default",
+      "status": "needs-human-selection",
+      "evidence": "home/v3 icon family is complete"
+    },
+    {
+      "id": "COV-015",
+      "screenState": "home-nav/compact-height",
+      "status": "needs-human-selection",
+      "evidence": "50 px icon evidence is present in 320 reviews"
+    },
+    {
+      "id": "COV-016",
+      "screenState": "developer-clock",
+      "status": "complete",
+      "evidence": "development-only live controls need no art"
+    },
+    {
+      "id": "COV-017",
+      "screenState": "drawer/common-backdrop-handle-header",
+      "status": "needs-human-selection",
+      "evidence": "interaction chrome remains CSS; optional shared surface family awaits approval"
+    },
+    {
+      "id": "COV-018",
+      "screenState": "drawer/close",
+      "status": "needs-human-selection",
+      "evidence": "ui-glyphs/v1 close SVG is complete"
+    },
+    {
+      "id": "COV-019",
+      "screenState": "shop/normal-affordable",
+      "status": "needs-human-selection",
+      "evidence": "shop/v2 canonical items and shared Treat pass"
+    },
+    {
+      "id": "COV-020",
+      "screenState": "shop/unaffordable-disabled",
+      "status": "needs-human-selection",
+      "evidence": "shop/v2 neutral art and live disabled treatment pass"
+    },
+    {
+      "id": "COV-021",
+      "screenState": "shop/owned-and-purchase-feedback",
+      "status": "needs-human-selection",
+      "evidence": "shop/v2 neutral art and live count treatment pass"
+    },
+    {
+      "id": "COV-022",
+      "screenState": "pack/empty",
+      "status": "needs-human-selection",
+      "evidence": "pack/v1 structure and pack/v3 reviews complete"
+    },
+    {
+      "id": "COV-023",
+      "screenState": "pack/available-items",
+      "status": "needs-human-selection",
+      "evidence": "shop/v2 item family and pack/v3 presentation complete"
+    },
+    {
+      "id": "COV-024",
+      "screenState": "pack/one-two-three-items",
+      "status": "needs-human-selection",
+      "evidence": "pack/v3 capacity and physical insertion evidence complete"
+    },
+    {
+      "id": "COV-025",
+      "screenState": "pack/wish-destination-select",
+      "status": "needs-human-selection",
+      "evidence": "ticket remains text-free and destination stays live"
+    },
+    {
+      "id": "COV-026",
+      "screenState": "pack/waiting-editable",
+      "status": "needs-human-selection",
+      "evidence": "same Pack art with live editable state"
+    },
+    {
+      "id": "COV-027",
+      "screenState": "pack/traveling-locked",
+      "status": "needs-human-selection",
+      "evidence": "same Pack art plus pending lock glyph"
+    },
+    {
+      "id": "COV-028",
+      "screenState": "album/empty",
+      "status": "needs-human-selection",
+      "evidence": "postcard-status/v1 explicit zero-Postcard state complete"
+    },
+    {
+      "id": "COV-029",
+      "screenState": "album/populated-development",
+      "status": "needs-human-selection",
+      "evidence": "presentation art exists; development-only Scene rendering remains available"
+    },
+    {
+      "id": "COV-030",
+      "screenState": "album/populated-production",
+      "status": "blocked",
+      "evidence": "landmark shipping gate is false and production strips Scenes"
+    },
+    {
+      "id": "COV-031",
+      "screenState": "postcard/ordinary-scene",
+      "status": "blocked",
+      "evidence": "existing art is blocked by exact-set and rights/shipping gates"
+    },
+    {
+      "id": "COV-032",
+      "screenState": "postcard/companion-scene",
+      "status": "blocked",
+      "evidence": "existing companion variants share the landmark rights/shipping gate"
+    },
+    {
+      "id": "COV-033",
+      "screenState": "postcard/read-unread-transition",
+      "status": "complete",
+      "evidence": "metadata and live badge require no alternate image"
+    },
+    {
+      "id": "COV-034",
+      "screenState": "postcard/message-and-postmark",
+      "status": "blocked",
+      "evidence": "postmark art is complete pending approval; licensed offline typography remains blocked"
+    },
+    {
+      "id": "COV-035",
+      "screenState": "souvenir/receive-list-detail",
+      "status": "blocked",
+      "evidence": "Souvenir roster, art, selection, and renderer are absent"
+    },
+    {
+      "id": "COV-036",
+      "screenState": "save/export-import-idle",
+      "status": "needs-human-selection",
+      "evidence": "export/import SVG candidates are complete"
+    },
+    {
+      "id": "COV-037",
+      "screenState": "save/import-success-error",
+      "status": "complete",
+      "evidence": "live localized notice is appropriate; no unique art is required"
+    },
+    {
+      "id": "COV-038",
+      "screenState": "persistence-load-failure",
+      "status": "complete",
+      "evidence": "live status text is appropriate; no error illustration is required"
+    },
+    {
+      "id": "COV-039",
+      "screenState": "responsive/320px",
+      "status": "needs-human-selection",
+      "evidence": "all defined minimum-width acceptance grids are complete"
+    },
+    {
+      "id": "COV-040",
+      "screenState": "responsive/390x844",
+      "status": "needs-human-selection",
+      "evidence": "all defined common-width acceptance grids are complete"
+    },
+    {
+      "id": "COV-041",
+      "screenState": "responsive/430x932",
+      "status": "needs-human-selection",
+      "evidence": "all defined common-width acceptance grids are complete"
+    },
+    {
+      "id": "COV-042",
+      "screenState": "responsive/470px-and-desktop-inset",
+      "status": "complete",
+      "evidence": "responsive shell and chrome correctly remain CSS"
+    },
+    {
+      "id": "COV-043",
+      "screenState": "reduced-motion",
+      "status": "complete",
+      "evidence": "static art requires no alternate assets"
+    },
+    {
+      "id": "COV-044",
+      "screenState": "pwa/install-launcher",
+      "status": "needs-human-selection",
+      "evidence": "complete Candidate A/B icon suites await selection"
+    },
+    {
+      "id": "COV-045",
+      "screenState": "future/portrait-chooser",
+      "status": "blocked",
+      "evidence": "candidate art exists, but issue #2 policy and chooser/catalog decisions block promotion"
+    }
+  ],
+  "candidateFamilyStatus": [
+    {
+      "path": "docs/art/candidates/home/v1/",
+      "status": "superseded",
+      "scope": "initial two-direction selection evidence"
+    },
+    {
+      "path": "docs/art/candidates/home/v2/",
+      "status": "superseded",
+      "scope": "flattened review sources retained as v3 reconstruction authority"
+    },
+    {
+      "path": "docs/art/candidates/home/v3/",
+      "status": "needs-human-selection",
+      "scope": "canonical layered room and navigation foundation"
+    },
+    {
+      "path": "docs/art/candidates/home/v4/",
+      "status": "superseded",
+      "scope": "v4 cabinet memo placement is superseded by v5; memo/tray source art is retained"
+    },
+    {
+      "path": "docs/art/candidates/home/v5/",
+      "status": "needs-human-selection",
+      "scope": "canonical sleep/play/away/collectible evidence; eat evidence superseded by v6"
+    },
+    {
+      "path": "docs/art/candidates/home/v6/",
+      "status": "needs-human-selection",
+      "scope": "canonical eat evidence"
+    },
+    {
+      "path": "docs/art/candidates/shop/v1/",
+      "status": "superseded",
+      "scope": "superseded by canonical shop/v2"
+    },
+    {
+      "path": "docs/art/candidates/shop/v2/",
+      "status": "needs-human-selection",
+      "scope": "sole canonical starter-item candidate family"
+    },
+    {
+      "path": "docs/art/candidates/pack/v1/",
+      "status": "needs-human-selection",
+      "scope": "retained structural base, hinge, rim, and slot contract"
+    },
+    {
+      "path": "docs/art/candidates/pack/v2/",
+      "status": "superseded",
+      "scope": "product-content evidence only; method retained by v3"
+    },
+    {
+      "path": "docs/art/candidates/pack/v3/",
+      "status": "needs-human-selection",
+      "scope": "canonical populated Pack using shop/v2"
+    },
+    {
+      "path": "docs/art/candidates/postcard-gifts/v1/masters/items/",
+      "status": "superseded",
+      "scope": "eight starter-item duplicates only"
+    },
+    {
+      "path": "docs/art/candidates/postcard-gifts/v1/masters/presentation/",
+      "status": "needs-human-selection",
+      "scope": "stationery, holder, and envelope/pocket presentation"
+    },
+    {
+      "path": "docs/art/candidates/postcard-status/v1/",
+      "status": "needs-human-selection",
+      "scope": "postmark, unavailable fallback, and Album-empty"
+    },
+    {
+      "path": "docs/art/candidates/app-identity/v1/",
+      "status": "needs-human-selection",
+      "scope": "choose Candidate A or B"
+    },
+    {
+      "path": "docs/art/candidates/adoption/v1/",
+      "status": "needs-human-selection",
+      "scope": "single adoption presentation candidate"
+    },
+    {
+      "path": "docs/art/candidates/system-states/v1/",
+      "status": "needs-human-selection",
+      "scope": "choose letter-tray or house-box"
+    },
+    {
+      "path": "docs/art/candidates/ui-surfaces/v1/",
+      "status": "needs-human-selection",
+      "scope": "paper and optional sage wash"
+    },
+    {
+      "path": "docs/art/candidates/ui-glyphs/v1/",
+      "status": "needs-human-selection",
+      "scope": "five authored utility SVGs"
+    },
+    {
+      "path": "docs/art/candidates/cats/",
+      "status": "blocked",
+      "scope": "candidate art and QA complete; promotion blocked by issue #2 policy and visual approval"
+    },
+    {
+      "path": "docs/art/candidates/landmarks/",
+      "status": "blocked",
+      "scope": "existing 48 and candidate 61 sets are blocked by exact-set review and rights/shipping gates"
+    }
+  ],
+  "remainingWork": {
+    "launchNowImageArtBatches": [],
+    "humanSelectionGates": [
+      "Approve the canonical Home stack: v3 foundation, v5 sleep/play/away/collectible, v6 eat, and cross-time evidence.",
+      "Approve shop/v2 as the visual starter-item family.",
+      "Approve pack/v1 structure plus pack/v3 canonical populated results.",
+      "Approve postcard-gifts presentation and Treat art while excluding its starter-item duplicates.",
+      "Approve postcard-status postmark, unavailable fallback, and Album-empty art.",
+      "Choose app-identity Candidate A or B.",
+      "Approve adoption/v1.",
+      "Choose system-states letter-tray or house-box.",
+      "Approve ui-surfaces/v1.",
+      "Approve ui-glyphs/v1 semantic recognition.",
+      "Approve the exact current 48-scene Minho composite set; the prior approval is superseded.",
+      "Select the 13 new landmark v3 scenes before any 61-scene composite QA.",
+      "If issue #2 is changed, visually select the nine candidate cat identities before promotion."
+    ],
+    "blockedGates": [
+      "Destination Souvenir roster and object rights briefs",
+      "Landmark provenance, permissions/counsel, exact-set approvals, and shipping authorization",
+      "Licensed offline handwriting/stamp font selection and provenance",
+      "Issue #2 content-policy change for invented preset cats"
+    ],
+    "integrationBacklogAfterApproval": [
+      "Export and promote selected candidate files into production/public roots with production manifests.",
+      "Replace CSS Home scenery, Note, tray, navigation tokens, and activity placement with selected layered assets.",
+      "Copy only shop/v2 runtime item exports to public/assets/items and render item.imageSrc in Shop and Pack.",
+      "Implement Pack base/items/rim compositing from pack/v1 and pack/v3 metadata.",
+      "Integrate loading, adoption, Postcard presentation/status, Album-empty, UI surfaces, and glyph SVGs.",
+      "Replace favicon, Apple touch icon, and PWA manifest icons with the selected app-identity family.",
+      "Resolve caption/focus contrast advisories while integrating surfaces and glyphs.",
+      "Integrate bundled font assets only after license selection.",
+      "Add Portrait catalog/chooser only after content-policy approval.",
+      "Add Souvenir selection and Album rendering only after the roster is locked."
+    ],
+    "integrationOnlyCurrentRows": [],
+    "integrationOnlyExplanation": "No affected art row is currently integration-only because each still has an earlier visual, policy, licensing, or legal gate. After those gates close, the corresponding work becomes integration-only without another image batch."
+  },
+  "candidateHygiene": {
+    "result": "cleanup-required",
+    "exactFindings": [
+      {
+        "path": "docs/art/candidates/home/v3/.DS_Store",
+        "kind": "finder-metadata",
+        "bytes": 6148,
+        "sha256": "3a85aedf2650f723ea20259f29f337e2d9c9d18f7c2fcfedecaadb3cee2688b7",
+        "manifestReferenced": false,
+        "safeCleanup": "delete this exact .DS_Store file"
+      },
+      {
+        "path": "docs/art/candidates/home/v5/scripts/__pycache__/build_v5.cpython-314.pyc",
+        "kind": "python-bytecode-cache",
+        "bytes": 72437,
+        "sha256": "7a3e6e22852e6d1f60ca94e60ac7c5c1157d1f5a2c3e0515854ec4bbc3fb4472",
+        "manifestReferenced": false,
+        "safeCleanup": "delete the containing __pycache__ directory; rebuild with PYTHONDONTWRITEBYTECODE=1"
+      },
+      {
+        "path": "docs/art/candidates/pack/v1/source/__pycache__/build_pack_candidate.cpython-314.pyc",
+        "kind": "python-bytecode-cache",
+        "bytes": 61977,
+        "sha256": "79555f677f1a3e079bd13ea6213aacf66863ceb99a6760e668887a6ecf9a0b1f",
+        "manifestReferenced": false,
+        "safeCleanup": "delete the containing __pycache__ directory; rebuild with PYTHONDONTWRITEBYTECODE=1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--snack--fish-biscuit--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 148722,
+        "sha256": "18819d7abfbef88738f3a7a0c7ee61c274b2144f60e80551b173765c1ada1cfc",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--snack--travel-tin--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 151777,
+        "sha256": "72dc9e32cc9baf87f8da4e54f271676857f58462dc6f21c1ff483353089cb65b",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--toy--small-bell--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 104740,
+        "sha256": "d07ca5327cdbbb12d02d267759e4810fd22459d622cc809ba4dbada4ba3b4897",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--toy--small-blanket--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 203040,
+        "sha256": "88e683e9ae87fac64da329dbfeced93d96b3330f32e8b365441bc2d5b0f8a372",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--toy--small-camera--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 211458,
+        "sha256": "0800e0815a9e90e061a064798037f154556a514565a727bc146ad748e347925c",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--toy--small-telescope--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 92369,
+        "sha256": "186830365405c5324efbb922ec6c764dc99bc0f5be299329bca6d8dc3c42d8a8",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--toy--yarn-ball--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 130303,
+        "sha256": "e0a3412207c222830b28b954acebb38fdba0a22bfe8b2ac2b602a9de3687bda9",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/masters/item--wish--ticket--master-512--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 154769,
+        "sha256": "bc3a8fd0eeb2373564cba4a4012f200522cdbc2f05910121d3e3bbce7f3e3c7b",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/reviews/contact-sheet--shop-products-and-states--1200x1600--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 754541,
+        "sha256": "39bcf523fa8bfc2fa157f098f71e195115bcb55abe1aee3d193c8641dc5811f6",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/reviews/shop-review--390x844--affordable-owned-top--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 146855,
+        "sha256": "f8eced452f33a29a0b361b87c8dc01ed26762d94d4d2d9cd3d80f0f0adc0af85",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      },
+      {
+        "path": "docs/art/candidates/shop/v1/reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v01.png.tmp",
+        "kind": "unmanifested-stale-intermediate",
+        "bytes": 174076,
+        "sha256": "60f34f51672eeb3ea8e3c24f178b21dea457aaafa58b80d0cc97680710bad5f0",
+        "byteIdenticalToFinalCounterpart": false,
+        "safeCleanup": "delete this exact .tmp file; do not replace the manifest-listed final and do not promote shop/v1"
+      }
+    ],
+    "findingCount": 14,
+    "absentCurrentDebris": [
+      ".tools trees",
+      "virtualenv or site-packages trees",
+      "*.dist-info",
+      "node_modules",
+      "native *.so, *.dylib, *.dll, *.a, or *.o files",
+      "additional debug or diagnostic PNGs"
+    ],
+    "duplicateContentScan": {
+      "accidentalByteIdenticalTransientGroups": 0,
+      "intentionalGroups": [
+        {
+          "paths": [
+            "docs/art/candidates/home/v2/home-room--state-noon--non-shipping-v02.png",
+            "docs/art/candidates/home/v2/home-room--hybrid-reference-noon--non-shipping-v02.png"
+          ],
+          "reason": "documented neutral-reference/noon identity"
+        },
+        {
+          "paths": [
+            "docs/art/candidates/postcard-gifts/v1/qa/immutable-before.sha256",
+            "docs/art/candidates/postcard-gifts/v1/qa/immutable-after.sha256"
+          ],
+          "reason": "successful immutable-boundary proof"
+        },
+        {
+          "paths": [
+            "docs/art/candidates/postcard-status/v1/qa/immutable-before.sha256",
+            "docs/art/candidates/postcard-status/v1/qa/immutable-after.sha256"
+          ],
+          "reason": "successful immutable-boundary proof"
+        }
+      ]
+    }
+  },
+  "verification": {
+    "candidateManifestsParsed": 22,
+    "manifestPathHashPairsVerified": 815,
+    "manifestMissingPaths": 0,
+    "manifestHashMismatches": 0,
+    "hashLedgersParsed": 6,
+    "hashLedgerEntriesVerified": 283,
+    "hashLedgerMissingPaths": 0,
+    "hashLedgerMismatches": 0,
+    "completedPackJsonFilesParsed": 98,
+    "completedPackJsonParseErrors": 0,
+    "canonicalReviewSheetsVisuallyInspected": 17,
+    "canonicalReviewSheetResult": "consistent with the manifests and QA dispositions; all remain non-shipping and selection-gated",
+    "legacyRootsWithoutStandaloneManifest": [
+      {
+        "path": "docs/art/candidates/home/v1/",
+        "disposition": "superseded selection direction; no active generation gap"
+      },
+      {
+        "path": "docs/art/candidates/home/v2/",
+        "disposition": "superseded flattened review source; v3 exact reconstruction provides active hash inventory"
+      },
+      {
+        "path": "docs/art/candidates/cats/british-shorthair/v1/",
+        "disposition": "v2 baseline and integrity records hash-lock all 24 source masters and referenced acceptance evidence"
+      }
+    ],
+    "trackedSourceOrProductionDiffBeforeAuditWrite": "none",
+    "imagesGeneratedByAudit": false,
+    "candidateArtEditedByAudit": false,
+    "appCodeEditedByAudit": false,
+    "productionAssetsEditedByAudit": false,
+    "gitHistoryEditedByAudit": false,
+    "commitCreated": false,
+    "authoringBoundary": "docs/art/candidates/asset-audit/v2/",
+    "expectedAuditFiles": [
+      "docs/art/candidates/asset-audit/v2/README.md",
+      "docs/art/candidates/asset-audit/v2/asset-audit.v2.json"
+    ]
+  }
+}

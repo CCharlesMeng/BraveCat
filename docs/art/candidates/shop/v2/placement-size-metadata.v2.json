@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "supersedes": "docs/art/candidates/shop/v1",
+  "coordinateConvention": {
+    "units": "CSS pixels unless marked source pixels",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down"
+  },
+  "cssEvidence": {
+    "source": "src/app.css",
+    "minimumViewportWidth": 320,
+    "appShellMaximumWidth": 470,
+    "drawerMaximumHeight": "min(78dvh, 720px)",
+    "itemCard": {
+      "minimumHeight": 82,
+      "gridTemplateColumns": "48px minmax(0, 1fr) auto",
+      "columnGap": 12,
+      "horizontalPadding": 12,
+      "borderRadius": 17
+    },
+    "itemToken": {
+      "width": 46,
+      "height": 46,
+      "borderRadius": 15
+    },
+    "itemAction": {
+      "minimumWidth": 62,
+      "disabledOpacity": 0.52
+    }
+  },
+  "exports": {
+    "master": {
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "alpha": "straight",
+      "colorProfile": "embedded sRGB",
+      "minimumSafeMarginSourcePixels": 48,
+      "transparentPixelRgb": "zero"
+    },
+    "runtimeCandidate": {
+      "width": 128,
+      "height": 128,
+      "pixelMode": "RGBA",
+      "alpha": "straight",
+      "colorProfile": "embedded sRGB",
+      "intendedCssDisplay": "46x46"
+    },
+    "exact2xReviewDerivative": {
+      "width": 92,
+      "height": 92,
+      "pixelMode": "RGBA",
+      "alpha": "straight",
+      "colorProfile": "embedded sRGB",
+      "intendedCssDisplay": "46x46",
+      "density": "2x"
+    }
+  },
+  "placementIntent": {
+    "replaceOnly": "the character currently rendered inside .item-token",
+    "imageBox": {
+      "width": 46,
+      "height": 46,
+      "objectFit": "contain",
+      "objectPosition": "center"
+    },
+    "preserveAsLiveUi": [
+      "product name",
+      "kind label",
+      "effect hint",
+      "owned count",
+      "price",
+      "affordability shortfall",
+      "button and drawer chrome"
+    ],
+    "codeIntegrated": false
+  },
+  "sharedTreatGlyph": {
+    "source": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+    "copiedIntoShopV2": false,
+    "reviewPlacements": {
+      "balance": {
+        "renderedWidth": 20,
+        "renderedHeight": 20
+      },
+      "priceButton": {
+        "renderedWidth": 14,
+        "renderedHeight": 14
+      }
+    },
+    "emojiPresentInV2Reviews": false
+  },
+  "acceptanceReviews": [
+    {
+      "file": "reviews/shop-review--320x700--mixed-affordability--non-shipping-v02.png",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "drawerTop": 154,
+      "itemTokenSize": "46x46",
+      "catalogSlice": [
+        "small-camera",
+        "small-telescope",
+        "ticket"
+      ],
+      "state": {
+        "treats": 6,
+        "affordable": [
+          "small-camera",
+          "small-telescope"
+        ],
+        "unaffordable": [
+          "ticket"
+        ],
+        "ownedItems": {
+          "small-camera": 1
+        }
+      }
+    },
+    {
+      "file": "reviews/shop-review--390x844--affordable-owned-top--non-shipping-v02.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "drawerTop": 186,
+      "itemTokenSize": "46x46",
+      "catalogSlice": [
+        "fish-biscuit",
+        "travel-tin",
+        "small-blanket",
+        "yarn-ball",
+        "small-bell"
+      ],
+      "state": {
+        "treats": 12,
+        "affordability": "all shown items affordable",
+        "ownedItems": {
+          "fish-biscuit": 2,
+          "small-blanket": 1
+        }
+      }
+    },
+    {
+      "file": "reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v02.png",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "drawerTop": 212,
+      "itemTokenSize": "46x46",
+      "catalogSlice": [
+        "yarn-ball",
+        "small-bell",
+        "small-camera",
+        "small-telescope",
+        "ticket"
+      ],
+      "state": {
+        "treats": 3,
+        "affordability": "all shown items unaffordable",
+        "ownedItems": {
+          "small-camera": 1,
+          "ticket": 1
+        }
+      }
+    }
+  ],
+  "stateFidelity": {
+    "normal": "unchanged item card",
+    "affordable": "enabled action with live numeric price and shared Treat glyph",
+    "unaffordable": "disabled action with live 还差 N text",
+    "purchasedOwned": "live 家里有 N 件 count only",
+    "locked": {
+      "applicableToCurrentShop": false,
+      "inventedTreatment": false
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "coordinateSystem": "pixels from top-left of each named canvas",
+  "postmark": {
+    "master": "masters/postmark--ring-waves--master-768x512--non-shipping-v01.png",
+    "runtime": "runtime/postmark--ring-waves--runtime-120x80--non-shipping-v01.png",
+    "masterCanvas": {
+      "width": 768,
+      "height": 512
+    },
+    "ringBounds": {
+      "x": 361,
+      "y": 75,
+      "width": 362,
+      "height": 362
+    },
+    "liveTextSafeRect": {
+      "x": 430,
+      "y": 178,
+      "width": 224,
+      "height": 156
+    },
+    "runtimeCanvas": {
+      "width": 120,
+      "height": 80
+    },
+    "runtimeRingBounds": {
+      "x": 56,
+      "y": 12,
+      "width": 57,
+      "height": 57
+    },
+    "runtimeLiveTextSafeRect": {
+      "x": 67,
+      "y": 28,
+      "width": 35,
+      "height": 24
+    },
+    "recommendedDisplay": {
+      "widthCssPx": 120,
+      "heightCssPx": 80,
+      "ringDiameterCssPx": 57,
+      "destinationMaxCjkCharacters": 4,
+      "destinationFontCssPx": 7,
+      "dateFontCssPx": 8
+    },
+    "waveDirection": "left from right-side ring",
+    "textBaked": false,
+    "layerOrder": [
+      "Scene or unavailable fallback",
+      "Portrait when policy permits",
+      "live copy and destination",
+      "text-free postmark overlay",
+      "live destination/date inside safe zone"
+    ]
+  },
+  "sceneUnavailable": {
+    "master": "masters/scene--unavailable-covered-photo--master-1200x900--non-shipping-v01.png",
+    "canvas": {
+      "width": 1200,
+      "height": 900
+    },
+    "aspectRatio": "4:3",
+    "pixelMode": "RGB",
+    "alpha": "opaque",
+    "metaphor": "covered photograph window on warm paper",
+    "safeZones": {
+      "portrait": {
+        "x": 42,
+        "y": 470,
+        "width": 350,
+        "height": 365,
+        "anchor": {
+          "x": 210,
+          "y": 812
+        }
+      },
+      "copy": {
+        "x": 406,
+        "y": 668,
+        "width": 395,
+        "height": 168
+      },
+      "postmark": {
+        "x": 912,
+        "y": 654,
+        "width": 238,
+        "height": 182
+      }
+    },
+    "forbiddenBakedContent": [
+      "landmark",
+      "Scene",
+      "cat",
+      "destination",
+      "date",
+      "copy",
+      "postmark",
+      "warning text",
+      "pseudo-text",
+      "UI",
+      "emoji"
+    ],
+    "currentUiUse": "replace only the 4:3 .non-shipping-preview picture plane; message panel remains live below",
+    "objectFit": "contain; do not crop safe zones"
+  },
+  "albumEmpty": {
+    "master": "masters/album--empty-open--master-512--non-shipping-v01.png",
+    "runtime": "runtime/album--empty-open--runtime-256--non-shipping-v01.png",
+    "canvas": {
+      "width": 512,
+      "height": 512
+    },
+    "subjectBounds": {
+      "x": 52,
+      "y": 219,
+      "width": 408,
+      "height": 241
+    },
+    "safeMargins": {
+      "left": 52,
+      "top": 219,
+      "right": 52,
+      "bottom": 52
+    },
+    "liveHeadingHintQuietZone": {
+      "x": 0,
+      "y": 0,
+      "width": 512,
+      "height": 154
+    },
+    "bottomCenterAnchor": {
+      "x": 256,
+      "y": 460
+    },
+    "physicalRead": "open Album rests flat on its generated warm-paper plane and short contact shadow; all four visible mounts are empty",
+    "textBaked": false,
+    "recommendedDisplayRangeCssPx": [
+      160,
+      192
+    ],
+    "placement": "centered above live empty heading and hint"
+  },
+  "mobileReviews": {
+    "320x700": {
+      "unavailablePostcard": "reviews/320/review--postcard-unavailable--320x700--non-shipping-v01.png",
+      "emptyAlbum": "reviews/320/review--album-empty--320x700--non-shipping-v01.png",
+      "safeSideMarginPx": 24
+    },
+    "390x844": {
+      "unavailablePostcard": "reviews/390/review--postcard-unavailable--390x844--non-shipping-v01.png",
+      "emptyAlbum": "reviews/390/review--album-empty--390x844--non-shipping-v01.png",
+      "safeSideMarginPx": 24
+    },
+    "430x932": {
+      "unavailablePostcard": "reviews/430/review--postcard-unavailable--430x932--non-shipping-v01.png",
+      "emptyAlbum": "reviews/430/review--album-empty--430x932--non-shipping-v01.png",
+      "safeSideMarginPx": 24
+    }
+  },
+  "immutableReviewReuse": {
+    "stackHolder": {
+      "path": "docs/art/candidates/postcard-gifts/v1/masters/presentation/presentation--postcard-stack-holder--master-1200x900--non-shipping-v01.png",
+      "sha256": "7894ebbb16661c85caf2b9544bd6511d12e1a860dce5259bd4848ecf81c8721c",
+      "modified": false
+    },
+    "blankBack": {
+      "path": "docs/art/candidates/postcard-gifts/v1/masters/presentation/presentation--blank-postcard-back--master-1200x900--non-shipping-v01.png",
+      "sha256": "0f974802582f5b8e20641feb63478599a109490987b3c2bdcf6ca7b103149251",
+      "modified": false
+    },
+    "albumNavigation": {
+      "path": "docs/art/candidates/home/v3/icons/nav-icon--album--master-512--non-shipping-v03.png",
+      "sha256": "11cc413967cbeedf30f8c633c235e8afb889479db6367691cde25ddf8fef7b02",
+      "modified": false
+    },
+    "minhoLayerProofOnly": {
+      "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+      "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+      "modified": false
+    }
+  }
+}

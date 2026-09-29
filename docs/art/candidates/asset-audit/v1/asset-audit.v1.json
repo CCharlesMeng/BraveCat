@@ -1,0 +1,2498 @@
+{
+  "schemaVersion": 1,
+  "auditId": "bravecat-repository-art-asset-audit-v1",
+  "status": "NON-SHIPPING / AUDIT-ONLY",
+  "auditedAt": "2026-07-21",
+  "repository": {
+    "worktree": "/Users/moon/Documents/Code/BraveCat-home-screen-v1",
+    "branch": "art/home-screen-v1",
+    "headAtStart": "8b2d00e3dd1272e9a3dde885ba4b31e39b004a2d"
+  },
+  "deliverables": {
+    "humanReadable": "docs/art/candidates/asset-audit/v1/README.md",
+    "machineReadable": "docs/art/candidates/asset-audit/v1/asset-audit.v1.json"
+  },
+  "scope": {
+    "issue": {
+      "number": 19,
+      "title": "完成家的主画面美术与小猫落地",
+      "url": "https://github.com/CCharlesMeng/BraveCat/issues/19"
+    },
+    "sourceGroupsRead": [
+      "CONTEXT.md",
+      "GitHub issue #19 and open issue context",
+      "docs/adr/0001-postcards-are-composited-not-generated.md",
+      "docs/adr/0002-local-first-no-accounts.md",
+      "docs/adr/0003-schedule-departure-before-planning-trip.md",
+      "all tracked docs/art policy, manifest, review, archive, candidate-index, and production metadata",
+      "all 29 files under src, including every test",
+      "tracked public icon, portrait, and scene asset trees",
+      "live untracked home, shop, pack, postcard-gifts, and cat candidate assignments"
+    ],
+    "screenStateCount": 45,
+    "assetNeedCount": 19
+  },
+  "lockedConstraints": {
+    "styleIntensity": "B",
+    "style": [
+      "restrained low-saturation watercolor",
+      "thin warm gray-brown definition",
+      "warm-white paper grain",
+      "generous negative space",
+      "no flat-vector treatment",
+      "no thick black outlines",
+      "no hard digital gradients",
+      "no pseudo-text"
+    ],
+    "scene": {
+      "width": 1200,
+      "height": 900,
+      "aspectRatio": "4:3",
+      "orientation": "landscape",
+      "format": "PNG",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "alpha": "opaque"
+    },
+    "portraitPose": {
+      "width": 1024,
+      "height": 1024,
+      "aspectRatio": "1:1",
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "alpha": "straight RGBA",
+      "safeMarginPx": 64,
+      "transparentPixelRgb": "zero",
+      "requiredPoses": [
+        "sit",
+        "sleep",
+        "walk",
+        "eat",
+        "play",
+        "gaze"
+      ]
+    },
+    "itemOrSouvenir": {
+      "width": 512,
+      "height": 512,
+      "aspectRatio": "1:1",
+      "format": "PNG",
+      "colorSpace": "sRGB",
+      "alpha": "straight RGBA",
+      "safeMarginPx": 48
+    },
+    "postcardRenderOrder": [
+      "scene",
+      "portrait",
+      "copy",
+      "postmark"
+    ],
+    "runtime": [
+      "local-first",
+      "offline-capable",
+      "no production image API"
+    ],
+    "viewportWidthsPx": [
+      320,
+      390,
+      430,
+      470
+    ]
+  },
+  "currentProductionSnapshot": {
+    "approvedPortraits": {
+      "count": 1,
+      "ids": [
+        "minho"
+      ],
+      "poseCount": 6,
+      "status": "approved"
+    },
+    "starterItems": {
+      "declaredCount": 8,
+      "trackedRuntimeImageCount": 0,
+      "uiUsesImageSrc": false,
+      "candidateFamilyCount": 2,
+      "candidateFamilies": [
+        "docs/art/candidates/shop/v1/",
+        "docs/art/candidates/postcard-gifts/v1/masters/items/"
+      ],
+      "canonicalCandidateOwner": "shop-v1",
+      "candidateFamiliesAreByteIdentical": false
+    },
+    "souvenirs": {
+      "declaredCount": 0,
+      "selectedPerTrip": 0,
+      "albumRendererPresent": false
+    },
+    "landmarkRuntimeSet": {
+      "destinationCount": 20,
+      "sceneCount": 48,
+      "publicDerivativesPresent": true,
+      "shippingEligible": false,
+      "productionBuildIncludesScenes": false
+    },
+    "landmarkCandidateCeiling": {
+      "destinationCount": 25,
+      "sceneCount": 61,
+      "newSceneCountPendingReview": 13
+    },
+    "homeRuntime": "CSS geometry plus approved Minho Portrait",
+    "appIconRuntime": "generic flat-vector invented orange-white cat and envelope"
+  },
+  "workInProgress": [
+    {
+      "id": "home-v4-corrections",
+      "outputRoot": "docs/art/candidates/home/v4/",
+      "statusAtAudit": "candidate-complete-pending-visual-approval",
+      "ownedScope": [
+        "supported tabletop away Note",
+        "Windowsill-contained Treat tray",
+        "390x844 and 430x932 corrected reviews",
+        "physical margin measurements"
+      ],
+      "completedEvidence": [
+        "docs/art/candidates/home/v4/README.md",
+        "docs/art/candidates/home/v4/manifest.v4.json",
+        "docs/art/candidates/home/v4/placement-perspective-metadata.v4.json",
+        "docs/art/candidates/home/v4/qa-report.v4.json",
+        "minimum sill margin 6.227px at 390x844",
+        "minimum sill margin 7.116px at 430x932"
+      ],
+      "doNotDuplicate": true,
+      "preciseGaps": [
+        "No 320px acceptance composite is in the v4 assignment.",
+        "Play and eat Home poses lack same-room grounding, occlusion, and scale proofs.",
+        "Bootstrap/loading acceptance art is outside the correction-only assignment.",
+        "Candidate approval and production promotion remain later gates."
+      ]
+    },
+    {
+      "id": "shop-v1",
+      "outputRoot": "docs/art/candidates/shop/v1/",
+      "statusAtAudit": "candidate-images-present-finalization-in-progress",
+      "ownedScope": [
+        "all eight actual starter products",
+        "512 RGBA masters",
+        "runtime-review derivatives",
+        "normal, affordable, unaffordable, locked, and owned reviews",
+        "390px and 430px review composites"
+      ],
+      "doNotDuplicate": true,
+      "preciseGaps": [
+        "Every output must map exactly to an existing starterItems imageSrc/data key.",
+        "46px token legibility is the actual minimum.",
+        "Treat currency art must reuse the selected shared Treat family.",
+        "Shop v1 is the canonical starter-item owner; postcard-gifts item duplicates must not be promoted.",
+        "Temporary .tmp images and the absence of a manifest/README must be resolved before review."
+      ]
+    },
+    {
+      "id": "pack-v1",
+      "outputRoot": "docs/art/candidates/pack/v1/",
+      "statusAtAudit": "candidate-complete-machine-qa-pass-pending-visual-approval",
+      "ownedScope": [
+        "open Pack base",
+        "foreground rim and reusable compartments",
+        "three item slots",
+        "empty and populated reviews",
+        "390px and 430px review composites"
+      ],
+      "doNotDuplicate": true,
+      "completedEvidence": [
+        "docs/art/candidates/pack/v1/README.md",
+        "docs/art/candidates/pack/v1/manifest.v1.json",
+        "docs/art/candidates/pack/v1/composition-metadata.v1.json",
+        "docs/art/candidates/pack/v1/qa-report.v1.json"
+      ],
+      "preciseGaps": [
+        "1536x1536 masters are deterministic upscales from a 1024x1024 generated source.",
+        "Populated reviews use calibration-board proxies rather than the canonical shop item candidates.",
+        "No 320px review exists.",
+        "Human visual approval and later production derivative policy remain open."
+      ]
+    },
+    {
+      "id": "postcard-gifts-v1",
+      "outputRoot": "docs/art/candidates/postcard-gifts/v1/",
+      "statusAtAudit": "candidate-complete-with-subasset-gaps",
+      "ownedScope": [
+        "Postcard and Album presentation layers",
+        "envelope, pocket, or holder art",
+        "gift presentation",
+        "390px and 430px reviews",
+        "immutable production verification"
+      ],
+      "doNotDuplicate": true,
+      "completedEvidence": [
+        "docs/art/candidates/postcard-gifts/v1/manifest.v1.json",
+        "docs/art/candidates/postcard-gifts/v1/placement-metadata.v1.json",
+        "docs/art/candidates/postcard-gifts/v1/qa/immutable-verification.v1.json",
+        "docs/art/candidates/postcard-gifts/v1/reviews/contact-sheet--postcard-gifts-v1--1200x1600--non-shipping.png"
+      ],
+      "preciseGaps": [
+        "Exact destination Souvenir objects cannot be completed because no Souvenir roster exists.",
+        "No postmark ring/wave asset was generated.",
+        "No intentional Scene-unavailable fallback was generated.",
+        "No explicit zero-Postcard Album-empty review was generated.",
+        "Its eight starter-item masters duplicate shop v1 with different bytes and must be superseded or kept review-only."
+      ]
+    },
+    {
+      "id": "cat-variant-packs",
+      "outputRoots": [
+        "docs/art/candidates/cats/british-shorthair/v1/",
+        "docs/art/candidates/cats/domestic-shorthair/v1/",
+        "docs/art/candidates/cats/silhouette-variety/v1/"
+      ],
+      "statusAtAudit": "partially-generated-finalization-in-progress",
+      "ownedScope": [
+        "four British Shorthair individuals",
+        "orange tabby and Chinese Li Hua",
+        "Maine Coon, Ragdoll, and Siamese",
+        "transparent static pose candidates and Home reviews"
+      ],
+      "doNotDuplicate": true,
+      "preciseGaps": [
+        "Domestic-shorthair source masters include all six exact poses for both cats; metadata and reviews were not yet complete.",
+        "British-shorthair and silhouette-variety outputs had not yet materialized at the final snapshot.",
+        "Every remaining cat must have all six exact AssetCatalog poses, not a four-pose minimum.",
+        "Every pose needs bounds, bottom-center anchor, and relative scale metadata.",
+        "Production promotion needs an explicit content-policy decision because issue #2 prohibited invented presets.",
+        "Runtime catalog and Portrait chooser work are not included.",
+        "The domestic-shorthair .tools dependency tree, dist-info, native libraries, and __pycache__ are build debris and must not enter review or commit scope."
+      ]
+    }
+  ],
+  "assetNeeds": [
+    {
+      "id": "AA-001",
+      "title": "Home room and four time-state layers",
+      "screenStates": [
+        "home/sleep",
+        "home/play",
+        "home/eat",
+        "home/waiting",
+        "home/returned",
+        "home/away",
+        "home/collectible-ready",
+        "morning",
+        "noon",
+        "dusk",
+        "late-night"
+      ],
+      "issueKinds": [
+        "css-geometry",
+        "inconsistent-candidate-production"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "531-577",
+          "selectorOrKey": ".room, .sunwash, .window*, .wall-note, .side-table, .vase",
+          "evidence": "Room scenery is emitted as empty structural divs."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "271-569",
+          "selectorOrKey": ".room through .vase",
+          "evidence": "Room, floor, hills, window, furniture, and plants are CSS gradients and geometry."
+        },
+        {
+          "file": "docs/art/candidates/home/v3/README.md",
+          "lines": "1-64",
+          "selectorOrKey": "Home Supporting Art v3",
+          "evidence": "A complete replacement exists but is NON-SHIPPING / VISUAL-REVIEW-ONLY."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "home-interior-foreground",
+          "purpose": "stable room architecture and foreground"
+        },
+        {
+          "id": "home-exterior-{morning|noon|dusk|late-night}",
+          "purpose": "aligned time-state plates"
+        },
+        {
+          "id": "home-lighting-{morning|dusk|late-night}",
+          "purpose": "minimal deterministic room light corrections"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "1200x1600",
+        "aspectRatio": "3:4",
+        "alpha": "straight RGBA for layers; opaque RGB for flattened reviews",
+        "colorSpace": "sRGB",
+        "placement": "all layers at 0,0"
+      },
+      "variantsStates": [
+        "morning",
+        "noon",
+        "dusk",
+        "late-night"
+      ],
+      "dependencies": [
+        "approved home v2/v3 composition",
+        "fixed cat, Windowsill, Note, and navigation safe zones"
+      ],
+      "physicalConstraints": [
+        "No furniture, camera, crop, perspective, or anchors move between time states.",
+        "Floor and furniture have believable contact.",
+        "Art remains non-distorted across 320-470px widths."
+      ],
+      "reuseOpportunities": [
+        "One interior layer supports every time state.",
+        "A safe low-detail crop may support first-run presentation."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "assigned-in-progress",
+        "workstream": "home-v4-corrections",
+        "outputRoot": "docs/art/candidates/home/v4/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Composition and style are locked; reuse completed v3/v4 work rather than duplicate it."
+      }
+    },
+    {
+      "id": "AA-002",
+      "title": "Home activity grounding and per-pose fit",
+      "screenStates": [
+        "home/sleep",
+        "home/play",
+        "home/eat",
+        "home/waiting",
+        "home/returned"
+      ],
+      "issueKinds": [
+        "missing-acceptance-art",
+        "physical-grounding-risk"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "47-63,144-152",
+          "selectorOrKey": "homeActivities, homePortraitSrc",
+          "evidence": "Runtime randomly chooses sleep, play, or eat."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "586-593",
+          "selectorOrKey": ".cat-stage, .cat-portrait, .cushion",
+          "evidence": "All poses share one generic stage and CSS cushion."
+        },
+        {
+          "file": "docs/art/candidates/home/v3/composition-layer-metadata.v3.json",
+          "lines": "221-234",
+          "selectorOrKey": "minhoStaticReview",
+          "evidence": "Only the sleep pose has candidate placement evidence."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "home-pose-placement-metadata",
+          "purpose": "bounds, anchor, scale, and occlusion per pose"
+        },
+        {
+          "id": "home-contact-shadow-{pose}",
+          "purpose": "optional only when direct grounding fails"
+        }
+      ],
+      "specifications": {
+        "portraitSource": "reuse approved 1024x1024 RGBA Minho poses unchanged",
+        "optionalShadowDimensions": "512x256",
+        "optionalShadowAspectRatio": "2:1",
+        "optionalShadowAlpha": "straight RGBA"
+      },
+      "variantsStates": [
+        "sleep",
+        "play",
+        "eat"
+      ],
+      "dependencies": [
+        "AA-001",
+        "approved Minho production poses"
+      ],
+      "physicalConstraints": [
+        "Load-bearing paws or compressed body meet the rug/floor.",
+        "Play yarn and eat bowl do not penetrate the rug or duplicate room props implausibly.",
+        "Relative cat scale remains coherent across poses."
+      ],
+      "reuseOpportunities": [
+        "Per-pose placement records can support future multi-cat layout."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "assigned-area-gap",
+        "workstream": "home",
+        "recommendedFollowUpRoot": "docs/art/candidates/home/v5/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Approved pose art exists; only review/metadata and optional shadows are needed."
+      }
+    },
+    {
+      "id": "AA-003",
+      "title": "Physically supported away Note",
+      "screenStates": [
+        "home/away"
+      ],
+      "issueKinds": [
+        "css-geometry",
+        "physical-law-error",
+        "inconsistent-candidate-production"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "579-585",
+          "selectorOrKey": ".departure-note",
+          "evidence": "The Note is a CSS article placed in the room."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "607-640",
+          "selectorOrKey": ".departure-note",
+          "evidence": "The Note is a flat rotated paper rectangle without physical support."
+        },
+        {
+          "file": "docs/art/candidates/home/v3/state-art/away-note--blank--master-512x640--non-shipping-v03.png",
+          "lines": "binary asset",
+          "selectorOrKey": "v3 away Note",
+          "evidence": "Candidate source is blank but was reviewed as a wall-mounted floating sheet."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "away-note-memo-stand",
+          "purpose": "text-free Note, wooden stand, occlusion, and contact shadow"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x640",
+        "aspectRatio": "4:5",
+        "alpha": "straight RGBA",
+        "text": "none in source"
+      },
+      "variantsStates": [
+        "blank source",
+        "review-only representative live text"
+      ],
+      "dependencies": [
+        "AA-001 right-cabinet tabletop plane"
+      ],
+      "physicalConstraints": [
+        "Stand footprint remains on the tabletop.",
+        "Paper, support, text plane, occlusion, and contact shadow share one perspective.",
+        "Center of gravity is believable."
+      ],
+      "reuseOpportunities": [
+        "All travel-note strings reuse one blank asset."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "assigned-in-progress",
+        "workstream": "home-v4-corrections",
+        "outputRoot": "docs/art/candidates/home/v4/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Placement and correction brief are explicit."
+      }
+    },
+    {
+      "id": "AA-004",
+      "title": "Treat currency and Windowsill collectible family",
+      "screenStates": [
+        "topbar/balance",
+        "shop/price",
+        "windowsill/empty",
+        "windowsill/collectible-ready",
+        "windowsill/collected"
+      ],
+      "issueKinds": [
+        "emoji",
+        "css-geometry",
+        "physical-law-error"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "510-514,549-552",
+          "selectorOrKey": ".treat-balance, .fish-plate",
+          "evidence": "Balance and collectible use fish emoji."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "691-697",
+          "selectorOrKey": ".item-action",
+          "evidence": "Affordable Shop price appends fish emoji."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "423-440",
+          "selectorOrKey": ".fish-plate",
+          "evidence": "Collectible plate is CSS geometry."
+        },
+        {
+          "file": "docs/art/candidates/home/v4/README.md",
+          "lines": "8-35",
+          "selectorOrKey": "corrected Treat tray",
+          "evidence": "A sill-safe tray candidate is complete with 6.2px and 7.1px minimum margins."
+        },
+        {
+          "file": "docs/art/candidates/postcard-gifts/v1/manifest.v1.json",
+          "lines": "157-169,437-477",
+          "selectorOrKey": "dried-fish master and 24/32/96 derivatives",
+          "evidence": "A separate small Treat glyph family is available for balance and price review."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "dried-fish-reward-master",
+          "purpose": "shared Treat art"
+        },
+        {
+          "id": "dried-fish-reward-runtime",
+          "purpose": "small UI derivative"
+        },
+        {
+          "id": "windowsill-treat-tray",
+          "purpose": "perspective-matched collectible placement"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": "128x128",
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "minimumDisplayPx": 16
+      },
+      "variantsStates": [
+        "single balance/price glyph",
+        "collectible-ready tray",
+        "empty uses bare Windowsill"
+      ],
+      "dependencies": [
+        "AA-001 Windowsill polygon",
+        "home-v4 physical measurements"
+      ],
+      "physicalConstraints": [
+        "Every tray footprint corner is inside the sill at 390x844 and 430x932.",
+        "Document visible safety margins in pixels.",
+        "No overhang, floating, or window-frame penetration."
+      ],
+      "reuseOpportunities": [
+        "Topbar, Shop, collection reward, and future receipts share one Treat style."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "candidate-assets-present-pending-canonical-review",
+        "workstream": "home-v4-corrections",
+        "outputRoot": "docs/art/candidates/home/v4/",
+        "smallGlyphCandidateRoot": "docs/art/candidates/postcard-gifts/v1/runtime/items/",
+        "consumerWorkstream": "shop-v1"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Existing v3 art and exact correction geometry are available."
+      }
+    },
+    {
+      "id": "AA-005",
+      "title": "Home navigation icon family",
+      "screenStates": [
+        "home-nav/default",
+        "home-nav/compact",
+        "home-nav/album-unread"
+      ],
+      "issueKinds": [
+        "unicode-character",
+        "generic-icon",
+        "inconsistent-candidate-production"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "610-627",
+          "selectorOrKey": ".nav-icon",
+          "evidence": "Pack, Shop, and Album are represented by 包, 铺, and 册."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "815-831,1253-1259",
+          "selectorOrKey": ".nav-icon",
+          "evidence": "Current slots are 58px default and 50px compact."
+        },
+        {
+          "file": "docs/art/candidates/home/v3/composition-layer-metadata.v3.json",
+          "lines": "160-194",
+          "selectorOrKey": "navigationIcons",
+          "evidence": "Text-free 512 and 128 candidates already exist."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "nav-icon-pack",
+          "purpose": "Pack destination"
+        },
+        {
+          "id": "nav-icon-shop",
+          "purpose": "Shop destination"
+        },
+        {
+          "id": "nav-icon-album",
+          "purpose": "Album destination"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": "128x128",
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "displayDimensions": [
+          "58x58",
+          "50x50"
+        ]
+      },
+      "variantsStates": [
+        "pack",
+        "shop",
+        "album"
+      ],
+      "dependencies": [
+        "home v3/v4 visual approval"
+      ],
+      "physicalConstraints": [
+        "Distinct silhouettes and equal visual weight at 50px.",
+        "No text or baked UI border."
+      ],
+      "reuseOpportunities": [
+        "Pack icon informs the open Pack.",
+        "Shop and Album icons can seed empty/presentation art."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "existing-candidate-needs-approval-promotion",
+        "workstream": "home",
+        "outputRoot": "docs/art/candidates/home/v3/icons/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Assets already exist; duplicate generation is unnecessary."
+      }
+    },
+    {
+      "id": "AA-006",
+      "title": "Bootstrap loading vignette",
+      "screenStates": [
+        "bootstrap/hydrating"
+      ],
+      "issueKinds": [
+        "missing-illustration",
+        "temporary-text-only-state"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "455-460",
+          "selectorOrKey": ".adoption-shell.loading",
+          "evidence": "Loading contains brand, title, and one text line only."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "bootstrap-loading-vignette",
+          "purpose": "small text-free home/letter keepsake during hydration"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": [
+          "256x256",
+          "128x128"
+        ],
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "displayRangePx": "96-144"
+      },
+      "variantsStates": [
+        "loading"
+      ],
+      "dependencies": [
+        "approved Minho identity",
+        "AA-017"
+      ],
+      "physicalConstraints": [
+        "No layout jump at 320-470px.",
+        "No high-detail region behind status text."
+      ],
+      "reuseOpportunities": [
+        "Save restore/import progress may reuse the same neutral vignette."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "unassigned",
+        "generationBatchId": "GEN-03",
+        "outputRoot": "docs/art/candidates/system-states/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Identity, style, copy area, and viewport constraints are known."
+      }
+    },
+    {
+      "id": "AA-007",
+      "title": "Eight starter-item icons and Shop thumbnails",
+      "screenStates": [
+        "shop/affordable",
+        "shop/unaffordable",
+        "shop/owned",
+        "pack/available",
+        "pack/packed",
+        "pack/locked"
+      ],
+      "issueKinds": [
+        "unicode-character",
+        "missing-runtime-file",
+        "declared-but-unused-asset"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/lib/assets/starterItems.ts",
+          "lines": "3-67",
+          "selectorOrKey": "STARTER_ITEMS[*].imageSrc",
+          "evidence": "Eight runtime image paths are declared."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "675-679,725-729,762-766",
+          "selectorOrKey": ".item-token",
+          "evidence": "UI renders the first character of each item name instead of imageSrc."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "1037-1049",
+          "selectorOrKey": ".item-token",
+          "evidence": "Real display slot is 46x46px."
+        },
+        {
+          "file": "public/assets/items/",
+          "lines": "directory absent",
+          "selectorOrKey": "runtime tree",
+          "evidence": "No tracked starter-item files exist."
+        },
+        {
+          "file": "docs/art/candidates/shop/v1/masters/",
+          "lines": "binary candidate family",
+          "selectorOrKey": "eight shop masters",
+          "evidence": "Shop v1 has all eight dedicated 512px candidate masters and 92px derivatives."
+        },
+        {
+          "file": "docs/art/candidates/postcard-gifts/v1/manifest.v1.json",
+          "lines": "42-156,326-436",
+          "selectorOrKey": "second eight-item candidate family",
+          "evidence": "Postcard-gifts independently generated byte-different 512px masters and 96px derivatives for the same IDs."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "item--snack--fish-biscuit",
+          "purpose": "fish biscuit"
+        },
+        {
+          "id": "item--snack--travel-tin",
+          "purpose": "travel tin"
+        },
+        {
+          "id": "item--toy--small-blanket",
+          "purpose": "small blanket"
+        },
+        {
+          "id": "item--toy--yarn-ball",
+          "purpose": "yarn ball"
+        },
+        {
+          "id": "item--toy--small-bell",
+          "purpose": "small bell"
+        },
+        {
+          "id": "item--toy--small-camera",
+          "purpose": "small camera"
+        },
+        {
+          "id": "item--toy--small-telescope",
+          "purpose": "small telescope"
+        },
+        {
+          "id": "item--wish--ticket",
+          "purpose": "text-free wish ticket"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": "128x128",
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "safeMarginPx": 48,
+        "minimumDisplayPx": 46
+      },
+      "variantsStates": [
+        "eight neutral item sources",
+        "affordability, ownership, disabled, and selection remain live UI states"
+      ],
+      "dependencies": [
+        "locked starter-item roster",
+        "AA-004"
+      ],
+      "physicalConstraints": [
+        "Culturally neutral and physically recognizable.",
+        "Consistent visual weight at 46px.",
+        "No text on the ticket, background square, floor patch, or UI."
+      ],
+      "reuseOpportunities": [
+        "One exact asset set serves Shop and Pack."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "candidate-collision-needs-canonical-selection",
+        "workstream": "shop-v1",
+        "canonicalOutputRoot": "docs/art/candidates/shop/v1/",
+        "supersedeOrReviewOnlyRoot": "docs/art/candidates/postcard-gifts/v1/masters/items/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "All eight names, kinds, effects, prices, and paths are fixed."
+      }
+    },
+    {
+      "id": "AA-008",
+      "title": "Shop shelf and product-card accents",
+      "screenStates": [
+        "shop/list",
+        "shop/purchase-feedback"
+      ],
+      "issueKinds": [
+        "generic-css-card",
+        "missing-illustration"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "672-699",
+          "selectorOrKey": ".item-card, .item-token",
+          "evidence": "Shop is a plain list of CSS cards and character tokens."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "1017-1049",
+          "selectorOrKey": ".item-list, .item-card, .item-token",
+          "evidence": "Product presentation is generic CSS geometry."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "shop-neutral-shelf-or-card-accent",
+          "purpose": "optional reusable support plane or wash when mobile review proves it necessary"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "1200x320 strip or 512x512 accent",
+        "aspectRatio": "variable by proven slot",
+        "alpha": "straight RGBA",
+        "bakedText": false
+      },
+      "variantsStates": [
+        "neutral only"
+      ],
+      "dependencies": [
+        "AA-007",
+        "live Shop layout"
+      ],
+      "physicalConstraints": [
+        "Products appear supported rather than floating.",
+        "Accent does not reduce the 62px action target or text contrast."
+      ],
+      "reuseOpportunities": [
+        "One neutral source supports all eight products."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "assigned-in-progress",
+        "workstream": "shop-v1",
+        "outputRoot": "docs/art/candidates/shop/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Generate only if it replaces a demonstrated placeholder in review."
+      }
+    },
+    {
+      "id": "AA-009",
+      "title": "Open Pack layered container",
+      "screenStates": [
+        "pack/empty",
+        "pack/one-item",
+        "pack/two-items",
+        "pack/full",
+        "pack/waiting-editable",
+        "pack/traveling-locked",
+        "pack/scrolling-list"
+      ],
+      "issueKinds": [
+        "missing-illustration",
+        "generic-css-list"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "702-797",
+          "selectorOrKey": "Pack drawer",
+          "evidence": "Pack is summary text plus generic item lists; no open container is rendered."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "42,704-716",
+          "selectorOrKey": "PACK_CAPACITY, .pack-summary",
+          "evidence": "Capacity is exactly three."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "pack-open-base",
+          "purpose": "shell, lining, flap, and compartments"
+        },
+        {
+          "id": "pack-open-foreground-rim",
+          "purpose": "live item occlusion"
+        },
+        {
+          "id": "pack-slot-metadata",
+          "purpose": "three anchors, clipping bounds, and safe zones"
+        }
+      ],
+      "specifications": {
+        "generatedSourceDimensions": "1024x1024",
+        "candidateMasterDimensions": "1536x1536 deterministic upscale",
+        "runtimeDimensions": [
+          "382x382",
+          "342x342"
+        ],
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "sharedOrigin": "0,0"
+      },
+      "variantsStates": [
+        "one composable base",
+        "zero to three live items",
+        "locked state remains UI"
+      ],
+      "dependencies": [
+        "AA-005 Pack identity",
+        "AA-007 item art"
+      ],
+      "physicalConstraints": [
+        "Believable hinge, flap support, lining depth, and item occlusion.",
+        "No item floats or penetrates seams.",
+        "Three slots are non-overlapping and do not imply false capacity."
+      ],
+      "reuseOpportunities": [
+        "One container supports every item combination."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "candidate-complete-machine-qa-pass-pending-visual-approval",
+        "workstream": "pack-v1",
+        "outputRoot": "docs/art/candidates/pack/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Capacity, layout, visual reference, and layering brief are fixed."
+      }
+    },
+    {
+      "id": "AA-010",
+      "title": "Postcard stationery, holder, postmark, and unavailable presentation",
+      "screenStates": [
+        "album/postcard",
+        "postcard/ordinary",
+        "postcard/companion",
+        "postcard/scene-unavailable"
+      ],
+      "issueKinds": [
+        "css-geometry",
+        "temporary-placeholder",
+        "generic-icon",
+        "missing-illustration"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/lib/postcards/Postcard.svelte",
+          "lines": "52-70",
+          "selectorOrKey": ".postcard, .picture",
+          "evidence": "Paper/frame and picture surface are CSS."
+        },
+        {
+          "file": "src/lib/postcards/Postcard.svelte",
+          "lines": "36-39,88-106",
+          "selectorOrKey": ".non-shipping-preview",
+          "evidence": "Unavailable Scene is a CSS mountain/sun placeholder."
+        },
+        {
+          "file": "src/lib/postcards/Postcard.svelte",
+          "lines": "48-50,136-147",
+          "selectorOrKey": ".postmark",
+          "evidence": "Postmark is a generic CSS circle containing a live date."
+        },
+        {
+          "file": "docs/art/candidates/postcard-gifts/v1/manifest.v1.json",
+          "lines": "170-226,480-589",
+          "selectorOrKey": "presentation assets",
+          "evidence": "Blank back, stack holder, and envelope-pocket candidates are complete; no postmark or unavailable fallback is listed."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "postcard-stationery-frame",
+          "purpose": "text-free paper/frame or alpha overlay"
+        },
+        {
+          "id": "album-postcard-holder",
+          "purpose": "stack, pocket, or envelope presentation"
+        },
+        {
+          "id": "postmark-ring-wave",
+          "purpose": "text-free stamp texture around live date/destination"
+        },
+        {
+          "id": "scene-unavailable-fallback",
+          "purpose": "intentional error/gate fallback that cannot be mistaken for a destination"
+        }
+      ],
+      "specifications": {
+        "stationeryDimensions": "1200x900",
+        "stationeryAspectRatio": "4:3",
+        "stationeryAlpha": "straight RGBA overlay or opaque RGB paper",
+        "holderDimensions": "1200x900",
+        "holderAlpha": "straight RGBA",
+        "fallbackDimensions": "1200x900",
+        "fallbackAlpha": "opaque"
+      },
+      "variantsStates": [
+        "front/presentation",
+        "unavailable/error",
+        "optional incoming/unread holder"
+      ],
+      "dependencies": [
+        "ADR-0001",
+        "AA-013",
+        "AA-016"
+      ],
+      "physicalConstraints": [
+        "Paper thickness and layer order are coherent.",
+        "Portrait, copy, and postmark safe zones remain clear.",
+        "No landmark, cat, destination, date, caption, or pseudo-text is baked in."
+      ],
+      "reuseOpportunities": [
+        "One presentation kit surrounds every immutable Scene."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "presentation-complete-postmark-and-fallback-missing",
+        "workstream": "postcard-gifts-v1",
+        "completedOutputRoot": "docs/art/candidates/postcard-gifts/v1/",
+        "missingSubassetBatchId": "GEN-06",
+        "missingSubassetOutputRoot": "docs/art/candidates/postcard-status/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Existing presentation is complete; missing postmark and fallback can be generated without modifying immutable postcard content."
+      }
+    },
+    {
+      "id": "AA-011",
+      "title": "Album empty and incoming-Postcard illustration",
+      "screenStates": [
+        "album/empty",
+        "album/incoming-optional"
+      ],
+      "issueKinds": [
+        "unicode-character",
+        "temporary-placeholder",
+        "missing-illustration"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "818-823",
+          "selectorOrKey": ".empty-state",
+          "evidence": "Empty Album uses the Unicode marker · · ·."
+        },
+        {
+          "file": "docs/art/candidates/postcard-gifts/v1/manifest.v1.json",
+          "lines": "170-226,228-324",
+          "selectorOrKey": "presentation assets and reviews",
+          "evidence": "Stack/blank/envelope assets and populated/gift reviews exist, but no zero-Postcard Album review is listed."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "album-empty-vignette",
+          "purpose": "text-free Album with empty pocket or incoming envelope cue"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": "256x256",
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "displayRangePx": "128-180"
+      },
+      "variantsStates": [
+        "empty",
+        "optional incoming/unread"
+      ],
+      "dependencies": [
+        "AA-005 Album icon",
+        "AA-010"
+      ],
+      "physicalConstraints": [
+        "Album rests on a believable plane.",
+        "Envelope or pocket layers do not float.",
+        "Live heading and hint remain unobstructed."
+      ],
+      "reuseOpportunities": [
+        "Try the Album navigation master first; create a unique source only if enlarged reuse fails."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "reuse-candidate-exists-explicit-empty-state-unproven",
+        "workstream": "postcard-status",
+        "reuseCandidateRoot": "docs/art/candidates/postcard-gifts/v1/masters/presentation/",
+        "generationBatchId": "GEN-06",
+        "outputRoot": "docs/art/candidates/postcard-status/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Empty-state semantics and presentation language are known."
+      }
+    },
+    {
+      "id": "AA-012",
+      "title": "Destination Souvenir art",
+      "screenStates": [
+        "trip-return/reward",
+        "album/souvenir-list",
+        "album/souvenir-detail"
+      ],
+      "issueKinds": [
+        "missing-content-definition",
+        "missing-illustration",
+        "missing-screen-state"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/lib/assets/starterCatalog.ts",
+          "lines": "67",
+          "selectorOrKey": "STARTER_CATALOG.souvenirs",
+          "evidence": "Catalog contains no Souvenirs."
+        },
+        {
+          "file": "src/lib/selection/index.ts",
+          "lines": "71",
+          "selectorOrKey": "souvenirIds",
+          "evidence": "Every trip selects an empty Souvenir list."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "81-84,799-845",
+          "selectorOrKey": "Album drawer",
+          "evidence": "Copy promises Souvenirs but the Album renders only Postcards and save transfer."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "souvenir--{destination-id}--{souvenir-id}",
+          "purpose": "at least one approved object per shipping destination"
+        },
+        {
+          "id": "souvenir-roster",
+          "purpose": "stable ID, destination, name, brief, and rights record"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512",
+        "runtimeDimensions": "128x128",
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "safeMarginPx": 48,
+        "minimumDisplayPx": 48
+      },
+      "variantsStates": [
+        "destination object",
+        "new/received UI treatment",
+        "collected UI treatment"
+      ],
+      "dependencies": [
+        "locked destination-to-Souvenir roster",
+        "rights review for branded or culturally sensitive objects",
+        "selection implementation",
+        "Album renderer"
+      ],
+      "physicalConstraints": [
+        "Recognizable at 48px.",
+        "Plausible object construction and contact.",
+        "Culturally accurate with no logo, readable text, UI, or scene fragment."
+      ],
+      "reuseOpportunities": [
+        "AA-010 gift wrap or holder surrounds every destination object."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "assigned-area-blocked",
+        "workstream": "postcard-gifts-v1",
+        "futureOutputRootPattern": "docs/art/candidates/souvenirs/v1/{destination-id}/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": false,
+        "reason": "No destination Souvenir roster or rights-sensitive object brief exists."
+      }
+    },
+    {
+      "id": "AA-013",
+      "title": "Shipping-eligible Postcard Scene set",
+      "screenStates": [
+        "album/populated-production",
+        "postcard/ordinary",
+        "postcard/companion"
+      ],
+      "issueKinds": [
+        "temporary-placeholder",
+        "inconsistent-candidate-production",
+        "shipping-gate"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/lib/assets/landmarkCatalog.generated.ts",
+          "lines": "4",
+          "selectorOrKey": "LANDMARK_SCENES_SHIPPING_ELIGIBLE",
+          "evidence": "Runtime Scene shipping gate is false."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "44-47,809-815",
+          "selectorOrKey": "canRenderLandmarkScenes, Postcard.renderScene",
+          "evidence": "Scenes render only in development or after shipping approval."
+        },
+        {
+          "file": "vite.config.ts",
+          "lines": "133-165",
+          "selectorOrKey": "globIgnores, strip-non-shipping-landmark-scenes",
+          "evidence": "Production builds do not cache and actively delete non-shipping Scenes."
+        },
+        {
+          "file": "docs/art/candidates/landmarks/review-index.v3.md",
+          "lines": "1-10,110-140",
+          "selectorOrKey": "v3 active set",
+          "evidence": "25 destinations / 61 candidate Scenes exist; 13 new Scenes await review."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "existing-exact-scene-set",
+          "purpose": "close provenance, visual, composite, rights, and shipping gates before generation"
+        },
+        {
+          "id": "replacement-scene--{destination-id}--{variant-id}",
+          "purpose": "conditional only for destinations rejected by rights/product review"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "1200x900",
+        "runtimeDimensions": "1200x900",
+        "aspectRatio": "4:3",
+        "masterAlpha": "opaque PNG",
+        "runtimeAlpha": "opaque WebP",
+        "runtimeQuality": "PSNR >= 35 dB"
+      },
+      "variantsStates": [
+        "at least two variants per destination",
+        "companions only in authorized rare variants"
+      ],
+      "dependencies": [
+        "exact active-set hash",
+        "human visual approval",
+        "Minho composite approval",
+        "rights/provenance decision",
+        "explicit shipping approval"
+      ],
+      "physicalConstraints": [
+        "Portrait slot avoids recognition, copy, and postmark zones.",
+        "Ordinary Scene contains no cat.",
+        "Companion remains outside the Portrait slot."
+      ],
+      "reuseOpportunities": [
+        "Review existing 48 approved-subset Scenes and 13 v3 candidates before regenerating."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "existing-art-blocked-by-governance",
+        "workstream": "landmarks",
+        "conditionalOutputRootPattern": "docs/art/candidates/landmark-replacements/v1/{destination-id}/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": false,
+        "reason": "Legal/product destination decisions must identify replacements; more generation does not close the current gate."
+      }
+    },
+    {
+      "id": "AA-014",
+      "title": "App identity and install-icon suite",
+      "screenStates": [
+        "browser/favicon",
+        "pwa/install",
+        "os/launcher",
+        "os/task-switcher"
+      ],
+      "issueKinds": [
+        "generic-icon",
+        "inconsistent-production-identity",
+        "flat-vector-art"
+      ],
+      "currentEvidence": [
+        {
+          "file": "public/icon.svg",
+          "lines": "1-12",
+          "selectorOrKey": "root SVG",
+          "evidence": "Thick-outline flat vector shows an invented orange-white cat and envelope."
+        },
+        {
+          "file": "index.html",
+          "lines": "7-8",
+          "selectorOrKey": "favicon, apple-touch-icon",
+          "evidence": "The generic family is used by browser and Apple surfaces."
+        },
+        {
+          "file": "vite.config.ts",
+          "lines": "107-131",
+          "selectorOrKey": "PWA manifest icons",
+          "evidence": "192 and 512 generic derivatives ship as install icons."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "app-icon-master-1024",
+          "purpose": "approved-Minho watercolor app mark"
+        },
+        {
+          "id": "app-icon-512-maskable-any",
+          "purpose": "PWA launcher"
+        },
+        {
+          "id": "app-icon-192-any",
+          "purpose": "PWA launcher"
+        },
+        {
+          "id": "apple-touch-icon-180",
+          "purpose": "Apple home screen"
+        },
+        {
+          "id": "favicon-small-mark",
+          "purpose": "32px and 48px browser use"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "1024x1024",
+        "derivativeDimensions": [
+          "512x512",
+          "192x192",
+          "180x180",
+          "48x48",
+          "32x32"
+        ],
+        "aspectRatio": "1:1",
+        "alpha": "opaque launcher master; simplified favicon may use alpha",
+        "maskSafeRegion": "critical subject within central 80%"
+      },
+      "variantsStates": [
+        "full launcher mark",
+        "simplified small-size mark"
+      ],
+      "dependencies": [
+        "approved Minho identity",
+        "locked B palette"
+      ],
+      "physicalConstraints": [
+        "Recognizable at 32px.",
+        "No critical detail clips under circle or squircle masks.",
+        "No text or invented orange cat."
+      ],
+      "reuseOpportunities": [
+        "Favicon, launcher, splash/loading, and brand emblem share one identity."
+      ],
+      "priority": "P0",
+      "ownership": {
+        "status": "unassigned",
+        "generationBatchId": "GEN-01",
+        "outputRoot": "docs/art/candidates/app-identity/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Minho identity and visual language are approved."
+      }
+    },
+    {
+      "id": "AA-015",
+      "title": "First-run adoption presentation",
+      "screenStates": [
+        "adoption/default",
+        "adoption/validation-error",
+        "adoption/success-transition"
+      ],
+      "issueKinds": [
+        "generic-css-backdrop",
+        "missing-presentation-art"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "462-501",
+          "selectorOrKey": ".adoption-card, .adoption-portrait",
+          "evidence": "Approved Minho sit is presented in a generic card."
+        },
+        {
+          "file": "src/app.css",
+          "lines": "99-138",
+          "selectorOrKey": ".adoption-portrait",
+          "evidence": "Backdrop is radial and linear CSS gradients."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "adoption-welcome-base",
+          "purpose": "text-free watercolor threshold/presentation"
+        },
+        {
+          "id": "adoption-portrait-frame",
+          "purpose": "reusable safe Portrait frame"
+        }
+      ],
+      "specifications": {
+        "baseDimensions": "1200x1600",
+        "baseAspectRatio": "3:4",
+        "baseAlpha": "opaque",
+        "frameDimensions": "1024x1024",
+        "frameAspectRatio": "1:1",
+        "frameAlpha": "straight RGBA"
+      },
+      "variantsStates": [
+        "neutral first-run",
+        "errors remain live UI"
+      ],
+      "dependencies": [
+        "approved Minho",
+        "future approved Portrait candidates",
+        "AA-017"
+      ],
+      "physicalConstraints": [
+        "Portrait feet and tail rest on a defined surface.",
+        "Input and action safe zones remain clear at 320px.",
+        "No baked name, approval text, or controls."
+      ],
+      "reuseOpportunities": [
+        "Every approved Portrait reuses the same frame and its sit pose."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "unassigned",
+        "generationBatchId": "GEN-02",
+        "outputRoot": "docs/art/candidates/adoption/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Minho, central slot, live copy, and mobile layout are known."
+      }
+    },
+    {
+      "id": "AA-016",
+      "title": "Offline handwriting and stamp typography",
+      "screenStates": [
+        "home/away-note",
+        "postcard/message",
+        "postcard/postmark"
+      ],
+      "issueKinds": [
+        "generic-font",
+        "missing-offline-font-asset"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/app.css",
+          "lines": "1-4",
+          "selectorOrKey": ":root font-family",
+          "evidence": "App uses generic Songti/system serif."
+        },
+        {
+          "file": "src/lib/postcards/Postcard.svelte",
+          "lines": "122-147",
+          "selectorOrKey": ".message, .postmark",
+          "evidence": "Postcard copy inherits serif; date uses generic system sans."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "licensed-cjk-handwriting-font",
+          "purpose": "dynamic Note and Postcard copy"
+        },
+        {
+          "id": "stamp-date-face-or-treatment",
+          "purpose": "dynamic postmark date"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": null,
+        "aspectRatio": null,
+        "alpha": null,
+        "format": "subset WOFF2",
+        "glyphCoverage": "Simplified Chinese, punctuation, numerals, and Latin cat names",
+        "runtime": "bundled and offline"
+      },
+      "variantsStates": [
+        "handwriting regular",
+        "optional stamp/date weight"
+      ],
+      "dependencies": [
+        "font license and provenance",
+        "PWA cache",
+        "text-layout QA"
+      ],
+      "physicalConstraints": [
+        "8-20 character Postcard notes fit safe areas.",
+        "6-14 character away Notes fit the transformed paper plane.",
+        "Readable at 0.76-0.9rem without raster scaling."
+      ],
+      "reuseOpportunities": [
+        "Note, Postcard, and selected decorative headings."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "unassigned-non-image",
+        "recommendedWorkstream": "font-acquisition-and-subsetting"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": false,
+        "reason": "No image generation is needed; a licensed font and provenance record must be selected."
+      }
+    },
+    {
+      "id": "AA-017",
+      "title": "Reusable paper and wash surface textures",
+      "screenStates": [
+        "loading-shell",
+        "adoption-shell",
+        "app-shell",
+        "drawers",
+        "cards",
+        "postcard-back"
+      ],
+      "issueKinds": [
+        "css-texture",
+        "inconsistent-art-surface"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/app.css",
+          "lines": "31-34,54-58,67-69,276-299,875-879",
+          "selectorOrKey": "body, .app-shell, .adoption-shell, .room, .drawer",
+          "evidence": "Paper and light textures are repeated radial dots and hard gradients."
+        },
+        {
+          "file": "src/lib/postcards/Postcard.svelte",
+          "lines": "58-62",
+          "selectorOrKey": ".postcard",
+          "evidence": "Postcard paper grain is another CSS radial-dot pattern."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "surface-paper-warm-seamless",
+          "purpose": "shared warm paper grain"
+        },
+        {
+          "id": "surface-watercolor-wash-seamless",
+          "purpose": "optional low-contrast transparent wash"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "512x512 or 1024x1024",
+        "aspectRatio": "1:1 seamless tile",
+        "alpha": "opaque sRGB paper and/or straight RGBA grain-only tile",
+        "contrast": "very low; preserve body-text contrast"
+      },
+      "variantsStates": [
+        "warm paper",
+        "optional sage wash"
+      ],
+      "dependencies": [
+        "locked B reference intensity",
+        "accessibility contrast QA"
+      ],
+      "physicalConstraints": [
+        "No seams at 1x or 2x.",
+        "No high-contrast repeating spots.",
+        "No object, border, text, or directional lighting baked in."
+      ],
+      "reuseOpportunities": [
+        "One tiny offline family supports every shell, drawer, and card."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "unassigned",
+        "generationBatchId": "GEN-04",
+        "outputRoot": "docs/art/candidates/ui-surfaces/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Reference intensity, palette, contrast, and tiling constraints are locked."
+      }
+    },
+    {
+      "id": "AA-018",
+      "title": "Utility glyph family",
+      "screenStates": [
+        "drawer/close",
+        "save/export",
+        "save/import",
+        "pack/locked",
+        "optional/retry"
+      ],
+      "issueKinds": [
+        "unicode-character",
+        "generic-icon",
+        "missing-icon-family"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/App.svelte",
+          "lines": "664-668",
+          "selectorOrKey": ".drawer-close",
+          "evidence": "Close uses the Unicode multiplication sign."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "827-840",
+          "selectorOrKey": ".save-transfer-actions",
+          "evidence": "Export and import are text-only."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "glyph-close",
+          "purpose": "drawer close"
+        },
+        {
+          "id": "glyph-export",
+          "purpose": "save export"
+        },
+        {
+          "id": "glyph-import",
+          "purpose": "save import"
+        },
+        {
+          "id": "glyph-lock",
+          "purpose": "traveling Pack"
+        },
+        {
+          "id": "glyph-retry",
+          "purpose": "optional recoverable error"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "128x128",
+        "runtimeDimensions": [
+          "32x32",
+          "24x24"
+        ],
+        "aspectRatio": "1:1",
+        "alpha": "straight monochrome RGBA or authored SVG viewBox"
+      },
+      "variantsStates": [
+        "neutral source only",
+        "hover, focus, disabled, and error remain CSS"
+      ],
+      "dependencies": [
+        "accessible live labels",
+        "UI integration"
+      ],
+      "physicalConstraints": [
+        "Readable at 20-24px.",
+        "Consistent stroke and optical weight.",
+        "No fuzzy mass that reduces control clarity."
+      ],
+      "reuseOpportunities": [
+        "All drawers and save/Pack controls."
+      ],
+      "priority": "P2",
+      "ownership": {
+        "status": "unassigned",
+        "generationBatchId": "GEN-05",
+        "outputRoot": "docs/art/candidates/ui-glyphs/v1/"
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "Semantics and display sizes are known; authored SVG is preferable to generative raster output."
+      }
+    },
+    {
+      "id": "AA-019",
+      "title": "Additional Portrait candidate packs",
+      "screenStates": [
+        "future/adoption-chooser",
+        "home/sit",
+        "home/sleep",
+        "home/walk",
+        "home/eat",
+        "home/play",
+        "home/gaze",
+        "postcard/composite"
+      ],
+      "issueKinds": [
+        "missing-portrait-options",
+        "candidate-runtime-disconnect",
+        "content-policy-inconsistency"
+      ],
+      "currentEvidence": [
+        {
+          "file": "src/lib/assets/starterCatalog.ts",
+          "lines": "51-65",
+          "selectorOrKey": "STARTER_CATALOG.portraits",
+          "evidence": "Runtime contains only Minho."
+        },
+        {
+          "file": "src/lib/assets/index.ts",
+          "lines": "9-11,101-108",
+          "selectorOrKey": "PORTRAIT_POSES, defineAssetCatalog",
+          "evidence": "All six fixed poses are mandatory."
+        },
+        {
+          "file": "src/App.svelte",
+          "lines": "40,140-151,209-216",
+          "selectorOrKey": "PRIMARY_CAT_ID, activePortrait, completeAdoption",
+          "evidence": "Current adoption and Home are hardwired to Minho."
+        },
+        {
+          "file": "docs/art/candidates/cats/domestic-shorthair/v1/source/",
+          "lines": "binary candidate sources",
+          "selectorOrKey": "orange-tabby and li-hua",
+          "evidence": "Both domestic cats have sit, sleep, walk, eat, play, and gaze 1024px source masters; metadata and reviews were still in progress."
+        }
+      ],
+      "proposedAssets": [
+        {
+          "id": "portrait--{candidate-id}--{sit|sleep|walk|eat|play|gaze}",
+          "purpose": "complete six-pose identity pack per assigned cat"
+        },
+        {
+          "id": "portrait-candidate-metadata",
+          "purpose": "identity, morphology, bounds, anchors, and relative scale"
+        }
+      ],
+      "specifications": {
+        "masterDimensions": "1024x1024",
+        "runtimeReviewDimensions": [
+          "512x512",
+          "256x256"
+        ],
+        "aspectRatio": "1:1",
+        "alpha": "straight RGBA",
+        "safeMarginPx": 64,
+        "transparentPixelRgb": "zero"
+      },
+      "variantsStates": [
+        "sit",
+        "sleep",
+        "walk",
+        "eat",
+        "play",
+        "gaze"
+      ],
+      "dependencies": [
+        "three active cat candidate workstreams",
+        "user visual approval",
+        "content-policy decision",
+        "catalog integration",
+        "Portrait chooser"
+      ],
+      "physicalConstraints": [
+        "Breed-specific skeleton, mass, paws, and tail.",
+        "Stable face, coat map, proportions, and relative scale.",
+        "No floor patch, baked shadow, scenery, text, watermark, or extra limbs."
+      ],
+      "reuseOpportunities": [
+        "One six-pose set supports Home and Postcard composition."
+      ],
+      "priority": "P1",
+      "ownership": {
+        "status": "partially-generated-finalization-in-progress",
+        "workstream": "cat-variant-packs",
+        "outputRoots": [
+          "docs/art/candidates/cats/british-shorthair/v1/",
+          "docs/art/candidates/cats/domestic-shorthair/v1/",
+          "docs/art/candidates/cats/silhouette-variety/v1/"
+        ]
+      },
+      "generationWithoutAdditionalUserInput": {
+        "value": true,
+        "reason": "The latest direct user request authorizes candidate generation without photos; production promotion remains gated."
+      }
+    }
+  ],
+  "retainedCssAndLiveUi": [
+    {
+      "visual": "focus rings",
+      "disposition": "retain CSS for accessibility"
+    },
+    {
+      "visual": "button hit areas and disabled opacity",
+      "disposition": "retain CSS for interaction state"
+    },
+    {
+      "visual": "drawer backdrop and handle",
+      "disposition": "retain CSS as responsive UI chrome"
+    },
+    {
+      "visual": "card borders, rounded corners, separators, and shadows",
+      "disposition": "retain CSS as scalable UI chrome"
+    },
+    {
+      "visual": "native wish select",
+      "disposition": "retain native/live control"
+    },
+    {
+      "visual": "numeric unread badge and page-title count",
+      "disposition": "retain live numeric UI"
+    },
+    {
+      "visual": "status, error, balance, price, count, destination, and date text",
+      "disposition": "retain live text; never bake into art"
+    },
+    {
+      "visual": "developer clock",
+      "disposition": "development-only; no art required"
+    }
+  ],
+  "candidateProductionConsistency": [
+    {
+      "id": "CP-001",
+      "severity": "P0",
+      "finding": "Home v1-v3 are non-shipping candidates while runtime remains CSS.",
+      "action": "Review completed home v4, then close missing pose/narrow/loading evidence under home v5, obtain approval, and promote."
+    },
+    {
+      "id": "CP-002",
+      "severity": "P0",
+      "finding": "Eight item paths are declared, zero runtime files exist, and the UI does not render imageSrc.",
+      "action": "Finalize shop v1 metadata/cleanup, designate it canonical, and later integrate the exact eight shared assets."
+    },
+    {
+      "id": "CP-003",
+      "severity": "P0",
+      "finding": "Souvenir types exist but catalog, selection, and Album content are empty.",
+      "action": "Lock a destination Souvenir roster before destination art generation."
+    },
+    {
+      "id": "CP-004",
+      "severity": "P0",
+      "finding": "48 public Scene WebPs exist but are stripped from production, so every production Postcard uses a placeholder.",
+      "action": "Close exact-set visual, composite, provenance, rights, and shipping gates."
+    },
+    {
+      "id": "CP-005",
+      "severity": "P1",
+      "finding": "Candidate ceiling is 25 destinations / 61 Scenes; production/archive/catalog remain 20 / 48.",
+      "action": "Do not silently merge the 13 pending v3 Scenes; approve and promote as an exact set."
+    },
+    {
+      "id": "CP-006",
+      "severity": "P1",
+      "finding": "Minho is production-approved, but current exact-set composite approval is pending or superseded.",
+      "action": "Regenerate deterministic composite QA after the final Scene/Portrait bytes are fixed; do not regenerate Minho."
+    },
+    {
+      "id": "CP-007",
+      "severity": "P0",
+      "finding": "PWA icon family depicts a generic invented cat in a flat-vector style.",
+      "action": "Launch GEN-01."
+    },
+    {
+      "id": "CP-008",
+      "severity": "P1",
+      "finding": "New cat candidates will remain unreachable because runtime contains only Minho and no Portrait chooser.",
+      "action": "Keep candidate generation separate from later catalog/chooser integration."
+    },
+    {
+      "id": "CP-009",
+      "severity": "P0",
+      "finding": "Shop v1 and postcard-gifts v1 contain visually and byte-different candidates for the same eight starter-item IDs.",
+      "action": "Keep shop v1 canonical; mark postcard-gifts item masters superseded/review-only before any promotion."
+    },
+    {
+      "id": "CP-010",
+      "severity": "P1",
+      "finding": "Concurrent candidate roots contain build debris: shop .tmp image copies and a full domestic-shorthair .tools/Pillow environment.",
+      "action": "Remove generated caches/dependencies from candidate deliverables before review or commit; preserve only source scripts, manifests, QA, reviews, and intended art."
+    }
+  ],
+  "generationBatches": [
+    {
+      "id": "GEN-01",
+      "title": "App identity and install icons",
+      "priority": "P0",
+      "launchStatus": "launch-now",
+      "outputRoot": "docs/art/candidates/app-identity/v1/",
+      "assetNeedIds": [
+        "AA-014"
+      ],
+      "nonOverlappingWith": [
+        "home/v4",
+        "shop/v1",
+        "pack/v1",
+        "postcard-gifts/v1",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "1024x1024 master",
+        "512x512 maskable/any derivative",
+        "192x192 derivative",
+        "180x180 Apple derivative",
+        "32px and 48px small mark",
+        "mask-safe proof",
+        "small-size legibility sheet",
+        "manifest and hashes"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-02",
+      "title": "First-run adoption presentation",
+      "priority": "P1",
+      "launchStatus": "launch-now",
+      "outputRoot": "docs/art/candidates/adoption/v1/",
+      "assetNeedIds": [
+        "AA-015"
+      ],
+      "nonOverlappingWith": [
+        "home/v4",
+        "shop/v1",
+        "pack/v1",
+        "postcard-gifts/v1",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "text-free base and/or alpha frame",
+        "approved Minho unchanged in review only",
+        "320px, 390px, and 430px reviews",
+        "safe-zone metadata",
+        "manifest and hashes"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-03",
+      "title": "Bootstrap and system loading vignette",
+      "priority": "P1",
+      "launchStatus": "launch-now",
+      "outputRoot": "docs/art/candidates/system-states/v1/",
+      "assetNeedIds": [
+        "AA-006"
+      ],
+      "nonOverlappingWith": [
+        "home/v4",
+        "shop/v1",
+        "pack/v1",
+        "postcard-gifts/v1",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "512x512 text-free master",
+        "256px and 128px derivatives",
+        "320px, 390px, and 430px loading reviews",
+        "manifest and hashes"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-04",
+      "title": "Reusable UI paper and wash surfaces",
+      "priority": "P1",
+      "launchStatus": "launch-now",
+      "outputRoot": "docs/art/candidates/ui-surfaces/v1/",
+      "assetNeedIds": [
+        "AA-017"
+      ],
+      "nonOverlappingWith": [
+        "home/v4",
+        "shop/v1",
+        "pack/v1",
+        "postcard-gifts/v1",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "seamless warm paper tile",
+        "optional transparent wash tile",
+        "1x and 2x repetition proof",
+        "text-contrast proof",
+        "manifest and hashes"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-05",
+      "title": "Utility glyph family",
+      "priority": "P2",
+      "launchStatus": "launch-now-vector-preferred",
+      "outputRoot": "docs/art/candidates/ui-glyphs/v1/",
+      "assetNeedIds": [
+        "AA-018"
+      ],
+      "nonOverlappingWith": [
+        "home/v4",
+        "shop/v1",
+        "pack/v1",
+        "postcard-gifts/v1",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "close, export, import, lock, and retry masters",
+        "24px and 32px legibility proof",
+        "monochrome alpha or SVG sources",
+        "manifest"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-06",
+      "title": "Postcard status and Album-empty art",
+      "priority": "P0",
+      "launchStatus": "launch-now",
+      "outputRoot": "docs/art/candidates/postcard-status/v1/",
+      "assetNeedIds": [
+        "AA-010",
+        "AA-011"
+      ],
+      "nonOverlappingWith": [
+        "postcard-gifts/v1 presentation layers",
+        "shop/v1 starter items",
+        "home/v4 Treat tray",
+        "landmark Scenes",
+        "cats/*"
+      ],
+      "requiredOutputs": [
+        "text-free postmark ring and wave master with live date/destination safe zone",
+        "intentional 1200x900 Scene-unavailable/error fallback",
+        "explicit zero-Postcard Album review using existing stack/blank-back asset when viable",
+        "dedicated Album-empty vignette only if reuse fails",
+        "320px, 390px, and 430px reviews",
+        "manifest, placement metadata, and hashes"
+      ],
+      "forbiddenOutputs": [
+        "starter item redraws",
+        "Treat redraws",
+        "Postcard holder or envelope redraws",
+        "landmark Scene changes",
+        "destination Souvenirs"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    },
+    {
+      "id": "GEN-BLOCKED-01",
+      "title": "Destination Souvenir batches",
+      "priority": "P0",
+      "launchStatus": "blocked",
+      "outputRootPattern": "docs/art/candidates/souvenirs/v1/{destination-id}/",
+      "assetNeedIds": [
+        "AA-012"
+      ],
+      "blockedBy": [
+        "destination-to-Souvenir roster",
+        "stable IDs and names",
+        "object-specific rights briefs"
+      ],
+      "generationWithoutAdditionalUserInput": false
+    },
+    {
+      "id": "GEN-BLOCKED-02",
+      "title": "Rights-safe landmark replacements",
+      "priority": "P0",
+      "launchStatus": "blocked",
+      "outputRootPattern": "docs/art/candidates/landmark-replacements/v1/{destination-id}/",
+      "assetNeedIds": [
+        "AA-013"
+      ],
+      "blockedBy": [
+        "rights and product decision naming destinations to replace",
+        "approved replacement briefs"
+      ],
+      "generationWithoutAdditionalUserInput": false
+    },
+    {
+      "id": "GEN-DEFERRED-01",
+      "title": "Home activity and 320px acceptance follow-up",
+      "priority": "P0",
+      "launchStatus": "launch-after-home-v4-agent-handoff",
+      "outputRoot": "docs/art/candidates/home/v5/",
+      "assetNeedIds": [
+        "AA-002"
+      ],
+      "blockedBy": [
+        "active home/v4 writer",
+        "final v4 corrected composition"
+      ],
+      "generationWithoutAdditionalUserInput": true
+    }
+  ],
+  "coverageMatrix": [
+    {
+      "id": "COV-001",
+      "screenState": "bootstrap/hydrating",
+      "checked": true,
+      "evidence": "src/App.svelte:455-460",
+      "disposition": "text-only placeholder; AA-006"
+    },
+    {
+      "id": "COV-002",
+      "screenState": "adoption/default",
+      "checked": true,
+      "evidence": "src/App.svelte:462-501",
+      "disposition": "approved Minho exists; generic presentation; AA-015"
+    },
+    {
+      "id": "COV-003",
+      "screenState": "adoption/validation-error",
+      "checked": true,
+      "evidence": "src/App.svelte:496-500",
+      "disposition": "live error text is appropriate; no unique art"
+    },
+    {
+      "id": "COV-004",
+      "screenState": "home/sleep",
+      "checked": true,
+      "evidence": "src/App.svelte:47-53,586-605",
+      "disposition": "AA-001 and AA-002; v3 sleep proof exists"
+    },
+    {
+      "id": "COV-005",
+      "screenState": "home/play",
+      "checked": true,
+      "evidence": "src/App.svelte:53-58,586-605",
+      "disposition": "production pose exists; room-fit proof missing; AA-002"
+    },
+    {
+      "id": "COV-006",
+      "screenState": "home/eat",
+      "checked": true,
+      "evidence": "src/App.svelte:58-63,586-605",
+      "disposition": "production pose exists; bowl and room-fit proof missing; AA-002"
+    },
+    {
+      "id": "COV-007",
+      "screenState": "home/waiting",
+      "checked": true,
+      "evidence": "src/App.svelte:167-174,599-605",
+      "disposition": "reuses at-home art and live copy; AA-001/AA-002"
+    },
+    {
+      "id": "COV-008",
+      "screenState": "home/traveling-away",
+      "checked": true,
+      "evidence": "src/App.svelte:579-585",
+      "disposition": "floating Note; AA-003"
+    },
+    {
+      "id": "COV-009",
+      "screenState": "home/returned",
+      "checked": true,
+      "evidence": "src/App.svelte:172-174,603-605",
+      "disposition": "reuses at-home art; AA-001/AA-002"
+    },
+    {
+      "id": "COV-010",
+      "screenState": "windowsill/empty-disabled",
+      "checked": true,
+      "evidence": "src/App.svelte:540-555",
+      "disposition": "bare sill is sufficient after room integration"
+    },
+    {
+      "id": "COV-011",
+      "screenState": "windowsill/collectible-1-to-24",
+      "checked": true,
+      "evidence": "src/App.svelte:540-555; src/lib/economy/index.ts:145-150",
+      "disposition": "emoji and CSS plate; AA-004"
+    },
+    {
+      "id": "COV-012",
+      "screenState": "topbar/treat-balance",
+      "checked": true,
+      "evidence": "src/App.svelte:510-514",
+      "disposition": "fish emoji; AA-004"
+    },
+    {
+      "id": "COV-013",
+      "screenState": "topbar/unread-count-and-title",
+      "checked": true,
+      "evidence": "src/App.svelte:162-164,448,622-625",
+      "disposition": "live numeric badge/title retained"
+    },
+    {
+      "id": "COV-014",
+      "screenState": "home-nav/default",
+      "checked": true,
+      "evidence": "src/App.svelte:610-627",
+      "disposition": "Unicode navigation tokens; AA-005"
+    },
+    {
+      "id": "COV-015",
+      "screenState": "home-nav/compact-height",
+      "checked": true,
+      "evidence": "src/app.css:1242-1259",
+      "disposition": "50px candidate legibility captured in AA-005"
+    },
+    {
+      "id": "COV-016",
+      "screenState": "developer-clock",
+      "checked": true,
+      "evidence": "src/App.svelte:516-528",
+      "disposition": "development-only; no art"
+    },
+    {
+      "id": "COV-017",
+      "screenState": "drawer/common-backdrop-handle-header",
+      "checked": true,
+      "evidence": "src/App.svelte:643-669; src/app.css:846-925",
+      "disposition": "responsive CSS interaction chrome retained"
+    },
+    {
+      "id": "COV-018",
+      "screenState": "drawer/close",
+      "checked": true,
+      "evidence": "src/App.svelte:664-668",
+      "disposition": "Unicode multiplication sign; AA-018"
+    },
+    {
+      "id": "COV-019",
+      "screenState": "shop/normal-affordable",
+      "checked": true,
+      "evidence": "src/App.svelte:670-699",
+      "disposition": "character tokens and price emoji; AA-004/AA-007/AA-008"
+    },
+    {
+      "id": "COV-020",
+      "screenState": "shop/unaffordable-disabled",
+      "checked": true,
+      "evidence": "src/App.svelte:688-697",
+      "disposition": "state remains UI; neutral AA-007 source"
+    },
+    {
+      "id": "COV-021",
+      "screenState": "shop/owned-and-purchase-feedback",
+      "checked": true,
+      "evidence": "src/App.svelte:684-699,410-419",
+      "disposition": "live count/copy; same AA-007 art"
+    },
+    {
+      "id": "COV-022",
+      "screenState": "pack/empty",
+      "checked": true,
+      "evidence": "src/App.svelte:717-755",
+      "disposition": "text/list only; AA-009"
+    },
+    {
+      "id": "COV-023",
+      "screenState": "pack/available-items",
+      "checked": true,
+      "evidence": "src/App.svelte:757-796",
+      "disposition": "character item tokens; AA-007/AA-009"
+    },
+    {
+      "id": "COV-024",
+      "screenState": "pack/one-two-three-items",
+      "checked": true,
+      "evidence": "src/App.svelte:704-716,720-751",
+      "disposition": "capacity and slots captured in AA-009"
+    },
+    {
+      "id": "COV-025",
+      "screenState": "pack/wish-destination-select",
+      "checked": true,
+      "evidence": "src/App.svelte:772-783",
+      "disposition": "native/live control retained; ticket uses AA-007"
+    },
+    {
+      "id": "COV-026",
+      "screenState": "pack/waiting-editable",
+      "checked": true,
+      "evidence": "src/App.svelte:710-714",
+      "disposition": "same Pack art; live status"
+    },
+    {
+      "id": "COV-027",
+      "screenState": "pack/traveling-locked",
+      "checked": true,
+      "evidence": "src/App.svelte:165-166,712-713,742-748,786-790",
+      "disposition": "same Pack art; optional AA-018 lock glyph"
+    },
+    {
+      "id": "COV-028",
+      "screenState": "album/empty",
+      "checked": true,
+      "evidence": "src/App.svelte:818-823",
+      "disposition": "Unicode middle-dot placeholder; AA-011"
+    },
+    {
+      "id": "COV-029",
+      "screenState": "album/populated-development",
+      "checked": true,
+      "evidence": "src/App.svelte:800-816",
+      "disposition": "Scene plus Portrait plus copy/postmark; AA-010/AA-013"
+    },
+    {
+      "id": "COV-030",
+      "screenState": "album/populated-production",
+      "checked": true,
+      "evidence": "src/App.svelte:44-47,809-815",
+      "disposition": "every Scene becomes temporary preview while gate is false; AA-010/AA-013"
+    },
+    {
+      "id": "COV-031",
+      "screenState": "postcard/ordinary-scene",
+      "checked": true,
+      "evidence": "src/lib/postcards/Postcard.svelte:23-34",
+      "disposition": "existing candidate art with exact-set review/rights gates"
+    },
+    {
+      "id": "COV-032",
+      "screenState": "postcard/companion-scene",
+      "checked": true,
+      "evidence": "src/lib/assets/landmarkCatalog.generated.ts hasCompanion entries",
+      "disposition": "Companion remains baked into authorized Scene; no standalone asset"
+    },
+    {
+      "id": "COV-033",
+      "screenState": "postcard/read-unread-transition",
+      "checked": true,
+      "evidence": "src/lib/postcards/index.ts:99-111; src/App.svelte:268-280",
+      "disposition": "state is metadata and live badge; no alternate image"
+    },
+    {
+      "id": "COV-034",
+      "screenState": "postcard/message-and-postmark",
+      "checked": true,
+      "evidence": "src/lib/postcards/Postcard.svelte:42-50,109-147",
+      "disposition": "generic type and CSS ring; AA-010/AA-016"
+    },
+    {
+      "id": "COV-035",
+      "screenState": "souvenir/receive-list-detail",
+      "checked": true,
+      "evidence": "src/lib/assets/starterCatalog.ts:67; src/lib/selection/index.ts:71",
+      "disposition": "missing content and screens; AA-012"
+    },
+    {
+      "id": "COV-036",
+      "screenState": "save/export-import-idle",
+      "checked": true,
+      "evidence": "src/App.svelte:827-840",
+      "disposition": "text buttons usable; AA-018 optional glyphs"
+    },
+    {
+      "id": "COV-037",
+      "screenState": "save/import-success-error",
+      "checked": true,
+      "evidence": "src/App.svelte:300-323,841-844",
+      "disposition": "live notice appropriate; no unique error art"
+    },
+    {
+      "id": "COV-038",
+      "screenState": "persistence-load-failure",
+      "checked": true,
+      "evidence": "src/App.svelte:382-386,630-639",
+      "disposition": "live status line appropriate; AA-006 may be reused during restore only"
+    },
+    {
+      "id": "COV-039",
+      "screenState": "responsive/320px",
+      "checked": true,
+      "evidence": "src/app.css:27-29 and responsive layout",
+      "disposition": "CSS supports width; art acceptance proof missing in home/adoption work"
+    },
+    {
+      "id": "COV-040",
+      "screenState": "responsive/390x844",
+      "checked": true,
+      "evidence": "docs/art/candidates/home/v3/reviews/mobile-review--390x844--*.png",
+      "disposition": "existing Home evidence; every relevant candidate batch must repeat"
+    },
+    {
+      "id": "COV-041",
+      "screenState": "responsive/430x932",
+      "checked": true,
+      "evidence": "docs/art/candidates/home/v3/reviews/mobile-review--430x932--*.png",
+      "disposition": "existing Home evidence; every relevant candidate batch must repeat"
+    },
+    {
+      "id": "COV-042",
+      "screenState": "responsive/470px-and-desktop-inset",
+      "checked": true,
+      "evidence": "src/app.css:48-52,1216-1239",
+      "disposition": "shell and chrome remain CSS"
+    },
+    {
+      "id": "COV-043",
+      "screenState": "reduced-motion",
+      "checked": true,
+      "evidence": "src/app.css:1262-1270",
+      "disposition": "static art needs no alternate assets"
+    },
+    {
+      "id": "COV-044",
+      "screenState": "pwa/install-launcher",
+      "checked": true,
+      "evidence": "public/icon.svg:1-12; vite.config.ts:107-131",
+      "disposition": "generic icon family; AA-014"
+    },
+    {
+      "id": "COV-045",
+      "screenState": "future/portrait-chooser",
+      "checked": true,
+      "evidence": "src/lib/assets/starterCatalog.ts:51-65; src/App.svelte:209-216",
+      "disposition": "absent; candidate packs need six poses and later integration; AA-019"
+    }
+  ],
+  "verification": {
+    "authoringBoundary": "docs/art/candidates/asset-audit/v1/",
+    "auditAuthoredPaths": [
+      "docs/art/candidates/asset-audit/v1/README.md",
+      "docs/art/candidates/asset-audit/v1/asset-audit.v1.json"
+    ],
+    "imagesGenerated": false,
+    "appCodeEdited": false,
+    "productionAssetsEdited": false,
+    "commitCreated": false,
+    "trackedDiffOutsideAuditDirectory": "pass: git status --untracked-files=no produced no entries",
+    "auditDirectoryFileSet": "pass: exactly README.md and asset-audit.v1.json",
+    "jsonParse": "pass: 19 asset needs, 45 coverage states, 9 batch records",
+    "launchNowBatchIds": [
+      "GEN-01",
+      "GEN-02",
+      "GEN-03",
+      "GEN-04",
+      "GEN-05",
+      "GEN-06"
+    ],
+    "duplicateItemCandidateCheck": "pass: all eight sampled-by-name shop/postcard-gifts pairs were compared; all eight are byte-different",
+    "notes": "Pre-existing and concurrently written untracked candidate files changed outside the audit directory while this audit ran. They belong to the declared parallel assignments and were inspected but not authored or modified by the audit."
+  }
+}

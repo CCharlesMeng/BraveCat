@@ -1,0 +1,1417 @@
+{
+  "schemaVersion": 3,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "collectionId": "pack-canonical-insertion-v3",
+  "canvas": {
+    "width": 1536,
+    "height": 1536
+  },
+  "coordinateSystem": "pixels from top-left",
+  "sourceLayers": {
+    "base": "docs/art/candidates/pack/v1/masters/pack-opened-base--master-1536--non-shipping-v01.png",
+    "baseSha256": "e326537e74d36833c426965d51d5bb4c165729e0533165d4d2824f68df296d1c",
+    "foregroundRim": "docs/art/candidates/pack/v1/masters/pack-opened-foreground-rim--master-1536--non-shipping-v01.png",
+    "foregroundRimSha256": "7c3bfbbc3b87b1091110f5edcc1ab4f1b1ef13c262264d5417168c05899c066a",
+    "v1Metadata": "docs/art/candidates/pack/v1/composition-metadata.v1.json",
+    "modified": false
+  },
+  "canonicalStarterItemSource": {
+    "root": "docs/art/candidates/shop/v2/masters",
+    "manifest": "docs/art/candidates/shop/v2/manifest.v2.json",
+    "mapping": "docs/art/candidates/shop/v2/data-key-image-mapping.v2.json",
+    "onlyStarterItemSource": true,
+    "itemFilesCopiedIntoV3": false,
+    "itemFilesRedrawn": false,
+    "itemFilesEdited": false,
+    "itemFilesRegenerated": false,
+    "hashValidation": [
+      {
+        "itemId": "fish-biscuit",
+        "path": "docs/art/candidates/shop/v2/masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+        "expectedSha256": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+        "actualSha256": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+        "match": true
+      },
+      {
+        "itemId": "small-bell",
+        "path": "docs/art/candidates/shop/v2/masters/item--toy--small-bell--master-512--non-shipping-v02.png",
+        "expectedSha256": "0bce3ce954ac19cc167e80aa9fe27ec8520916b04493286ddb48ba5a385db7d3",
+        "actualSha256": "0bce3ce954ac19cc167e80aa9fe27ec8520916b04493286ddb48ba5a385db7d3",
+        "match": true
+      },
+      {
+        "itemId": "small-blanket",
+        "path": "docs/art/candidates/shop/v2/masters/item--toy--small-blanket--master-512--non-shipping-v02.png",
+        "expectedSha256": "668fbf3323692bcb28a94de706f070e7b26b50d5959c8bee7ec4b81b9d8d6c16",
+        "actualSha256": "668fbf3323692bcb28a94de706f070e7b26b50d5959c8bee7ec4b81b9d8d6c16",
+        "match": true
+      },
+      {
+        "itemId": "small-camera",
+        "path": "docs/art/candidates/shop/v2/masters/item--toy--small-camera--master-512--non-shipping-v02.png",
+        "expectedSha256": "0bebf41587795b7525fb65e6b7bedd3355cf87978edf5378dac1aaff7bc8aa10",
+        "actualSha256": "0bebf41587795b7525fb65e6b7bedd3355cf87978edf5378dac1aaff7bc8aa10",
+        "match": true
+      },
+      {
+        "itemId": "small-telescope",
+        "path": "docs/art/candidates/shop/v2/masters/item--toy--small-telescope--master-512--non-shipping-v02.png",
+        "expectedSha256": "c924a0b93afd820b959b63b61add3fe33b512e9798f4b8941e8abdeaa08a71a6",
+        "actualSha256": "c924a0b93afd820b959b63b61add3fe33b512e9798f4b8941e8abdeaa08a71a6",
+        "match": true
+      },
+      {
+        "itemId": "ticket",
+        "path": "docs/art/candidates/shop/v2/masters/item--wish--ticket--master-512--non-shipping-v02.png",
+        "expectedSha256": "1cd47e2f6f7eb3894103361dfb902558beab3ebbde67087a061f8f6f324c4844",
+        "actualSha256": "1cd47e2f6f7eb3894103361dfb902558beab3ebbde67087a061f8f6f324c4844",
+        "match": true
+      },
+      {
+        "itemId": "travel-tin",
+        "path": "docs/art/candidates/shop/v2/masters/item--snack--travel-tin--master-512--non-shipping-v02.png",
+        "expectedSha256": "288f013d6d7d22e3ca91d105660a3cd841f7508eaec2f0f63d1e44a530eacfee",
+        "actualSha256": "288f013d6d7d22e3ca91d105660a3cd841f7508eaec2f0f63d1e44a530eacfee",
+        "match": true
+      },
+      {
+        "itemId": "yarn-ball",
+        "path": "docs/art/candidates/shop/v2/masters/item--toy--yarn-ball--master-512--non-shipping-v02.png",
+        "expectedSha256": "05dea80165276b387bc0c8dbd037eec7233d6bb1fff18ee2102f9e77dffa72b5",
+        "actualSha256": "05dea80165276b387bc0c8dbd037eec7233d6bb1fff18ee2102f9e77dffa72b5",
+        "match": true
+      }
+    ]
+  },
+  "supersession": {
+    "supersededEvidence": "docs/art/candidates/pack/v2 product-content and postcard-gifts starter-item source evidence",
+    "supersededState": "SUPERSEDED FOR PRODUCT CONTENT",
+    "replacementEvidence": "docs/art/candidates/shop/v2/masters plus hashes recorded in this document",
+    "retainedFromPackV2": [
+      "capacity-3 kit structure",
+      "base -> items -> foreground-rim z-order",
+      "compartment containment polygons",
+      "physical occlusion and CSS visibility validation method"
+    ],
+    "packV2FilesModified": false
+  },
+  "layerOrder": [
+    {
+      "z": 0,
+      "role": "unchanged pack/v1 opened-bag base and hinge support"
+    },
+    {
+      "z": 10,
+      "role": "shop/v2 canonical item masters transformed by affine metadata"
+    },
+    {
+      "z": 20,
+      "role": "unchanged pack/v1 foreground rim and pocket occlusion"
+    },
+    {
+      "z": 30,
+      "role": "review/application UI only"
+    }
+  ],
+  "slots": {
+    "left-inner-sleeve": {
+      "bounds": {
+        "x": 354,
+        "y": 642,
+        "width": 312,
+        "height": 356
+      },
+      "polygon": [
+        [
+          354,
+          690
+        ],
+        [
+          430,
+          642
+        ],
+        [
+          618,
+          656
+        ],
+        [
+          666,
+          754
+        ],
+        [
+          654,
+          998
+        ],
+        [
+          372,
+          998
+        ]
+      ]
+    },
+    "center-deep-pocket": {
+      "bounds": {
+        "x": 584,
+        "y": 628,
+        "width": 384,
+        "height": 412
+      },
+      "polygon": [
+        [
+          584,
+          700
+        ],
+        [
+          650,
+          642
+        ],
+        [
+          884,
+          628
+        ],
+        [
+          960,
+          684
+        ],
+        [
+          968,
+          1018
+        ],
+        [
+          606,
+          1040
+        ]
+      ]
+    },
+    "right-inner-sleeve": {
+      "bounds": {
+        "x": 902,
+        "y": 634,
+        "width": 336,
+        "height": 358
+      },
+      "polygon": [
+        [
+          902,
+          680
+        ],
+        [
+          984,
+          634
+        ],
+        [
+          1170,
+          654
+        ],
+        [
+          1238,
+          740
+        ],
+        [
+          1214,
+          966
+        ],
+        [
+          944,
+          992
+        ]
+      ]
+    }
+  },
+  "kits": {
+    "outing-kit": {
+      "label": "OUTING KIT",
+      "description": "Travel tin, small blanket and camera",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [],
+      "wishConstraint": null,
+      "sourceComposite": "composites/pack-filled--outing-kit--master-1536--non-shipping-v03.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "small-blanket",
+            "travel-tin"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "small-blanket",
+            "small-camera"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "travel-tin",
+            "small-camera"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "small-blanket",
+          "slotId": "center-deep-pocket",
+          "destinationAnchor": [
+            750,
+            1028
+          ],
+          "scale": 0.6,
+          "rotationDegreesClockwise": 1.0,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--toy--small-blanket--master-512--non-shipping-v02.png",
+          "sourceSha256": "668fbf3323692bcb28a94de706f070e7b26b50d5959c8bee7ec4b81b9d8d6c16",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 56,
+            "y": 111,
+            "width": 400,
+            "height": 262
+          },
+          "sourceAnchor": [
+            255.5,
+            372
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.5999086,
+            -0.0104714,
+            600.6187254,
+            0.0104714,
+            0.5999086,
+            802.1585405
+          ],
+          "affineInverse": [
+            1.6664128,
+            0.0290873,
+            -1024.2114086,
+            -0.0290873,
+            1.6664128,
+            -1319.2568763
+          ],
+          "transformedAlphaBounds": {
+            "x": 631,
+            "y": 871,
+            "width": 240,
+            "height": 158
+          },
+          "containmentClippedPercent": 0.012,
+          "occludedPercent": 28.59,
+          "visiblePercent": 71.41,
+          "alphaWeightedCenterOfGravity": {
+            "x": 753.57,
+            "y": 949.72
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 109,
+                "y": 152,
+                "width": 48,
+                "height": 24
+              },
+              "visibleAlphaWeight": 154315
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 138,
+                "y": 192,
+                "width": 58,
+                "height": 29
+              },
+              "visibleAlphaWeight": 243944
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 155,
+                "y": 214,
+                "width": 64,
+                "height": 32
+              },
+              "visibleAlphaWeight": 304387
+            }
+          }
+        },
+        {
+          "itemId": "travel-tin",
+          "slotId": "left-inner-sleeve",
+          "destinationAnchor": [
+            505,
+            982
+          ],
+          "scale": 0.68,
+          "rotationDegreesClockwise": -5.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--snack--travel-tin--master-512--non-shipping-v02.png",
+          "sourceSha256": "288f013d6d7d22e3ca91d105660a3cd841f7508eaec2f0f63d1e44a530eacfee",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 94,
+            "y": 133,
+            "width": 322,
+            "height": 215
+          },
+          "sourceAnchor": [
+            254.5,
+            347
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6774124,
+            0.0592659,
+            312.0332765,
+            -0.0592659,
+            0.6774124,
+            762.0210719
+          ],
+          "affineInverse": [
+            1.4649922,
+            -0.1281702,
+            -359.4579164,
+            0.1281702,
+            1.4649922,
+            -1156.3482994
+          ],
+          "transformedAlphaBounds": {
+            "x": 387,
+            "y": 839,
+            "width": 225,
+            "height": 144
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 26.64,
+          "visiblePercent": 73.36,
+          "alphaWeightedCenterOfGravity": {
+            "x": 497.21,
+            "y": 910.19
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 66,
+                "y": 146,
+                "width": 45,
+                "height": 27
+              },
+              "visibleAlphaWeight": 155093
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 84,
+                "y": 185,
+                "width": 54,
+                "height": 32
+              },
+              "visibleAlphaWeight": 245065
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 94,
+                "y": 206,
+                "width": 60,
+                "height": 36
+              },
+              "visibleAlphaWeight": 305764
+            }
+          }
+        },
+        {
+          "itemId": "small-camera",
+          "slotId": "right-inner-sleeve",
+          "destinationAnchor": [
+            1065,
+            940
+          ],
+          "scale": 0.58,
+          "rotationDegreesClockwise": 4.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--toy--small-camera--master-512--non-shipping-v02.png",
+          "sourceSha256": "0bebf41587795b7525fb65e6b7bedd3355cf87978edf5378dac1aaff7bc8aa10",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 63,
+            "y": 101,
+            "width": 390,
+            "height": 290
+          },
+          "sourceAnchor": [
+            257.5,
+            390
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.5785871,
+            -0.0404588,
+            931.7927235,
+            0.0404588,
+            0.5785871,
+            703.9328825
+          ],
+          "affineInverse": [
+            1.719938,
+            0.1202698,
+            -1687.2875842,
+            -0.1202698,
+            1.719938,
+            -1098.6544185
+          ],
+          "transformedAlphaBounds": {
+            "x": 954,
+            "y": 768,
+            "width": 226,
+            "height": 177
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 15.33,
+          "visiblePercent": 84.67,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1057.64,
+            "y": 859.9
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 167,
+                "y": 134,
+                "width": 41,
+                "height": 33
+              },
+              "visibleAlphaWeight": 182026
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 210,
+                "y": 169,
+                "width": 51,
+                "height": 40
+              },
+              "visibleAlphaWeight": 287718
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 235,
+                "y": 189,
+                "width": 56,
+                "height": 44
+              },
+              "visibleAlphaWeight": 359001
+            }
+          }
+        }
+      ]
+    },
+    "play-kit": {
+      "label": "PLAY KIT",
+      "description": "Yarn ball, small bell and fish biscuit",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [],
+      "wishConstraint": null,
+      "sourceComposite": "composites/pack-filled--play-kit--master-1536--non-shipping-v03.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "fish-biscuit",
+            "yarn-ball"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "fish-biscuit",
+            "small-bell"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "yarn-ball",
+            "small-bell"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "fish-biscuit",
+          "slotId": "center-deep-pocket",
+          "destinationAnchor": [
+            770,
+            1025
+          ],
+          "scale": 0.66,
+          "rotationDegreesClockwise": 3.0,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+          "sourceSha256": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 86,
+            "y": 130,
+            "width": 341,
+            "height": 221
+          },
+          "sourceAnchor": [
+            256.0,
+            350
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6590955,
+            -0.0345417,
+            613.3611597,
+            0.0345417,
+            0.6590955,
+            785.4738943
+          ],
+          "affineInverse": [
+            1.5130751,
+            0.0792969,
+            -990.3471165,
+            -0.0792969,
+            1.5130751,
+            -1139.8433134
+          ],
+          "transformedAlphaBounds": {
+            "x": 660,
+            "y": 880,
+            "width": 228,
+            "height": 147
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 37.02,
+          "visiblePercent": 62.98,
+          "alphaWeightedCenterOfGravity": {
+            "x": 772.8,
+            "y": 959.69
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 114,
+                "y": 153,
+                "width": 46,
+                "height": 23
+              },
+              "visibleAlphaWeight": 115403
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 145,
+                "y": 194,
+                "width": 55,
+                "height": 27
+              },
+              "visibleAlphaWeight": 182504
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 162,
+                "y": 216,
+                "width": 61,
+                "height": 30
+              },
+              "visibleAlphaWeight": 227658
+            }
+          }
+        },
+        {
+          "itemId": "yarn-ball",
+          "slotId": "left-inner-sleeve",
+          "destinationAnchor": [
+            475,
+            955
+          ],
+          "scale": 0.66,
+          "rotationDegreesClockwise": -7.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--toy--yarn-ball--master-512--non-shipping-v02.png",
+          "sourceSha256": "05dea80165276b387bc0c8dbd037eec7233d6bb1fff18ee2102f9e77dffa72b5",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 97,
+            "y": 131,
+            "width": 319,
+            "height": 235
+          },
+          "sourceAnchor": [
+            256.0,
+            365
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6550805,
+            0.0804338,
+            277.9410774,
+            -0.0804338,
+            0.6550805,
+            736.4866763
+          ],
+          "affineInverse": [
+            1.5038578,
+            -0.1846505,
+            -281.9912107,
+            0.1846505,
+            1.5038578,
+            -1158.8932014
+          ],
+          "transformedAlphaBounds": {
+            "x": 362,
+            "y": 804,
+            "width": 213,
+            "height": 144
+          },
+          "containmentClippedPercent": 0.66,
+          "occludedPercent": 16.68,
+          "visiblePercent": 83.32,
+          "alphaWeightedCenterOfGravity": {
+            "x": 445.58,
+            "y": 880.07
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 62,
+                "y": 140,
+                "width": 42,
+                "height": 30
+              },
+              "visibleAlphaWeight": 122277
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 79,
+                "y": 177,
+                "width": 51,
+                "height": 36
+              },
+              "visibleAlphaWeight": 192989
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 88,
+                "y": 198,
+                "width": 57,
+                "height": 40
+              },
+              "visibleAlphaWeight": 240751
+            }
+          }
+        },
+        {
+          "itemId": "small-bell",
+          "slotId": "right-inner-sleeve",
+          "destinationAnchor": [
+            1060,
+            953
+          ],
+          "scale": 0.72,
+          "rotationDegreesClockwise": 5.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--toy--small-bell--master-512--non-shipping-v02.png",
+          "sourceSha256": "0bce3ce954ac19cc167e80aa9fe27ec8520916b04493286ddb48ba5a385db7d3",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 162,
+            "y": 91,
+            "width": 201,
+            "height": 310
+          },
+          "sourceAnchor": [
+            262.0,
+            400
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.7172602,
+            -0.0627521,
+            897.1786861,
+            0.0627521,
+            0.7172602,
+            649.6548676
+          ],
+          "affineInverse": [
+            1.3836037,
+            0.1210496,
+            -1319.9802817,
+            -0.1210496,
+            1.3836037,
+            -790.26175
+          ],
+          "transformedAlphaBounds": {
+            "x": 990,
+            "y": 735,
+            "width": 159,
+            "height": 218
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 16.17,
+          "visiblePercent": 83.83,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1068.6,
+            "y": 861.36
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 173,
+                "y": 128,
+                "width": 33,
+                "height": 40
+              },
+              "visibleAlphaWeight": 112677
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 218,
+                "y": 161,
+                "width": 40,
+                "height": 50
+              },
+              "visibleAlphaWeight": 178073
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 244,
+                "y": 181,
+                "width": 44,
+                "height": 54
+              },
+              "visibleAlphaWeight": 222187
+            }
+          }
+        }
+      ]
+    },
+    "wish-observation-kit": {
+      "label": "WISH / OBSERVATION KIT",
+      "description": "One ticket, telescope and fish biscuit",
+      "capacityUsed": 3,
+      "capacityMaximum": 3,
+      "wishItems": [
+        "ticket"
+      ],
+      "wishConstraint": {
+        "maxWishItems": 1,
+        "wishItemId": "ticket",
+        "requiresWishDestinationId": true,
+        "destinationValueBakedIntoArt": false
+      },
+      "sourceComposite": "composites/pack-filled--wish-observation-kit--master-1536--non-shipping-v03.png",
+      "pairwiseItemOverlap": [
+        {
+          "items": [
+            "ticket",
+            "fish-biscuit"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "ticket",
+            "small-telescope"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        },
+        {
+          "items": [
+            "fish-biscuit",
+            "small-telescope"
+          ],
+          "alphaOverlapPercentOfSmaller": 0.0
+        }
+      ],
+      "placements": [
+        {
+          "itemId": "ticket",
+          "slotId": "center-deep-pocket",
+          "destinationAnchor": [
+            768,
+            1025
+          ],
+          "scale": 0.7,
+          "rotationDegreesClockwise": -3.0,
+          "zWithinItems": 0,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--wish--ticket--master-512--non-shipping-v02.png",
+          "sourceSha256": "1cd47e2f6f7eb3894103361dfb902558beab3ebbde67087a061f8f6f324c4844",
+          "containment": {
+            "bounds": {
+              "x": 584,
+              "y": 628,
+              "width": 384,
+              "height": 412
+            },
+            "polygon": [
+              [
+                584,
+                700
+              ],
+              [
+                650,
+                642
+              ],
+              [
+                884,
+                628
+              ],
+              [
+                960,
+                684
+              ],
+              [
+                968,
+                1018
+              ],
+              [
+                606,
+                1040
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 80,
+            "y": 136,
+            "width": 356,
+            "height": 223
+          },
+          "sourceAnchor": [
+            257.5,
+            358
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6990407,
+            0.0366352,
+            574.8816357,
+            -0.0366352,
+            0.6990407,
+            784.1769947
+          ],
+          "affineInverse": [
+            1.4266136,
+            -0.0747657,
+            -761.5044679,
+            0.0747657,
+            1.4266136,
+            -1161.6989822
+          ],
+          "transformedAlphaBounds": {
+            "x": 642,
+            "y": 875,
+            "width": 245,
+            "height": 147
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 28.5,
+          "visiblePercent": 71.5,
+          "alphaWeightedCenterOfGravity": {
+            "x": 765.45,
+            "y": 946.78
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 112,
+                "y": 153,
+                "width": 47,
+                "height": 23
+              },
+              "visibleAlphaWeight": 167857
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 141,
+                "y": 193,
+                "width": 59,
+                "height": 28
+              },
+              "visibleAlphaWeight": 265290
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 158,
+                "y": 215,
+                "width": 65,
+                "height": 31
+              },
+              "visibleAlphaWeight": 331002
+            }
+          }
+        },
+        {
+          "itemId": "fish-biscuit",
+          "slotId": "left-inner-sleeve",
+          "destinationAnchor": [
+            530,
+            985
+          ],
+          "scale": 0.62,
+          "rotationDegreesClockwise": -9.0,
+          "zWithinItems": 1,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+          "sourceSha256": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+          "containment": {
+            "bounds": {
+              "x": 354,
+              "y": 642,
+              "width": 312,
+              "height": 356
+            },
+            "polygon": [
+              [
+                354,
+                690
+              ],
+              [
+                430,
+                642
+              ],
+              [
+                618,
+                656
+              ],
+              [
+                666,
+                754
+              ],
+              [
+                654,
+                998
+              ],
+              [
+                372,
+                998
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 86,
+            "y": 130,
+            "width": 341,
+            "height": 221
+          },
+          "sourceAnchor": [
+            256.0,
+            350
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6123668,
+            0.0969894,
+            339.2878277,
+            -0.0969894,
+            0.6123668,
+            795.5009084
+          ],
+          "affineInverse": [
+            1.5930457,
+            -0.2523137,
+            -339.7852781,
+            0.2523137,
+            1.5930457,
+            -1352.8762612
+          ],
+          "transformedAlphaBounds": {
+            "x": 415,
+            "y": 850,
+            "width": 216,
+            "height": 139
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 30.17,
+          "visiblePercent": 69.83,
+          "alphaWeightedCenterOfGravity": {
+            "x": 519.88,
+            "y": 924.3
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 73,
+                "y": 148,
+                "width": 41,
+                "height": 25
+              },
+              "visibleAlphaWeight": 112991
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 93,
+                "y": 187,
+                "width": 50,
+                "height": 30
+              },
+              "visibleAlphaWeight": 178590
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 104,
+                "y": 209,
+                "width": 55,
+                "height": 33
+              },
+              "visibleAlphaWeight": 222759
+            }
+          }
+        },
+        {
+          "itemId": "small-telescope",
+          "slotId": "right-inner-sleeve",
+          "destinationAnchor": [
+            1065,
+            930
+          ],
+          "scale": 0.66,
+          "rotationDegreesClockwise": -12.0,
+          "zWithinItems": 2,
+          "sourceMaster": "docs/art/candidates/shop/v2/masters/item--toy--small-telescope--master-512--non-shipping-v02.png",
+          "sourceSha256": "c924a0b93afd820b959b63b61add3fe33b512e9798f4b8941e8abdeaa08a71a6",
+          "containment": {
+            "bounds": {
+              "x": 902,
+              "y": 634,
+              "width": 336,
+              "height": 358
+            },
+            "polygon": [
+              [
+                902,
+                680
+              ],
+              [
+                984,
+                634
+              ],
+              [
+                1170,
+                654
+              ],
+              [
+                1238,
+                740
+              ],
+              [
+                1214,
+                966
+              ],
+              [
+                944,
+                992
+              ]
+            ]
+          },
+          "sourceAlphaBounds": {
+            "x": 87,
+            "y": 171,
+            "width": 337,
+            "height": 149
+          },
+          "sourceAnchor": [
+            255.0,
+            319
+          ],
+          "sourceAnchorPolicy": "alpha-bounds-bottom-center",
+          "affineForward": [
+            0.6455774,
+            0.1372217,
+            856.6040314,
+            -0.1372217,
+            0.6455774,
+            759.0523417
+          ],
+          "affineInverse": [
+            1.4820418,
+            -0.3150177,
+            -1030.4080641,
+            0.3150177,
+            1.4820418,
+            -1394.7927567
+          ],
+          "transformedAlphaBounds": {
+            "x": 945,
+            "y": 850,
+            "width": 227,
+            "height": 71
+          },
+          "containmentClippedPercent": 0.0,
+          "occludedPercent": 15.71,
+          "visiblePercent": 84.28,
+          "alphaWeightedCenterOfGravity": {
+            "x": 1042.53,
+            "y": 887.78
+          },
+          "centerOfGravityInsideSlotBounds": true,
+          "mobileVisibility": {
+            "272": {
+              "visibleBounds": {
+                "x": 165,
+                "y": 148,
+                "width": 40,
+                "height": 17
+              },
+              "visibleAlphaWeight": 74246
+            },
+            "342": {
+              "visibleBounds": {
+                "x": 208,
+                "y": 187,
+                "width": 50,
+                "height": 20
+              },
+              "visibleAlphaWeight": 117194
+            },
+            "382": {
+              "visibleBounds": {
+                "x": 232,
+                "y": 209,
+                "width": 56,
+                "height": 22
+              },
+              "visibleAlphaWeight": 146212
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ticketConstraint": {
+    "maximumTicketsPerPack": 1,
+    "kind": "wish",
+    "requiresWishDestinationId": true,
+    "destinationStoredInGameState": true,
+    "destinationBakedIntoV3Composite": false
+  },
+  "reviewMapping": {
+    "empty": "unchanged pack/v1 base",
+    "populated": "outing-kit",
+    "selected": "wish-observation-kit",
+    "scroll": "play-kit",
+    "viewports": [
+      [
+        320,
+        700
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ]
+    ],
+    "bagCssWidths": [
+      272,
+      342,
+      382
+    ]
+  }
+}

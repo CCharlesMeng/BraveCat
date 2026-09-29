@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 2,
+  "status": "pass",
+  "supersedes": "docs/art/candidates/shop/v1",
+  "checks": {
+    "pngCount": 31,
+    "masterCount": 8,
+    "runtime128Count": 8,
+    "exactReview92Count": 8,
+    "mobileReviewCount": 3,
+    "edgeSheetCount": 2,
+    "contactSheetCount": 1,
+    "physicalLegibilitySheetCount": 1
+  },
+  "errors": [],
+  "files": [
+    {
+      "path": "masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 86,
+        "top": 131,
+        "right": 426,
+        "bottom": 350,
+        "width": 341,
+        "height": 220
+      },
+      "minimumSafeMargin": 85,
+      "exteriorEdgePixels": 1588,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--snack--fish-biscuit--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 21,
+        "top": 32,
+        "right": 106,
+        "bottom": 87,
+        "width": 86,
+        "height": 56
+      },
+      "minimumSafeMargin": 21
+    },
+    {
+      "path": "review-92/item--snack--fish-biscuit--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 15,
+        "top": 23,
+        "right": 76,
+        "bottom": 62,
+        "width": 62,
+        "height": 40
+      },
+      "minimumSafeMargin": 15
+    },
+    {
+      "path": "masters/item--snack--travel-tin--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 95,
+        "top": 135,
+        "right": 414,
+        "bottom": 347,
+        "width": 320,
+        "height": 213
+      },
+      "minimumSafeMargin": 95,
+      "exteriorEdgePixels": 1342,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--snack--travel-tin--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 23,
+        "top": 33,
+        "right": 103,
+        "bottom": 86,
+        "width": 81,
+        "height": 54
+      },
+      "minimumSafeMargin": 23
+    },
+    {
+      "path": "review-92/item--snack--travel-tin--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 16,
+        "top": 24,
+        "right": 74,
+        "bottom": 62,
+        "width": 59,
+        "height": 39
+      },
+      "minimumSafeMargin": 16
+    },
+    {
+      "path": "masters/item--toy--small-blanket--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 56,
+        "top": 113,
+        "right": 454,
+        "bottom": 372,
+        "width": 399,
+        "height": 260
+      },
+      "minimumSafeMargin": 56,
+      "exteriorEdgePixels": 1690,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--toy--small-blanket--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 14,
+        "top": 28,
+        "right": 113,
+        "bottom": 92,
+        "width": 100,
+        "height": 65
+      },
+      "minimumSafeMargin": 14
+    },
+    {
+      "path": "review-92/item--toy--small-blanket--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 10,
+        "top": 20,
+        "right": 81,
+        "bottom": 66,
+        "width": 72,
+        "height": 47
+      },
+      "minimumSafeMargin": 10
+    },
+    {
+      "path": "masters/item--toy--yarn-ball--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 97,
+        "top": 133,
+        "right": 415,
+        "bottom": 365,
+        "width": 319,
+        "height": 233
+      },
+      "minimumSafeMargin": 96,
+      "exteriorEdgePixels": 1885,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--toy--yarn-ball--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 24,
+        "top": 33,
+        "right": 103,
+        "bottom": 91,
+        "width": 80,
+        "height": 59
+      },
+      "minimumSafeMargin": 24
+    },
+    {
+      "path": "review-92/item--toy--yarn-ball--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 17,
+        "top": 23,
+        "right": 74,
+        "bottom": 65,
+        "width": 58,
+        "height": 43
+      },
+      "minimumSafeMargin": 17
+    },
+    {
+      "path": "masters/item--toy--small-bell--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 162,
+        "top": 93,
+        "right": 361,
+        "bottom": 400,
+        "width": 200,
+        "height": 308
+      },
+      "minimumSafeMargin": 93,
+      "exteriorEdgePixels": 1853,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--toy--small-bell--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 40,
+        "top": 23,
+        "right": 90,
+        "bottom": 99,
+        "width": 51,
+        "height": 77
+      },
+      "minimumSafeMargin": 23
+    },
+    {
+      "path": "review-92/item--toy--small-bell--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 29,
+        "top": 16,
+        "right": 65,
+        "bottom": 71,
+        "width": 37,
+        "height": 56
+      },
+      "minimumSafeMargin": 16
+    },
+    {
+      "path": "masters/item--toy--small-camera--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 64,
+        "top": 103,
+        "right": 451,
+        "bottom": 390,
+        "width": 388,
+        "height": 288
+      },
+      "minimumSafeMargin": 60,
+      "exteriorEdgePixels": 2123,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--toy--small-camera--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 16,
+        "top": 25,
+        "right": 113,
+        "bottom": 97,
+        "width": 98,
+        "height": 73
+      },
+      "minimumSafeMargin": 14
+    },
+    {
+      "path": "review-92/item--toy--small-camera--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 11,
+        "top": 18,
+        "right": 81,
+        "bottom": 69,
+        "width": 71,
+        "height": 52
+      },
+      "minimumSafeMargin": 10
+    },
+    {
+      "path": "masters/item--toy--small-telescope--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 87,
+        "top": 172,
+        "right": 423,
+        "bottom": 318,
+        "width": 337,
+        "height": 147
+      },
+      "minimumSafeMargin": 87,
+      "exteriorEdgePixels": 1286,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--toy--small-telescope--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 21,
+        "top": 43,
+        "right": 106,
+        "bottom": 79,
+        "width": 86,
+        "height": 37
+      },
+      "minimumSafeMargin": 21
+    },
+    {
+      "path": "review-92/item--toy--small-telescope--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 15,
+        "top": 30,
+        "right": 76,
+        "bottom": 57,
+        "width": 62,
+        "height": 28
+      },
+      "minimumSafeMargin": 15
+    },
+    {
+      "path": "masters/item--wish--ticket--master-512--non-shipping-v02.png",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 82,
+        "top": 138,
+        "right": 432,
+        "bottom": 358,
+        "width": 351,
+        "height": 221
+      },
+      "minimumSafeMargin": 79,
+      "exteriorEdgePixels": 2041,
+      "lightFringePixels": 0,
+      "darkFringePixels": 0
+    },
+    {
+      "path": "runtime-128/item--wish--ticket--runtime-128--non-shipping-v02.png",
+      "width": 128,
+      "height": 128,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 20,
+        "top": 34,
+        "right": 108,
+        "bottom": 89,
+        "width": 89,
+        "height": 56
+      },
+      "minimumSafeMargin": 19
+    },
+    {
+      "path": "review-92/item--wish--ticket--review-92--non-shipping-v02.png",
+      "width": 92,
+      "height": 92,
+      "channels": 4,
+      "hasAlpha": true,
+      "iccProfile": true,
+      "errors": [],
+      "transparentRgbNonZero": 0,
+      "visibleBounds": {
+        "left": 14,
+        "top": 24,
+        "right": 77,
+        "bottom": 64,
+        "width": 64,
+        "height": 41
+      },
+      "minimumSafeMargin": 14
+    },
+    {
+      "path": "reviews/shop-review--320x700--mixed-affordability--non-shipping-v02.png",
+      "width": 320,
+      "height": 700,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "reviews/shop-review--390x844--affordable-owned-top--non-shipping-v02.png",
+      "width": 390,
+      "height": 844,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v02.png",
+      "width": 430,
+      "height": 932,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "reviews/before-after-edge-sheet--1200x1600--non-shipping-v02.png",
+      "width": 1200,
+      "height": 1600,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "reviews/light-dark-split-qa--1200x900--non-shipping-v02.png",
+      "width": 1200,
+      "height": 900,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "reviews/contact-sheet--shop-v2--1200x1600--non-shipping-v02.png",
+      "width": 1200,
+      "height": 1600,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    },
+    {
+      "path": "qa/legibility--46px--1200x500--non-shipping-v02.png",
+      "width": 1200,
+      "height": 500,
+      "channels": 3,
+      "hasAlpha": false,
+      "iccProfile": true,
+      "errors": []
+    }
+  ]
+}

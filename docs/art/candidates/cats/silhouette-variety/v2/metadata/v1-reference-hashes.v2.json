@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "verifiedAt": "2026-07-21",
+  "protectedAssetCount": 24,
+  "allManifestMatched": true,
+  "allUnchanged": true,
+  "checks": [
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--sit--master-1024--non-shipping-v01.png",
+      "manifestSha256": "c5c42e96711417efabc635974fb048b1c272bd100847dddee461dbf75796994c",
+      "beforeSha256": "c5c42e96711417efabc635974fb048b1c272bd100847dddee461dbf75796994c",
+      "afterSha256": "c5c42e96711417efabc635974fb048b1c272bd100847dddee461dbf75796994c",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--sleep--master-1024--non-shipping-v01.png",
+      "manifestSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+      "beforeSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+      "afterSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--walk--master-1024--non-shipping-v01.png",
+      "manifestSha256": "ec18132e28125e6e992b73687edc9090e23b922e6c95ac0808e357b9765b174b",
+      "beforeSha256": "ec18132e28125e6e992b73687edc9090e23b922e6c95ac0808e357b9765b174b",
+      "afterSha256": "ec18132e28125e6e992b73687edc9090e23b922e6c95ac0808e357b9765b174b",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--eat--master-1024--non-shipping-v01.png",
+      "manifestSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+      "beforeSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+      "afterSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--play--master-1024--non-shipping-v01.png",
+      "manifestSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+      "beforeSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+      "afterSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--gaze--master-1024--non-shipping-v01.png",
+      "manifestSha256": "4241ed681e0fc319270d8851f8a6e3fae525510f2ecc4a23717afa1a34ee4bc8",
+      "beforeSha256": "4241ed681e0fc319270d8851f8a6e3fae525510f2ecc4a23717afa1a34ee4bc8",
+      "afterSha256": "4241ed681e0fc319270d8851f8a6e3fae525510f2ecc4a23717afa1a34ee4bc8",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--sit--master-1024--non-shipping-v01.png",
+      "manifestSha256": "f4f49f350972edafa73e54803aa5ba7fe11bd6b5a81aa9d0d619545f9c3450d6",
+      "beforeSha256": "f4f49f350972edafa73e54803aa5ba7fe11bd6b5a81aa9d0d619545f9c3450d6",
+      "afterSha256": "f4f49f350972edafa73e54803aa5ba7fe11bd6b5a81aa9d0d619545f9c3450d6",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--sleep--master-1024--non-shipping-v01.png",
+      "manifestSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+      "beforeSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+      "afterSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--walk--master-1024--non-shipping-v01.png",
+      "manifestSha256": "94d4eb8caffbaf90fc4ca13865eefa573bb9a8462e66f09600d504d1aac19cfb",
+      "beforeSha256": "94d4eb8caffbaf90fc4ca13865eefa573bb9a8462e66f09600d504d1aac19cfb",
+      "afterSha256": "94d4eb8caffbaf90fc4ca13865eefa573bb9a8462e66f09600d504d1aac19cfb",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--eat--master-1024--non-shipping-v01.png",
+      "manifestSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+      "beforeSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+      "afterSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--play--master-1024--non-shipping-v01.png",
+      "manifestSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+      "beforeSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+      "afterSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--gaze--master-1024--non-shipping-v01.png",
+      "manifestSha256": "f6a6ecb13c05aaa2535422c2cf9d203b9135adf7c322bec74b9ed8d49d58c434",
+      "beforeSha256": "f6a6ecb13c05aaa2535422c2cf9d203b9135adf7c322bec74b9ed8d49d58c434",
+      "afterSha256": "f6a6ecb13c05aaa2535422c2cf9d203b9135adf7c322bec74b9ed8d49d58c434",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--sit--master-1024--non-shipping-v01.png",
+      "manifestSha256": "105f5f2887efe54d4eb72368530000112bac72a97067796ed46c6f49db2a8676",
+      "beforeSha256": "105f5f2887efe54d4eb72368530000112bac72a97067796ed46c6f49db2a8676",
+      "afterSha256": "105f5f2887efe54d4eb72368530000112bac72a97067796ed46c6f49db2a8676",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--sleep--master-1024--non-shipping-v01.png",
+      "manifestSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+      "beforeSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+      "afterSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--walk--master-1024--non-shipping-v01.png",
+      "manifestSha256": "1cea6a99d5661a7033bc52c1a250b0e063fdd86c07954d75715edf26c8f94cc4",
+      "beforeSha256": "1cea6a99d5661a7033bc52c1a250b0e063fdd86c07954d75715edf26c8f94cc4",
+      "afterSha256": "1cea6a99d5661a7033bc52c1a250b0e063fdd86c07954d75715edf26c8f94cc4",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--eat--master-1024--non-shipping-v01.png",
+      "manifestSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+      "beforeSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+      "afterSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--play--master-1024--non-shipping-v01.png",
+      "manifestSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+      "beforeSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+      "afterSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--gaze--master-1024--non-shipping-v01.png",
+      "manifestSha256": "80f24e2134d7833a75c3966d5cd9960f4afdebca602d65204eb83ba53b6a7f3d",
+      "beforeSha256": "80f24e2134d7833a75c3966d5cd9960f4afdebca602d65204eb83ba53b6a7f3d",
+      "afterSha256": "80f24e2134d7833a75c3966d5cd9960f4afdebca602d65204eb83ba53b6a7f3d",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--maine-coon--sleep--390x844--non-shipping-v01.png",
+      "manifestSha256": "de6184c4b77e95db435fd27e72945935d5d49fc9b9cd66f264b7d97b891a5001",
+      "beforeSha256": "de6184c4b77e95db435fd27e72945935d5d49fc9b9cd66f264b7d97b891a5001",
+      "afterSha256": "de6184c4b77e95db435fd27e72945935d5d49fc9b9cd66f264b7d97b891a5001",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--ragdoll--sleep--390x844--non-shipping-v01.png",
+      "manifestSha256": "b3ed87e9c768122b99ce3e19838a10343e5951050ceb443b3ef5f6394d81b009",
+      "beforeSha256": "b3ed87e9c768122b99ce3e19838a10343e5951050ceb443b3ef5f6394d81b009",
+      "afterSha256": "b3ed87e9c768122b99ce3e19838a10343e5951050ceb443b3ef5f6394d81b009",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--siamese--sleep--390x844--non-shipping-v01.png",
+      "manifestSha256": "4c0b7f8aa6f5414ee5749a979473709326ad14cee4400ad09e5dd7ca4fd04423",
+      "beforeSha256": "4c0b7f8aa6f5414ee5749a979473709326ad14cee4400ad09e5dd7ca4fd04423",
+      "afterSha256": "4c0b7f8aa6f5414ee5749a979473709326ad14cee4400ad09e5dd7ca4fd04423",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--maine-coon--sleep--430x932--non-shipping-v01.png",
+      "manifestSha256": "6392b41ce3b8a4be83954fba5c27a104764cb1c8cab99f457a0862a16176837b",
+      "beforeSha256": "6392b41ce3b8a4be83954fba5c27a104764cb1c8cab99f457a0862a16176837b",
+      "afterSha256": "6392b41ce3b8a4be83954fba5c27a104764cb1c8cab99f457a0862a16176837b",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--ragdoll--sleep--430x932--non-shipping-v01.png",
+      "manifestSha256": "ab36e4af99f0c7b4d7645353dab6e883f40b72e3c8362eabfa196568befd1636",
+      "beforeSha256": "ab36e4af99f0c7b4d7645353dab6e883f40b72e3c8362eabfa196568befd1636",
+      "afterSha256": "ab36e4af99f0c7b4d7645353dab6e883f40b72e3c8362eabfa196568befd1636",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--siamese--sleep--430x932--non-shipping-v01.png",
+      "manifestSha256": "f59e86195bf4633caefa51a9d6f0a8a5a61059fc9b270b229068707c4f532fa3",
+      "beforeSha256": "f59e86195bf4633caefa51a9d6f0a8a5a61059fc9b270b229068707c4f532fa3",
+      "afterSha256": "f59e86195bf4633caefa51a9d6f0a8a5a61059fc9b270b229068707c4f532fa3",
+      "manifestMatch": true,
+      "unchanged": true
+    }
+  ]
+}

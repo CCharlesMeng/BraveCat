@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 6,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "visualInspection": {
+    "performedAtFullMobileSize": true,
+    "visibleBowlCount": {
+      "320x700": 2,
+      "390x844": 2,
+      "430x932": 2
+    },
+    "visibleObjects": [
+      "unchanged room water bowl",
+      "approved Minho baked eating bowl"
+    ],
+    "supersededBackgroundFoodBowlVisible": false,
+    "catPaintedOver": false,
+    "roomGeometryAltered": false,
+    "floatingObserved": false,
+    "rugPenetrationObserved": false,
+    "extraContactShadowObserved": false
+  },
+  "patchQA": {
+    "declaredTargetBounds": [
+      350,
+      1175,
+      500,
+      1328
+    ],
+    "actualPixelDifferenceBounds": [
+      358,
+      1175,
+      500,
+      1328
+    ],
+    "changedPixelCount": 19172,
+    "changedPixelPercentOfCanvas": 0.998542,
+    "maximumChannelDelta": 126,
+    "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+    "waterBowlMaxPixelDelta": 0,
+    "outsideDeclaredPatchChangedPixels": 0
+  },
+  "placement": {
+    "source": "public/portraits/minho/portrait--minho--eat--v01.png",
+    "sourceSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+    "sourceModified": false,
+    "sourceAlphaBounds": [
+      64,
+      389,
+      960,
+      960
+    ],
+    "sourceOpaqueBounds": [
+      65,
+      390,
+      958,
+      959
+    ],
+    "canvasRect": {
+      "x": 335,
+      "y": 864,
+      "width": 450,
+      "height": 450
+    },
+    "scaleRelativeTo1024": 0.439453,
+    "scaleRelativeToV5Eat": 1.0,
+    "placedAlphaBounds": [
+      363.125,
+      1034.947,
+      756.875,
+      1285.875
+    ],
+    "placedOpaqueBounds": [
+      363.564,
+      1035.387,
+      755.996,
+      1285.436
+    ],
+    "bottomCenterAnchor": [
+      559.78,
+      1285.436
+    ],
+    "bakedBowlPlacedBounds": [
+      363.125,
+      1226.988,
+      519.57,
+      1285.875
+    ],
+    "backgroundWaterBowlVisibleBounds": [
+      215,
+      1200,
+      355,
+      1320
+    ],
+    "supersededFoodBowlBounds": [
+      350,
+      1188,
+      485,
+      1315
+    ],
+    "contactPoints": [
+      [
+        444,
+        1282
+      ],
+      [
+        531,
+        1277
+      ],
+      [
+        646,
+        1278
+      ],
+      [
+        701,
+        1275
+      ]
+    ],
+    "groundingBottomDeltaPx": 3.436,
+    "rugEdgeClearance": [
+      {
+        "point": [
+          444,
+          1282
+        ],
+        "rugTopY": 1317.636,
+        "clearanceAboveRugEdgePx": 35.636
+      },
+      {
+        "point": [
+          531,
+          1277
+        ],
+        "rugTopY": 1298.178,
+        "clearanceAboveRugEdgePx": 21.178
+      },
+      {
+        "point": [
+          646,
+          1278
+        ],
+        "rugTopY": 1287.439,
+        "clearanceAboveRugEdgePx": 9.439
+      },
+      {
+        "point": [
+          701,
+          1275
+        ],
+        "rugTopY": 1287.352,
+        "clearanceAboveRugEdgePx": 12.352
+      }
+    ],
+    "minimumRugEdgeClearancePx": 9.439,
+    "clearancePx": {
+      "catTree": 58.125,
+      "waterBowl": 8.125,
+      "cabinet": 201.125,
+      "navigationReserve": 184.125
+    },
+    "viewportFit": {
+      "320x700": {
+        "fullyVisible": true,
+        "leftPx": 85.829,
+        "rightPx": 110.879,
+        "topRoomPx": 324.068,
+        "bottomRoomPx": 98.36
+      },
+      "390x844": {
+        "fullyVisible": true,
+        "leftPx": 103.803,
+        "rightPx": 134.603,
+        "topRoomPx": 398.455,
+        "bottomRoomPx": 120.938
+      },
+      "430x932": {
+        "fullyVisible": true,
+        "leftPx": 110.775,
+        "rightPx": 145.975,
+        "topRoomPx": 455.377,
+        "bottomRoomPx": 138.215
+      }
+    },
+    "contactShadowCreated": false
+  },
+  "unchangedV5References": {
+    "manifest": {
+      "path": "docs/art/candidates/home/v5/manifest.v5.json",
+      "sha256": "c5e42b0076b9734210ddd53ee6d2f78c2d991897d56cb7bc48ff3002262d93b7",
+      "allEntriesVerified": true
+    },
+    "states": {
+      "320x700": {
+        "sleep": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--320x700--sleep--non-shipping-v05.png",
+          "sha256": "7c115165b9ce567a05f3e6de9c6e37f1d4499045dedf934b4c99c726e6a86def",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "play": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--320x700--play--non-shipping-v05.png",
+          "sha256": "b51d514f96f40cde291d356d146ec57ced3051844b28719b2f1234b792d038a1",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "away": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--320x700--away--non-shipping-v05.png",
+          "sha256": "c2c7f579d9d384c8d407ba121312b8defb00a7e8ee4cff1a805a290a801aff7e",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "collectible-ready": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--320x700--collectible-ready--non-shipping-v05.png",
+          "sha256": "f111d1caf0706ed7da675b5c36c72974ac16e8cec0b82ff25a8ce6c77127bd3e",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        }
+      },
+      "390x844": {
+        "sleep": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--390x844--sleep--non-shipping-v05.png",
+          "sha256": "96cf7e422f3fdba153b4f7d1d8fb14515b8a3017d1775df3740934ad22e98715",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "play": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--390x844--play--non-shipping-v05.png",
+          "sha256": "eb5d0cfe917882ec43b24fb09310cad579433a56193f866395122f09b48985cd",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "away": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--390x844--away--non-shipping-v05.png",
+          "sha256": "5adcdee3a77af938b63efa434b69b7089a393a3a1d17437227b5783be2f44322",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "collectible-ready": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--390x844--collectible-ready--non-shipping-v05.png",
+          "sha256": "9abf9aa4eef15a03a0d373ea4c689833f846c3f44c1bcc051d116a3432931077",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        }
+      },
+      "430x932": {
+        "sleep": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--430x932--sleep--non-shipping-v05.png",
+          "sha256": "7a55c40c8b5d5e857e90e773554b2c01909cb5a61bfdfd8f84997173c0f4656e",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "play": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--430x932--play--non-shipping-v05.png",
+          "sha256": "e4d22cbcc7347d9d2e85f4df8df9bcdaa3a2570158e4c417af8a767234716196",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "away": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--430x932--away--non-shipping-v05.png",
+          "sha256": "d9a042dbf11a1a7ba1b27cf4fde2895f9dd02b3c48755c623e2166a0d0d096f8",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        },
+        "collectible-ready": {
+          "path": "docs/art/candidates/home/v5/reviews/mobile-review--430x932--collectible-ready--non-shipping-v05.png",
+          "sha256": "712723ed1e238e6aa8ea4b83cd23f9721803a3fd9798dc33d442d2a18ae6d9c2",
+          "manifestHashMatched": true,
+          "copiedToV6": false,
+          "modified": false
+        }
+      }
+    }
+  },
+  "productionMinho": {
+    "path": "public/portraits/minho/portrait--minho--eat--v01.png",
+    "sha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+    "modified": false,
+    "pixelsReusedUnchanged": true
+  },
+  "reviewChecks": [
+    {
+      "path": "reviews/mobile-review--320x700--eat-two-bowls--non-shipping-v06.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--390x844--eat-two-bowls--non-shipping-v06.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/mobile-review--430x932--eat-two-bowls--non-shipping-v06.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/before-after--eat-bowl-count-and-support--1200x1600--non-shipping-v06.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  ]
+}

@@ -1,0 +1,1312 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "dimensions": {
+    "widths": [
+      "320",
+      "390",
+      "430"
+    ],
+    "viewports": [
+      "320x700",
+      "390x844",
+      "430x932"
+    ],
+    "breeds": [
+      "maine-coon",
+      "ragdoll",
+      "siamese"
+    ],
+    "poses": [
+      "sit",
+      "sleep",
+      "walk",
+      "eat",
+      "play",
+      "gaze"
+    ]
+  },
+  "summary": {
+    "requiredSlots": 54,
+    "coveredSlots": 54,
+    "newV2FullResolutionComposites": 48,
+    "v1HashVerifiedReferences": 6,
+    "passes": 54,
+    "failures": 0
+  },
+  "grid": {
+    "320x700": {
+      "maine-coon": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--sit--320x700--non-shipping-v02.png",
+          "sha256": "7c07afe5e3cff15c898c4d79e926b76440ab70c2a26bd03bef70c892b445683b"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--sleep--320x700--non-shipping-v02.png",
+          "sha256": "c462e7855b717c307c720376de8b036b08aab24c20bf3dc529576b78add7a350"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--walk--320x700--non-shipping-v02.png",
+          "sha256": "34e50e4e292677a362bc4e6ddbc761e65642c7fb058a3198b69c45a1881e3d58"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--eat--320x700--non-shipping-v02.png",
+          "sha256": "d44fd3f4fddd63cf7995e3bd9287b8d8e48893c54c350709a0248526254a9ded"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--play--320x700--non-shipping-v02.png",
+          "sha256": "d9e4b00669a67f101e3c3efa075fb0111c7ed61ad2361196cc8750f9903ce351"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--gaze--320x700--non-shipping-v02.png",
+          "sha256": "88df97dea35e201f3861394b688b4bdf71d1ff2d04572b5118ea567eed6f8554"
+        }
+      },
+      "ragdoll": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--sit--320x700--non-shipping-v02.png",
+          "sha256": "89b81c05e7433108e0b94dd554fcebb92238dc9de22a82dfd200fd27366e1e49"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--sleep--320x700--non-shipping-v02.png",
+          "sha256": "8d81674888f90220042510cf5f59f71a5ecdd5d1631a14d58178397d118bc393"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--walk--320x700--non-shipping-v02.png",
+          "sha256": "87a0a50e939bafb7f84ca34fcb9033a547ff56c727e8b678f5da631dfe40de7c"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--eat--320x700--non-shipping-v02.png",
+          "sha256": "ffc795e2fe5a35b44f869889320d90cd1f2b6ebf2acf7d00e73bcd3663c11343"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--play--320x700--non-shipping-v02.png",
+          "sha256": "e4cd01df150a82fcf9c612a9cf8145e3c65adf4f297082f67deff35f449b6b75"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--gaze--320x700--non-shipping-v02.png",
+          "sha256": "40f8fade788648632a642adfe666c10788851995edb12a8cea3a9f494a62852f"
+        }
+      },
+      "siamese": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--sit--320x700--non-shipping-v02.png",
+          "sha256": "a2a9e2b49efaf25e7a38b3bd4718e662f957b69995dd55a6557f148cacb29da1"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--sleep--320x700--non-shipping-v02.png",
+          "sha256": "b740001032f8b482962f844d4eeefa6e57dfcb070e03635424b6b6d0cae52680"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--walk--320x700--non-shipping-v02.png",
+          "sha256": "77f487242c1899177f3e40955c52d94225133a5ff5bcbc5b8ff762f77c2385b3"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--eat--320x700--non-shipping-v02.png",
+          "sha256": "d94f8249bb848f417cafdb4ac18d76498dfeae4aed7e2214bdd8d45d1dc9cd81"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--play--320x700--non-shipping-v02.png",
+          "sha256": "fcaeb663266a6557d1fe61b9dac33de443c26fa8cdf49c4c11b0a62764e67696"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--gaze--320x700--non-shipping-v02.png",
+          "sha256": "2ef3e19c359c61d332461eacdbfb383ca7da310c68498e852b03b67f5ad4231b"
+        }
+      }
+    },
+    "390x844": {
+      "maine-coon": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--sit--390x844--non-shipping-v02.png",
+          "sha256": "e4e8074c674b8f4b601aef2c22a65002fca6a4f47f8a30fe6ba553770ea224dc"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--maine-coon--sleep--390x844--non-shipping-v01.png",
+          "sha256": "de6184c4b77e95db435fd27e72945935d5d49fc9b9cd66f264b7d97b891a5001"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--walk--390x844--non-shipping-v02.png",
+          "sha256": "fd87654942a24d65ba372b42197bd7b8f00266fa4397919de0b6e508de65ad63"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--eat--390x844--non-shipping-v02.png",
+          "sha256": "2c69702cbf309d87a8ce58c63540d1ce16f163fbb914036532e04c91b8b9c3cc"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--play--390x844--non-shipping-v02.png",
+          "sha256": "37c6b79e89d33a0661d27b0d1934218750e6f085c5551ffab4ebb59b305690d8"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--gaze--390x844--non-shipping-v02.png",
+          "sha256": "fa4e6c8a4429f13a481b48013411bc0308c6d897568bbf94fde6d28a5fe969da"
+        }
+      },
+      "ragdoll": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--sit--390x844--non-shipping-v02.png",
+          "sha256": "1b18ddf8ab916945787ccfc41484f5f123f4e067e55f777b7c47b3b7f44a2a0e"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--ragdoll--sleep--390x844--non-shipping-v01.png",
+          "sha256": "b3ed87e9c768122b99ce3e19838a10343e5951050ceb443b3ef5f6394d81b009"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--walk--390x844--non-shipping-v02.png",
+          "sha256": "9af2332e366a2a054f31f233d598a342d865a1a2d6f169d6b1d265e7ff906c1f"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--eat--390x844--non-shipping-v02.png",
+          "sha256": "88cf30b2c758511e6081a336f07e64e6adedc8daec8f432b70eb31ed07375096"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--play--390x844--non-shipping-v02.png",
+          "sha256": "2ef01ff81eacced3b7bb08982ad0d8e1505822b7c72cd7e0075bfb1184e585a5"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--gaze--390x844--non-shipping-v02.png",
+          "sha256": "b9ce0e2b494a782b85b0ca391acacee08340f7d3b356ecc3908cb9bfbee53aa0"
+        }
+      },
+      "siamese": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--sit--390x844--non-shipping-v02.png",
+          "sha256": "6c198015a63d0b0fb6d217ca3d2508ef10cf974a2be581cd2685d7942e3a189d"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--siamese--sleep--390x844--non-shipping-v01.png",
+          "sha256": "4c0b7f8aa6f5414ee5749a979473709326ad14cee4400ad09e5dd7ca4fd04423"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--walk--390x844--non-shipping-v02.png",
+          "sha256": "4cc02e5bc6fd5f7f2d2508865815fde6342d05e6dd91529f633572113f502d48"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--eat--390x844--non-shipping-v02.png",
+          "sha256": "f435b505281e9324ed551ea113287586eb6c0447e06bfef3fe1dbd900eb910ab"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--play--390x844--non-shipping-v02.png",
+          "sha256": "d68bee86c1f740121d7080188d8f2aa389d3cc540ae1c8f7a45dd4c2a7e3aee1"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--gaze--390x844--non-shipping-v02.png",
+          "sha256": "6dbd8a4be06992c885fdf95d7e3773d8d2e9466723925b14bc2032208db42897"
+        }
+      }
+    },
+    "430x932": {
+      "maine-coon": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--sit--430x932--non-shipping-v02.png",
+          "sha256": "9226e328f7e7a0c780c68008bb3d1261d26083baad5875449ec8d736e7da553d"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--maine-coon--sleep--430x932--non-shipping-v01.png",
+          "sha256": "6392b41ce3b8a4be83954fba5c27a104764cb1c8cab99f457a0862a16176837b"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--walk--430x932--non-shipping-v02.png",
+          "sha256": "9819abadd9cf867f26c1b2b4c6d3694cf176cfefdea8a2c3d0c7185b3646bd4c"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--eat--430x932--non-shipping-v02.png",
+          "sha256": "1200d9610c35350882ad19f0299e2f460b9a5cc9c64508f63452425fa696ced4"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--play--430x932--non-shipping-v02.png",
+          "sha256": "0f3f7082b4d7848c7c001e57ba3b5638368c00df5014710798cbb3248334f2ca"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--gaze--430x932--non-shipping-v02.png",
+          "sha256": "254ff09ca9e6df0638418fa7eb196a8ecc12a7774845f3cddfbf1767d6d72361"
+        }
+      },
+      "ragdoll": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--sit--430x932--non-shipping-v02.png",
+          "sha256": "0bca2b93185bc7876dcc1a0ce86ecf20f3b45e219da1046d9c98f73001e6af26"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--ragdoll--sleep--430x932--non-shipping-v01.png",
+          "sha256": "ab36e4af99f0c7b4d7645353dab6e883f40b72e3c8362eabfa196568befd1636"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--walk--430x932--non-shipping-v02.png",
+          "sha256": "2a73acc3a5bc0cdaa787f7ae40ec581217fff393274961fdec2b72405ca784a8"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--eat--430x932--non-shipping-v02.png",
+          "sha256": "e7bdef2dcfd6411af486d4eaad6f4ef7ff20809b3677d4c3ef6aaae4b6112983"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--play--430x932--non-shipping-v02.png",
+          "sha256": "797aa500ad90077ea7122e5d3a75512014d399e2f31475894456856e3fb3993d"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--gaze--430x932--non-shipping-v02.png",
+          "sha256": "aa1be60069edbd02e7a920e58739da1cec8f60c4e3ad30e07528bc478906b3a9"
+        }
+      },
+      "siamese": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--sit--430x932--non-shipping-v02.png",
+          "sha256": "ccd3e98986326af45d384a20e7cee39e0724b7cc60390a93272faa41f7c93b61"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--siamese--sleep--430x932--non-shipping-v01.png",
+          "sha256": "f59e86195bf4633caefa51a9d6f0a8a5a61059fc9b270b229068707c4f532fa3"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--walk--430x932--non-shipping-v02.png",
+          "sha256": "41acbe99542d00a81c89abaf467d5da611ab72979b3dbe75c1c314ed8319d803"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--eat--430x932--non-shipping-v02.png",
+          "sha256": "ac355af3d41f073f1d170fc7f3a13caecb7fc1f2d7989ac0f67e93b7eb4f7d24"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--play--430x932--non-shipping-v02.png",
+          "sha256": "01b2cce49be897ad71fee83687011951800aa2d25416d616044902d03bd19cd3"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--gaze--430x932--non-shipping-v02.png",
+          "sha256": "8ad6a1e714ae107b156b308d4a0754abef2843b6945244573a737c6ecc3f83bd"
+        }
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "320x700--maine-coon--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--sit--320x700--non-shipping-v02.png",
+        "sha256": "7c07afe5e3cff15c898c4d79e926b76440ab70c2a26bd03bef70c892b445683b",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--maine-coon--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--sleep--320x700--non-shipping-v02.png",
+        "sha256": "c462e7855b717c307c720376de8b036b08aab24c20bf3dc529576b78add7a350",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--maine-coon--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--walk--320x700--non-shipping-v02.png",
+        "sha256": "34e50e4e292677a362bc4e6ddbc761e65642c7fb058a3198b69c45a1881e3d58",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--maine-coon--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--eat--320x700--non-shipping-v02.png",
+        "sha256": "d44fd3f4fddd63cf7995e3bd9287b8d8e48893c54c350709a0248526254a9ded",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--maine-coon--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--play--320x700--non-shipping-v02.png",
+        "sha256": "d9e4b00669a67f101e3c3efa075fb0111c7ed61ad2361196cc8750f9903ce351",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--maine-coon--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "maine-coon",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/maine-coon/home-fit--maine-coon--gaze--320x700--non-shipping-v02.png",
+        "sha256": "88df97dea35e201f3861394b688b4bdf71d1ff2d04572b5118ea567eed6f8554",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--sit--320x700--non-shipping-v02.png",
+        "sha256": "89b81c05e7433108e0b94dd554fcebb92238dc9de22a82dfd200fd27366e1e49",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--sleep--320x700--non-shipping-v02.png",
+        "sha256": "8d81674888f90220042510cf5f59f71a5ecdd5d1631a14d58178397d118bc393",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--walk--320x700--non-shipping-v02.png",
+        "sha256": "87a0a50e939bafb7f84ca34fcb9033a547ff56c727e8b678f5da631dfe40de7c",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--eat--320x700--non-shipping-v02.png",
+        "sha256": "ffc795e2fe5a35b44f869889320d90cd1f2b6ebf2acf7d00e73bcd3663c11343",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--play--320x700--non-shipping-v02.png",
+        "sha256": "e4cd01df150a82fcf9c612a9cf8145e3c65adf4f297082f67deff35f449b6b75",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--ragdoll--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "ragdoll",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/ragdoll/home-fit--ragdoll--gaze--320x700--non-shipping-v02.png",
+        "sha256": "40f8fade788648632a642adfe666c10788851995edb12a8cea3a9f494a62852f",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--sit--320x700--non-shipping-v02.png",
+        "sha256": "a2a9e2b49efaf25e7a38b3bd4718e662f957b69995dd55a6557f148cacb29da1",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--sleep--320x700--non-shipping-v02.png",
+        "sha256": "b740001032f8b482962f844d4eeefa6e57dfcb070e03635424b6b6d0cae52680",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--walk--320x700--non-shipping-v02.png",
+        "sha256": "77f487242c1899177f3e40955c52d94225133a5ff5bcbc5b8ff762f77c2385b3",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--eat--320x700--non-shipping-v02.png",
+        "sha256": "d94f8249bb848f417cafdb4ac18d76498dfeae4aed7e2214bdd8d45d1dc9cd81",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--play--320x700--non-shipping-v02.png",
+        "sha256": "fcaeb663266a6557d1fe61b9dac33de443c26fa8cdf49c4c11b0a62764e67696",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--siamese--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "siamese",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/320x700/siamese/home-fit--siamese--gaze--320x700--non-shipping-v02.png",
+        "sha256": "2ef3e19c359c61d332461eacdbfb383ca7da310c68498e852b03b67f5ad4231b",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--sit--390x844--non-shipping-v02.png",
+        "sha256": "e4e8074c674b8f4b601aef2c22a65002fca6a4f47f8a30fe6ba553770ea224dc",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--maine-coon--sleep--390x844--non-shipping-v01.png",
+        "sha256": "de6184c4b77e95db435fd27e72945935d5d49fc9b9cd66f264b7d97b891a5001",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--walk--390x844--non-shipping-v02.png",
+        "sha256": "fd87654942a24d65ba372b42197bd7b8f00266fa4397919de0b6e508de65ad63",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--eat--390x844--non-shipping-v02.png",
+        "sha256": "2c69702cbf309d87a8ce58c63540d1ce16f163fbb914036532e04c91b8b9c3cc",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--play--390x844--non-shipping-v02.png",
+        "sha256": "37c6b79e89d33a0661d27b0d1934218750e6f085c5551ffab4ebb59b305690d8",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--maine-coon--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "maine-coon",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/maine-coon/home-fit--maine-coon--gaze--390x844--non-shipping-v02.png",
+        "sha256": "fa4e6c8a4429f13a481b48013411bc0308c6d897568bbf94fde6d28a5fe969da",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--sit--390x844--non-shipping-v02.png",
+        "sha256": "1b18ddf8ab916945787ccfc41484f5f123f4e067e55f777b7c47b3b7f44a2a0e",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--ragdoll--sleep--390x844--non-shipping-v01.png",
+        "sha256": "b3ed87e9c768122b99ce3e19838a10343e5951050ceb443b3ef5f6394d81b009",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--walk--390x844--non-shipping-v02.png",
+        "sha256": "9af2332e366a2a054f31f233d598a342d865a1a2d6f169d6b1d265e7ff906c1f",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--eat--390x844--non-shipping-v02.png",
+        "sha256": "88cf30b2c758511e6081a336f07e64e6adedc8daec8f432b70eb31ed07375096",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--play--390x844--non-shipping-v02.png",
+        "sha256": "2ef01ff81eacced3b7bb08982ad0d8e1505822b7c72cd7e0075bfb1184e585a5",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--ragdoll--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "ragdoll",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/ragdoll/home-fit--ragdoll--gaze--390x844--non-shipping-v02.png",
+        "sha256": "b9ce0e2b494a782b85b0ca391acacee08340f7d3b356ecc3908cb9bfbee53aa0",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--sit--390x844--non-shipping-v02.png",
+        "sha256": "6c198015a63d0b0fb6d217ca3d2508ef10cf974a2be581cd2685d7942e3a189d",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/390/home-review--siamese--sleep--390x844--non-shipping-v01.png",
+        "sha256": "4c0b7f8aa6f5414ee5749a979473709326ad14cee4400ad09e5dd7ca4fd04423",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--walk--390x844--non-shipping-v02.png",
+        "sha256": "4cc02e5bc6fd5f7f2d2508865815fde6342d05e6dd91529f633572113f502d48",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--eat--390x844--non-shipping-v02.png",
+        "sha256": "f435b505281e9324ed551ea113287586eb6c0447e06bfef3fe1dbd900eb910ab",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--play--390x844--non-shipping-v02.png",
+        "sha256": "d68bee86c1f740121d7080188d8f2aa389d3cc540ae1c8f7a45dd4c2a7e3aee1",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--siamese--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "siamese",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/390x844/siamese/home-fit--siamese--gaze--390x844--non-shipping-v02.png",
+        "sha256": "6dbd8a4be06992c885fdf95d7e3773d8d2e9466723925b14bc2032208db42897",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--sit--430x932--non-shipping-v02.png",
+        "sha256": "9226e328f7e7a0c780c68008bb3d1261d26083baad5875449ec8d736e7da553d",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--maine-coon--sleep--430x932--non-shipping-v01.png",
+        "sha256": "6392b41ce3b8a4be83954fba5c27a104764cb1c8cab99f457a0862a16176837b",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--walk--430x932--non-shipping-v02.png",
+        "sha256": "9819abadd9cf867f26c1b2b4c6d3694cf176cfefdea8a2c3d0c7185b3646bd4c",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--eat--430x932--non-shipping-v02.png",
+        "sha256": "1200d9610c35350882ad19f0299e2f460b9a5cc9c64508f63452425fa696ced4",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--play--430x932--non-shipping-v02.png",
+        "sha256": "0f3f7082b4d7848c7c001e57ba3b5638368c00df5014710798cbb3248334f2ca",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--maine-coon--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "maine-coon",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/maine-coon/home-fit--maine-coon--gaze--430x932--non-shipping-v02.png",
+        "sha256": "254ff09ca9e6df0638418fa7eb196a8ecc12a7774845f3cddfbf1767d6d72361",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--sit--430x932--non-shipping-v02.png",
+        "sha256": "0bca2b93185bc7876dcc1a0ce86ecf20f3b45e219da1046d9c98f73001e6af26",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--ragdoll--sleep--430x932--non-shipping-v01.png",
+        "sha256": "ab36e4af99f0c7b4d7645353dab6e883f40b72e3c8362eabfa196568befd1636",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--walk--430x932--non-shipping-v02.png",
+        "sha256": "2a73acc3a5bc0cdaa787f7ae40ec581217fff393274961fdec2b72405ca784a8",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--eat--430x932--non-shipping-v02.png",
+        "sha256": "e7bdef2dcfd6411af486d4eaad6f4ef7ff20809b3677d4c3ef6aaae4b6112983",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--play--430x932--non-shipping-v02.png",
+        "sha256": "797aa500ad90077ea7122e5d3a75512014d399e2f31475894456856e3fb3993d",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--ragdoll--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "ragdoll",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/ragdoll/home-fit--ragdoll--gaze--430x932--non-shipping-v02.png",
+        "sha256": "aa1be60069edbd02e7a920e58739da1cec8f60c4e3ad30e07528bc478906b3a9",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--sit--430x932--non-shipping-v02.png",
+        "sha256": "ccd3e98986326af45d384a20e7cee39e0724b7cc60390a93272faa41f7c93b61",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/silhouette-variety/v1/reviews/mobile/430/home-review--siamese--sleep--430x932--non-shipping-v01.png",
+        "sha256": "f59e86195bf4633caefa51a9d6f0a8a5a61059fc9b270b229068707c4f532fa3",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--walk--430x932--non-shipping-v02.png",
+        "sha256": "41acbe99542d00a81c89abaf467d5da611ab72979b3dbe75c1c314ed8319d803",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--eat--430x932--non-shipping-v02.png",
+        "sha256": "ac355af3d41f073f1d170fc7f3a13caecb7fc1f2d7989ac0f67e93b7eb4f7d24",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--play--430x932--non-shipping-v02.png",
+        "sha256": "01b2cce49be897ad71fee83687011951800aa2d25416d616044902d03bd19cd3",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--siamese--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "siamese",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/silhouette-variety/v2/composites/430x932/siamese/home-fit--siamese--gaze--430x932--non-shipping-v02.png",
+        "sha256": "8ad6a1e714ae107b156b308d4a0754abef2843b6945244573a737c6ecc3f83bd",
+        "fullResolution": true
+      },
+      "pass": true
+    }
+  ],
+  "contactMatrices": [
+    "reviews/contact-sheets/contact-matrix--home-fit--320x700--non-shipping-v02.png",
+    "reviews/contact-sheets/contact-matrix--home-fit--390x844--non-shipping-v02.png",
+    "reviews/contact-sheets/contact-matrix--home-fit--430x932--non-shipping-v02.png"
+  ]
+}

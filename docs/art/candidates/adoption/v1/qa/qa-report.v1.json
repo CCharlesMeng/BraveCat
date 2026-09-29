@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-02",
+  "assetNeedId": "AA-015",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "validatedAt": "2026-07-21",
+  "ok": true,
+  "imageValidation": [
+    {
+      "path": "source/adoption-welcome-base--generated-source-1024x1536--v01.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 1849341,
+      "sha256": "35d341dcf54547af3dae463665e53ef61d03becb02480dbebf4cb7e472a6cffa"
+    },
+    {
+      "path": "masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 2164025,
+      "sha256": "02a66142a94b20ed217ae7f8db47ba83a19f7816354518380440ae55b82a81e5"
+    },
+    {
+      "path": "reviews/adoption-review--320x700--validation-error--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 281370,
+      "sha256": "04ab3c2d14ac0ff9f8bf8951354d9aa4b52deb60f6331030474b8e371d623d83"
+    },
+    {
+      "path": "reviews/adoption-review--320x700--keyboard-open--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 197891,
+      "sha256": "6293b884ba97dcf5dad7430ac1dd6e14835e3702f00e8f0c4f4887f104c2b3dc"
+    },
+    {
+      "path": "reviews/adoption-review--390x844--default--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 413456,
+      "sha256": "d8a5b9ee0eeb1978e010d299bc3679115d2044f437a338e0c4d3b6ac490a9993"
+    },
+    {
+      "path": "reviews/adoption-review--430x932--success-transition--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 487411,
+      "sha256": "641fded8b735a8c45f0ac7f05eb819ab48edc652e253c28c142a2c202906d0c5"
+    },
+    {
+      "path": "reviews/contact-sheet--adoption-presentation--1200x1600--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "bytes": 1061047,
+      "sha256": "d20dad0129ed1665e49c7ca20134ccc4e033838fe69f28f29d43e505ef41d0ea"
+    }
+  ],
+  "masterChecks": {
+    "dimensionsExact": true,
+    "embeddedSrgb": true,
+    "opaqueRgb": true,
+    "meanSaturation01": 0.1311,
+    "lowSaturationThreshold01": 0.23,
+    "lowSaturationPass": true,
+    "supportPlaneDefined": true,
+    "centralPortraitSlotLowDetailAndUnobstructed": true,
+    "lowerLiveUiZoneClear": true,
+    "textCatUiLogoWatermarkAbsent": "manual visual check passed"
+  },
+  "approvedPortraitIntegrity": {
+    "sourcePath": "public/portraits/minho/portrait--minho--sit--v01.png",
+    "expectedSha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+    "actualSha256BeforeBuild": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+    "actualSha256AfterBuild": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+    "sourceHashUnchanged": true,
+    "sourceCopiedIntoCandidateRoot": false,
+    "sourcePixelMode": "RGBA",
+    "partialAlphaPixelCount": 5876,
+    "reviewTransform": "uniform full-canvas resize only; separate shadow; no crop, retouch, recolor, or regeneration"
+  },
+  "reviewChecks": {
+    "validation_error": {
+      "tailRestsWithinTopPlane": true,
+      "pawsRestWithinTopPlane": true,
+      "portraitDoesNotOverlapInputErrorAction": true,
+      "nameFits": true,
+      "keyboardClearancePx": null
+    },
+    "keyboard_open": {
+      "tailRestsWithinTopPlane": true,
+      "pawsRestWithinTopPlane": true,
+      "portraitDoesNotOverlapInputErrorAction": true,
+      "nameFits": true,
+      "keyboardClearancePx": 28
+    },
+    "default": {
+      "tailRestsWithinTopPlane": true,
+      "pawsRestWithinTopPlane": true,
+      "portraitDoesNotOverlapInputErrorAction": true,
+      "nameFits": true,
+      "keyboardClearancePx": null
+    },
+    "success": {
+      "tailRestsWithinTopPlane": true,
+      "pawsRestWithinTopPlane": true,
+      "portraitDoesNotOverlapInputErrorAction": true,
+      "nameFits": true,
+      "keyboardClearancePx": null
+    }
+  },
+  "nameFitChecks": {
+    "short": {
+      "value": "米",
+      "codePointCount": 1,
+      "review": "adoption-review--390x844--default--non-shipping-v01.png",
+      "fits": true
+    },
+    "maximumDemonstrated": {
+      "value": "SilverMoon猫猫",
+      "codePointCount": 12,
+      "maxlength": 12,
+      "reviews": [
+        "adoption-review--320x700--keyboard-open--non-shipping-v01.png",
+        "adoption-review--430x932--success-transition--non-shipping-v01.png"
+      ],
+      "fitsKeyboardInput": true,
+      "fitsSuccessTransition": true
+    }
+  },
+  "futurePortraitChecks": {
+    "bottomCenterAnchorShared": true,
+    "envelopes": [
+      {
+        "id": "tall",
+        "normalizedVisibleBox": {
+          "width": 0.48,
+          "height": 0.95
+        },
+        "anchor": "bottom-center",
+        "fitsPortraitSafeZone": true
+      },
+      {
+        "id": "broad",
+        "normalizedVisibleBox": {
+          "width": 0.95,
+          "height": 0.56
+        },
+        "anchor": "bottom-center",
+        "fitsPortraitSafeZone": true
+      },
+      {
+        "id": "compact",
+        "normalizedVisibleBox": {
+          "width": 0.7,
+          "height": 0.7
+        },
+        "anchor": "bottom-center",
+        "fitsPortraitSafeZone": true
+      }
+    ],
+    "allFit": true
+  },
+  "manualVisualChecks": {
+    "sourceGeneratedArt": "pass: quiet paper/sage/warm-wood watercolor; no text, cat, UI, emoji, pseudo-text, logo, or watermark",
+    "master": "pass: support plane remains broad and central; no crop removes required safe zones",
+    "validationError320": "pass: error growth does not collide with portrait or primary action",
+    "keyboardOpen320": "pass: long live name and primary action remain above the depicted OS keyboard zone",
+    "default390": "pass: short live name, portrait scale, paws/tail support contact, and lower action spacing are plausible",
+    "success430": "pass: long live name remains readable while transition framing preserves portrait grounding",
+    "contactSheet": "pass: asset, reviews, layer order, anchor, and proportion envelopes are legible"
+  },
+  "knownLimitations": [
+    "The generator returned 1024x1536 despite a requested 3:4 ratio; the candidate master uses a centered crop to exact 1200x1600.",
+    "Static review UI is an acceptance mockup, not an app-code implementation.",
+    "Human visual approval is still required before promotion or integration."
+  ]
+}

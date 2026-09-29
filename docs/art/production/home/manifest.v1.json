@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "bravecat-home-art-production-integration",
+  "status": "approved-and-integrated",
+  "approvedAt": "2026-07-21",
+  "selections": {
+    "appIdentity": "candidate-a / minho-envelope",
+    "loadingVignette": "letter-tray",
+    "home": "v3 foundation, v5 responsive placement, v6 eat correction",
+    "starterItems": "shop/v2 only",
+    "pack": "v1 structure with v3 transforms"
+  },
+  "exclusions": [
+    "landmark scenes remain blocked from shipping",
+    "additional portrait candidates remain blocked by issue #2 policy",
+    "souvenirs and licensed typography are not integrated",
+    "shop/v1, pack/v2 product evidence, and postcard-gifts starter-item duplicates are not promotion sources"
+  ],
+  "assets": [
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-exterior--morning--full-canvas--non-shipping-v03.png",
+      "sourceSha256": "334cfaa2fd9bbaf3b32d6a1633f157d5eb603153098838e2211ec79ae2b1627d",
+      "destination": "public/assets/home/exterior-morning.png",
+      "destinationSha256": "334cfaa2fd9bbaf3b32d6a1633f157d5eb603153098838e2211ec79ae2b1627d",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-exterior--noon--full-canvas--non-shipping-v03.png",
+      "sourceSha256": "cd1114621d449644d26df321f4fd13d022120c686a94d4bc600bedbf4e356a0e",
+      "destination": "public/assets/home/exterior-noon.png",
+      "destinationSha256": "cd1114621d449644d26df321f4fd13d022120c686a94d4bc600bedbf4e356a0e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-exterior--dusk--full-canvas--non-shipping-v03.png",
+      "sourceSha256": "37f0296ede27afd5d24c67e78404ffb8ed148be16fb95e3c17680742ce73f2a2",
+      "destination": "public/assets/home/exterior-dusk.png",
+      "destinationSha256": "37f0296ede27afd5d24c67e78404ffb8ed148be16fb95e3c17680742ce73f2a2",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-exterior--late-night--full-canvas--non-shipping-v03.png",
+      "sourceSha256": "6516099663d76f249c411ea22b498380fe204e0a841d15114cc189bf5e362385",
+      "destination": "public/assets/home/exterior-late-night.png",
+      "destinationSha256": "6516099663d76f249c411ea22b498380fe204e0a841d15114cc189bf5e362385",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "sourceSha256": "b9270731183e8ec70f492926f29d7e83a2a0aaae26cbe2a2ab6598e01be7926d",
+      "destination": "public/assets/home/interior-foreground.png",
+      "destinationSha256": "b9270731183e8ec70f492926f29d7e83a2a0aaae26cbe2a2ab6598e01be7926d",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-lighting-overlay--morning--non-shipping-v03.png",
+      "sourceSha256": "00cf38de3fec52d24acfc60c14955f6246609976e696840213e8bb379f04482e",
+      "destination": "public/assets/home/lighting-morning.png",
+      "destinationSha256": "00cf38de3fec52d24acfc60c14955f6246609976e696840213e8bb379f04482e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-lighting-overlay--dusk--non-shipping-v03.png",
+      "sourceSha256": "1f407ece593d8c5d51414f6dcd3c215255297ce57af77f3bd4d332a4a583230a",
+      "destination": "public/assets/home/lighting-dusk.png",
+      "destinationSha256": "1f407ece593d8c5d51414f6dcd3c215255297ce57af77f3bd4d332a4a583230a",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/layers/home-lighting-overlay--late-night--non-shipping-v03.png",
+      "sourceSha256": "694f8e33a8c200460b58b57b7a43703cf6a836132eb640f0af24beca68045e23",
+      "destination": "public/assets/home/lighting-late-night.png",
+      "destinationSha256": "694f8e33a8c200460b58b57b7a43703cf6a836132eb640f0af24beca68045e23",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/icons/nav-icon--pack--runtime-128--non-shipping-v03.png",
+      "sourceSha256": "1dc210c980f088878ab122c289b304794f55d8f93aa310d009f53d17332fc51b",
+      "destination": "public/assets/home/nav-pack.png",
+      "destinationSha256": "1dc210c980f088878ab122c289b304794f55d8f93aa310d009f53d17332fc51b",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/icons/nav-icon--shop--runtime-128--non-shipping-v03.png",
+      "sourceSha256": "558e6d85bace4daedf1e6551e69d4b197bc10951b9a0afae7fa248a59dd183aa",
+      "destination": "public/assets/home/nav-shop.png",
+      "destinationSha256": "558e6d85bace4daedf1e6551e69d4b197bc10951b9a0afae7fa248a59dd183aa",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v3/icons/nav-icon--album--runtime-128--non-shipping-v03.png",
+      "sourceSha256": "1386420c56b827cb1f474811ca6f8e924c8f0b2d509d62f1ab7eb756f2ba50c1",
+      "destination": "public/assets/home/nav-album.png",
+      "destinationSha256": "1386420c56b827cb1f474811ca6f8e924c8f0b2d509d62f1ab7eb756f2ba50c1",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v4/state-art/away-note-with-wood-memo-stand--blank--master-512x640--non-shipping-v04.png",
+      "sourceSha256": "6ac92a6fb57b1fe0541d6486a073d5b54738572a2db6a1c84105910c17f50cca",
+      "destination": "public/assets/home/away-note.png",
+      "destinationSha256": "6ac92a6fb57b1fe0541d6486a073d5b54738572a2db6a1c84105910c17f50cca",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v4/state-art/dried-fish-sill-tray--master-512--non-shipping-v04.png",
+      "sourceSha256": "f2bac96995b164d7fb12ac798001eb0f82ce613b198e0a7e7bf17ae69e64a9ce",
+      "destination": "public/assets/home/treat-tray.png",
+      "destinationSha256": "f2bac96995b164d7fb12ac798001eb0f82ce613b198e0a7e7bf17ae69e64a9ce",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--snack--fish-biscuit--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "5fdfc1427c15c878fd6810db05f6f5e28585b909364bb329d1a2def1d3c7534d",
+      "destination": "public/assets/items/item--snack--fish-biscuit--v02.png",
+      "destinationSha256": "5fdfc1427c15c878fd6810db05f6f5e28585b909364bb329d1a2def1d3c7534d",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--snack--travel-tin--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "06ac51251237a801236a2e04bfd8313758b16738b37200c4ff29147b08546a9e",
+      "destination": "public/assets/items/item--snack--travel-tin--v02.png",
+      "destinationSha256": "06ac51251237a801236a2e04bfd8313758b16738b37200c4ff29147b08546a9e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--toy--small-blanket--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "b153270a753b5abeb5c37dd5e10049042883bb8370091860658e10c5693d4c76",
+      "destination": "public/assets/items/item--toy--small-blanket--v02.png",
+      "destinationSha256": "b153270a753b5abeb5c37dd5e10049042883bb8370091860658e10c5693d4c76",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--toy--yarn-ball--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "468a993d4f2d341173b0809ae82ad2e11c0438153da95f5e93c0660f79ee5c4e",
+      "destination": "public/assets/items/item--toy--yarn-ball--v02.png",
+      "destinationSha256": "468a993d4f2d341173b0809ae82ad2e11c0438153da95f5e93c0660f79ee5c4e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--toy--small-bell--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "8158e364e0360c60c2bf52a682b35c4dd337d276ca60cf61e4ccb1a86acb7cbe",
+      "destination": "public/assets/items/item--toy--small-bell--v02.png",
+      "destinationSha256": "8158e364e0360c60c2bf52a682b35c4dd337d276ca60cf61e4ccb1a86acb7cbe",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--toy--small-camera--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "15ade73e54b4a0e1fff67da56ccd813af485080635ccb632afaacc90c406233e",
+      "destination": "public/assets/items/item--toy--small-camera--v02.png",
+      "destinationSha256": "15ade73e54b4a0e1fff67da56ccd813af485080635ccb632afaacc90c406233e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--toy--small-telescope--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "0277c904b9babe7c136c2b6f73df8d3ed56f997fbdfe37477d4af36daa1b3112",
+      "destination": "public/assets/items/item--toy--small-telescope--v02.png",
+      "destinationSha256": "0277c904b9babe7c136c2b6f73df8d3ed56f997fbdfe37477d4af36daa1b3112",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/shop/v2/runtime-128/item--wish--ticket--runtime-128--non-shipping-v02.png",
+      "sourceSha256": "19c2ea6e45876cb3a4d5b734db01b50e1aa3835f85357fb2373e8fb6358243fe",
+      "destination": "public/assets/items/item--wish--ticket--v02.png",
+      "destinationSha256": "19c2ea6e45876cb3a4d5b734db01b50e1aa3835f85357fb2373e8fb6358243fe",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/pack/v1/runtime/pack-opened-base--css-342--non-shipping-v01.png",
+      "sourceSha256": "eca5528396995d7ae00b45b2b37b9c6df5d6fcac34f47b8bf06327ecc0391376",
+      "destination": "public/assets/pack/base-342.png",
+      "destinationSha256": "eca5528396995d7ae00b45b2b37b9c6df5d6fcac34f47b8bf06327ecc0391376",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/pack/v1/runtime/pack-opened-base--css-382--non-shipping-v01.png",
+      "sourceSha256": "2e6a11b5a2a19826a991a1dc7b7da3a11b1212b1c42c047af822cc1ce914cbd7",
+      "destination": "public/assets/pack/base-382.png",
+      "destinationSha256": "2e6a11b5a2a19826a991a1dc7b7da3a11b1212b1c42c047af822cc1ce914cbd7",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/pack/v1/runtime/pack-opened-foreground-rim--css-342--non-shipping-v01.png",
+      "sourceSha256": "ed38305baf6a35d5bcf62a379a9a0d97d5156c1fdb9e2c1f1e3d9ecdf04d28f4",
+      "destination": "public/assets/pack/rim-342.png",
+      "destinationSha256": "ed38305baf6a35d5bcf62a379a9a0d97d5156c1fdb9e2c1f1e3d9ecdf04d28f4",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/pack/v1/runtime/pack-opened-foreground-rim--css-382--non-shipping-v01.png",
+      "sourceSha256": "1f97a15c2b146629d7c7699449423ceca39385e9ed524198cb0d5f0e4da67812",
+      "destination": "public/assets/pack/rim-382.png",
+      "destinationSha256": "1f97a15c2b146629d7c7699449423ceca39385e9ed524198cb0d5f0e4da67812",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-24--non-shipping-v01.png",
+      "sourceSha256": "e69c0004e1c8239622a21611d3c91d6ce105599553452edd145b88409357290c",
+      "destination": "public/assets/treat/treat-24.png",
+      "destinationSha256": "e69c0004e1c8239622a21611d3c91d6ce105599553452edd145b88409357290c",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+      "sourceSha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+      "destination": "public/assets/treat/treat-32.png",
+      "destinationSha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-96--non-shipping-v01.png",
+      "sourceSha256": "98e1450e16e6f531dec8ba1b9b71979444d4397f576ed22b28dcf1bad9c70de2",
+      "destination": "public/assets/treat/treat-96.png",
+      "destinationSha256": "98e1450e16e6f531dec8ba1b9b71979444d4397f576ed22b28dcf1bad9c70de2",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/presentation/presentation--blank-postcard-back--runtime-338x254--non-shipping-v01.png",
+      "sourceSha256": "ca3d8a7ead7889dbb4c05aef68c1c2ef33bfdf947a92716fbe0a936d38c7fe4c",
+      "destination": "public/assets/postcards/blank-back-338.png",
+      "destinationSha256": "ca3d8a7ead7889dbb4c05aef68c1c2ef33bfdf947a92716fbe0a936d38c7fe4c",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/presentation/presentation--blank-postcard-back--runtime-378x284--non-shipping-v01.png",
+      "sourceSha256": "ef44e5e48da6169d0d527abddb624d6c1e4e1200da69c89fd3e91b4522e7a282",
+      "destination": "public/assets/postcards/blank-back-378.png",
+      "destinationSha256": "ef44e5e48da6169d0d527abddb624d6c1e4e1200da69c89fd3e91b4522e7a282",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/presentation/presentation--postcard-stack-holder--runtime-338x254--non-shipping-v01.png",
+      "sourceSha256": "4179c1b2b4de821de1b467e3c9245aa20f40fd229442bc13681623272aba2d6a",
+      "destination": "public/assets/postcards/stack-holder-338.png",
+      "destinationSha256": "4179c1b2b4de821de1b467e3c9245aa20f40fd229442bc13681623272aba2d6a",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-gifts/v1/runtime/presentation/presentation--postcard-stack-holder--runtime-378x284--non-shipping-v01.png",
+      "sourceSha256": "d86951c9e90172bfbcdcd49aa380c6209993a013b7d8bd9ea0cbdf832c6743b4",
+      "destination": "public/assets/postcards/stack-holder-378.png",
+      "destinationSha256": "d86951c9e90172bfbcdcd49aa380c6209993a013b7d8bd9ea0cbdf832c6743b4",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-status/v1/masters/scene--unavailable-covered-photo--master-1200x900--non-shipping-v01.png",
+      "sourceSha256": "a51b666acd41abadfb7c6764ee0c3b2c6546a95213e6dc5a931bbf7b81d8a266",
+      "destination": "public/assets/postcards/scene-unavailable.png",
+      "destinationSha256": "a51b666acd41abadfb7c6764ee0c3b2c6546a95213e6dc5a931bbf7b81d8a266",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-status/v1/runtime/postmark--ring-waves--runtime-120x80--non-shipping-v01.png",
+      "sourceSha256": "08a191a6c73b2655a99a097a895e2955eba81a71e9bf306dc0d04537c521c708",
+      "destination": "public/assets/postcards/postmark.png",
+      "destinationSha256": "08a191a6c73b2655a99a097a895e2955eba81a71e9bf306dc0d04537c521c708",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/postcard-status/v1/runtime/album--empty-open--runtime-256--non-shipping-v01.png",
+      "sourceSha256": "0c6f350527d4fe060f64563a64879f5a0bf1062c31dbd24abfe4726820cee570",
+      "destination": "public/assets/album/empty.png",
+      "destinationSha256": "0c6f350527d4fe060f64563a64879f5a0bf1062c31dbd24abfe4726820cee570",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/adoption/v1/masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png",
+      "sourceSha256": "02a66142a94b20ed217ae7f8db47ba83a19f7816354518380440ae55b82a81e5",
+      "destination": "public/assets/adoption/welcome-base.png",
+      "destinationSha256": "02a66142a94b20ed217ae7f8db47ba83a19f7816354518380440ae55b82a81e5",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/system-states/v1/runtime/loading-vignette--letter-tray--runtime-256--non-shipping-v01.png",
+      "sourceSha256": "a0e370cb4e985bf12e412df8f176eb2c0bfa05451a4dc79d82ac9337e203fdb4",
+      "destination": "public/assets/system/loading-letter-tray.png",
+      "destinationSha256": "a0e370cb4e985bf12e412df8f176eb2c0bfa05451a4dc79d82ac9337e203fdb4",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-surfaces/v1/runtime/surface--paper-warm--tile-512--1x--non-shipping-v01.webp",
+      "sourceSha256": "bb99ff718cb2407ce8270c69eaf0e67a2017a328b36eeb05ddce67c67b15a316",
+      "destination": "public/assets/surfaces/paper-1x.webp",
+      "destinationSha256": "bb99ff718cb2407ce8270c69eaf0e67a2017a328b36eeb05ddce67c67b15a316",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-surfaces/v1/runtime/surface--paper-warm--tile-1024--2x--non-shipping-v01.webp",
+      "sourceSha256": "b98dabd360541734abc51893bd27ef23be234317890a9acd907b63688cfd7542",
+      "destination": "public/assets/surfaces/paper-2x.webp",
+      "destinationSha256": "b98dabd360541734abc51893bd27ef23be234317890a9acd907b63688cfd7542",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-surfaces/v1/runtime/surface--sage-wash--tile-512--1x--non-shipping-v01.webp",
+      "sourceSha256": "010382c327e2f26be654d7111f528caaf199d0d1a829fd4646c316141963971d",
+      "destination": "public/assets/surfaces/sage-1x.webp",
+      "destinationSha256": "010382c327e2f26be654d7111f528caaf199d0d1a829fd4646c316141963971d",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-surfaces/v1/runtime/surface--sage-wash--tile-1024--2x--non-shipping-v01.webp",
+      "sourceSha256": "4c3793260375b6c58ca6ffe823d961dc24145df5e67bce59557bd956385d121e",
+      "destination": "public/assets/surfaces/sage-2x.webp",
+      "destinationSha256": "4c3793260375b6c58ca6ffe823d961dc24145df5e67bce59557bd956385d121e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-glyphs/v1/sources/glyph-close--source--non-shipping-v01.svg",
+      "sourceSha256": "986fe8b483cf9892d62c423a6b3681f9e6d04090ec85af5056eebe5409703d2e",
+      "destination": "public/assets/glyphs/close.svg",
+      "destinationSha256": "986fe8b483cf9892d62c423a6b3681f9e6d04090ec85af5056eebe5409703d2e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-glyphs/v1/sources/glyph-export--source--non-shipping-v01.svg",
+      "sourceSha256": "0b77ab177995ed05d2246fb3c18ef7f85003dfd429810a1630a4fba9a68a44da",
+      "destination": "public/assets/glyphs/export.svg",
+      "destinationSha256": "0b77ab177995ed05d2246fb3c18ef7f85003dfd429810a1630a4fba9a68a44da",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-glyphs/v1/sources/glyph-import--source--non-shipping-v01.svg",
+      "sourceSha256": "755086bbddd3ff769e3bb4553910eaeb0536cc5b61ea110c1dda7c0c2101729a",
+      "destination": "public/assets/glyphs/import.svg",
+      "destinationSha256": "755086bbddd3ff769e3bb4553910eaeb0536cc5b61ea110c1dda7c0c2101729a",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-glyphs/v1/sources/glyph-lock--source--non-shipping-v01.svg",
+      "sourceSha256": "54dc11d93ff77daa1978c24d5975e3acdeede61651707f5f2776d57fed1a734f",
+      "destination": "public/assets/glyphs/lock.svg",
+      "destinationSha256": "54dc11d93ff77daa1978c24d5975e3acdeede61651707f5f2776d57fed1a734f",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/ui-glyphs/v1/sources/glyph-retry--source--non-shipping-v01.svg",
+      "sourceSha256": "61e7854a40ff1e76c037c355d56dafc02ffe03762496db8a994b025797e67d3e",
+      "destination": "public/assets/glyphs/retry.svg",
+      "destinationSha256": "61e7854a40ff1e76c037c355d56dafc02ffe03762496db8a994b025797e67d3e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--180--apple--candidate-a--non-shipping-v01.png",
+      "sourceSha256": "cb914790aa9ccc3b40988e3a0e5dc72f5646c55d40f20ed40f6a7b2db393b378",
+      "destination": "public/apple-touch-icon.png",
+      "destinationSha256": "cb914790aa9ccc3b40988e3a0e5dc72f5646c55d40f20ed40f6a7b2db393b378",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--192--any--candidate-a--non-shipping-v01.png",
+      "sourceSha256": "226fabc1e17095cfcd23894a1748295bec426bcb6811ed0553c726f84e721f61",
+      "destination": "public/icon-192.png",
+      "destinationSha256": "226fabc1e17095cfcd23894a1748295bec426bcb6811ed0553c726f84e721f61",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--512--maskable-any--candidate-a--non-shipping-v01.png",
+      "sourceSha256": "c13081a13a7bdcdd1c86c769d20522f29814bbf5579c0f7708830448e196182e",
+      "destination": "public/icon-512.png",
+      "destinationSha256": "c13081a13a7bdcdd1c86c769d20522f29814bbf5579c0f7708830448e196182e",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--32--simplified--candidate-a--non-shipping-v01.png",
+      "sourceSha256": "2e92297ce22520191e5c2194d96be5c5a0896e1d0e63d56df5d8bc2bbcbb79a0",
+      "destination": "public/favicon-32.png",
+      "destinationSha256": "2e92297ce22520191e5c2194d96be5c5a0896e1d0e63d56df5d8bc2bbcbb79a0",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--48--simplified--candidate-a--non-shipping-v01.png",
+      "sourceSha256": "0a4578b35374a56221c08cd8dde6199b222beefc94d913f6b92a2fd06245bc23",
+      "destination": "public/favicon-48.png",
+      "destinationSha256": "0a4578b35374a56221c08cd8dde6199b222beefc94d913f6b92a2fd06245bc23",
+      "status": "promoted",
+      "approvalDate": "2026-07-21"
+    },
+    {
+      "candidateSource": "docs/art/candidates/home/v6/eat-placement-metadata.v6.json",
+      "sourceSha256": "ce8afd00877b2d1bcc28255c4947c5b74776e39aee25eb6437c5a106df3a8c8e",
+      "destination": "public/assets/home/eat-food-bowl-removal-patch.png",
+      "destinationSha256": "f07de0915884fa83964f35b9f40c0a494c02fe674a6423ee2b27b42d5d17de73",
+      "status": "derived-from-approved-patch-metadata",
+      "approvalDate": "2026-07-21",
+      "derivation": {
+        "sourceLayer": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+        "targetBounds": [
+          350,
+          1175,
+          500,
+          1328
+        ],
+        "sampleBounds": [
+          500,
+          1155,
+          650,
+          1308
+        ],
+        "placement": {
+          "left": 0.2916666666666667,
+          "top": 0.734375,
+          "width": 0.125,
+          "height": 0.095625
+        }
+      }
+    }
+  ]
+}

@@ -104,7 +104,12 @@ export default defineConfig({
     svelte(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
+      includeAssets: [
+        'icon.svg',
+        'apple-touch-icon.png',
+        'favicon-32.png',
+        'favicon-48.png',
+      ],
       manifest: {
         name: '咪游记',
         short_name: '咪游记',
@@ -131,6 +136,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
         globIgnores: ['scenes/**'],
         runtimeCaching: productionManifest.shippingEligible

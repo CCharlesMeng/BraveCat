@@ -13,6 +13,13 @@
   } from './lib/assets/starterCatalog'
   import { STARTER_ITEMS } from './lib/assets/starterItems'
   import {
+    canvasStyle,
+    homeArt,
+    homeTimeFor,
+    packItemStyle,
+    type HomeActivity,
+  } from './lib/homeArt'
+  import {
     adoptCat,
     createInitialGameState,
     isGameState,
@@ -61,8 +68,6 @@
       copy: '先把碗里这一点吃完，再看窗外。',
     },
   } as const
-  type HomeActivity = keyof typeof homeActivities
-
   const drawerDetails = {
     pack: {
       title: '行囊',
@@ -150,6 +155,9 @@
   const homePortraitSrc = $derived(
     activePortrait.poses[activeHomeActivity.pose],
   )
+  const homeTime = $derived(homeTimeFor(new Date(gameNow)))
+  const homeLightingSrc = $derived(homeArt.lighting[homeTime])
+  const activeCatRect = $derived(homeArt.catRects[homeActivity])
   const treats = $derived(economy.treats)
   const windowsillTreats = $derived(economy.windowsillTreats)
   const pack = $derived(economy.packs[PRIMARY_CAT_ID] ?? [])
@@ -457,6 +465,12 @@
   <main class="adoption-shell loading" aria-label="正在打开小猫的家">
     <p class="brand-kicker">BraveCat</p>
     <h1>咪游记</h1>
+    <img
+      class="loading-vignette"
+      src="/assets/system/loading-letter-tray.png"
+      alt=""
+      aria-hidden="true"
+    />
     <p>正在把家里的东西摆回原位……</p>
   </main>
 {:else if !catProfile}
@@ -509,7 +523,7 @@
       <h1>咪游记</h1>
     </div>
     <div class="treat-balance" aria-label={`共有 ${treats} 条小鱼干`}>
-      <span aria-hidden="true">🐟</span>
+      <img src="/assets/treat/treat-32.png" alt="" aria-hidden="true" />
       <strong>{treats}</strong>
     </div>
   </header>
@@ -529,14 +543,34 @@
 
   <main>
     <section class="room" aria-label={`${catName}的家`}>
-      <div class="sunwash" aria-hidden="true"></div>
+      <div class="home-art-canvas" aria-hidden="true">
+        <img class="home-layer" src={homeArt.exterior[homeTime]} alt="" />
+        <img
+          class="home-layer"
+          src="/assets/home/interior-foreground.png"
+          alt=""
+        />
+        {#if homeActivity === 'eat'}
+          <img
+            class="home-eat-patch"
+            src="/assets/home/eat-food-bowl-removal-patch.png"
+            alt=""
+          />
+        {/if}
+        {#if !isCatAway}
+          <img
+            class="cat-portrait"
+            src={homePortraitSrc}
+            alt=""
+            style={canvasStyle(activeCatRect)}
+          />
+        {/if}
+        {#if homeLightingSrc}
+          <img class="home-layer home-lighting" src={homeLightingSrc} alt="" />
+        {/if}
+      </div>
 
-      <div class="window" aria-label="窗外是安静的山野">
-        <div class="window-sky"></div>
-        <div class="window-hill hill-back"></div>
-        <div class="window-hill hill-front"></div>
-        <div class="window-frame window-frame-vertical"></div>
-        <div class="window-frame window-frame-horizontal"></div>
+      <div class="home-state-ui">
         <button
           class="windowsill"
           type="button"
@@ -546,52 +580,25 @@
             ? `收取窗台上的 ${windowsillTreats} 条小鱼干`
             : '窗台上的小鱼干已经收取'}
         >
-          <span class="fish-plate" aria-hidden="true">
-            <span>🐟</span>
-            <span>🐟</span>
-          </span>
+          <img
+            class="treat-tray"
+            src="/assets/home/treat-tray.png"
+            alt=""
+            aria-hidden="true"
+          />
           <span class="collect-label">
             {windowsillTreats > 0 ? `收取 +${windowsillTreats}` : '晚点再来'}
           </span>
         </button>
-      </div>
-
-      <div class="wall-note" aria-hidden="true">
-        <span>慢</span>
-        <span>慢</span>
-        <span>走</span>
-      </div>
-
-      <div class="side-table" aria-hidden="true">
-        <div class="vase">
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div class="table-top"></div>
-        <div class="table-body">
-          <span></span>
-        </div>
-        <div class="table-leg left"></div>
-        <div class="table-leg right"></div>
-      </div>
 
       {#if isCatAway && travel.kind === 'planned'}
         <article class="departure-note" aria-label={`${catName}留下的字条`}>
-          <span>留给家里</span>
+          <img src="/assets/home/away-note.png" alt="" aria-hidden="true" />
           <p>{travel.note}</p>
           <small>— {catName}</small>
         </article>
-      {:else}
-        <div class="cat-stage">
-          <img
-            class="cat-portrait"
-            src={homePortraitSrc}
-            alt={`${catName}${activeHomeActivity.alt}`}
-          />
-          <div class="cushion" aria-hidden="true"></div>
-        </div>
       {/if}
+      </div>
 
       <div class="room-copy">
         <p class="cat-name">{catName}</p>
@@ -609,15 +616,15 @@
 
     <nav class="home-nav" aria-label="家里的去处">
       <button type="button" onclick={() => void openDrawer('pack')}>
-        <span class="nav-icon" aria-hidden="true">包</span>
+        <img class="nav-icon" src={homeArt.nav.pack} alt="" aria-hidden="true" />
         <span>行囊</span>
       </button>
       <button type="button" onclick={() => void openDrawer('shop')}>
-        <span class="nav-icon" aria-hidden="true">铺</span>
+        <img class="nav-icon" src={homeArt.nav.shop} alt="" aria-hidden="true" />
         <span>小铺</span>
       </button>
       <button type="button" onclick={() => void openDrawer('album')}>
-        <span class="nav-icon" aria-hidden="true">册</span>
+        <img class="nav-icon" src={homeArt.nav.album} alt="" aria-hidden="true" />
         <span>相册</span>
         {#if unreadPostcardCount > 0}
           <span class="unread-badge" aria-label={`${unreadPostcardCount} 张未读明信片`}>
@@ -665,7 +672,7 @@
         type="button"
         aria-label={`关闭${drawer.title}`}
         onclick={() => activeDrawer = null}
-      >×</button>
+      ><img src="/assets/glyphs/close.svg" alt="" aria-hidden="true" /></button>
     </header>
     {#if activeDrawer === 'shop'}
       <div class="drawer-content">
@@ -673,9 +680,7 @@
         <ul class="item-list" aria-label="小铺物品">
           {#each STARTER_ITEMS as item}
             <li class="item-card">
-              <span class="item-token" aria-hidden="true">
-                {item.name.slice(0, 1)}
-              </span>
+              <img class="item-token" src={item.imageSrc} alt="" aria-hidden="true" />
               <div class="item-copy">
                 <div class="item-title">
                   <h3>{item.name}</h3>
@@ -692,7 +697,7 @@
                 onclick={() => purchaseItem(item)}
               >
                 {treats >= item.price
-                  ? `${item.price} 🐟`
+                  ? `${item.price} 条小鱼干`
                   : `还差 ${item.price - treats}`}
               </button>
             </li>
@@ -714,6 +719,21 @@
                 : '放入第一件物品后，小猫会自己等待合适的出发时机。'}
           </p>
         </div>
+        <div class="pack-art" aria-label={`打开的行囊，已放入 ${pack.length} 件物品`}>
+          <img class="pack-layer" src="/assets/pack/base-382.png" alt="" />
+          {#each pack as packedItem, index}
+            {@const item = findItem(packedItem.itemId)}
+            {#if item}
+              <img
+                class="pack-item"
+                src={item.imageSrc}
+                alt={item.name}
+                style={packItemStyle(index, item.id)}
+              />
+            {/if}
+          {/each}
+          <img class="pack-layer pack-rim" src="/assets/pack/rim-382.png" alt="" />
+        </div>
 
         <section class="pack-section" aria-labelledby="packed-title">
           <h3 id="packed-title">已经放好</h3>
@@ -723,9 +743,7 @@
                 {@const item = findItem(packedItem.itemId)}
                 {#if item}
                   <li class="item-card">
-                    <span class="item-token" aria-hidden="true">
-                      {item.name.slice(0, 1)}
-                    </span>
+                    <img class="item-token" src={item.imageSrc} alt="" aria-hidden="true" />
                     <div class="item-copy">
                       <div class="item-title">
                         <h3>{item.name}</h3>
@@ -760,9 +778,7 @@
             <ul class="item-list compact">
               {#each availableItems as item}
                 <li class="item-card">
-                  <span class="item-token" aria-hidden="true">
-                    {item.name.slice(0, 1)}
-                  </span>
+                <img class="item-token" src={item.imageSrc} alt="" aria-hidden="true" />
                   <div class="item-copy">
                     <div class="item-title">
                       <h3>{item.name}</h3>
@@ -817,7 +833,7 @@
           </ul>
         {:else}
           <div class="empty-state">
-            <span aria-hidden="true">· · ·</span>
+            <img class="album-empty-art" src="/assets/album/empty.png" alt="" />
             <h3>{drawer.empty}</h3>
             <p>{drawer.hint}</p>
           </div>
@@ -829,9 +845,15 @@
             <p>导出会包含小猫、行囊、旅行、相册和未读状态。</p>
           </div>
           <div class="save-transfer-actions">
-            <button type="button" onclick={exportGame}>导出存档</button>
+            <button type="button" onclick={exportGame}>
+              <img src="/assets/glyphs/export.svg" alt="" aria-hidden="true" />
+              导出存档
+            </button>
             <label>
-              <span>导入存档</span>
+              <span>
+                <img src="/assets/glyphs/import.svg" alt="" aria-hidden="true" />
+                导入存档
+              </span>
               <input
                 type="file"
                 accept="application/json,.json"
@@ -846,7 +868,7 @@
       </div>
     {:else}
       <div class="empty-state">
-        <span aria-hidden="true">· · ·</span>
+        <img class="album-empty-art" src="/assets/album/empty.png" alt="" />
         <h3>{drawer.empty}</h3>
         <p>{drawer.hint}</p>
       </div>

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 6,
+  "manifestKind": "home-eat-bowl-count-correction",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "createdAt": "2026-07-21",
+  "root": "docs/art/candidates/home/v6",
+  "selfExcludedFromFileHashes": true,
+  "fileCount": 8,
+  "files": [
+    {
+      "path": "README.md",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 1303,
+      "sha256": "4b55b222497c99642816c83d4a403f2fc9777502ca0580db8a2f0d27d28b4944",
+      "kind": "documentation"
+    },
+    {
+      "path": "eat-placement-metadata.v6.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 9429,
+      "sha256": "ce8afd00877b2d1bcc28255c4947c5b74776e39aee25eb6437c5a106df3a8c8e",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa-report.v6.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 9157,
+      "sha256": "0593f4c287b734669abbb9cb5509aff56ae19b5399aea85b48c81fdb58483a33",
+      "kind": "metadata"
+    },
+    {
+      "path": "reviews/before-after--eat-bowl-count-and-support--1200x1600--non-shipping-v06.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 567082,
+      "sha256": "202d7ae44f14247bc3e32f4fd79837603f45aa9a1327c02c94fcf5f2623452a9",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--320x700--eat-two-bowls--non-shipping-v06.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 267234,
+      "sha256": "2bb48ea98c7eeda5c0b24ec739518b7381a097ab108aebdc654d4a3ca8b768aa",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--390x844--eat-two-bowls--non-shipping-v06.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 400578,
+      "sha256": "72aff5c167b8a97ee1c3523de5cc863dc63054aa220278d80ace8d5ecc3b5025",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--430x932--eat-two-bowls--non-shipping-v06.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 499120,
+      "sha256": "2cd19c5c2a1484d300b2d100977cdb7e49a3efa6a56b06dc9be68aaef97594c1",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "scripts/build_v6.py",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 25122,
+      "sha256": "ec9b3b3e019f60aa92c3005b325b190d3c6f2effb0cfa07679bb93433e5c691f",
+      "kind": "build-script"
+    }
+  ]
+}

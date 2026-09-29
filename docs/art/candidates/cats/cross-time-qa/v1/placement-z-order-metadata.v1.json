@@ -1,0 +1,5175 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "coordinateConvention": {
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "origin": "top-left",
+    "units": "pixels"
+  },
+  "runtimeLikeZOrder": [
+    {
+      "z": 0,
+      "role": "approved state exterior",
+      "blend": "source-over"
+    },
+    {
+      "z": 1,
+      "role": "approved neutral interior/foreground",
+      "blend": "source-over"
+    },
+    {
+      "z": 2,
+      "role": "v6 same-room food-bowl removal patch",
+      "condition": "eat only"
+    },
+    {
+      "z": 3,
+      "role": "unchanged cat pose master at documented scale/anchor",
+      "catOnlyGrade": false
+    },
+    {
+      "z": 4,
+      "role": "approved v3 time lighting overlay",
+      "condition": "morning/dusk/late-night"
+    },
+    {
+      "z": 5,
+      "role": "universal activity-zone moonwash",
+      "condition": "only if necessary",
+      "enabled": false
+    },
+    {
+      "z": 6,
+      "role": "mobile UI, note, navigation, and status surfaces",
+      "sceneLightingAffects": false
+    }
+  ],
+  "timeLayers": {
+    "morning": {
+      "exterior": "docs/art/candidates/home/v3/layers/home-exterior--morning--full-canvas--non-shipping-v03.png",
+      "interior": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "lighting": "docs/art/candidates/home/v3/layers/home-lighting-overlay--morning--non-shipping-v03.png",
+      "flattenedValidationTarget": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--morning--non-shipping-v03.png",
+      "reconstruction": {
+        "maxChannelDelta": 0,
+        "meanAbsoluteChannelDelta": 0.0,
+        "exactPixelPercent": 100.0,
+        "pass": true
+      }
+    },
+    "noon": {
+      "exterior": "docs/art/candidates/home/v3/layers/home-exterior--noon--full-canvas--non-shipping-v03.png",
+      "interior": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "lighting": null,
+      "flattenedValidationTarget": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+      "reconstruction": {
+        "maxChannelDelta": 0,
+        "meanAbsoluteChannelDelta": 0.0,
+        "exactPixelPercent": 100.0,
+        "pass": true
+      }
+    },
+    "dusk": {
+      "exterior": "docs/art/candidates/home/v3/layers/home-exterior--dusk--full-canvas--non-shipping-v03.png",
+      "interior": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "lighting": "docs/art/candidates/home/v3/layers/home-lighting-overlay--dusk--non-shipping-v03.png",
+      "flattenedValidationTarget": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--dusk--non-shipping-v03.png",
+      "reconstruction": {
+        "maxChannelDelta": 0,
+        "meanAbsoluteChannelDelta": 0.0,
+        "exactPixelPercent": 100.0,
+        "pass": true
+      }
+    },
+    "late-night": {
+      "exterior": "docs/art/candidates/home/v3/layers/home-exterior--late-night--full-canvas--non-shipping-v03.png",
+      "interior": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "lighting": "docs/art/candidates/home/v3/layers/home-lighting-overlay--late-night--non-shipping-v03.png",
+      "flattenedValidationTarget": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--late-night--non-shipping-v03.png",
+      "reconstruction": {
+        "maxChannelDelta": 0,
+        "meanAbsoluteChannelDelta": 0.0,
+        "exactPixelPercent": 100.0,
+        "pass": true
+      }
+    }
+  },
+  "eatTwoBowlRule": {
+    "expectedVisibleCount": 2,
+    "visibleObjects": [
+      "unchanged room water bowl",
+      "pose-integrated baked eating bowl"
+    ],
+    "removedObject": "superseded room food bowl",
+    "patchTarget": [
+      350,
+      1175,
+      500,
+      1328
+    ],
+    "waterBowlBounds": [
+      215,
+      1200,
+      355,
+      1320
+    ],
+    "foodBowlPhysicalCoreMask": {
+      "derivation": "maximum RGB delta from the exact v6 food-bowl removal patch",
+      "minimumChannelDelta": 60,
+      "pixelCount": 1861,
+      "purpose": "object-core collision QA; broad patch/bounds pixels remain diagnostic only"
+    },
+    "patchQAByTime": {
+      "morning": {
+        "declaredTargetBounds": [
+          350,
+          1175,
+          500,
+          1328
+        ],
+        "actualPixelDifferenceBounds": [
+          358,
+          1175,
+          500,
+          1328
+        ],
+        "changedPixelCount": 19172,
+        "changedPixelPercentOfCanvas": 0.998542,
+        "maximumChannelDelta": 126,
+        "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+        "waterBowlMaxPixelDelta": 0,
+        "outsideDeclaredPatchChangedPixels": 0,
+        "appliedBeforeCatAndLighting": true
+      },
+      "noon": {
+        "declaredTargetBounds": [
+          350,
+          1175,
+          500,
+          1328
+        ],
+        "actualPixelDifferenceBounds": [
+          358,
+          1175,
+          500,
+          1328
+        ],
+        "changedPixelCount": 19172,
+        "changedPixelPercentOfCanvas": 0.998542,
+        "maximumChannelDelta": 126,
+        "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+        "waterBowlMaxPixelDelta": 0,
+        "outsideDeclaredPatchChangedPixels": 0,
+        "appliedBeforeCatAndLighting": true
+      },
+      "dusk": {
+        "declaredTargetBounds": [
+          350,
+          1175,
+          500,
+          1328
+        ],
+        "actualPixelDifferenceBounds": [
+          358,
+          1175,
+          500,
+          1328
+        ],
+        "changedPixelCount": 19172,
+        "changedPixelPercentOfCanvas": 0.998542,
+        "maximumChannelDelta": 126,
+        "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+        "waterBowlMaxPixelDelta": 0,
+        "outsideDeclaredPatchChangedPixels": 0,
+        "appliedBeforeCatAndLighting": true
+      },
+      "late-night": {
+        "declaredTargetBounds": [
+          350,
+          1175,
+          500,
+          1328
+        ],
+        "actualPixelDifferenceBounds": [
+          358,
+          1175,
+          500,
+          1328
+        ],
+        "changedPixelCount": 19172,
+        "changedPixelPercentOfCanvas": 0.998542,
+        "maximumChannelDelta": 126,
+        "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+        "waterBowlMaxPixelDelta": 0,
+        "outsideDeclaredPatchChangedPixels": 0,
+        "appliedBeforeCatAndLighting": true
+      }
+    },
+    "appliedBeforeCatAndLighting": true
+  },
+  "cats": {
+    "minho": {
+      "displayName": "Production Minho",
+      "family": "production-minho",
+      "coat": "production brown-tabby-and-white watercolor coat",
+      "morphology": "production juvenile domestic-cat proportions retained per final pose placement",
+      "identityMarkers": [
+        "production face",
+        "tabby forehead",
+        "white muzzle/chest",
+        "approved baked pose props"
+      ],
+      "physicalScaleVsMinho": 1.0,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            64,
+            391,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            394,
+            955,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 11005,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "measured visible bottom-center; exact final rect is authoritative"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1394.75,
+            "kind": "final home-v5 placed visible bottom-center"
+          },
+          "canvasRect": {
+            "x": 480.0,
+            "y": 1001.0,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/home/v5/placement-responsive-metadata.v5.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            506.25,
+            1161.371094,
+            873.75,
+            1394.75
+          ],
+          "opaqueRoomBoundsAt250": [
+            507.070312,
+            1162.601562,
+            871.699219,
+            1393.929688
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            506,
+            1161,
+            874,
+            1395
+          ],
+          "source": "public/portraits/minho/portrait--minho--sleep--v01.png",
+          "sourceSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            64,
+            218,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            220,
+            958,
+            959
+          ],
+          "sourcePartialAlphaPixelCount": 15378,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "measured visible bottom-center; exact final rect is authoritative"
+          },
+          "roomAnchor": {
+            "x": 710.0,
+            "y": 1435.875,
+            "kind": "final home-v5 placed visible bottom-center"
+          },
+          "canvasRect": {
+            "x": 485.0,
+            "y": 1014.0,
+            "width": 450.0,
+            "height": 450.0
+          },
+          "placementSource": "docs/art/candidates/home/v5/placement-responsive-metadata.v5.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 450.0,
+          "sourceScale": 0.439453125,
+          "visibleRoomBounds": [
+            513.125,
+            1109.800781,
+            906.875,
+            1435.875
+          ],
+          "opaqueRoomBoundsAt250": [
+            514.003906,
+            1110.679688,
+            905.996094,
+            1435.435547
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            513,
+            1110,
+            907,
+            1436
+          ],
+          "source": "public/portraits/minho/portrait--minho--play--v01.png",
+          "sourceSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            389,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            65,
+            390,
+            958,
+            959
+          ],
+          "sourcePartialAlphaPixelCount": 15182,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "measured visible bottom-center; exact final rect is authoritative"
+          },
+          "roomAnchor": {
+            "x": 560.0,
+            "y": 1285.875,
+            "kind": "final home-v6 placed visible bottom-center"
+          },
+          "canvasRect": {
+            "x": 335.0,
+            "y": 864.0,
+            "width": 450.0,
+            "height": 450.0
+          },
+          "placementSource": "docs/art/candidates/home/v6/eat-placement-metadata.v6.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 450.0,
+          "sourceScale": 0.439453125,
+          "visibleRoomBounds": [
+            363.125,
+            1034.947266,
+            756.875,
+            1285.875
+          ],
+          "opaqueRoomBoundsAt250": [
+            363.564453,
+            1035.386719,
+            755.996094,
+            1285.435547
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            363,
+            1035,
+            757,
+            1286
+          ],
+          "source": "public/portraits/minho/portrait--minho--eat--v01.png",
+          "sourceSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "golden-shaded": {
+      "displayName": "Golden shaded",
+      "family": "british-shorthair",
+      "coat": "warm cream-gold undercoat with restrained charcoal tipping",
+      "morphology": "petite-cobby young adult female",
+      "identityMarkers": [
+        "emerald eyes",
+        "dark rose nose",
+        "charcoal crown/back tipping",
+        "thick medium tail"
+      ],
+      "physicalScaleVsMinho": 0.96,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            64,
+            356,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            359,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 6843,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 488.4,
+            "y": 1017.0,
+            "width": 403.2,
+            "height": 403.2
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 0.96,
+          "displayCanvasPx": 403.2,
+          "sourceScale": 0.39375,
+          "visibleRoomBounds": [
+            513.6,
+            1157.175,
+            866.4,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            514.3875,
+            1158.35625,
+            865.6125,
+            1394.2125
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            513,
+            1157,
+            867,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sleep--master-1024.png",
+          "sourceSha256": "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            64,
+            117,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            65,
+            120,
+            958,
+            957
+          ],
+          "sourcePartialAlphaPixelCount": 11251,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 438.4,
+            "y": 1017.0,
+            "width": 403.2,
+            "height": 403.2
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 0.96,
+          "displayCanvasPx": 403.2,
+          "sourceScale": 0.39375,
+          "visibleRoomBounds": [
+            463.6,
+            1063.06875,
+            816.4,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            463.99375,
+            1064.25,
+            815.6125,
+            1393.81875
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            463,
+            1063,
+            817,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--play--master-1024.png",
+          "sourceSha256": "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            367,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            370,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 7579,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 448.4,
+            "y": 1017.0,
+            "width": 403.2,
+            "height": 403.2
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 0.96,
+          "displayCanvasPx": 403.2,
+          "sourceScale": 0.39375,
+          "visibleRoomBounds": [
+            473.6,
+            1161.50625,
+            826.4,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            474.3875,
+            1162.6875,
+            825.6125,
+            1394.2125
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            473,
+            1162,
+            826,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--eat--master-1024.png",
+          "sourceSha256": "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "blue-golden-shaded": {
+      "displayName": "Blue-golden shaded",
+      "family": "british-shorthair",
+      "coat": "pale honey undercoat with cool blue-gray tipping",
+      "morphology": "broad mature muscular-cobby adult male",
+      "identityMarkers": [
+        "olive eyes",
+        "blue-gray brow arcs",
+        "honey undercoat",
+        "charcoal-blue tail tip"
+      ],
+      "physicalScaleVsMinho": 1.05,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            63,
+            383,
+            961,
+            961
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            385,
+            959,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 7864,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 961,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 469.5,
+            "y": 981.131836,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            496.631836,
+            1146.076172,
+            883.368164,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            497.923828,
+            1146.9375,
+            882.506836,
+            1393.708008
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            497,
+            1146,
+            884,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sleep--master-1024.png",
+          "sourceSha256": "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            120,
+            64,
+            904,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            122,
+            66,
+            902,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 10601,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 419.5,
+            "y": 981.5625,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            471.179688,
+            1009.125,
+            808.820312,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            472.041016,
+            1009.986328,
+            807.958984,
+            1394.138672
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            471,
+            1009,
+            809,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--play--master-1024.png",
+          "sourceSha256": "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            341,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            65,
+            344,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 11512,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 429.5,
+            "y": 981.5625,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            457.0625,
+            1128.418945,
+            842.9375,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            457.493164,
+            1129.710938,
+            842.076172,
+            1394.138672
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            457,
+            1128,
+            843,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--eat--master-1024.png",
+          "sourceSha256": "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "solid-blue": {
+      "displayName": "Solid blue",
+      "family": "british-shorthair",
+      "coat": "uniform low-saturation slate blue-gray",
+      "morphology": "largest barrel-chested deeply cobby adult male",
+      "identityMarkers": [
+        "copper eyes",
+        "uniform slate coat",
+        "massive round head",
+        "very thick tail"
+      ],
+      "physicalScaleVsMinho": 1.1,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            63,
+            386,
+            961,
+            961
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            390,
+            959,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 8796,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 961,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 459.0,
+            "y": 961.423828,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            487.423828,
+            1135.576172,
+            892.576172,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            488.777344,
+            1137.380859,
+            891.673828,
+            1393.646484
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            488,
+            1136,
+            892,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sleep--master-1024.png",
+          "sourceSha256": "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            63,
+            372,
+            961,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            376,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 11097,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 409.0,
+            "y": 961.875,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            437.423828,
+            1129.710938,
+            842.576172,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            438.777344,
+            1131.515625,
+            841.222656,
+            1394.097656
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            438,
+            1130,
+            842,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--play--master-1024.png",
+          "sourceSha256": "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            63,
+            392,
+            961,
+            961
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            395,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 9757,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 961,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 419.0,
+            "y": 961.423828,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            447.423828,
+            1138.283203,
+            852.576172,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            448.777344,
+            1139.636719,
+            851.222656,
+            1393.646484
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            448,
+            1138,
+            852,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--eat--master-1024.png",
+          "sourceSha256": "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "blue-white-bicolor": {
+      "displayName": "Blue-white bicolor",
+      "family": "british-shorthair",
+      "coat": "blue cap, saddle, shoulder spot, and blue tail with white tip",
+      "morphology": "athletic-cobby young adult female",
+      "identityMarkers": [
+        "blue cap",
+        "blue saddle",
+        "one left-shoulder spot",
+        "white tail tip"
+      ],
+      "physicalScaleVsMinho": 1.0,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            63,
+            413,
+            961,
+            961
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            414,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 7675,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 961,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 480.0,
+            "y": 1000.839844,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            505.839844,
+            1170.234375,
+            874.160156,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            507.070312,
+            1170.644531,
+            872.929688,
+            1393.769531
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            506,
+            1170,
+            874,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sleep--master-1024.png",
+          "sourceSha256": "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            82,
+            64,
+            942,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            84,
+            65,
+            940,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 12766,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 430.0,
+            "y": 1001.25,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            463.632812,
+            1027.5,
+            816.367188,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            464.453125,
+            1027.910156,
+            815.546875,
+            1394.179688
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            463,
+            1027,
+            817,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--play--master-1024.png",
+          "sourceSha256": "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            63,
+            362,
+            960,
+            961
+          ],
+          "sourceOpaqueBoundsAt250": [
+            67,
+            365,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 12945,
+          "sourceAnchorUsed": {
+            "x": 511.5,
+            "y": 961,
+            "kind": "v2 measured visible bottom-center",
+            "declaredV1Anchor": {
+              "x": 512,
+              "y": 960
+            }
+          },
+          "roomAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 440.205078,
+            "y": 1000.839844,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/british-shorthair/v2/coverage-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            466.044922,
+            1149.316406,
+            833.955078,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            467.685547,
+            1150.546875,
+            833.134766,
+            1393.769531
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            466,
+            1149,
+            834,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--eat--master-1024.png",
+          "sourceSha256": "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "orange-tabby": {
+      "displayName": "Orange tabby",
+      "family": "domestic-shorthair",
+      "coat": "warm orange mackerel tabby",
+      "morphology": "substantial adult body without British-cobby thickening",
+      "identityMarkers": [
+        "orange mackerel stripes",
+        "warm muzzle",
+        "substantial torso",
+        "ringed tail"
+      ],
+      "physicalScaleVsMinho": 1.05,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            68,
+            424,
+            956,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            71,
+            427,
+            954,
+            959
+          ],
+          "sourcePartialAlphaPixelCount": 10656,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 469.5,
+            "y": 981.5625,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            498.785156,
+            1164.164062,
+            881.214844,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            500.077148,
+            1165.456055,
+            880.353516,
+            1394.569336
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            499,
+            1164,
+            881,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+          "sourceSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            68,
+            120,
+            956,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            70,
+            121,
+            954,
+            957
+          ],
+          "sourcePartialAlphaPixelCount": 19971,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 499.5,
+            "y": 981.5625,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            528.785156,
+            1033.242188,
+            911.214844,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            529.646484,
+            1033.672852,
+            910.353516,
+            1393.708008
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            529,
+            1033,
+            912,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+          "sourceSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            68,
+            433,
+            956,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            69,
+            437,
+            953,
+            959
+          ],
+          "sourcePartialAlphaPixelCount": 15229,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 499.5,
+            "y": 981.5625,
+            "width": 441.0,
+            "height": 441.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.05,
+          "displayCanvasPx": 441.0,
+          "sourceScale": 0.430664062,
+          "visibleRoomBounds": [
+            528.785156,
+            1168.040039,
+            911.214844,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            529.21582,
+            1169.762695,
+            909.922852,
+            1394.569336
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            529,
+            1168,
+            911,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+          "sourceSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "li-hua": {
+      "displayName": "Chinese Li Hua",
+      "family": "domestic-shorthair",
+      "coat": "brown-black mackerel tabby",
+      "morphology": "long-legged lean adult with narrow waist and active tail",
+      "identityMarkers": [
+        "dark mackerel striping",
+        "defined shoulders",
+        "narrow waist",
+        "active ringed tail"
+      ],
+      "physicalScaleVsMinho": 1.0,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            68,
+            390,
+            956,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            70,
+            391,
+            956,
+            960
+          ],
+          "sourcePartialAlphaPixelCount": 14417,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 480.0,
+            "y": 1001.25,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            507.890625,
+            1161.210938,
+            872.109375,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            508.710938,
+            1161.621094,
+            872.109375,
+            1395.0
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            508,
+            1161,
+            872,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+          "sourceSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            136,
+            72,
+            887,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            139,
+            74,
+            885,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 18526,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 510.0,
+            "y": 1001.25,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            565.78125,
+            1030.78125,
+            873.808594,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            567.011719,
+            1031.601562,
+            872.988281,
+            1394.179688
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            566,
+            1031,
+            874,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+          "sourceSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            68,
+            323,
+            956,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            69,
+            324,
+            954,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 20943,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 510.0,
+            "y": 1001.25,
+            "width": 420.0,
+            "height": 420.0
+          },
+          "placementSource": "docs/art/candidates/cats/domestic-shorthair/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.0,
+          "displayCanvasPx": 420.0,
+          "sourceScale": 0.41015625,
+          "visibleRoomBounds": [
+            537.890625,
+            1133.730469,
+            902.109375,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            538.300781,
+            1134.140625,
+            901.289062,
+            1394.179688
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            538,
+            1134,
+            902,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+          "sourceSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "maine-coon": {
+      "displayName": "Maine Coon",
+      "family": "silhouette-variety",
+      "coat": "long-haired brown tabby",
+      "morphology": "largest long-bodied, shaggy silhouette",
+      "identityMarkers": [
+        "ear furnishings",
+        "shaggy ruff",
+        "brown tabby bands",
+        "large plumed tail"
+      ],
+      "physicalScaleVsMinho": 1.22,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            64,
+            506,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            508,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 11021,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 434.0,
+            "y": 915.0,
+            "width": 512.0,
+            "height": 512.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.22,
+          "displayCanvasPx": 512.0,
+          "sourceScale": 0.5,
+          "visibleRoomBounds": [
+            466.0,
+            1168.0,
+            914.0,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            467.0,
+            1169.0,
+            913.0,
+            1394.0
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            466,
+            1168,
+            914,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--sleep--master-1024--non-shipping-v01.png",
+          "sourceSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            64,
+            159,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            162,
+            957,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 19145,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 464.0,
+            "y": 915.0,
+            "width": 512.0,
+            "height": 512.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.22,
+          "displayCanvasPx": 512.0,
+          "sourceScale": 0.5,
+          "visibleRoomBounds": [
+            496.0,
+            994.5,
+            944.0,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            497.0,
+            996.0,
+            942.5,
+            1394.0
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            496,
+            995,
+            944,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--play--master-1024--non-shipping-v01.png",
+          "sourceSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            405,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            408,
+            957,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 16375,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 464.0,
+            "y": 915.0,
+            "width": 512.0,
+            "height": 512.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.22,
+          "displayCanvasPx": 512.0,
+          "sourceScale": 0.5,
+          "visibleRoomBounds": [
+            496.0,
+            1117.5,
+            944.0,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            497.0,
+            1119.0,
+            942.5,
+            1394.0
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            496,
+            1117,
+            944,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--eat--master-1024--non-shipping-v01.png",
+          "sourceSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "ragdoll": {
+      "displayName": "Ragdoll",
+      "family": "silhouette-variety",
+      "coat": "soft pale longhair with cool point markings",
+      "morphology": "large relaxed long-haired body",
+      "identityMarkers": [
+        "cool face points",
+        "pale body",
+        "soft long coat",
+        "plumed tail"
+      ],
+      "physicalScaleVsMinho": 1.1,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            64,
+            427,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            67,
+            430,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 9020,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 459.0,
+            "y": 961.875,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            487.875,
+            1154.525391,
+            892.125,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            489.228516,
+            1155.878906,
+            891.222656,
+            1394.097656
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            488,
+            1154,
+            892,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--sleep--master-1024--non-shipping-v01.png",
+          "sourceSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            64,
+            408,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            411,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 11968,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 489.0,
+            "y": 961.875,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            517.875,
+            1145.953125,
+            922.125,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            518.777344,
+            1147.306641,
+            921.222656,
+            1394.097656
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            518,
+            1146,
+            922,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--play--master-1024--non-shipping-v01.png",
+          "sourceSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            457,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            459,
+            956,
+            957
+          ],
+          "sourcePartialAlphaPixelCount": 11957,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 489.0,
+            "y": 961.875,
+            "width": 462.0,
+            "height": 462.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 1.1,
+          "displayCanvasPx": 462.0,
+          "sourceScale": 0.451171875,
+          "visibleRoomBounds": [
+            517.875,
+            1168.060547,
+            922.125,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            518.777344,
+            1168.962891,
+            920.320312,
+            1393.646484
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            518,
+            1168,
+            922,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--eat--master-1024--non-shipping-v01.png",
+          "sourceSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    },
+    "siamese": {
+      "displayName": "Siamese",
+      "family": "silhouette-variety",
+      "coat": "cream body with dark seal points",
+      "morphology": "smallest fine-boned wedge-headed silhouette",
+      "identityMarkers": [
+        "seal mask",
+        "dark ears",
+        "dark paws",
+        "dark tapered tail"
+      ],
+      "physicalScaleVsMinho": 0.82,
+      "poses": {
+        "sleep": {
+          "sourceAlphaBounds": [
+            64,
+            563,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            66,
+            565,
+            958,
+            957
+          ],
+          "sourcePartialAlphaPixelCount": 9154,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 518.0,
+            "y": 1072.5,
+            "width": 344.0,
+            "height": 344.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 0.82,
+          "displayCanvasPx": 344.0,
+          "sourceScale": 0.3359375,
+          "visibleRoomBounds": [
+            539.5,
+            1261.632812,
+            840.5,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            540.171875,
+            1262.304688,
+            839.828125,
+            1393.992188
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            539,
+            1261,
+            840,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--sleep--master-1024--non-shipping-v01.png",
+          "sourceSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+          "identityScaleWasNotEqualized": true
+        },
+        "play": {
+          "sourceAlphaBounds": [
+            64,
+            216,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            67,
+            219,
+            958,
+            957
+          ],
+          "sourcePartialAlphaPixelCount": 14974,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 548.0,
+            "y": 1072.5,
+            "width": 344.0,
+            "height": 344.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 0.82,
+          "displayCanvasPx": 344.0,
+          "sourceScale": 0.3359375,
+          "visibleRoomBounds": [
+            569.5,
+            1145.0625,
+            870.5,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            570.507812,
+            1146.070312,
+            869.828125,
+            1393.992188
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            569,
+            1145,
+            871,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--play--master-1024--non-shipping-v01.png",
+          "sourceSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+          "identityScaleWasNotEqualized": true
+        },
+        "eat": {
+          "sourceAlphaBounds": [
+            64,
+            379,
+            960,
+            960
+          ],
+          "sourceOpaqueBoundsAt250": [
+            67,
+            382,
+            958,
+            958
+          ],
+          "sourcePartialAlphaPixelCount": 16233,
+          "sourceAnchorUsed": {
+            "x": 512.0,
+            "y": 960.0,
+            "kind": "v2 fixed master bottom-center"
+          },
+          "roomAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "canvasRect": {
+            "x": 548.0,
+            "y": 1072.5,
+            "width": 344.0,
+            "height": 344.0
+          },
+          "placementSource": "docs/art/candidates/cats/silhouette-variety/v2/metadata/placement-metadata.v2.json",
+          "physicalScaleVsMinho": 0.82,
+          "displayCanvasPx": 344.0,
+          "sourceScale": 0.3359375,
+          "visibleRoomBounds": [
+            569.5,
+            1199.820312,
+            870.5,
+            1395.0
+          ],
+          "opaqueRoomBoundsAt250": [
+            570.507812,
+            1200.828125,
+            869.828125,
+            1394.328125
+          ],
+          "visibleSupportGapPx": 0.0,
+          "rasterizedVisibleRoomBounds": [
+            569,
+            1200,
+            871,
+            1395
+          ],
+          "source": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--eat--master-1024--non-shipping-v01.png",
+          "sourceSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+          "identityScaleWasNotEqualized": true
+        }
+      }
+    }
+  },
+  "placementQA": {
+    "minho": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1394.75,
+            "kind": "final home-v5 placed visible bottom-center"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 5.0,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 191.25,
+            "cabinet": 81.25,
+            "navigationReserve": 75.25
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11005,
+          "placedPartialAlphaPixelCount": 2080,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              158.906,
+              529.128,
+              300.394,
+              618.979
+            ],
+            "marginsPx": {
+              "left": 158.906,
+              "right": 89.606,
+              "topRoom": 447.128,
+              "bottomRoom": 79.021
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              130.645,
+              433.654,
+              245.718,
+              506.731
+            ],
+            "marginsPx": {
+              "left": 130.645,
+              "right": 74.282,
+              "topRoom": 363.654,
+              "bottomRoom": 64.269
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              173.75,
+              593.003,
+              335.45,
+              695.69
+            ],
+            "marginsPx": {
+              "left": 173.75,
+              "right": 94.55,
+              "topRoom": 511.003,
+              "bottomRoom": 90.31
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 710.0,
+            "y": 1435.875,
+            "kind": "final home-v5 placed visible bottom-center"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 5.0,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 198.125,
+            "cabinet": 48.125,
+            "navigationReserve": 34.125,
+            "waterBowl": 158.125,
+            "foodBowl": 28.125
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 15378,
+          "placedPartialAlphaPixelCount": 3235,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              161.553,
+              509.273,
+              313.147,
+              634.812
+            ],
+            "marginsPx": {
+              "left": 161.553,
+              "right": 76.853,
+              "topRoom": 427.273,
+              "bottomRoom": 63.188
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              132.797,
+              417.506,
+              256.09,
+              519.608
+            ],
+            "marginsPx": {
+              "left": 132.797,
+              "right": 63.91,
+              "topRoom": 347.506,
+              "bottomRoom": 51.392
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              176.775,
+              570.312,
+              350.025,
+              713.785
+            ],
+            "marginsPx": {
+              "left": 176.775,
+              "right": 79.975,
+              "topRoom": 488.312,
+              "bottomRoom": 72.215
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 560.0,
+            "y": 1285.875,
+            "kind": "final home-v6 placed visible bottom-center"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 5.0,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 48.125,
+            "cabinet": 198.125,
+            "navigationReserve": 184.125,
+            "waterBowl": 8.125
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 15182,
+          "placedPartialAlphaPixelCount": 3137,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              103.803,
+              480.455,
+              255.397,
+              577.062
+            ],
+            "marginsPx": {
+              "left": 103.803,
+              "right": 134.603,
+              "topRoom": 398.455,
+              "bottomRoom": 120.938
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              85.829,
+              394.068,
+              209.121,
+              472.64
+            ],
+            "marginsPx": {
+              "left": 85.829,
+              "right": 110.879,
+              "topRoom": 324.068,
+              "bottomRoom": 98.36
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              110.775,
+              537.377,
+              284.025,
+              647.785
+            ],
+            "marginsPx": {
+              "left": 110.775,
+              "right": 145.975,
+              "topRoom": 455.377,
+              "bottomRoom": 138.215
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "golden-shaded": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 198.6,
+            "cabinet": 88.6,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 6843,
+          "placedPartialAlphaPixelCount": 1302,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              161.736,
+              527.512,
+              297.564,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 161.736,
+              "right": 92.436,
+              "topRoom": 445.512,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              132.946,
+              432.34,
+              243.416,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 132.946,
+              "right": 76.584,
+              "topRoom": 362.34,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              176.984,
+              591.157,
+              332.216,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 176.984,
+              "right": 97.784,
+              "topRoom": 509.157,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 148.6,
+            "cabinet": 138.6,
+            "navigationReserve": 75.0,
+            "waterBowl": 108.6,
+            "foodBowl": 0.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11251,
+          "placedPartialAlphaPixelCount": 2059,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              142.486,
+              491.281,
+              278.314,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 142.486,
+              "right": 111.686,
+              "topRoom": 409.281,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              117.29,
+              402.873,
+              227.76,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 117.29,
+              "right": 92.24,
+              "topRoom": 332.873,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              154.984,
+              549.75,
+              310.216,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 154.984,
+              "right": 119.784,
+              "topRoom": 467.75,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 158.6,
+            "cabinet": 128.6,
+            "navigationReserve": 75.0,
+            "waterBowl": 118.6
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 7579,
+          "placedPartialAlphaPixelCount": 1375,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              146.336,
+              529.18,
+              282.164,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 146.336,
+              "right": 107.836,
+              "topRoom": 447.18,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              120.421,
+              433.697,
+              230.892,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 120.421,
+              "right": 89.108,
+              "topRoom": 363.697,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              159.384,
+              593.063,
+              314.616,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 159.384,
+              "right": 115.384,
+              "topRoom": 511.063,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "blue-golden-shaded": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 181.632,
+            "cabinet": 71.632,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 7864,
+          "placedPartialAlphaPixelCount": 1492,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              155.203,
+              523.239,
+              304.097,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 155.203,
+              "right": 85.903,
+              "topRoom": 441.239,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              127.633,
+              428.865,
+              248.73,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 127.633,
+              "right": 71.27,
+              "topRoom": 358.865,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              169.518,
+              586.274,
+              339.682,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 169.518,
+              "right": 90.318,
+              "topRoom": 504.274,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 156.18,
+            "cabinet": 146.18,
+            "navigationReserve": 75.0,
+            "waterBowl": 116.18,
+            "foodBowl": 0.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 10601,
+          "placedPartialAlphaPixelCount": 2320,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              145.404,
+              470.513,
+              275.396,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 145.404,
+              "right": 114.604,
+              "topRoom": 388.513,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              119.663,
+              385.982,
+              225.387,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 119.663,
+              "right": 94.613,
+              "topRoom": 315.982,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              158.319,
+              526.015,
+              306.881,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 158.319,
+              "right": 123.119,
+              "topRoom": 444.015,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 142.062,
+            "cabinet": 112.062,
+            "navigationReserve": 75.0,
+            "waterBowl": 102.062
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11512,
+          "placedPartialAlphaPixelCount": 2565,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              139.969,
+              516.441,
+              288.531,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 139.969,
+              "right": 101.469,
+              "topRoom": 434.441,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              115.243,
+              423.336,
+              236.07,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 115.243,
+              "right": 83.93,
+              "topRoom": 353.336,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              152.107,
+              578.504,
+              321.892,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 152.107,
+              "right": 108.108,
+              "topRoom": 496.504,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "solid-blue": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 172.424,
+            "cabinet": 62.424,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 8796,
+          "placedPartialAlphaPixelCount": 1778,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              151.658,
+              519.197,
+              307.642,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 151.658,
+              "right": 82.358,
+              "topRoom": 437.197,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              124.75,
+              425.577,
+              251.613,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 124.75,
+              "right": 68.387,
+              "topRoom": 355.577,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              165.466,
+              581.654,
+              343.734,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 165.466,
+              "right": 86.266,
+              "topRoom": 499.654,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 618,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 122.424,
+            "cabinet": 112.424,
+            "navigationReserve": 75.0,
+            "waterBowl": 82.424,
+            "foodBowl": 0.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11097,
+          "placedPartialAlphaPixelCount": 2244,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              132.408,
+              516.939,
+              288.392,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 132.408,
+              "right": 101.608,
+              "topRoom": 434.939,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              109.093,
+              423.741,
+              235.957,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 109.093,
+              "right": 84.043,
+              "topRoom": 353.741,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              143.466,
+              579.073,
+              321.734,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 143.466,
+              "right": 108.266,
+              "topRoom": 497.073,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 132.424,
+            "cabinet": 102.424,
+            "navigationReserve": 75.0,
+            "waterBowl": 92.424
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 9757,
+          "placedPartialAlphaPixelCount": 1955,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              136.258,
+              520.239,
+              292.242,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 136.258,
+              "right": 97.758,
+              "topRoom": 438.239,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              112.225,
+              426.425,
+              239.088,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 112.225,
+              "right": 80.912,
+              "topRoom": 356.425,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              147.866,
+              582.845,
+              326.134,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 147.866,
+              "right": 103.866,
+              "topRoom": 500.845,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "blue-white-bicolor": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 190.84,
+            "cabinet": 80.84,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 7675,
+          "placedPartialAlphaPixelCount": 1311,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              158.748,
+              532.54,
+              300.552,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 158.748,
+              "right": 89.448,
+              "topRoom": 450.54,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              130.516,
+              436.43,
+              245.846,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 130.516,
+              "right": 74.154,
+              "topRoom": 366.43,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              173.57,
+              596.903,
+              335.63,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 173.57,
+              "right": 94.37,
+              "topRoom": 514.903,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 640.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 74,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 148.633,
+            "cabinet": 138.633,
+            "navigationReserve": 75.0,
+            "waterBowl": 108.633,
+            "foodBowl": 0.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 12766,
+          "placedPartialAlphaPixelCount": 2541,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              142.499,
+              477.588,
+              278.301,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 142.499,
+              "right": 111.699,
+              "topRoom": 395.588,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              117.3,
+              391.736,
+              227.75,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 117.3,
+              "right": 92.25,
+              "topRoom": 321.736,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              154.998,
+              534.1,
+              310.202,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 154.998,
+              "right": 119.798,
+              "topRoom": 452.1,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 650.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 151.045,
+            "cabinet": 121.045,
+            "navigationReserve": 75.0,
+            "waterBowl": 111.045
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 12945,
+          "placedPartialAlphaPixelCount": 2169,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              143.427,
+              524.487,
+              285.073,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 143.427,
+              "right": 104.927,
+              "topRoom": 442.487,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              118.055,
+              429.88,
+              233.257,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 118.055,
+              "right": 86.743,
+              "topRoom": 359.88,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              156.06,
+              587.699,
+              317.94,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 156.06,
+              "right": 112.06,
+              "topRoom": 505.699,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "orange-tabby": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 183.785,
+            "cabinet": 73.785,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 10656,
+          "placedPartialAlphaPixelCount": 2200,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              156.032,
+              530.203,
+              303.268,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 156.032,
+              "right": 86.732,
+              "topRoom": 448.203,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              128.307,
+              434.529,
+              248.055,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 128.307,
+              "right": 71.945,
+              "topRoom": 364.529,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              170.465,
+              594.232,
+              338.735,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 170.465,
+              "right": 91.265,
+              "topRoom": 512.232,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 213.785,
+            "cabinet": 43.785,
+            "navigationReserve": 75.0,
+            "waterBowl": 173.785,
+            "foodBowl": 43.785
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 19971,
+          "placedPartialAlphaPixelCount": 4014,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              167.582,
+              479.798,
+              314.818,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 167.582,
+              "right": 75.182,
+              "topRoom": 397.798,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              137.701,
+              393.534,
+              257.449,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 137.701,
+              "right": 62.551,
+              "topRoom": 323.534,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              183.665,
+              536.627,
+              351.935,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 183.665,
+              "right": 78.065,
+              "topRoom": 454.627,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 213.785,
+            "cabinet": 43.785,
+            "navigationReserve": 75.0,
+            "waterBowl": 173.785
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 15229,
+          "placedPartialAlphaPixelCount": 3037,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              167.582,
+              531.695,
+              314.818,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 167.582,
+              "right": 75.182,
+              "topRoom": 449.695,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              137.701,
+              435.743,
+              257.449,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 137.701,
+              "right": 62.551,
+              "topRoom": 365.743,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              183.665,
+              595.938,
+              351.935,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 183.665,
+              "right": 78.065,
+              "topRoom": 513.938,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "li-hua": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 192.891,
+            "cabinet": 82.891,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 14417,
+          "placedPartialAlphaPixelCount": 2697,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              159.538,
+              529.066,
+              299.762,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 159.538,
+              "right": 90.238,
+              "topRoom": 447.066,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              131.158,
+              433.604,
+              245.204,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 131.158,
+              "right": 74.796,
+              "topRoom": 363.604,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              174.472,
+              592.933,
+              334.728,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 174.472,
+              "right": 95.272,
+              "topRoom": 510.933,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 250.781,
+            "cabinet": 81.191,
+            "navigationReserve": 75.0,
+            "waterBowl": 210.781,
+            "foodBowl": 80.781
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 18526,
+          "placedPartialAlphaPixelCount": 3302,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              181.826,
+              478.851,
+              300.416,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 181.826,
+              "right": 89.584,
+              "topRoom": 396.851,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              149.285,
+              392.763,
+              245.736,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 149.285,
+              "right": 74.264,
+              "topRoom": 322.763,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              199.944,
+              535.544,
+              335.476,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 199.944,
+              "right": 94.524,
+              "topRoom": 453.544,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 222.891,
+            "cabinet": 52.891,
+            "navigationReserve": 75.0,
+            "waterBowl": 182.891
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 20943,
+          "placedPartialAlphaPixelCount": 3848,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              171.088,
+              518.486,
+              311.312,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 171.088,
+              "right": 78.688,
+              "topRoom": 436.486,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              140.552,
+              424.999,
+              254.598,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 140.552,
+              "right": 65.402,
+              "topRoom": 354.999,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              187.672,
+              580.841,
+              347.928,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 187.672,
+              "right": 82.072,
+              "topRoom": 498.841,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "maine-coon": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 151.0,
+            "cabinet": 41.0,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11021,
+          "placedPartialAlphaPixelCount": 2426,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              143.41,
+              531.68,
+              315.89,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 143.41,
+              "right": 74.11,
+              "topRoom": 449.68,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              118.041,
+              435.73,
+              258.321,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 118.041,
+              "right": 61.679,
+              "topRoom": 365.73,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              156.04,
+              595.92,
+              353.16,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 156.04,
+              "right": 76.84,
+              "topRoom": 513.92,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 181.0,
+            "cabinet": 11.0,
+            "navigationReserve": 75.0,
+            "waterBowl": 141.0,
+            "foodBowl": 11.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 19145,
+          "placedPartialAlphaPixelCount": 4179,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              154.96,
+              464.882,
+              327.44,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 154.96,
+              "right": 62.56,
+              "topRoom": 382.882,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              127.435,
+              381.403,
+              267.715,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 127.435,
+              "right": 52.285,
+              "topRoom": 311.403,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              169.24,
+              519.58,
+              366.36,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 169.24,
+              "right": 63.64,
+              "topRoom": 437.58,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 181.0,
+            "cabinet": 11.0,
+            "navigationReserve": 75.0,
+            "waterBowl": 141.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 16375,
+          "placedPartialAlphaPixelCount": 3751,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              154.96,
+              512.237,
+              327.44,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 154.96,
+              "right": 62.56,
+              "topRoom": 430.237,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              127.435,
+              419.917,
+              267.715,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 127.435,
+              "right": 52.285,
+              "topRoom": 349.917,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              169.24,
+              573.7,
+              366.36,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 169.24,
+              "right": 63.64,
+              "topRoom": 491.7,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "ragdoll": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 172.875,
+            "cabinet": 62.875,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 9020,
+          "placedPartialAlphaPixelCount": 1873,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              151.832,
+              526.492,
+              307.468,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 151.832,
+              "right": 82.532,
+              "topRoom": 444.492,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              124.891,
+              431.511,
+              251.472,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 124.891,
+              "right": 68.528,
+              "topRoom": 361.511,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              165.665,
+              589.991,
+              343.535,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 165.665,
+              "right": 86.465,
+              "topRoom": 507.991,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 202.875,
+            "cabinet": 32.875,
+            "navigationReserve": 75.0,
+            "waterBowl": 162.875,
+            "foodBowl": 32.875
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11968,
+          "placedPartialAlphaPixelCount": 2430,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              163.382,
+              523.192,
+              319.018,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 163.382,
+              "right": 70.982,
+              "topRoom": 441.192,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              134.285,
+              428.827,
+              260.865,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 134.285,
+              "right": 59.135,
+              "topRoom": 358.827,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              178.865,
+              586.219,
+              356.735,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 178.865,
+              "right": 73.265,
+              "topRoom": 504.219,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 202.875,
+            "cabinet": 32.875,
+            "navigationReserve": 75.0,
+            "waterBowl": 162.875
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 11957,
+          "placedPartialAlphaPixelCount": 2428,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              163.382,
+              531.703,
+              319.018,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 163.382,
+              "right": 70.982,
+              "topRoom": 449.703,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              134.285,
+              435.749,
+              260.865,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 134.285,
+              "right": 59.135,
+              "topRoom": 365.749,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              178.865,
+              595.947,
+              356.735,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 178.865,
+              "right": 73.265,
+              "topRoom": 513.947,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    },
+    "siamese": {
+      "sleep": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 690.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 224.5,
+            "cabinet": 114.5,
+            "navigationReserve": 75.0
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 9154,
+          "placedPartialAlphaPixelCount": 1050,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              171.708,
+              567.729,
+              287.593,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 171.708,
+              "right": 102.407,
+              "topRoom": 485.729,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              141.056,
+              465.049,
+              235.307,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 141.056,
+              "right": 84.693,
+              "topRoom": 395.049,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              188.38,
+              637.118,
+              320.82,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 188.38,
+              "right": 109.18,
+              "topRoom": 555.118,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "resting/sleeping silhouette",
+          "sourcePoseNameMatched": true,
+          "integratedProp": null,
+          "pass": true
+        }
+      },
+      "play": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0,
+            "foodBowlObjectCorePixels": 0
+          },
+          "projectionDiagnostics": {
+            "foodBowlBoundingBoxCoreOverlapPixels": 0,
+            "interpretation": "The conservative rectangle includes surrounding floor and is diagnostic only; physical collision uses the high-delta core of the v6 bowl-removal patch."
+          },
+          "clearancePxFromVisibleBounds": {
+            "catTree": 254.5,
+            "cabinet": 84.5,
+            "navigationReserve": 75.0,
+            "waterBowl": 214.5,
+            "foodBowl": 84.5
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 14974,
+          "placedPartialAlphaPixelCount": 1738,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              183.257,
+              522.849,
+              299.142,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 183.257,
+              "right": 90.858,
+              "topRoom": 440.849,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              150.45,
+              428.548,
+              244.7,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 150.45,
+              "right": 75.3,
+              "topRoom": 358.548,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              201.58,
+              585.827,
+              334.02,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 201.58,
+              "right": 95.98,
+              "topRoom": 503.827,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "active pose with one integrated yarn prop kept clear",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "yarn",
+          "pass": true
+        }
+      },
+      "eat": {
+        "physicalSupport": {
+          "supportAnchor": {
+            "x": 720.0,
+            "y": 1395.0,
+            "kind": "v2 room support anchor"
+          },
+          "visibleSupportGapPx": 0.0,
+          "tolerancePx": 1.5,
+          "supportSurface": "woven rug or immediately adjacent room floor",
+          "pass": true,
+          "contactShadowAdded": false
+        },
+        "collision": {
+          "maskIntersectionPixels": {
+            "catTreePixels": 0,
+            "cabinetPixels": 0,
+            "navigationReservePixels": 0,
+            "waterBowlCorePixels": 0
+          },
+          "projectionDiagnostics": {},
+          "clearancePxFromVisibleBounds": {
+            "catTree": 254.5,
+            "cabinet": 84.5,
+            "navigationReserve": 75.0,
+            "waterBowl": 214.5
+          },
+          "pass": true
+        },
+        "safeArea": {
+          "pass": true,
+          "bounds": [
+            48,
+            48,
+            1152,
+            1440
+          ]
+        },
+        "hardEdgeAppearance": {
+          "sourcePartialAlphaPixelCount": 16233,
+          "placedPartialAlphaPixelCount": 1911,
+          "softAlphaPresent": true,
+          "pass": true
+        },
+        "viewportFit": {
+          "390x844": {
+            "mappedBounds": [
+              183.257,
+              543.931,
+              299.142,
+              619.075
+            ],
+            "marginsPx": {
+              "left": 183.257,
+              "right": 90.858,
+              "topRoom": 461.931,
+              "bottomRoom": 78.925
+            },
+            "fullyVisible": true
+          },
+          "320x700": {
+            "mappedBounds": [
+              150.45,
+              445.694,
+              244.7,
+              506.809
+            ],
+            "marginsPx": {
+              "left": 150.45,
+              "right": 75.3,
+              "topRoom": 375.694,
+              "bottomRoom": 64.191
+            },
+            "fullyVisible": true
+          },
+          "430x932": {
+            "mappedBounds": [
+              201.58,
+              609.921,
+              334.02,
+              695.8
+            ],
+            "marginsPx": {
+              "left": 201.58,
+              "right": 95.98,
+              "topRoom": 527.921,
+              "bottomRoom": 90.2
+            },
+            "fullyVisible": true
+          }
+        },
+        "activityReadability": {
+          "expected": "feeding pose with one integrated baked bowl",
+          "sourcePoseNameMatched": true,
+          "integratedProp": "food bowl",
+          "pass": true
+        }
+      }
+    }
+  },
+  "universalOverlay": {
+    "evaluated": true,
+    "necessary": false,
+    "created": false,
+    "path": null,
+    "decisionBasis": {
+      "allCatsAt390x844": [
+        "minho",
+        "golden-shaded",
+        "blue-golden-shaded",
+        "solid-blue",
+        "blue-white-bicolor",
+        "orange-tabby",
+        "li-hua",
+        "maine-coon",
+        "ragdoll",
+        "siamese"
+      ],
+      "responsiveStressCats": [
+        "solid-blue",
+        "li-hua",
+        "maine-coon"
+      ],
+      "viewports": [
+        "390x844",
+        "320x700",
+        "430x932"
+      ],
+      "activities": [
+        "sleep",
+        "play",
+        "eat"
+      ],
+      "quantitativeReviewThreshold": {
+        "minimumMeanDeltaE76": 7.0,
+        "minimumMedianDeltaE76": 4.0,
+        "minimumPixelsAtDeltaE5Percent": 45.0,
+        "minimumMeanAbsoluteLuminanceDelta": 0.018
+      },
+      "quantitativeWarnings": [
+        "390x844--late-night--minho--eat",
+        "390x844--late-night--golden-shaded--sleep",
+        "390x844--late-night--golden-shaded--play",
+        "390x844--late-night--golden-shaded--eat",
+        "390x844--late-night--orange-tabby--sleep",
+        "390x844--late-night--orange-tabby--play",
+        "390x844--late-night--orange-tabby--eat"
+      ],
+      "responsiveFocusThresholdWarnings": [],
+      "visualInsufficiencyCases": [],
+      "visualDecision": "All 30 late-night 390x844 cells retain a readable silhouette and activity; all 18 required 320/430 focus proofs retain dark-coat identity. A universal wash would lighten already-readable room geometry without resolving a hard failure."
+    },
+    "catIndependent": true,
+    "sharedAcrossAllCats": null,
+    "directionalSource": null,
+    "catOnlyBrightening": false,
+    "haloOrGlow": false,
+    "noteAndNavigationImpact": "not applicable; no universal overlay was added"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "generatedWith": "Cursor image generation",
+  "generatedAt": "2026-07-21",
+  "sources": {
+    "albumEmpty": {
+      "file": "source/generation-source--album-empty--rgb-matte--non-shipping-v01.png",
+      "externalGenerationArtifact": "/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/gen06-album-empty-raw.png",
+      "sha256": "68f90006b6172df03183efc8a798d69914f3e06d46352c94f0d879ec7ef82f61",
+      "prompt": "Dedicated zero-Postcard Album-empty watercolor vignette on transparent square canvas: muted-sage clothbound Album opened flat on a believable paper plane, visibly empty pages with photo corners, short contact shadow, top 28 percent quiet; no postcard, photo, writing, cat, landmark, destination, text, pseudo-text, UI, emoji, logo, or watermark."
+    },
+    "fallback": {
+      "file": "source/generation-source--scene-unavailable--rgb--non-shipping-v01.png",
+      "externalGenerationArtifact": "/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/gen06-scene-unavailable-raw.png",
+      "sha256": "2fc13aed10846deb560d8b3f6a47a8302abbc45eb35ee2d506efc9e5fb59a8d4",
+      "prompt": "Intentional 4:3 opaque watercolor Scene-unavailable fallback: warm-white paper board with a recessed photograph window fully covered by vellum, plain corner tabs, deckled edges, and shallow contact shadow; preserve Portrait/copy/postmark quiet zones; no landmark, scenery, cat, destination clue, text, pseudo-text, warning, UI, emoji, logo, or watermark."
+    },
+    "postmark": {
+      "file": "source/generation-source--postmark-ring-waves--rgb-matte--non-shipping-v01.png",
+      "externalGenerationArtifact": "/Users/moon/.cursor/projects/Users-moon-Documents-Code-BraveCat/assets/gen06-postmark-raw.png",
+      "sha256": "d718a4a05022537bda640f24fc7b9f852f41a92d67a26884c6c0320edf0b06e9",
+      "prompt": "Text-free reusable watercolor postal cancellation mark on a transparent canvas: hand-inked double ring on the right with four gently uneven parallel waves extending left; restrained warm gray-brown ink; clear live two-line destination/date center; no letters, numbers, pseudo-text, stamp image, cat, landmark, paper, UI, logo, emoji, or watermark."
+    }
+  },
+  "references": [
+    "docs/art/style-ref-postcard.png",
+    "docs/art/candidates/postcard-gifts/v1/masters/presentation/presentation--blank-postcard-back--master-1200x900--non-shipping-v01.png",
+    "docs/art/candidates/postcard-gifts/v1/masters/presentation/presentation--postcard-stack-holder--master-1200x900--non-shipping-v01.png",
+    "docs/art/candidates/home/v3/icons/nav-icon--album--master-512--non-shipping-v03.png"
+  ],
+  "deterministicProcessing": "source/build_gen06.py"
+}

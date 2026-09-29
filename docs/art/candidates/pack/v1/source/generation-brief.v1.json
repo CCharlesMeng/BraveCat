@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "createdAt": "2026-07-21",
+  "tool": "Cursor GenerateImage",
+  "model": "not-reported",
+  "seed": null,
+  "prompt": "Create one centered, physically believable opened travel satchel as a reusable watercolor game asset, matching the supplied approved closed navigation satchel: muted sage woven body, warm ochre-tan leather flap and straps, antique-brass buckles, and the rolled cream blanket secured on the left. Show the flap hinged upward and backward, a lined cavity, three believable organizing zones, and a broad curved foreground lip that can occlude inserted item art. Use the locked restrained watercolor B intensity, thin warm gray-brown contours, low saturation, soft imperfect edges, and a transparent square canvas. No products, cat, scene, floor, text, numbers, labels, emoji, UI, logo, or watermark.",
+  "referenceImages": [
+    "docs/art/candidates/home/v3/icons/nav-icon--pack--master-512--non-shipping-v03.png",
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-poses.png"
+  ],
+  "output": "source/pack-opened-source-generated-v01.png",
+  "postprocess": [
+    "Removed the generator's baked neutral checker matte by edge-connected dematting.",
+    "Converted to straight-alpha RGBA and zeroed RGB in fully transparent pixels.",
+    "Upscaled the clean 1024 source to 1536 masters with Lanczos resampling.",
+    "Derived the aligned foreground shell/rim occlusion layer from the generated watercolor source."
+  ],
+  "sourceArtProhibitions": [
+    "no baked text or numbers",
+    "no labels or emoji",
+    "no UI chrome",
+    "no watermark or signature",
+    "no product-item art"
+  ]
+}

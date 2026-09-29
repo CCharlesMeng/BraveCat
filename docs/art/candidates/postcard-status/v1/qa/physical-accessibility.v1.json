@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "sourceChecks": [
+    {
+      "path": "masters/postmark--ring-waves--master-768x512--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 768,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        232
+      ],
+      "transparentPixelRgbZero": true,
+      "alphaBounds": {
+        "x": 46,
+        "y": 75,
+        "width": 677,
+        "height": 362
+      }
+    },
+    {
+      "path": "masters/scene--unavailable-covered-photo--master-1200x900--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 900,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "masters/album--empty-open--master-512--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "alphaBounds": {
+        "x": 52,
+        "y": 219,
+        "width": 408,
+        "height": 241
+      }
+    },
+    {
+      "path": "runtime/postmark--ring-waves--runtime-120x80--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 120,
+      "height": 80,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "alphaBounds": {
+        "x": 7,
+        "y": 10,
+        "width": 108,
+        "height": 60
+      }
+    },
+    {
+      "path": "runtime/album--empty-open--runtime-256--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 256,
+      "height": 256,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "alphaBounds": {
+        "x": 26,
+        "y": 108,
+        "width": 205,
+        "height": 123
+      }
+    }
+  ],
+  "postmarkAccessibility": {
+    "runtimeDisplay": {
+      "width": 120,
+      "height": 80
+    },
+    "ringDiameterCssPx": 57,
+    "liveTextSafeRect": {
+      "x": 67,
+      "y": 28,
+      "width": 35,
+      "height": 24
+    },
+    "safeRectMaximumSourceAlpha": 0,
+    "corePixelDefinition": "runtime alpha >= 195",
+    "corePixelCount": 470,
+    "coreContrastAgainstCurrentPaper": {
+      "minimum": 3.988,
+      "median": 5.732,
+      "wcagNonTextTarget": 3.0,
+      "result": "pass"
+    },
+    "liveTextPolicy": {
+      "destinationAndDateBaked": false,
+      "recommendedDestinationMaxCjkCharacters": 4,
+      "recommendedDestinationCssPx": 7,
+      "recommendedDateCssPx": 8,
+      "accessibleName": "Keep the existing live aria-label, including full date and destination even when visible text is abbreviated."
+    }
+  },
+  "fallbackPhysicalAndSemantic": {
+    "opaque1200x900": true,
+    "metaphor": "covered photograph window on warm paper",
+    "cannotBeMistakenForDestinationScene": true,
+    "coveredWindowContainsNoImage": true,
+    "noLandmarkCatDestinationPseudoTextWarningUiOrEmoji": true,
+    "safeZoneMetrics": {
+      "portrait": {
+        "luminanceStandardDeviation": 13.431,
+        "edgeDensityOver18": 0.011041
+      },
+      "copy": {
+        "luminanceStandardDeviation": 2.678,
+        "edgeDensityOver18": 0.0
+      },
+      "postmark": {
+        "luminanceStandardDeviation": 3.987,
+        "edgeDensityOver18": 1.2e-05
+      }
+    },
+    "recommendedAccessibleName": "场景仍在发布审核中",
+    "sourceTextFree": true
+  },
+  "albumEmptyPhysicalAndSemantic": {
+    "dedicatedAssetJustified": true,
+    "reuseTest": {
+      "stack": "fail: multiple cards imply received content",
+      "blankBack": "fail: one Postcard contradicts zero count",
+      "albumNavigation": "fail: closed upright nav identity has no explicit empty pockets",
+      "evidence": "qa/reuse-evaluation--album-empty--1200x800--non-shipping.png"
+    },
+    "openAlbumRestsOnGeneratedPlane": true,
+    "shortContactShadowTouchesSupportPlane": true,
+    "visiblePageMountCount": 4,
+    "visibleOccupiedMountCount": 0,
+    "minimumCanvasMarginPx": 52,
+    "topQuietZonePx": 154,
+    "sourceTextFree": true,
+    "liveHeadingHintOutsideSource": true
+  },
+  "layerOrder": {
+    "order": [
+      "fallback",
+      "Portrait",
+      "copy",
+      "postmark"
+    ],
+    "proof": "qa/layer-order-proof--postcard-status-v1--1200x900--non-shipping.png",
+    "minhoReviewReuseModified": false
+  },
+  "mobileReviewChecks": [
+    {
+      "path": "reviews/320/review--postcard-unavailable--320x700--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/390/review--postcard-unavailable--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/430/review--postcard-unavailable--430x932--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/320/review--album-empty--320x700--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 320,
+      "height": 700,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/390/review--album-empty--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/430/review--album-empty--430x932--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  ],
+  "mobileSafeMargins": {
+    "minimumSideMarginPx": 24,
+    "closeControlDiameterPx": 38,
+    "reviewWidths": [
+      320,
+      390,
+      430
+    ],
+    "horizontalOverflow": false,
+    "liveHeadingHintClipped": false,
+    "postmarkClipped": false
+  },
+  "immutableVerification": {
+    "status": "pass",
+    "algorithm": "sha256",
+    "before": "qa/immutable-before.sha256",
+    "after": "qa/immutable-after.sha256",
+    "beforeLineCount": 293,
+    "afterLineCount": 293,
+    "result": "all scoped immutable files unchanged",
+    "scope": [
+      "app code under src/",
+      "runtime Scenes",
+      "production Minho",
+      "landmark candidate files",
+      "postcard-gifts/v1",
+      "read-only stack, blank-back, and Album navigation inputs"
+    ],
+    "ignoredBuildDebris": [
+      ".git",
+      ".tools",
+      "__pycache__",
+      "node_modules"
+    ],
+    "concurrentCandidateObservation": {
+      "status": "observed-concurrent-drift",
+      "report": "qa/concurrent-candidates-observation.v1.json",
+      "authoredByGen06": false
+    }
+  },
+  "manualVisualInspection": {
+    "performed": true,
+    "postmark": "Ring and four waves remain legible at 120×80; live two-line safe zone is visibly open.",
+    "fallback": "Covered vellum window reads as unavailable presentation, not a real destination Scene.",
+    "albumEmpty": "Open Album and four empty mounts read as zero Postcards; the book and short shadow share one support plane."
+  }
+}

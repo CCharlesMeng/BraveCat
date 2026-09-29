@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "domestic-shorthair-static-candidates-v1",
+  "status": "NON-SHIPPING / VISUAL-APPROVAL-REQUIRED",
+  "shippingEligible": false,
+  "createdAt": "2026-07-21",
+  "root": "docs/art/candidates/cats/domestic-shorthair/v1",
+  "scope": {
+    "kind": "static-app-art-candidates",
+    "codexPetSpritesheet": false,
+    "appIntegrated": false,
+    "productionAsset": false
+  },
+  "referencesRead": [
+    "docs/art/calibration-production-v1.md",
+    "docs/art/prompt-pack.calibration.v1.json",
+    "docs/art/style-ref-poses.png",
+    "docs/art/style-ref-home.png",
+    "docs/art/candidates/calibration/calibration-non-final--portrait-board--minho--candidate-a--v02.png",
+    "docs/art/production/portraits/minho/manifest.json",
+    "docs/art/production/portraits/minho/validation.json",
+    "public/portraits/minho/portrait--minho--sit--v01.png",
+    "public/portraits/minho/portrait--minho--sleep--v01.png",
+    "public/portraits/minho/portrait--minho--walk--v01.png",
+    "public/portraits/minho/portrait--minho--eat--v01.png",
+    "public/portraits/minho/portrait--minho--play--v01.png",
+    "public/portraits/minho/portrait--minho--gaze--v01.png",
+    "src/lib/assets/index.ts",
+    "src/lib/assets/starterCatalog.ts",
+    "src/App.svelte",
+    "src/app.css",
+    "docs/art/candidates/home/v3/README.md",
+    "docs/art/candidates/home/v3/composition-layer-metadata.v3.json",
+    "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "docs/art/candidates/home/v3/reviews/mobile-review--390x844--at-home--non-shipping-v03.png",
+    "docs/art/candidates/home/v3/reviews/mobile-review--430x932--at-home--non-shipping-v03.png"
+  ],
+  "appConvention": {
+    "portraitPoses": [
+      "sit",
+      "sleep",
+      "walk",
+      "eat",
+      "play",
+      "gaze"
+    ],
+    "homeActivityPoses": [
+      "sleep",
+      "play",
+      "eat"
+    ],
+    "interactionPosesRequiredByCode": {
+      "eat": "plain low ceramic bowl",
+      "play": "small yarn ball"
+    }
+  },
+  "sourceSpec": {
+    "width": 1024,
+    "height": 1024,
+    "format": "PNG",
+    "pixelMode": "RGBA",
+    "colorSpace": "sRGB",
+    "alpha": "straight / unassociated PNG alpha",
+    "transparentPixelRgb": "zero",
+    "minimumSafeMarginPx": 64,
+    "bottomAnchorMarginPx": 64,
+    "textFree": true,
+    "bakedShadow": false,
+    "floorPatch": false
+  },
+  "runtimeReviewSpec": {
+    "width": 512,
+    "height": 512,
+    "format": "PNG",
+    "pixelMode": "RGBA",
+    "colorSpace": "sRGB",
+    "intendedHomeCssDisplayPx": 220
+  },
+  "candidates": [
+    {
+      "id": "orange-tabby",
+      "displayName": "Orange tabby / 橘猫",
+      "identityLock": {
+        "body": "substantial medium-large adult; long rectangular ribcage; sturdy moderate-length legs; not British-cobby",
+        "face": "gently broad oval adult face; medium upright ears; brick-pink nose",
+        "eyes": "amber-gold almond eyes",
+        "coat": "muted apricot-orange mackerel tabby with cream chin, throat, chest, and lower belly",
+        "stripeMap": "forehead M; two cheek bars per side; two neck necklaces; paired shoulder stripes; dark dorsal line; six narrow flank bars; barred legs; five tail rings; dark ochre tip",
+        "tail": "long, tapering, and substantial"
+      }
+    },
+    {
+      "id": "li-hua",
+      "displayName": "Chinese Li Hua / 狸花猫",
+      "identityLock": {
+        "body": "lean athletic adult; longer legs; narrow waist; deep narrow chest; strong shoulder definition",
+        "face": "wedge-leaning face; straighter nose bridge; high cheek planes; large upright ears",
+        "eyes": "yellow-green almond eyes",
+        "coat": "muted warm brown agouti with charcoal-brown mackerel markings and pale buff chin only",
+        "stripeMap": "strong forehead M; three cheek bars per side; one necklace; butterfly shoulder marking; dark dorsal stripe; eight narrow flank bars; barred legs and hocks; seven tail rings; black-brown tip",
+        "tail": "very long, tapering, and active"
+      }
+    }
+  ],
+  "poseSemantics": {
+    "sit": "upright alert seat with load-bearing forepaws and grounded pelvis",
+    "sleep": "curled rest with chest and belly compression, head supported by forepaws, and attached tail wrapping the body",
+    "walk": "grounded walk-ready stance with three load-bearing paws and one low advancing forepaw",
+    "eat": "four-foot crouch with flexed joints, lowered neck, and one correctly scaled bowl",
+    "play": "engaged bow or stalking crouch with planted hind paws, one supporting forepaw, one reaching forepaw, and one yarn ball",
+    "gaze": "attentive upward gaze with grounded support and a balancing tail"
+  },
+  "generation": {
+    "actualImageGeneration": true,
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "identityStrategy": "A separate generated sit identity lock was used as the primary reference for each cat's remaining five poses.",
+    "sharedStyleReference": "docs/art/style-ref-poses.png",
+    "anatomyReferences": "corresponding approved production Minho pose assets",
+    "postProcessing": [
+      "reconstructed and removed the generator's neutral checkerboard preview",
+      "exported true transparent RGBA with zero RGB in fully transparent pixels",
+      "normalized all masters to the current 1024 canvas, minimum 64 px safe margin, and shared bottom anchor",
+      "applied restrained saturation and contrast calibration",
+      "derived 512 px runtime-review files from premultiplied-alpha resampling"
+    ]
+  },
+  "homeMockupPlacement": {
+    "approvedRoomSource": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "roomCanvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "portraitCanvasRect": {
+      "x": 480,
+      "y": 1001,
+      "width": 420,
+      "height": 420
+    },
+    "bottomCenterAnchor": {
+      "x": 690,
+      "y": 1395
+    },
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 430,
+        "height": 932
+      }
+    ]
+  },
+  "review": {
+    "decision": "pending-user-visual-approval",
+    "contactSheet": "reviews/contact-sheets/contact-sheet--two-cats-six-poses--non-shipping-v01.png",
+    "qaReport": "qa-report.v1.json"
+  }
+}

@@ -30,6 +30,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
+    url("/assets/surfaces/sage-1x.webp") 0 0 / 512px 512px,
+    url("/assets/surfaces/paper-1x.webp") 0 0 / 512px 512px,
     radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.7), transparent 32%),
     #dfe4d6;
 }
@@ -40,7 +42,7 @@ button {
 }
 
 button:focus-visible {
-  outline: 3px solid rgba(102, 125, 78, 0.45);
+  outline: 3px solid #49643d;
   outline-offset: 3px;
 }
 
@@ -53,7 +55,7 @@ button:focus-visible {
   flex-direction: column;
   overflow: hidden;
   background:
-    radial-gradient(rgba(105, 96, 72, 0.045) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
+    url("/assets/surfaces/paper-1x.webp") 0 0 / 512px 512px,
     var(--paper);
 }
 
@@ -65,7 +67,7 @@ button:focus-visible {
   padding: 42px 26px 32px;
   flex-direction: column;
   background:
-    radial-gradient(rgba(105, 96, 72, 0.045) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
+    url("/assets/surfaces/paper-1x.webp") 0 0 / 512px 512px,
     var(--paper);
 }
 
@@ -875,7 +877,7 @@ main {
   border-bottom: 0;
   border-radius: 28px 28px 0 0;
   background:
-    radial-gradient(rgba(97, 89, 69, 0.05) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
+    url("/assets/surfaces/paper-1x.webp") 0 0 / 512px 512px,
     #f7f0df;
   box-shadow: 0 -14px 40px rgba(58, 57, 46, 0.18);
   color: inherit;
@@ -1003,7 +1005,7 @@ main {
 }
 
 .save-transfer-actions label:focus-within {
-  outline: 2px solid rgba(96, 112, 80, 0.5);
+  outline: 3px solid #49643d;
   outline-offset: 2px;
 }
 
@@ -1211,6 +1213,260 @@ main {
   color: var(--ink-soft);
   font-size: 0.76rem;
   line-height: 1.8;
+}
+
+/* Approved home-art stack: exterior → interior → v6 eat patch → cat → lighting → UI. */
+.room {
+  background: transparent;
+}
+
+.room::after {
+  display: none;
+}
+
+.home-art-canvas,
+.home-state-ui {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  transform: translateX(-50%);
+}
+
+.home-art-canvas {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.home-layer,
+.home-eat-patch {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.home-eat-patch {
+  top: 73.4375%;
+  left: 29.1667%;
+  width: 12.5%;
+  height: 9.5625%;
+}
+
+.home-lighting {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.home-state-ui {
+  z-index: 5;
+  pointer-events: none;
+}
+
+.cat-portrait {
+  z-index: 2;
+  bottom: auto;
+  right: auto;
+  display: block;
+  object-fit: contain;
+  filter: none;
+}
+
+.windowsill {
+  top: 54%;
+  right: auto;
+  bottom: auto;
+  left: 22%;
+  width: 24%;
+  height: 13%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: auto;
+}
+
+.treat-tray {
+  position: absolute;
+  top: 38%;
+  left: 17%;
+  width: 70%;
+  height: auto;
+}
+
+.fish-plate {
+  display: none;
+}
+
+.collect-label {
+  position: absolute;
+  right: -18%;
+  bottom: 0;
+  padding: 3px 5px;
+  font-size: 0.58rem;
+  white-space: nowrap;
+}
+
+.departure-note {
+  top: 42.5%;
+  right: auto;
+  bottom: auto;
+  left: 32.5%;
+  width: 22.5%;
+  height: 20.625%;
+  padding: 0;
+  transform: none;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.departure-note > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.departure-note p,
+.departure-note small {
+  position: absolute;
+  right: 16%;
+  left: 16%;
+  z-index: 1;
+  margin: 0;
+  overflow: hidden;
+  color: #555442;
+  font-size: clamp(0.35rem, 1.1vw, 0.55rem);
+  line-height: 1.35;
+}
+
+.departure-note p {
+  top: 24%;
+  max-height: 50%;
+}
+
+.departure-note small {
+  right: 16%;
+  bottom: 13%;
+  text-align: right;
+  font-size: clamp(0.3rem, 0.9vw, 0.48rem);
+}
+
+.room-copy {
+  z-index: 6;
+  pointer-events: none;
+}
+
+.treat-balance img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.nav-icon {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  object-fit: contain;
+}
+
+.home-nav button:hover .nav-icon {
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.pack-art {
+  position: relative;
+  width: 100%;
+  max-width: 382px;
+  margin: 14px auto 4px;
+  aspect-ratio: 1;
+}
+
+.pack-layer,
+.pack-item {
+  position: absolute;
+}
+
+.pack-layer {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pack-item {
+  z-index: 1;
+  height: auto;
+  transform-origin: center;
+}
+
+.pack-rim {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.item-token {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0;
+  font-weight: normal;
+  object-fit: contain;
+}
+
+.drawer-close img,
+.save-transfer-actions img {
+  width: 18px;
+  height: 18px;
+}
+
+.save-transfer-actions button,
+.save-transfer-actions label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.album-empty-art {
+  width: clamp(160px, 52vw, 192px);
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.empty-state > span {
+  display: none;
+}
+
+.loading-vignette {
+  width: min(58vw, 196px);
+  height: auto;
+  margin: 22px 0 15px;
+}
+
+.adoption-portrait {
+  background:
+    url("/assets/adoption/welcome-base.png") center / cover,
+    #f4eedf;
+}
+
+.adoption-portrait img {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 600px) {

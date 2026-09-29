@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-02",
+  "assetNeedId": "AA-015",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "createdAt": "2026-07-21",
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "seed": null,
+    "requestedAspectRatio": "3:4",
+    "returnedDimensions": [
+      1024,
+      1536
+    ],
+    "rawToolOutputSha256": "6d88c7e9e6427624d0149e85dcd6a967b8ed87daaff1a7586bd485c16f598802",
+    "rawPixelSha256": "bd6776e9a769bf357873b6b45dad91812e3aa83f195d11135235f53d59e9c5b7",
+    "storedSourcePixelSha256": "bd6776e9a769bf357873b6b45dad91812e3aa83f195d11135235f53d59e9c5b7",
+    "storedSourceAddsOnly": "embedded sRGB profile and PNG normalization"
+  },
+  "styleReferencesRead": [
+    "docs/art/style-ref-home.png",
+    "docs/art/style-ref-postcard.png",
+    "docs/art/style-ref-poses.png"
+  ],
+  "promptIntent": [
+    "text-free background-only watercolor adoption threshold",
+    "restrained low-saturation warm paper, sage, ochre, and warm wood",
+    "large empty central Portrait slot",
+    "broad physically plausible support plane around the center-lower area",
+    "blank heading and lower live-UI zones"
+  ],
+  "negativeConstraints": [
+    "no cat, animal, person, silhouette, name, copy, letters, numbers, or pseudo-text",
+    "no controls, labels, logo, watermark, emoji, badge, or hard-edged UI card",
+    "no photorealism, 3D render, flat vector treatment, neon, thick black outline, or hard digital gradient"
+  ],
+  "portraitGenerationPolicy": {
+    "approvedMinhoUsedAsGenerationReference": false,
+    "approvedMinhoUsedOnlyInFlattenedReviews": true,
+    "futureCatsGenerated": false
+  },
+  "masterNormalization": {
+    "output": "masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png",
+    "dimensions": [
+      1200,
+      1600
+    ],
+    "format": "PNG",
+    "pixelMode": "RGB",
+    "colorSpace": "embedded sRGB",
+    "operation": "centered aspect crop and LANCZOS resize from generated source",
+    "croppedContent": "top and bottom outer paper only; central alcove, support plane, and lower live-UI paper remain"
+  }
+}

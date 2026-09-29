@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "coordinateSystem": "pixels from top-left of each named canvas",
+  "uiMeasurements": {
+    "itemToken": {
+      "cssWidth": 46,
+      "cssHeight": 46,
+      "reviewDerivative": {
+        "width": 96,
+        "height": 96,
+        "rationale": "46 CSS px at approximately 2x device density"
+      }
+    },
+    "treatBalance": {
+      "cssFontSizePx": 16,
+      "reviewDerivative": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    "windowsillFish": {
+      "cssFontSizePx": 12,
+      "reviewDerivative": {
+        "width": 24,
+        "height": 24
+      }
+    },
+    "albumPostcard": {
+      "viewport390": {
+        "cssWidth": 338,
+        "pictureHeight": 254
+      },
+      "viewport430": {
+        "cssWidth": 378,
+        "pictureHeight": 284
+      },
+      "derivation": "drawer width minus 24px side padding and 2px postcard-list side padding"
+    }
+  },
+  "itemMasters": [
+    {
+      "id": "dried-fish",
+      "kind": "treat-reward",
+      "master": "masters/items/reward--treat--dried-fish--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/reward--treat--dried-fish--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "fish-biscuit",
+      "kind": "snack",
+      "master": "masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--snack--fish-biscuit--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "travel-tin",
+      "kind": "snack",
+      "master": "masters/items/item--snack--travel-tin--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--snack--travel-tin--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "small-blanket",
+      "kind": "toy",
+      "master": "masters/items/item--toy--small-blanket--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--toy--small-blanket--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "yarn-ball",
+      "kind": "toy",
+      "master": "masters/items/item--toy--yarn-ball--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--toy--yarn-ball--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "small-bell",
+      "kind": "toy",
+      "master": "masters/items/item--toy--small-bell--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--toy--small-bell--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "small-camera",
+      "kind": "toy",
+      "master": "masters/items/item--toy--small-camera--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--toy--small-camera--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "small-telescope",
+      "kind": "toy",
+      "master": "masters/items/item--toy--small-telescope--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--toy--small-telescope--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    },
+    {
+      "id": "ticket",
+      "kind": "wish",
+      "master": "masters/items/item--wish--ticket--master-512--non-shipping-v01.png",
+      "runtimeReview": "runtime/items/item--wish--ticket--runtime-96--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 512,
+        "height": 512
+      },
+      "safeMarginPx": 48,
+      "anchor": {
+        "x": 256,
+        "y": 464,
+        "semantic": "bottom-center"
+      }
+    }
+  ],
+  "presentation": {
+    "postcard-stack-holder": {
+      "master": "masters/presentation/presentation--postcard-stack-holder--master-1200x900--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 1200,
+        "height": 900
+      },
+      "subjectBounds": {
+        "x": 44,
+        "y": 40,
+        "width": 1113,
+        "height": 820
+      },
+      "insertionRect": {
+        "x": 131,
+        "y": 123,
+        "width": 957,
+        "height": 668
+      }
+    },
+    "blank-postcard-back": {
+      "master": "masters/presentation/presentation--blank-postcard-back--master-1200x900--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 1200,
+        "height": 900
+      },
+      "subjectBounds": {
+        "x": 30,
+        "y": 79,
+        "width": 1140,
+        "height": 743
+      },
+      "insertionRect": {
+        "x": 50,
+        "y": 105,
+        "width": 1099,
+        "height": 688
+      }
+    },
+    "envelope-pocket-back": {
+      "master": "masters/presentation/presentation--envelope-pocket-back--master-1200x900--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 1200,
+        "height": 900
+      },
+      "subjectBounds": {
+        "x": 165,
+        "y": 40,
+        "width": 870,
+        "height": 820
+      },
+      "insertionRect": {
+        "x": 234,
+        "y": 308,
+        "width": 730,
+        "height": 548
+      }
+    },
+    "envelope-pocket-front": {
+      "master": "masters/presentation/presentation--envelope-pocket-front--master-1200x900--non-shipping-v01.png",
+      "masterCanvas": {
+        "width": 1200,
+        "height": 900
+      },
+      "occlusionStartsAtY": 627,
+      "alignsWith": "envelope-pocket-back"
+    }
+  },
+  "reviewComposites": {
+    "albumPostcard": {
+      "immutableReviewContent": {
+        "scene": "public/scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+        "portrait": "public/portraits/minho/portrait--minho--gaze--v01.png",
+        "compositionSlot": {
+          "x": 0.18,
+          "y": 0.88,
+          "scale": 0.3,
+          "pose": "gaze",
+          "flip": false
+        },
+        "use": "review-composite-only"
+      },
+      "widths": [
+        390,
+        430
+      ]
+    },
+    "giftReceive": {
+      "objectId": "dried-fish",
+      "presentation": "envelope-pocket-back -> object -> envelope-pocket-front",
+      "widths": [
+        390,
+        430
+      ]
+    },
+    "giftDetail": {
+      "objectId": "small-camera",
+      "widths": [
+        390,
+        430
+      ]
+    }
+  }
+}

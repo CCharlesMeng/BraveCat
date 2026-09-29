@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 4,
+  "manifestKind": "home-state-physics-correction-review-pack",
+  "collectionId": "home-state-physics-correction-v4",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "createdAt": "2026-07-21",
+  "root": "docs/art/candidates/home/v4",
+  "selfExcludedFromFileHashes": true,
+  "fileCount": 12,
+  "files": [
+    {
+      "path": "README.md",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 2298,
+      "sha256": "3b789adc035dbd956044ccb1defa84366f64a82693a1b29ed87bf15e0d05a88e",
+      "kind": "documentation"
+    },
+    {
+      "path": "placement-perspective-metadata.v4.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 6977,
+      "sha256": "398fb41e5ee50e4ac1d9d41e59a0076055861da702f5056f67a7cf74b4cab077",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa-report.v4.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 5091,
+      "sha256": "188af6c6f73c8dce81d573efa1ae0e3a37a369bd0c6321d212ed828eacc2d3bd",
+      "kind": "metadata"
+    },
+    {
+      "path": "reviews/before-after--home-state-physical-plausibility--1200x1600--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 536065,
+      "sha256": "0e40775ce87887541482d1498afff72e2401c5c95cec75660bf7eabaea5b6ac1",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--390x844--away-grounded--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 400156,
+      "sha256": "b045099085e99e66a0d1cbbb3c641f55120e173ce3f30f52e9b093a7714bd929",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--390x844--collectible-sill-safe--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 400160,
+      "sha256": "6356642d1bd924ecf5e42d6f2718e995b53fccaa3d2a902f1bc70240f1b40f1b",
+      "format": "PNG",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--430x932--away-grounded--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 499011,
+      "sha256": "35ec462fac8165cbd61af18da7277ff1c01d1a53c403cc730d703817a5f26339",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "reviews/mobile-review--430x932--collectible-sill-safe--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 498864,
+      "sha256": "dca06d8a840a237bd5e287186a46798dc22872383919c4728db8ed772cb8aa9a",
+      "format": "PNG",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "scripts/build_v4.py",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 40446,
+      "sha256": "f029099695c8d231f3cb25deec15fcf69cd42b2403afc63e3e6dd04042943891",
+      "kind": "build-script"
+    },
+    {
+      "path": "state-art/away-note-with-wood-memo-stand--blank--master-512x640--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 306376,
+      "sha256": "6ac92a6fb57b1fe0541d6486a073d5b54738572a2db6a1c84105910c17f50cca",
+      "format": "PNG",
+      "width": 512,
+      "height": 640,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    },
+    {
+      "path": "state-art/dried-fish-sill-tray--master-512--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 159301,
+      "sha256": "f2bac96995b164d7fb12ac798001eb0f82ce613b198e0a7e7bf17ae69e64a9ce",
+      "format": "PNG",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    },
+    {
+      "path": "state-art/dried-fish-sill-tray--runtime-128--non-shipping-v04.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 13107,
+      "sha256": "f0d2e867ce3651d09c293080594f10796ac643f437533c2f9fd1f6f569758310",
+      "format": "PNG",
+      "width": 128,
+      "height": 128,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    }
+  ]
+}

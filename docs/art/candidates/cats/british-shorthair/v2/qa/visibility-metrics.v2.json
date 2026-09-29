@@ -1,0 +1,291 @@
+{
+  "cats" : [
+    {
+      "id" : "golden-shaded",
+      "poses" : [
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0369999999999999,
+            "meanLuminanceSeparation" : 0.029000000000000001,
+            "samplePixelCount" : 56582,
+            "subjectMeanLuminance" : 0.72799999999999998,
+            "underlyingRoomMeanLuminance" : 0.75700000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sit"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.093,
+            "meanLuminanceSeparation" : 0.069000000000000006,
+            "samplePixelCount" : 63304,
+            "subjectMeanLuminance" : 0.68500000000000005,
+            "underlyingRoomMeanLuminance" : 0.754,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sleep"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0549999999999999,
+            "meanLuminanceSeparation" : 0.042000000000000003,
+            "samplePixelCount" : 38975,
+            "subjectMeanLuminance" : 0.72099999999999997,
+            "underlyingRoomMeanLuminance" : 0.76300000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "walk"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0389999999999999,
+            "meanLuminanceSeparation" : 0.029999999999999999,
+            "samplePixelCount" : 55853,
+            "subjectMeanLuminance" : 0.72199999999999998,
+            "underlyingRoomMeanLuminance" : 0.752,
+            "visibilityResult" : "review"
+          },
+          "pose" : "eat"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.056,
+            "meanLuminanceSeparation" : 0.042000000000000003,
+            "samplePixelCount" : 51721,
+            "subjectMeanLuminance" : 0.70399999999999996,
+            "underlyingRoomMeanLuminance" : 0.746,
+            "visibilityResult" : "review"
+          },
+          "pose" : "play"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.107,
+            "meanLuminanceSeparation" : 0.076999999999999999,
+            "samplePixelCount" : 45360,
+            "subjectMeanLuminance" : 0.67300000000000004,
+            "underlyingRoomMeanLuminance" : 0.75,
+            "visibilityResult" : "review"
+          },
+          "pose" : "gaze"
+        }
+      ]
+    },
+    {
+      "id" : "blue-golden-shaded",
+      "poses" : [
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.05,
+            "meanLuminanceSeparation" : 0.039,
+            "samplePixelCount" : 67543,
+            "subjectMeanLuminance" : 0.72199999999999998,
+            "underlyingRoomMeanLuminance" : 0.76100000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sit"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.05,
+            "meanLuminanceSeparation" : 0.037999999999999999,
+            "samplePixelCount" : 73908,
+            "subjectMeanLuminance" : 0.71199999999999997,
+            "underlyingRoomMeanLuminance" : 0.75,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sleep"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0509999999999999,
+            "meanLuminanceSeparation" : 0.039,
+            "samplePixelCount" : 59120,
+            "subjectMeanLuminance" : 0.70699999999999996,
+            "underlyingRoomMeanLuminance" : 0.745,
+            "visibilityResult" : "review"
+          },
+          "pose" : "walk"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0669999999999999,
+            "meanLuminanceSeparation" : 0.050000000000000003,
+            "samplePixelCount" : 72173,
+            "subjectMeanLuminance" : 0.69299999999999995,
+            "underlyingRoomMeanLuminance" : 0.74299999999999999,
+            "visibilityResult" : "review"
+          },
+          "pose" : "eat"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.048,
+            "meanLuminanceSeparation" : 0.036999999999999998,
+            "samplePixelCount" : 80627,
+            "subjectMeanLuminance" : 0.72199999999999998,
+            "underlyingRoomMeanLuminance" : 0.75900000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "play"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.1140000000000001,
+            "meanLuminanceSeparation" : 0.082000000000000003,
+            "samplePixelCount" : 60156,
+            "subjectMeanLuminance" : 0.67200000000000004,
+            "underlyingRoomMeanLuminance" : 0.754,
+            "visibilityResult" : "review"
+          },
+          "pose" : "gaze"
+        }
+      ]
+    },
+    {
+      "id" : "solid-blue",
+      "poses" : [
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.6759999999999999,
+            "meanLuminanceSeparation" : 0.32700000000000001,
+            "samplePixelCount" : 78724,
+            "subjectMeanLuminance" : 0.434,
+            "underlyingRoomMeanLuminance" : 0.76100000000000001,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "sit"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.54,
+            "meanLuminanceSeparation" : 0.28000000000000003,
+            "samplePixelCount" : 80321,
+            "subjectMeanLuminance" : 0.46800000000000003,
+            "underlyingRoomMeanLuminance" : 0.748,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "sleep"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.488,
+            "meanLuminanceSeparation" : 0.26700000000000002,
+            "samplePixelCount" : 46074,
+            "subjectMeanLuminance" : 0.498,
+            "underlyingRoomMeanLuminance" : 0.76500000000000001,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "walk"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.4890000000000001,
+            "meanLuminanceSeparation" : 0.26100000000000001,
+            "samplePixelCount" : 73887,
+            "subjectMeanLuminance" : 0.48299999999999998,
+            "underlyingRoomMeanLuminance" : 0.74399999999999999,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "eat"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.522,
+            "meanLuminanceSeparation" : 0.27100000000000002,
+            "samplePixelCount" : 64794,
+            "subjectMeanLuminance" : 0.46899999999999997,
+            "underlyingRoomMeanLuminance" : 0.73999999999999999,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "play"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.575,
+            "meanLuminanceSeparation" : 0.29499999999999998,
+            "samplePixelCount" : 67628,
+            "subjectMeanLuminance" : 0.46300000000000002,
+            "underlyingRoomMeanLuminance" : 0.75800000000000001,
+            "visibilityResult" : "pass"
+          },
+          "pose" : "gaze"
+        }
+      ]
+    },
+    {
+      "id" : "blue-white-bicolor",
+      "poses" : [
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0109999999999999,
+            "meanLuminanceSeparation" : 0.0080000000000000002,
+            "samplePixelCount" : 57953,
+            "subjectMeanLuminance" : 0.75,
+            "underlyingRoomMeanLuminance" : 0.75900000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sit"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.1319999999999999,
+            "meanLuminanceSeparation" : 0.094,
+            "samplePixelCount" : 59503,
+            "subjectMeanLuminance" : 0.66500000000000004,
+            "underlyingRoomMeanLuminance" : 0.76000000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "sleep"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.016,
+            "meanLuminanceSeparation" : 0.012999999999999999,
+            "samplePixelCount" : 49813,
+            "subjectMeanLuminance" : 0.75900000000000001,
+            "underlyingRoomMeanLuminance" : 0.746,
+            "visibilityResult" : "review"
+          },
+          "pose" : "walk"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0600000000000001,
+            "meanLuminanceSeparation" : 0.044999999999999998,
+            "samplePixelCount" : 56372,
+            "subjectMeanLuminance" : 0.70399999999999996,
+            "underlyingRoomMeanLuminance" : 0.749,
+            "visibilityResult" : "review"
+          },
+          "pose" : "eat"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.0740000000000001,
+            "meanLuminanceSeparation" : 0.055,
+            "samplePixelCount" : 60967,
+            "subjectMeanLuminance" : 0.69099999999999995,
+            "underlyingRoomMeanLuminance" : 0.746,
+            "visibilityResult" : "review"
+          },
+          "pose" : "play"
+        },
+        {
+          "metrics" : {
+            "meanContrastRatio" : 1.1659999999999999,
+            "meanLuminanceSeparation" : 0.115,
+            "samplePixelCount" : 51069,
+            "subjectMeanLuminance" : 0.64100000000000001,
+            "underlyingRoomMeanLuminance" : 0.75600000000000001,
+            "visibilityResult" : "review"
+          },
+          "pose" : "gaze"
+        }
+      ]
+    }
+  ],
+  "note" : "Mean subject-versus-underlying-room luminance metrics are supporting evidence; final visibility remains a visual judgment.",
+  "schemaVersion" : 2,
+  "status" : "NON-SHIPPING / ACCEPTANCE-EVIDENCE-ONLY"
+}

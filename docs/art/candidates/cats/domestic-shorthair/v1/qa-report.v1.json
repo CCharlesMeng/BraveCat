@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "domestic-shorthair-static-candidates-v1",
+  "reviewedAt": "2026-07-21",
+  "reviewKind": "internal-visual-and-anatomy-qa",
+  "status": "pass-for-user-visual-review",
+  "userVisualApproval": "pending",
+  "summary": {
+    "poseSetComplete": true,
+    "twoDistinctAnatomies": true,
+    "identityStableAcrossPoses": true,
+    "realWorldPhysics": true,
+    "breedAppropriateRugScale": true,
+    "transparentSourceArt": true,
+    "noExtraLimbsObserved": true,
+    "noFloatingOrSurfacePenetrationObserved": true,
+    "noBakedShadowOrFloorPatch": true
+  },
+  "identityFindings": {
+    "orange-tabby": [
+      "The substantial rectangular torso, sturdy moderate legs, oval adult face, amber eyes, cream ventral areas, and long ringed tail remain recognizable in all six poses.",
+      "The cat stays fuller and heavier than the Li Hua without becoming round-headed or British-cobby.",
+      "Forehead, cheek, neck, flank, leg, and tail marking families remain stable under pose foreshortening."
+    ],
+    "li-hua": [
+      "The long legs, narrow waist, defined shoulder blades, long neck, wedge-leaning face, large ears, yellow-green eyes, and active tail remain recognizable in all six poses.",
+      "The Li Hua remains visibly leaner, taller, and more angular than the orange tabby; it is not a recolor of the orange anatomy.",
+      "The dark forehead M, cheek bars, butterfly shoulder region, narrow flank bars, barred legs, and strongly ringed tail remain stable under pose foreshortening."
+    ]
+  },
+  "poseFindings": {
+    "sit": [
+      "Both cats have grounded pelvises and paired load-bearing forepaws beneath the shoulders.",
+      "The orange sit reads broad and sturdy; the Li Hua sit reads tall, narrow, and long-legged."
+    ],
+    "sleep": [
+      "Both cats show chest and belly compression against the resting plane, heads supported by forepaws, tucked hindquarters, and tails attached at the sacrum.",
+      "The orange rest forms a fuller oval; the Li Hua rest retains a longer, more angular crescent."
+    ],
+    "walk": [
+      "Each walk-ready pose has three grounded load-bearing paws and one low advancing forepaw.",
+      "Spines, wrists, hocks, shoulder placement, belly suspension, and counterbalancing tails are plausible.",
+      "The Li Hua has visibly longer limbs and stronger scapular definition than the orange tabby."
+    ],
+    "eat": [
+      "Both cats use a four-foot crouch with flexed elbows and hocks, raised shoulder blades, and a lowered neck reaching a correctly scaled bowl.",
+      "No paw, muzzle, or tail penetrates the bowl."
+    ],
+    "play": [
+      "Both poses retain planted hind paws, a supporting forepaw, a reaching forepaw, focused eyes, and a sacrum-attached balancing tail.",
+      "Each yarn ball is isolated as the only interaction prop and does not hide or substitute for a limb."
+    ],
+    "gaze": [
+      "The orange cat uses a grounded upright seated gaze; the Li Hua uses a grounded rear-three-quarter standing gaze.",
+      "The differing gaze silhouettes reinforce that the cats were independently posed rather than recolored from one base."
+    ]
+  },
+  "styleFindings": [
+    "Color grading is low-saturation and compatible with the approved warm paper, sage, and wood room palette.",
+    "Edges use partially transparent feathering and warm brown-gray definition rather than a hard vector cutout.",
+    "Fine fur and stripe rendering is somewhat more detailed than the softest areas of the approved room wash, but remains within a watercolor candidate direction and is intentionally left for visual approval."
+  ],
+  "scaleFindings": [
+    "Both sleep poses were composited with the approved home v3 room at the existing Minho 420 px portrait canvas rect and bottom-center anchor.",
+    "At 390×844 and 430×932 the cats rest on the woven rug without a visible gap, penetration, or need for a separate contact shadow.",
+    "The orange tabby reads fuller at the same anchor; the Li Hua reads leaner while retaining plausible adult body length."
+  ],
+  "technicalFindings": [
+    "All twelve masters are 1024×1024 sRGB RGBA PNGs with at least 64 px safe margin.",
+    "All twelve runtime-review derivatives are 512×512 sRGB RGBA PNGs.",
+    "Fully transparent pixels have zero RGB and every master retains partially transparent edge pixels.",
+    "Source files contain no text, UI, scenery, floor patch, baked shadow, border, or watermark."
+  ],
+  "knownReviewPoints": [
+    "Count individual mackerel bars by anatomical region rather than demanding identical visible counts in foreshortened or occluded poses.",
+    "Judge whether the remaining fine fur detail should be softened further before any later production pass.",
+    "The gaze silhouettes intentionally differ: orange is seated while Li Hua is standing and actively balanced."
+  ],
+  "decision": {
+    "state": "pending-user-visual-approval",
+    "nextAction": "Review the labeled contact sheet and four home mockups; do not integrate or promote files before explicit approval."
+  }
+}

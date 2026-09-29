@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "method": "wrap-neighbor discontinuity versus ordinary interior neighbor differences, exact tile-width shift invariance, and offset cuts",
+  "assets": {
+    "paperMaster1024": {
+      "xWrap": {
+        "mae": 0.0396,
+        "rms": 0.1567,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.6842
+      },
+      "yWrap": {
+        "mae": 0.0399,
+        "rms": 0.1521,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.664
+      },
+      "interiorNeighborRms": {
+        "x": 0.229,
+        "y": 0.2291
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0043,
+        "y": 0.0125
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.1567,
+          "yWrapRms": 0.1521
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.2105,
+          "yWrapRms": 0.2657
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.1924,
+          "yWrapRms": 0.2341
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    },
+    "paperRuntime1x512Decoded": {
+      "xWrap": {
+        "mae": 0.0906,
+        "rms": 0.2442,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.7967
+      },
+      "yWrap": {
+        "mae": 0.0763,
+        "rms": 0.2188,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.7132
+      },
+      "interiorNeighborRms": {
+        "x": 0.3065,
+        "y": 0.3068
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0133,
+        "y": 0.0222
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.2442,
+          "yWrapRms": 0.2188
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.3541,
+          "yWrapRms": 0.2918
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.3265,
+          "yWrapRms": 0.3457
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    },
+    "paperRuntime2x1024Decoded": {
+      "xWrap": {
+        "mae": 0.0396,
+        "rms": 0.1567,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.6842
+      },
+      "yWrap": {
+        "mae": 0.0399,
+        "rms": 0.1521,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.664
+      },
+      "interiorNeighborRms": {
+        "x": 0.229,
+        "y": 0.2291
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0043,
+        "y": 0.0125
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.1567,
+          "yWrapRms": 0.1521
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.2105,
+          "yWrapRms": 0.2657
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.1924,
+          "yWrapRms": 0.2341
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    },
+    "sageAlphaMaster1024": {
+      "xWrap": {
+        "mae": 0.1602,
+        "rms": 0.4002,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.879
+      },
+      "yWrap": {
+        "mae": 0.1582,
+        "rms": 0.3977,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.8743
+      },
+      "interiorNeighborRms": {
+        "x": 0.4553,
+        "y": 0.4549
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0059,
+        "y": 0.0215
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.4002,
+          "yWrapRms": 0.3977
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.4452,
+          "yWrapRms": 0.4216
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.4319,
+          "yWrapRms": 0.4529
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    },
+    "sageAlphaRuntime1x512Decoded": {
+      "xWrap": {
+        "mae": 0.3086,
+        "rms": 0.5694,
+        "maximum": 2.0,
+        "rmsToInteriorRmsRatio": 0.9663
+      },
+      "yWrap": {
+        "mae": 0.2832,
+        "rms": 0.5358,
+        "maximum": 2.0,
+        "rmsToInteriorRmsRatio": 0.9112
+      },
+      "interiorNeighborRms": {
+        "x": 0.5893,
+        "y": 0.588
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0352,
+        "y": 0.0215
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.5694,
+          "yWrapRms": 0.5358
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.5285,
+          "yWrapRms": 0.5796
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.5694,
+          "yWrapRms": 0.5555
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    },
+    "sageAlphaRuntime2x1024Decoded": {
+      "xWrap": {
+        "mae": 0.1602,
+        "rms": 0.4002,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.879
+      },
+      "yWrap": {
+        "mae": 0.1582,
+        "rms": 0.3977,
+        "maximum": 1.0,
+        "rmsToInteriorRmsRatio": 0.8743
+      },
+      "interiorNeighborRms": {
+        "x": 0.4553,
+        "y": 0.4549
+      },
+      "oppositeEdgeMeanDelta": {
+        "x": 0.0059,
+        "y": 0.0215
+      },
+      "offsetCutChecks": [
+        {
+          "offset": [
+            0,
+            0
+          ],
+          "xWrapRms": 0.4002,
+          "yWrapRms": 0.3977
+        },
+        {
+          "offset": [
+            73,
+            119
+          ],
+          "xWrapRms": 0.4452,
+          "yWrapRms": 0.4216
+        },
+        {
+          "offset": [
+            137,
+            211
+          ],
+          "xWrapRms": 0.4319,
+          "yWrapRms": 0.4529
+        }
+      ],
+      "exactTileShiftInvariance": {
+        "horizontalRmse": 0.0,
+        "verticalRmse": 0.0
+      },
+      "pass": true
+    }
+  },
+  "pass": true
+}

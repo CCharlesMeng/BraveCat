@@ -1,0 +1,809 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "utility-glyph-family-v1",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass-with-integration-advisory-human-approval-pending",
+  "automatedChecks": {
+    "svgStructure": {
+      "passes": true,
+      "files": [
+        {
+          "path": "sources/glyph-close--source--non-shipping-v01.svg",
+          "xmlWellFormed": true,
+          "rootTag": "svg",
+          "viewBox": "0 0 24 24",
+          "fill": "none",
+          "ariaHidden": "true",
+          "focusable": "false",
+          "usesCurrentColor": true,
+          "literalColorCount": 0,
+          "elementTags": [
+            "svg",
+            "g",
+            "path"
+          ],
+          "disallowedTags": [],
+          "disallowedTokens": [],
+          "passes": true
+        },
+        {
+          "path": "sources/glyph-export--source--non-shipping-v01.svg",
+          "xmlWellFormed": true,
+          "rootTag": "svg",
+          "viewBox": "0 0 24 24",
+          "fill": "none",
+          "ariaHidden": "true",
+          "focusable": "false",
+          "usesCurrentColor": true,
+          "literalColorCount": 0,
+          "elementTags": [
+            "svg",
+            "g",
+            "path",
+            "path"
+          ],
+          "disallowedTags": [],
+          "disallowedTokens": [],
+          "passes": true
+        },
+        {
+          "path": "sources/glyph-import--source--non-shipping-v01.svg",
+          "xmlWellFormed": true,
+          "rootTag": "svg",
+          "viewBox": "0 0 24 24",
+          "fill": "none",
+          "ariaHidden": "true",
+          "focusable": "false",
+          "usesCurrentColor": true,
+          "literalColorCount": 0,
+          "elementTags": [
+            "svg",
+            "g",
+            "path",
+            "path"
+          ],
+          "disallowedTags": [],
+          "disallowedTokens": [],
+          "passes": true
+        },
+        {
+          "path": "sources/glyph-lock--source--non-shipping-v01.svg",
+          "xmlWellFormed": true,
+          "rootTag": "svg",
+          "viewBox": "0 0 24 24",
+          "fill": "none",
+          "ariaHidden": "true",
+          "focusable": "false",
+          "usesCurrentColor": true,
+          "literalColorCount": 0,
+          "elementTags": [
+            "svg",
+            "g",
+            "rect",
+            "path"
+          ],
+          "disallowedTags": [],
+          "disallowedTokens": [],
+          "passes": true
+        },
+        {
+          "path": "sources/glyph-retry--source--non-shipping-v01.svg",
+          "xmlWellFormed": true,
+          "rootTag": "svg",
+          "viewBox": "0 0 24 24",
+          "fill": "none",
+          "ariaHidden": "true",
+          "focusable": "false",
+          "usesCurrentColor": true,
+          "literalColorCount": 0,
+          "elementTags": [
+            "svg",
+            "g",
+            "path",
+            "path"
+          ],
+          "disallowedTags": [],
+          "disallowedTokens": [],
+          "passes": true
+        }
+      ],
+      "requirements": [
+        "well-formed XML",
+        "0 0 24 24 viewBox",
+        "currentColor stroke",
+        "transparent fill",
+        "no literal colors, text, images, filters, scripts, titles, or descriptions"
+      ]
+    },
+    "pngAlphaAndDimensions": {
+      "passes": true,
+      "sourceTransparentRgbZero": true,
+      "sourceDimensionsPass": true,
+      "reviewProofsOpaque": true,
+      "files": [
+        {
+          "path": "masters/glyph-close--master-preview--non-shipping-v01.png",
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 496,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 28,
+            "top": 28,
+            "right": 99,
+            "bottom": 99,
+            "width": 72,
+            "height": 72,
+            "padding": {
+              "left": 28,
+              "top": 28,
+              "right": 28,
+              "bottom": 28
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            1672
+          ]
+        },
+        {
+          "path": "runtime/glyph-close--32--non-shipping-v01.png",
+          "width": 32,
+          "height": 32,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 124,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 7,
+            "top": 7,
+            "right": 24,
+            "bottom": 24,
+            "width": 18,
+            "height": 18,
+            "padding": {
+              "left": 7,
+              "top": 7,
+              "right": 7,
+              "bottom": 7
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            156
+          ]
+        },
+        {
+          "path": "runtime/glyph-close--24--non-shipping-v01.png",
+          "width": 24,
+          "height": 24,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 52,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 5,
+            "top": 5,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 14,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            76
+          ]
+        },
+        {
+          "path": "masters/glyph-export--master-preview--non-shipping-v01.png",
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 368,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            1162,
+            964
+          ]
+        },
+        {
+          "path": "runtime/glyph-export--32--non-shipping-v01.png",
+          "width": 32,
+          "height": 32,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 120,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 6,
+            "top": 5,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 21,
+            "padding": {
+              "left": 6,
+              "top": 5,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            90,
+            88
+          ]
+        },
+        {
+          "path": "runtime/glyph-export--24--non-shipping-v01.png",
+          "width": 24,
+          "height": 24,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 64,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            62,
+            40
+          ]
+        },
+        {
+          "path": "masters/glyph-import--master-preview--non-shipping-v01.png",
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 324,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            1162,
+            1004
+          ]
+        },
+        {
+          "path": "runtime/glyph-import--32--non-shipping-v01.png",
+          "width": 32,
+          "height": 32,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 118,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 6,
+            "top": 5,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 21,
+            "padding": {
+              "left": 6,
+              "top": 5,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            88,
+            82
+          ]
+        },
+        {
+          "path": "runtime/glyph-import--24--non-shipping-v01.png",
+          "width": 24,
+          "height": 24,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 64,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            62,
+            42
+          ]
+        },
+        {
+          "path": "masters/glyph-lock--master-preview--non-shipping-v01.png",
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 434,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 30,
+            "top": 22,
+            "right": 97,
+            "bottom": 101,
+            "width": 68,
+            "height": 80,
+            "padding": {
+              "left": 30,
+              "top": 22,
+              "right": 30,
+              "bottom": 26
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            2518,
+            158
+          ]
+        },
+        {
+          "path": "runtime/glyph-lock--32--non-shipping-v01.png",
+          "width": 32,
+          "height": 32,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 124,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 7,
+            "top": 5,
+            "right": 24,
+            "bottom": 25,
+            "width": 18,
+            "height": 21,
+            "padding": {
+              "left": 7,
+              "top": 5,
+              "right": 7,
+              "bottom": 6
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            190,
+            16
+          ]
+        },
+        {
+          "path": "runtime/glyph-lock--24--non-shipping-v01.png",
+          "width": 24,
+          "height": 24,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 84,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 5,
+            "top": 4,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 15,
+            "padding": {
+              "left": 5,
+              "top": 4,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            116,
+            6
+          ]
+        },
+        {
+          "path": "masters/glyph-retry--master-preview--non-shipping-v01.png",
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 373,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 22,
+            "top": 22,
+            "right": 103,
+            "bottom": 105,
+            "width": 82,
+            "height": 84,
+            "padding": {
+              "left": 22,
+              "top": 22,
+              "right": 24,
+              "bottom": 22
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            2292
+          ]
+        },
+        {
+          "path": "runtime/glyph-retry--32--non-shipping-v01.png",
+          "width": 32,
+          "height": 32,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 106,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 5,
+            "top": 5,
+            "right": 25,
+            "bottom": 26,
+            "width": 21,
+            "height": 22,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 6,
+              "bottom": 5
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            181
+          ]
+        },
+        {
+          "path": "runtime/glyph-retry--24--non-shipping-v01.png",
+          "width": 24,
+          "height": 24,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 82,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": false,
+          "visibleBounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            96
+          ]
+        },
+        {
+          "path": "reviews/legibility-sheet--24-32--non-shipping-v01.png",
+          "width": 1200,
+          "height": 420,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "partialAlphaPixelCount": 0,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": true
+        },
+        {
+          "path": "reviews/optical-weight-sheet--24-32--non-shipping-v01.png",
+          "width": 1200,
+          "height": 590,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "partialAlphaPixelCount": 0,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": true
+        },
+        {
+          "path": "reviews/contrast-proof--light-dark-paper--non-shipping-v01.png",
+          "width": 1200,
+          "height": 480,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "partialAlphaPixelCount": 0,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": true
+        },
+        {
+          "path": "reviews/state-tint-proof--focus-disabled-error--non-shipping-v01.png",
+          "width": 1200,
+          "height": 660,
+          "pixelMode": "RGBA",
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "partialAlphaPixelCount": 0,
+          "transparentPixelRgbZero": true,
+          "opaqueReview": true
+        }
+      ]
+    },
+    "pixelAlignmentAndBounds": {
+      "passes": true,
+      "linearAnchorGrid": 0.25,
+      "constantStrokeWidth": 1.75,
+      "minimumPaddingPass": true,
+      "semanticComponentTopologyPass": true,
+      "minimumComponentPixelCountAtAlpha32": 3,
+      "curvePolicy": "Arcs are analytic optical curves; straight endpoints and shared tray/body anchors use the quarter-unit grid."
+    },
+    "contrast": {
+      "sourcePolicy": "SVGs inherit CSS currentColor; listed colors are proof-only simulations.",
+      "checks": [
+        {
+          "pair": "neutral warm gray-brown glyph / warm paper",
+          "foreground": "#5f5b4e",
+          "background": "#f6f0df",
+          "ratio": 5.96,
+          "threshold": "3:1 non-text graphical object",
+          "passes": true
+        },
+        {
+          "pair": "light glyph / dark paper",
+          "foreground": "#fffaf0",
+          "background": "#4f5144",
+          "ratio": 7.78,
+          "threshold": "3:1 non-text graphical object",
+          "passes": true
+        },
+        {
+          "pair": "error glyph / warm paper",
+          "foreground": "#9b5f50",
+          "background": "#f6f0df",
+          "ratio": 4.45,
+          "threshold": "3:1 non-text graphical object",
+          "passes": true
+        },
+        {
+          "pair": "current focus outline composite / warm paper",
+          "foreground": "#b5bc9e",
+          "background": "#f6f0df",
+          "ratio": 1.73,
+          "threshold": "3:1 integration target",
+          "passes": false,
+          "advisory": "Existing app CSS owns this ring; the candidate does not alter it."
+        },
+        {
+          "pair": "disabled glyph at current 0.52 opacity / warm paper",
+          "foreground": "#a7a394",
+          "background": "#f6f0df",
+          "ratio": 2.22,
+          "threshold": "inactive controls are exempt; differentiation must not rely on color alone",
+          "passes": null
+        }
+      ]
+    }
+  },
+  "semanticRecognizability": {
+    "result": "proofs-prepared-human-approval-pending",
+    "checks": [
+      {
+        "glyph": "glyph-close",
+        "cue": "two equal crossing diagonals",
+        "sizesReviewed": [
+          20,
+          24,
+          32
+        ],
+        "machineEvidence": "expected semantic component topology, no clipping, and no sub-three-pixel fragment"
+      },
+      {
+        "glyph": "glyph-export",
+        "cue": "upward arrow leaving a shared open tray",
+        "sizesReviewed": [
+          20,
+          24,
+          32
+        ],
+        "machineEvidence": "expected semantic component topology, no clipping, and no sub-three-pixel fragment"
+      },
+      {
+        "glyph": "glyph-import",
+        "cue": "downward arrow entering the same open tray",
+        "sizesReviewed": [
+          20,
+          24,
+          32
+        ],
+        "machineEvidence": "expected semantic component topology, no clipping, and no sub-three-pixel fragment"
+      },
+      {
+        "glyph": "glyph-lock",
+        "cue": "closed shackle, enclosed body, and short keyway",
+        "sizesReviewed": [
+          20,
+          24,
+          32
+        ],
+        "machineEvidence": "expected semantic component topology, no clipping, and no sub-three-pixel fragment"
+      },
+      {
+        "glyph": "glyph-retry",
+        "cue": "single near-complete circular arrow",
+        "sizesReviewed": [
+          20,
+          24,
+          32
+        ],
+        "machineEvidence": "expected semantic component topology, no clipping, and no sub-three-pixel fragment"
+      }
+    ],
+    "pairwiseRisk": {
+      "exportImport": "The shared tray is identical and the arrow direction is the sole semantic difference; inspect the 24px row before approval.",
+      "closeRetry": "Cross and circular-arrow silhouettes do not share topology.",
+      "lock": "Only enclosed-body glyph; no collision with transfer actions."
+    }
+  },
+  "accessibilityReview": {
+    "sourceSvgIsDecorative": true,
+    "sourceAttributes": {
+      "aria-hidden": "true",
+      "focusable": "false"
+    },
+    "requiredLiveNames": {
+      "close": "retain the existing drawer-specific aria-label",
+      "export": "retain visible export text or an equivalent accessible name",
+      "import": "retain visible import text and the associated file-input label",
+      "lock": "provide live locked-state text or an accessible name at integration",
+      "retry": "provide action-specific retry text or an accessible name at integration"
+    },
+    "touchTargets": {
+      "currentDrawerCloseCssPx": [
+        38,
+        38
+      ],
+      "currentSaveTransferMinHeightCssPx": 38,
+      "proofTargetCssPx": 44,
+      "note": "The art carries internal whitespace but does not replace CSS hit areas."
+    },
+    "stateOwnership": "focus, hover, disabled, and error remain CSS; no state is baked into canonical SVG.",
+    "integrationAdvisory": "The existing semi-transparent focus outline does not reach the 3:1 proof target on warm paper; app CSS was intentionally not edited in this batch."
+  },
+  "exclusions": {
+    "textOrLetters": true,
+    "emoji": true,
+    "bakedStateColorsInSvg": true,
+    "backgroundsInSources": true,
+    "shadows": true,
+    "decorativeFlourishes": true,
+    "appOrProductionChanges": true
+  },
+  "approval": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  }
+}

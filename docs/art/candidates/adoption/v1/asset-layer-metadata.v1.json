@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "adoption-presentation-v1",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "canvas": {
+    "width": 1200,
+    "height": 1600,
+    "format": "PNG",
+    "pixelMode": "RGB",
+    "colorSpace": "embedded sRGB"
+  },
+  "asset": {
+    "id": "adoption-welcome-base",
+    "path": "masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png",
+    "content": "text-free low-saturation watercolor welcome threshold/base",
+    "alpha": "opaque",
+    "bakedUi": false,
+    "bakedPortrait": false
+  },
+  "masterCoordinates": {
+    "supportPlane": {
+      "kind": "broad warm-wood top plane",
+      "topSurfacePolygon": [
+        [
+          100,
+          850
+        ],
+        [
+          1100,
+          850
+        ],
+        [
+          1100,
+          968
+        ],
+        [
+          100,
+          968
+        ]
+      ],
+      "frontContactEdge": [
+        [
+          100,
+          968
+        ],
+        [
+          1100,
+          968
+        ]
+      ],
+      "portraitContactY": 968
+    },
+    "portraitSafeZone": {
+      "x": 255,
+      "y": 245,
+      "width": 690,
+      "height": 723
+    },
+    "headingSafeZone": {
+      "x": 150,
+      "y": 65,
+      "width": 900,
+      "height": 190
+    },
+    "liveInputErrorActionSafeZone": {
+      "x": 150,
+      "y": 1060,
+      "width": 900,
+      "height": 450
+    },
+    "portraitAnchor": {
+      "kind": "bottom-center",
+      "x": 600,
+      "y": 968,
+      "fit": "contain full approved 1024x1024 Portrait canvas, then align visible alpha bottom to support contact edge"
+    }
+  },
+  "layers": [
+    {
+      "z": 0,
+      "id": "welcome-base",
+      "source": "masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png",
+      "required": true
+    },
+    {
+      "z": 10,
+      "id": "contact-shadow",
+      "source": "runtime CSS or review compositor",
+      "required": true,
+      "note": "soft neutral shadow is separate from the approved Portrait pixels"
+    },
+    {
+      "z": 20,
+      "id": "approved-portrait",
+      "source": "approved Portrait supplied by the application",
+      "required": true,
+      "reviewSource": "public/portraits/minho/portrait--minho--sit--v01.png",
+      "sourceCopiedIntoCandidateRoot": false
+    },
+    {
+      "z": 30,
+      "id": "live-ui",
+      "source": "application",
+      "required": true,
+      "contents": [
+        "heading",
+        "name",
+        "input",
+        "validation error",
+        "action",
+        "transition status"
+      ]
+    }
+  ],
+  "futurePortraitFitEnvelopes": [
+    {
+      "id": "tall",
+      "normalizedVisibleBox": {
+        "width": 0.48,
+        "height": 0.95
+      },
+      "anchor": "bottom-center",
+      "fitsPortraitSafeZone": true
+    },
+    {
+      "id": "broad",
+      "normalizedVisibleBox": {
+        "width": 0.95,
+        "height": 0.56
+      },
+      "anchor": "bottom-center",
+      "fitsPortraitSafeZone": true
+    },
+    {
+      "id": "compact",
+      "normalizedVisibleBox": {
+        "width": 0.7,
+        "height": 0.7
+      },
+      "anchor": "bottom-center",
+      "fitsPortraitSafeZone": true
+    }
+  ],
+  "viewportReviews": {
+    "validation_error": {
+      "state": "adoption/validation-error",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "baseTransform": {
+        "fit": "cover",
+        "horizontalAlignment": "center",
+        "verticalShiftPx": 0
+      },
+      "supportPlaneY": 424,
+      "portrait": {
+        "sourceCanvas": [
+          1024,
+          1024
+        ],
+        "reviewCanvasPx": 248,
+        "canvasTopLeft": [
+          36,
+          189
+        ],
+        "visibleAlphaBbox": [
+          87,
+          202,
+          233,
+          424
+        ],
+        "bottomCenterAnchor": [
+          160,
+          424
+        ],
+        "supportPlaneContactY": 424,
+        "pawRegionBottomY": 415,
+        "tailRegionBottomY": 420,
+        "pawInsetFromFrontEdgePx": 9,
+        "tailInsetFromFrontEdgePx": 4,
+        "sourceTransform": "uniform LANCZOS resize of full 1024x1024 canvas; no crop, retouch, recolor, or regeneration"
+      },
+      "liveUi": {
+        "inputBox": [
+          18,
+          463,
+          302,
+          505
+        ],
+        "hintBox": [
+          18,
+          512,
+          146,
+          523
+        ],
+        "errorBox": [
+          18,
+          530,
+          82,
+          541
+        ],
+        "actionBox": [
+          18,
+          553,
+          302,
+          594
+        ],
+        "name": "",
+        "nameCodePointCount": 0,
+        "renderedNameWidthPx": 0,
+        "inputInnerWidthPx": 256,
+        "nameFits": true
+      },
+      "keyboard": null,
+      "artSourceContainsUi": false,
+      "portraitSourceCopiedToCandidateRoot": false
+    },
+    "keyboard_open": {
+      "state": "adoption/keyboard-open",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "baseTransform": {
+        "fit": "cover",
+        "horizontalAlignment": "center",
+        "verticalShiftPx": -126
+      },
+      "supportPlaneY": 298,
+      "portrait": {
+        "sourceCanvas": [
+          1024,
+          1024
+        ],
+        "reviewCanvasPx": 184,
+        "canvasTopLeft": [
+          68,
+          123
+        ],
+        "visibleAlphaBbox": [
+          105,
+          132,
+          215,
+          298
+        ],
+        "bottomCenterAnchor": [
+          160,
+          298
+        ],
+        "supportPlaneContactY": 298,
+        "pawRegionBottomY": 290,
+        "tailRegionBottomY": 294,
+        "pawInsetFromFrontEdgePx": 8,
+        "tailInsetFromFrontEdgePx": 4,
+        "sourceTransform": "uniform LANCZOS resize of full 1024x1024 canvas; no crop, retouch, recolor, or regeneration"
+      },
+      "liveUi": {
+        "inputBox": [
+          18,
+          325,
+          302,
+          367
+        ],
+        "hintBox": [
+          18,
+          374,
+          146,
+          385
+        ],
+        "errorBox": null,
+        "actionBox": [
+          18,
+          397,
+          302,
+          438
+        ],
+        "name": "SilverMoon猫猫",
+        "nameCodePointCount": 12,
+        "renderedNameWidthPx": 101,
+        "inputInnerWidthPx": 256,
+        "nameFits": true
+      },
+      "keyboard": {
+        "keyboardSafeZone": [
+          0,
+          466,
+          320,
+          700
+        ]
+      },
+      "artSourceContainsUi": false,
+      "portraitSourceCopiedToCandidateRoot": false
+    },
+    "default": {
+      "state": "adoption/default",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "baseTransform": {
+        "fit": "cover",
+        "horizontalAlignment": "center",
+        "verticalShiftPx": 0
+      },
+      "supportPlaneY": 511,
+      "portrait": {
+        "sourceCanvas": [
+          1024,
+          1024
+        ],
+        "reviewCanvasPx": 312,
+        "canvasTopLeft": [
+          39,
+          216
+        ],
+        "visibleAlphaBbox": [
+          103,
+          233,
+          287,
+          511
+        ],
+        "bottomCenterAnchor": [
+          195,
+          511
+        ],
+        "supportPlaneContactY": 511,
+        "pawRegionBottomY": 500,
+        "tailRegionBottomY": 507,
+        "pawInsetFromFrontEdgePx": 11,
+        "tailInsetFromFrontEdgePx": 4,
+        "sourceTransform": "uniform LANCZOS resize of full 1024x1024 canvas; no crop, retouch, recolor, or regeneration"
+      },
+      "liveUi": {
+        "inputBox": [
+          25,
+          582,
+          365,
+          632
+        ],
+        "hintBox": [
+          25,
+          641,
+          169,
+          653
+        ],
+        "errorBox": null,
+        "actionBox": [
+          25,
+          672,
+          365,
+          720
+        ],
+        "name": "米",
+        "nameCodePointCount": 1,
+        "renderedNameWidthPx": 16,
+        "inputInnerWidthPx": 312,
+        "nameFits": true
+      },
+      "keyboard": null,
+      "artSourceContainsUi": false,
+      "portraitSourceCopiedToCandidateRoot": false
+    },
+    "success": {
+      "state": "adoption/success",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "baseTransform": {
+        "fit": "cover",
+        "horizontalAlignment": "center",
+        "verticalShiftPx": 0
+      },
+      "supportPlaneY": 564,
+      "portrait": {
+        "sourceCanvas": [
+          1024,
+          1024
+        ],
+        "reviewCanvasPx": 342,
+        "canvasTopLeft": [
+          44,
+          241
+        ],
+        "visibleAlphaBbox": [
+          115,
+          260,
+          315,
+          564
+        ],
+        "bottomCenterAnchor": [
+          215,
+          564
+        ],
+        "supportPlaneContactY": 564,
+        "pawRegionBottomY": 553,
+        "tailRegionBottomY": 561,
+        "pawInsetFromFrontEdgePx": 11,
+        "tailInsetFromFrontEdgePx": 3,
+        "sourceTransform": "uniform LANCZOS resize of full 1024x1024 canvas; no crop, retouch, recolor, or regeneration"
+      },
+      "liveUi": {
+        "statusBox": [
+          28,
+          672,
+          402,
+          836
+        ],
+        "actionBox": [
+          48,
+          780,
+          382,
+          818
+        ],
+        "name": "SilverMoon猫猫",
+        "nameCodePointCount": 12,
+        "renderedSuccessTitleWidthPx": 277,
+        "successTitleInnerWidthPx": 334,
+        "nameFits": true
+      },
+      "keyboard": null,
+      "artSourceContainsUi": false,
+      "portraitSourceCopiedToCandidateRoot": false
+    }
+  },
+  "keyboardPolicy": {
+    "artMayShiftVertically": true,
+    "portraitMayScaleDown": true,
+    "inputAndPrimaryActionRemainAboveKeyboard": true,
+    "keyboardIsNeverBakedIntoSourceArt": true
+  }
+}

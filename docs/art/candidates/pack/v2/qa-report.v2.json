@@ -1,0 +1,522 @@
+{
+  "schemaVersion": 2,
+  "status": "pass",
+  "shippingEligible": false,
+  "placementValidation": {
+    "status": "pass",
+    "errors": [],
+    "warnings": [],
+    "catalogCoverage": {
+      "required": [
+        "fish-biscuit",
+        "small-bell",
+        "small-blanket",
+        "small-camera",
+        "small-telescope",
+        "ticket",
+        "travel-tin",
+        "yarn-ball"
+      ],
+      "covered": [
+        "fish-biscuit",
+        "small-bell",
+        "small-blanket",
+        "small-camera",
+        "small-telescope",
+        "ticket",
+        "travel-tin",
+        "yarn-ball"
+      ],
+      "missing": [],
+      "pass": true
+    },
+    "kits": {
+      "outing-kit": {
+        "capacityContract": true,
+        "wishConstraint": true,
+        "pairwiseOverlap": true,
+        "placements": [
+          {
+            "itemId": "small-blanket",
+            "slotId": "center-deep-pocket",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.744,
+            "occludedPercent": 27.87,
+            "visiblePercent": 72.13,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 141,
+                  "y": 191,
+                  "width": 61,
+                  "height": 30
+                },
+                "visibleAlphaWeight": 248813
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 158,
+                  "y": 213,
+                  "width": 68,
+                  "height": 33
+                },
+                "visibleAlphaWeight": 310424
+              }
+            }
+          },
+          {
+            "itemId": "travel-tin",
+            "slotId": "left-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 19.51,
+            "visiblePercent": 80.49,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 83,
+                  "y": 179,
+                  "width": 53,
+                  "height": 38
+                },
+                "visibleAlphaWeight": 289892
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 93,
+                  "y": 200,
+                  "width": 59,
+                  "height": 42
+                },
+                "visibleAlphaWeight": 361638
+              }
+            }
+          },
+          {
+            "itemId": "small-camera",
+            "slotId": "right-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 12.2,
+            "visiblePercent": 87.8,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 212,
+                  "y": 163,
+                  "width": 52,
+                  "height": 44
+                },
+                "visibleAlphaWeight": 321104
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 237,
+                  "y": 183,
+                  "width": 57,
+                  "height": 49
+                },
+                "visibleAlphaWeight": 400638
+              }
+            }
+          }
+        ]
+      },
+      "play-kit": {
+        "capacityContract": true,
+        "wishConstraint": true,
+        "pairwiseOverlap": true,
+        "placements": [
+          {
+            "itemId": "fish-biscuit",
+            "slotId": "center-deep-pocket",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 20.7,
+            "visiblePercent": 79.3,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 146,
+                  "y": 190,
+                  "width": 55,
+                  "height": 31
+                },
+                "visibleAlphaWeight": 227848
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 163,
+                  "y": 213,
+                  "width": 61,
+                  "height": 33
+                },
+                "visibleAlphaWeight": 284368
+              }
+            }
+          },
+          {
+            "itemId": "yarn-ball",
+            "slotId": "left-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.649,
+            "occludedPercent": 14.01,
+            "visiblePercent": 85.98,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 79,
+                  "y": 175,
+                  "width": 51,
+                  "height": 37
+                },
+                "visibleAlphaWeight": 198623
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 88,
+                  "y": 195,
+                  "width": 57,
+                  "height": 42
+                },
+                "visibleAlphaWeight": 247744
+              }
+            }
+          },
+          {
+            "itemId": "small-bell",
+            "slotId": "right-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 13.4,
+            "visiblePercent": 86.6,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 215,
+                  "y": 160,
+                  "width": 46,
+                  "height": 51
+                },
+                "visibleAlphaWeight": 213546
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 241,
+                  "y": 179,
+                  "width": 51,
+                  "height": 56
+                },
+                "visibleAlphaWeight": 266565
+              }
+            }
+          }
+        ]
+      },
+      "wish-observation-kit": {
+        "capacityContract": true,
+        "wishConstraint": true,
+        "pairwiseOverlap": true,
+        "placements": [
+          {
+            "itemId": "ticket",
+            "slotId": "center-deep-pocket",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 24.64,
+            "visiblePercent": 75.36,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 140,
+                  "y": 191,
+                  "width": 59,
+                  "height": 30
+                },
+                "visibleAlphaWeight": 266547
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 157,
+                  "y": 214,
+                  "width": 66,
+                  "height": 32
+                },
+                "visibleAlphaWeight": 332589
+              }
+            }
+          },
+          {
+            "itemId": "fish-biscuit",
+            "slotId": "left-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.0,
+            "occludedPercent": 22.37,
+            "visiblePercent": 77.63,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 90,
+                  "y": 188,
+                  "width": 50,
+                  "height": 30
+                },
+                "visibleAlphaWeight": 183788
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 101,
+                  "y": 210,
+                  "width": 55,
+                  "height": 33
+                },
+                "visibleAlphaWeight": 229187
+              }
+            }
+          },
+          {
+            "itemId": "small-telescope",
+            "slotId": "right-inner-sleeve",
+            "pocketContainment": true,
+            "centerOfGravity": true,
+            "physicalOcclusion": true,
+            "cssVisibility": true,
+            "containmentClippedPercent": 0.262,
+            "occludedPercent": 29.91,
+            "visiblePercent": 70.09,
+            "mobileVisibility": {
+              "342": {
+                "visibleBounds": {
+                  "x": 204,
+                  "y": 188,
+                  "width": 45,
+                  "height": 21
+                },
+                "visibleAlphaWeight": 94110
+              },
+              "382": {
+                "visibleBounds": {
+                  "x": 229,
+                  "y": 210,
+                  "width": 49,
+                  "height": 23
+                },
+                "visibleAlphaWeight": 117398
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "zOrder": {
+    "pass": true,
+    "order": [
+      "v1 base",
+      "three transformed item masters",
+      "v1 foreground rim"
+    ]
+  },
+  "dimensions": {
+    "pass": true,
+    "expected": {
+      "composites": [
+        1536,
+        1536
+      ],
+      "mobile390": [
+        390,
+        844
+      ],
+      "mobile430": [
+        430,
+        932
+      ],
+      "contactSheet": [
+        1200,
+        1600
+      ]
+    },
+    "files": [
+      {
+        "path": "composites/pack-filled--outing-kit--master-1536--non-shipping-v02.png",
+        "width": 1536,
+        "height": 1536,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "composites/pack-filled--play-kit--master-1536--non-shipping-v02.png",
+        "width": 1536,
+        "height": 1536,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "composites/pack-filled--wish-observation-kit--master-1536--non-shipping-v02.png",
+        "width": 1536,
+        "height": 1536,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--390x844--populated--outing-kit--non-shipping-v02.png",
+        "width": 390,
+        "height": 844,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--390x844--scroll--play-kit--non-shipping-v02.png",
+        "width": 390,
+        "height": 844,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--390x844--selected--wish-observation-kit--non-shipping-v02.png",
+        "width": 390,
+        "height": 844,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--430x932--populated--outing-kit--non-shipping-v02.png",
+        "width": 430,
+        "height": 932,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--430x932--scroll--play-kit--non-shipping-v02.png",
+        "width": 430,
+        "height": 932,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/mobile-review--430x932--selected--wish-observation-kit--non-shipping-v02.png",
+        "width": 430,
+        "height": 932,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      },
+      {
+        "path": "reviews/physical-depth-contact-sheet--1200x1600--non-shipping-v02.png",
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentRgbNonZero": 0
+      }
+    ]
+  },
+  "alpha": {
+    "pass": true,
+    "finding": "All three source composites retain straight RGBA transparency with zero RGB beneath fully transparent pixels; review boards are intentionally opaque."
+  },
+  "inputImmutability": {
+    "pass": true,
+    "before": {
+      "docs/art/candidates/pack/v1/masters/pack-opened-base--master-1536--non-shipping-v01.png": "e326537e74d36833c426965d51d5bb4c165729e0533165d4d2824f68df296d1c",
+      "docs/art/candidates/pack/v1/masters/pack-opened-foreground-rim--master-1536--non-shipping-v01.png": "7c3bfbbc3b87b1091110f5edcc1ab4f1b1ef13c262264d5417168c05899c066a",
+      "docs/art/candidates/pack/v1/composition-metadata.v1.json": "3b9a8b1c23e69898d349be711cbb8e7d536c7cbc44bdcd01cf3e0091be3ecca7",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png": "c5dff36c9d3b92253b4b437fcc6ba58688eabeec91719a8c0580dfd3a949a9a6",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--travel-tin--master-512--non-shipping-v01.png": "877e8777c1dbf040dc52f2a4ef579307ff5fccaef482c606313293af4695a505",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-blanket--master-512--non-shipping-v01.png": "ab2bd9823e5285f5c427377f0493c34537b50749fbb51329f11cf5b1e7cc017a",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--yarn-ball--master-512--non-shipping-v01.png": "a6923de2bea94754fd312f5119c3783b019c7d9870fd36b0e13aed03fdcd5d42",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-bell--master-512--non-shipping-v01.png": "803ac79a5d4ff006db7cfccdc3522b09278d44e35595fdedc163decab3c8ff0c",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-camera--master-512--non-shipping-v01.png": "172969b9c2e15eed9317f76e28ee45483f361365c08bd32ad9101da8debd3b25",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-telescope--master-512--non-shipping-v01.png": "4e9563760e3b36b1784a2355c1a9322fe983780e8dcda0c8d012ead5af1d7db3",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--wish--ticket--master-512--non-shipping-v01.png": "93704750186d861ddf3bfbdd1b2cf6bee6fa6f3f6f6ad7a04a793986a21858df"
+    },
+    "after": {
+      "docs/art/candidates/pack/v1/masters/pack-opened-base--master-1536--non-shipping-v01.png": "e326537e74d36833c426965d51d5bb4c165729e0533165d4d2824f68df296d1c",
+      "docs/art/candidates/pack/v1/masters/pack-opened-foreground-rim--master-1536--non-shipping-v01.png": "7c3bfbbc3b87b1091110f5edcc1ab4f1b1ef13c262264d5417168c05899c066a",
+      "docs/art/candidates/pack/v1/composition-metadata.v1.json": "3b9a8b1c23e69898d349be711cbb8e7d536c7cbc44bdcd01cf3e0091be3ecca7",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--fish-biscuit--master-512--non-shipping-v01.png": "c5dff36c9d3b92253b4b437fcc6ba58688eabeec91719a8c0580dfd3a949a9a6",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--snack--travel-tin--master-512--non-shipping-v01.png": "877e8777c1dbf040dc52f2a4ef579307ff5fccaef482c606313293af4695a505",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-blanket--master-512--non-shipping-v01.png": "ab2bd9823e5285f5c427377f0493c34537b50749fbb51329f11cf5b1e7cc017a",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--yarn-ball--master-512--non-shipping-v01.png": "a6923de2bea94754fd312f5119c3783b019c7d9870fd36b0e13aed03fdcd5d42",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-bell--master-512--non-shipping-v01.png": "803ac79a5d4ff006db7cfccdc3522b09278d44e35595fdedc163decab3c8ff0c",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-camera--master-512--non-shipping-v01.png": "172969b9c2e15eed9317f76e28ee45483f361365c08bd32ad9101da8debd3b25",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--toy--small-telescope--master-512--non-shipping-v01.png": "4e9563760e3b36b1784a2355c1a9322fe983780e8dcda0c8d012ead5af1d7db3",
+      "docs/art/candidates/postcard-gifts/v1/masters/items/item--wish--ticket--master-512--non-shipping-v01.png": "93704750186d861ddf3bfbdd1b2cf6bee6fa6f3f6f6ad7a04a793986a21858df"
+    }
+  },
+  "visualFindings": [
+    "Items are scaled to the v1 compartment bounds rather than the larger 46px inventory-token visual weight.",
+    "The unchanged foreground rim hides each lower item portion and establishes gravity.",
+    "The center ticket remains blank; destination text appears only in flattened UI reviews.",
+    "Human approval should check whether telescope and bell angles feel natural before any integration."
+  ],
+  "approval": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  }
+}

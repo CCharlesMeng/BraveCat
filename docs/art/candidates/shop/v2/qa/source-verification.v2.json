@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "status": "pass",
+  "shopV1": {
+    "root": "docs/art/candidates/shop/v1",
+    "manifestSha256": "d5e1b4080a6c600c20b12fa68bcc05313129a8317ccdbfb3af00d3216529816b",
+    "manifestFileCount": 23,
+    "hashMismatches": []
+  },
+  "sharedTreatGlyph": {
+    "path": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+    "expectedSha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+    "actualSha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+    "copiedIntoShopV2": false,
+    "match": true
+  },
+  "prohibitedReuse": {
+    "postcardGiftStarterItemCandidatesReused": false
+  }
+}

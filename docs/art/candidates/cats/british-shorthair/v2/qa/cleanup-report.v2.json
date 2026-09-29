@@ -1,0 +1,140 @@
+{
+  "inspectedRoot" : "docs/art/candidates/cats/british-shorthair/v2",
+  "policy" : "Only wrong-viewport 320x693 outputs and the compiled temporary executable were removed.",
+  "removed" : [
+    {
+      "bytes" : 419961,
+      "path" : "reviews/matrices/by-width/matrix--320x693--all-identities-and-poses--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315839,
+      "path" : "reviews/viewports/blue-golden-shaded/eat/home-fit--blue-golden-shaded--eat--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316325,
+      "path" : "reviews/viewports/blue-golden-shaded/gaze/home-fit--blue-golden-shaded--gaze--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 317141,
+      "path" : "reviews/viewports/blue-golden-shaded/play/home-fit--blue-golden-shaded--play--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316891,
+      "path" : "reviews/viewports/blue-golden-shaded/sit/home-fit--blue-golden-shaded--sit--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315816,
+      "path" : "reviews/viewports/blue-golden-shaded/sleep/home-fit--blue-golden-shaded--sleep--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316189,
+      "path" : "reviews/viewports/blue-golden-shaded/walk/home-fit--blue-golden-shaded--walk--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315329,
+      "path" : "reviews/viewports/blue-white-bicolor/eat/home-fit--blue-white-bicolor--eat--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315579,
+      "path" : "reviews/viewports/blue-white-bicolor/gaze/home-fit--blue-white-bicolor--gaze--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316025,
+      "path" : "reviews/viewports/blue-white-bicolor/play/home-fit--blue-white-bicolor--play--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315710,
+      "path" : "reviews/viewports/blue-white-bicolor/sit/home-fit--blue-white-bicolor--sit--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315197,
+      "path" : "reviews/viewports/blue-white-bicolor/sleep/home-fit--blue-white-bicolor--sleep--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315413,
+      "path" : "reviews/viewports/blue-white-bicolor/walk/home-fit--blue-white-bicolor--walk--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315662,
+      "path" : "reviews/viewports/golden-shaded/eat/home-fit--golden-shaded--eat--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316019,
+      "path" : "reviews/viewports/golden-shaded/gaze/home-fit--golden-shaded--gaze--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316056,
+      "path" : "reviews/viewports/golden-shaded/play/home-fit--golden-shaded--play--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316535,
+      "path" : "reviews/viewports/golden-shaded/sit/home-fit--golden-shaded--sit--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315741,
+      "path" : "reviews/viewports/golden-shaded/sleep/home-fit--golden-shaded--sleep--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315462,
+      "path" : "reviews/viewports/golden-shaded/walk/home-fit--golden-shaded--walk--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 314782,
+      "path" : "reviews/viewports/solid-blue/eat/home-fit--solid-blue--eat--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315740,
+      "path" : "reviews/viewports/solid-blue/gaze/home-fit--solid-blue--gaze--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315772,
+      "path" : "reviews/viewports/solid-blue/play/home-fit--solid-blue--play--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 316341,
+      "path" : "reviews/viewports/solid-blue/sit/home-fit--solid-blue--sit--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315015,
+      "path" : "reviews/viewports/solid-blue/sleep/home-fit--solid-blue--sleep--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 315177,
+      "path" : "reviews/viewports/solid-blue/walk/home-fit--solid-blue--walk--320x693--non-shipping-v02.png",
+      "reason" : "invalid failed-attempt viewport; required viewport is 320x700"
+    },
+    {
+      "bytes" : 302768,
+      "path" : "tools/.build-acceptance-supplement",
+      "reason" : "compiled build artifact"
+    }
+  ],
+  "removedCount" : 26,
+  "retainedValidPartialCompositeCount" : 40,
+  "schemaVersion" : 2,
+  "status" : "NON-SHIPPING / ACCEPTANCE-EVIDENCE-ONLY"
+}

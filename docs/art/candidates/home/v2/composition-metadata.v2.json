@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "coordinateConvention": {
+    "units": "pixels",
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "origin": "top-left",
+    "axes": {
+      "x": "increases rightward",
+      "y": "increases downward"
+    },
+    "bounds": "x and y identify the top-left corner; width extends right and height extends down",
+    "polygon": "ordered [x, y] vertices in canvas pixels",
+    "catAnchor": "bottom-center point for the future cat overlay",
+    "safeBounds": "art-placement envelope ending above the bottom navigation reserve"
+  },
+  "sharedComposition": {
+    "id": "home-hybrid-v2-locked",
+    "identicalAcrossStates": true,
+    "catAnchor": {
+      "x": 690,
+      "y": 1395
+    },
+    "windowsillBounds": {
+      "x": 260,
+      "y": 960,
+      "width": 500,
+      "height": 90
+    },
+    "awayNoteBounds": {
+      "x": 730,
+      "y": 230,
+      "width": 330,
+      "height": 420
+    },
+    "safeBounds": {
+      "x": 48,
+      "y": 48,
+      "width": 1104,
+      "height": 1392
+    },
+    "bottomNavigationReserveBounds": {
+      "x": 0,
+      "y": 1470,
+      "width": 1200,
+      "height": 130
+    },
+    "windowPlateBounds": {
+      "x": 0,
+      "y": 105,
+      "width": 598,
+      "height": 825
+    },
+    "windowMask": {
+      "featherRadius": 7,
+      "polygons": [
+        [
+          [0, 105],
+          [62, 105],
+          [62, 930],
+          [0, 930]
+        ],
+        [
+          [116, 105],
+          [598, 105],
+          [598, 930],
+          [116, 930]
+        ]
+      ],
+      "excludedStructure": "The bamboo blind, vertical mullion, right frame, and wooden sill are outside the mask."
+    }
+  },
+  "pipeline": {
+    "geometrySource": "home-room--hybrid-reference-noon--non-shipping-v02.png",
+    "neutralReferenceEqualsNoonPreview": true,
+    "perStateResizeCropOrRegeneration": false,
+    "method": "All states use one 1200x1600 master. Deterministic RGB color grading is applied to the full room, then a graded exterior is composited through the same feathered window mask. No geometry, furniture, camera, crop, or anchor transform changes by state.",
+    "colorProfile": "sRGB",
+    "pngMode": "RGB"
+  },
+  "states": [
+    {
+      "id": "morning",
+      "file": "home-room--state-morning--non-shipping-v02.png",
+      "compositionRef": "home-hybrid-v2-locked",
+      "grade": "pale warm paper light, cool sage shadow bias, low contrast"
+    },
+    {
+      "id": "noon",
+      "file": "home-room--state-noon--non-shipping-v02.png",
+      "compositionRef": "home-hybrid-v2-locked",
+      "grade": "neutral-warm unmodified master with clearest exterior"
+    },
+    {
+      "id": "dusk",
+      "file": "home-room--state-dusk--non-shipping-v02.png",
+      "compositionRef": "home-hybrid-v2-locked",
+      "grade": "muted dusty peach, ochre, and gray-lavender"
+    },
+    {
+      "id": "late-night",
+      "file": "home-room--state-late-night--non-shipping-v02.png",
+      "compositionRef": "home-hybrid-v2-locked",
+      "grade": "deep desaturated blue-gray and ink-sage with readable landscape silhouette"
+    }
+  ]
+}

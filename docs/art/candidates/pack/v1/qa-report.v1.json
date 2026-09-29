@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "automatedChecks": {
+    "allTransparentPixelRgbZero": true,
+    "allSourceAndLayerFilesRgba": true,
+    "allHaveSoftAlphaEdges": true,
+    "files": [
+      {
+        "path": "masters/pack-opened-base--master-1536--non-shipping-v01.png",
+        "width": 1536,
+        "height": 1536,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 21932,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 187,
+          "top": 73,
+          "right": 242,
+          "bottom": 142
+        }
+      },
+      {
+        "path": "masters/pack-opened-foreground-rim--master-1536--non-shipping-v01.png",
+        "width": 1536,
+        "height": 1536,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 14003,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 187,
+          "top": 709,
+          "right": 242,
+          "bottom": 142
+        }
+      },
+      {
+        "path": "source/pack-opened-source-generated-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 705,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 127,
+          "top": 51,
+          "right": 164,
+          "bottom": 97
+        }
+      },
+      {
+        "path": "runtime/pack-opened-base--css-342--non-shipping-v01.png",
+        "width": 342,
+        "height": 342,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 3202,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 40,
+          "top": 14,
+          "right": 52,
+          "bottom": 30
+        }
+      },
+      {
+        "path": "runtime/pack-opened-base--css-382--non-shipping-v01.png",
+        "width": 382,
+        "height": 382,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 3660,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 45,
+          "top": 16,
+          "right": 59,
+          "bottom": 34
+        }
+      },
+      {
+        "path": "runtime/pack-opened-foreground-rim--css-342--non-shipping-v01.png",
+        "width": 342,
+        "height": 342,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 2370,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 40,
+          "top": 156,
+          "right": 52,
+          "bottom": 30
+        }
+      },
+      {
+        "path": "runtime/pack-opened-foreground-rim--css-382--non-shipping-v01.png",
+        "width": 382,
+        "height": 382,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "partialAlphaPixelCount": 2622,
+        "transparentPixelRgbZero": true,
+        "contentPadding": {
+          "left": 45,
+          "top": 175,
+          "right": 59,
+          "bottom": 34
+        }
+      }
+    ]
+  },
+  "visualChecks": [
+    {
+      "check": "alpha edges",
+      "result": "pass-with-human-approval-pending",
+      "finding": "Neutral generator checker matte removed; soft partial-alpha perimeter retained; no paper rectangle remains."
+    },
+    {
+      "check": "pocket and item occlusion",
+      "result": "pass",
+      "finding": "Review item bottoms are restored behind the generated front shell/rim layer."
+    },
+    {
+      "check": "physical depth",
+      "result": "pass",
+      "finding": "Raised flap, back lining, stitched dividers, deep center pocket, side sleeves and front shell establish a coherent cavity."
+    },
+    {
+      "check": "mobile legibility",
+      "result": "pass",
+      "finding": "Bag silhouette, three slots and populated-item separation remain readable at 342 px and 382 px."
+    },
+    {
+      "check": "safe areas",
+      "result": "pass",
+      "finding": "Transparent padding survives both derivatives; upper-right count reserve and lower text reserve do not intersect critical buckles or slots."
+    },
+    {
+      "check": "v3 navigation consistency",
+      "result": "pass-with-human-approval-pending",
+      "finding": "Sage shell, tan flap, twin leather straps, brass buckles and left blanket roll match the approved closed satchel family."
+    },
+    {
+      "check": "source art exclusions",
+      "result": "pass",
+      "finding": "Masters and runtime derivatives contain no text, numbers, labels, emoji, UI, watermark, cat, landmark, postcard content or product item art."
+    }
+  ],
+  "reviewOnlyItemProxies": {
+    "source": "docs/art/candidates/calibration/calibration-non-final--item-board--starter-set--candidate-a--v01.png",
+    "usedIn": [
+      "populated reviews",
+      "selected-inline-detail reviews",
+      "overflow-scroll reviews",
+      "contact/layer sheet"
+    ],
+    "emittedAsStandaloneAssets": false,
+    "items": [
+      "yarn-ball",
+      "ticket",
+      "small-camera"
+    ]
+  },
+  "knownLimitations": [
+    "The source was generated at 1024×1024; 1536×1536 masters are deterministic upscales for review, not approved production redraws.",
+    "The app does not currently render item imageSrc in pack cards and has no standalone selected-item/detail state.",
+    "Review composites propose where the opened bag could sit; no application integration or CSS change has been made.",
+    "Final approval must inspect any remaining fringe color against the intended drawer paper and dark backdrop before promotion."
+  ],
+  "approval": {
+    "decision": "pending",
+    "reviewer": "",
+    "reviewedAt": "",
+    "notes": ""
+  }
+}

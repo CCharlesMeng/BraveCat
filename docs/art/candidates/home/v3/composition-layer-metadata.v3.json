@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 3,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "sourceDirection": {
+    "approvedReviewSource": "../v2/home-room--hybrid-reference-noon--non-shipping-v02.png",
+    "compositionId": "home-hybrid-v2-locked",
+    "style": "candidate-b restrained watercolor rendering with candidate-a broad countryside window"
+  },
+  "coordinateConvention": {
+    "units": "pixels",
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "origin": "top-left",
+    "axes": {
+      "x": "increases rightward",
+      "y": "increases downward"
+    },
+    "bounds": "x and y identify the top-left corner; width extends right and height extends down",
+    "polygon": "ordered [x, y] vertices in canvas pixels",
+    "catAnchor": "bottom-center point for the unchanged Minho overlay"
+  },
+  "sharedComposition": {
+    "identicalAcrossStates": true,
+    "catAnchor": {
+      "x": 690,
+      "y": 1395
+    },
+    "windowsillBounds": {
+      "x": 260,
+      "y": 960,
+      "width": 500,
+      "height": 90
+    },
+    "awayNoteBounds": {
+      "x": 730,
+      "y": 230,
+      "width": 330,
+      "height": 420
+    },
+    "safeBounds": {
+      "x": 48,
+      "y": 48,
+      "width": 1104,
+      "height": 1392
+    },
+    "bottomNavigationReserveBounds": {
+      "x": 0,
+      "y": 1470,
+      "width": 1200,
+      "height": 130
+    },
+    "windowPlateBounds": {
+      "x": 0,
+      "y": 105,
+      "width": 598,
+      "height": 825
+    },
+    "windowMask": {
+      "kind": "binary pane mask",
+      "polygons": [
+        [
+          [0, 105],
+          [62, 105],
+          [62, 930],
+          [0, 930]
+        ],
+        [
+          [116, 105],
+          [598, 105],
+          [598, 930],
+          [116, 930]
+        ]
+      ],
+      "excludedStructure": "The blind, mullion, right frame, sill, furniture, and props remain in the interior/foreground layer."
+    }
+  },
+  "layerFormat": {
+    "canvas": "1200x1600",
+    "format": "PNG",
+    "pixelMode": "RGBA",
+    "colorProfile": "sRGB",
+    "alpha": "straight",
+    "transparentPixelRgb": "zero"
+  },
+  "layerStack": [
+    {
+      "z": 0,
+      "role": "state exterior plate",
+      "blendMode": "normal/source-over",
+      "opacity": 1,
+      "placement": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "z": 1,
+      "role": "neutral interior and foreground",
+      "file": "layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "blendMode": "normal/source-over",
+      "opacity": 1,
+      "placement": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "z": 2,
+      "role": "optional deterministic room-light correction",
+      "blendMode": "normal/source-over",
+      "opacity": 1,
+      "placement": {
+        "x": 0,
+        "y": 0
+      },
+      "note": "No overlay is needed for noon. Morning, dusk, and late night each use one minimal correction overlay."
+    },
+    {
+      "z": 3,
+      "role": "state art and unchanged Minho in application or static review",
+      "note": "Not baked into any layer-ready room source."
+    }
+  ],
+  "states": [
+    {
+      "id": "morning",
+      "exterior": "layers/home-exterior--morning--full-canvas--non-shipping-v03.png",
+      "lightingOverlay": "layers/home-lighting-overlay--morning--non-shipping-v03.png",
+      "flattenedReview": "layers/home-layered-reconstruction--morning--non-shipping-v03.png"
+    },
+    {
+      "id": "noon",
+      "exterior": "layers/home-exterior--noon--full-canvas--non-shipping-v03.png",
+      "lightingOverlay": null,
+      "flattenedReview": "layers/home-layered-reconstruction--noon--non-shipping-v03.png"
+    },
+    {
+      "id": "dusk",
+      "exterior": "layers/home-exterior--dusk--full-canvas--non-shipping-v03.png",
+      "lightingOverlay": "layers/home-lighting-overlay--dusk--non-shipping-v03.png",
+      "flattenedReview": "layers/home-layered-reconstruction--dusk--non-shipping-v03.png"
+    },
+    {
+      "id": "late-night",
+      "exterior": "layers/home-exterior--late-night--full-canvas--non-shipping-v03.png",
+      "lightingOverlay": "layers/home-lighting-overlay--late-night--non-shipping-v03.png",
+      "flattenedReview": "layers/home-layered-reconstruction--late-night--non-shipping-v03.png"
+    }
+  ],
+  "reconstructionValidation": {
+    "comparisonTarget": "the corresponding v2 full-room state",
+    "maxChannelDelta": 0,
+    "meanAbsoluteChannelDelta": 0,
+    "exactPixelPercent": 100,
+    "result": "pass"
+  },
+  "navigationIcons": {
+    "cssEvidence": {
+      "source": "src/app.css",
+      "defaultSlot": {
+        "width": 58,
+        "height": 58
+      },
+      "compactSlot": {
+        "width": 50,
+        "height": 50
+      }
+    },
+    "exportPolicy": {
+      "master": "512x512 RGBA",
+      "runtimeDerivative": "128x128 RGBA",
+      "intendedCssDisplay": "58x58 default, 50x50 compact"
+    },
+    "assets": [
+      {
+        "id": "pack",
+        "master": "icons/nav-icon--pack--master-512--non-shipping-v03.png",
+        "runtimeDerivative": "icons/nav-icon--pack--runtime-128--non-shipping-v03.png"
+      },
+      {
+        "id": "shop",
+        "master": "icons/nav-icon--shop--master-512--non-shipping-v03.png",
+        "runtimeDerivative": "icons/nav-icon--shop--runtime-128--non-shipping-v03.png"
+      },
+      {
+        "id": "album",
+        "master": "icons/nav-icon--album--master-512--non-shipping-v03.png",
+        "runtimeDerivative": "icons/nav-icon--album--runtime-128--non-shipping-v03.png"
+      }
+    ]
+  },
+  "stateArt": {
+    "driedFishReward": {
+      "master": "state-art/dried-fish-reward--master-512--non-shipping-v03.png",
+      "runtimeDerivative": "state-art/dried-fish-reward--runtime-128--non-shipping-v03.png",
+      "reviewPlacement": {
+        "x": 400,
+        "y": 850,
+        "width": 210,
+        "height": 210
+      }
+    },
+    "awayNote": {
+      "master": "state-art/away-note--blank--master-512x640--non-shipping-v03.png",
+      "reviewPlacement": {
+        "x": 730,
+        "y": 230,
+        "width": 330,
+        "height": 420
+      },
+      "bakedText": false
+    },
+    "contactShadow": {
+      "created": false,
+      "necessary": false,
+      "reason": "The unchanged sleep pose visibly rests on the woven rug at both reviewed viewport widths; no gap or floating silhouette was observed."
+    }
+  },
+  "minhoStaticReview": {
+    "source": "public/portraits/minho/portrait--minho--sleep--v01.png",
+    "sourceModified": false,
+    "canvasRect": {
+      "x": 480,
+      "y": 1001,
+      "width": 420,
+      "height": 420
+    },
+    "bottomCenterAnchor": {
+      "x": 690,
+      "y": 1395
+    }
+  },
+  "mobileReview": {
+    "layoutEvidence": {
+      "topbarHeight": 82,
+      "homeNavigationHeight": 112,
+      "statusLineHeight": 34,
+      "roomSizing": "remaining flex height with non-distorting cover crop"
+    },
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 430,
+        "height": 932
+      }
+    ],
+    "states": [
+      "at-home",
+      "away",
+      "collectible-ready"
+    ],
+    "reviewOnlyText": "Away-note copy, collection label, navigation labels, status copy, and NON-SHIPPING marks appear only in static review composites."
+  }
+}

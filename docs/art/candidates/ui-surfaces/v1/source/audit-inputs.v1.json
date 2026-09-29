@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-04",
+  "assetNeedId": "AA-017",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "readInputs": [
+    "docs/art/candidates/asset-audit/v1/README.md#AA-017",
+    "docs/art/candidates/asset-audit/v1/asset-audit.v1.json#AA-017",
+    "src/app.css",
+    "src/lib/postcards/Postcard.svelte",
+    "docs/art/calibration-production-v1.md",
+    "docs/art/prompt-pack.calibration.v1.json"
+  ],
+  "cssTextureInventory": [
+    {
+      "file": "src/app.css",
+      "lines": "31-34",
+      "selector": "body",
+      "treatment": "large radial ambient wash over sage base",
+      "classification": "surface-adjacent"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "54-58",
+      "selector": ".app-shell",
+      "treatment": "6px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "67-69",
+      "selector": ".adoption-shell",
+      "treatment": "6px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "113-115",
+      "selector": ".adoption-portrait",
+      "treatment": "radial support wash plus vertical hard gradient",
+      "classification": "presentation surface; candidate may support later use"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "277-279",
+      "selector": ".room",
+      "treatment": "vertical hard gradient over 7px radial dots",
+      "classification": "illustrated wall surface; AA-017 evidence"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "289-297",
+      "selector": ".room::after",
+      "treatment": "repeating linear floor-board marks",
+      "classification": "room illustration geometry; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "301-309",
+      "selector": ".sunwash",
+      "treatment": "directional linear light gradient",
+      "classification": "directional lighting; forbidden in GEN-04 source"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "329-331",
+      "selector": ".window-sky",
+      "treatment": "sun radial plus sky linear gradient",
+      "classification": "room illustration geometry; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "340-344",
+      "selector": ".window-sky::after",
+      "treatment": "radial foliage shapes plus branch line",
+      "classification": "room illustration geometry; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "370-374",
+      "selector": ".hill-front",
+      "treatment": "radial hill shapes",
+      "classification": "room illustration geometry; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "411-413",
+      "selector": ".windowsill",
+      "treatment": "repeating linear wood marks",
+      "classification": "room illustration geometry; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "600-602",
+      "selector": ".cushion",
+      "treatment": "6px radial-dot upholstery grain",
+      "classification": "object surface; excluded from shared paper"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "615-617",
+      "selector": ".departure-note",
+      "treatment": "6px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "660-663",
+      "selector": ".cat-body",
+      "treatment": "radial coat patches",
+      "classification": "object rendering; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "676-677",
+      "selector": ".cat-tail",
+      "treatment": "linear coat patch",
+      "classification": "object rendering; excluded"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "822-824",
+      "selector": ".nav-icon",
+      "treatment": "5px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "877-879",
+      "selector": ".drawer",
+      "treatment": "6px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/app.css",
+      "lines": "1044-1046",
+      "selector": ".item-token",
+      "treatment": "5px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/lib/postcards/Postcard.svelte",
+      "lines": "60-62",
+      "selector": ".postcard",
+      "treatment": "6px radial-dot paper grain",
+      "classification": "GEN-04 replacement target"
+    },
+    {
+      "file": "src/lib/postcards/Postcard.svelte",
+      "lines": "92-95",
+      "selector": ".non-shipping-preview",
+      "treatment": "three hard scene gradients",
+      "classification": "illustrative fallback; excluded"
+    }
+  ],
+  "styleReferences": [
+    {
+      "path": "docs/art/style-ref-home.png",
+      "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe",
+      "usage": "style-only: warm off-white paper grain, quiet negative space",
+      "width": 1024,
+      "height": 1536,
+      "pixelMode": "RGB"
+    },
+    {
+      "path": "docs/art/style-ref-postcard.png",
+      "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b",
+      "usage": "style-only: restrained paper grain and low contrast",
+      "width": 1536,
+      "height": 1024,
+      "pixelMode": "RGB"
+    },
+    {
+      "path": "docs/art/style-ref-poses.png",
+      "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110",
+      "usage": "style-only: warm paper and gentle granulation",
+      "width": 1536,
+      "height": 1024,
+      "pixelMode": "RGB"
+    },
+    {
+      "path": "docs/art/candidates/style-intensity/style-intensity-B-reference-calibration-non-final-20260720.png",
+      "sha256": "2880477f7e073aa9a3c387f5b413bf6ed804074be44103a24fdf796caaced3c4",
+      "usage": "locked B intensity only; no subjects or composition reused",
+      "width": 1024,
+      "height": 1536,
+      "pixelMode": "RGB"
+    }
+  ],
+  "lockedDirection": {
+    "styleIntensity": "B",
+    "paper": "subtle warm-white paper texture",
+    "palette": [
+      "low-saturation sage",
+      "ochre",
+      "faded vermilion",
+      "warm gray-brown"
+    ],
+    "contrast": "restrained",
+    "negativeSpace": "generous"
+  },
+  "accessibilityColorInventory": {
+    "body": [
+      {
+        "color": "#4f5144",
+        "source": "src/app.css:5,9",
+        "usage": "root body and inherited button text"
+      }
+    ],
+    "captions": [
+      {
+        "color": "#7c7d6d",
+        "source": "src/app.css:10 and --ink-soft uses"
+      },
+      {
+        "color": "#838273",
+        "source": "src/lib/postcards/Postcard.svelte:130"
+      },
+      {
+        "color": "#898878",
+        "source": "src/app.css:841"
+      }
+    ],
+    "buttonsAndGlyphs": [
+      {
+        "foreground": "#4f5144",
+        "background": "#dce5ce",
+        "source": "src/app.css:173-181"
+      },
+      {
+        "foreground": "#4f5144",
+        "background": "rgba(228,234,216,0.82)",
+        "source": "src/app.css:984-995"
+      },
+      {
+        "foreground": "#4f5144",
+        "background": "rgba(255,252,241,0.74)",
+        "source": "src/app.css:999-1003,1120-1122"
+      },
+      {
+        "foreground": "#4f5144",
+        "background": "#e4ead8",
+        "source": "src/app.css:1108-1118"
+      },
+      {
+        "foreground": "#69775c",
+        "background": "#f8f3e6",
+        "source": "src/app.css:822-827",
+        "usage": "navigation icon glyph"
+      }
+    ],
+    "currentPaperBases": [
+      "#f6f0df",
+      "#f7f0df",
+      "#f8efd8",
+      "#f7edcf",
+      "#f8f3e6",
+      "#eee7d3"
+    ]
+  }
+}

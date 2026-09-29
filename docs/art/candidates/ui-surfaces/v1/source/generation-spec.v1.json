@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-04",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "method": "seeded procedural periodic spectral synthesis; no generated screen illustration and no source-reference pixels",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0"
+  },
+  "seeds": {
+    "paper_low": 202607210401,
+    "paper_mid": 202607210402,
+    "paper_fine": 202607210403,
+    "wash_low": 202607210411,
+    "wash_mid": 202607210412,
+    "wash_granulation": 202607210413,
+    "wash_color": 202607210414
+  },
+  "colorManagement": {
+    "profile": "embedded sRGB",
+    "profileBytesSource": "public/portraits/minho/portrait--minho--sit--v01.png",
+    "profileSha256": "0e83a2730129b08973734395f2b5440a2eef81f9be3657424caa974d99baa2e2",
+    "reason": "fixed tracked profile bytes keep rebuilds deterministic"
+  },
+  "masters": {
+    "paper": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "embedded sRGB",
+      "baseRgb": [
+        253,
+        250,
+        243
+      ],
+      "originSelection": {
+        "cutX": 855,
+        "cutY": 821
+      }
+    },
+    "sageWash": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "straight-alpha RGBA",
+      "colorSpace": "embedded sRGB",
+      "baseRgb": [
+        135,
+        155,
+        112
+      ],
+      "alphaRangeTarget": [
+        0,
+        10
+      ],
+      "originSelection": {
+        "cutX": 111,
+        "cutY": 100
+      }
+    }
+  },
+  "edgeTreatment": {
+    "periodicSynthesis": "All fields are filtered on the FFT integer-frequency lattice, so opposite edges are adjacent samples of one torus.",
+    "deterministicCut": "The row and column cuts with the lowest wrap-neighbor energy are moved to the exported origin.",
+    "runtimeDownsampling": "An exact 2x2 toroidal block mean creates the 512px 1x candidate; the 1024px master is the 2x candidate. RGBA is averaged in premultiplied space then returned to straight alpha.",
+    "runtimeEncoding": "lossless WebP with decoded-pixel equality checks"
+  },
+  "contentExclusions": [
+    "objects",
+    "borders",
+    "directional lighting",
+    "text",
+    "recognizable motifs",
+    "hard gradients",
+    "repeated high-contrast dots",
+    "watermarks"
+  ],
+  "intendedUse": "Reusable shell, drawer, card, token, note, and postcard surfaces after separate human approval and later integration.",
+  "integrationPerformed": false
+}

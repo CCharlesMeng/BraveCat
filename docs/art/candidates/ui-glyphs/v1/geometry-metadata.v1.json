@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "utility-glyph-family-v1",
+  "batchId": "GEN-05",
+  "assetNeedId": "AA-018",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "canonicalSource": {
+    "format": "SVG",
+    "viewBox": [
+      0,
+      0,
+      24,
+      24
+    ],
+    "paint": "currentColor",
+    "fill": "none",
+    "strokeWidth": 1.75,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "background": "transparent"
+  },
+  "opticalSystem": {
+    "intendedGlyphDisplayPx": [
+      20,
+      24
+    ],
+    "exportedDerivativePx": [
+      24,
+      32
+    ],
+    "masterPreviewPx": 128,
+    "canonicalOrder": [
+      "close",
+      "export",
+      "import",
+      "lock",
+      "retry"
+    ],
+    "sharedStrokeWeight": true,
+    "internalWhitespace": "approximately 4-5 viewBox units around critical marks",
+    "touchTargetProofCssPx": 44,
+    "currentControlsRead": {
+      "drawerCloseCssPx": [
+        38,
+        38
+      ],
+      "saveTransferMinHeightCssPx": 38,
+      "itemActionMinWidthCssPx": 62
+    },
+    "integrationRecommendation": "Keep the glyph at 20-24 CSS px inside a target of at least 44 CSS px when layout permits; do not encode the target in the SVG."
+  },
+  "paletteReference": {
+    "canonicalSvg": "no literal color; inherits currentColor",
+    "neutralPreview": "#5f5b4e",
+    "homeInk": "#4f5144",
+    "paper": "#f6f0df",
+    "paperDeep": "#ebe0c9",
+    "focusCss": "rgba(102, 125, 78, 0.45)",
+    "disabledCssOpacity": 0.52,
+    "errorCss": "#9b5f50"
+  },
+  "proofLayout": {
+    "glyphOrderLeftToRight": [
+      "close",
+      "export",
+      "import",
+      "lock",
+      "retry"
+    ],
+    "legibilitySheetRowsTopToBottom": [
+      "24px in 44px target",
+      "32px in 44px target"
+    ],
+    "opticalWeightRowsTopToBottom": [
+      "24px derivative enlarged 5x nearest-neighbor",
+      "32px derivative enlarged 4x nearest-neighbor"
+    ],
+    "contrastRowsTopToBottom": [
+      "dark glyph on warm-light paper",
+      "light glyph on dark paper"
+    ],
+    "stateTintRowsTopToBottom": [
+      "focus at 2x CSS scale",
+      "disabled at 2x CSS scale",
+      "error at 2x CSS scale"
+    ]
+  },
+  "glyphs": [
+    {
+      "id": "glyph-close",
+      "purpose": "drawer close",
+      "semanticCue": "two equal crossing diagonals",
+      "source": "sources/glyph-close--source--non-shipping-v01.svg",
+      "masterPreview": "masters/glyph-close--master-preview--non-shipping-v01.png",
+      "derivatives": {
+        "32px": "runtime/glyph-close--32--non-shipping-v01.png",
+        "24px": "runtime/glyph-close--24--non-shipping-v01.png"
+      },
+      "designBoundsInViewBox": {
+        "left": 5.375,
+        "top": 5.375,
+        "right": 18.625,
+        "bottom": 18.625,
+        "width": 13.25,
+        "height": 13.25
+      },
+      "linearCoordinateGrid": 0.25,
+      "linearGridAligned": true,
+      "allowedComponentCountsAtAlpha32": [
+        1
+      ],
+      "curveAlignmentNote": null,
+      "rasterMetrics": {
+        "20px": {
+          "bounds": {
+            "left": 4,
+            "top": 4,
+            "right": 15,
+            "bottom": 15,
+            "width": 12,
+            "height": 12,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 4,
+            "top": 4,
+            "right": 15,
+            "bottom": 15,
+            "width": 12,
+            "height": 12,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 44,
+          "opaquePixelCount": 20,
+          "equivalentInkPixels": 44.22,
+          "canvasCoverage": 0.110549,
+          "centerOfMass": {
+            "x": 9.5,
+            "y": 9.5
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            64
+          ]
+        },
+        "24px": {
+          "bounds": {
+            "left": 5,
+            "top": 5,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 14,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 5,
+            "top": 5,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 14,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 52,
+          "opaquePixelCount": 24,
+          "equivalentInkPixels": 53.21,
+          "canvasCoverage": 0.092375,
+          "centerOfMass": {
+            "x": 11.5,
+            "y": 11.5
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            76
+          ]
+        },
+        "32px": {
+          "bounds": {
+            "left": 7,
+            "top": 7,
+            "right": 24,
+            "bottom": 24,
+            "width": 18,
+            "height": 18,
+            "padding": {
+              "left": 7,
+              "top": 7,
+              "right": 7,
+              "bottom": 7
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 7,
+            "top": 7,
+            "right": 24,
+            "bottom": 24,
+            "width": 18,
+            "height": 18,
+            "padding": {
+              "left": 7,
+              "top": 7,
+              "right": 7,
+              "bottom": 7
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 124,
+          "opaquePixelCount": 32,
+          "equivalentInkPixels": 102.53,
+          "canvasCoverage": 0.100123,
+          "centerOfMass": {
+            "x": 15.5,
+            "y": 15.5
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            156
+          ]
+        },
+        "128px": {
+          "bounds": {
+            "left": 28,
+            "top": 28,
+            "right": 99,
+            "bottom": 99,
+            "width": 72,
+            "height": 72,
+            "padding": {
+              "left": 28,
+              "top": 28,
+              "right": 28,
+              "bottom": 28
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 28,
+            "top": 28,
+            "right": 99,
+            "bottom": 99,
+            "width": 72,
+            "height": 72,
+            "padding": {
+              "left": 28,
+              "top": 28,
+              "right": 28,
+              "bottom": 28
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 496,
+          "opaquePixelCount": 1400,
+          "equivalentInkPixels": 1647.12,
+          "canvasCoverage": 0.100532,
+          "centerOfMass": {
+            "x": 63.5,
+            "y": 63.5
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            1672
+          ]
+        }
+      }
+    },
+    {
+      "id": "glyph-export",
+      "purpose": "save export",
+      "semanticCue": "upward arrow leaving a shared open tray",
+      "source": "sources/glyph-export--source--non-shipping-v01.svg",
+      "masterPreview": "masters/glyph-export--master-preview--non-shipping-v01.png",
+      "derivatives": {
+        "32px": "runtime/glyph-export--32--non-shipping-v01.png",
+        "24px": "runtime/glyph-export--24--non-shipping-v01.png"
+      },
+      "designBoundsInViewBox": {
+        "left": 4.625,
+        "top": 4.375,
+        "right": 19.375,
+        "bottom": 19.125,
+        "width": 14.75,
+        "height": 14.75
+      },
+      "linearCoordinateGrid": 0.25,
+      "linearGridAligned": true,
+      "allowedComponentCountsAtAlpha32": [
+        2
+      ],
+      "curveAlignmentNote": null,
+      "rasterMetrics": {
+        "20px": {
+          "bounds": {
+            "left": 3,
+            "top": 3,
+            "right": 16,
+            "bottom": 15,
+            "width": 14,
+            "height": 13,
+            "padding": {
+              "left": 3,
+              "top": 3,
+              "right": 3,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 3,
+            "top": 4,
+            "right": 16,
+            "bottom": 15,
+            "width": 14,
+            "height": 12,
+            "padding": {
+              "left": 3,
+              "top": 4,
+              "right": 3,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 64,
+          "opaquePixelCount": 18,
+          "equivalentInkPixels": 49.89,
+          "canvasCoverage": 0.124725,
+          "centerOfMass": {
+            "x": 9.5,
+            "y": 10.492
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            42,
+            34
+          ]
+        },
+        "24px": {
+          "bounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 64,
+          "opaquePixelCount": 44,
+          "equivalentInkPixels": 73.4,
+          "canvasCoverage": 0.127437,
+          "centerOfMass": {
+            "x": 11.5,
+            "y": 12.866
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            62,
+            40
+          ]
+        },
+        "32px": {
+          "bounds": {
+            "left": 6,
+            "top": 5,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 21,
+            "padding": {
+              "left": 6,
+              "top": 5,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 6,
+            "top": 6,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 20,
+            "padding": {
+              "left": 6,
+              "top": 6,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 120,
+          "opaquePixelCount": 68,
+          "equivalentInkPixels": 125.8,
+          "canvasCoverage": 0.122855,
+          "centerOfMass": {
+            "x": 15.5,
+            "y": 16.964
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            90,
+            88
+          ]
+        },
+        "128px": {
+          "bounds": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 368,
+          "opaquePixelCount": 1824,
+          "equivalentInkPixels": 2008.67,
+          "canvasCoverage": 0.122599,
+          "centerOfMass": {
+            "x": 63.5,
+            "y": 69.69
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            1162,
+            964
+          ]
+        }
+      }
+    },
+    {
+      "id": "glyph-import",
+      "purpose": "save import",
+      "semanticCue": "downward arrow entering the same open tray",
+      "source": "sources/glyph-import--source--non-shipping-v01.svg",
+      "masterPreview": "masters/glyph-import--master-preview--non-shipping-v01.png",
+      "derivatives": {
+        "32px": "runtime/glyph-import--32--non-shipping-v01.png",
+        "24px": "runtime/glyph-import--24--non-shipping-v01.png"
+      },
+      "designBoundsInViewBox": {
+        "left": 4.625,
+        "top": 4.375,
+        "right": 19.375,
+        "bottom": 19.125,
+        "width": 14.75,
+        "height": 14.75
+      },
+      "linearCoordinateGrid": 0.25,
+      "linearGridAligned": true,
+      "allowedComponentCountsAtAlpha32": [
+        2
+      ],
+      "curveAlignmentNote": null,
+      "rasterMetrics": {
+        "20px": {
+          "bounds": {
+            "left": 3,
+            "top": 3,
+            "right": 16,
+            "bottom": 15,
+            "width": 14,
+            "height": 13,
+            "padding": {
+              "left": 3,
+              "top": 3,
+              "right": 3,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 3,
+            "top": 4,
+            "right": 16,
+            "bottom": 15,
+            "width": 14,
+            "height": 12,
+            "padding": {
+              "left": 3,
+              "top": 4,
+              "right": 3,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 66,
+          "opaquePixelCount": 18,
+          "equivalentInkPixels": 50.51,
+          "canvasCoverage": 0.126275,
+          "centerOfMass": {
+            "x": 9.5,
+            "y": 11.293
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            42,
+            30
+          ]
+        },
+        "24px": {
+          "bounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 64,
+          "opaquePixelCount": 44,
+          "equivalentInkPixels": 73.91,
+          "canvasCoverage": 0.128309,
+          "centerOfMass": {
+            "x": 11.5,
+            "y": 13.702
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            62,
+            42
+          ]
+        },
+        "32px": {
+          "bounds": {
+            "left": 6,
+            "top": 5,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 21,
+            "padding": {
+              "left": 6,
+              "top": 5,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 6,
+            "top": 6,
+            "right": 25,
+            "bottom": 25,
+            "width": 20,
+            "height": 20,
+            "padding": {
+              "left": 6,
+              "top": 6,
+              "right": 6,
+              "bottom": 6
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 118,
+          "opaquePixelCount": 72,
+          "equivalentInkPixels": 126.78,
+          "canvasCoverage": 0.123813,
+          "centerOfMass": {
+            "x": 15.5,
+            "y": 18.275
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            88,
+            82
+          ]
+        },
+        "128px": {
+          "bounds": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 24,
+            "top": 23,
+            "right": 103,
+            "bottom": 101,
+            "width": 80,
+            "height": 79,
+            "padding": {
+              "left": 24,
+              "top": 23,
+              "right": 24,
+              "bottom": 26
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 324,
+          "opaquePixelCount": 1856,
+          "equivalentInkPixels": 2021.11,
+          "canvasCoverage": 0.123359,
+          "centerOfMass": {
+            "x": 63.5,
+            "y": 75.033
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            1162,
+            1004
+          ]
+        }
+      }
+    },
+    {
+      "id": "glyph-lock",
+      "purpose": "traveling Pack locked",
+      "semanticCue": "closed shackle, enclosed body, and short keyway",
+      "source": "sources/glyph-lock--source--non-shipping-v01.svg",
+      "masterPreview": "masters/glyph-lock--master-preview--non-shipping-v01.png",
+      "derivatives": {
+        "32px": "runtime/glyph-lock--32--non-shipping-v01.png",
+        "24px": "runtime/glyph-lock--24--non-shipping-v01.png"
+      },
+      "designBoundsInViewBox": {
+        "left": 5.625,
+        "top": 4.125,
+        "right": 18.375,
+        "bottom": 19.125,
+        "width": 12.75,
+        "height": 15.0
+      },
+      "linearCoordinateGrid": 0.25,
+      "linearGridAligned": true,
+      "allowedComponentCountsAtAlpha32": [
+        1,
+        2
+      ],
+      "curveAlignmentNote": null,
+      "rasterMetrics": {
+        "20px": {
+          "bounds": {
+            "left": 4,
+            "top": 3,
+            "right": 15,
+            "bottom": 15,
+            "width": 12,
+            "height": 13,
+            "padding": {
+              "left": 4,
+              "top": 3,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 4,
+            "top": 3,
+            "right": 15,
+            "bottom": 15,
+            "width": 12,
+            "height": 13,
+            "padding": {
+              "left": 4,
+              "top": 3,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 71,
+          "opaquePixelCount": 35,
+          "equivalentInkPixels": 61.11,
+          "canvasCoverage": 0.152765,
+          "centerOfMass": {
+            "x": 9.514,
+            "y": 9.794
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            98
+          ]
+        },
+        "24px": {
+          "bounds": {
+            "left": 5,
+            "top": 4,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 15,
+            "padding": {
+              "left": 5,
+              "top": 4,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 5,
+            "top": 4,
+            "right": 18,
+            "bottom": 18,
+            "width": 14,
+            "height": 15,
+            "padding": {
+              "left": 5,
+              "top": 4,
+              "right": 5,
+              "bottom": 5
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 84,
+          "opaquePixelCount": 44,
+          "equivalentInkPixels": 89.01,
+          "canvasCoverage": 0.154534,
+          "centerOfMass": {
+            "x": 11.5,
+            "y": 11.789
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            116,
+            6
+          ]
+        },
+        "32px": {
+          "bounds": {
+            "left": 7,
+            "top": 5,
+            "right": 24,
+            "bottom": 25,
+            "width": 18,
+            "height": 21,
+            "padding": {
+              "left": 7,
+              "top": 5,
+              "right": 7,
+              "bottom": 6
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 7,
+            "top": 5,
+            "right": 24,
+            "bottom": 25,
+            "width": 18,
+            "height": 21,
+            "padding": {
+              "left": 7,
+              "top": 5,
+              "right": 7,
+              "bottom": 6
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 124,
+          "opaquePixelCount": 90,
+          "equivalentInkPixels": 156.26,
+          "canvasCoverage": 0.152597,
+          "centerOfMass": {
+            "x": 15.488,
+            "y": 16.033
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            190,
+            16
+          ]
+        },
+        "128px": {
+          "bounds": {
+            "left": 30,
+            "top": 22,
+            "right": 97,
+            "bottom": 101,
+            "width": 68,
+            "height": 80,
+            "padding": {
+              "left": 30,
+              "top": 22,
+              "right": 30,
+              "bottom": 26
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 30,
+            "top": 22,
+            "right": 97,
+            "bottom": 101,
+            "width": 68,
+            "height": 80,
+            "padding": {
+              "left": 30,
+              "top": 22,
+              "right": 30,
+              "bottom": 26
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 434,
+          "opaquePixelCount": 2254,
+          "equivalentInkPixels": 2480.64,
+          "canvasCoverage": 0.151406,
+          "centerOfMass": {
+            "x": 63.507,
+            "y": 65.391
+          },
+          "connectedComponentsAtAlpha32": 2,
+          "componentPixelCountsAtAlpha32": [
+            2518,
+            158
+          ]
+        }
+      }
+    },
+    {
+      "id": "glyph-retry",
+      "purpose": "optional recoverable error",
+      "semanticCue": "single near-complete circular arrow",
+      "source": "sources/glyph-retry--source--non-shipping-v01.svg",
+      "masterPreview": "masters/glyph-retry--master-preview--non-shipping-v01.png",
+      "derivatives": {
+        "32px": "runtime/glyph-retry--32--non-shipping-v01.png",
+        "24px": "runtime/glyph-retry--24--non-shipping-v01.png"
+      },
+      "designBoundsInViewBox": {
+        "left": 4.126,
+        "top": 4.125,
+        "right": 19.375,
+        "bottom": 19.872,
+        "width": 15.249,
+        "height": 15.747
+      },
+      "linearCoordinateGrid": 0.25,
+      "linearGridAligned": true,
+      "allowedComponentCountsAtAlpha32": [
+        1
+      ],
+      "curveAlignmentNote": "Circular arc endpoints are optically fitted; straight arrow anchors remain on the quarter-unit grid.",
+      "rasterMetrics": {
+        "20px": {
+          "bounds": {
+            "left": 3,
+            "top": 3,
+            "right": 16,
+            "bottom": 16,
+            "width": 14,
+            "height": 14,
+            "padding": {
+              "left": 3,
+              "top": 3,
+              "right": 3,
+              "bottom": 3
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 3,
+            "top": 3,
+            "right": 15,
+            "bottom": 16,
+            "width": 13,
+            "height": 14,
+            "padding": {
+              "left": 3,
+              "top": 3,
+              "right": 4,
+              "bottom": 3
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 57,
+          "opaquePixelCount": 30,
+          "equivalentInkPixels": 52.96,
+          "canvasCoverage": 0.132412,
+          "centerOfMass": {
+            "x": 9.182,
+            "y": 9.152
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            72
+          ]
+        },
+        "24px": {
+          "bounds": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 4,
+            "top": 4,
+            "right": 19,
+            "bottom": 19,
+            "width": 16,
+            "height": 16,
+            "padding": {
+              "left": 4,
+              "top": 4,
+              "right": 4,
+              "bottom": 4
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 82,
+          "opaquePixelCount": 34,
+          "equivalentInkPixels": 74.83,
+          "canvasCoverage": 0.129909,
+          "centerOfMass": {
+            "x": 11.11,
+            "y": 11.072
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            96
+          ]
+        },
+        "32px": {
+          "bounds": {
+            "left": 5,
+            "top": 5,
+            "right": 25,
+            "bottom": 26,
+            "width": 21,
+            "height": 22,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 6,
+              "bottom": 5
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 5,
+            "top": 5,
+            "right": 25,
+            "bottom": 26,
+            "width": 21,
+            "height": 22,
+            "padding": {
+              "left": 5,
+              "top": 5,
+              "right": 6,
+              "bottom": 5
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 106,
+          "opaquePixelCount": 86,
+          "equivalentInkPixels": 135.17,
+          "canvasCoverage": 0.132004,
+          "centerOfMass": {
+            "x": 15.026,
+            "y": 14.888
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            181
+          ]
+        },
+        "128px": {
+          "bounds": {
+            "left": 22,
+            "top": 22,
+            "right": 103,
+            "bottom": 105,
+            "width": 82,
+            "height": 84,
+            "padding": {
+              "left": 22,
+              "top": 22,
+              "right": 24,
+              "bottom": 22
+            }
+          },
+          "boundsAtAlpha32": {
+            "left": 22,
+            "top": 22,
+            "right": 103,
+            "bottom": 105,
+            "width": 82,
+            "height": 84,
+            "padding": {
+              "left": 22,
+              "top": 22,
+              "right": 24,
+              "bottom": 22
+            }
+          },
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "partialAlphaPixelCount": 373,
+          "opaquePixelCount": 1976,
+          "equivalentInkPixels": 2161.3,
+          "canvasCoverage": 0.131915,
+          "centerOfMass": {
+            "x": 61.636,
+            "y": 61.111
+          },
+          "connectedComponentsAtAlpha32": 1,
+          "componentPixelCountsAtAlpha32": [
+            2292
+          ]
+        }
+      }
+    }
+  ]
+}

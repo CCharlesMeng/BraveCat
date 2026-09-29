@@ -1,0 +1,13 @@
+606bdb96d48990100be832868e2be6bda6333a12416260c2fbfd38111b2751d6  README.md
+9649d9bedf1c526b89ca76bc78e6f8314f6fa3539d6506ad7eb476da733277ce  asset-layer-metadata.v1.json
+02a66142a94b20ed217ae7f8db47ba83a19f7816354518380440ae55b82a81e5  masters/adoption-welcome-base--master-1200x1600--non-shipping-v01.png
+cd65c71e355f8fc1fb9012d7aa2b57540b75d1688a52cdb8866615258d587386  qa/qa-report.v1.json
+9de7408714e93325c99c5634f8e2bf5dfcf6214195a349920ab3bf2a313861e7  qa/visual-review.v1.md
+6293b884ba97dcf5dad7430ac1dd6e14835e3702f00e8f0c4f4887f104c2b3dc  reviews/adoption-review--320x700--keyboard-open--non-shipping-v01.png
+04ab3c2d14ac0ff9f8bf8951354d9aa4b52deb60f6331030474b8e371d623d83  reviews/adoption-review--320x700--validation-error--non-shipping-v01.png
+d8a5b9ee0eeb1978e010d299bc3679115d2044f437a338e0c4d3b6ac490a9993  reviews/adoption-review--390x844--default--non-shipping-v01.png
+641fded8b735a8c45f0ac7f05eb819ab48edc652e253c28c142a2c202906d0c5  reviews/adoption-review--430x932--success-transition--non-shipping-v01.png
+d20dad0129ed1665e49c7ca20134ccc4e033838fe69f28f29d43e505ef41d0ea  reviews/contact-sheet--adoption-presentation--1200x1600--non-shipping-v01.png
+fcab5cbee45af499f543bb5f17c02a86741ebbe7c59db7b635870884ddf0687d  scripts/build_v1.py
+35d341dcf54547af3dae463665e53ef61d03becb02480dbebf4cb7e472a6cffa  source/adoption-welcome-base--generated-source-1024x1536--v01.png
+5b712140d501e1f226bade3ad65370fda885e3622755f6cdeffbbc3aa9ff47b2  source/generation-brief.v1.json

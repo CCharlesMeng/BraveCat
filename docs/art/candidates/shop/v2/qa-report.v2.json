@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "supersedes": "docs/art/candidates/shop/v1",
+  "reviewedAt": "2026-07-21",
+  "cleanup": {
+    "deterministic": true,
+    "regeneratedAssetIds": [],
+    "designsRetainedFromV1": true,
+    "steps": [
+      "item-specific lower silhouette contour",
+      "five-source-pixel alpha feather",
+      "nearest-interior exterior matte color bleed",
+      "detached alpha-component removal",
+      "telescope lens checker-hole repair from local lens pixels",
+      "zero RGB under zero alpha"
+    ],
+    "metrics": "qa/cleanup-metrics.v2.json"
+  },
+  "machineChecks": {
+    "sourceVerification": {
+      "file": "qa/source-verification.v2.json",
+      "result": "pass",
+      "shopV1HashMismatches": 0,
+      "sharedTreatGlyphHashMatch": true
+    },
+    "generatedValidation": {
+      "file": "qa/generated-validation.v2.json",
+      "result": "pass",
+      "pngCount": 31,
+      "errors": 0,
+      "masterCount": 8,
+      "runtime128Count": 8,
+      "exactReview92Count": 8
+    },
+    "masterContract": {
+      "dimensions": "512x512",
+      "pixelMode": "RGBA",
+      "alphaRange": "0-255",
+      "colorProfile": "embedded sRGB",
+      "fullyTransparentPixelRgb": "zero",
+      "minimumRequiredSafeMargin": 48,
+      "minimumObservedSafeMargin": 56,
+      "result": "pass"
+    },
+    "edgeContract": {
+      "lightFringePixels": 0,
+      "darkFringePixels": 0,
+      "floorOrContactLayerCreated": false,
+      "result": "pass"
+    },
+    "derivativeContract": {
+      "runtimeCandidate": "128x128 RGBA",
+      "exact2xReviewDerivative": "92x92 RGBA for 46x46 CSS",
+      "colorProfile": "embedded sRGB",
+      "fullyTransparentPixelRgb": "zero",
+      "result": "pass"
+    }
+  },
+  "masterSafeMargins": [
+    {
+      "id": "fish-biscuit",
+      "observedMinimumPixels": 85
+    },
+    {
+      "id": "travel-tin",
+      "observedMinimumPixels": 95
+    },
+    {
+      "id": "small-blanket",
+      "observedMinimumPixels": 56
+    },
+    {
+      "id": "yarn-ball",
+      "observedMinimumPixels": 96
+    },
+    {
+      "id": "small-bell",
+      "observedMinimumPixels": 93
+    },
+    {
+      "id": "small-camera",
+      "observedMinimumPixels": 60
+    },
+    {
+      "id": "small-telescope",
+      "observedMinimumPixels": 87
+    },
+    {
+      "id": "ticket",
+      "observedMinimumPixels": 79
+    }
+  ],
+  "visualChecks": {
+    "catalogCoverage": {
+      "result": "pass",
+      "notes": "Exactly the eight current STARTER_ITEMS data keys are present."
+    },
+    "beforeAfterEdges": {
+      "file": "reviews/before-after-edge-sheet--1200x1600--non-shipping-v02.png",
+      "result": "pass",
+      "notes": "The v1 floor/contact remnants are absent from all v2 silhouettes."
+    },
+    "lightDarkSplit": {
+      "file": "reviews/light-dark-split-qa--1200x900--non-shipping-v02.png",
+      "result": "pass",
+      "notes": "No pale floor patch, detached streak, light fringe, or dark fringe appears on either background."
+    },
+    "physicalLegibility46Px": {
+      "file": "qa/legibility--46px--1200x500--non-shipping-v02.png",
+      "result": "pass",
+      "notes": "All eight silhouettes remain identifiable at the actual 46x46 CSS placement on off-white and dark sage."
+    },
+    "minimumWidth320": {
+      "file": "reviews/shop-review--320x700--mixed-affordability--non-shipping-v02.png",
+      "result": "pass",
+      "notes": "Product tokens, wrapped copy, enabled prices, disabled shortfall text, and owned count remain readable."
+    },
+    "commonWidths390And430": {
+      "result": "pass",
+      "files": [
+        "reviews/shop-review--390x844--affordable-owned-top--non-shipping-v02.png",
+        "reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v02.png"
+      ]
+    },
+    "sharedTreatGlyph": {
+      "result": "pass",
+      "notes": "Balance and affordable-price reviews use only the postcard-gifts/v1 dried-fish Treat glyph. No emoji remains."
+    },
+    "accidentalTextOrWatermarkInSources": {
+      "result": "pass",
+      "notes": "No source master contains labels, prices, letters, emoji, logo, signature, watermark, or UI chrome."
+    }
+  },
+  "decision": {
+    "state": "pending-visual-approval",
+    "shippingEligible": false,
+    "approvedAssetIds": [],
+    "nextAction": "Stop for user visual approval. Do not integrate, promote, or commit."
+  }
+}

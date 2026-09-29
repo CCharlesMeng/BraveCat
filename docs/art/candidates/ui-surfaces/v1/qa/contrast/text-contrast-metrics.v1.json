@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "method": "WCAG 2.x relative luminance, sampled per background pixel",
+  "threshold": {
+    "smallTextAa": 4.5,
+    "largeTextAa": 3.0
+  },
+  "entries": [
+    {
+      "id": "body-ink",
+      "role": "body text",
+      "textColor": "#4f5144",
+      "currentBackground": "#f6f0df",
+      "threshold": 4.5,
+      "fontPx": 16,
+      "sample": "Body text remains calm and clear.",
+      "measurements": {
+        "currentFlat": {
+          "minimum": 7.115,
+          "p01": 7.115,
+          "median": 7.115,
+          "maximum": 7.115
+        },
+        "candidatePaper": {
+          "minimum": 7.636,
+          "p01": 7.64,
+          "median": 7.769,
+          "maximum": 7.904
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 7.42,
+          "p01": 7.485,
+          "median": 7.631,
+          "maximum": 7.904
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": true,
+      "candidatePaperPassesWcagAaSmallText": true,
+      "candidatePaperPlusSagePassesWcagAaSmallText": true,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "core-caption",
+      "role": "small caption / --ink-soft",
+      "textColor": "#7c7d6d",
+      "currentBackground": "#f6f0df",
+      "threshold": 4.5,
+      "fontPx": 12,
+      "sample": "Caption 12 px / current ink-soft",
+      "measurements": {
+        "currentFlat": {
+          "minimum": 3.681,
+          "p01": 3.681,
+          "median": 3.681,
+          "maximum": 3.681
+        },
+        "candidatePaper": {
+          "minimum": 3.951,
+          "p01": 3.953,
+          "median": 4.02,
+          "maximum": 4.09
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 3.839,
+          "p01": 3.873,
+          "median": 3.948,
+          "maximum": 4.09
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": false,
+      "candidatePaperPassesWcagAaSmallText": false,
+      "candidatePaperPlusSagePassesWcagAaSmallText": false,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "postcard-caption",
+      "role": "postcard small caption",
+      "textColor": "#838273",
+      "currentBackground": "#f8efd8",
+      "threshold": 4.5,
+      "fontPx": 10,
+      "sample": "Postcard caption 10 px",
+      "measurements": {
+        "currentFlat": {
+          "minimum": 3.391,
+          "p01": 3.391,
+          "median": 3.391,
+          "maximum": 3.391
+        },
+        "candidatePaper": {
+          "minimum": 3.663,
+          "p01": 3.665,
+          "median": 3.727,
+          "maximum": 3.791
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 3.559,
+          "p01": 3.59,
+          "median": 3.66,
+          "maximum": 3.791
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": false,
+      "candidatePaperPassesWcagAaSmallText": false,
+      "candidatePaperPlusSagePassesWcagAaSmallText": false,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "status-caption",
+      "role": "status line caption",
+      "textColor": "#898878",
+      "currentBackground": "#f6f0df",
+      "threshold": 4.5,
+      "fontPx": 11,
+      "sample": "Status caption 11 px",
+      "measurements": {
+        "currentFlat": {
+          "minimum": 3.15,
+          "p01": 3.15,
+          "median": 3.15,
+          "maximum": 3.15
+        },
+        "candidatePaper": {
+          "minimum": 3.381,
+          "p01": 3.383,
+          "median": 3.44,
+          "maximum": 3.499
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 3.285,
+          "p01": 3.314,
+          "median": 3.379,
+          "maximum": 3.499
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": false,
+      "candidatePaperPassesWcagAaSmallText": false,
+      "candidatePaperPlusSagePassesWcagAaSmallText": false,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "adoption-button",
+      "role": "opaque primary button text",
+      "textColor": "#4f5144",
+      "threshold": 4.5,
+      "fontPx": 11,
+      "sample": "Primary action",
+      "buttonColor": "#dce5ce",
+      "buttonOpacity": 1.0,
+      "measurements": {
+        "currentFlat": {
+          "minimum": 6.226,
+          "p01": 6.226,
+          "median": 6.226,
+          "maximum": 6.226
+        },
+        "candidatePaper": {
+          "minimum": 6.226,
+          "p01": 6.226,
+          "median": 6.226,
+          "maximum": 6.226
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 6.226,
+          "p01": 6.226,
+          "median": 6.226,
+          "maximum": 6.226
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": true,
+      "candidatePaperPassesWcagAaSmallText": true,
+      "candidatePaperPlusSagePassesWcagAaSmallText": true,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "transfer-button",
+      "role": "translucent transfer button text",
+      "textColor": "#4f5144",
+      "threshold": 4.5,
+      "fontPx": 11,
+      "sample": "Transfer action",
+      "buttonColor": "#e4ead8",
+      "buttonOpacity": 0.82,
+      "measurements": {
+        "currentFlat": {
+          "minimum": 6.666,
+          "p01": 6.666,
+          "median": 6.666,
+          "maximum": 6.666
+        },
+        "candidatePaper": {
+          "minimum": 6.779,
+          "p01": 6.784,
+          "median": 6.784,
+          "maximum": 6.796
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 6.722,
+          "p01": 6.735,
+          "median": 6.779,
+          "maximum": 6.796
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": true,
+      "candidatePaperPassesWcagAaSmallText": true,
+      "candidatePaperPlusSagePassesWcagAaSmallText": true,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "secondary-button",
+      "role": "translucent secondary button text",
+      "textColor": "#4f5144",
+      "threshold": 4.5,
+      "fontPx": 11,
+      "sample": "Secondary action",
+      "buttonColor": "#fffcf1",
+      "buttonOpacity": 0.74,
+      "measurements": {
+        "currentFlat": {
+          "minimum": 7.689,
+          "p01": 7.689,
+          "median": 7.689,
+          "maximum": 7.689
+        },
+        "candidatePaper": {
+          "minimum": 7.823,
+          "p01": 7.823,
+          "median": 7.827,
+          "maximum": 7.89
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 7.755,
+          "p01": 7.755,
+          "median": 7.823,
+          "maximum": 7.89
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": true,
+      "candidatePaperPassesWcagAaSmallText": true,
+      "candidatePaperPlusSagePassesWcagAaSmallText": true,
+      "textureIntroducesContrastRegression": false
+    },
+    {
+      "id": "transparent-nav-button",
+      "role": "transparent navigation button text",
+      "textColor": "#4f5144",
+      "threshold": 4.5,
+      "fontPx": 12,
+      "sample": "Navigation",
+      "buttonColor": null,
+      "buttonOpacity": 0.0,
+      "measurements": {
+        "currentFlat": {
+          "minimum": 7.115,
+          "p01": 7.115,
+          "median": 7.115,
+          "maximum": 7.115
+        },
+        "candidatePaper": {
+          "minimum": 7.636,
+          "p01": 7.64,
+          "median": 7.769,
+          "maximum": 7.904
+        },
+        "candidatePaperPlusSage": {
+          "minimum": 7.42,
+          "p01": 7.485,
+          "median": 7.631,
+          "maximum": 7.904
+        }
+      },
+      "currentFlatPassesWcagAaSmallText": true,
+      "candidatePaperPassesWcagAaSmallText": true,
+      "candidatePaperPlusSagePassesWcagAaSmallText": true,
+      "textureIntroducesContrastRegression": false
+    }
+  ],
+  "textureIntroducesAnyContrastRegression": false,
+  "preExistingAccessibilityFindings": [
+    {
+      "id": "core-caption",
+      "role": "small caption / --ink-soft",
+      "textColor": "#7c7d6d",
+      "currentFlatMinimum": 3.681,
+      "finding": "pre-existing-small-text-AA-failure"
+    },
+    {
+      "id": "postcard-caption",
+      "role": "postcard small caption",
+      "textColor": "#838273",
+      "currentFlatMinimum": 3.391,
+      "finding": "pre-existing-small-text-AA-failure"
+    },
+    {
+      "id": "status-caption",
+      "role": "status line caption",
+      "textColor": "#898878",
+      "currentFlatMinimum": 3.15,
+      "finding": "pre-existing-small-text-AA-failure"
+    }
+  ],
+  "interpretation": "The candidate surfaces are at least as contrast-supportive as each current flat baseline. Existing small caption colors that are below 4.5:1 remain pre-existing CSS findings and are not fixed in this art-only batch."
+}

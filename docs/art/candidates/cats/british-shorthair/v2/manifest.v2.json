@@ -1,0 +1,805 @@
+{
+  "fileCount" : 83,
+  "files" : [
+    {
+      "bytes" : 2042,
+      "kind" : "documentation",
+      "path" : "README.md",
+      "sha256" : "81219ca8512e85deb538a7d037453b0ee0a96e360e6e6906ed80803f4aaf65c1"
+    },
+    {
+      "bytes" : 165283,
+      "kind" : "metadata",
+      "path" : "coverage-metadata.v2.json",
+      "sha256" : "e64964b0490ebfe52153f470cb8e3ca81b7fa53f39c8fe426384774cdc4efa87"
+    },
+    {
+      "bytes" : 6393,
+      "kind" : "metadata",
+      "path" : "qa/cleanup-report.v2.json",
+      "sha256" : "32504b989da6726da667dad721561c4bb15ef52da4a5b7b47fbed1b52f610978"
+    },
+    {
+      "bytes" : 5014,
+      "kind" : "metadata",
+      "path" : "qa/physical-style-qa.v2.json",
+      "sha256" : "5494e15f982f83c7c9802bd9cb19b92290e7fe7f8a5c1d9b3ec1a3f73cd5ba22"
+    },
+    {
+      "bytes" : 8439,
+      "kind" : "metadata",
+      "path" : "qa/v1-baseline-hashes.v2.json",
+      "sha256" : "779fb26cfa77b8c06fef8bfaea0bca6d088db4b999852e26c2beac6bff95eb50"
+    },
+    {
+      "bytes" : 25533,
+      "kind" : "metadata",
+      "path" : "qa/v1-integrity.v2.json",
+      "sha256" : "09aab3f0d0cec993ed4c58529c90748651d2d91c7215edae45dd636a9985fe17"
+    },
+    {
+      "bytes" : 315,
+      "kind" : "metadata",
+      "path" : "qa/verification.v2.json",
+      "sha256" : "248513b20f6150aac904dc5c871dbbee075765c0f4f402763ffc6db41c852660"
+    },
+    {
+      "bytes" : 9793,
+      "kind" : "metadata",
+      "path" : "qa/visibility-metrics.v2.json",
+      "sha256" : "321c4ee4e66129e03e9789e433c0c0d16603c0fcb5cdcb55ca0a22cde57f469d"
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 356196,
+      "format" : "PNG",
+      "height" : 610,
+      "kind" : "image",
+      "path" : "reviews/identity/blue-white-marking-map--six-poses--non-shipping-v02.png",
+      "sha256" : "29e021de30c284558251c766e6b8a5b26cdbe11cc6317e0cb509c5181d056aa7",
+      "width" : 1900
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 332474,
+      "format" : "PNG",
+      "height" : 1042,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-identity/matrix--blue-golden-shaded--all-widths-and-poses--non-shipping-v02.png",
+      "sha256" : "4d47fddf69c29e59f5ab4bbe7ba84c9e1551bc1a5358967106deff0ab98e4346",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 322080,
+      "format" : "PNG",
+      "height" : 1042,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-identity/matrix--blue-white-bicolor--all-widths-and-poses--non-shipping-v02.png",
+      "sha256" : "03a8984d3261c74aad2b81e7395d307cb6f9222ec5bf88d0edd8af721a51848c",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 318436,
+      "format" : "PNG",
+      "height" : 1042,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-identity/matrix--golden-shaded--all-widths-and-poses--non-shipping-v02.png",
+      "sha256" : "5a98f5b0e90865552709dc5be69425180b8551314357bed2b00fd512c1f39c42",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 326172,
+      "format" : "PNG",
+      "height" : 1042,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-identity/matrix--solid-blue--all-widths-and-poses--non-shipping-v02.png",
+      "sha256" : "9dc5c878095b713d91853af4358befc162aee44c4bca30bb433726ef92787d33",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 422926,
+      "format" : "PNG",
+      "height" : 1344,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-width/matrix--320x700--all-identities-and-poses--non-shipping-v02.png",
+      "sha256" : "6a330aed8348e7c182f5344e953bebbd9929bf3ec4b95ab03a76ab1248c36612",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 431757,
+      "format" : "PNG",
+      "height" : 1344,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-width/matrix--390x844--all-identities-and-poses--non-shipping-v02.png",
+      "sha256" : "c77a912ca687d1e3ad7bcd4aaf76c92d946491a19d07689be5f6092136bb6655",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 435387,
+      "format" : "PNG",
+      "height" : 1344,
+      "kind" : "image",
+      "path" : "reviews/matrices/by-width/matrix--430x932--all-identities-and-poses--non-shipping-v02.png",
+      "sha256" : "c99f30628ff1a76a16bcf0e91a26494cdd3a489922ce2256828d77c35ed7bf38",
+      "width" : 1068
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 1397260,
+      "format" : "PNG",
+      "height" : 1570,
+      "kind" : "image",
+      "path" : "reviews/props/matrix--eat-play-plane-and-clearance--430x932--non-shipping-v02.png",
+      "sha256" : "1631bbe5f9921c0aee1591e880a054e6f8ee1897ade7291c0ce2201e1713b1ba",
+      "width" : 980
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 1162177,
+      "format" : "PNG",
+      "height" : 980,
+      "kind" : "image",
+      "path" : "reviews/style/style-comparison--minho-and-four-british-shorthairs--390x844-1to1--non-shipping-v02.png",
+      "sha256" : "1b366d56c29ca71ace8aefda3098b2feb993ae8e98462177309e6b1412b937e6",
+      "width" : 2046
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324274,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/eat/home-fit--blue-golden-shaded--eat--320x700--non-shipping-v02.png",
+      "sha256" : "f2c3c59793d6b39d8f04e610cc050188a4423dbaa990d33d2d742a751b75849f",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474017,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/eat/home-fit--blue-golden-shaded--eat--390x844--non-shipping-v02.png",
+      "sha256" : "4d992a6637e6af677d4d46e4dfd194c7d557e73ec8faea265c7902da74eff98f",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591256,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/eat/home-fit--blue-golden-shaded--eat--430x932--non-shipping-v02.png",
+      "sha256" : "171c5c1edd52e858ec875a6cccd9228f007afd46376e41a589c7243859fbe5ad",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324483,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/gaze/home-fit--blue-golden-shaded--gaze--320x700--non-shipping-v02.png",
+      "sha256" : "19bf1ab78b75e984a9941c5507c22ceb6f7e176b88e5f2d2d17dad52021a9270",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474327,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/gaze/home-fit--blue-golden-shaded--gaze--390x844--non-shipping-v02.png",
+      "sha256" : "e0cd8d7d4d73d8155cc4f147a510bc7ae6ade4b151c865c4b4f7013f726c76c3",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591481,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/gaze/home-fit--blue-golden-shaded--gaze--430x932--non-shipping-v02.png",
+      "sha256" : "47a9a6e247f8fa51559255842c744bf4f9f35f9bbfa574615e125075fe985a05",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 325945,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/play/home-fit--blue-golden-shaded--play--320x700--non-shipping-v02.png",
+      "sha256" : "e0ca029960874c74a10d3eebe827c1abf4a9e20d5d9e7194413d0f26d8a98e80",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 476232,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/play/home-fit--blue-golden-shaded--play--390x844--non-shipping-v02.png",
+      "sha256" : "dd4fdc312128a899a7d063abc874bc0afb5a6b21ffd95dd83ae0c6bd001a80a2",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 593450,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/play/home-fit--blue-golden-shaded--play--430x932--non-shipping-v02.png",
+      "sha256" : "b664ec66f5abfb52e8234cd4371d4ee4922f0183e585291edf844bad29d41821",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 325618,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/sit/home-fit--blue-golden-shaded--sit--320x700--non-shipping-v02.png",
+      "sha256" : "2c4c6e611b3cd906a6a6fd4bd03f9af16482413c86c32e35488cebeac4999a2a",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 476161,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/sit/home-fit--blue-golden-shaded--sit--390x844--non-shipping-v02.png",
+      "sha256" : "c7d0f1d32f9046481606e8aa67799060e945bf40c2e49d9d2ac3741af9dd52b3",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 593552,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/sit/home-fit--blue-golden-shaded--sit--430x932--non-shipping-v02.png",
+      "sha256" : "6788e21eab4a2c604425c9ea3585a134ae870caa9dea079ff0ecc4fd954c80d5",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324274,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/sleep/home-fit--blue-golden-shaded--sleep--320x700--non-shipping-v02.png",
+      "sha256" : "439e17fc29f38f1c45887b5f8484a631c976e056cd3e71cd71cebe29ac438683",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324717,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/walk/home-fit--blue-golden-shaded--walk--320x700--non-shipping-v02.png",
+      "sha256" : "782129f9be72c4742d8e01f8ecf5f840b32c4a90dbaecbdeca25712b14dcd78c",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474370,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/walk/home-fit--blue-golden-shaded--walk--390x844--non-shipping-v02.png",
+      "sha256" : "fb85228723fc74e87410f05e29b4da50f38c27a006f57d387d29f78933ffc380",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591647,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-golden-shaded/walk/home-fit--blue-golden-shaded--walk--430x932--non-shipping-v02.png",
+      "sha256" : "9cfe033f0417aed9a696ec860b8952e222a290d92fd7362e6b03714fc6f0bcdf",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323915,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/eat/home-fit--blue-white-bicolor--eat--320x700--non-shipping-v02.png",
+      "sha256" : "e5a0d49a032f61e337e3882b889821e24198a25e05b5298729f7bc3eb85e5693",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473802,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/eat/home-fit--blue-white-bicolor--eat--390x844--non-shipping-v02.png",
+      "sha256" : "5e8b7b52c7ed4f93e9004404153fbb3904ed63ab4af011304cea7dbc05730b0f",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 590958,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/eat/home-fit--blue-white-bicolor--eat--430x932--non-shipping-v02.png",
+      "sha256" : "edd7e8e1565b5dc34c86ae2a6a116a5e7b2d98cea2c16d0e74c43b7f7ef65d65",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323853,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/gaze/home-fit--blue-white-bicolor--gaze--320x700--non-shipping-v02.png",
+      "sha256" : "3850d6dd225733b4f3fee235441c2698ac052f2e943ded3a30a03e293ada8e58",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473951,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/gaze/home-fit--blue-white-bicolor--gaze--390x844--non-shipping-v02.png",
+      "sha256" : "3a359ba70c6683f533282e8cc859f67b943d9299197aa3c3a8e3d017f1ae0aaf",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 590805,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/gaze/home-fit--blue-white-bicolor--gaze--430x932--non-shipping-v02.png",
+      "sha256" : "a92f52b7c128066a74506c5e84707be48255d2e4b260551d2dda42d3765d3720",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324289,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/play/home-fit--blue-white-bicolor--play--320x700--non-shipping-v02.png",
+      "sha256" : "37c15bfe186012c3f4bd6d56e97623d1aa65196be626b6b334c94e11d7c3dc51",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474106,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/play/home-fit--blue-white-bicolor--play--390x844--non-shipping-v02.png",
+      "sha256" : "c17228431069495728be0942d4741f7d7edcc44f25e8ae7952af2cb74e61dbbf",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591303,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/play/home-fit--blue-white-bicolor--play--430x932--non-shipping-v02.png",
+      "sha256" : "565ee6af4fe04d0d8fc12815e0405fca7b2dcdb002be505f35cba0b8fdd823da",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324165,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/sit/home-fit--blue-white-bicolor--sit--320x700--non-shipping-v02.png",
+      "sha256" : "7ae63556e06c2fa4a7927ec018c70e2eb8277acdb7cbc6221ce2e6dd1f220d04",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474295,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/sit/home-fit--blue-white-bicolor--sit--390x844--non-shipping-v02.png",
+      "sha256" : "a829c549d8bbfbf8c83f54f6024e04ada942e661a30b05298465c86abe4f1166",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591476,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/sit/home-fit--blue-white-bicolor--sit--430x932--non-shipping-v02.png",
+      "sha256" : "66a59b85e165198c20ee795703fd9c05cd28a890d4661b68aaa8bc62e3233dd8",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323607,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/sleep/home-fit--blue-white-bicolor--sleep--320x700--non-shipping-v02.png",
+      "sha256" : "ea290e890a5c7e17826d4d978a39b7ff9d05ec65f9231f38172e029e487d87bc",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323848,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/walk/home-fit--blue-white-bicolor--walk--320x700--non-shipping-v02.png",
+      "sha256" : "cec2c33b49a230ef5d07f84205053375731a0150959e1c15ca16c0a3b1dac053",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473698,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/walk/home-fit--blue-white-bicolor--walk--390x844--non-shipping-v02.png",
+      "sha256" : "f9fec163338aba88c22122a24f873452f5e6d34326852c6a4dd67f83389f00d1",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 590879,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/blue-white-bicolor/walk/home-fit--blue-white-bicolor--walk--430x932--non-shipping-v02.png",
+      "sha256" : "b15067d58a006b8c63ec8fdfce0b4ed0e0904e19e94e219a705bce606816701e",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324524,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/eat/home-fit--golden-shaded--eat--320x700--non-shipping-v02.png",
+      "sha256" : "4dae66fdaf8cf0fdd86777c704322779ccfb19ac521a13add277d0058e3c4307",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474552,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/eat/home-fit--golden-shaded--eat--390x844--non-shipping-v02.png",
+      "sha256" : "065fa05fc59cb44ce250a0384436130da9e3d0b542c47601086a5851835431c9",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 592019,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/eat/home-fit--golden-shaded--eat--430x932--non-shipping-v02.png",
+      "sha256" : "618fcfe77a86ab999fca8eb170bd33bbbb0d29677d95c64521c95ea4e3e2fcd4",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324539,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/gaze/home-fit--golden-shaded--gaze--320x700--non-shipping-v02.png",
+      "sha256" : "30d2f552bb1b58104f6ebf4082fda4d021f12adc5e2ede3d026cf03a95e0b374",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474634,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/gaze/home-fit--golden-shaded--gaze--390x844--non-shipping-v02.png",
+      "sha256" : "4e0227683e6304311e72781fe5cda71da71970f79417e343a9264215cc68eecb",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591760,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/gaze/home-fit--golden-shaded--gaze--430x932--non-shipping-v02.png",
+      "sha256" : "67719df394bc1cc586512b2aad4bd88a560be27861bb2ecc07689ac9a4f604ab",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 325054,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/play/home-fit--golden-shaded--play--320x700--non-shipping-v02.png",
+      "sha256" : "627f37bf257d9c2f5fba06cfabb3db33fdd784cb33638daa24c727ae693f1d5a",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 475172,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/play/home-fit--golden-shaded--play--390x844--non-shipping-v02.png",
+      "sha256" : "4b9a674a9253757bf60108c14e327d7fdc145be745b7020589916c0be015c25e",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 592596,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/play/home-fit--golden-shaded--play--430x932--non-shipping-v02.png",
+      "sha256" : "bc089e4c1b773fbef596a4b24ed981db7ee5f58741d697eefbcdf8174607e501",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 325396,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/sit/home-fit--golden-shaded--sit--320x700--non-shipping-v02.png",
+      "sha256" : "1b327b32d4b271774c044a458c8259b2f7d859a576c50c0ec9ba3b28e89a57fd",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 475648,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/sit/home-fit--golden-shaded--sit--390x844--non-shipping-v02.png",
+      "sha256" : "6a92c2ff394deb5e4168f4732adcbe2faf05c6b79f29c442513fc178da446bb5",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 593391,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/sit/home-fit--golden-shaded--sit--430x932--non-shipping-v02.png",
+      "sha256" : "77d7c66086e26f7a64d18b1b89d672d9ef02919363084b95306b401d3eb4740a",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324351,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/sleep/home-fit--golden-shaded--sleep--320x700--non-shipping-v02.png",
+      "sha256" : "6e9fb8027e28874a194a256879aeb0bdb34b82df44d5dc5c8018ec01c1d055ad",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323981,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/walk/home-fit--golden-shaded--walk--320x700--non-shipping-v02.png",
+      "sha256" : "d6e8088023cd6a6858ca362062c9a67cf557f5a5fb964a886910e890e2f96aab",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473401,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/walk/home-fit--golden-shaded--walk--390x844--non-shipping-v02.png",
+      "sha256" : "13a4f7b8de21cdf9ca0c81c817a6e1aef7ade421292f71d90f17a8f80ee621dc",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591015,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/golden-shaded/walk/home-fit--golden-shaded--walk--430x932--non-shipping-v02.png",
+      "sha256" : "93ecf3e4bb4078485afe4ecc704a31c05a000147be7005a16c5e322f60791d62",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323347,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/eat/home-fit--solid-blue--eat--320x700--non-shipping-v02.png",
+      "sha256" : "d43e1abe617e2adeec1be52ab33258a6cfc4a2af6b3c66c9aeeb4bcf1420ff39",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 472738,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/eat/home-fit--solid-blue--eat--390x844--non-shipping-v02.png",
+      "sha256" : "0fd4910e0a62d986a65c3ecf4659f3ca8f76f399afb9b51b9a39e6e65c10a3d8",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 589936,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/eat/home-fit--solid-blue--eat--430x932--non-shipping-v02.png",
+      "sha256" : "004375c3c44ae45464549ea4468473123e84075b97dcc69959a97e36e2eeff7d",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323944,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/gaze/home-fit--solid-blue--gaze--320x700--non-shipping-v02.png",
+      "sha256" : "f6216fad7a4459bbf63c37da2529f39433e975a54c033e6649cddb774de580de",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473535,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/gaze/home-fit--solid-blue--gaze--390x844--non-shipping-v02.png",
+      "sha256" : "5adf51eacf88551db925b3eeb09ce698477bd8c3e35ccb1ba31f21d97bdba254",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 590606,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/gaze/home-fit--solid-blue--gaze--430x932--non-shipping-v02.png",
+      "sha256" : "694f22900456ffa04093178899092350f579facaca5c2f8b70317329150791e2",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324263,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/play/home-fit--solid-blue--play--320x700--non-shipping-v02.png",
+      "sha256" : "e72130b0de90d57769adb34d49d87e22c9186af23222d593c18df4dfb855910c",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 473963,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/play/home-fit--solid-blue--play--390x844--non-shipping-v02.png",
+      "sha256" : "6a0603bab8d4cca6b51dc39339754a9577f12c36aa59b16a00c7e720cb636673",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 591064,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/play/home-fit--solid-blue--play--430x932--non-shipping-v02.png",
+      "sha256" : "30e7ce91c0af4486fe7627076dce8953dcefa61d04416bb7e7856b0f2634d85a",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 324633,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/sit/home-fit--solid-blue--sit--320x700--non-shipping-v02.png",
+      "sha256" : "d881ff30d870b63d6ebffdd108feb640a07dbd9324ac98704a1a87385cc19d76",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 474486,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/sit/home-fit--solid-blue--sit--390x844--non-shipping-v02.png",
+      "sha256" : "480f3fc6c85f7d12902260f572de605c685540855debf4166c269cdd36f44766",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 592012,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/sit/home-fit--solid-blue--sit--430x932--non-shipping-v02.png",
+      "sha256" : "5585553a2e21575767fed0a6e4cafcc944892ab6d70b9392931b979acfa63229",
+      "width" : 430
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323531,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/sleep/home-fit--solid-blue--sleep--320x700--non-shipping-v02.png",
+      "sha256" : "bfbb746c59b20e4cef753b40ac75c77f07c39615bdd1021ccfe3e344dce2d7c0",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 323528,
+      "format" : "PNG",
+      "height" : 700,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/walk/home-fit--solid-blue--walk--320x700--non-shipping-v02.png",
+      "sha256" : "e0afd1d3d2871f926b62721ac0c941fcfa2d6191dc92042378f3661bb213d20e",
+      "width" : 320
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 472797,
+      "format" : "PNG",
+      "height" : 844,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/walk/home-fit--solid-blue--walk--390x844--non-shipping-v02.png",
+      "sha256" : "40a57a8491882a9cc8a9b5db8ea13a11320d16d6e900dd4241e794ef93c31c8d",
+      "width" : 390
+    },
+    {
+      "alphaInfo" : "last",
+      "bytes" : 589921,
+      "format" : "PNG",
+      "height" : 932,
+      "kind" : "image",
+      "path" : "reviews/viewports/solid-blue/walk/home-fit--solid-blue--walk--430x932--non-shipping-v02.png",
+      "sha256" : "007f05cd88093450ddfa5de5a460098cc3aa191399746afd184b7c355d78b2e7",
+      "width" : 430
+    },
+    {
+      "bytes" : 61177,
+      "kind" : "tool-source",
+      "path" : "tools/build-acceptance-supplement.swift",
+      "sha256" : "e8c4d2f1dc786e834fc87ddc945ad472e6a67c759f29001267c827f37564c8af"
+    }
+  ],
+  "manifestKind" : "british-shorthair-home-fit-acceptance-supplement",
+  "root" : "docs/art/candidates/cats/british-shorthair/v2",
+  "schemaVersion" : 2,
+  "selfExcluded" : true,
+  "shippingEligible" : false,
+  "status" : "NON-SHIPPING / ACCEPTANCE-EVIDENCE-ONLY"
+}

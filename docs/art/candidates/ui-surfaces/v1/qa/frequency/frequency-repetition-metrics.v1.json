@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "method": "non-DC spectral concentration, x/y gradient balance, toroidal autocorrelation, and sub-tile shift dissimilarity",
+  "assets": {
+    "paperMaster1024": {
+      "standardDeviation": 0.8943,
+      "dominantNonDcBinPowerFraction": 0.016499,
+      "axisGradientRms": {
+        "x": 0.229,
+        "y": 0.229,
+        "xToYRatio": 0.9997
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.1307,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            512,
+            0
+          ],
+          "normalizedRmse": 1.4005
+        },
+        {
+          "shift": [
+            0,
+            512
+          ],
+          "normalizedRmse": 1.4726
+        },
+        {
+          "shift": [
+            341,
+            341
+          ],
+          "normalizedRmse": 1.4186
+        },
+        {
+          "shift": [
+            256,
+            256
+          ],
+          "normalizedRmse": 1.4388
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4005,
+      "pass": true
+    },
+    "paperRuntime1x512Decoded": {
+      "standardDeviation": 0.888,
+      "dominantNonDcBinPowerFraction": 0.016647,
+      "axisGradientRms": {
+        "x": 0.3064,
+        "y": 0.3066,
+        "xToYRatio": 0.9993
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.1316,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            256,
+            0
+          ],
+          "normalizedRmse": 1.4002
+        },
+        {
+          "shift": [
+            0,
+            256
+          ],
+          "normalizedRmse": 1.4731
+        },
+        {
+          "shift": [
+            170,
+            170
+          ],
+          "normalizedRmse": 1.4187
+        },
+        {
+          "shift": [
+            128,
+            128
+          ],
+          "normalizedRmse": 1.4393
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4002,
+      "pass": true
+    },
+    "paperRuntime2x1024Decoded": {
+      "standardDeviation": 0.8943,
+      "dominantNonDcBinPowerFraction": 0.016499,
+      "axisGradientRms": {
+        "x": 0.229,
+        "y": 0.229,
+        "xToYRatio": 0.9997
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.1307,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            512,
+            0
+          ],
+          "normalizedRmse": 1.4005
+        },
+        {
+          "shift": [
+            0,
+            512
+          ],
+          "normalizedRmse": 1.4726
+        },
+        {
+          "shift": [
+            341,
+            341
+          ],
+          "normalizedRmse": 1.4186
+        },
+        {
+          "shift": [
+            256,
+            256
+          ],
+          "normalizedRmse": 1.4388
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4005,
+      "pass": true
+    },
+    "sageAlphaMaster1024": {
+      "standardDeviation": 1.9617,
+      "dominantNonDcBinPowerFraction": 0.094734,
+      "axisGradientRms": {
+        "x": 0.4552,
+        "y": 0.4549,
+        "xToYRatio": 1.0007
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.3356,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            512,
+            0
+          ],
+          "normalizedRmse": 1.4651
+        },
+        {
+          "shift": [
+            0,
+            512
+          ],
+          "normalizedRmse": 1.4403
+        },
+        {
+          "shift": [
+            341,
+            341
+          ],
+          "normalizedRmse": 1.4808
+        },
+        {
+          "shift": [
+            256,
+            256
+          ],
+          "normalizedRmse": 1.5832
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4403,
+      "pass": true
+    },
+    "sageAlphaRuntime1x512Decoded": {
+      "standardDeviation": 1.9537,
+      "dominantNonDcBinPowerFraction": 0.095101,
+      "axisGradientRms": {
+        "x": 0.5892,
+        "y": 0.5879,
+        "xToYRatio": 1.0022
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.3371,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            256,
+            0
+          ],
+          "normalizedRmse": 1.4651
+        },
+        {
+          "shift": [
+            0,
+            256
+          ],
+          "normalizedRmse": 1.4396
+        },
+        {
+          "shift": [
+            170,
+            170
+          ],
+          "normalizedRmse": 1.4829
+        },
+        {
+          "shift": [
+            128,
+            128
+          ],
+          "normalizedRmse": 1.5843
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4396,
+      "pass": true
+    },
+    "sageAlphaRuntime2x1024Decoded": {
+      "standardDeviation": 1.9617,
+      "dominantNonDcBinPowerFraction": 0.094734,
+      "axisGradientRms": {
+        "x": 0.4552,
+        "y": 0.4549,
+        "xToYRatio": 1.0007
+      },
+      "maximumAbsoluteAutocorrelationOutside12PercentRadius": 0.3356,
+      "subtileShiftChecks": [
+        {
+          "shift": [
+            512,
+            0
+          ],
+          "normalizedRmse": 1.4651
+        },
+        {
+          "shift": [
+            0,
+            512
+          ],
+          "normalizedRmse": 1.4403
+        },
+        {
+          "shift": [
+            341,
+            341
+          ],
+          "normalizedRmse": 1.4808
+        },
+        {
+          "shift": [
+            256,
+            256
+          ],
+          "normalizedRmse": 1.5832
+        }
+      ],
+      "minimumSubtileShiftNormalizedRmse": 1.4403,
+      "pass": true
+    }
+  },
+  "thresholds": {
+    "dominantNonDcBinPowerFractionMaximum": 0.12,
+    "axisGradientRatioRange": [
+      0.75,
+      1.33
+    ],
+    "offCenterAutocorrelationMaximum": 0.58,
+    "minimumSubtileShiftNormalizedRmse": 0.65
+  },
+  "pass": true
+}

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "verifiedAt": "2026-07-21",
+  "protectedAssetCount": 34,
+  "allManifestMatched": true,
+  "allUnchanged": true,
+  "existingV1MobileProofs": [
+    {
+      "breed": "orange-tabby",
+      "viewport": "390x844",
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--orange-tabby--sleep--390x844--non-shipping-v01.png",
+      "sha256": "c42013dbcb381080833d5f496f78de9de1798e9d05d3985ede5c4183f47d3222",
+      "usedAsFinalCoverageReference": false
+    },
+    {
+      "breed": "li-hua",
+      "viewport": "390x844",
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+      "sha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d",
+      "usedAsFinalCoverageReference": true
+    },
+    {
+      "breed": "orange-tabby",
+      "viewport": "430x932",
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--orange-tabby--sleep--430x932--non-shipping-v01.png",
+      "sha256": "7da11f8a4ba60a5f6014dda6a7bd75dddc0c4eb90134389423e4f74407571e28",
+      "usedAsFinalCoverageReference": false
+    },
+    {
+      "breed": "li-hua",
+      "viewport": "430x932",
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--430x932--non-shipping-v01.png",
+      "sha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0",
+      "usedAsFinalCoverageReference": true
+    }
+  ],
+  "checks": [
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/manifest.v1.json",
+      "manifestSha256": null,
+      "beforeSha256": "3d9f2a13257ac26b66e857aeca61e2ab9bfbd9dd86342ed0362cbed1956759f4",
+      "afterSha256": "3d9f2a13257ac26b66e857aeca61e2ab9bfbd9dd86342ed0362cbed1956759f4",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/README.md",
+      "manifestSha256": "c32eba06a829679c5140978deeee92758ed68c93846250482ef6a99c9a69f6da",
+      "beforeSha256": "c32eba06a829679c5140978deeee92758ed68c93846250482ef6a99c9a69f6da",
+      "afterSha256": "c32eba06a829679c5140978deeee92758ed68c93846250482ef6a99c9a69f6da",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/candidate-metadata.v1.json",
+      "manifestSha256": "3340f075ef84da117e35afac304b078d65211f6a31b2a2c4d2c949575e9e11f7",
+      "beforeSha256": "3340f075ef84da117e35afac304b078d65211f6a31b2a2c4d2c949575e9e11f7",
+      "afterSha256": "3340f075ef84da117e35afac304b078d65211f6a31b2a2c4d2c949575e9e11f7",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/qa-report.v1.json",
+      "manifestSha256": "20d2325c50543e4f346b2007a6968d55bf0654c5d6cf4e237e0c09df3effa220",
+      "beforeSha256": "20d2325c50543e4f346b2007a6968d55bf0654c5d6cf4e237e0c09df3effa220",
+      "afterSha256": "20d2325c50543e4f346b2007a6968d55bf0654c5d6cf4e237e0c09df3effa220",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/contact-sheets/contact-sheet--two-cats-six-poses--non-shipping-v01.png",
+      "manifestSha256": "e714fb5b3dc6f75ece99fb2d9b395203f312d253d7d08eef8648f1ee737ed94b",
+      "beforeSha256": "e714fb5b3dc6f75ece99fb2d9b395203f312d253d7d08eef8648f1ee737ed94b",
+      "afterSha256": "e714fb5b3dc6f75ece99fb2d9b395203f312d253d7d08eef8648f1ee737ed94b",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+      "manifestSha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d",
+      "beforeSha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d",
+      "afterSha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--430x932--non-shipping-v01.png",
+      "manifestSha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0",
+      "beforeSha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0",
+      "afterSha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--orange-tabby--sleep--390x844--non-shipping-v01.png",
+      "manifestSha256": "c42013dbcb381080833d5f496f78de9de1798e9d05d3985ede5c4183f47d3222",
+      "beforeSha256": "c42013dbcb381080833d5f496f78de9de1798e9d05d3985ede5c4183f47d3222",
+      "afterSha256": "c42013dbcb381080833d5f496f78de9de1798e9d05d3985ede5c4183f47d3222",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--orange-tabby--sleep--430x932--non-shipping-v01.png",
+      "manifestSha256": "7da11f8a4ba60a5f6014dda6a7bd75dddc0c4eb90134389423e4f74407571e28",
+      "beforeSha256": "7da11f8a4ba60a5f6014dda6a7bd75dddc0c4eb90134389423e4f74407571e28",
+      "afterSha256": "7da11f8a4ba60a5f6014dda6a7bd75dddc0c4eb90134389423e4f74407571e28",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--eat--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "617e6bc1d51f5302c72e27fa7119befcf673be09de9a38a0b2d764d339f49d3e",
+      "beforeSha256": "617e6bc1d51f5302c72e27fa7119befcf673be09de9a38a0b2d764d339f49d3e",
+      "afterSha256": "617e6bc1d51f5302c72e27fa7119befcf673be09de9a38a0b2d764d339f49d3e",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--gaze--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "a9d012faa06e0f6ed5832c6e3c822fa224eadeb27b1ab3c4e61036d315a6a4f1",
+      "beforeSha256": "a9d012faa06e0f6ed5832c6e3c822fa224eadeb27b1ab3c4e61036d315a6a4f1",
+      "afterSha256": "a9d012faa06e0f6ed5832c6e3c822fa224eadeb27b1ab3c4e61036d315a6a4f1",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--play--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "42fae09ed1fe86bfcec224567551ba824f3d91711ac33a92e4b17a9b02c661ab",
+      "beforeSha256": "42fae09ed1fe86bfcec224567551ba824f3d91711ac33a92e4b17a9b02c661ab",
+      "afterSha256": "42fae09ed1fe86bfcec224567551ba824f3d91711ac33a92e4b17a9b02c661ab",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--sit--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "178e976f750b382eed4925cf36702528970d5ab79f27a89aec9809af5b0ab9f2",
+      "beforeSha256": "178e976f750b382eed4925cf36702528970d5ab79f27a89aec9809af5b0ab9f2",
+      "afterSha256": "178e976f750b382eed4925cf36702528970d5ab79f27a89aec9809af5b0ab9f2",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--sleep--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "7bb81f0537f2e79ae9c0b3a5effb3ad619ff2697bbf02d132b7268def64d3c0e",
+      "beforeSha256": "7bb81f0537f2e79ae9c0b3a5effb3ad619ff2697bbf02d132b7268def64d3c0e",
+      "afterSha256": "7bb81f0537f2e79ae9c0b3a5effb3ad619ff2697bbf02d132b7268def64d3c0e",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/li-hua/li-hua--walk--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "134e023aeed7d2c00c41f5db48bcc6816e6cafd1ea7f5636c96cca2c34a26a6f",
+      "beforeSha256": "134e023aeed7d2c00c41f5db48bcc6816e6cafd1ea7f5636c96cca2c34a26a6f",
+      "afterSha256": "134e023aeed7d2c00c41f5db48bcc6816e6cafd1ea7f5636c96cca2c34a26a6f",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--eat--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "414e294d94e9f0e44520ba56107ae4bcd6d70fe28324401b2279e5452b66fe7f",
+      "beforeSha256": "414e294d94e9f0e44520ba56107ae4bcd6d70fe28324401b2279e5452b66fe7f",
+      "afterSha256": "414e294d94e9f0e44520ba56107ae4bcd6d70fe28324401b2279e5452b66fe7f",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--gaze--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "b6640dbb8bc1b0099363ffafa1dc8501d62ce583a1b6a921bcc185a31543de3d",
+      "beforeSha256": "b6640dbb8bc1b0099363ffafa1dc8501d62ce583a1b6a921bcc185a31543de3d",
+      "afterSha256": "b6640dbb8bc1b0099363ffafa1dc8501d62ce583a1b6a921bcc185a31543de3d",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--play--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "2f1387766dc54b1fb1b8148b338d2b0994f31440527e5b9c40ca920bf0972b7f",
+      "beforeSha256": "2f1387766dc54b1fb1b8148b338d2b0994f31440527e5b9c40ca920bf0972b7f",
+      "afterSha256": "2f1387766dc54b1fb1b8148b338d2b0994f31440527e5b9c40ca920bf0972b7f",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--sit--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "b7af2b27fc68972577366c6004ecab9ce0b22cd48f2014b6c4c02275fe3e101e",
+      "beforeSha256": "b7af2b27fc68972577366c6004ecab9ce0b22cd48f2014b6c4c02275fe3e101e",
+      "afterSha256": "b7af2b27fc68972577366c6004ecab9ce0b22cd48f2014b6c4c02275fe3e101e",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--sleep--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "0973edf8e215283a04f181e55bb31b10f31a55534ef9651d447215c5d702ec13",
+      "beforeSha256": "0973edf8e215283a04f181e55bb31b10f31a55534ef9651d447215c5d702ec13",
+      "afterSha256": "0973edf8e215283a04f181e55bb31b10f31a55534ef9651d447215c5d702ec13",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/runtime/orange-tabby/orange-tabby--walk--runtime-512--non-shipping-v01.png",
+      "manifestSha256": "c05ae3a49f2c6ef0d56dbf5cca233ff7b53a473926c5c0be4ff1bf9cd4f337b0",
+      "beforeSha256": "c05ae3a49f2c6ef0d56dbf5cca233ff7b53a473926c5c0be4ff1bf9cd4f337b0",
+      "afterSha256": "c05ae3a49f2c6ef0d56dbf5cca233ff7b53a473926c5c0be4ff1bf9cd4f337b0",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+      "manifestSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+      "beforeSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+      "afterSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--gaze--master-1024--non-shipping-v01.png",
+      "manifestSha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+      "beforeSha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+      "afterSha256": "1665babd3923bce00682369bcc69aa4cbef0e6166b9d3a711e0e9334e56f9e39",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+      "manifestSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+      "beforeSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+      "afterSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sit--master-1024--non-shipping-v01.png",
+      "manifestSha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+      "beforeSha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+      "afterSha256": "e84bef7421b0147ea168fe5e1febe83cb322e6dcb0b0b17dd786103ca7140846",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+      "manifestSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+      "beforeSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+      "afterSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--walk--master-1024--non-shipping-v01.png",
+      "manifestSha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+      "beforeSha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+      "afterSha256": "d8aa1ed692750c451ea542962fa6011f356c97c3507ae1697baeeda2e3a5f17b",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+      "manifestSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+      "beforeSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+      "afterSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--gaze--master-1024--non-shipping-v01.png",
+      "manifestSha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+      "beforeSha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+      "afterSha256": "398a13ea882ae54f758554dc3a20f5333b78db0c12b6c0b413d596d7b385588a",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+      "manifestSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+      "beforeSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+      "afterSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sit--master-1024--non-shipping-v01.png",
+      "manifestSha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+      "beforeSha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+      "afterSha256": "5a7f312a0d3c8bd451c476285bad0b0b9791bbc31d37c525ed1c4fa2a86f0566",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+      "manifestSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+      "beforeSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+      "afterSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--walk--master-1024--non-shipping-v01.png",
+      "manifestSha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+      "beforeSha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+      "afterSha256": "3951dd5f63ecad82751525e7ce4f31129bc9c6a8c7b417e67b5f3eea0115f88c",
+      "manifestMatch": true,
+      "unchanged": true
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/validation.v1.json",
+      "manifestSha256": "b92e01e92c9b1f0c6b9a3b8979adb8137d0087c3d3e8804c84b477d820bb5513",
+      "beforeSha256": "b92e01e92c9b1f0c6b9a3b8979adb8137d0087c3d3e8804c84b477d820bb5513",
+      "afterSha256": "b92e01e92c9b1f0c6b9a3b8979adb8137d0087c3d3e8804c84b477d820bb5513",
+      "manifestMatch": true,
+      "unchanged": true
+    }
+  ]
+}

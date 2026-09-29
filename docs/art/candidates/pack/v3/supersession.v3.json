@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 3,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "supersedes": {
+    "path": "docs/art/candidates/pack/v2",
+    "scope": "product-content evidence and starter-item source references only",
+    "state": "SUPERSEDED",
+    "reason": "pack/v2 references duplicate postcard-gifts/v1 starter-item candidates; shop/v2 is the cleaned canonical family"
+  },
+  "doesNotSupersede": [
+    "pack/v1 opened-bag base",
+    "pack/v1 foreground rim",
+    "pack/v1 three-slot contract",
+    "pack/v2 capacity and physical-occlusion method"
+  ],
+  "canonicalReplacement": {
+    "root": "docs/art/candidates/shop/v2/masters",
+    "itemIds": [
+      "fish-biscuit",
+      "small-bell",
+      "small-blanket",
+      "small-camera",
+      "small-telescope",
+      "ticket",
+      "travel-tin",
+      "yarn-ball"
+    ],
+    "hashes": {
+      "fish-biscuit": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+      "small-bell": "0bce3ce954ac19cc167e80aa9fe27ec8520916b04493286ddb48ba5a385db7d3",
+      "small-blanket": "668fbf3323692bcb28a94de706f070e7b26b50d5959c8bee7ec4b81b9d8d6c16",
+      "small-camera": "0bebf41587795b7525fb65e6b7bedd3355cf87978edf5378dac1aaff7bc8aa10",
+      "small-telescope": "c924a0b93afd820b959b63b61add3fe33b512e9798f4b8941e8abdeaa08a71a6",
+      "ticket": "1cd47e2f6f7eb3894103361dfb902558beab3ebbde67087a061f8f6f324c4844",
+      "travel-tin": "288f013d6d7d22e3ca91d105660a3cd841f7508eaec2f0f63d1e44a530eacfee",
+      "yarn-ball": "05dea80165276b387bc0c8dbd037eec7233d6bb1fff18ee2102f9e77dffa72b5"
+    }
+  },
+  "sourceFilesModified": false
+}

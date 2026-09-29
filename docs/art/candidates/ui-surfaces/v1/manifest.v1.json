@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "reusable-ui-watercolor-surface-review-pack",
+  "collectionId": "ui-surfaces-v1",
+  "batchId": "GEN-04",
+  "assetNeedIds": [
+    "AA-017"
+  ],
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "approvalState": "pending-human-visual-approval",
+  "createdAt": "2026-07-21",
+  "branch": "art/home-screen-v1",
+  "root": "docs/art/candidates/ui-surfaces/v1",
+  "selfExcludedFromFileHashes": true,
+  "hashIndexExcludes": [
+    "manifest.v1.json",
+    "hashes.sha256"
+  ],
+  "fileCountExcludingManifest": 25,
+  "style": {
+    "intensity": "B",
+    "description": "low-contrast warm off-white paper with optional translucent muted-sage watercolor wash/granulation",
+    "references": [
+      "docs/art/style-ref-home.png",
+      "docs/art/style-ref-postcard.png",
+      "docs/art/style-ref-poses.png",
+      "docs/art/candidates/style-intensity/style-intensity-B-reference-calibration-non-final-20260720.png"
+    ]
+  },
+  "generatedWith": {
+    "method": "deterministic procedural periodic spectral synthesis",
+    "imageGeneratorSeedUsed": false,
+    "seeds": {
+      "paper_low": 202607210401,
+      "paper_mid": 202607210402,
+      "paper_fine": 202607210403,
+      "wash_low": 202607210411,
+      "wash_mid": 202607210412,
+      "wash_granulation": 202607210413,
+      "wash_color": 202607210414
+    },
+    "dependencies": {
+      "numpy": "2.4.6",
+      "Pillow": "12.3.0"
+    }
+  },
+  "assets": [
+    {
+      "id": "surface-paper-warm-seamless",
+      "master": "masters/surface--paper-warm--seamless--master-1024--non-shipping-v01.png",
+      "runtime1x": "runtime/surface--paper-warm--tile-512--1x--non-shipping-v01.webp",
+      "runtime2x": "runtime/surface--paper-warm--tile-1024--2x--non-shipping-v01.webp",
+      "mode": "opaque RGB",
+      "colorSpace": "embedded sRGB"
+    },
+    {
+      "id": "surface-sage-wash-seamless",
+      "master": "masters/surface--sage-wash--seamless--master-1024--non-shipping-v01.png",
+      "runtime1x": "runtime/surface--sage-wash--tile-512--1x--non-shipping-v01.webp",
+      "runtime2x": "runtime/surface--sage-wash--tile-1024--2x--non-shipping-v01.webp",
+      "mode": "straight-alpha RGBA",
+      "colorSpace": "embedded sRGB"
+    }
+  ],
+  "validationSummary": {
+    "result": "pass-with-pre-existing-css-accessibility-findings",
+    "surfaceCandidateChecksPass": true,
+    "masterAndRuntimeStructurePass": true,
+    "decodedRuntimePixelsExact": true,
+    "deterministicRebuildHashIndexAndManifestMatch": true,
+    "seamChecksPass": true,
+    "frequencyAndRepetitionChecksPass": true,
+    "textureIntroducesContrastRegression": false,
+    "preExistingCssAccessibilityFindings": 3,
+    "humanApprovalPending": true
+  },
+  "scope": {
+    "appOrCssModified": false,
+    "productionAssetsModified": false,
+    "otherCandidateRootsModified": false,
+    "integrationPerformed": false,
+    "commitCreated": false
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 2586,
+      "sha256": "39584ced6f100a1673cfa229687e3cb1f3bb2da064f458a4f3141776931e81d2",
+      "kind": "documentation"
+    },
+    {
+      "path": "hashes.sha256",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 3088,
+      "sha256": "69b3a2c5d602cf11e7e9a221ef2746072d193ff7ab33b934513e4c0121bd1a27",
+      "kind": "hash-index"
+    },
+    {
+      "path": "masters/surface--paper-warm--seamless--master-1024--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 198905,
+      "sha256": "8891646b431d660f19c75c22066478e5be2eff9f09da9bb4c7e3a0a26f42462c",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "masters/surface--sage-wash--seamless--master-1024--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 426677,
+      "sha256": "b08d098b13cfa3bda1f9e2faafa53aac56a6f1472128dc1f3f2fe19a3a00f883",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/context/common-drawer-card-sizes--display-1200x1600--1x--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 406253,
+      "sha256": "db2a8f79c3f1399be87bf79b165516f4a083ebaaedaea4c6008fbc947f964ac7",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/context/common-drawer-card-sizes--display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 1096744,
+      "sha256": "6294c4331e7e5ae9b1e8613d77a45df9b810e0bde3809bfa48288b6b5731f5dd",
+      "format": "PNG",
+      "width": 2400,
+      "height": 3200,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/contrast/text-contrast--current-colors--1200x1600--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 329867,
+      "sha256": "340895cb7a233e41d3a2bcdaf045adfe8fcc51b9a7fc52a89fee5a11e4ab6555",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/contrast/text-contrast-metrics.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 8614,
+      "sha256": "6870cd2f42107454e17bb2d33cb5a5c06ba952a4fdc6b746709f4550b13d39ab",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa/frequency/frequency-repetition-inspection--1600x1100--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 853224,
+      "sha256": "0c289af29c034f3c956c0feb7137e86a2608e22b92a7dd07db4e6b76fcac0b2a",
+      "format": "PNG",
+      "width": 1600,
+      "height": 1100,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/frequency/frequency-repetition-metrics.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 5834,
+      "sha256": "1de4c6fd66195e50bc53ff85b3972d768de85ac9b708f28165d2c1c33219068b",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa/qa-report.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 6816,
+      "sha256": "6db90dc9978c18946d306442d2419bb4511ed8129c27bb50561fc661d591619c",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa/repetition/surface--paper-plus-sage--tiled-display-1200x1600--1x--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 453896,
+      "sha256": "dd54a3cedfa1505ce115a6b9df3da3808413fb50d43b9144688f66ab5a65a884",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/repetition/surface--paper-plus-sage--tiled-display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 1284845,
+      "sha256": "7ff1d003106a4ff15c46db70f0f93e091f4fd8d9db10e9fff2c0ac44b52c68bd",
+      "format": "PNG",
+      "width": 2400,
+      "height": 3200,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/repetition/surface--paper-warm--tiled-display-1200x1600--1x--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 283639,
+      "sha256": "fafb3045a32ff38133fccf7c3cdfacffcb477886925b32a72de8a245a1479a56",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1600,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/repetition/surface--paper-warm--tiled-display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 757115,
+      "sha256": "144259658bb464de67fc29a938aa6e1e0128be445cd6a8cc1451687c45ed32b4",
+      "format": "PNG",
+      "width": 2400,
+      "height": 3200,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/seams/offset-seam-inspection--1200x1200--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 386801,
+      "sha256": "6f6b26a6d6ddac3df47a73515bb3062b52d881cf5355bd8e38e7f5c384634692",
+      "format": "PNG",
+      "width": 1200,
+      "height": 1200,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "qa/seams/offset-seam-metrics.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 6682,
+      "sha256": "dd82482ef19e5883b9a2462d2531ab52768b4ff97aab8a8bd31fba18ec27f9cd",
+      "kind": "metadata"
+    },
+    {
+      "path": "qa/transparency/sage-wash-straight-alpha--1200x900--non-shipping-v01.png",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 184369,
+      "sha256": "b7ce89d3a37d68c0e0be4da567b4a28509ba0cff76e8fc8b9f90b245f32962ee",
+      "format": "PNG",
+      "width": 1200,
+      "height": 900,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "runtime/surface--paper-warm--tile-1024--2x--non-shipping-v01.webp",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 134276,
+      "sha256": "b98dabd360541734abc51893bd27ef23be234317890a9acd907b63688cfd7542",
+      "format": "WEBP",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "runtime/surface--paper-warm--tile-512--1x--non-shipping-v01.webp",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 51354,
+      "sha256": "bb99ff718cb2407ce8270c69eaf0e67a2017a328b36eeb05ddce67c67b15a316",
+      "format": "WEBP",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGB",
+      "iccProfile": true,
+      "kind": "image"
+    },
+    {
+      "path": "runtime/surface--sage-wash--tile-1024--2x--non-shipping-v01.webp",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 304070,
+      "sha256": "4c3793260375b6c58ca6ffe823d961dc24145df5e67bce59557bd956385d121e",
+      "format": "WEBP",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    },
+    {
+      "path": "runtime/surface--sage-wash--tile-512--1x--non-shipping-v01.webp",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 113208,
+      "sha256": "010382c327e2f26be654d7111f528caaf199d0d1a829fd4646c316141963971d",
+      "format": "WEBP",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true,
+      "kind": "image"
+    },
+    {
+      "path": "scripts/build_v1.py",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 78545,
+      "sha256": "5441bee0110a250ee67df3452a96c9f1c8ca5e9df221f5fcc19c490c51eb1f20",
+      "kind": "build-script"
+    },
+    {
+      "path": "source/audit-inputs.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 7629,
+      "sha256": "c267064fd1e4a9a2731888ee35c34e728a44a9866da0d4caf4fb53ff483a38aa",
+      "kind": "metadata"
+    },
+    {
+      "path": "source/generation-spec.v1.json",
+      "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+      "shippingEligible": false,
+      "bytes": 2438,
+      "sha256": "47c9eaf327b8ec05d73e331cb9418d49fcfa8be6571d8fe13693f21c452c61dc",
+      "kind": "metadata"
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "british-shorthair-home-candidates-v1",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "root": "docs/art/candidates/cats/british-shorthair/v1",
+  "generation": {
+    "method": "Cursor built-in image generation; one separately generated image per individual and pose",
+    "backgroundWorkflow": "flat magenta generation plate followed by local soft-alpha extraction, despill, restrained saturation calibration, and deterministic 1024x1024 normalization",
+    "localPrimitiveCatDrawingUsed": false,
+    "sourceArtLabelFree": true
+  },
+  "calibrationReferences": [
+    {
+      "path": "docs/art/calibration-production-v1.md",
+      "role": "locked B-intensity watercolor, alpha, safe-margin, pose naming, and composition conventions"
+    },
+    {
+      "path": "docs/art/prompt-pack.calibration.v1.json",
+      "role": "shared restrained watercolor prompt and global anatomy avoidances"
+    },
+    {
+      "path": "docs/art/style-ref-poses.png",
+      "role": "pose readability and restrained watercolor reference"
+    },
+    {
+      "path": "public/portraits/minho/portrait--minho--{sit|sleep|walk|eat|play|gaze}--v01.png",
+      "role": "approved six-pose canvas, baseline, physical interaction, and scale conventions only; not identity"
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+      "role": "unchanged approved room and rug-scale review plate"
+    }
+  ],
+  "appContractEvidence": {
+    "portraitPoseEnum": {
+      "path": "src/lib/assets/index.ts",
+      "poses": [
+        "sit",
+        "sleep",
+        "walk",
+        "eat",
+        "play",
+        "gaze"
+      ]
+    },
+    "homeActivities": {
+      "path": "src/App.svelte",
+      "poses": [
+        "sleep",
+        "play",
+        "eat"
+      ]
+    },
+    "travelAndPostcardConvention": {
+      "paths": [
+        "src/lib/assets/starterCatalog.ts",
+        "src/lib/postcards/Postcard.svelte",
+        "src/lib/postcards/index.ts"
+      ],
+      "notes": "The typed portrait record remains six-pose complete; walk and gaze remain available to scene and postcard composition."
+    },
+    "additionalPoseDecision": {
+      "drink": "not generated; no current consumer or portrait-pose enum value",
+      "travelReturn": "not generated; returned presence changes copy, then reuses normal home activity art"
+    }
+  },
+  "exportSpec": {
+    "source": {
+      "canvas": {
+        "width": 1024,
+        "height": 1024
+      },
+      "format": "PNG",
+      "pixelMode": "RGBA",
+      "alpha": "straight PNG semantics",
+      "colorSpace": "sRGB",
+      "minimumSafeMarginPx": 64,
+      "transparentPixelRgb": "zero",
+      "anchor": {
+        "kind": "bottom-center alpha baseline",
+        "x": 512,
+        "y": 960
+      }
+    },
+    "runtimeReview": {
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "format": "PNG",
+      "pixelMode": "RGBA",
+      "intendedDisplay": "current 220x220 home portrait slot and static review",
+      "anchor": {
+        "kind": "bottom-center alpha baseline",
+        "x": 256,
+        "y": 480
+      }
+    }
+  },
+  "homeReview": {
+    "roomSource": "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+    "roomSourceModified": false,
+    "roomCanvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "bottomCenterAnchor": {
+      "x": 690,
+      "y": 1395
+    },
+    "pose": "sleep",
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 430,
+        "height": 932
+      }
+    ],
+    "contactShadowAdded": false
+  },
+  "individuals": [
+    {
+      "id": "golden-shaded",
+      "breed": "British Shorthair",
+      "coat": "golden shaded / 金渐层; warm cream-gold undercoat with restrained charcoal tipping on crown, back, flanks, and tail tip",
+      "morphology": "young adult female; petite-cobby but stocky, compact torso, modest cheeks, short sturdy legs, dense plush coat, thick medium tail",
+      "faceIdentity": "emerald-green eyes, dark rose nose, symmetrical forehead shading, modest round cheeks",
+      "scaleRelativeToMinho": 0.96,
+      "poses": {
+        "sit": {
+          "intendedState": "upright alert, adoption/profile, generic seated scene slot",
+          "source": "sources/golden-shaded/pose--golden-shaded--sit--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--sit--runtime-512.png"
+        },
+        "sleep": {
+          "intendedState": "home sleep/rest and returned-home rest",
+          "source": "sources/golden-shaded/pose--golden-shaded--sleep--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--sleep--runtime-512.png"
+        },
+        "walk": {
+          "intendedState": "grounded standing/walking-ready and travel scene composition",
+          "source": "sources/golden-shaded/pose--golden-shaded--walk--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--walk--runtime-512.png"
+        },
+        "eat": {
+          "intendedState": "current home eat activity",
+          "source": "sources/golden-shaded/pose--golden-shaded--eat--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--eat--runtime-512.png"
+        },
+        "play": {
+          "intendedState": "current home play activity",
+          "source": "sources/golden-shaded/pose--golden-shaded--play--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--play--runtime-512.png"
+        },
+        "gaze": {
+          "intendedState": "postcard/travel composition and attentive upward gaze",
+          "source": "sources/golden-shaded/pose--golden-shaded--gaze--master-1024.png",
+          "runtimeReview": "runtime/golden-shaded/pose--golden-shaded--gaze--runtime-512.png"
+        }
+      },
+      "reviews": {
+        "contactSheet": "reviews/golden-shaded/contact-sheet--golden-shaded--six-poses--non-shipping-v01.png",
+        "roomComposite": "reviews/golden-shaded/room-composite--golden-shaded--sleep--1200x1600--non-shipping-v01.png",
+        "mobile390": "reviews/golden-shaded/home-mockup--golden-shaded--390x844--non-shipping-v01.png",
+        "mobile430": "reviews/golden-shaded/home-mockup--golden-shaded--430x932--non-shipping-v01.png"
+      }
+    },
+    {
+      "id": "blue-golden-shaded",
+      "breed": "British Shorthair",
+      "coat": "blue-golden shaded / 蓝金渐层; pale honey undercoat veiled by cool blue-gray tipping with a charcoal-blue tail tip",
+      "morphology": "mature adult male; broader chest, heavier muscular-cobby condition, mature cheeks and muzzle, short sturdy legs, dense plush coat, thick tail",
+      "faceIdentity": "muted olive-green eyes, brick-rose nose, broad jowls, darker blue-gray brow arcs",
+      "scaleRelativeToMinho": 1.05,
+      "poses": {
+        "sit": {
+          "intendedState": "upright alert, adoption/profile, generic seated scene slot",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--sit--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--sit--runtime-512.png"
+        },
+        "sleep": {
+          "intendedState": "home sleep/rest and returned-home rest",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--sleep--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--sleep--runtime-512.png"
+        },
+        "walk": {
+          "intendedState": "grounded standing/walking-ready and travel scene composition",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--walk--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--walk--runtime-512.png"
+        },
+        "eat": {
+          "intendedState": "current home eat activity",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--eat--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--eat--runtime-512.png"
+        },
+        "play": {
+          "intendedState": "current home play activity",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--play--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--play--runtime-512.png"
+        },
+        "gaze": {
+          "intendedState": "postcard/travel composition and attentive upward gaze",
+          "source": "sources/blue-golden-shaded/pose--blue-golden-shaded--gaze--master-1024.png",
+          "runtimeReview": "runtime/blue-golden-shaded/pose--blue-golden-shaded--gaze--runtime-512.png"
+        }
+      },
+      "reviews": {
+        "contactSheet": "reviews/blue-golden-shaded/contact-sheet--blue-golden-shaded--six-poses--non-shipping-v01.png",
+        "roomComposite": "reviews/blue-golden-shaded/room-composite--blue-golden-shaded--sleep--1200x1600--non-shipping-v01.png",
+        "mobile390": "reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--390x844--non-shipping-v01.png",
+        "mobile430": "reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--430x932--non-shipping-v01.png"
+      }
+    },
+    {
+      "id": "solid-blue",
+      "breed": "British Shorthair",
+      "coat": "solid blue / 蓝猫; uniform low-saturation slate blue-gray with no tabby stripes or white patches",
+      "morphology": "older adult neutered male; largest healthy body condition, barrel-chested and deeply cobby, massive round head, broad jowls, shortest thick legs, exceptionally dense coat, very thick tail",
+      "faceIdentity": "deep copper-amber eyes, dark gray nose, compact muzzle, tiny wide-set ears",
+      "scaleRelativeToMinho": 1.1,
+      "poses": {
+        "sit": {
+          "intendedState": "upright alert, adoption/profile, generic seated scene slot",
+          "source": "sources/solid-blue/pose--solid-blue--sit--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--sit--runtime-512.png"
+        },
+        "sleep": {
+          "intendedState": "home sleep/rest and returned-home rest",
+          "source": "sources/solid-blue/pose--solid-blue--sleep--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--sleep--runtime-512.png"
+        },
+        "walk": {
+          "intendedState": "grounded standing/walking-ready and travel scene composition",
+          "source": "sources/solid-blue/pose--solid-blue--walk--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--walk--runtime-512.png"
+        },
+        "eat": {
+          "intendedState": "current home eat activity",
+          "source": "sources/solid-blue/pose--solid-blue--eat--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--eat--runtime-512.png"
+        },
+        "play": {
+          "intendedState": "current home play activity",
+          "source": "sources/solid-blue/pose--solid-blue--play--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--play--runtime-512.png"
+        },
+        "gaze": {
+          "intendedState": "postcard/travel composition and attentive upward gaze",
+          "source": "sources/solid-blue/pose--solid-blue--gaze--master-1024.png",
+          "runtimeReview": "runtime/solid-blue/pose--solid-blue--gaze--runtime-512.png"
+        }
+      },
+      "reviews": {
+        "contactSheet": "reviews/solid-blue/contact-sheet--solid-blue--six-poses--non-shipping-v01.png",
+        "roomComposite": "reviews/solid-blue/room-composite--solid-blue--sleep--1200x1600--non-shipping-v01.png",
+        "mobile390": "reviews/solid-blue/home-mockup--solid-blue--390x844--non-shipping-v01.png",
+        "mobile430": "reviews/solid-blue/home-mockup--solid-blue--430x932--non-shipping-v01.png"
+      }
+    },
+    {
+      "id": "blue-white-bicolor",
+      "breed": "British Shorthair",
+      "coat": "blue-white bicolor / 蓝白; blue cap, upper-back saddle and tail with white tip; white inverted-V blaze, muzzle, chest, belly and legs; one rounded left-shoulder spot",
+      "morphology": "young adult female; athletic-cobby and subtly taller/leaner than the golden female while retaining a stocky chest, short sturdy legs, round head, dense plush coat, and thick tail",
+      "faceIdentity": "warm amber eyes, pink nose, centered white inverted-V blaze, gentle cheeks",
+      "scaleRelativeToMinho": 1.0,
+      "poses": {
+        "sit": {
+          "intendedState": "upright alert, adoption/profile, generic seated scene slot",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--sit--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--sit--runtime-512.png"
+        },
+        "sleep": {
+          "intendedState": "home sleep/rest and returned-home rest",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--sleep--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--sleep--runtime-512.png"
+        },
+        "walk": {
+          "intendedState": "grounded standing/walking-ready and travel scene composition",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--walk--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--walk--runtime-512.png"
+        },
+        "eat": {
+          "intendedState": "current home eat activity",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--eat--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--eat--runtime-512.png"
+        },
+        "play": {
+          "intendedState": "current home play activity",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--play--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--play--runtime-512.png"
+        },
+        "gaze": {
+          "intendedState": "postcard/travel composition and attentive upward gaze",
+          "source": "sources/blue-white-bicolor/pose--blue-white-bicolor--gaze--master-1024.png",
+          "runtimeReview": "runtime/blue-white-bicolor/pose--blue-white-bicolor--gaze--runtime-512.png"
+        }
+      },
+      "reviews": {
+        "contactSheet": "reviews/blue-white-bicolor/contact-sheet--blue-white-bicolor--six-poses--non-shipping-v01.png",
+        "roomComposite": "reviews/blue-white-bicolor/room-composite--blue-white-bicolor--sleep--1200x1600--non-shipping-v01.png",
+        "mobile390": "reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--390x844--non-shipping-v01.png",
+        "mobile430": "reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--430x932--non-shipping-v01.png"
+      }
+    }
+  ],
+  "collectionReviews": {
+    "identityComparison": "reviews/contact-sheet--all-individuals--identity-comparison--non-shipping-v01.png",
+    "machineAlphaAndLayoutReport": "qa/alpha-and-layout-report.v1.json",
+    "visualQa": "qa/visual-qa.v1.json"
+  }
+}

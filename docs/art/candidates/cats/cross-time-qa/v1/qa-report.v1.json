@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "coverage": {
+    "primaryRequired": 120,
+    "primaryReviewed": 120,
+    "primaryPassed": 120,
+    "lateNightResponsiveRequired": 18,
+    "lateNightResponsiveReviewed": 18,
+    "lateNightResponsivePassed": 18
+  },
+  "checks": {
+    "allTenIdentities": true,
+    "allActualHomeActivities": true,
+    "allFourTimes": true,
+    "sourceMastersHashLocked": true,
+    "identityScaleAndAnchorPreserved": true,
+    "correctPhysicalZOrder": true,
+    "noCatOnlyBrightening": true,
+    "noHaloOrGlow": true,
+    "twoVisibleBowlsEveryEatScene": true,
+    "waterBowlUnchangedByPatch": true,
+    "patchContained": true,
+    "physicalSupport": true,
+    "propAndFurnitureCollision": true,
+    "crop": true,
+    "hardEdgeAppearance": true,
+    "coatIdentity": true,
+    "activityReadability": true,
+    "playPropsClear": true,
+    "roomReconstruction": true,
+    "lateNightFocusVisibility": true,
+    "lateNightAllCatsVisualReview": true,
+    "lateNightMetricWarningsReviewed": true,
+    "uiTextContrastRatio": 7.496,
+    "uiContrastPass": true,
+    "noteAndNavigationUnchangedBySceneLighting": true
+  },
+  "explicitCoatInspection": {
+    "dusk": {
+      "solidBlue": "reviewed across sleep/play/eat; slate mass and copper-face cues remain distinct",
+      "liHua": "reviewed across sleep/play/eat; mackerel bands and lean silhouette remain distinct",
+      "maineCoon": "reviewed across sleep/play/eat; shaggy ruff and plumed silhouette remain distinct",
+      "siamesePoints": "reviewed across sleep/play/eat; seal mask, ears, paws, and tail remain readable",
+      "orangeAndGolden": "orange tabby, golden shaded, and blue-golden shaded reviewed; warm coats retain stripe/tipping separation without clipping",
+      "evidence": "reviews/focus/dusk-coat-visibility--seven-identities-three-activities--390x844--non-shipping-v01.png"
+    },
+    "lateNight": {
+      "allCatsAt390x844": [
+        "minho",
+        "golden-shaded",
+        "blue-golden-shaded",
+        "solid-blue",
+        "blue-white-bicolor",
+        "orange-tabby",
+        "li-hua",
+        "maine-coon",
+        "ragdoll",
+        "siamese"
+      ],
+      "allCatEvidence": "reviews/by-time/matrix--late-night--ten-cats-three-activities--390x844--non-shipping-v01.png",
+      "responsiveStressCats": [
+        "solid-blue",
+        "li-hua",
+        "maine-coon"
+      ],
+      "responsiveViewports": [
+        "320x700",
+        "430x932"
+      ],
+      "responsiveEvidence": "reviews/focus/late-night-worst-cases--solid-blue-li-hua-maine-coon--320x700-430x932--non-shipping-v01.png",
+      "quantitativeReviewWarnings": [
+        "390x844--late-night--minho--eat",
+        "390x844--late-night--golden-shaded--sleep",
+        "390x844--late-night--golden-shaded--play",
+        "390x844--late-night--golden-shaded--eat",
+        "390x844--late-night--orange-tabby--sleep",
+        "390x844--late-night--orange-tabby--play",
+        "390x844--late-night--orange-tabby--eat"
+      ],
+      "focusGateFailures": [],
+      "visualInsufficiencyCases": [],
+      "reviewDisposition": "pass-with-quantitative-warnings"
+    }
+  },
+  "physicalCompositingReview": {
+    "evidence": "reviews/focus/physical-z-order--late-night-solid-blue-sleep--390x844--non-shipping-v01.png",
+    "selected": "approved time lighting above cat",
+    "rejected": "cat above approved lighting because it reads as a bright pasted cutout"
+  },
+  "universalOverlay": {
+    "evaluated": true,
+    "necessary": false,
+    "created": false,
+    "path": null,
+    "decisionBasis": {
+      "allCatsAt390x844": [
+        "minho",
+        "golden-shaded",
+        "blue-golden-shaded",
+        "solid-blue",
+        "blue-white-bicolor",
+        "orange-tabby",
+        "li-hua",
+        "maine-coon",
+        "ragdoll",
+        "siamese"
+      ],
+      "responsiveStressCats": [
+        "solid-blue",
+        "li-hua",
+        "maine-coon"
+      ],
+      "viewports": [
+        "390x844",
+        "320x700",
+        "430x932"
+      ],
+      "activities": [
+        "sleep",
+        "play",
+        "eat"
+      ],
+      "quantitativeReviewThreshold": {
+        "minimumMeanDeltaE76": 7.0,
+        "minimumMedianDeltaE76": 4.0,
+        "minimumPixelsAtDeltaE5Percent": 45.0,
+        "minimumMeanAbsoluteLuminanceDelta": 0.018
+      },
+      "quantitativeWarnings": [
+        "390x844--late-night--minho--eat",
+        "390x844--late-night--golden-shaded--sleep",
+        "390x844--late-night--golden-shaded--play",
+        "390x844--late-night--golden-shaded--eat",
+        "390x844--late-night--orange-tabby--sleep",
+        "390x844--late-night--orange-tabby--play",
+        "390x844--late-night--orange-tabby--eat"
+      ],
+      "responsiveFocusThresholdWarnings": [],
+      "visualInsufficiencyCases": [],
+      "visualDecision": "All 30 late-night 390x844 cells retain a readable silhouette and activity; all 18 required 320/430 focus proofs retain dark-coat identity. A universal wash would lighten already-readable room geometry without resolving a hard failure."
+    },
+    "catIndependent": true,
+    "sharedAcrossAllCats": null,
+    "directionalSource": null,
+    "catOnlyBrightening": false,
+    "haloOrGlow": false,
+    "noteAndNavigationImpact": "not applicable; no universal overlay was added"
+  },
+  "inputIntegrity": [
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--eat--master-1024.png",
+      "actualSha256": "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "expectedSha256": "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--play--master-1024.png",
+      "actualSha256": "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "expectedSha256": "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sleep--master-1024.png",
+      "actualSha256": "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "expectedSha256": "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--eat--master-1024.png",
+      "actualSha256": "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "expectedSha256": "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--play--master-1024.png",
+      "actualSha256": "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "expectedSha256": "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sleep--master-1024.png",
+      "actualSha256": "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "expectedSha256": "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--eat--master-1024.png",
+      "actualSha256": "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "expectedSha256": "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--play--master-1024.png",
+      "actualSha256": "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "expectedSha256": "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sleep--master-1024.png",
+      "actualSha256": "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "expectedSha256": "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--eat--master-1024.png",
+      "actualSha256": "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "expectedSha256": "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--play--master-1024.png",
+      "actualSha256": "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "expectedSha256": "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sleep--master-1024.png",
+      "actualSha256": "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "expectedSha256": "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+      "actualSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+      "expectedSha256": "60d83f5d8de1dc3af7c088f8b67c239a535f390b81871f22ba8b5193015c3a96",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+      "actualSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+      "expectedSha256": "8e75b769cf1ffdffb60e281e8a87510d4af23dc35fab367a7bd3137e2b8bac80",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+      "actualSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+      "expectedSha256": "2dd4a0f2ac0209c8017bc578704164a0c222e2ae298275456392a76583a50ce7",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+      "actualSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+      "expectedSha256": "6f7cf8accde25019b9830121f477e25f3af45d632eab587ca6254808d4aa89b7",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+      "actualSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+      "expectedSha256": "a01443f598153dc33a2e6f3f6b0cbb300cad3f0d678cae976835ec520f060cc8",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/domestic-shorthair/v1/source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+      "actualSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+      "expectedSha256": "81db7c70b3e83f49010d3523fc3b17569f7c9593efdcc47af27a1851beff10cf",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--eat--master-1024--non-shipping-v01.png",
+      "actualSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+      "expectedSha256": "618dbade563c96ddf368fc45e873213d430d6c13ad32008aef9eb68e7e9bca0a",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--play--master-1024--non-shipping-v01.png",
+      "actualSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+      "expectedSha256": "28d7d7e339f7071541b94c6b5617f153310d81dde85c19adfa83b5026f7b1c42",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/maine-coon/cat--maine-coon--sleep--master-1024--non-shipping-v01.png",
+      "actualSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+      "expectedSha256": "72f26bbfd90230b5299f7a2ab4a957d67b4582fb7db6878c9399ec75b8ca598c",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--eat--master-1024--non-shipping-v01.png",
+      "actualSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+      "expectedSha256": "3e584009c3e2d30e5529d95a2bea47b86b4bd983ae29a91c8c4263af85eb2768",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--play--master-1024--non-shipping-v01.png",
+      "actualSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+      "expectedSha256": "c7e6c4e2ba7643816ff5ddc8c6bcef246753660a77c4e7756c0cc9aa259badcc",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/ragdoll/cat--ragdoll--sleep--master-1024--non-shipping-v01.png",
+      "actualSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+      "expectedSha256": "f74623dac4630069c6b5bb396fd7dca035e1b6a73864663ed134a43133bed01d",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--eat--master-1024--non-shipping-v01.png",
+      "actualSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+      "expectedSha256": "35ebed260c1814a008feb1fe86c8fddaff0d7b7ca022550877600ffdd7fa639c",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--play--master-1024--non-shipping-v01.png",
+      "actualSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+      "expectedSha256": "a390533eb72f2a07c9cdd6c73b295630128683c2e3c0bb1c668f50450ba6867d",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/cats/silhouette-variety/v1/masters/siamese/cat--siamese--sleep--master-1024--non-shipping-v01.png",
+      "actualSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+      "expectedSha256": "d929cfe027b2899f5bca4cbd42a41cb7148543f9186a0961fcb6262872047374",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "public/portraits/minho/portrait--minho--eat--v01.png",
+      "actualSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+      "expectedSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "public/portraits/minho/portrait--minho--play--v01.png",
+      "actualSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+      "expectedSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "public/portraits/minho/portrait--minho--sleep--v01.png",
+      "actualSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "expectedSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-interior-foreground--window-transparent--non-shipping-v03.png",
+      "actualSha256": "b9270731183e8ec70f492926f29d7e83a2a0aaae26cbe2a2ab6598e01be7926d",
+      "expectedSha256": "b9270731183e8ec70f492926f29d7e83a2a0aaae26cbe2a2ab6598e01be7926d",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-exterior--morning--full-canvas--non-shipping-v03.png",
+      "actualSha256": "334cfaa2fd9bbaf3b32d6a1633f157d5eb603153098838e2211ec79ae2b1627d",
+      "expectedSha256": "334cfaa2fd9bbaf3b32d6a1633f157d5eb603153098838e2211ec79ae2b1627d",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-exterior--noon--full-canvas--non-shipping-v03.png",
+      "actualSha256": "cd1114621d449644d26df321f4fd13d022120c686a94d4bc600bedbf4e356a0e",
+      "expectedSha256": "cd1114621d449644d26df321f4fd13d022120c686a94d4bc600bedbf4e356a0e",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-exterior--dusk--full-canvas--non-shipping-v03.png",
+      "actualSha256": "37f0296ede27afd5d24c67e78404ffb8ed148be16fb95e3c17680742ce73f2a2",
+      "expectedSha256": "37f0296ede27afd5d24c67e78404ffb8ed148be16fb95e3c17680742ce73f2a2",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-exterior--late-night--full-canvas--non-shipping-v03.png",
+      "actualSha256": "6516099663d76f249c411ea22b498380fe204e0a841d15114cc189bf5e362385",
+      "expectedSha256": "6516099663d76f249c411ea22b498380fe204e0a841d15114cc189bf5e362385",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-lighting-overlay--morning--non-shipping-v03.png",
+      "actualSha256": "00cf38de3fec52d24acfc60c14955f6246609976e696840213e8bb379f04482e",
+      "expectedSha256": "00cf38de3fec52d24acfc60c14955f6246609976e696840213e8bb379f04482e",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-lighting-overlay--dusk--non-shipping-v03.png",
+      "actualSha256": "1f407ece593d8c5d51414f6dcd3c215255297ce57af77f3bd4d332a4a583230a",
+      "expectedSha256": "1f407ece593d8c5d51414f6dcd3c215255297ce57af77f3bd4d332a4a583230a",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    },
+    {
+      "path": "docs/art/candidates/home/v3/layers/home-lighting-overlay--late-night--non-shipping-v03.png",
+      "actualSha256": "694f8e33a8c200460b58b57b7a43703cf6a836132eb640f0af24beca68045e23",
+      "expectedSha256": "694f8e33a8c200460b58b57b7a43703cf6a836132eb640f0af24beca68045e23",
+      "expectedSource": "v1/v3/v5/v6 manifest or placement metadata",
+      "hashMatched": true,
+      "modified": false
+    }
+  ],
+  "roomReconstruction": {
+    "morning": {
+      "maxChannelDelta": 0,
+      "meanAbsoluteChannelDelta": 0.0,
+      "exactPixelPercent": 100.0,
+      "pass": true
+    },
+    "noon": {
+      "maxChannelDelta": 0,
+      "meanAbsoluteChannelDelta": 0.0,
+      "exactPixelPercent": 100.0,
+      "pass": true
+    },
+    "dusk": {
+      "maxChannelDelta": 0,
+      "meanAbsoluteChannelDelta": 0.0,
+      "exactPixelPercent": 100.0,
+      "pass": true
+    },
+    "late-night": {
+      "maxChannelDelta": 0,
+      "meanAbsoluteChannelDelta": 0.0,
+      "exactPixelPercent": 100.0,
+      "pass": true
+    }
+  },
+  "patchQAByTime": {
+    "morning": {
+      "declaredTargetBounds": [
+        350,
+        1175,
+        500,
+        1328
+      ],
+      "actualPixelDifferenceBounds": [
+        358,
+        1175,
+        500,
+        1328
+      ],
+      "changedPixelCount": 19172,
+      "changedPixelPercentOfCanvas": 0.998542,
+      "maximumChannelDelta": 126,
+      "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+      "waterBowlMaxPixelDelta": 0,
+      "outsideDeclaredPatchChangedPixels": 0,
+      "appliedBeforeCatAndLighting": true
+    },
+    "noon": {
+      "declaredTargetBounds": [
+        350,
+        1175,
+        500,
+        1328
+      ],
+      "actualPixelDifferenceBounds": [
+        358,
+        1175,
+        500,
+        1328
+      ],
+      "changedPixelCount": 19172,
+      "changedPixelPercentOfCanvas": 0.998542,
+      "maximumChannelDelta": 126,
+      "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+      "waterBowlMaxPixelDelta": 0,
+      "outsideDeclaredPatchChangedPixels": 0,
+      "appliedBeforeCatAndLighting": true
+    },
+    "dusk": {
+      "declaredTargetBounds": [
+        350,
+        1175,
+        500,
+        1328
+      ],
+      "actualPixelDifferenceBounds": [
+        358,
+        1175,
+        500,
+        1328
+      ],
+      "changedPixelCount": 19172,
+      "changedPixelPercentOfCanvas": 0.998542,
+      "maximumChannelDelta": 126,
+      "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+      "waterBowlMaxPixelDelta": 0,
+      "outsideDeclaredPatchChangedPixels": 0,
+      "appliedBeforeCatAndLighting": true
+    },
+    "late-night": {
+      "declaredTargetBounds": [
+        350,
+        1175,
+        500,
+        1328
+      ],
+      "actualPixelDifferenceBounds": [
+        358,
+        1175,
+        500,
+        1328
+      ],
+      "changedPixelCount": 19172,
+      "changedPixelPercentOfCanvas": 0.998542,
+      "maximumChannelDelta": 126,
+      "meanAbsoluteDeltaInsideChangedPixels": 20.266882,
+      "waterBowlMaxPixelDelta": 0,
+      "outsideDeclaredPatchChangedPixels": 0,
+      "appliedBeforeCatAndLighting": true
+    }
+  },
+  "failures": {
+    "primary": [],
+    "responsive": [],
+    "lateNightVisualInsufficiency": []
+  },
+  "warnings": {
+    "lateNightQuantitativeReviewThreshold": [
+      "390x844--late-night--minho--eat",
+      "390x844--late-night--golden-shaded--sleep",
+      "390x844--late-night--golden-shaded--play",
+      "390x844--late-night--golden-shaded--eat",
+      "390x844--late-night--orange-tabby--sleep",
+      "390x844--late-night--orange-tabby--play",
+      "390x844--late-night--orange-tabby--eat"
+    ]
+  },
+  "reviewSheets": [
+    {
+      "path": "reviews/by-cat/matrix--minho--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--golden-shaded--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--blue-golden-shaded--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--solid-blue--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--blue-white-bicolor--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--orange-tabby--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--li-hua--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--maine-coon--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--ragdoll--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-cat/matrix--siamese--four-times-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 928,
+      "height": 1473,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-time/matrix--morning--ten-cats-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1010,
+      "height": 1994,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-time/matrix--noon--ten-cats-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1010,
+      "height": 1994,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-time/matrix--dusk--ten-cats-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1010,
+      "height": 1994,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/by-time/matrix--late-night--ten-cats-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 1010,
+      "height": 1994,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/focus/dusk-coat-visibility--seven-identities-three-activities--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 704,
+      "height": 2833,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/focus/late-night-worst-cases--solid-blue-li-hua-maine-coon--320x700-430x932--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 918,
+      "height": 1180,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    {
+      "path": "reviews/focus/physical-z-order--late-night-solid-blue-sleep--390x844--non-shipping-v01.png",
+      "format": "PNG",
+      "width": 734,
+      "height": 707,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  ],
+  "stopCondition": "Stop for user visual approval; no shipping or integration."
+}

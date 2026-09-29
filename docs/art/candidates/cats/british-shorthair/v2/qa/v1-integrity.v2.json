@@ -1,0 +1,444 @@
+{
+  "after" : [
+    {
+      "actualSha256" : "ca48258572e41f1b03e3375abb4bcdbdb4c537a239f1190a4c116f09be05859f",
+      "expectedSha256" : "ca48258572e41f1b03e3375abb4bcdbdb4c537a239f1190a4c116f09be05859f",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "expectedSha256" : "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "5fb0817975df6e1440861a944cbbd71f2d457eac39ccc31df03071daff78db40",
+      "expectedSha256" : "5fb0817975df6e1440861a944cbbd71f2d457eac39ccc31df03071daff78db40",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "expectedSha256" : "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "expectedSha256" : "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "e390877fd4ae19d78faa4bf2cdce4fcc76043c6f1ae4ccd06ce74517fa568098",
+      "expectedSha256" : "e390877fd4ae19d78faa4bf2cdce4fcc76043c6f1ae4ccd06ce74517fa568098",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "958c6d084a826f7ee9bdc3dfc2fc8bb828d25bc434b08ed85f76b2dfb452ebff",
+      "expectedSha256" : "958c6d084a826f7ee9bdc3dfc2fc8bb828d25bc434b08ed85f76b2dfb452ebff",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "expectedSha256" : "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "44c9d89a89f721bb97e601dcc0c028cc3c52858c5b840fbed71c568756c5733c",
+      "expectedSha256" : "44c9d89a89f721bb97e601dcc0c028cc3c52858c5b840fbed71c568756c5733c",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "expectedSha256" : "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "expectedSha256" : "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "acbefdaee23202ce8d8de6c631e9a2c758d94de02ca9bf31307dafb61d3738cc",
+      "expectedSha256" : "acbefdaee23202ce8d8de6c631e9a2c758d94de02ca9bf31307dafb61d3738cc",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "dbb38effebeaea5dc31b957849d83b8f873598593bc47a800db27db97b90a1ec",
+      "expectedSha256" : "dbb38effebeaea5dc31b957849d83b8f873598593bc47a800db27db97b90a1ec",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "expectedSha256" : "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "ac33a8d470155a980a21e33cc844efe628ca00e9b47ca83644926f61664a05b0",
+      "expectedSha256" : "ac33a8d470155a980a21e33cc844efe628ca00e9b47ca83644926f61664a05b0",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "expectedSha256" : "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "expectedSha256" : "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "5ce3349355508bbb0fa48a41549601e296e7ae210f4a12e40bbb0a7ba7082281",
+      "expectedSha256" : "5ce3349355508bbb0fa48a41549601e296e7ae210f4a12e40bbb0a7ba7082281",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "0718870a632aba28adc0be1dea1286c2a4478ab172881ea7fec704dbf4f3ea0f",
+      "expectedSha256" : "0718870a632aba28adc0be1dea1286c2a4478ab172881ea7fec704dbf4f3ea0f",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "expectedSha256" : "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "8a2109ddb81baa1a79cfbe67369c86480421de127147649ac7009ad4cca1fffe",
+      "expectedSha256" : "8a2109ddb81baa1a79cfbe67369c86480421de127147649ac7009ad4cca1fffe",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "expectedSha256" : "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "expectedSha256" : "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "0df58931f56b56511df635c1c0ddbd44854d9731ffcd59769e5a0560cb155d59",
+      "expectedSha256" : "0df58931f56b56511df635c1c0ddbd44854d9731ffcd59769e5a0560cb155d59",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "8be53c1a6585e59239aa46559aca493ba4d82b98d2b1eb2f1f153a898144b312",
+      "expectedSha256" : "8be53c1a6585e59239aa46559aca493ba4d82b98d2b1eb2f1f153a898144b312",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/golden-shaded/home-mockup--golden-shaded--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "1116de6b911babb1c4ed001da8a254c184e1064c4af051c386f05f8043d45536",
+      "expectedSha256" : "1116de6b911babb1c4ed001da8a254c184e1064c4af051c386f05f8043d45536",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/golden-shaded/home-mockup--golden-shaded--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "150c63401c7d1d0b7840126b9359b308e5914ff3520d4d9cfe7d025d940b2f81",
+      "expectedSha256" : "150c63401c7d1d0b7840126b9359b308e5914ff3520d4d9cfe7d025d940b2f81",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "62b97440f4c2d09d1da057329937737d41cb1f3bafe35af3726b5134ba1684dc",
+      "expectedSha256" : "62b97440f4c2d09d1da057329937737d41cb1f3bafe35af3726b5134ba1684dc",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "62661e352b84eeceeb296d41240a3e3a9d0d48cee8cdd90860605eb9615914bf",
+      "expectedSha256" : "62661e352b84eeceeb296d41240a3e3a9d0d48cee8cdd90860605eb9615914bf",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/solid-blue/home-mockup--solid-blue--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "c3d064725f36c715b6dd560c55a40ce700ef1a09bd31eef031facce56f067a72",
+      "expectedSha256" : "c3d064725f36c715b6dd560c55a40ce700ef1a09bd31eef031facce56f067a72",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/solid-blue/home-mockup--solid-blue--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "7d18f5eed6b07f20f11f5cfc8af165322175d60555883003de8a9d7ef44ab023",
+      "expectedSha256" : "7d18f5eed6b07f20f11f5cfc8af165322175d60555883003de8a9d7ef44ab023",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "b2ae3d4044a122eb587100f963be63597560272da3d28ecf7ad9dec71167a2e2",
+      "expectedSha256" : "b2ae3d4044a122eb587100f963be63597560272da3d28ecf7ad9dec71167a2e2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+      "expectedSha256" : "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86",
+      "expectedSha256" : "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/reviews/mobile-review--390x844--at-home--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "9fbb71544f9682c6d928f854b4a4ae2772102128d18ddf6c3515bfa0aea84f3c",
+      "expectedSha256" : "9fbb71544f9682c6d928f854b4a4ae2772102128d18ddf6c3515bfa0aea84f3c",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/reviews/mobile-review--430x932--at-home--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "expectedSha256" : "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "matches" : true,
+      "path" : "public/portraits/minho/portrait--minho--sleep--v01.png"
+    }
+  ],
+  "allMatch" : true,
+  "before" : [
+    {
+      "actualSha256" : "ca48258572e41f1b03e3375abb4bcdbdb4c537a239f1190a4c116f09be05859f",
+      "expectedSha256" : "ca48258572e41f1b03e3375abb4bcdbdb4c537a239f1190a4c116f09be05859f",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "expectedSha256" : "8fbb880bbf8ca2d2a08bb10b48653e976aade6fdb336e67a9605c26a6f028f2a",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "5fb0817975df6e1440861a944cbbd71f2d457eac39ccc31df03071daff78db40",
+      "expectedSha256" : "5fb0817975df6e1440861a944cbbd71f2d457eac39ccc31df03071daff78db40",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "expectedSha256" : "65241d2411a2a6c70680ac6f67a2a0ebc3e4187e51d7c4937b14613c3c89104a",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "expectedSha256" : "ed403fbac797e1ab3b57ab20516c627e99094a1c996a7df29ec8f560059e2b72",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "e390877fd4ae19d78faa4bf2cdce4fcc76043c6f1ae4ccd06ce74517fa568098",
+      "expectedSha256" : "e390877fd4ae19d78faa4bf2cdce4fcc76043c6f1ae4ccd06ce74517fa568098",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/golden-shaded/pose--golden-shaded--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "958c6d084a826f7ee9bdc3dfc2fc8bb828d25bc434b08ed85f76b2dfb452ebff",
+      "expectedSha256" : "958c6d084a826f7ee9bdc3dfc2fc8bb828d25bc434b08ed85f76b2dfb452ebff",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "expectedSha256" : "afa1fefe7e7ecb4f4d06a84960e163eeb270b12e9938eb04bab4e1af11d586ac",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "44c9d89a89f721bb97e601dcc0c028cc3c52858c5b840fbed71c568756c5733c",
+      "expectedSha256" : "44c9d89a89f721bb97e601dcc0c028cc3c52858c5b840fbed71c568756c5733c",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "expectedSha256" : "1243191a6f70d9a592addb16c00a555be55721b04de667c0d71fee12ac3d90c2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "expectedSha256" : "6d47ac52d736938f42b0054187eba8d8324359ea42922b6a84f362bb604a66a9",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "acbefdaee23202ce8d8de6c631e9a2c758d94de02ca9bf31307dafb61d3738cc",
+      "expectedSha256" : "acbefdaee23202ce8d8de6c631e9a2c758d94de02ca9bf31307dafb61d3738cc",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-golden-shaded/pose--blue-golden-shaded--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "dbb38effebeaea5dc31b957849d83b8f873598593bc47a800db27db97b90a1ec",
+      "expectedSha256" : "dbb38effebeaea5dc31b957849d83b8f873598593bc47a800db27db97b90a1ec",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "expectedSha256" : "e24c95d273a73fa4745d81d9c8b1ba536872f85652c0ae2526026e9cc5ec5a4b",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "ac33a8d470155a980a21e33cc844efe628ca00e9b47ca83644926f61664a05b0",
+      "expectedSha256" : "ac33a8d470155a980a21e33cc844efe628ca00e9b47ca83644926f61664a05b0",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "expectedSha256" : "522fb7f28166d08391514fa8b86a7df8283a3181b32b6f60865c847889cae42c",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "expectedSha256" : "365e3654cf5495de4a04114b81f586d888757ee7997438a49749e7e54a74a030",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "5ce3349355508bbb0fa48a41549601e296e7ae210f4a12e40bbb0a7ba7082281",
+      "expectedSha256" : "5ce3349355508bbb0fa48a41549601e296e7ae210f4a12e40bbb0a7ba7082281",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/solid-blue/pose--solid-blue--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "0718870a632aba28adc0be1dea1286c2a4478ab172881ea7fec704dbf4f3ea0f",
+      "expectedSha256" : "0718870a632aba28adc0be1dea1286c2a4478ab172881ea7fec704dbf4f3ea0f",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sit--master-1024.png"
+    },
+    {
+      "actualSha256" : "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "expectedSha256" : "907aabffed1965426f45ddbf36fbc065f938538cc0a2cff1a4da2fdf1b941ee2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--sleep--master-1024.png"
+    },
+    {
+      "actualSha256" : "8a2109ddb81baa1a79cfbe67369c86480421de127147649ac7009ad4cca1fffe",
+      "expectedSha256" : "8a2109ddb81baa1a79cfbe67369c86480421de127147649ac7009ad4cca1fffe",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--walk--master-1024.png"
+    },
+    {
+      "actualSha256" : "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "expectedSha256" : "e409956cd087f721cf6c74e489b3bd7dc015a16b3a004af732d0148f056d8aae",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--eat--master-1024.png"
+    },
+    {
+      "actualSha256" : "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "expectedSha256" : "da0032b430c0de9bcd2e9c7ac611ca3ce47be5a3a9ccb54ede8d3b0e97f6c1a4",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--play--master-1024.png"
+    },
+    {
+      "actualSha256" : "0df58931f56b56511df635c1c0ddbd44854d9731ffcd59769e5a0560cb155d59",
+      "expectedSha256" : "0df58931f56b56511df635c1c0ddbd44854d9731ffcd59769e5a0560cb155d59",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/sources/blue-white-bicolor/pose--blue-white-bicolor--gaze--master-1024.png"
+    },
+    {
+      "actualSha256" : "8be53c1a6585e59239aa46559aca493ba4d82b98d2b1eb2f1f153a898144b312",
+      "expectedSha256" : "8be53c1a6585e59239aa46559aca493ba4d82b98d2b1eb2f1f153a898144b312",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/golden-shaded/home-mockup--golden-shaded--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "1116de6b911babb1c4ed001da8a254c184e1064c4af051c386f05f8043d45536",
+      "expectedSha256" : "1116de6b911babb1c4ed001da8a254c184e1064c4af051c386f05f8043d45536",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/golden-shaded/home-mockup--golden-shaded--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "150c63401c7d1d0b7840126b9359b308e5914ff3520d4d9cfe7d025d940b2f81",
+      "expectedSha256" : "150c63401c7d1d0b7840126b9359b308e5914ff3520d4d9cfe7d025d940b2f81",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "62b97440f4c2d09d1da057329937737d41cb1f3bafe35af3726b5134ba1684dc",
+      "expectedSha256" : "62b97440f4c2d09d1da057329937737d41cb1f3bafe35af3726b5134ba1684dc",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-golden-shaded/home-mockup--blue-golden-shaded--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "62661e352b84eeceeb296d41240a3e3a9d0d48cee8cdd90860605eb9615914bf",
+      "expectedSha256" : "62661e352b84eeceeb296d41240a3e3a9d0d48cee8cdd90860605eb9615914bf",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/solid-blue/home-mockup--solid-blue--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "c3d064725f36c715b6dd560c55a40ce700ef1a09bd31eef031facce56f067a72",
+      "expectedSha256" : "c3d064725f36c715b6dd560c55a40ce700ef1a09bd31eef031facce56f067a72",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/solid-blue/home-mockup--solid-blue--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "7d18f5eed6b07f20f11f5cfc8af165322175d60555883003de8a9d7ef44ab023",
+      "expectedSha256" : "7d18f5eed6b07f20f11f5cfc8af165322175d60555883003de8a9d7ef44ab023",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--390x844--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "b2ae3d4044a122eb587100f963be63597560272da3d28ecf7ad9dec71167a2e2",
+      "expectedSha256" : "b2ae3d4044a122eb587100f963be63597560272da3d28ecf7ad9dec71167a2e2",
+      "matches" : true,
+      "path" : "docs/art/candidates/cats/british-shorthair/v1/reviews/blue-white-bicolor/home-mockup--blue-white-bicolor--430x932--non-shipping-v01.png"
+    },
+    {
+      "actualSha256" : "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+      "expectedSha256" : "6eac16a3e24cbeb3d621cb2ed8df5565cc38ca0eeb88cc5089d8d8886ab72ed0",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86",
+      "expectedSha256" : "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/reviews/mobile-review--390x844--at-home--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "9fbb71544f9682c6d928f854b4a4ae2772102128d18ddf6c3515bfa0aea84f3c",
+      "expectedSha256" : "9fbb71544f9682c6d928f854b4a4ae2772102128d18ddf6c3515bfa0aea84f3c",
+      "matches" : true,
+      "path" : "docs/art/candidates/home/v3/reviews/mobile-review--430x932--at-home--non-shipping-v03.png"
+    },
+    {
+      "actualSha256" : "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "expectedSha256" : "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "matches" : true,
+      "path" : "public/portraits/minho/portrait--minho--sleep--v01.png"
+    }
+  ],
+  "checkedAfterBuild" : true,
+  "checkedBeforeBuild" : true,
+  "fileCount" : 36,
+  "schemaVersion" : 2,
+  "status" : "pass"
+}

@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "app-identity-candidate-pack",
+  "batchId": "GEN-01",
+  "assetNeedId": "AA-014",
+  "status": "NON-SHIPPING / VISUAL-SELECTION-REQUIRED",
+  "outputRoot": "docs/art/candidates/app-identity/v1/",
+  "productionModified": false,
+  "appCodeModified": false,
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "actualPainterlyGeneration": true,
+    "deterministicPostProcessing": "Pillow sRGB normalization, mask-safe fitting, Lanczos derivatives, small-size simplification, mask proofs, and viewport mockups",
+    "sourceInputs": {
+      "a": {
+        "path": "docs/art/candidates/app-identity/v1/generated/bravecat-app-identity-candidate-a-generated-v01.png",
+        "sha256": "ca696dfad711ef366f1c0ee173a0bf43f2d059378ad1c7b1f25f1fcfb73f9803",
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "embeddedIccProfile": false,
+        "generationTool": "Cursor GenerateImage",
+        "generationMode": "reference-conditioned painterly identity art"
+      },
+      "b": {
+        "path": "docs/art/candidates/app-identity/v1/generated/bravecat-app-identity-candidate-b-generated-v01.png",
+        "sha256": "f2c0c081d7457003549400cadc8e0d3f52329f820075734bba9ebe2d9e5f62ae",
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "embeddedIccProfile": false,
+        "generationTool": "Cursor GenerateImage",
+        "generationMode": "reference-conditioned painterly identity art"
+      }
+    }
+  },
+  "references": [
+    {
+      "path": "public/portraits/minho/portrait--minho--sit--v01.png",
+      "sha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e"
+    },
+    {
+      "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+      "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba"
+    },
+    {
+      "path": "docs/art/production/portraits/minho/manifest.json",
+      "sha256": "5b1190ab9f2f9609bfd12996e05d2c1193f25f6eeb76f5fcd3a114b73436123d"
+    },
+    {
+      "path": "docs/art/production/portraits/minho/validation.json",
+      "sha256": "38704c336e69f64b1542618daaa79908d0fb4be0d046064e2d09564db56ead49"
+    },
+    {
+      "path": "docs/art/style-ref-home.png",
+      "sha256": "4d1ecab2dfaba027f80735b15128148b03f68f9a5ae94b33cda35949eeb87efe"
+    },
+    {
+      "path": "docs/art/style-ref-postcard.png",
+      "sha256": "a79785ecdeaf8d59fd1811897ec346993b83905070ca81934efefccc52fd5e4b"
+    },
+    {
+      "path": "docs/art/style-ref-poses.png",
+      "sha256": "2de1f272990c8546101e93ce355a819153d48727e5ab62a86d011c2812b53110"
+    },
+    {
+      "path": "docs/art/candidates/calibration/calibration-non-final--portrait-board--minho--candidate-a--v02.png",
+      "sha256": "a24a54fb93b7396770fb57359717a13ccf13ef54b5f85a98461072a9510e977a"
+    },
+    {
+      "path": "public/icon.svg",
+      "sha256": "cd51289ccbb7524e659a363d5318bbfcba815753526d9206bca836ad5bd82f46"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "636db2250353489f096a863d133b68608ab592b12336423cfef3d6034433877e"
+    }
+  ],
+  "approvedIdentity": {
+    "portraitId": "minho",
+    "status": "approved",
+    "identityLocks": {
+      "eyeColor": "blue-green",
+      "coat": "silver-shaded",
+      "tail": "thick-tapered-with-soft-ring-markings",
+      "body": "compact-sturdy-athletic",
+      "accessories": "none"
+    }
+  },
+  "currentPwaContract": {
+    "master": "1024x1024 opaque sRGB candidate",
+    "manifest192": {
+      "size": "192x192",
+      "purpose": "any"
+    },
+    "manifest512": {
+      "size": "512x512",
+      "purpose": "any maskable"
+    },
+    "appleTouch": {
+      "size": "180x180"
+    },
+    "favicon": [
+      "48x48 simplified",
+      "32x32 simplified"
+    ]
+  },
+  "constraints": {
+    "styleIntensity": "B",
+    "style": "restrained low-saturation watercolor",
+    "criticalSubjectRegion": "central 80%",
+    "requiredMasks": [
+      "circle",
+      "squircle"
+    ],
+    "minimumRecognitionSizePx": 32,
+    "forbidden": [
+      "text",
+      "logo lettering",
+      "emoji",
+      "hard black outline",
+      "pseudo-text",
+      "invented or substitute cat",
+      "fragile critical detail"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "candidate-a",
+      "slug": "minho-envelope",
+      "title": "Front-facing Minho with open envelope",
+      "composition": "Face-dominant frontal Minho rising from a restrained open postcard envelope; paws and one unmarked seal dot remain secondary.",
+      "criticalBoundsNormalized": [
+        0.2,
+        0.15,
+        0.8,
+        0.88
+      ],
+      "distinctFromOtherCandidate": true
+    },
+    {
+      "id": "candidate-b",
+      "slug": "minho-home-postcard",
+      "title": "Three-quarter Minho in postcard home",
+      "composition": "Compact three-quarter seated Minho within a folded-postcard home silhouette; the broad ringed tail anchors the small-size mark.",
+      "criticalBoundsNormalized": [
+        0.2,
+        0.12,
+        0.8,
+        0.87
+      ],
+      "distinctFromOtherCandidate": true
+    }
+  ],
+  "artifacts": [
+    {
+      "candidate": "candidate-a",
+      "role": "master",
+      "path": "docs/art/candidates/app-identity/v1/masters/app-icon--minho-envelope--master-1024--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        1024,
+        1024
+      ],
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "0eff86c75ebc094795831ba387281a79be8f74d619a772abd363873bcd7884f8"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "master",
+      "path": "docs/art/candidates/app-identity/v1/masters/app-icon--minho-home-postcard--master-1024--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        1024,
+        1024
+      ],
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "055f702071ed49cf98ec1faedd93154979ac9ac6e3957437603673b23d450d7e"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "install-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-a--390x844--non-shipping-v01.png",
+      "expectedDimensions": [
+        390,
+        844
+      ],
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "7420c1e3c0ac60a0262ad92aa44f6d7cfe5092130ac565b9a2529f1eb8bed8bf"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "install-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-a--430x932--non-shipping-v01.png",
+      "expectedDimensions": [
+        430,
+        932
+      ],
+      "width": 430,
+      "height": 932,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "49aa2fe1d0ed7a1547ad04912b59a8336c96b5e307ee21a24b6c7dc55121529e"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "install-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-b--390x844--non-shipping-v01.png",
+      "expectedDimensions": [
+        390,
+        844
+      ],
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "66ef34f7fd10ff4621efe0e4651110c5901ca0005fcfdce5b65c148762553955"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "install-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-b--430x932--non-shipping-v01.png",
+      "expectedDimensions": [
+        430,
+        932
+      ],
+      "width": 430,
+      "height": 932,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "d751c974c770bc17f29bb24f2eed7da1787083233b1a7e9d5903896485ccc675"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "launcher-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-a--390x844--non-shipping-v01.png",
+      "expectedDimensions": [
+        390,
+        844
+      ],
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "0321bd43b9f3a8566a8014b3d27781054a3fa7717034a29f85b8ecc74ba71c98"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "launcher-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-a--430x932--non-shipping-v01.png",
+      "expectedDimensions": [
+        430,
+        932
+      ],
+      "width": 430,
+      "height": 932,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "e35948d2d7b5d912676f383d5dddc389ee1c7a172bb61c0fa95f99f2eb042dfd"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "launcher-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-b--390x844--non-shipping-v01.png",
+      "expectedDimensions": [
+        390,
+        844
+      ],
+      "width": 390,
+      "height": 844,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "3c859f6da7f153aa6fa44ae38b8b3a3177f947747e2d53f777eac3681a7bb451"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "launcher-mockup",
+      "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-b--430x932--non-shipping-v01.png",
+      "expectedDimensions": [
+        430,
+        932
+      ],
+      "width": 430,
+      "height": 932,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "fa717f6614b71fbc2fd7609a42207c5eba52cef11acd70db47bc0afd03f2c07b"
+    },
+    {
+      "candidate": "both",
+      "role": "small-size-legibility-proof",
+      "path": "docs/art/candidates/app-identity/v1/proofs/legibility--both--32-48--non-shipping-v01.png",
+      "expectedDimensions": [
+        1580,
+        650
+      ],
+      "width": 1580,
+      "height": 650,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "b965aeadc9c0e5aeb803dd6357bc5640dd6d84ad6c8845032d06449defcba9ac"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "mask-safe-proof",
+      "path": "docs/art/candidates/app-identity/v1/proofs/mask-safe--candidate-a--circle-squircle--non-shipping-v01.png",
+      "expectedDimensions": [
+        1520,
+        520
+      ],
+      "width": 1520,
+      "height": 520,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "3ec69e828ebb61deea9c6a89589cae87fafff8e8298b90ad81a89d34414c95c4"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "mask-safe-proof",
+      "path": "docs/art/candidates/app-identity/v1/proofs/mask-safe--candidate-b--circle-squircle--non-shipping-v01.png",
+      "expectedDimensions": [
+        1520,
+        520
+      ],
+      "width": 1520,
+      "height": 520,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "a7e9736c1b435cbce751929e743add4b70f06657fe5424b1806f34d5f390d31a"
+    },
+    {
+      "candidate": "both",
+      "role": "visual-selection-board",
+      "path": "docs/art/candidates/app-identity/v1/proofs/selection-board--both--non-shipping-v01.png",
+      "expectedDimensions": [
+        1580,
+        820
+      ],
+      "width": 1580,
+      "height": 820,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "ea400b88f7b5a08e87456a7cf3e29f1f30e701f8676b3505c3c36b8138895d0d"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "apple-touch",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--180--apple--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        180,
+        180
+      ],
+      "width": 180,
+      "height": 180,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "cb914790aa9ccc3b40988e3a0e5dc72f5646c55d40f20ed40f6a7b2db393b378"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "any",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--192--any--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        192,
+        192
+      ],
+      "width": 192,
+      "height": 192,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "226fabc1e17095cfcd23894a1748295bec426bcb6811ed0553c726f84e721f61"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "simplified-favicon",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--32--simplified--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        32,
+        32
+      ],
+      "width": 32,
+      "height": 32,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "2e92297ce22520191e5c2194d96be5c5a0896e1d0e63d56df5d8bc2bbcbb79a0"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "simplified-favicon",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--48--simplified--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        48,
+        48
+      ],
+      "width": 48,
+      "height": 48,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "0a4578b35374a56221c08cd8dde6199b222beefc94d913f6b92a2fd06245bc23"
+    },
+    {
+      "candidate": "candidate-a",
+      "role": "maskable-any",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--512--maskable-any--candidate-a--non-shipping-v01.png",
+      "expectedDimensions": [
+        512,
+        512
+      ],
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "c13081a13a7bdcdd1c86c769d20522f29814bbf5579c0f7708830448e196182e"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "apple-touch",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--180--apple--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        180,
+        180
+      ],
+      "width": 180,
+      "height": 180,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "44d4d01b53daeefdc6bf9330b63b37f849d49441c9c71cb89f88a91c10edd23f"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "any",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--192--any--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        192,
+        192
+      ],
+      "width": 192,
+      "height": 192,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "f03233dd25d0c22b5504068c076e2c601abb34c0f2a7904d9ed79789c16d622b"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "simplified-favicon",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--32--simplified--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        32,
+        32
+      ],
+      "width": 32,
+      "height": 32,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "012718093c5d93b30349bca4b81d1532cce5a69fcadbab12d14078b08203dca6"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "simplified-favicon",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--48--simplified--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        48,
+        48
+      ],
+      "width": 48,
+      "height": 48,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "12c31bc6a01ce2d44c16964d41d7c652a0f895d44e04da6b53fe619a488697fa"
+    },
+    {
+      "candidate": "candidate-b",
+      "role": "maskable-any",
+      "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--512--maskable-any--candidate-b--non-shipping-v01.png",
+      "expectedDimensions": [
+        512,
+        512
+      ],
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "alpha": "opaque",
+      "colorProfile": "sRGB built-in",
+      "sha256": "907ec598759667fa3e1c4459a4ca518d8cc3019a52f43be70085cd01e7c4256c"
+    }
+  ],
+  "scopeBoundary": {
+    "outsideStatusBefore": [
+      "?? docs/art/candidates/adoption/",
+      "?? docs/art/candidates/asset-audit/",
+      "?? docs/art/candidates/cats/",
+      "?? docs/art/candidates/home/",
+      "?? docs/art/candidates/pack/",
+      "?? docs/art/candidates/postcard-gifts/",
+      "?? docs/art/candidates/shop/",
+      "?? docs/art/candidates/system-states/",
+      "?? docs/art/candidates/ui-glyphs/",
+      "?? docs/art/candidates/ui-surfaces/"
+    ],
+    "outsideStatusAfter": [
+      "?? docs/art/candidates/adoption/",
+      "?? docs/art/candidates/asset-audit/",
+      "?? docs/art/candidates/cats/",
+      "?? docs/art/candidates/home/",
+      "?? docs/art/candidates/pack/",
+      "?? docs/art/candidates/postcard-gifts/",
+      "?? docs/art/candidates/shop/",
+      "?? docs/art/candidates/system-states/",
+      "?? docs/art/candidates/ui-glyphs/",
+      "?? docs/art/candidates/ui-surfaces/"
+    ],
+    "outsideStatusStableDuringBuild": true,
+    "authoredPaths": [
+      "docs/art/candidates/app-identity/v1/"
+    ]
+  },
+  "selectionGate": {
+    "decision": "pending",
+    "choices": [
+      "candidate-a",
+      "candidate-b"
+    ],
+    "nextAction": "stop for user visual selection; do not integrate"
+  }
+}

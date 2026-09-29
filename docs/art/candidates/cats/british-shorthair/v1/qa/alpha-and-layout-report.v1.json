@@ -1,0 +1,604 @@
+{
+  "approvedRoomSource" : "/Users/moon/Documents/Code/BraveCat-home-screen-v1/docs/art/candidates/home/v3/layers/home-layered-reconstruction--noon--non-shipping-v03.png",
+  "cats" : [
+    {
+      "homeRoomAnchor" : {
+        "x" : 690,
+        "y" : 1395
+      },
+      "id" : "golden-shaded",
+      "poses" : {
+        "eat" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            64,
+            64,
+            960,
+            657
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 367,
+            "left" : 64,
+            "right" : 64,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 7579,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 681575,
+          "width" : 1024
+        },
+        "gaze" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            265,
+            64,
+            759,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 265,
+            "right" : 265,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 7631,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 749760,
+          "width" : 1024
+        },
+        "play" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            64,
+            64,
+            960,
+            907
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 117,
+            "left" : 64,
+            "right" : 64,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 11251,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 705577,
+          "width" : 1024
+        },
+        "sit" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            189,
+            64,
+            835,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 189,
+            "right" : 189,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 8348,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 676825,
+          "width" : 1024
+        },
+        "sleep" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            64,
+            64,
+            960,
+            668
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 356,
+            "left" : 64,
+            "right" : 64,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 6843,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 633281,
+          "width" : 1024
+        },
+        "walk" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            960,
+            629
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 395,
+            "left" : 63,
+            "right" : 64,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 11992,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 788484,
+          "width" : 1024
+        }
+      },
+      "scaleRelativeToMinho" : 0.95999999999999996,
+      "sourceAnchor" : {
+        "kind" : "bottom-center alpha baseline",
+        "x" : 512,
+        "y" : 960
+      }
+    },
+    {
+      "homeRoomAnchor" : {
+        "x" : 690,
+        "y" : 1395
+      },
+      "id" : "blue-golden-shaded",
+      "poses" : {
+        "eat" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            64,
+            64,
+            960,
+            683
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 341,
+            "left" : 64,
+            "right" : 64,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 11512,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 649625,
+          "width" : 1024
+        },
+        "gaze" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            192,
+            63,
+            832,
+            961
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 63,
+            "left" : 192,
+            "right" : 192,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 10363,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 715747,
+          "width" : 1024
+        },
+        "play" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            120,
+            64,
+            904,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 120,
+            "right" : 120,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 10601,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 604641,
+          "width" : 1024
+        },
+        "sit" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            193,
+            63,
+            831,
+            961
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 63,
+            "left" : 193,
+            "right" : 193,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 9212,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 676810,
+          "width" : 1024
+        },
+        "sleep" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            961,
+            641
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 383,
+            "left" : 63,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 7864,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 643554,
+          "width" : 1024
+        },
+        "walk" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            64,
+            960,
+            751
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 273,
+            "left" : 63,
+            "right" : 64,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 12358,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 719555,
+          "width" : 1024
+        }
+      },
+      "scaleRelativeToMinho" : 1.05,
+      "sourceAnchor" : {
+        "kind" : "bottom-center alpha baseline",
+        "x" : 512,
+        "y" : 960
+      }
+    },
+    {
+      "homeRoomAnchor" : {
+        "x" : 690,
+        "y" : 1395
+      },
+      "id" : "solid-blue",
+      "poses" : {
+        "eat" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            961,
+            632
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 392,
+            "left" : 63,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 9757,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 677856,
+          "width" : 1024
+        },
+        "gaze" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            248,
+            64,
+            776,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 248,
+            "right" : 248,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 6762,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 711628,
+          "width" : 1024
+        },
+        "play" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            64,
+            961,
+            652
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 372,
+            "left" : 63,
+            "right" : 63,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 11097,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 722096,
+          "width" : 1024
+        },
+        "sit" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            184,
+            64,
+            840,
+            961
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 63,
+            "left" : 184,
+            "right" : 184,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 9307,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 654635,
+          "width" : 1024
+        },
+        "sleep" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            961,
+            638
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 386,
+            "left" : 63,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 8796,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 646777,
+          "width" : 1024
+        },
+        "walk" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            961,
+            510
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 514,
+            "left" : 63,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 11321,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 813494,
+          "width" : 1024
+        }
+      },
+      "scaleRelativeToMinho" : 1.1000000000000001,
+      "sourceAnchor" : {
+        "kind" : "bottom-center alpha baseline",
+        "x" : 512,
+        "y" : 960
+      }
+    },
+    {
+      "homeRoomAnchor" : {
+        "x" : 690,
+        "y" : 1395
+      },
+      "id" : "blue-white-bicolor",
+      "poses" : {
+        "eat" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            960,
+            662
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 362,
+            "left" : 63,
+            "right" : 64,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 12945,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 703720,
+          "width" : 1024
+        },
+        "gaze" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            249,
+            63,
+            775,
+            961
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 63,
+            "left" : 249,
+            "right" : 249,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 10611,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 736927,
+          "width" : 1024
+        },
+        "play" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            82,
+            64,
+            942,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 82,
+            "right" : 82,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 12766,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 676653,
+          "width" : 1024
+        },
+        "sit" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            176,
+            64,
+            848,
+            960
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 64,
+            "left" : 176,
+            "right" : 176,
+            "top" : 64
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 7794,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 697564,
+          "width" : 1024
+        },
+        "sleep" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            63,
+            63,
+            961,
+            611
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 413,
+            "left" : 63,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 7675,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 688977,
+          "width" : 1024
+        },
+        "walk" : {
+          "alpha" : "straight PNG semantics; premultiplied during raster processing",
+          "bboxTopLeft" : [
+            64,
+            63,
+            961,
+            732
+          ],
+          "height" : 1024,
+          "hiddenRgbNonzeroPixelCount" : 0,
+          "marginsPx" : {
+            "bottom" : 292,
+            "left" : 64,
+            "right" : 63,
+            "top" : 63
+          },
+          "opaqueMagentaPixelCount" : 0,
+          "partiallyTransparentPixelCount" : 14386,
+          "pixelMode" : "RGBA",
+          "transparentPixelCount" : 741563,
+          "width" : 1024
+        }
+      },
+      "scaleRelativeToMinho" : 1,
+      "sourceAnchor" : {
+        "kind" : "bottom-center alpha baseline",
+        "x" : 512,
+        "y" : 960
+      }
+    }
+  ],
+  "runtimeCanvas" : {
+    "height" : 512,
+    "width" : 512
+  },
+  "schemaVersion" : 1,
+  "sourceCanvas" : {
+    "height" : 1024,
+    "safeMarginPx" : 64,
+    "width" : 1024
+  },
+  "status" : "NON-SHIPPING / VISUAL-REVIEW-ONLY"
+}

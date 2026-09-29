@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "dimensions": {
+    "widths": [
+      "320",
+      "390",
+      "430"
+    ],
+    "viewports": [
+      "320x700",
+      "390x844",
+      "430x932"
+    ],
+    "breeds": [
+      "orange-tabby",
+      "li-hua"
+    ],
+    "poses": [
+      "sit",
+      "sleep",
+      "walk",
+      "eat",
+      "play",
+      "gaze"
+    ]
+  },
+  "summary": {
+    "requiredSlots": 36,
+    "coveredSlots": 36,
+    "newV2FullResolutionComposites": 34,
+    "v1HashVerifiedReferences": 2,
+    "passes": 36,
+    "failures": 0
+  },
+  "grid": {
+    "320x700": {
+      "orange-tabby": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--sit--320x700--non-shipping-v02.png",
+          "sha256": "19b81d7b6652f2a469e8a9148bc42c79c01e194b11769d94633527b8223e1a6a"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--sleep--320x700--non-shipping-v02.png",
+          "sha256": "2ca3236b04981315180c2ed5c67799444776e6c623bb94743d92eb753f1a4481"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--walk--320x700--non-shipping-v02.png",
+          "sha256": "a239901170ea0e5efd4b896d7bcae762e4ebae5c60a84bc407adecce18f71d48"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--eat--320x700--non-shipping-v02.png",
+          "sha256": "ae5013d0dac0f183cb8ae02e7951809db937af73a470b5bb70dc4acb4fcf348d"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--play--320x700--non-shipping-v02.png",
+          "sha256": "8c2b2daee15fa489f697a80e7b7c2cc0c475d05eef7b0ab72e894f4416e0d3a9"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--gaze--320x700--non-shipping-v02.png",
+          "sha256": "b48f6b46f42bf90369d99d9069c34268b5165521e12bf5310607640c75e60ada"
+        }
+      },
+      "li-hua": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--sit--320x700--non-shipping-v02.png",
+          "sha256": "36cd32797e33c49e469b8d5bb46a0a29a8d96e5ccdd3d21d48c377aea74fb260"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--sleep--320x700--non-shipping-v02.png",
+          "sha256": "1c7e8a915a6792090c649722eb79b10355155e34e897ad3753b157713d65837c"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--walk--320x700--non-shipping-v02.png",
+          "sha256": "1022167ab3ce6f150774d1401c0861beba5c554177423d742b76812e799652d9"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--eat--320x700--non-shipping-v02.png",
+          "sha256": "29b9b498ab98352c8abeabd1c555cd40e517b98bdc30c4ad1c49db55f7ead7fc"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--play--320x700--non-shipping-v02.png",
+          "sha256": "c7d995de6bd5dbb49a3f502362261585b35f88d34ed908b9a14e292279864f96"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--gaze--320x700--non-shipping-v02.png",
+          "sha256": "9faca8bbe03ac080102126e928f1e7d346fed5a9f54cb04b88d62f4c035c437f"
+        }
+      }
+    },
+    "390x844": {
+      "orange-tabby": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sit--390x844--non-shipping-v02.png",
+          "sha256": "2448e92f2254a6a40ec0c32bb64aa8a192c64fb256245ce0a19ee708b271b47b"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sleep--390x844--non-shipping-v02.png",
+          "sha256": "badb1ebef8ce4565078da28c321a62ff55f318c68cb1aec69603f67b34cec16c"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--walk--390x844--non-shipping-v02.png",
+          "sha256": "2828aa6a9f85c5de1f0e4ba5fb6090e87ab522d04adc9ce7686261f249c44314"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--eat--390x844--non-shipping-v02.png",
+          "sha256": "c2ae398fc6911129dcaa4a304eace03a27208bd5794b68b7d6eed0ce77a39847"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--play--390x844--non-shipping-v02.png",
+          "sha256": "4ac13a818f2dccc2cc7b99f61745d9c7a8b5ec2e3ae746ebe78ca6b8c9099421"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--gaze--390x844--non-shipping-v02.png",
+          "sha256": "17c423e3406602cb7185d195be29af06cacb2b203422c32ad6b2caa033588937"
+        }
+      },
+      "li-hua": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--sit--390x844--non-shipping-v02.png",
+          "sha256": "5d52b324e3284c24faf4e775072da63064bfec96ec430fb6f85e5000a5699acb"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+          "sha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--walk--390x844--non-shipping-v02.png",
+          "sha256": "8160fac059b3338e87b0f796228a4db75cd55afbde880c6c03b0acaca49c93d2"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--eat--390x844--non-shipping-v02.png",
+          "sha256": "c29b10fd2b82c4f580e54cfe8111094c44d8ed6e9bbc90f7494853532b8f8b11"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--play--390x844--non-shipping-v02.png",
+          "sha256": "c8d6dd97c4dc8850f57aa2d16a246be6cea4e88b322d85392cb062eff50d7963"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--gaze--390x844--non-shipping-v02.png",
+          "sha256": "2a3403a60edbe94040e947aff609010df244e6f7307a6c998a57e934337f549c"
+        }
+      }
+    },
+    "430x932": {
+      "orange-tabby": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--sit--430x932--non-shipping-v02.png",
+          "sha256": "702b7f0b99beb4592bb10d851f5ad8e07d2016128602d364650d183666f62206"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--sleep--430x932--non-shipping-v02.png",
+          "sha256": "ab38f9ec4d587c20f48167fcd2bfacf4f0ca9ad73bac04f2bec8b3b2b621ca59"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--walk--430x932--non-shipping-v02.png",
+          "sha256": "2453ac04a93a864eca330bfce73982195d070051e2ba3ecf4368d38bfd085877"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--eat--430x932--non-shipping-v02.png",
+          "sha256": "f95a682fd7fd8d3f53e1b328e04a5e3d32a908f71bbd3cd5f1293e6f84f7d985"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--play--430x932--non-shipping-v02.png",
+          "sha256": "528cef6d5410ea83deb19972597070f03ffae894e6a4dfe5b8e5aa08fe5d288f"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--gaze--430x932--non-shipping-v02.png",
+          "sha256": "703bee8a08ce14370a7a4ceb400669790ff9fedd4aa47b7b5633b5d52b7d3bb3"
+        }
+      },
+      "li-hua": {
+        "sit": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--sit--430x932--non-shipping-v02.png",
+          "sha256": "8b655e14d09bfae744368747abee28095711e54a8fdaf6915a3d94b9cd2582ed"
+        },
+        "sleep": {
+          "pass": true,
+          "evidenceKind": "v1-hash-verified-reference",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--430x932--non-shipping-v01.png",
+          "sha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0"
+        },
+        "walk": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--walk--430x932--non-shipping-v02.png",
+          "sha256": "7b4b11721f58745951b342a007384e256e4d33aa3a4bba9a206461f6c3c2ca90"
+        },
+        "eat": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--eat--430x932--non-shipping-v02.png",
+          "sha256": "dbc04213f9cd9974b315466e56ed44a3f4d74a4ebc51004086b4bb55861a76dc"
+        },
+        "play": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--play--430x932--non-shipping-v02.png",
+          "sha256": "d682b26ac02f35a246d70e056bd1f0faf4fce3eb256dd0c410eac41c0beed489"
+        },
+        "gaze": {
+          "pass": true,
+          "evidenceKind": "v2-full-resolution-composite",
+          "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--gaze--430x932--non-shipping-v02.png",
+          "sha256": "eef391911b986a39658433b4796bb7bb7826425c505fc1eb4aaaa848c892d9c5"
+        }
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "320x700--orange-tabby--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--sit--320x700--non-shipping-v02.png",
+        "sha256": "19b81d7b6652f2a469e8a9148bc42c79c01e194b11769d94633527b8223e1a6a",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--sleep--320x700--non-shipping-v02.png",
+        "sha256": "2ca3236b04981315180c2ed5c67799444776e6c623bb94743d92eb753f1a4481",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--walk--320x700--non-shipping-v02.png",
+        "sha256": "a239901170ea0e5efd4b896d7bcae762e4ebae5c60a84bc407adecce18f71d48",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--eat--320x700--non-shipping-v02.png",
+        "sha256": "ae5013d0dac0f183cb8ae02e7951809db937af73a470b5bb70dc4acb4fcf348d",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--play--320x700--non-shipping-v02.png",
+        "sha256": "8c2b2daee15fa489f697a80e7b7c2cc0c475d05eef7b0ab72e894f4416e0d3a9",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--orange-tabby--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/orange-tabby/home-fit--orange-tabby--gaze--320x700--non-shipping-v02.png",
+        "sha256": "b48f6b46f42bf90369d99d9069c34268b5165521e12bf5310607640c75e60ada",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--sit",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--sit--320x700--non-shipping-v02.png",
+        "sha256": "36cd32797e33c49e469b8d5bb46a0a29a8d96e5ccdd3d21d48c377aea74fb260",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--sleep",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--sleep--320x700--non-shipping-v02.png",
+        "sha256": "1c7e8a915a6792090c649722eb79b10355155e34e897ad3753b157713d65837c",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--walk",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--walk--320x700--non-shipping-v02.png",
+        "sha256": "1022167ab3ce6f150774d1401c0861beba5c554177423d742b76812e799652d9",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--eat",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--eat--320x700--non-shipping-v02.png",
+        "sha256": "29b9b498ab98352c8abeabd1c555cd40e517b98bdc30c4ad1c49db55f7ead7fc",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--play",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--play--320x700--non-shipping-v02.png",
+        "sha256": "c7d995de6bd5dbb49a3f502362261585b35f88d34ed908b9a14e292279864f96",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "320x700--li-hua--gaze",
+      "viewport": {
+        "key": "320x700",
+        "width": 320,
+        "height": 700
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/320x700/li-hua/home-fit--li-hua--gaze--320x700--non-shipping-v02.png",
+        "sha256": "9faca8bbe03ac080102126e928f1e7d346fed5a9f54cb04b88d62f4c035c437f",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sit--390x844--non-shipping-v02.png",
+        "sha256": "2448e92f2254a6a40ec0c32bb64aa8a192c64fb256245ce0a19ee708b271b47b",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sleep--390x844--non-shipping-v02.png",
+        "sha256": "badb1ebef8ce4565078da28c321a62ff55f318c68cb1aec69603f67b34cec16c",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--walk--390x844--non-shipping-v02.png",
+        "sha256": "2828aa6a9f85c5de1f0e4ba5fb6090e87ab522d04adc9ce7686261f249c44314",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--eat--390x844--non-shipping-v02.png",
+        "sha256": "c2ae398fc6911129dcaa4a304eace03a27208bd5794b68b7d6eed0ce77a39847",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--play--390x844--non-shipping-v02.png",
+        "sha256": "4ac13a818f2dccc2cc7b99f61745d9c7a8b5ec2e3ae746ebe78ca6b8c9099421",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--orange-tabby--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--gaze--390x844--non-shipping-v02.png",
+        "sha256": "17c423e3406602cb7185d195be29af06cacb2b203422c32ad6b2caa033588937",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--sit",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--sit--390x844--non-shipping-v02.png",
+        "sha256": "5d52b324e3284c24faf4e775072da63064bfec96ec430fb6f85e5000a5699acb",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--sleep",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+        "sha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--walk",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--walk--390x844--non-shipping-v02.png",
+        "sha256": "8160fac059b3338e87b0f796228a4db75cd55afbde880c6c03b0acaca49c93d2",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--eat",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--eat--390x844--non-shipping-v02.png",
+        "sha256": "c29b10fd2b82c4f580e54cfe8111094c44d8ed6e9bbc90f7494853532b8f8b11",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--play",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--play--390x844--non-shipping-v02.png",
+        "sha256": "c8d6dd97c4dc8850f57aa2d16a246be6cea4e88b322d85392cb062eff50d7963",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "390x844--li-hua--gaze",
+      "viewport": {
+        "key": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/li-hua/home-fit--li-hua--gaze--390x844--non-shipping-v02.png",
+        "sha256": "2a3403a60edbe94040e947aff609010df244e6f7307a6c998a57e934337f549c",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--sit--430x932--non-shipping-v02.png",
+        "sha256": "702b7f0b99beb4592bb10d851f5ad8e07d2016128602d364650d183666f62206",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--sleep--430x932--non-shipping-v02.png",
+        "sha256": "ab38f9ec4d587c20f48167fcd2bfacf4f0ca9ad73bac04f2bec8b3b2b621ca59",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--walk--430x932--non-shipping-v02.png",
+        "sha256": "2453ac04a93a864eca330bfce73982195d070051e2ba3ecf4368d38bfd085877",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--eat--430x932--non-shipping-v02.png",
+        "sha256": "f95a682fd7fd8d3f53e1b328e04a5e3d32a908f71bbd3cd5f1293e6f84f7d985",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--play--430x932--non-shipping-v02.png",
+        "sha256": "528cef6d5410ea83deb19972597070f03ffae894e6a4dfe5b8e5aa08fe5d288f",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--orange-tabby--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "orange-tabby",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/orange-tabby/home-fit--orange-tabby--gaze--430x932--non-shipping-v02.png",
+        "sha256": "703bee8a08ce14370a7a4ceb400669790ff9fedd4aa47b7b5633b5d52b7d3bb3",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--sit",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "sit",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--sit--430x932--non-shipping-v02.png",
+        "sha256": "8b655e14d09bfae744368747abee28095711e54a8fdaf6915a3d94b9cd2582ed",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--sleep",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "sleep",
+      "evidence": {
+        "kind": "v1-hash-verified-reference",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--430x932--non-shipping-v01.png",
+        "sha256": "d856fd15c66cb285d04d4ae5e9fec740cd62fdbcc2875c3ef78b4e168895b6f0",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--walk",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "walk",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--walk--430x932--non-shipping-v02.png",
+        "sha256": "7b4b11721f58745951b342a007384e256e4d33aa3a4bba9a206461f6c3c2ca90",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--eat",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "eat",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--eat--430x932--non-shipping-v02.png",
+        "sha256": "dbc04213f9cd9974b315466e56ed44a3f4d74a4ebc51004086b4bb55861a76dc",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--play",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "play",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--play--430x932--non-shipping-v02.png",
+        "sha256": "d682b26ac02f35a246d70e056bd1f0faf4fce3eb256dd0c410eac41c0beed489",
+        "fullResolution": true
+      },
+      "pass": true
+    },
+    {
+      "id": "430x932--li-hua--gaze",
+      "viewport": {
+        "key": "430x932",
+        "width": 430,
+        "height": 932
+      },
+      "breed": "li-hua",
+      "pose": "gaze",
+      "evidence": {
+        "kind": "v2-full-resolution-composite",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/430x932/li-hua/home-fit--li-hua--gaze--430x932--non-shipping-v02.png",
+        "sha256": "eef391911b986a39658433b4796bb7bb7826425c505fc1eb4aaaa848c892d9c5",
+        "fullResolution": true
+      },
+      "pass": true
+    }
+  ],
+  "contactMatrices": [
+    "reviews/contact-sheets/contact-matrix--home-fit--320x700--non-shipping-v02.png",
+    "reviews/contact-sheets/contact-matrix--home-fit--390x844--non-shipping-v02.png",
+    "reviews/contact-sheets/contact-matrix--home-fit--430x932--non-shipping-v02.png"
+  ],
+  "styleComparison": {
+    "path": "reviews/style/style-comparison--minho-orange-li-hua--390x844--non-shipping-v02.png",
+    "sha256": "95c5b99c258a8fcff9d52ed5808ed0720dbab6724ed04f28bf1e172e8777b9d7",
+    "width": 1270,
+    "height": 974,
+    "sources": [
+      {
+        "id": "minho",
+        "path": "docs/art/candidates/home/v3/reviews/mobile-review--390x844--at-home--non-shipping-v03.png",
+        "sha256": "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86"
+      },
+      {
+        "id": "orange-tabby",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sleep--390x844--non-shipping-v02.png",
+        "sha256": "badb1ebef8ce4565078da28c321a62ff55f318c68cb1aec69603f67b34cec16c"
+      },
+      {
+        "id": "li-hua",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+        "sha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d"
+      }
+    ]
+  }
+}

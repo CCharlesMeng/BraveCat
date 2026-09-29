@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/check-production-build.mjs",
+    "build": "node scripts/promote-home-art.mjs --check && vite build && node scripts/check-production-build.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
@@ -16,7 +16,9 @@
     "assets:promote-landmarks": "node scripts/promote-landmarks.mjs",
     "assets:check-landmarks": "node scripts/promote-landmarks.mjs --check",
     "assets:composite-qa": "node scripts/build-composite-qa.mjs",
-    "assets:composite-check": "node scripts/build-composite-qa.mjs --check"
+    "assets:composite-check": "node scripts/build-composite-qa.mjs --check",
+    "assets:promote-home-art": "node scripts/promote-home-art.mjs",
+    "assets:check-home-art": "node scripts/promote-home-art.mjs --check"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.1.2",

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / CANDIDATE-ONLY",
+  "shippingEligible": false,
+  "coordinateConvention": {
+    "units": "pixels",
+    "canvas": {
+      "width": 1200,
+      "height": 1600
+    },
+    "origin": "top-left",
+    "axes": {
+      "x": "increases rightward",
+      "y": "increases downward"
+    },
+    "bounds": "x and y identify the top-left corner; width extends right and height extends down",
+    "catAnchor": "bottom-center point for the future cat overlay",
+    "safeBounds": "recommended visible composition envelope; it contains the reserved zones and is not itself an exclusion zone"
+  },
+  "candidates": [
+    {
+      "id": "home-background-candidate-a-v01",
+      "file": "home-background--candidate-a--non-shipping-v01.png",
+      "status": "NON-SHIPPING / CANDIDATE-ONLY",
+      "shippingEligible": false,
+      "catAnchor": {
+        "x": 650,
+        "y": 1480
+      },
+      "windowsillBounds": {
+        "x": 80,
+        "y": 1000,
+        "width": 620,
+        "height": 100
+      },
+      "awayNoteBounds": {
+        "x": 760,
+        "y": 240,
+        "width": 360,
+        "height": 500
+      },
+      "safeBounds": {
+        "x": 48,
+        "y": 48,
+        "width": 1104,
+        "height": 1472
+      },
+      "validation": {
+        "windowsillAwayNoteOverlap": false,
+        "catAnchorInsideSafeBounds": true
+      }
+    },
+    {
+      "id": "home-background-candidate-b-v01",
+      "file": "home-background--candidate-b--non-shipping-v01.png",
+      "status": "NON-SHIPPING / CANDIDATE-ONLY",
+      "shippingEligible": false,
+      "catAnchor": {
+        "x": 680,
+        "y": 1480
+      },
+      "windowsillBounds": {
+        "x": 50,
+        "y": 970,
+        "width": 580,
+        "height": 120
+      },
+      "awayNoteBounds": {
+        "x": 500,
+        "y": 240,
+        "width": 600,
+        "height": 570
+      },
+      "safeBounds": {
+        "x": 48,
+        "y": 48,
+        "width": 1104,
+        "height": 1472
+      },
+      "validation": {
+        "windowsillAwayNoteOverlap": false,
+        "catAnchorInsideSafeBounds": true
+      }
+    }
+  ]
+}

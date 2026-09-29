@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "root": "docs/art/candidates/shop/v1",
+  "coordinateConvention": {
+    "units": "CSS pixels unless explicitly marked source pixels",
+    "origin": "top-left",
+    "xAxis": "right",
+    "yAxis": "down"
+  },
+  "cssEvidence": {
+    "source": "src/app.css",
+    "appShell": {
+      "width": "min(100%, 470px)"
+    },
+    "drawer": {
+      "width": "min(100%, 470px)",
+      "maxHeight": "min(78dvh, 720px)",
+      "horizontalPadding": 24
+    },
+    "itemCard": {
+      "minHeight": 82,
+      "gridTemplateColumns": "48px minmax(0, 1fr) auto",
+      "columnGap": 12,
+      "padding": {
+        "block": 11,
+        "inline": 12
+      },
+      "borderRadius": 17
+    },
+    "itemToken": {
+      "width": 46,
+      "height": 46,
+      "borderRadius": 15,
+      "currentContent": "item.name.slice(0, 1)"
+    },
+    "itemAction": {
+      "minimumWidth": 62,
+      "disabledOpacity": 0.52
+    }
+  },
+  "exportPolicy": {
+    "master": {
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "pixelMode": "RGBA",
+      "colorProfile": "embedded sRGB",
+      "alpha": "straight",
+      "minimumVisibleSafeMarginSourcePixels": 48,
+      "transparentPixelRgb": "zero"
+    },
+    "runtimeReviewDerivative": {
+      "width": 92,
+      "height": 92,
+      "format": "PNG",
+      "pixelMode": "RGBA",
+      "colorProfile": "embedded sRGB",
+      "alpha": "straight",
+      "intendedDisplayWidth": 46,
+      "intendedDisplayHeight": 46,
+      "density": "2x"
+    }
+  },
+  "placementIntent": {
+    "replaceOnly": "the character inside .item-token",
+    "preserve": [
+      ".item-token CSS tile",
+      ".item-card CSS geometry",
+      "item name",
+      "kind label",
+      "effect hint",
+      "owned count",
+      "price and affordability text",
+      "button and drawer chrome"
+    ],
+    "proposedImageBox": {
+      "width": 46,
+      "height": 46,
+      "objectFit": "contain",
+      "objectPosition": "center"
+    },
+    "codeIntegrated": false
+  },
+  "assets": [
+    {
+      "id": "fish-biscuit",
+      "kind": "snack",
+      "name": "小鱼饼",
+      "price": 4,
+      "master": "masters/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--snack--fish-biscuit--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "travel-tin",
+      "kind": "snack",
+      "name": "旅行罐头",
+      "price": 4,
+      "master": "masters/item--snack--travel-tin--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--snack--travel-tin--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "small-blanket",
+      "kind": "toy",
+      "name": "小毛毯",
+      "price": 6,
+      "master": "masters/item--toy--small-blanket--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--toy--small-blanket--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "yarn-ball",
+      "kind": "toy",
+      "name": "毛线球",
+      "price": 6,
+      "master": "masters/item--toy--yarn-ball--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--toy--yarn-ball--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "small-bell",
+      "kind": "toy",
+      "name": "小铃铛",
+      "price": 6,
+      "master": "masters/item--toy--small-bell--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--toy--small-bell--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "small-camera",
+      "kind": "toy",
+      "name": "小相机",
+      "price": 6,
+      "master": "masters/item--toy--small-camera--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--toy--small-camera--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "small-telescope",
+      "kind": "toy",
+      "name": "小望远镜",
+      "price": 6,
+      "master": "masters/item--toy--small-telescope--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--toy--small-telescope--runtime-92--non-shipping-v01.png"
+    },
+    {
+      "id": "ticket",
+      "kind": "wish",
+      "name": "车票",
+      "price": 8,
+      "master": "masters/item--wish--ticket--master-512--non-shipping-v01.png",
+      "runtimeReviewDerivative": "runtime/item--wish--ticket--runtime-92--non-shipping-v01.png"
+    }
+  ],
+  "mobileReviewPlacements": [
+    {
+      "file": "reviews/shop-review--390x844--affordable-owned-top--non-shipping-v01.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "drawerTop": 186,
+      "tokenX": 36,
+      "firstTokenY": 358,
+      "rowPitch": 98,
+      "renderedTokenSize": {
+        "width": 46,
+        "height": 46
+      },
+      "catalogSlice": [
+        "fish-biscuit",
+        "travel-tin",
+        "small-blanket",
+        "yarn-ball",
+        "small-bell"
+      ],
+      "state": {
+        "treats": 12,
+        "affordability": "all shown items affordable",
+        "ownedItems": {
+          "fish-biscuit": 2,
+          "small-blanket": 1
+        }
+      }
+    },
+    {
+      "file": "reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v01.png",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "drawerTop": 212,
+      "tokenX": 36,
+      "firstTokenY": 384,
+      "rowPitch": 98,
+      "renderedTokenSize": {
+        "width": 46,
+        "height": 46
+      },
+      "catalogSlice": [
+        "yarn-ball",
+        "small-bell",
+        "small-camera",
+        "small-telescope",
+        "ticket"
+      ],
+      "state": {
+        "treats": 3,
+        "affordability": "all shown items unaffordable",
+        "ownedItems": {
+          "small-camera": 1,
+          "ticket": 1
+        }
+      }
+    }
+  ],
+  "stateCoverage": {
+    "normal": "represented by the unchanged item card and enabled action",
+    "affordable": "enabled action with live price",
+    "unaffordable": "disabled action with live 还差 N text",
+    "purchasedOwned": "live 家里有 N 件 count only; product remains purchasable",
+    "locked": {
+      "applicableToCurrentShop": false,
+      "reason": "The current shop has no product lock. Travel locks pack editing, not shop products.",
+      "inventedTreatment": false
+    }
+  },
+  "additionalAccentDecision": {
+    "created": false,
+    "reason": "No blank card, shelf, lock, sold-out, or owned overlay is required to replace an existing shop placeholder."
+  }
+}

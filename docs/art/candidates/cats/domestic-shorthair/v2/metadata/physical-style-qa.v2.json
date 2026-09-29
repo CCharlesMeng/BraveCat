@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "inspectedAt": "2026-07-21",
+  "ok": true,
+  "parentApprovedInput": "Parent visual review accepts the orange tabby and Li Hua as distinct identities with plausible morphology and complete six-pose art. V1 cat pixels remain unchanged.",
+  "coverage": {
+    "required": 36,
+    "reviewed": 36,
+    "passed": 36,
+    "failed": 0
+  },
+  "checks": {
+    "bottomCenterAnchorRecorded": true,
+    "visibleAndOpaqueBoundsRecorded": true,
+    "minhoRelativePhysicalScalePreservedAcrossWidthsAndPoses": true,
+    "rugOrFloorSupport": true,
+    "furnitureCollisionFree": true,
+    "navigationReserveCollisionFree": true,
+    "safeAreaPass": true,
+    "noViewportCropping": true,
+    "softAlphaNoHardCutout": true,
+    "eatBowlGroundedAndSeparated": true,
+    "playYarnGroundedAndFixtureClear": true,
+    "liHuaActiveTailFixtureAndSafeAreaClear": true,
+    "pawsJointsAndTailsRemainParentApprovedAndUnaltered": true,
+    "orangeTabbyUsesFixedOnePointZeroFiveScaleWithoutPoseShrink": true,
+    "liHuaUsesFixedOnePointZeroScaleWithoutBodyThickening": true,
+    "noPoseRegenerated": true,
+    "contactShadowNecessary": false
+  },
+  "specialInspection": {
+    "eat": "The generated pose bowl is the leftmost element of each eat master. The pose-specific x=720 anchor keeps it on the rug with at least 24 px room-canvas clearance from the fixed room bowl group.",
+    "play": "The yarn ball and strand remain on the rug baseline. The pose-specific x=720 anchor clears the fixed bowls, cat tree, hanging wand, and side table.",
+    "morphologyAndScale": "The orange tabby stays at 1.05× Minho in every viewport and pose, preserving its heavier adult mass. Li Hua stays at the 1.00× adult baseline, preserving long legs, a narrow waist, and active tail rather than shrinking or thickening per pose.",
+    "liHuaTail": "Conservative whole-silhouette bounds keep the long active tail clear of the cat tree, hanging wand, fixed bowls, side cabinet, navigation reserve, viewport crop, and room safe-area boundary in all 18 Li Hua placements.",
+    "hardEdges": "The 390×844 normal-mobile comparison places production Minho, the orange tabby, and Li Hua in the approved room at their fixed scales. Domestic-shorthair fur detail is denser than the room wash, especially on Li Hua, but soft alpha edges, restrained grading, and warm definition prevent a material hard photoreal cutout read. No pose was regenerated."
+  },
+  "styleComparison": {
+    "path": "reviews/style/style-comparison--minho-orange-li-hua--390x844--non-shipping-v02.png",
+    "sha256": "95c5b99c258a8fcff9d52ed5808ed0720dbab6724ed04f28bf1e172e8777b9d7",
+    "width": 1270,
+    "height": 974,
+    "sources": [
+      {
+        "id": "minho",
+        "path": "docs/art/candidates/home/v3/reviews/mobile-review--390x844--at-home--non-shipping-v03.png",
+        "sha256": "4322773526b6f70a900e6a09f60f5acb7d14b0b8848e9f6804c6d56b7ff16f86"
+      },
+      {
+        "id": "orange-tabby",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v2/composites/390x844/orange-tabby/home-fit--orange-tabby--sleep--390x844--non-shipping-v02.png",
+        "sha256": "badb1ebef8ce4565078da28c321a62ff55f318c68cb1aec69603f67b34cec16c"
+      },
+      {
+        "id": "li-hua",
+        "path": "docs/art/candidates/cats/domestic-shorthair/v1/reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+        "sha256": "4f966099ae98ac299095ea09f28c08c6209b11d0fdcaa45758fc9b6c35aeb13d"
+      }
+    ]
+  },
+  "regenerationDecision": {
+    "regeneratedPoses": [],
+    "retainedPoses": [
+      "orange-tabby/sit",
+      "orange-tabby/sleep",
+      "orange-tabby/walk",
+      "orange-tabby/eat",
+      "orange-tabby/play",
+      "orange-tabby/gaze",
+      "li-hua/sit",
+      "li-hua/sleep",
+      "li-hua/walk",
+      "li-hua/eat",
+      "li-hua/play",
+      "li-hua/gaze"
+    ],
+    "warning": "Retain the v1 dense-fur warning for any later production pass; it is not an acceptance failure at normal mobile size."
+  },
+  "failures": []
+}

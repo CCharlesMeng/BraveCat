@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "supersedes": "docs/art/candidates/shop/v1",
+  "method": {
+    "deterministic": true,
+    "regeneratedAssetIds": [],
+    "steps": [
+      "apply item-specific lower silhouette contour",
+      "feather final five source pixels without adding pixels",
+      "bleed nearest interior object color into suspect exterior matte pixels",
+      "remove disconnected alpha components smaller than 120 pixels",
+      "repair only the telescope lens internal checker holes from local lens pixels",
+      "zero RGB wherever alpha is zero",
+      "derive 128px and 92px exports from the cleaned master"
+    ]
+  },
+  "items": [
+    {
+      "id": "fish-biscuit",
+      "kind": "snack",
+      "source": "../v1/masters/item--snack--fish-biscuit--master-512--non-shipping-v01.png",
+      "master": "masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+      "sourceSha256": "16ceb451035c607051d9385fcf1f2ab5a4e1096f4c8bbba99ec9909260b96850",
+      "masterSha256": "42b9ec01cd2b3793f0f6d5dd9443dd94aa6d0c684f9939d022c81c19ebc8d007",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          86,
+          304
+        ],
+        [
+          105,
+          318
+        ],
+        [
+          130,
+          330
+        ],
+        [
+          170,
+          340
+        ],
+        [
+          220,
+          348
+        ],
+        [
+          270,
+          350
+        ],
+        [
+          315,
+          343
+        ],
+        [
+          355,
+          327
+        ],
+        [
+          390,
+          320
+        ],
+        [
+          426,
+          318
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 64951,
+        "alphaMass": 14969048,
+        "bounds": {
+          "left": 86,
+          "top": 131,
+          "right": 426,
+          "bottom": 382,
+          "width": 341,
+          "height": 252
+        },
+        "minimumSafeMargin": 85,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 54240,
+        "alphaMass": 13419311,
+        "bounds": {
+          "left": 86,
+          "top": 131,
+          "right": 426,
+          "bottom": 350,
+          "width": 341,
+          "height": 220
+        },
+        "minimumSafeMargin": 85,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 10711,
+      "removedAlphaMass": 1549737
+    },
+    {
+      "id": "travel-tin",
+      "kind": "snack",
+      "source": "../v1/masters/item--snack--travel-tin--master-512--non-shipping-v01.png",
+      "master": "masters/item--snack--travel-tin--master-512--non-shipping-v02.png",
+      "sourceSha256": "1362fe484d2dd32f2fe4693f717eed893cfbcce5a27c42ea328e4253821609cb",
+      "masterSha256": "288f013d6d7d22e3ca91d105660a3cd841f7508eaec2f0f63d1e44a530eacfee",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          92,
+          286
+        ],
+        [
+          101,
+          303
+        ],
+        [
+          126,
+          320
+        ],
+        [
+          170,
+          335
+        ],
+        [
+          225,
+          344
+        ],
+        [
+          285,
+          347
+        ],
+        [
+          340,
+          340
+        ],
+        [
+          380,
+          329
+        ],
+        [
+          408,
+          311
+        ],
+        [
+          421,
+          295
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 68151,
+        "alphaMass": 16438958,
+        "bounds": {
+          "left": 92,
+          "top": 135,
+          "right": 421,
+          "bottom": 378,
+          "width": 330,
+          "height": 244
+        },
+        "minimumSafeMargin": 90,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 58722,
+        "alphaMass": 14575813,
+        "bounds": {
+          "left": 95,
+          "top": 135,
+          "right": 414,
+          "bottom": 347,
+          "width": 320,
+          "height": 213
+        },
+        "minimumSafeMargin": 95,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 9429,
+      "removedAlphaMass": 1863145
+    },
+    {
+      "id": "small-blanket",
+      "kind": "toy",
+      "source": "../v1/masters/item--toy--small-blanket--master-512--non-shipping-v01.png",
+      "master": "masters/item--toy--small-blanket--master-512--non-shipping-v02.png",
+      "sourceSha256": "763f012824041ef2d0d5ba7f6bbdcd941c2a7aa73a2afcb8a7f1ac089bbbe4e9",
+      "masterSha256": "668fbf3323692bcb28a94de706f070e7b26b50d5959c8bee7ec4b81b9d8d6c16",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          56,
+          284
+        ],
+        [
+          67,
+          296
+        ],
+        [
+          105,
+          312
+        ],
+        [
+          150,
+          325
+        ],
+        [
+          200,
+          340
+        ],
+        [
+          250,
+          354
+        ],
+        [
+          300,
+          367
+        ],
+        [
+          345,
+          372
+        ],
+        [
+          375,
+          362
+        ],
+        [
+          400,
+          345
+        ],
+        [
+          420,
+          326
+        ],
+        [
+          442,
+          304
+        ],
+        [
+          457,
+          290
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 87877,
+        "alphaMass": 21341032,
+        "bounds": {
+          "left": 56,
+          "top": 113,
+          "right": 456,
+          "bottom": 400,
+          "width": 401,
+          "height": 288
+        },
+        "minimumSafeMargin": 55,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 76973,
+        "alphaMass": 19147152,
+        "bounds": {
+          "left": 56,
+          "top": 113,
+          "right": 454,
+          "bottom": 372,
+          "width": 399,
+          "height": 260
+        },
+        "minimumSafeMargin": 56,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 10904,
+      "removedAlphaMass": 2193880
+    },
+    {
+      "id": "yarn-ball",
+      "kind": "toy",
+      "source": "../v1/masters/item--toy--yarn-ball--master-512--non-shipping-v01.png",
+      "master": "masters/item--toy--yarn-ball--master-512--non-shipping-v02.png",
+      "sourceSha256": "e959da9f4a9965e2c5bc07c1a7713787f0522dc43f79b1f54eabc3beaedce1b0",
+      "masterSha256": "05dea80165276b387bc0c8dbd037eec7233d6bb1fff18ee2102f9e77dffa72b5",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          97,
+          300
+        ],
+        [
+          112,
+          320
+        ],
+        [
+          145,
+          334
+        ],
+        [
+          190,
+          343
+        ],
+        [
+          240,
+          345
+        ],
+        [
+          275,
+          337
+        ],
+        [
+          300,
+          328
+        ],
+        [
+          318,
+          316
+        ],
+        [
+          328,
+          340
+        ],
+        [
+          344,
+          363
+        ],
+        [
+          375,
+          365
+        ],
+        [
+          400,
+          340
+        ],
+        [
+          415,
+          320
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 50695,
+        "alphaMass": 11855398,
+        "bounds": {
+          "left": 97,
+          "top": 133,
+          "right": 415,
+          "bottom": 378,
+          "width": 319,
+          "height": 246
+        },
+        "minimumSafeMargin": 96,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 44131,
+        "alphaMass": 10797988,
+        "bounds": {
+          "left": 97,
+          "top": 133,
+          "right": 415,
+          "bottom": 365,
+          "width": 319,
+          "height": 233
+        },
+        "minimumSafeMargin": 96,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 6564,
+      "removedAlphaMass": 1057410
+    },
+    {
+      "id": "small-bell",
+      "kind": "toy",
+      "source": "../v1/masters/item--toy--small-bell--master-512--non-shipping-v01.png",
+      "master": "masters/item--toy--small-bell--master-512--non-shipping-v02.png",
+      "sourceSha256": "15cfd10c323b8d717074877fb3107e5853b7a5cae4dc5d17d370018505ed9f33",
+      "masterSha256": "0bce3ce954ac19cc167e80aa9fe27ec8520916b04493286ddb48ba5a385db7d3",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          149,
+          350
+        ],
+        [
+          160,
+          360
+        ],
+        [
+          165,
+          370
+        ],
+        [
+          190,
+          379
+        ],
+        [
+          220,
+          382
+        ],
+        [
+          230,
+          392
+        ],
+        [
+          245,
+          400
+        ],
+        [
+          260,
+          396
+        ],
+        [
+          270,
+          385
+        ],
+        [
+          290,
+          383
+        ],
+        [
+          320,
+          379
+        ],
+        [
+          345,
+          368
+        ],
+        [
+          362,
+          350
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 40316,
+        "alphaMass": 9263282,
+        "bounds": {
+          "left": 149,
+          "top": 93,
+          "right": 362,
+          "bottom": 420,
+          "width": 214,
+          "height": 328
+        },
+        "minimumSafeMargin": 91,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 34072,
+        "alphaMass": 8273034,
+        "bounds": {
+          "left": 162,
+          "top": 93,
+          "right": 361,
+          "bottom": 400,
+          "width": 200,
+          "height": 308
+        },
+        "minimumSafeMargin": 93,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 6244,
+      "removedAlphaMass": 990248
+    },
+    {
+      "id": "small-camera",
+      "kind": "toy",
+      "source": "../v1/masters/item--toy--small-camera--master-512--non-shipping-v01.png",
+      "master": "masters/item--toy--small-camera--master-512--non-shipping-v02.png",
+      "sourceSha256": "95b38d2e469a033fbf431b4db7c8e09644aa781667e91699820ebcdbe6b776cc",
+      "masterSha256": "0bebf41587795b7525fb65e6b7bedd3355cf87978edf5378dac1aaff7bc8aa10",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          57,
+          337
+        ],
+        [
+          70,
+          347
+        ],
+        [
+          110,
+          357
+        ],
+        [
+          160,
+          365
+        ],
+        [
+          215,
+          372
+        ],
+        [
+          270,
+          378
+        ],
+        [
+          325,
+          386
+        ],
+        [
+          365,
+          390
+        ],
+        [
+          400,
+          370
+        ],
+        [
+          430,
+          362
+        ],
+        [
+          455,
+          354
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 92331,
+        "alphaMass": 22033479,
+        "bounds": {
+          "left": 57,
+          "top": 103,
+          "right": 455,
+          "bottom": 409,
+          "width": 399,
+          "height": 307
+        },
+        "minimumSafeMargin": 56,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 82210,
+        "alphaMass": 20378559,
+        "bounds": {
+          "left": 64,
+          "top": 103,
+          "right": 451,
+          "bottom": 390,
+          "width": 388,
+          "height": 288
+        },
+        "minimumSafeMargin": 60,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 10121,
+      "removedAlphaMass": 1654920
+    },
+    {
+      "id": "small-telescope",
+      "kind": "toy",
+      "source": "../v1/masters/item--toy--small-telescope--master-512--non-shipping-v01.png",
+      "master": "masters/item--toy--small-telescope--master-512--non-shipping-v02.png",
+      "sourceSha256": "17b303dc8b83dc1108fdf356b90fd86165c912e90311b16f74854bb848288121",
+      "masterSha256": "c924a0b93afd820b959b63b61add3fe33b512e9798f4b8941e8abdeaa08a71a6",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          87,
+          252
+        ],
+        [
+          99,
+          268
+        ],
+        [
+          130,
+          277
+        ],
+        [
+          175,
+          284
+        ],
+        [
+          220,
+          291
+        ],
+        [
+          270,
+          299
+        ],
+        [
+          320,
+          304
+        ],
+        [
+          370,
+          310
+        ],
+        [
+          405,
+          316
+        ],
+        [
+          423,
+          319
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "internalRepair": {
+        "ellipse": {
+          "centerX": 122,
+          "centerY": 229,
+          "radiusX": 22,
+          "radiusY": 37,
+          "limit": 0.82
+        },
+        "fill": "local opaque lens-pixel average"
+      },
+      "before": {
+        "visiblePixels": 37196,
+        "alphaMass": 8161878,
+        "bounds": {
+          "left": 87,
+          "top": 172,
+          "right": 423,
+          "bottom": 339,
+          "width": 337,
+          "height": 168
+        },
+        "minimumSafeMargin": 87,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 26845,
+        "alphaMass": 6439457,
+        "bounds": {
+          "left": 87,
+          "top": 172,
+          "right": 423,
+          "bottom": 318,
+          "width": 337,
+          "height": 147
+        },
+        "minimumSafeMargin": 87,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 10351,
+      "removedAlphaMass": 1722421
+    },
+    {
+      "id": "ticket",
+      "kind": "wish",
+      "source": "../v1/masters/item--wish--ticket--master-512--non-shipping-v01.png",
+      "master": "masters/item--wish--ticket--master-512--non-shipping-v02.png",
+      "sourceSha256": "a5c4e474bd9874f6fc1120749a2ca6fadedc1bd8b3a77305f2c9b6a948c35aab",
+      "masterSha256": "1cd47e2f6f7eb3894103361dfb902558beab3ebbde67087a061f8f6f324c4844",
+      "regenerated": false,
+      "cleanupContour": [
+        [
+          77,
+          309
+        ],
+        [
+          115,
+          317
+        ],
+        [
+          165,
+          325
+        ],
+        [
+          220,
+          334
+        ],
+        [
+          275,
+          343
+        ],
+        [
+          330,
+          352
+        ],
+        [
+          380,
+          358
+        ],
+        [
+          405,
+          354
+        ],
+        [
+          415,
+          347
+        ],
+        [
+          420,
+          330
+        ],
+        [
+          435,
+          310
+        ]
+      ],
+      "bottomFeatherPixels": 5,
+      "detachedComponentMinimumPixels": 120,
+      "before": {
+        "visiblePixels": 68835,
+        "alphaMass": 16682923,
+        "bounds": {
+          "left": 77,
+          "top": 138,
+          "right": 435,
+          "bottom": 375,
+          "width": 359,
+          "height": 238
+        },
+        "minimumSafeMargin": 76,
+        "transparentRgbNonZero": 0
+      },
+      "after": {
+        "visiblePixels": 62157,
+        "alphaMass": 15278669,
+        "bounds": {
+          "left": 82,
+          "top": 138,
+          "right": 432,
+          "bottom": 358,
+          "width": 351,
+          "height": 221
+        },
+        "minimumSafeMargin": 79,
+        "transparentRgbNonZero": 0
+      },
+      "removedVisiblePixels": 6678,
+      "removedAlphaMass": 1404254
+    }
+  ]
+}

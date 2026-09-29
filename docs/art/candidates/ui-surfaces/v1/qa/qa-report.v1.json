@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-04",
+  "assetNeedId": "AA-017",
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "approvalState": "pending-human-visual-approval",
+  "result": "pass-with-pre-existing-css-accessibility-findings",
+  "surfaceCandidateChecksPass": true,
+  "visualInspection": {
+    "performed": true,
+    "reviewedProofs": [
+      "unmarked 1200x1600 1x repetitions",
+      "unmarked 2400x3200 2x repetitions",
+      "common drawer/card size proofs",
+      "offset seam proof",
+      "frequency/autocorrelation proof",
+      "straight-alpha proof",
+      "current text-color proof"
+    ],
+    "finding": "Low-contrast non-object surface treatment only; no visible borders, directional illumination, hard gradients, motifs, high-contrast dot lattice, text, or watermark in source assets."
+  },
+  "masterAndRuntimeChecks": {
+    "paperMaster": {
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "sageWashMaster": {
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true
+    },
+    "paperRuntime1x": {
+      "format": "WEBP",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "paperRuntime2x": {
+      "format": "WEBP",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "sageWashRuntime1x": {
+      "format": "WEBP",
+      "width": 512,
+      "height": 512,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true
+    },
+    "sageWashRuntime2x": {
+      "format": "WEBP",
+      "width": 1024,
+      "height": 1024,
+      "pixelMode": "RGBA",
+      "iccProfile": true,
+      "alphaExtrema": [
+        0,
+        10
+      ],
+      "transparentPixelRgbZero": true
+    }
+  },
+  "runtimeEncodingChecks": {
+    "paper1x": {
+      "decodedPixelExact": true,
+      "maximumChannelDelta": 0
+    },
+    "paper2x": {
+      "decodedPixelExact": true,
+      "maximumChannelDelta": 0
+    },
+    "wash1x": {
+      "decodedPixelExact": true,
+      "maximumChannelDelta": 0
+    },
+    "wash2x": {
+      "decodedPixelExact": true,
+      "maximumChannelDelta": 0
+    }
+  },
+  "determinismValidation": {
+    "performed": true,
+    "method": "two consecutive clean full-pack rebuilds using pinned dependencies and fixed tracked sRGB profile bytes",
+    "hashIndexMatched": true,
+    "manifestMatched": true
+  },
+  "surfaceStatistics": {
+    "paperRgbExtrema": {
+      "minimum": [
+        251,
+        248,
+        241
+      ],
+      "maximum": [
+        255,
+        252,
+        245
+      ],
+      "standardDeviation": [
+        1.0063,
+        0.8927,
+        0.7488
+      ]
+    },
+    "sageAlpha": {
+      "minimum": 0,
+      "maximum": 10,
+      "mean": 4.7068,
+      "p99": 9.0
+    },
+    "paperRelativeLuminance": {
+      "minimum": 0.939949,
+      "maximum": 0.974734
+    },
+    "paperPlusSageRelativeLuminance": {
+      "minimum": 0.911934,
+      "maximum": 0.974734
+    }
+  },
+  "seamMetrics": "qa/seams/offset-seam-metrics.v1.json",
+  "frequencyMetrics": "qa/frequency/frequency-repetition-metrics.v1.json",
+  "contrastMetrics": "qa/contrast/text-contrast-metrics.v1.json",
+  "repetitionProofs": [
+    {
+      "path": "qa/repetition/surface--paper-warm--tiled-display-1200x1600--1x--non-shipping-v01.png",
+      "pixelDimensions": [
+        1200,
+        1600
+      ],
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "deviceScale": 1,
+      "tileOffset": [
+        73,
+        119
+      ],
+      "unmarkedDirectTiling": true
+    },
+    {
+      "path": "qa/repetition/surface--paper-warm--tiled-display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "pixelDimensions": [
+        2400,
+        3200
+      ],
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "deviceScale": 2,
+      "tileOffset": [
+        146,
+        238
+      ],
+      "unmarkedDirectTiling": true
+    },
+    {
+      "path": "qa/repetition/surface--paper-plus-sage--tiled-display-1200x1600--1x--non-shipping-v01.png",
+      "pixelDimensions": [
+        1200,
+        1600
+      ],
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "deviceScale": 1,
+      "tileOffset": [
+        137,
+        211
+      ],
+      "unmarkedDirectTiling": true
+    },
+    {
+      "path": "qa/repetition/surface--paper-plus-sage--tiled-display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "pixelDimensions": [
+        2400,
+        3200
+      ],
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "deviceScale": 2,
+      "tileOffset": [
+        274,
+        422
+      ],
+      "unmarkedDirectTiling": true
+    }
+  ],
+  "commonSizeProofs": [
+    {
+      "path": "qa/context/common-drawer-card-sizes--display-1200x1600--1x--non-shipping-v01.png",
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "deviceScale": 1,
+      "includedSurfaces": [
+        "drawer 470x720",
+        "item card 422x82",
+        "postcard card 378x366",
+        "adoption card 418x520",
+        "nav tile 58x58",
+        "token 46x46",
+        "button 180x38"
+      ]
+    },
+    {
+      "path": "qa/context/common-drawer-card-sizes--display-1200x1600--2x-physical-2400x3200--non-shipping-v01.png",
+      "logicalDimensions": [
+        1200,
+        1600
+      ],
+      "pixelDimensions": [
+        2400,
+        3200
+      ],
+      "deviceScale": 2
+    }
+  ],
+  "accessibility": {
+    "textureIntroducesContrastRegression": false,
+    "preExistingCssFindings": [
+      {
+        "id": "core-caption",
+        "role": "small caption / --ink-soft",
+        "textColor": "#7c7d6d",
+        "currentFlatMinimum": 3.681,
+        "finding": "pre-existing-small-text-AA-failure"
+      },
+      {
+        "id": "postcard-caption",
+        "role": "postcard small caption",
+        "textColor": "#838273",
+        "currentFlatMinimum": 3.391,
+        "finding": "pre-existing-small-text-AA-failure"
+      },
+      {
+        "id": "status-caption",
+        "role": "status line caption",
+        "textColor": "#898878",
+        "currentFlatMinimum": 3.15,
+        "finding": "pre-existing-small-text-AA-failure"
+      }
+    ],
+    "disposition": "Record only. CSS/app code is outside this batch and remains unchanged; future integration must resolve small caption colors."
+  },
+  "scopeChecks": {
+    "onlyCandidateRootWritten": true,
+    "cssOrAppCodeEdited": false,
+    "productionAssetsEdited": false,
+    "otherCandidateRootsEdited": false,
+    "commitOrIntegrationPerformed": false
+  }
+}

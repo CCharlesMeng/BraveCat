@@ -1,0 +1,695 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "domestic-shorthair-static-candidates-v1",
+  "validatedAt": "2026-07-21",
+  "ok": true,
+  "checks": {
+    "poseSetComplete": true,
+    "masterDimensionsAndRgba": true,
+    "runtimeDimensionsAndRgba": true,
+    "transparentPixelRgbZero": true,
+    "minimumMasterSafeMarginPx": 64,
+    "allMastersMeetSafeMargin": true,
+    "partialAlphaEdgesPresent": true,
+    "transparentCanvasBorders": true,
+    "reviewArtifactDimensions": true
+  },
+  "masters": {
+    "orange-tabby": {
+      "sit": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--sit--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 12874,
+        "transparentBorder": true,
+        "bbox": [
+          218,
+          72,
+          805,
+          960
+        ],
+        "marginsPx": {
+          "left": 218,
+          "top": 72,
+          "right": 219,
+          "bottom": 64
+        }
+      },
+      "sleep": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--sleep--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 10656,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          424,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 424,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "walk": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--walk--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 16115,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          359,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 359,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "eat": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--eat--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 15229,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          433,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 433,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "play": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--play--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 19971,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          120,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 120,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "gaze": {
+        "ok": true,
+        "path": "source/orange-tabby/orange-tabby--gaze--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 11224,
+        "transparentBorder": true,
+        "bbox": [
+          247,
+          72,
+          776,
+          960
+        ],
+        "marginsPx": {
+          "left": 247,
+          "top": 72,
+          "right": 248,
+          "bottom": 64
+        }
+      }
+    },
+    "li-hua": {
+      "sit": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--sit--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 16339,
+        "transparentBorder": true,
+        "bbox": [
+          171,
+          72,
+          853,
+          960
+        ],
+        "marginsPx": {
+          "left": 171,
+          "top": 72,
+          "right": 171,
+          "bottom": 64
+        }
+      },
+      "sleep": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--sleep--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 14417,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          390,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 390,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "walk": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--walk--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 23822,
+        "transparentBorder": true,
+        "bbox": [
+          96,
+          72,
+          927,
+          960
+        ],
+        "marginsPx": {
+          "left": 96,
+          "top": 72,
+          "right": 97,
+          "bottom": 64
+        }
+      },
+      "eat": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--eat--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 20943,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          323,
+          956,
+          960
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 323,
+          "right": 68,
+          "bottom": 64
+        }
+      },
+      "play": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--play--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 18526,
+        "transparentBorder": true,
+        "bbox": [
+          136,
+          72,
+          887,
+          960
+        ],
+        "marginsPx": {
+          "left": 136,
+          "top": 72,
+          "right": 137,
+          "bottom": 64
+        }
+      },
+      "gaze": {
+        "ok": true,
+        "path": "source/li-hua/li-hua--gaze--master-1024--non-shipping-v01.png",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 22198,
+        "transparentBorder": true,
+        "bbox": [
+          142,
+          72,
+          882,
+          960
+        ],
+        "marginsPx": {
+          "left": 142,
+          "top": 72,
+          "right": 142,
+          "bottom": 64
+        }
+      }
+    }
+  },
+  "runtimeReview": {
+    "orange-tabby": {
+      "sit": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--sit--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 5495,
+        "transparentBorder": true,
+        "bbox": [
+          106,
+          34,
+          405,
+          482
+        ],
+        "marginsPx": {
+          "left": 106,
+          "top": 34,
+          "right": 107,
+          "bottom": 30
+        }
+      },
+      "sleep": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--sleep--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 4539,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          210,
+          480,
+          482
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 210,
+          "right": 32,
+          "bottom": 30
+        }
+      },
+      "walk": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--walk--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 7141,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          177,
+          480,
+          482
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 177,
+          "right": 32,
+          "bottom": 30
+        }
+      },
+      "eat": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--eat--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 6819,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          215,
+          480,
+          482
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 215,
+          "right": 32,
+          "bottom": 30
+        }
+      },
+      "play": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--play--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 8263,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          57,
+          481,
+          482
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 57,
+          "right": 31,
+          "bottom": 30
+        }
+      },
+      "gaze": {
+        "ok": true,
+        "path": "runtime/orange-tabby/orange-tabby--gaze--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 5140,
+        "transparentBorder": true,
+        "bbox": [
+          123,
+          34,
+          390,
+          482
+        ],
+        "marginsPx": {
+          "left": 123,
+          "top": 34,
+          "right": 122,
+          "bottom": 30
+        }
+      }
+    },
+    "li-hua": {
+      "sit": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--sit--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 7203,
+        "transparentBorder": true,
+        "bbox": [
+          83,
+          34,
+          429,
+          483
+        ],
+        "marginsPx": {
+          "left": 83,
+          "top": 34,
+          "right": 83,
+          "bottom": 29
+        }
+      },
+      "sleep": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--sleep--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 6249,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          192,
+          481,
+          483
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 192,
+          "right": 31,
+          "bottom": 29
+        }
+      },
+      "walk": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--walk--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 10358,
+        "transparentBorder": true,
+        "bbox": [
+          46,
+          34,
+          464,
+          482
+        ],
+        "marginsPx": {
+          "left": 46,
+          "top": 34,
+          "right": 48,
+          "bottom": 30
+        }
+      },
+      "eat": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--eat--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 9102,
+        "transparentBorder": true,
+        "bbox": [
+          32,
+          159,
+          480,
+          482
+        ],
+        "marginsPx": {
+          "left": 32,
+          "top": 159,
+          "right": 32,
+          "bottom": 30
+        }
+      },
+      "play": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--play--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 7786,
+        "transparentBorder": true,
+        "bbox": [
+          66,
+          34,
+          446,
+          482
+        ],
+        "marginsPx": {
+          "left": 66,
+          "top": 34,
+          "right": 66,
+          "bottom": 30
+        }
+      },
+      "gaze": {
+        "ok": true,
+        "path": "runtime/li-hua/li-hua--gaze--runtime-512--non-shipping-v01.png",
+        "width": 512,
+        "height": 512,
+        "format": "PNG",
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "alpha": "straight / unassociated PNG alpha",
+        "transparentPixelRgbZero": true,
+        "hiddenRgbNonzeroPixelCount": 0,
+        "partiallyTransparentPixelCount": 9587,
+        "transparentBorder": true,
+        "bbox": [
+          68,
+          33,
+          443,
+          482
+        ],
+        "marginsPx": {
+          "left": 68,
+          "top": 33,
+          "right": 69,
+          "bottom": 30
+        }
+      }
+    }
+  },
+  "reviewArtifacts": {
+    "contactSheet": {
+      "ok": true,
+      "path": "reviews/contact-sheets/contact-sheet--two-cats-six-poses--non-shipping-v01.png",
+      "width": 2400,
+      "height": 2100,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "orange390": {
+      "ok": true,
+      "path": "reviews/mockups/home-mockup--orange-tabby--sleep--390x844--non-shipping-v01.png",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "orange430": {
+      "ok": true,
+      "path": "reviews/mockups/home-mockup--orange-tabby--sleep--430x932--non-shipping-v01.png",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "liHua390": {
+      "ok": true,
+      "path": "reviews/mockups/home-mockup--li-hua--sleep--390x844--non-shipping-v01.png",
+      "width": 390,
+      "height": 844,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    },
+    "liHua430": {
+      "ok": true,
+      "path": "reviews/mockups/home-mockup--li-hua--sleep--430x932--non-shipping-v01.png",
+      "width": 430,
+      "height": 932,
+      "pixelMode": "RGB",
+      "iccProfile": true
+    }
+  }
+}

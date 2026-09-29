@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "batchId": "GEN-01",
+  "status": "pass",
+  "checks": {
+    "generatedSourceInputs": {
+      "a": {
+        "path": "docs/art/candidates/app-identity/v1/generated/bravecat-app-identity-candidate-a-generated-v01.png",
+        "sha256": "ca696dfad711ef366f1c0ee173a0bf43f2d059378ad1c7b1f25f1fcfb73f9803",
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "embeddedIccProfile": false,
+        "generationTool": "Cursor GenerateImage",
+        "generationMode": "reference-conditioned painterly identity art"
+      },
+      "b": {
+        "path": "docs/art/candidates/app-identity/v1/generated/bravecat-app-identity-candidate-b-generated-v01.png",
+        "sha256": "f2c0c081d7457003549400cadc8e0d3f52329f820075734bba9ebe2d9e5f62ae",
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "embeddedIccProfile": false,
+        "generationTool": "Cursor GenerateImage",
+        "generationMode": "reference-conditioned painterly identity art"
+      }
+    },
+    "artifactValidation": [
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--512--maskable-any--candidate-a--non-shipping-v01.png",
+        "role": "maskable-any",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--192--any--candidate-a--non-shipping-v01.png",
+        "role": "any",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--180--apple--candidate-a--non-shipping-v01.png",
+        "role": "apple-touch",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--48--simplified--candidate-a--non-shipping-v01.png",
+        "role": "simplified-favicon",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-envelope--32--simplified--candidate-a--non-shipping-v01.png",
+        "role": "simplified-favicon",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/masters/app-icon--minho-envelope--master-1024--candidate-a--non-shipping-v01.png",
+        "role": "master",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/proofs/mask-safe--candidate-a--circle-squircle--non-shipping-v01.png",
+        "role": "mask-safe-proof",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-a--390x844--non-shipping-v01.png",
+        "role": "launcher-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-a--390x844--non-shipping-v01.png",
+        "role": "install-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-a--430x932--non-shipping-v01.png",
+        "role": "launcher-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-a--430x932--non-shipping-v01.png",
+        "role": "install-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--512--maskable-any--candidate-b--non-shipping-v01.png",
+        "role": "maskable-any",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--192--any--candidate-b--non-shipping-v01.png",
+        "role": "any",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--180--apple--candidate-b--non-shipping-v01.png",
+        "role": "apple-touch",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--48--simplified--candidate-b--non-shipping-v01.png",
+        "role": "simplified-favicon",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/runtime/app-icon--minho-home-postcard--32--simplified--candidate-b--non-shipping-v01.png",
+        "role": "simplified-favicon",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/masters/app-icon--minho-home-postcard--master-1024--candidate-b--non-shipping-v01.png",
+        "role": "master",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/proofs/mask-safe--candidate-b--circle-squircle--non-shipping-v01.png",
+        "role": "mask-safe-proof",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-b--390x844--non-shipping-v01.png",
+        "role": "launcher-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-b--390x844--non-shipping-v01.png",
+        "role": "install-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/launcher--candidate-b--430x932--non-shipping-v01.png",
+        "role": "launcher-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/mockups/install--candidate-b--430x932--non-shipping-v01.png",
+        "role": "install-mockup",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/proofs/selection-board--both--non-shipping-v01.png",
+        "role": "visual-selection-board",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      },
+      {
+        "path": "docs/art/candidates/app-identity/v1/proofs/legibility--both--32-48--non-shipping-v01.png",
+        "role": "small-size-legibility-proof",
+        "checks": {
+          "dimensions": true,
+          "modeRgb": true,
+          "opaque": true,
+          "embeddedColorProfile": true,
+          "profileIdentifiesSrgb": true
+        },
+        "ok": true
+      }
+    ],
+    "maskSafety": {
+      "candidate-a": {
+        "declaredCriticalBoundsNormalized": [
+          0.2,
+          0.15,
+          0.8,
+          0.88
+        ],
+        "insideCentral80Percent": true,
+        "declaredBoundingCornersInsideUnitCircleMask": true,
+        "minimumCircleClearanceNormalized": 0.0159,
+        "squircleProofGenerated": true
+      },
+      "candidate-b": {
+        "declaredCriticalBoundsNormalized": [
+          0.2,
+          0.12,
+          0.8,
+          0.87
+        ],
+        "insideCentral80Percent": true,
+        "declaredBoundingCornersInsideUnitCircleMask": true,
+        "minimumCircleClearanceNormalized": 0.0159,
+        "squircleProofGenerated": true
+      }
+    },
+    "smallSizeMetrics": {
+      "candidate-a": {
+        "luminanceStandardDeviation": 27.565,
+        "meanNeighborEdgeDelta": 9.677,
+        "machineContrastPresent": true,
+        "humanRecognitionReviewedIn": "docs/art/candidates/app-identity/v1/proofs/legibility--both--32-48--non-shipping-v01.png"
+      },
+      "candidate-b": {
+        "luminanceStandardDeviation": 33.218,
+        "meanNeighborEdgeDelta": 10.327,
+        "machineContrastPresent": true,
+        "humanRecognitionReviewedIn": "docs/art/candidates/app-identity/v1/proofs/legibility--both--32-48--non-shipping-v01.png"
+      }
+    },
+    "approvedMinhoProductionHashes": [
+      {
+        "path": "public/portraits/minho/portrait--minho--sit--v01.png",
+        "expectedSha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+        "actualSha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+        "unchanged": true
+      },
+      {
+        "path": "public/portraits/minho/portrait--minho--sleep--v01.png",
+        "expectedSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+        "actualSha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+        "unchanged": true
+      },
+      {
+        "path": "public/portraits/minho/portrait--minho--walk--v01.png",
+        "expectedSha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+        "actualSha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+        "unchanged": true
+      },
+      {
+        "path": "public/portraits/minho/portrait--minho--eat--v01.png",
+        "expectedSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+        "actualSha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+        "unchanged": true
+      },
+      {
+        "path": "public/portraits/minho/portrait--minho--play--v01.png",
+        "expectedSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+        "actualSha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+        "unchanged": true
+      },
+      {
+        "path": "public/portraits/minho/portrait--minho--gaze--v01.png",
+        "expectedSha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+        "actualSha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+        "unchanged": true
+      }
+    ]
+  },
+  "notes": [
+    "GenerateImage source PNGs are opaque RGB but did not include an ICC profile; all normalized candidate masters, derivatives, proofs, and mockups embed the Pillow sRGB profile.",
+    "Mask safety uses declared visual critical bounds confirmed against the generated proofs; background wash is intentionally excluded.",
+    "Small-size metrics establish contrast only. Human identity and recognition findings are recorded in qa/visual-review.md."
+  ]
+}

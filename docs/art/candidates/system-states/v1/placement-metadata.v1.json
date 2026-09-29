@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "coordinateSystem": "pixels from top-left; right/bottom bounds are exclusive",
+  "masterCanvas": {
+    "width": 512,
+    "height": 512
+  },
+  "displayRangeCssPx": {
+    "minimum": 96,
+    "maximum": 144
+  },
+  "loadingViewportGeometry": {
+    "320x568": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "contentFrame": {
+        "x": 26,
+        "y": 134,
+        "width": 268,
+        "height": 300
+      },
+      "artSlot": {
+        "x": 80,
+        "y": 202,
+        "width": 160,
+        "height": 160
+      },
+      "artCanvas": {
+        "x": 96,
+        "y": 218,
+        "width": 128,
+        "height": 128
+      },
+      "statusCopySafeZone": {
+        "x": 26,
+        "y": 374,
+        "width": 268,
+        "height": 48
+      }
+    },
+    "390x844": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "contentFrame": {
+        "x": 26,
+        "y": 272,
+        "width": 338,
+        "height": 300
+      },
+      "artSlot": {
+        "x": 115,
+        "y": 340,
+        "width": 160,
+        "height": 160
+      },
+      "artCanvas": {
+        "x": 131,
+        "y": 356,
+        "width": 128,
+        "height": 128
+      },
+      "statusCopySafeZone": {
+        "x": 26,
+        "y": 512,
+        "width": 338,
+        "height": 48
+      }
+    },
+    "430x932": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "contentFrame": {
+        "x": 26,
+        "y": 316,
+        "width": 378,
+        "height": 300
+      },
+      "artSlot": {
+        "x": 135,
+        "y": 384,
+        "width": 160,
+        "height": 160
+      },
+      "artCanvas": {
+        "x": 151,
+        "y": 400,
+        "width": 128,
+        "height": 128
+      },
+      "statusCopySafeZone": {
+        "x": 26,
+        "y": 556,
+        "width": 378,
+        "height": 48
+      }
+    }
+  },
+  "layoutInvariants": {
+    "states": [
+      "bootstrap-hydrating",
+      "slow-storage",
+      "restore-progress"
+    ],
+    "artSlotFixedAcrossStates": true,
+    "artCanvasFixedAcrossStates": true,
+    "statusCopySafeZoneFixedAcrossStates": true,
+    "statusCopyRemainsLiveDomText": true,
+    "layoutJumpPx": 0,
+    "sourceArtBehindCopy": false
+  },
+  "candidates": [
+    {
+      "id": "letter-tray",
+      "master": "masters/loading-vignette--letter-tray--master-512--non-shipping-v01.png",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "opaquePixelBounds": {
+        "left": 69,
+        "top": 121,
+        "rightExclusive": 435,
+        "bottomExclusive": 390
+      },
+      "safeMarginsPx": {
+        "left": 69,
+        "top": 121,
+        "right": 77,
+        "bottom": 122
+      },
+      "bottomCenterAnchor": {
+        "x": 252.0,
+        "y": 390
+      },
+      "loadingPlacement": {
+        "reservedSlotCssPx": {
+          "width": 160,
+          "height": 160
+        },
+        "imageCanvasCssPx": {
+          "width": 128,
+          "height": 128
+        },
+        "objectFit": "contain",
+        "alignment": "center center"
+      },
+      "importRestorePlacement": {
+        "reservedSlotCssPx": {
+          "width": 112,
+          "height": 112
+        },
+        "imageCanvasCssPx": {
+          "width": 96,
+          "height": 96
+        },
+        "objectFit": "contain",
+        "alignment": "center center"
+      }
+    },
+    {
+      "id": "house-box",
+      "master": "masters/loading-vignette--house-box--master-512--non-shipping-v01.png",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "opaquePixelBounds": {
+        "left": 67,
+        "top": 124,
+        "rightExclusive": 445,
+        "bottomExclusive": 389
+      },
+      "safeMarginsPx": {
+        "left": 67,
+        "top": 124,
+        "right": 67,
+        "bottom": 123
+      },
+      "bottomCenterAnchor": {
+        "x": 256.0,
+        "y": 389
+      },
+      "loadingPlacement": {
+        "reservedSlotCssPx": {
+          "width": 160,
+          "height": 160
+        },
+        "imageCanvasCssPx": {
+          "width": 128,
+          "height": 128
+        },
+        "objectFit": "contain",
+        "alignment": "center center"
+      },
+      "importRestorePlacement": {
+        "reservedSlotCssPx": {
+          "width": 112,
+          "height": 112
+        },
+        "imageCanvasCssPx": {
+          "width": 96,
+          "height": 96
+        },
+        "objectFit": "contain",
+        "alignment": "center center"
+      }
+    }
+  ]
+}

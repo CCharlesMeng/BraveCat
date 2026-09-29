@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "inspectedAt": "2026-07-21",
+  "ok": true,
+  "parentApprovedInput": "Maine Coon, Ragdoll, and Siamese v1 morphology, physical plausibility, coat identity, and six-pose identity are accepted and unchanged.",
+  "coverage": {
+    "required": 54,
+    "reviewed": 54,
+    "passed": 54,
+    "failed": 0
+  },
+  "checks": {
+    "bottomCenterAnchorRecorded": true,
+    "visibleAndOpaqueBoundsRecorded": true,
+    "minhoRelativePhysicalScalePreservedAcrossWidthsAndPoses": true,
+    "rugOrFloorSupport": true,
+    "furnitureCollisionFree": true,
+    "navigationReserveCollisionFree": true,
+    "safeAreaPass": true,
+    "noViewportCropping": true,
+    "softAlphaNoHardCutout": true,
+    "eatBowlGroundedAndSeparated": true,
+    "playYarnGroundedAndFixtureClear": true,
+    "pawsJointsAndTailsRemainParentApprovedAndUnaltered": true,
+    "maineCoonUsesFixedOnePointTwoTwoScaleWithoutPoseShrink": true,
+    "siameseUsesFixedZeroPointEightTwoScaleAndRemainsGrounded": true,
+    "contactShadowNecessary": false
+  },
+  "specialInspection": {
+    "eat": "The generated pose bowl is the leftmost element of each eat master. The pose-specific x=720 anchor keeps it on the rug with at least 24 px room-canvas clearance from the fixed room bowl group.",
+    "play": "The yarn ball and strand remain on the rug baseline. The pose-specific x=720 anchor clears the fixed bowls, cat tree, hanging wand, and side table.",
+    "largeAndLightBodies": "Maine Coon remains at 1.22× Minho in every viewport and pose. Siamese remains at 0.82×, with dark paws/tail or compressed torso visibly meeting the rug; neither is resized per pose.",
+    "hardEdges": "All full-resolution composites preserve the v1 partial-alpha watercolor edge. No matte outline, clipping seam, or added baked shadow was observed."
+  },
+  "failures": []
+}

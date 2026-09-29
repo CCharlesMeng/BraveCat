@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "result": "pass",
+  "machineChecks": {
+    "dimensionsPixelModesProfilesAlpha": [
+      {
+        "path": "masters/loading-vignette--letter-tray--master-512--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 512,
+        "height": 512,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 150496,
+        "sha256": "4b5d1a6c003fa9c19f8d3efd163f564de7aa05422814d5791467a2fec2f415b4",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 69,
+          "top": 121,
+          "rightExclusive": 435,
+          "bottomExclusive": 390
+        },
+        "safeMarginsPx": {
+          "left": 69,
+          "top": 121,
+          "right": 77,
+          "bottom": 122
+        },
+        "bottomCenterAnchor": {
+          "x": 252.0,
+          "y": 390
+        },
+        "expected": {
+          "width": 512,
+          "height": 512,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "runtime/loading-vignette--letter-tray--runtime-256--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 256,
+        "height": 256,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 39721,
+        "sha256": "a0e370cb4e985bf12e412df8f176eb2c0bfa05451a4dc79d82ac9337e203fdb4",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 33,
+          "top": 59,
+          "rightExclusive": 219,
+          "bottomExclusive": 197
+        },
+        "safeMarginsPx": {
+          "left": 33,
+          "top": 59,
+          "right": 37,
+          "bottom": 59
+        },
+        "bottomCenterAnchor": {
+          "x": 126.0,
+          "y": 197
+        },
+        "expected": {
+          "width": 256,
+          "height": 256,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "runtime/loading-vignette--letter-tray--runtime-128--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 128,
+        "height": 128,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 11755,
+        "sha256": "b5aabfabfe1b8fe58cbdcbb6d615fc453dbfcb759761558c3b9c4cc8fce6e727",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 15,
+          "top": 28,
+          "rightExclusive": 111,
+          "bottomExclusive": 100
+        },
+        "safeMarginsPx": {
+          "left": 15,
+          "top": 28,
+          "right": 17,
+          "bottom": 28
+        },
+        "bottomCenterAnchor": {
+          "x": 63.0,
+          "y": 100
+        },
+        "expected": {
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--letter-tray--320x568--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 320,
+        "height": 568,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 21105,
+        "sha256": "b315111b3c4f00ee064da6a6ea2148b9e8a58b2ee43c0da2f8c8bdc518ca42b5",
+        "expected": {
+          "width": 320,
+          "height": 568,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--letter-tray--390x844--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 390,
+        "height": 844,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 22777,
+        "sha256": "2e61b338d943f1005e077b4b56ca37b72f070c6e0feae099d4d207ca4cfbd235",
+        "expected": {
+          "width": 390,
+          "height": 844,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--letter-tray--430x932--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 430,
+        "height": 932,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 23336,
+        "sha256": "a1529a43de744ac40a1bc4c93b1205768a1c7a0fdcb7b88dab11ff69c2f381e5",
+        "expected": {
+          "width": 430,
+          "height": 932,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/reuse/reuse-review--letter-tray--import-restore--390x844--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 390,
+        "height": 844,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 29462,
+        "sha256": "42c6c76c5504c899a10f87a4961b10b887ace544bcc36e61d6cf3a0333a13266",
+        "expected": {
+          "width": 390,
+          "height": 844,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "masters/loading-vignette--house-box--master-512--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 512,
+        "height": 512,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 130835,
+        "sha256": "4329aeef0bca6ee2ce4357d95e92dd7e2d7f2a579f0f969db3226e8c3fd97832",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 67,
+          "top": 124,
+          "rightExclusive": 445,
+          "bottomExclusive": 389
+        },
+        "safeMarginsPx": {
+          "left": 67,
+          "top": 124,
+          "right": 67,
+          "bottom": 123
+        },
+        "bottomCenterAnchor": {
+          "x": 256.0,
+          "y": 389
+        },
+        "expected": {
+          "width": 512,
+          "height": 512,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "runtime/loading-vignette--house-box--runtime-256--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 256,
+        "height": 256,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 36396,
+        "sha256": "9bb8f1f7aed58dc707d8eae102f944199f786265d3b39e33f419e62bc9973eb1",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 32,
+          "top": 61,
+          "rightExclusive": 224,
+          "bottomExclusive": 196
+        },
+        "safeMarginsPx": {
+          "left": 32,
+          "top": 61,
+          "right": 32,
+          "bottom": 60
+        },
+        "bottomCenterAnchor": {
+          "x": 128.0,
+          "y": 196
+        },
+        "expected": {
+          "width": 256,
+          "height": 256,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "runtime/loading-vignette--house-box--runtime-128--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 128,
+        "height": 128,
+        "pixelMode": "RGBA",
+        "iccProfile": true,
+        "bytes": 11156,
+        "sha256": "e96bd5ac400f8384db1797172c6890f8bf696347c8c6dac573486acbaedd9abc",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixelRgbZero": true,
+        "opaquePixelBounds": {
+          "left": 15,
+          "top": 29,
+          "rightExclusive": 113,
+          "bottomExclusive": 99
+        },
+        "safeMarginsPx": {
+          "left": 15,
+          "top": 29,
+          "right": 15,
+          "bottom": 29
+        },
+        "bottomCenterAnchor": {
+          "x": 64.0,
+          "y": 99
+        },
+        "expected": {
+          "width": 128,
+          "height": 128,
+          "pixelMode": "RGBA"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--house-box--320x568--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 320,
+        "height": 568,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 20082,
+        "sha256": "2af162fb1c355548de06870813c1c299ddedaa5310e7dbe48b2ed8489f15fd72",
+        "expected": {
+          "width": 320,
+          "height": 568,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--house-box--390x844--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 390,
+        "height": 844,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 21720,
+        "sha256": "89dfba57abdf6dba87ed1e53f7488744208d0b2460b4e8a73c2de95de9797584",
+        "expected": {
+          "width": 390,
+          "height": 844,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/loading/loading-review--house-box--430x932--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 430,
+        "height": 932,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 22270,
+        "sha256": "92853999454bcae1b277bdd8fa927def2346c7e346e7fd90af5f62f4c33bab44",
+        "expected": {
+          "width": 430,
+          "height": 932,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/reuse/reuse-review--house-box--import-restore--390x844--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 390,
+        "height": 844,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 28866,
+        "sha256": "30950374e5f4fabd0d08d382ee5aaec754ef7d41098c2c4278d2e7c5e8976682",
+        "expected": {
+          "width": 390,
+          "height": 844,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      },
+      {
+        "path": "reviews/contact-sheet--gen03-loading-vignettes--1600x2000--non-shipping-v01.png",
+        "format": "PNG",
+        "width": 1600,
+        "height": 2000,
+        "pixelMode": "RGB",
+        "iccProfile": true,
+        "bytes": 309944,
+        "sha256": "9e4404913b07f8ee3222642489a1c599aed01c3dc89e6bbe839cb3d6e133ff2e",
+        "expected": {
+          "width": 1600,
+          "height": 2000,
+          "pixelMode": "RGB"
+        },
+        "pass": true
+      }
+    ],
+    "allExpectedDimensionsPass": true,
+    "allExportsEmbedSrgbIccProfile": true,
+    "allRgbaExportsUseFullRangeAlpha": true,
+    "allFullyTransparentPixelsHaveZeroRgb": true,
+    "masterMinimumTransparentMarginPx": 67,
+    "masterSafeMarginPass": true
+  },
+  "layoutChecks": {
+    "reviewedViewports": [
+      {
+        "width": 320,
+        "height": 568
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 430,
+        "height": 932
+      }
+    ],
+    "loadingArtSlotCssPx": 160,
+    "loadingArtCanvasCssPx": 128,
+    "liveStatusCopySafeHeightCssPx": 48,
+    "layoutJumpPx": 0,
+    "sameGeometryForHydrationAndSlowStorage": true,
+    "sameNeutralAssetSupportsImportRestore": true
+  },
+  "manualVisualChecks": {
+    "performed": true,
+    "textFreeSourceArt": true,
+    "noPseudoTextEmojiUiSpinnerOrWatermark": true,
+    "noDetachedEffects": true,
+    "noCheckerResidueInCandidateExports": true,
+    "doesNotImplyError": true,
+    "lowDetailLowSaturation": true,
+    "physicallyCoherent": {
+      "letter-tray": "closed envelope is tied and fully supported by one shallow tray",
+      "house-box": "closed aligned roof lid is supported by one box on one folded cloth"
+    },
+    "approvedMinhoCueIsRestrained": {
+      "letter-tray": "two restrained warm-gray tabby bands on the tied cord, sampled from approved Minho only as a color/pattern cue",
+      "house-box": "two restrained warm-gray tabby bands inset into the oval latch, sampled from approved Minho only as a color/pattern cue"
+    },
+    "readabilityProofCssPx": [
+      96,
+      128,
+      144
+    ],
+    "candidateDistinctness": "A is letter-led and horizontal; B is house-led and roof-shaped."
+  },
+  "sourceRecovery": {
+    "generatedSourceCount": 2,
+    "generatedSourcesWereOpaqueCheckerPreviews": true,
+    "recoveryMethod": "hand-authored connected silhouette masks, exterior-connected neutral-checker flood cleanup, two-source-pixel edge inset, deterministic fit, and zero-RGB alpha cleanup",
+    "rawGeneratedSourcesAreAuditOnly": true
+  }
+}

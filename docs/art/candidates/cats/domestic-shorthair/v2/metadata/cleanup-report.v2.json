@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / ACCEPTANCE-REVIEW-ONLY",
+  "inspectedAt": "2026-07-21",
+  "inspectedRoot": "docs/art/candidates/cats/domestic-shorthair/v1",
+  "patterns": [
+    ".tools",
+    "*.dist-info",
+    "__pycache__",
+    "*.so",
+    "*.dylib",
+    "*.a",
+    "*.o",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "candidatesBefore": [],
+  "removed": [],
+  "candidatesAfter": [],
+  "removedCount": 0,
+  "remainingClearlyGeneratedCount": 0,
+  "result": "clean-no-generated-dependency-or-cache-artifacts-found",
+  "intendedV1AssetsPreserved": true
+}

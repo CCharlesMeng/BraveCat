@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "algorithm": "sha256",
+  "before": "qa/immutable-before.sha256",
+  "after": "qa/immutable-after.sha256",
+  "beforeLineCount": 293,
+  "afterLineCount": 293,
+  "result": "all scoped immutable files unchanged",
+  "scope": [
+    "app code under src/",
+    "runtime Scenes",
+    "production Minho",
+    "landmark candidate files",
+    "postcard-gifts/v1",
+    "read-only stack, blank-back, and Album navigation inputs"
+  ],
+  "ignoredBuildDebris": [
+    ".git",
+    ".tools",
+    "__pycache__",
+    "node_modules"
+  ],
+  "concurrentCandidateObservation": {
+    "status": "observed-concurrent-drift",
+    "report": "qa/concurrent-candidates-observation.v1.json",
+    "authoredByGen06": false
+  }
+}

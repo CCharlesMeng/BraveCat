@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "createdAt": "2026-07-21",
+  "ok": true,
+  "automated": {
+    "poseSetComplete": true,
+    "masterChecks": [
+      {
+        "breed": "maine-coon",
+        "pose": "sit",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--sit--master-1024--non-shipping-v01.png",
+        "bbox": [
+          217,
+          64,
+          808,
+          960
+        ],
+        "marginsPx": {
+          "left": 217,
+          "top": 64,
+          "right": 216,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "sleep",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--sleep--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          506,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 506,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "walk",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--walk--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          402,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 402,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "eat",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--eat--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          405,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 405,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "play",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--play--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          159,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 159,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "gaze",
+        "pass": true,
+        "path": "masters/maine-coon/cat--maine-coon--gaze--master-1024--non-shipping-v01.png",
+        "bbox": [
+          262,
+          64,
+          763,
+          960
+        ],
+        "marginsPx": {
+          "left": 262,
+          "top": 64,
+          "right": 261,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "sit",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--sit--master-1024--non-shipping-v01.png",
+        "bbox": [
+          154,
+          64,
+          871,
+          960
+        ],
+        "marginsPx": {
+          "left": 154,
+          "top": 64,
+          "right": 153,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "sleep",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--sleep--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          427,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 427,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "walk",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--walk--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          339,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 339,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "eat",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--eat--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          457,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 457,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "play",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--play--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          408,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 408,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "gaze",
+        "pass": true,
+        "path": "masters/ragdoll/cat--ragdoll--gaze--master-1024--non-shipping-v01.png",
+        "bbox": [
+          244,
+          64,
+          781,
+          960
+        ],
+        "marginsPx": {
+          "left": 244,
+          "top": 64,
+          "right": 243,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "sit",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--sit--master-1024--non-shipping-v01.png",
+        "bbox": [
+          245,
+          64,
+          780,
+          960
+        ],
+        "marginsPx": {
+          "left": 245,
+          "top": 64,
+          "right": 244,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "sleep",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--sleep--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          563,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 563,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "walk",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--walk--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          347,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 347,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "eat",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--eat--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          379,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 379,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "play",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--play--master-1024--non-shipping-v01.png",
+        "bbox": [
+          64,
+          216,
+          960,
+          960
+        ],
+        "marginsPx": {
+          "left": 64,
+          "top": 216,
+          "right": 64,
+          "bottom": 64
+        }
+      },
+      {
+        "breed": "siamese",
+        "pose": "gaze",
+        "pass": true,
+        "path": "masters/siamese/cat--siamese--gaze--master-1024--non-shipping-v01.png",
+        "bbox": [
+          280,
+          64,
+          745,
+          960
+        ],
+        "marginsPx": {
+          "left": 280,
+          "top": 64,
+          "right": 279,
+          "bottom": 64
+        }
+      }
+    ],
+    "runtimeChecks": [
+      {
+        "breed": "maine-coon",
+        "pose": "sit",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--sit--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "sleep",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--sleep--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "walk",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--walk--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "eat",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--eat--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "play",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--play--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "maine-coon",
+        "pose": "gaze",
+        "pass": true,
+        "path": "runtime/maine-coon/cat--maine-coon--gaze--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "sit",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--sit--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "sleep",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--sleep--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "walk",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--walk--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "eat",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--eat--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "play",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--play--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "ragdoll",
+        "pose": "gaze",
+        "pass": true,
+        "path": "runtime/ragdoll/cat--ragdoll--gaze--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "sit",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--sit--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "sleep",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--sleep--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "walk",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--walk--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "eat",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--eat--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "play",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--play--runtime-256--non-shipping-v01.png"
+      },
+      {
+        "breed": "siamese",
+        "pose": "gaze",
+        "pass": true,
+        "path": "runtime/siamese/cat--siamese--gaze--runtime-256--non-shipping-v01.png"
+      }
+    ]
+  },
+  "visualPhysicalQa": {
+    "state": "pass-after-agent-visual-inspection",
+    "checks": {
+      "breedSilhouettesDistinctAtMobileSize": true,
+      "breedSpecificSkeletonAndMass": true,
+      "plausibleJointReachAndLoadBearingPaws": true,
+      "gravityAndCompressionInRestPoses": true,
+      "tailsAttachedAtPelvis": true,
+      "furNotMisreadAsExtraAnatomy": true,
+      "noFloating": true,
+      "noExtraLimbs": true,
+      "coatMapsStableAcrossPoses": true,
+      "scaleRelativeToFurnitureAndMinho": true,
+      "largeCatsFitReviewedActivityZone": true,
+      "sourceArtHasNoTextUiSceneryFloorPatchShadowOrWatermark": true
+    },
+    "conventionProps": "Eat includes one grounded matte bowl; play includes one grounded yarn ball and attached short strand. These are pose-integrated, not detached effects.",
+    "reviewNote": "Maine Coon remains rectangular, tall and heavily pawed; Ragdoll remains rounded and weighty; Siamese remains narrow, long-limbed and visibly lighter. Home mockups use documented breed scale instead of equalized silhouette size."
+  }
+}

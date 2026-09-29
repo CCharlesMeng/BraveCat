@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "supersedes": "docs/art/candidates/shop/v1",
+  "source": "src/lib/assets/starterItems.ts",
+  "integrationPerformed": false,
+  "mappings": [
+    {
+      "dataKey": "fish-biscuit",
+      "kind": "snack",
+      "name": "小鱼饼",
+      "price": 4,
+      "currentImageSrc": "/assets/items/item--snack--fish-biscuit--v01.png",
+      "masterCandidate": "masters/item--snack--fish-biscuit--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--snack--fish-biscuit--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--snack--fish-biscuit--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "travel-tin",
+      "kind": "snack",
+      "name": "旅行罐头",
+      "price": 4,
+      "currentImageSrc": "/assets/items/item--snack--travel-tin--v01.png",
+      "masterCandidate": "masters/item--snack--travel-tin--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--snack--travel-tin--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--snack--travel-tin--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "small-blanket",
+      "kind": "toy",
+      "name": "小毛毯",
+      "price": 6,
+      "currentImageSrc": "/assets/items/item--toy--small-blanket--v01.png",
+      "masterCandidate": "masters/item--toy--small-blanket--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--toy--small-blanket--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--toy--small-blanket--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "yarn-ball",
+      "kind": "toy",
+      "name": "毛线球",
+      "price": 6,
+      "currentImageSrc": "/assets/items/item--toy--yarn-ball--v01.png",
+      "masterCandidate": "masters/item--toy--yarn-ball--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--toy--yarn-ball--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--toy--yarn-ball--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "small-bell",
+      "kind": "toy",
+      "name": "小铃铛",
+      "price": 6,
+      "currentImageSrc": "/assets/items/item--toy--small-bell--v01.png",
+      "masterCandidate": "masters/item--toy--small-bell--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--toy--small-bell--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--toy--small-bell--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "small-camera",
+      "kind": "toy",
+      "name": "小相机",
+      "price": 6,
+      "currentImageSrc": "/assets/items/item--toy--small-camera--v01.png",
+      "masterCandidate": "masters/item--toy--small-camera--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--toy--small-camera--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--toy--small-camera--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "small-telescope",
+      "kind": "toy",
+      "name": "小望远镜",
+      "price": 6,
+      "currentImageSrc": "/assets/items/item--toy--small-telescope--v01.png",
+      "masterCandidate": "masters/item--toy--small-telescope--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--toy--small-telescope--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--toy--small-telescope--review-92--non-shipping-v02.png"
+    },
+    {
+      "dataKey": "ticket",
+      "kind": "wish",
+      "name": "车票",
+      "price": 8,
+      "currentImageSrc": "/assets/items/item--wish--ticket--v01.png",
+      "masterCandidate": "masters/item--wish--ticket--master-512--non-shipping-v02.png",
+      "runtime128Candidate": "runtime-128/item--wish--ticket--runtime-128--non-shipping-v02.png",
+      "exact2xReviewDerivative": "review-92/item--wish--ticket--review-92--non-shipping-v02.png"
+    }
+  ],
+  "sharedTreatGlyphDependency": {
+    "role": "Treat currency only",
+    "copiedIntoShopV2": false,
+    "starterItemsReusedFromPostcardGifts": false,
+    "source": "docs/art/candidates/postcard-gifts/v1/runtime/items/reward--treat--dried-fish--runtime-32--non-shipping-v01.png",
+    "sha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566"
+  }
+}

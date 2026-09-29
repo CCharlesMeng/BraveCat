@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "status": "NON-SHIPPING / VISUAL-REVIEW-ONLY",
+  "shippingEligible": false,
+  "reviewedAt": "2026-07-21",
+  "generation": {
+    "tool": "Cursor GenerateImage",
+    "model": "not-reported",
+    "styleReferences": [
+      "docs/art/style-ref-home.png",
+      "docs/art/candidates/style-intensity/style-intensity-B-reference-calibration-non-final-20260720.png",
+      "docs/art/candidates/calibration/calibration-non-final--item-board--starter-set--candidate-a--v01.png"
+    ],
+    "normalization": [
+      "Generated 1024x1024 RGB sources used a raster transparency checker.",
+      "The checker was removed and edges were decontaminated into straight-alpha RGBA.",
+      "Visible content was centered inside the 512x512 master safe area.",
+      "Generated contact washes were reduced to compact translucent warm grounding shadows.",
+      "92x92 review derivatives were resampled from the final masters."
+    ]
+  },
+  "machineChecks": {
+    "masterCount": 8,
+    "runtimeDerivativeCount": 8,
+    "reviewImageCount": 4,
+    "masters": {
+      "expectedDimensions": "512x512",
+      "expectedPixelMode": "RGBA",
+      "expectedAlphaRange": "0-255",
+      "expectedColorProfile": "embedded sRGB",
+      "minimumSafeMargin": 48,
+      "minimumObservedSafeMargin": 55,
+      "fullyTransparentPixelRgb": "zero",
+      "result": "pass"
+    },
+    "runtimeDerivatives": {
+      "expectedDimensions": "92x92",
+      "expectedPixelMode": "RGBA",
+      "expectedColorProfile": "embedded sRGB",
+      "intendedCssDisplay": "46x46",
+      "fullyTransparentPixelRgb": "zero",
+      "result": "pass"
+    },
+    "reviews": [
+      {
+        "file": "reviews/shop-review--390x844--affordable-owned-top--non-shipping-v01.png",
+        "expectedDimensions": "390x844",
+        "pixelMode": "RGB",
+        "colorProfile": "embedded sRGB",
+        "result": "pass"
+      },
+      {
+        "file": "reviews/shop-review--430x932--unaffordable-owned-bottom--non-shipping-v01.png",
+        "expectedDimensions": "430x932",
+        "pixelMode": "RGB",
+        "colorProfile": "embedded sRGB",
+        "result": "pass"
+      },
+      {
+        "file": "reviews/contact-sheet--shop-products-and-states--1200x1600--non-shipping-v01.png",
+        "expectedDimensions": "1200x1600",
+        "pixelMode": "RGB",
+        "colorProfile": "embedded sRGB",
+        "result": "pass"
+      },
+      {
+        "file": "reviews/transparency-edge-qa--1200x900--non-shipping-v01.png",
+        "expectedDimensions": "1200x900",
+        "pixelMode": "RGB",
+        "colorProfile": "embedded sRGB",
+        "result": "pass"
+      }
+    ]
+  },
+  "masterSafeMargins": [
+    {
+      "id": "fish-biscuit",
+      "observedMinimumPixels": 85
+    },
+    {
+      "id": "travel-tin",
+      "observedMinimumPixels": 90
+    },
+    {
+      "id": "small-blanket",
+      "observedMinimumPixels": 55
+    },
+    {
+      "id": "yarn-ball",
+      "observedMinimumPixels": 96
+    },
+    {
+      "id": "small-bell",
+      "observedMinimumPixels": 91
+    },
+    {
+      "id": "small-camera",
+      "observedMinimumPixels": 56
+    },
+    {
+      "id": "small-telescope",
+      "observedMinimumPixels": 87
+    },
+    {
+      "id": "ticket",
+      "observedMinimumPixels": 76
+    }
+  ],
+  "visualChecks": {
+    "catalogCoverage": {
+      "result": "pass",
+      "notes": "All eight and only the eight current STARTER_ITEMS are represented."
+    },
+    "realSizeLegibility": {
+      "result": "pass",
+      "notes": "Every silhouette remains identifiable in the 46x46 token placements in both mobile reviews."
+    },
+    "colorConsistency": {
+      "result": "pass",
+      "notes": "The family stays within low-saturation sage, warm wood/ochre, off-white, and warm gray-brown linework."
+    },
+    "physicalGrounding": {
+      "result": "pass",
+      "notes": "Objects use compact contact washes without a floor plane or background fragment."
+    },
+    "safeAreas": {
+      "result": "pass",
+      "notes": "All visible master bounds exceed the required 48px source margin."
+    },
+    "accidentalTextLettersEmoji": {
+      "result": "pass",
+      "notes": "Manual inspection found no text, letters, numbers, emoji, labels, or pseudo-writing in any source asset. The ticket contains only a landscape and rails."
+    },
+    "logosWatermarks": {
+      "result": "pass",
+      "notes": "Manual inspection found no logo, signature, watermark, or UI chrome in source art."
+    },
+    "stateFidelity": {
+      "result": "pass",
+      "notes": "Reviews use current prices, catalog order, live owned-count semantics, enabled and disabled purchase actions, and do not invent a product-lock state."
+    },
+    "edgeQuality": {
+      "result": "pass-with-review-note",
+      "notes": "The intended off-white token placement is clean. The split sage review intentionally exposes the remaining pale watercolor contact edge most visibly under the travel tin, blanket, and telescope; human approval is required before any production redraw or promotion."
+    }
+  },
+  "decision": {
+    "state": "pending-visual-approval",
+    "shippingEligible": false,
+    "approvedAssetIds": [],
+    "nextAction": "Stop for user visual approval. Do not integrate, promote, or commit."
+  }
+}
