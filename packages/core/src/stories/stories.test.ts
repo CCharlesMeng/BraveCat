@@ -140,6 +140,24 @@ describe('自然四幕故事', () => {
     await reordered.hydrate()
     expect(reordered.exportDocument().state.travelByCat).toEqual(before)
   })
+  it('翻页取消后，迟到的上一幕不能覆盖当前画面', async () => {
+    const story = lockStory(STORIES[0], 'minho', '米诺', 0, 1000)
+    const drawImage = vi.fn()
+    const context2d = new Proxy({}, { get: (_target, key) => key === 'drawImage' ? drawImage : key === 'measureText' ? () => ({ width: 10 }) : vi.fn(), set: () => true })
+    const canvas = { getContext: () => context2d } as unknown as HTMLCanvasElement
+    let finishFirst!: (image: HTMLImageElement) => void
+    const firstImage = {} as HTMLImageElement
+    const secondImage = {} as HTMLImageElement
+    const loadImage = vi.fn().mockImplementationOnce(() => new Promise<HTMLImageElement>(resolve => { finishFirst = resolve })).mockResolvedValueOnce(secondImage)
+    const dependencies = { loadImage, createCanvas: vi.fn() }
+    const first = new AbortController()
+    const pending = renderPostcardCanvas(canvas, resolveStoryComposition(story.acts[0]), story.place, dependencies, first.signal)
+    first.abort()
+    await renderPostcardCanvas(canvas, resolveStoryComposition(story.acts[1]), story.place, dependencies)
+    finishFirst(firstImage)
+    await pending
+    expect(drawImage).toHaveBeenCalledExactlyOnceWith(secondImage, 0, 0, 1200, 660)
+  })
   it('故事渲染只加载完整画面，绝不叠第二只猫', async () => {
     const story = lockStory(STORIES[0], 'minho', '米诺', 0, 1000)
     const context2d = new Proxy({}, { get: (_target, key) => key === 'measureText' ? () => ({ width: 10 }) : vi.fn(), set: () => true })

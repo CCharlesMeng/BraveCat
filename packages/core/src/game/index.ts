@@ -572,6 +572,25 @@ export const migrateGameStateForImport = (
   if (!isRecord(stored) || (!isEconomyState(stored.economy) && !isEconomyState(stored))) {
     throw new TypeError('存档内容不完整或已损坏')
   }
+  // 根存档的集合字段必须存在且结构正确；宽松恢复仅用于启动读档。
+  // 最早的纯经济存档没有这些字段，仍单独保留升级路径。
+  if ('economy' in stored && (
+    !isEconomyState(stored.economy)
+    || !Array.isArray(stored.cats)
+    || !stored.cats.every(isCatProfile)
+    || !isRecord(stored.travelByCat)
+    || Array.isArray(stored.travelByCat)
+    || !isRecord(stored.postcards)
+    || !Array.isArray(stored.postcards.received)
+    || (stored.activeCatId !== null && (
+      typeof stored.activeCatId !== 'string'
+      || !stored.cats.some(cat => cat.id === stored.activeCatId)
+    ))
+    || (stored.clockNow !== undefined && (
+      typeof stored.clockNow !== 'number' || !Number.isFinite(stored.clockNow)
+    ))
+    || (stored.homeCustomization !== undefined && !isHomeCustomization(stored.homeCustomization))
+  )) throw new TypeError('存档内容不完整或已损坏')
   const restored = restoreGameState(stored, now, catalog)
   if (!isGameState(restored)
     || (Array.isArray(stored.cats) && stored.cats.length !== restored.cats.length)

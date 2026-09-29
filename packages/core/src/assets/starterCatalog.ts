@@ -8,7 +8,6 @@ import {
 } from './landmarkCatalog.generated'
 import {
   DEV_LATEST_ART_DESTINATIONS,
-  DEV_LATEST_ART_METADATA,
   DEV_LATEST_ART_MINHO_POSES,
   DEV_LATEST_ART_PORTRAIT_SET_REVISION,
   DEV_LATEST_ART_SCENE_REVISIONS,
@@ -118,7 +117,7 @@ export const PRODUCTION_STARTER_CATALOG = defineAssetCatalog({
   copy: starterCopy,
 } as const satisfies AssetCatalog)
 
-export const USE_DEVELOPMENT_LATEST_ART = import.meta.env.DEV
+export const USE_DEVELOPMENT_LATEST_ART = import.meta.env?.DEV === true
 
 export const DEVELOPMENT_LATEST_ART_CATALOG = USE_DEVELOPMENT_LATEST_ART
   ? defineAssetCatalog({

@@ -107,6 +107,11 @@ if (landmarkManifest.shippingEligible) {
   const expectedScenes = landmarkManifest.destinations.flatMap(
     ({ scenes }) => scenes,
   )
+  for (const scene of expectedScenes) {
+    const bytes = await readFile(path.join(distRoot, scene.imageSrc))
+    assert(createHash('sha256').update(bytes).digest('hex') === scene.sha256, `landmark output differs: ${scene.imageSrc}`)
+    assert(serviceWorker.includes(scene.imageSrc.slice(1)), `landmark is missing from offline precache: ${scene.imageSrc}`)
+  }
   const emittedScenes = (await readdir(sceneOutputRoot))
     .filter((filename) => filename.endsWith('.webp'))
   assert(

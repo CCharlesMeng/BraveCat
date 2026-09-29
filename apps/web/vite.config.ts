@@ -96,7 +96,6 @@ if (
     `${currentProductionManifest.filename}: shipping gate is not fully approved`,
   )
 }
-const landmarkSceneCacheEntries = configuredLandmarkSceneCacheEntries as number
 
 export default defineConfig({
   plugins: [
@@ -132,26 +131,7 @@ export default defineConfig({
       workbox: {
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
-        globIgnores: ['dev-art/**', 'scenes/**'],
-        runtimeCaching: productionManifest.shippingEligible
-          ? [
-              {
-                urlPattern: /\/scenes\/.*\.webp$/,
-                handler: 'CacheFirst',
-                options: {
-                  cacheName: `bravecat-landmark-scenes-v${currentProductionManifest.version}`,
-                  cacheableResponse: {
-                    statuses: [0, 200],
-                  },
-                  expiration: {
-                    maxEntries: landmarkSceneCacheEntries,
-                    maxAgeSeconds: 60 * 60 * 24 * 365,
-                    purgeOnQuotaError: true,
-                  },
-                },
-              },
-            ]
-          : [],
+        globIgnores: productionManifest.shippingEligible ? ['dev-art/**'] : ['dev-art/**', 'scenes/**'],
       },
     }),
     {

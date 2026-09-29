@@ -80,8 +80,8 @@ describe('landmark runtime catalogs', () => {
     )
   })
 
-  it('records pending gates without presenting candidate review as production approval', () => {
-    expect(LANDMARK_SCENES_SHIPPING_ELIGIBLE).toBe(false)
+  it('ships the approved landmark selection while keeping unused candidates isolated', () => {
+    expect(LANDMARK_SCENES_SHIPPING_ELIGIBLE).toBe(true)
     expect(DEV_LATEST_ART_METADATA.shippingEligible).toBe(false)
     expect(DEV_LATEST_ART_METADATA.productionPromotion).toBe('not-promoted')
     expect(

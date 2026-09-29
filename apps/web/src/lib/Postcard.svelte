@@ -21,7 +21,9 @@
     const target = canvas
     const currentComposition = composition
     const currentDestinationName = destinationName
-    let active = true
+    const render = new AbortController()
+    // 切页即清除旧画面，旧请求完成后也不能重新绘制。
+    target.width = target.width
     renderFailed = false
 
     void renderPostcardCanvas(
@@ -29,12 +31,13 @@
       currentComposition,
       currentDestinationName,
       webPostcardCanvas,
+      render.signal,
     ).catch(() => {
-      if (active) renderFailed = true
+      if (!render.signal.aborted) renderFailed = true
     })
 
     return () => {
-      active = false
+      render.abort()
     }
   })
 </script>

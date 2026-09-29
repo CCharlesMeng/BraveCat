@@ -143,7 +143,8 @@ export const createGameController = (
   const initialCat = options.initialCat
     ?? { id: 'minho', portraitId: 'minho' }
 
-  const clock = createClock({ realNow: ports.realNow })
+  const realNow = ports.realNow ?? Date.now
+  const clock = createClock({ realNow })
   const createTripSeed = () => ports.random.nextUint32()
 
   // 存档迁移表：版本链 v0→…→v5，宽松恢复统一走 restoreGameState。
@@ -168,13 +169,13 @@ export const createGameController = (
       2: (document) => ({
         ...document,
         schemaVersion: 3,
-        state: migrateGameStateForImport(document.state, clock.now(), catalog),
+        state: migrateGameStateForImport(document.state, realNow(), catalog),
       }),
       // v4 起根存档携带全家共享的 homeCustomization；宽松恢复会注入默认预设。
       3: (document) => ({
         ...document,
         schemaVersion: 4,
-        state: migrateGameStateForImport(document.state, clock.now(), catalog),
+        state: migrateGameStateForImport(document.state, realNow(), catalog),
       }),
     },
   })
@@ -579,7 +580,9 @@ export const createGameController = (
 
     /** 导入完整存档；结构 / 版本错误按原样抛出，由视图转成提示。 */
     importDocument: async (raw: unknown) => {
-      const imported = await saveStore.import(raw)
+      const imported = restoreGameState(
+        await saveStore.import(raw), realNow(), catalog,
+      )
       clock.setAcceleration(1)
       clock.setNow(imported.clockNow)
       const now = clock.now()

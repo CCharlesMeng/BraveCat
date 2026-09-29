@@ -352,9 +352,11 @@ export const renderPostcardCanvas = async (
   composition: PostcardComposition | StoryPostcardComposition,
   destinationName: string,
   dependencies: PostcardRenderDependencies,
+  signal?: AbortSignal,
 ) => {
   if ('kind' in composition && composition.kind === 'story-frame') {
     const frame = await dependencies.loadImage(composition.src)
+    if (signal?.aborted) return
     canvas.width = POSTCARD_WIDTH
     canvas.height = POSTCARD_HEIGHT
     const context = canvas.getContext('2d')
@@ -370,6 +372,7 @@ export const renderPostcardCanvas = async (
     dependencies.loadImage(composition.scene.src),
     dependencies.loadImage(composition.portrait.src),
   ])
+  if (signal?.aborted) return
   const bounds = readPixelBounds(portrait, dependencies.createCanvas)
   const placement = calculatePortraitPlacement({
     width: imageWidth(portrait),
