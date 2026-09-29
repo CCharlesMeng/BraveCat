@@ -1,0 +1,77 @@
+[
+  {
+    "ref": "refs/heads/art/home-screen-v1",
+    "sha": "8b2d00e3dd1272e9a3dde885ba4b31e39b004a2d",
+    "archiveTag": "archive/2026-09-29/local/art/home-screen-v1"
+  },
+  {
+    "ref": "refs/heads/docs/minho-approval-provenance",
+    "sha": "7523b5dee075a039b4c2c314c8dd52b14da7817f",
+    "archiveTag": "archive/2026-09-29/local/docs/minho-approval-provenance"
+  },
+  {
+    "ref": "refs/heads/feat/issue-17-dev-treats",
+    "sha": "62b7ccba10a824b64e86286ae1dc19005b23337b",
+    "archiveTag": "archive/2026-09-29/local/feat/issue-17-dev-treats"
+  },
+  {
+    "ref": "refs/heads/feat/issue-18-shop-confirmation",
+    "sha": "ba15549bfa38f48af7f3cc3a642817590e0ff2e0",
+    "archiveTag": "archive/2026-09-29/local/feat/issue-18-shop-confirmation"
+  },
+  {
+    "ref": "refs/heads/feat/issue-19-art-integration",
+    "sha": "8b2d00e3dd1272e9a3dde885ba4b31e39b004a2d",
+    "archiveTag": "archive/2026-09-29/local/feat/issue-19-art-integration"
+  },
+  {
+    "ref": "refs/heads/feat/issue-9-souvenirs",
+    "sha": "2365ca1481a4b756043d6a445a1bbd49b383b43c",
+    "archiveTag": "archive/2026-09-29/local/feat/issue-9-souvenirs"
+  },
+  {
+    "ref": "refs/heads/feat/v3-landmark-review",
+    "sha": "8ce4b2cd4687850a95d16b6ea36a7d402df6ffb1",
+    "archiveTag": "archive/2026-09-29/local/feat/v3-landmark-review"
+  },
+  {
+    "ref": "refs/heads/main",
+    "sha": "8b2d00e3dd1272e9a3dde885ba4b31e39b004a2d",
+    "archiveTag": "archive/2026-09-29/local/main"
+  },
+  {
+    "ref": "refs/remotes/origin/docs/minho-approval-provenance",
+    "sha": "7523b5dee075a039b4c2c314c8dd52b14da7817f",
+    "archiveTag": "archive/2026-09-29/remote/docs/minho-approval-provenance"
+  },
+  {
+    "ref": "refs/remotes/origin/feat/issue-17-dev-treats",
+    "sha": "62b7ccba10a824b64e86286ae1dc19005b23337b",
+    "archiveTag": "archive/2026-09-29/remote/feat/issue-17-dev-treats"
+  },
+  {
+    "ref": "refs/remotes/origin/feat/issue-18-shop-confirmation",
+    "sha": "ba15549bfa38f48af7f3cc3a642817590e0ff2e0",
+    "archiveTag": "archive/2026-09-29/remote/feat/issue-18-shop-confirmation"
+  },
+  {
+    "ref": "refs/remotes/origin/feat/issue-9-souvenirs",
+    "sha": "2365ca1481a4b756043d6a445a1bbd49b383b43c",
+    "archiveTag": "archive/2026-09-29/remote/feat/issue-9-souvenirs"
+  },
+  {
+    "ref": "refs/remotes/origin/feat/v3-landmark-review",
+    "sha": "8ce4b2cd4687850a95d16b6ea36a7d402df6ffb1",
+    "archiveTag": "archive/2026-09-29/remote/feat/v3-landmark-review"
+  },
+  {
+    "ref": "refs/remotes/origin/main",
+    "sha": "2777788aa9bbf7cf77b26c76d2191f282dd0833d",
+    "archiveTag": "archive/2026-09-29/remote/main"
+  },
+  {
+    "worktree": "/Users/moon/Documents/Code/BraveCat-home-screen-v1",
+    "snapshot": "72e64f5dbe649ba9c1aefeccb3e1e3e0abebf63f",
+    "archiveTag": "archive/2026-09-29/working-tree/home-screen-v1"
+  }
+]

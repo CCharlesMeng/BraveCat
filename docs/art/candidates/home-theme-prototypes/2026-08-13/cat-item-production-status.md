@@ -1,5 +1,8 @@
 # 小猫用品候选生产状态
 
+> 2026-09-29 当前决策：用户已批准全部现有素材，见 `docs/art/reviews/all-existing-assets-approval-2026-09-29.json`。下文旧日期的待用户审批描述保留为历史；剩余生产/接入/技术验证事项见 `docs/plans/next-step-plan-2026-09-29.md`。
+
+
 日期：2026-08-13。状态：**视觉方向已获用户“ok，归档”批准**；批准级别为
 `visual-direction-approved`，归档见 `approved-direction/cat-items/`。
 `runtimeEligible=false`，不进入 `public/`。
@@ -87,7 +90,7 @@
 ## 仍需生产 / 接入
 
 - 六张 intrinsic base 的 full-canvas 槽位已写入 geometry v02，但
-  `runtimeEligible` 仍为 false，尚未接入 `packages/core` resolver。
+  `runtimeEligible` 仍为 false；当前已接入 `packages/core` resolver 的开发态路径，正式发布接入待下一步完成。
 - 六张 foreground occlusion 已从同一母版 alpha 派生为
   `--foreground-occlusion--candidate-v01.png`（指标追加在
   `production-sources/evidence/alpha-qa--candidate-v01.json`）；仍须经

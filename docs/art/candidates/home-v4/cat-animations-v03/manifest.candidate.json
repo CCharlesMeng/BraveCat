@@ -620,5 +620,10 @@
         "maxDeltaRatio": 0.30922078335464254
       }
     }
-  ]
+  ],
+  "currentUserApproval": {
+    "decision": "approved",
+    "approvedOn": "2026-09-29",
+    "record": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json"
+  }
 }

@@ -1,5 +1,8 @@
 # A / B / F clean shell 生产候选（生产顺序第 3–4 步）
 
+> 2026-09-29 当前决策：用户已批准全部现有素材，见 `docs/art/reviews/all-existing-assets-approval-2026-09-29.json`。下文旧日期的待用户审批描述保留为历史；剩余生产/接入/技术验证事项见 `docs/plans/next-step-plan-2026-09-29.md`。
+
+
 日期：2026-08-13。管线：`scripts/build-form-shell-candidates.mjs`、
 `scripts/freeze-form-geometry.mjs`、`scripts/build-postcard-rail-pieces.mjs`。
 状态：**候选待用户核验**；`runtimeEligible=false`，不进 `public/`。

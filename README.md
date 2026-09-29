@@ -64,3 +64,12 @@ web 端通过 `VITE_ASSET_BASE_URL` 把 CDN base 注入 `AssetResolver`
 - 画风方向稿见 [`docs/art/`](./docs/art/)。
 
 当前脚手架使用 Vite、Svelte 5、TypeScript、Dexie、Vitest 与 `vite-plugin-pwa`，部署目标为 Netlify。
+
+## 当前开发与发布计划
+
+当前统一在 `main` 开发。历史分支与旧工作区通过归档标签保全，见 [代码收敛记录](docs/audits/main-convergence-2026-09-29.md)。
+
+- [下一步计划与待确认决策](docs/plans/next-step-plan-2026-09-29.md)
+- [现有素材全量用户批准](docs/art/reviews/all-existing-assets-approval-2026-09-29.md)
+
+用户审批已完成；生产素材接入、适用权利证据与真实发行验收按计划收口。

@@ -1,5 +1,8 @@
 # 小猫用品扩展候选状态
 
+> 2026-09-29 当前决策：用户已批准全部现有素材，见 `docs/art/reviews/all-existing-assets-approval-2026-09-29.json`。下文旧日期的待用户审批描述保留为历史；剩余生产/接入/技术验证事项见 `docs/plans/next-step-plan-2026-09-29.md`。
+
+
 日期：2026-08-13。状态：**候选待用户审核，未归档**。本轮只生产三种新
 `CatItem` identity 的无猫造型源稿与 A / B / F 识别并排板；
 `runtimeEligible=false`，不进入 `public/`。

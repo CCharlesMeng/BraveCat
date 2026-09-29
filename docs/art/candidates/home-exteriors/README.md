@@ -1,5 +1,8 @@
 # Home Exterior 候选资产
 
+> 2026-09-29 当前决策：用户已批准全部现有素材，见 `docs/art/reviews/all-existing-assets-approval-2026-09-29.json`。下文旧日期的待用户审批描述保留为历史；剩余生产/接入/技术验证事项见 `docs/plans/next-step-plan-2026-09-29.md`。
+
+
 状态：**视觉方向已于 2026-08-13 批准**，批准级别为
 `visual-direction-approved`；归档见
 `approved-direction-2026-08-13/`。该批准不代表 production-ready，

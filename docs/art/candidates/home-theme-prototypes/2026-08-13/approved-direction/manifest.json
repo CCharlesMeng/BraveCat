@@ -39,7 +39,11 @@
       "sha256": "36778012025308a0f514deb3817ff9d862b25287fe7686a57ff529afb0b06cf4",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CONCEPT_FLATTENED",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -52,7 +56,11 @@
       "sha256": "c1e09f383949da2f416dc965d42b87241b4ae5193b52b0a223fe583c1c7c3aaa",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CONCEPT_FLATTENED",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -65,7 +73,11 @@
       "sha256": "4f959a4f6a2b78797e80c24953de42f037f8fc78eb984563c9a0cec919d7781a",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CONCEPT_FLATTENED", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CONCEPT_FLATTENED",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -78,7 +90,11 @@
       "sha256": "5acb50649a298da46042087e2ec75950d5e23371c8f02ba3c1ea1ad21b06e568",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "REVIEW_BOARD_NON_PRODUCTION",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -91,7 +107,11 @@
       "sha256": "73a64239c2e4b48c1c5b8c60033ef4cfea1fb36b04fb1e9ca244c4bf583b3952",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "REVIEW_BOARD_NON_PRODUCTION",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -104,7 +124,11 @@
       "sha256": "7057cf37d2d5ef8a98276b30f081845af349cc10dc4f408305c66ae98d39c2c0",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["REVIEW_BOARD_NON_PRODUCTION", "HOMEFORM_GEOMETRY_UNFROZEN", "RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "REVIEW_BOARD_NON_PRODUCTION",
+        "HOMEFORM_GEOMETRY_UNFROZEN",
+        "RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -117,7 +141,9 @@
       "sha256": "1c82da784fa301dfb9a1ab6a7b956ed70f629e7e4a66432554381767dab6421d",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["UI_DIRECTION_ONLY"],
+      "knownBlockers": [
+        "UI_DIRECTION_ONLY"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -130,7 +156,11 @@
       "sha256": "0d4421b1111aa432df1db26543d4f3028155adb47bd150a44e72e49dcdb7cac7",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -143,7 +173,11 @@
       "sha256": "dd81e24ee6164777ecdf6e609b802061928b08da992514143c89e91823284a9a",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -156,7 +190,11 @@
       "sha256": "ba31adcd05f9e515e34f5d9cb93c21426c9d6e76fcee34dc6ffbd89d0c3ef6ce",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -169,7 +207,11 @@
       "sha256": "176b35b476652e5dff2d48e65dda06dd964979fcc8edcbd53d6a1cd806176065",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -182,7 +224,11 @@
       "sha256": "f6a423870a8c370d1e88f3c89d4f8da359771679af0400d144e257c6b97d96de",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -195,7 +241,11 @@
       "sha256": "b44566c9311a2b69d29ce0828a37dbb4dcd1134f65c1e67d78ded0dcd8b040f3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -208,7 +258,11 @@
       "sha256": "a7e8b0202b704b55334e6cbc6e4d3af23ea9edd6f8c83e998dffdc1bfa9ff63e",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -221,7 +275,11 @@
       "sha256": "725d16e936c79bc7df528328e63b18265dabd213473f54480bfaab40bf31523c",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -234,7 +292,11 @@
       "sha256": "d3ec27eeb0f49017878f42154223eeac5e7881ed1148041d0020e7b02a177f73",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -247,7 +309,11 @@
       "sha256": "a4bc73b4dc70bb720eb20226b175cf5332c6332ef7643a91f775b014e36466fd",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -260,7 +326,11 @@
       "sha256": "96250c7cc1f6013864d9229e31a5222e3605ed859ca347914e7de7991f345380",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -273,7 +343,11 @@
       "sha256": "5d7c2cbfc72971173db349e6fa8a2e14e53312410c8baf6605e9c540901b504b",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -286,7 +360,12 @@
       "sha256": "69bb6ca192e29668c1e6f24ca9473c0faea3d1ef2e9cfaabc636a901b510b9e3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED", "COMPOSITE_COORDINATES_UNAPPROVED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED",
+        "COMPOSITE_COORDINATES_UNAPPROVED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -299,7 +378,12 @@
       "sha256": "3ca637bb0502889ec510f8967d7d0d26e55049180db10c349c793dc411900e4e",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED", "COMPOSITE_COORDINATES_UNAPPROVED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED",
+        "COMPOSITE_COORDINATES_UNAPPROVED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -312,7 +396,11 @@
       "sha256": "b83e7b438052de7bb3d5f7e677174b7da75493fad4394bcf7b3cdde74078eeec",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -325,7 +413,11 @@
       "sha256": "866048261e50012f45296001f48e43f2dd23c97a837e89736be32320c75d14f9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -338,7 +430,11 @@
       "sha256": "2c058335c801a52235ff4c4ad9e5e4db48acdd10cde4d18f3e52330111b6b7ea",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -351,7 +447,11 @@
       "sha256": "696b2cca8357e723d909bf4db9e2e45aac210407f932ae09ef15d3e90b1eb403",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -364,7 +464,11 @@
       "sha256": "54664616f5e0936f23248641866ea5f089a5187f25d98c6ec2dbf2478bfa38df",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -377,7 +481,11 @@
       "sha256": "20625a3f4cd8e1a2ff1b76375c70f679204d616b0af7a3844bae724fba624fc0",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -390,7 +498,11 @@
       "sha256": "0905a513c0fa7618e0b20b5e44b3178590502e452947a778c3af038ec35ac94f",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -403,7 +515,11 @@
       "sha256": "83c4a03a0a89cd6f659797924a5b40f3e2c619fbdd61be0cc74e89874480ba1c",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -416,7 +532,11 @@
       "sha256": "715047eda8d84c03ea04cdb90a0dc7fae988931b70deec6cace416d1b705ee5b",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["ALPHA_MASK_MISSING", "SHAPE_REVIEW_NON_PRODUCTION", "SOCKET_REGISTRATION_UNVERIFIED"],
+      "knownBlockers": [
+        "ALPHA_MASK_MISSING",
+        "SHAPE_REVIEW_NON_PRODUCTION",
+        "SOCKET_REGISTRATION_UNVERIFIED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -429,7 +549,12 @@
       "sha256": "1c08b741eab3974a799c3faa9ea17592c9382f48e20f2b7273d02d84b08fcd66",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["SOURCE_ASPECT_RATIO", "ALPHA_MASK_MISSING", "SOCKET_REGISTRATION_UNVERIFIED", "COMPOSITE_COORDINATES_UNAPPROVED"],
+      "knownBlockers": [
+        "SOURCE_ASPECT_RATIO",
+        "ALPHA_MASK_MISSING",
+        "SOCKET_REGISTRATION_UNVERIFIED",
+        "COMPOSITE_COORDINATES_UNAPPROVED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -442,7 +567,11 @@
       "sha256": "93b934d3c019a74c7f1b2e099a68ed33ea98b82e15436778727a885082d3aadd",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["GENERATED_UI_TEXT_NON_AUTHORITATIVE", "UI_RUNTIME_NOT_IMPLEMENTED", "UI_INTERACTION_QA_MISSING"],
+      "knownBlockers": [
+        "GENERATED_UI_TEXT_NON_AUTHORITATIVE",
+        "UI_RUNTIME_NOT_IMPLEMENTED",
+        "UI_INTERACTION_QA_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -455,7 +584,10 @@
       "sha256": "a3d923ba2bd15a99e20500ca39a2b339638ff59270601c350dc5d9b1c50d960e",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -468,7 +600,10 @@
       "sha256": "263c94d6ed5fea029b1877413ab8b7273129915464147558aedcdd30299b31b3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -481,7 +616,10 @@
       "sha256": "bb205864da2a0e73ff400467b63cce2c84cf14a738dc073cf46550841f4821b9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -494,7 +632,10 @@
       "sha256": "9a752ba5430584379e7b104253d0889472d4bcf1a82866cec629e500ea46757f",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -507,7 +648,10 @@
       "sha256": "8be0bba774ea7a59fe64cc3a32162883a352f9c8c5095431de4c6d4816c1128e",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -520,7 +664,10 @@
       "sha256": "15d024fc60d2de900090e1e246b54cb3b66192a03986714ce65b0e4bed0827f2",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["CAT_ITEM_NOT_ALPHA", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "CAT_ITEM_NOT_ALPHA",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -533,7 +680,10 @@
       "sha256": "ab490a85f5b6b2ade8514930b13f1ab21beda621bc9d5cbaf5e6e237f69a5fac",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["USAGE_BOARD_NOT_RUNTIME_EVIDENCE", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "USAGE_BOARD_NOT_RUNTIME_EVIDENCE",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -546,7 +696,10 @@
       "sha256": "32608481f6f5110170b44d392241770a4a2c3dbae96176d09ed929eeba0164c0",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["USAGE_BOARD_NOT_RUNTIME_EVIDENCE", "CAT_ITEM_RUNTIME_CONTRACT_MISSING"],
+      "knownBlockers": [
+        "USAGE_BOARD_NOT_RUNTIME_EVIDENCE",
+        "CAT_ITEM_RUNTIME_CONTRACT_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -559,7 +712,12 @@
       "sha256": "4b3be96e11f3e6b3a8b3e1d385616a022c30c3affc1a6916c2876525dee00bf3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -572,7 +730,12 @@
       "sha256": "331fe4516c52d5eb1e69bc661707b3082ebdb5083956c8bf819ff5ec0d5763e9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -585,7 +748,12 @@
       "sha256": "e06674e011cef4a050db2e3ae9496a0f0457ce2ef4557dc7d7510281d0bda1e5",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -598,7 +766,12 @@
       "sha256": "931193e357a426b5b4af181b6a89e8c2e941d9c91138568f94f7c8130f5d61c7",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -611,7 +784,12 @@
       "sha256": "4e0f2f35b987a4e363ec678e582993bfa92937618dbba020de1a21bdeab8fcab",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -624,7 +802,12 @@
       "sha256": "8cdafb85dab700cea6aa0e1cca4102ae0064b40cf82e7fc7aaadc7c6d176d5bf",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["FULL_CANVAS_REGISTRATION_MISSING", "CAT_ITEM_OCCLUSION_MISSING", "CAT_ITEM_SOCKET_MISSING", "CAT_POSE_QA_MISSING"],
+      "knownBlockers": [
+        "FULL_CANVAS_REGISTRATION_MISSING",
+        "CAT_ITEM_OCCLUSION_MISSING",
+        "CAT_ITEM_SOCKET_MISSING",
+        "CAT_POSE_QA_MISSING"
+      ],
       "source": "repo-candidate"
     }
   ],
@@ -641,7 +824,9 @@
       "sha256": "34f958df47edc828784872fdeaa92c722f7b8150807b8df308bc6363f68c40a3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EVIDENCE_NOT_RUNTIME_ASSET"],
+      "knownBlockers": [
+        "EVIDENCE_NOT_RUNTIME_ASSET"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -656,7 +841,9 @@
       "sha256": "3aaaa1e9442fd94b3828fbe4333de6c234c4edfd3a56f0985b323be919e87aab",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EVIDENCE_NOT_RUNTIME_ASSET"],
+      "knownBlockers": [
+        "EVIDENCE_NOT_RUNTIME_ASSET"
+      ],
       "source": "repo-candidate"
     },
     {
@@ -670,8 +857,15 @@
       "sha256": "e5fd2841335e9092e2aeab522f3dc1eb0c285a02181e229779c909940f0df3ea",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EVIDENCE_NOT_RUNTIME_ASSET"],
+      "knownBlockers": [
+        "EVIDENCE_NOT_RUNTIME_ASSET"
+      ],
       "source": "repo-candidate"
     }
-  ]
+  ],
+  "currentUserApproval": {
+    "decision": "approved",
+    "approvedOn": "2026-09-29",
+    "record": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json"
+  }
 }

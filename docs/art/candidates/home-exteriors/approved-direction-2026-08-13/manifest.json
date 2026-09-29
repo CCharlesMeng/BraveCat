@@ -23,7 +23,11 @@
       "sha256": "4fc10f17627cf480c0fc7c4bece509c3747796794d05c6fd70adfc307d68743d",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -36,7 +40,11 @@
       "sha256": "87307f38d76532acbea79d15dbeed244660e4012746bc46704bb9248e4cc9e5a",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -49,7 +57,11 @@
       "sha256": "1ba7a6cc0ac13a9afce95d2e86082dba795c351c4329606da75f5fb6be6520ed",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -62,7 +74,11 @@
       "sha256": "c0d52dc172727965b465cee092a5d3d9dbb939d7306e80f8c9c9a9b96222f6e9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -75,7 +91,11 @@
       "sha256": "541ae8801458f66205a5da007eb5226513d51fb759533d7820bf74c3107cb5ae",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -88,7 +108,11 @@
       "sha256": "f87c18670dff760505938e52c6e4ea1023412aa743c30f69ad9281548c5b0043",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -101,7 +125,11 @@
       "sha256": "9152574d181c0b3d2a4346163c01f6d7e0e5f876507dd0109c81872791aedec9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -114,7 +142,11 @@
       "sha256": "10bb392ff8d8da55d51464fd9cbee7141c05c691e022d6bc1abada94363b564d",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -127,7 +159,11 @@
       "sha256": "a52e7a278c959f0a900d496f601b17a6da32e405523bb4ca42566032bd488515",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -140,7 +176,11 @@
       "sha256": "9df36214d4859a04ae7f0f0c06af0b3c7c718a1419cf9ba63400a3ab99231d82",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -153,7 +193,12 @@
       "sha256": "290e0e6f5ce7d78b14fb0b8e84cfe1abba54084a74f43c00145823c0baeb25a9",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -166,7 +211,12 @@
       "sha256": "22a98403fbc2bb69d778f312b2269afbdb625636089df28316719e0b94b7f2d7",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -179,7 +229,12 @@
       "sha256": "b045be1eff2ced3104a8f8b27fa920213270f86cc093edd0ec1b3ad554f3fb45",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -192,7 +247,12 @@
       "sha256": "260e194673a565c8f7bcd652700b7ec200f565d8f114055eae69f8c37e39b2c1",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -205,7 +265,12 @@
       "sha256": "c303def5a286dbc7d6867f8334618f1e2ce3cecf1b9880ceae884bf7c230c2f1",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -218,7 +283,12 @@
       "sha256": "2d594bf7a2a72729527bb7a4961b14cc1885c5bfa52606629f1588b0f8ada325",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -231,7 +301,12 @@
       "sha256": "e2fc8fc7600c95d7c20a025e95d0855c553a5f499011715c4019d6cde1e9b5ea",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -244,7 +319,12 @@
       "sha256": "6c0ece60be2e071b2241cb1fb3538daec940726d206d563547f9f29670fd88ca",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -257,7 +337,12 @@
       "sha256": "91c45c66a76febe55438d561fa3499ea847e7078a6ad40083e8706b67e3cef4d",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -270,7 +355,12 @@
       "sha256": "f7baa0ee3d099b493117606b06568cb48888c8efa4844509c0f2cc55bb8b17c5",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -283,7 +373,12 @@
       "sha256": "4538265fb37c1c86f2bbe953313b49f239bf14637c1343b8711c696d3d3c095d",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -296,7 +391,12 @@
       "sha256": "b328c064052f547fd7fa6639afd4cdf3cfda8d348951a7ec53a8baf5fd92c102",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -309,7 +409,13 @@
       "sha256": "b58711bbf956587b3998e214ad704534987841e82d7e51887065a77f96167061",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING", "DIRECTION_REVISION_REQUIRED"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING",
+        "DIRECTION_REVISION_REQUIRED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -322,7 +428,12 @@
       "sha256": "94fef6658183c3ff679204318b50f4003c3b979dc72079da1e6fe56b2c082410",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -335,7 +446,12 @@
       "sha256": "45019de303b7285bf54890076ebd3b9cc6861cabc934811b91bd8c8121f44380",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -348,7 +464,12 @@
       "sha256": "1e841cae7fee75283aeb867bcb9692c894f7a44ea511183090124a6f06c45188",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -361,7 +482,12 @@
       "sha256": "f629cbd4b0e4776dc45ff1dc03997fde7181b004eb9a4d6ca4b100ae0ac1c60b",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -374,7 +500,12 @@
       "sha256": "9bc2cf94a2fc4fd7c62ea565ebc6ddd756c4112051c71e23279a7149a1602c5a",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -387,7 +518,13 @@
       "sha256": "70e7abd6c18ac911f77c7efb8da26eb252650d544dab19289b3cf299b2398693",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING", "DIRECTION_REVISION_REQUIRED"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING",
+        "DIRECTION_REVISION_REQUIRED"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -400,7 +537,12 @@
       "sha256": "a7882a7155b87c34083af59fb3e9d5f2083c299d98e632bfff54be37b3446fa8",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -413,7 +555,12 @@
       "sha256": "a2b638a8dc1423ccacbab88872ecf19b931ab4c505ede504a21fba70e1b44e90",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -426,7 +573,12 @@
       "sha256": "48d1e48ef607c3c0c7b942337c7c0c13d873216cbaf288dae583faa85f9b6cb3",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING"
+      ],
       "source": "cursor-session-candidate"
     },
     {
@@ -439,8 +591,19 @@
       "sha256": "54001ca8c27ab2dcafdca2c94214f03b0030ef2d79e47a2f3f0f012d1dcc5fd1",
       "approval": "visual-direction-approved",
       "runtimeEligible": false,
-      "knownBlockers": ["EXTERIOR_ASPECT_RATIO", "GENERATIVE_DRIFT", "ABF_MASKS_MISSING", "PRODUCTION_LAYERS_MISSING", "DIRECTION_REVISION_REQUIRED"],
+      "knownBlockers": [
+        "EXTERIOR_ASPECT_RATIO",
+        "GENERATIVE_DRIFT",
+        "ABF_MASKS_MISSING",
+        "PRODUCTION_LAYERS_MISSING",
+        "DIRECTION_REVISION_REQUIRED"
+      ],
       "source": "cursor-session-candidate"
     }
-  ]
+  ],
+  "currentUserApproval": {
+    "decision": "approved",
+    "approvedOn": "2026-09-29",
+    "record": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json"
+  }
 }

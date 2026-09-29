@@ -1,5 +1,8 @@
 # A / B / F 美术生产状态与编码交接
 
+> 2026-09-29 当前决策：用户已批准全部现有素材，见 `docs/art/reviews/all-existing-assets-approval-2026-09-29.json`。下文旧日期的待用户审批描述保留为历史；剩余生产/接入/技术验证事项见 `docs/plans/next-step-plan-2026-09-29.md`。
+
+
 日期：2026-08-13。状态：**视觉方向已批准**，批准级别为
 `visual-direction-approved`；归档见 `approved-direction/`。该批准不代表
 production-ready，`runtimeEligible=false`，未进入 `public/`，不可当作

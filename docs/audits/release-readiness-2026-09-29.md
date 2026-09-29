@@ -1,5 +1,7 @@
 # BraveCat 本地代码与发布准备审计
 
+> 后续决策：本报告是收敛前快照。用户随后批准全部现有素材并要求只保留 main；当前状态见 `docs/plans/next-step-plan-2026-09-29.md` 和 `docs/audits/main-convergence-2026-09-29.md`。旧的“待人工审批”不再代表当前阻塞。
+
 日期：2026-09-29。范围：当前工作区、全部本地分支/工作树、最新 origin/main、GitHub Issues/PR/Actions 和仓库计划文档。已执行 git fetch origin。本次只审计与生成报告，没有修改业务代码、提交、合并、推送或发布。
 
 ## 结论
