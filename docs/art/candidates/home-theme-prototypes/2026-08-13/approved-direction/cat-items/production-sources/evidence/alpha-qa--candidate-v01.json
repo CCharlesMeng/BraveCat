@@ -1,0 +1,344 @@
+{
+  "method": "Apple Vision foreground instance outer mask; largest connected foreground; source-pixel restoration inside the closed silhouette for cushions and tunnel interiors; local nearest-interior RGB edge decontamination; 24px transparent padding",
+  "alphaBBoxFormat": "[left, top, right-exclusive, bottom-exclusive]",
+  "assets": [
+    {
+      "path": "cat-items/rest-cloud-bed/a-clear-sage/cat-item--rest-cloud-bed--a-clear-sage--base--candidate-v01.png",
+      "width": 994,
+      "height": 640,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        970,
+        616
+      ],
+      "semiTransparentPixels": 8127,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 434642,
+      "transparentPixels": 193391
+    },
+    {
+      "path": "cat-items/rest-cloud-bed/b-warm-walnut/cat-item--rest-cloud-bed--b-warm-walnut--base--candidate-v01.png",
+      "width": 860,
+      "height": 486,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        836,
+        462
+      ],
+      "semiTransparentPixels": 6537,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 271989,
+      "transparentPixels": 139434
+    },
+    {
+      "path": "cat-items/rest-cloud-bed/f-moonwhite-bluegray/cat-item--rest-cloud-bed--f-moonwhite-bluegray--base--candidate-v01.png",
+      "width": 854,
+      "height": 524,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        830,
+        500
+      ],
+      "semiTransparentPixels": 6605,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 292279,
+      "transparentPixels": 148612
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/a-clear-sage/cat-item--play-soft-tunnel--a-clear-sage--base--candidate-v01.png",
+      "width": 860,
+      "height": 504,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        836,
+        480
+      ],
+      "semiTransparentPixels": 6832,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 299983,
+      "transparentPixels": 126625
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/b-warm-walnut/cat-item--play-soft-tunnel--b-warm-walnut--base--candidate-v01.png",
+      "width": 832,
+      "height": 482,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        808,
+        458
+      ],
+      "semiTransparentPixels": 6658,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 290110,
+      "transparentPixels": 104256
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/f-moonwhite-bluegray/cat-item--play-soft-tunnel--f-moonwhite-bluegray--base--candidate-v01.png",
+      "width": 788,
+      "height": 435,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        24,
+        764,
+        411
+      ],
+      "semiTransparentPixels": 6070,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 227425,
+      "transparentPixels": 109285
+    }
+  ],
+  "contactSheets": [
+    "cat-items/rest-cloud-bed/qa--rest-cloud-bed--abf-alpha-contact-sheet--candidate-v01.png",
+    "cat-items/play-soft-tunnel/qa--play-soft-tunnel--abf-alpha-contact-sheet--candidate-v01.png"
+  ],
+  "occlusionMethod": "Same-master alpha band: keep lower fraction of source alpha bbox (near-lip for rest-cloud-bed, near-tunnel-wall for play-soft-tunnel); RGB and alpha copied from base; outside band zeroed; alpha ⊆ base.",
+  "occlusionAssets": [
+    {
+      "path": "cat-items/rest-cloud-bed/a-clear-sage/cat-item--rest-cloud-bed--a-clear-sage--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/rest-cloud-bed/a-clear-sage/cat-item--rest-cloud-bed--a-clear-sage--base--candidate-v01.png",
+      "kind": "near-lip",
+      "bandStart": 0.58,
+      "bandTop": 367,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        970,
+        616
+      ],
+      "width": 994,
+      "height": 640,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        367,
+        970,
+        616
+      ],
+      "semiTransparentPixels": 3768,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 192999,
+      "transparentPixels": 439393,
+      "keptOpaqueOrSemiPixels": 196767,
+      "clearedFromBaseOpaquePixels": 246002,
+      "alphaSubsetOfBase": true
+    },
+    {
+      "path": "cat-items/rest-cloud-bed/b-warm-walnut/cat-item--rest-cloud-bed--b-warm-walnut--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/rest-cloud-bed/b-warm-walnut/cat-item--rest-cloud-bed--b-warm-walnut--base--candidate-v01.png",
+      "kind": "near-lip",
+      "bandStart": 0.58,
+      "bandTop": 278,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        836,
+        462
+      ],
+      "width": 860,
+      "height": 486,
+      "hasAlpha": true,
+      "alphaBBox": [
+        26,
+        278,
+        836,
+        462
+      ],
+      "semiTransparentPixels": 3123,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 123265,
+      "transparentPixels": 291572,
+      "keptOpaqueOrSemiPixels": 126388,
+      "clearedFromBaseOpaquePixels": 152138,
+      "alphaSubsetOfBase": true
+    },
+    {
+      "path": "cat-items/rest-cloud-bed/f-moonwhite-bluegray/cat-item--rest-cloud-bed--f-moonwhite-bluegray--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/rest-cloud-bed/f-moonwhite-bluegray/cat-item--rest-cloud-bed--f-moonwhite-bluegray--base--candidate-v01.png",
+      "kind": "near-lip",
+      "bandStart": 0.58,
+      "bandTop": 300,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        830,
+        500
+      ],
+      "width": 854,
+      "height": 524,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        300,
+        828,
+        500
+      ],
+      "semiTransparentPixels": 3113,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 129539,
+      "transparentPixels": 314844,
+      "keptOpaqueOrSemiPixels": 132652,
+      "clearedFromBaseOpaquePixels": 166232,
+      "alphaSubsetOfBase": true
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/a-clear-sage/cat-item--play-soft-tunnel--a-clear-sage--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/play-soft-tunnel/a-clear-sage/cat-item--play-soft-tunnel--a-clear-sage--base--candidate-v01.png",
+      "kind": "near-tunnel-wall",
+      "bandStart": 0.52,
+      "bandTop": 261,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        836,
+        480
+      ],
+      "width": 860,
+      "height": 504,
+      "hasAlpha": true,
+      "alphaBBox": [
+        25,
+        261,
+        834,
+        480
+      ],
+      "semiTransparentPixels": 3293,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 138134,
+      "transparentPixels": 292013,
+      "keptOpaqueOrSemiPixels": 141427,
+      "clearedFromBaseOpaquePixels": 165388,
+      "alphaSubsetOfBase": true
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/b-warm-walnut/cat-item--play-soft-tunnel--b-warm-walnut--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/play-soft-tunnel/b-warm-walnut/cat-item--play-soft-tunnel--b-warm-walnut--base--candidate-v01.png",
+      "kind": "near-tunnel-wall",
+      "bandStart": 0.52,
+      "bandTop": 249,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        808,
+        458
+      ],
+      "width": 832,
+      "height": 482,
+      "hasAlpha": true,
+      "alphaBBox": [
+        26,
+        249,
+        806,
+        458
+      ],
+      "semiTransparentPixels": 3216,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 133645,
+      "transparentPixels": 264163,
+      "keptOpaqueOrSemiPixels": 136861,
+      "clearedFromBaseOpaquePixels": 159907,
+      "alphaSubsetOfBase": true
+    },
+    {
+      "path": "cat-items/play-soft-tunnel/f-moonwhite-bluegray/cat-item--play-soft-tunnel--f-moonwhite-bluegray--foreground-occlusion--candidate-v01.png",
+      "derivedFrom": "cat-items/play-soft-tunnel/f-moonwhite-bluegray/cat-item--play-soft-tunnel--f-moonwhite-bluegray--base--candidate-v01.png",
+      "kind": "near-tunnel-wall",
+      "bandStart": 0.52,
+      "bandTop": 225,
+      "sourceAlphaBBox": [
+        24,
+        24,
+        764,
+        411
+      ],
+      "width": 788,
+      "height": 435,
+      "hasAlpha": true,
+      "alphaBBox": [
+        24,
+        225,
+        762,
+        411
+      ],
+      "semiTransparentPixels": 2949,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaquePixels": 103512,
+      "transparentPixels": 236319,
+      "keptOpaqueOrSemiPixels": 106461,
+      "clearedFromBaseOpaquePixels": 127034,
+      "alphaSubsetOfBase": true
+    }
+  ],
+  "occlusionContactNote": "Foreground occlusion PNGs live beside each base under production-sources; Pose contact sheets are separate evidence under evidence/."
+}

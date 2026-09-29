@@ -6,6 +6,11 @@
 A/F shell 已由用户口头验收（“基本还行”）；B 控制图随用户
 “按顺序推进”指令视为签收并已进入同一流程。
 
+2026-08-13 产品方向已改为“主题固定家具，小猫用品可换”。本目录已生产的
+窗框、陈列轨和后续柜体属于 Home Theme 内部固定图层；scratcher、
+feeding-set 改作 `scratch`、`feed` Cat Item adapter 来源。旧
+HomePiece/逐件家具换装描述保留为生产历史，不再定义玩家可选范围。
+
 每个 form 目录内：
 
 - `source--clean-shell--imagegen-v01.png`：原始生成件（1024×1536），

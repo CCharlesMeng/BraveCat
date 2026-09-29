@@ -26,12 +26,15 @@
     catName,
     onConfirmed,
     onClose,
+    onRequirePhoneBinding,
   }: {
     cloudSync: WebCloudSync
     catName: string
     /** 确认成功：形象记录 + 各姿势的会话内预览 URL（调用方接管其生命周期）。 */
     onConfirmed: (portrait: UserPortrait, poseUrls: PoseUrls) => void
     onClose: () => void
+    /** 403 PHONE_BINDING_REQUIRED 引导：打开手机号绑定弹窗（App 注入）。 */
+    onRequirePhoneBinding?: () => void
   } = $props()
 
   type Phase = 'pick' | 'working' | 'preview' | 'confirming' | 'failed'
@@ -44,6 +47,8 @@
     previewUrl: string
   } | null>(null)
   let pickNotice = $state('')
+  /** 服务端要求先绑定手机号（403）；仅在该错误场景显示「去绑定」按钮。 */
+  let phoneBindingRequired = $state(false)
   let statusText = $state('')
   let previewNotice = $state('')
   let failure = $state<GenerationFailure | undefined>(undefined)
@@ -90,6 +95,7 @@
     if (!photo || phase !== 'pick') return
     phase = 'working'
     failure = undefined
+    phoneBindingRequired = false
     try {
       statusText = '正在上传照片……'
       const photoKey = await cloudSync.portraits.upload({
@@ -144,6 +150,14 @@
     } catch (error) {
       if (cancelled) return
       phase = 'pick'
+      if (
+        error instanceof CloudSyncError
+        && error.code === 'PHONE_BINDING_REQUIRED'
+      ) {
+        phoneBindingRequired = true
+        pickNotice = '生成专属形象前需要先绑定手机号。'
+        return
+      }
       pickNotice = errorMessage(error)
     }
   }
@@ -226,6 +240,15 @@
       </label>
       {#if pickNotice}
         <p class="portrait-studio-notice" role="status">{pickNotice}</p>
+      {/if}
+      {#if phoneBindingRequired && onRequirePhoneBinding}
+        <div class="portrait-studio-actions">
+          <button
+            type="button"
+            class="primary"
+            onclick={onRequirePhoneBinding}
+          >去绑定手机号</button>
+        </div>
       {/if}
       <div class="portrait-studio-facts">
         <p>剩余生成次数：<strong>{balanceText}</strong></p>

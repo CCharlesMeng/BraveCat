@@ -1,12 +1,18 @@
 import { describe, expect, it } from 'vitest'
+import { CAT_ITEMS } from './catItems'
 import {
   CLASSIC_V4_FORM,
+  CLASSIC_V4_PRESET,
+  customizationForHomeTheme,
   defaultHomeCustomization,
   HOME_THEME_PRESETS,
+  HOME_THEMES,
   isHomeCustomization,
+  listCatItems,
   listCompatiblePieces,
   listHomeFinishes,
   listHomeForms,
+  listHomeThemes,
   normalizeHomeCustomization,
   paintedCanvasRect,
   resolveHomeScene,
@@ -96,12 +102,14 @@ describe('resolveHomeScene', () => {
   it('exposes Minho animation sprites without changing other portraits', () => {
     const sprite = sceneFor({ activity: 'gaze' }).cat.sprite
     expect(sprite?.src).toBe(
-      '/dev-art/home-v4/cat-animations/cat--minho--gaze--ambient--v02.webp',
+      '/dev-art/home-v4/cat-animations/cat--minho--gaze--ambient--v03.webp',
     )
-    expect(sprite?.frameCount).toBe(8)
-    expect(sprite?.style).toContain(
-      `--home-cat-animation-src: url("${sprite?.src}")`,
+    expect(sprite?.posterSrc).toBe(
+      '/dev-art/home-v4/cat-animations/cat--minho--gaze--ambient--poster--v03.webp',
     )
+    expect(sprite?.frameCount).toBe(64)
+    expect(sprite?.style).toBe(sceneFor({ activity: 'gaze' }).cat.imageStyle)
+    expect(sceneFor({ activity: 'sleep' }).cat.sprite?.frameCount).toBe(128)
     expect(sceneFor({ portraitId: 'future-cat' }).cat.sprite).toBeNull()
   })
 
@@ -430,5 +438,239 @@ describe('classic-v4 form geometry', () => {
     expect(scene.treat.style).toBe(
       'left: 50%; top: 52.5%; width: 10.5%; height: 7.000000000000001%',
     )
+  })
+})
+
+describe('base-plate home themes', () => {
+  const context = {
+    time: 'noon' as const,
+    activity: 'sleep' as const,
+    portraitId: 'minho',
+  }
+
+  it('resolves A/B/F with base plate, exterior, and both Cat Items', () => {
+    for (const themeId of [
+      'a-clear-sage',
+      'b-warm-walnut-gallery',
+      'f-moonwhite-bluegray',
+    ] as const) {
+      const selection = customizationForHomeTheme(themeId)!
+      const scene = resolveHomeScene(selection, context)
+      expect(scene.homeThemeId).toBe(themeId)
+      expect(scene.formId).toBe(themeId)
+      expect(scene.backdrop[0]).toEqual({
+        id: 'exterior-noon',
+        src: `/dev-art/home-theme/${themeId}/exterior-noon.png`,
+      })
+      expect(scene.backdrop[1]).toEqual({
+        id: 'shell',
+        src: `/dev-art/home-theme/${themeId}/base-plate--aperture-alpha.png`,
+      })
+      expect(scene.rearPieces).toEqual([])
+      expect(scene.catItems.map(({ slot, itemId, src }) => (
+        [slot, itemId, src]
+      ))).toEqual([
+        [
+          'rest',
+          'rest-cloud-bed',
+          `/dev-art/home-theme/${themeId}/cat-item--rest-cloud-bed--base.png`,
+        ],
+        [
+          'play',
+          'play-soft-tunnel',
+          `/dev-art/home-theme/${themeId}/cat-item--play-soft-tunnel--base.png`,
+        ],
+      ])
+      expect(scene.catItemOcclusion.map(({ id, src }) => [id, src])).toEqual([
+        [
+          'cat-item-occlusion-rest',
+          `/dev-art/home-theme/${themeId}/cat-item--rest-cloud-bed--occlusion.png`,
+        ],
+        [
+          'cat-item-occlusion-play',
+          `/dev-art/home-theme/${themeId}/cat-item--play-soft-tunnel--occlusion.png`,
+        ],
+      ])
+      expect(scene.pieces).toEqual([])
+      expect(scene.postcardDisplay.fixtureSrc).toBeNull()
+      expect(scene.souvenirDisplay.occlusionSrc).toBeNull()
+      expect(scene.lighting).toBeNull()
+    }
+  })
+
+  it('keeps layer-order invariants for base-plate scenes', () => {
+    // 契约：exterior → shell → Cat Item base → cat → …
+    // → Cat Item occlusion → lighting（数组边界由字段拆分表达）。
+    const scene = resolveHomeScene(
+      customizationForHomeTheme('a-clear-sage')!,
+      { ...context, time: 'dusk', activity: 'play' },
+    )
+    expect(scene.backdrop.map(({ id }) => id)).toEqual([
+      'exterior-dusk',
+      'shell',
+    ])
+    expect(scene.catItems.map(({ slot }) => slot)).toEqual(['rest', 'play'])
+    expect(scene.catItemOcclusion.map(({ id }) => id)).toEqual([
+      'cat-item-occlusion-rest',
+      'cat-item-occlusion-play',
+    ])
+    expect(scene.lighting?.id).toBe('lighting-dusk')
+    expect(scene.rearPieces).toEqual([])
+  })
+
+  it('keeps classic form path returning empty cat item layers', () => {
+    const scene = sceneFor()
+    expect(scene.homeThemeId).toBeNull()
+    expect(scene.catItems).toEqual([])
+    expect(scene.catItemOcclusion).toEqual([])
+  })
+
+  it('falls back unknown homeThemeId and bad catItem selections', () => {
+    expect(normalizeHomeCustomization({
+      homeThemeId: 'retired-theme',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+    })).toEqual({
+      presetId: 'classic-v4',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: CLASSIC_V4_PRESET.pieces,
+    })
+
+    const unknownItem = normalizeHomeCustomization({
+      homeThemeId: 'a-clear-sage',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+      catItems: { rest: 'missing-bed', play: 'play-soft-tunnel' },
+    })
+    expect(unknownItem.catItems).toEqual({
+      rest: 'rest-cloud-bed',
+      play: 'play-soft-tunnel',
+    })
+
+    const slotMismatch = normalizeHomeCustomization({
+      homeThemeId: 'a-clear-sage',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+      catItems: { rest: 'play-soft-tunnel', play: 'rest-cloud-bed' },
+    })
+    expect(slotMismatch.catItems).toEqual({
+      rest: 'rest-cloud-bed',
+      play: 'play-soft-tunnel',
+    })
+  })
+
+  it('lists only Cat Items that cover every registered theme', () => {
+    const themeIds = Object.keys(HOME_THEMES)
+    expect(listHomeThemes().map(({ id }) => id).sort()).toEqual([
+      'a-clear-sage',
+      'b-warm-walnut-gallery',
+      'f-moonwhite-bluegray',
+    ])
+    expect(listCatItems().map(({ id }) => id).sort()).toEqual([
+      'play-soft-tunnel',
+      'rest-cloud-bed',
+    ])
+    expect(listCatItems('rest').map(({ id }) => id)).toEqual(['rest-cloud-bed'])
+    expect(listCatItems('scratch')).toEqual([])
+    // 缺任一主题 adapter 的用品不得上架（ADR-0010）。
+    for (const item of Object.values(CAT_ITEMS)) {
+      const coversAll = themeIds.every(
+        (themeId) => item.adapters[themeId] !== undefined,
+      )
+      const listed = listCatItems().some(({ id }) => id === item.id)
+      expect(listed).toBe(coversAll)
+    }
+  })
+
+  it('anchors the sleeping cat to the rest item', () => {
+    const scene = resolveHomeScene(
+      customizationForHomeTheme('a-clear-sage')!,
+      context,
+    )
+    expect(scene.cat.placement).toEqual({
+      x: 70,
+      y: 924,
+      width: 360,
+      height: 360,
+      flip: false,
+    })
+  })
+
+  it('accepts optional homeThemeId and catItems in shape validation', () => {
+    expect(isHomeCustomization({
+      homeThemeId: 'a-clear-sage',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+      catItems: { rest: 'rest-cloud-bed' },
+    })).toBe(true)
+    expect(isHomeCustomization({
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+      catItems: { rest: 7 },
+    })).toBe(false)
+  })
+
+  it('keeps classic-v4 resolve parity as a regression guardrail', () => {
+    const classic = resolveHomeScene(defaultHomeCustomization(), {
+      time: 'noon',
+      activity: 'sleep',
+      portraitId: 'minho',
+    })
+    expect({
+      formId: classic.formId,
+      finishId: classic.finishId,
+      homeThemeId: classic.homeThemeId,
+      canvas: classic.canvas,
+      shippingEligible: classic.shippingEligible,
+      backdrop: classic.backdrop,
+      rearPieces: classic.rearPieces,
+      pieces: classic.pieces,
+      catItems: classic.catItems,
+      catItemOcclusion: classic.catItemOcclusion,
+      lighting: classic.lighting,
+      postcardFixture: classic.postcardDisplay.fixtureSrc,
+      souvenirOcclusion: classic.souvenirDisplay.occlusionSrc,
+      catPlacement: classic.cat.placement,
+      treatStyle: classic.treat.style,
+    }).toEqual({
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      homeThemeId: null,
+      canvas: { width: 1200, height: 1600 },
+      shippingEligible: false,
+      backdrop: [
+        { id: 'exterior-noon', src: '/dev-art/home-v4/exterior-noon.png' },
+        { id: 'shell', src: '/dev-art/home-v4/interior-foreground.png' },
+      ],
+      rearPieces: [],
+      pieces: [
+        {
+          socketId: 'postcard-display',
+          kind: 'postcard-display',
+          pieceId: 'classic-wall-frames',
+          pieceName: '暖木画框墙',
+        },
+        {
+          socketId: 'cabinet',
+          kind: 'cabinet',
+          pieceId: 'classic-oak-cabinet',
+          pieceName: '橡木矮柜',
+        },
+      ],
+      catItems: [],
+      catItemOcclusion: [],
+      lighting: null,
+      postcardFixture: '/assets/home/display--postcard-wall--v03.png',
+      souvenirOcclusion: '/assets/home/display--souvenir-occlusion--v01.png',
+      catPlacement: CLASSIC_V4_FORM.catPlacements.sleep,
+      treatStyle:
+        'left: 50%; top: 52.5%; width: 10.5%; height: 7.000000000000001%',
+    })
   })
 })

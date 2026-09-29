@@ -93,20 +93,24 @@ export const SPLIT_LEVEL_DEN_FORM = {
   catAnimationsByPortrait: {
     minho: {
       sleep: {
-        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--sleep--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--sleep--ambient--v03.webp`,
+        posterSrc: `${CLASSIC_ANIMATION_ROOT}/cat--minho--sleep--ambient--poster--v03.webp`,
+        frameCount: 128,
       },
       play: {
-        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--play--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--play--ambient--v03.webp`,
+        posterSrc: `${CLASSIC_ANIMATION_ROOT}/cat--minho--play--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
       eat: {
-        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--eat--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--eat--ambient--v03.webp`,
+        posterSrc: `${CLASSIC_ANIMATION_ROOT}/cat--minho--eat--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
       gaze: {
-        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--gaze--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${CLASSIC_ANIMATION_ROOT}/cat--minho--gaze--ambient--v03.webp`,
+        posterSrc: `${CLASSIC_ANIMATION_ROOT}/cat--minho--gaze--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
     },
   },

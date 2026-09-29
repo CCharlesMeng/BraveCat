@@ -103,6 +103,8 @@ CORS 默认放行 localhost / 127.0.0.1 任意端口，无需额外配置。
 | `ECONOMY_MAX_EARN_PER_HOUR` | `600` | 占位速率校验：每现实小时可积累的小鱼干上限 |
 | `ECONOMY_INITIAL_EARN_ALLOWANCE` | `100` | 新账号初始积累额度（避免 t=0 上限为零） |
 | `DEV_INITIAL_CREDITS` | `5` | 仅演示入口 `dev:fake`：新游客自动赠送的生成次数 |
+| `DEV_SMS_FIXED_CODE` | `000000` | 仅演示入口 `dev:fake`：固定短信验证码（不真发短信，验证码打进程日志） |
+| `DEV_REQUIRE_PHONE_FOR_GENERATION` | 开启 | 仅演示入口 `dev:fake`：提交形象生成前是否要求已绑定手机号（`0`/`false`/`off` 关闭；生产入口恒开） |
 
 AIGC 管线的云服务配置（全部可选；缺失时对应 provider 注入占位实现，
 生成 job 会失败并自动退回次数，服务照常启动）：
@@ -120,12 +122,25 @@ AIGC 管线的云服务配置（全部可选；缺失时对应 provider 注入�
 | `GENERATION_IMAGE_MODEL` | 出图模型，默认 `wan2.7-image-pro`（成本优先可换 `wan2.7-image`） |
 | `GENERATION_VISION_MODEL` | 特征提取模型，默认 `qwen-vl-max` |
 
+短信验证码服务（可选；缺失时发码接口回 503，其余路由不受影响）：
+
+| 变量 | 说明 |
+| --- | --- |
+| `ALIYUN_SMS_ACCESS_KEY_ID` / `ALIYUN_SMS_ACCESS_KEY_SECRET` | 阿里云短信凭证；未设置时回退复用 `ALIYUN_ACCESS_KEY_ID` / `ALIYUN_ACCESS_KEY_SECRET` |
+| `ALIYUN_SMS_SIGN_NAME` | 控制台审核通过的短信签名（必填才启用 adapter） |
+| `ALIYUN_SMS_TEMPLATE_CODE` | 验证码模板 code，模板变量约定 `${code}`（必填才启用 adapter） |
+| `ALIYUN_SMS_ENDPOINT` | 接入点，默认 `dysmsapi.aliyuncs.com` |
+
 ## 路由（全部挂 `/v1`）
 
 | 路由 | 行为 |
 | --- | --- |
 | `POST /v1/auth/guest` | 创建游客账号，返回不透明 bearer token（库中只存 sha256 哈希） |
-| `POST /v1/auth/bind/{wechat,apple,phone}` | 绑定骨架，请求体已定型，返回 501（Phase 2 实现） |
+| `POST /v1/auth/sms-code` | 发送短信验证码（无认证）：6 位、10 分钟有效、错 5 次作废；同号 60s 冷却、24h 内至多 10 次（429） |
+| `POST /v1/auth/bind/phone` | 手机号绑定当前账号；已属其他账号回 409 + 脱敏账号信息（冲突不消费验证码，可复用换绑登录） |
+| `POST /v1/auth/login/phone` | 手机号验证码登录（无认证，登录注册合一）：查无账号自动建号；已有账号签新 token（旧 token 不吊销） |
+| `GET /v1/auth/me` | 当前账号与已绑定身份（外部 id 脱敏，如 `138****8000`） |
+| `POST /v1/auth/bind/{wechat,apple}` | 绑定骨架，请求体已定型，返回 501（Phase 2 实现） |
 | `PUT /v1/save` | 云存档上传：last-writer-wins，`savedAt` 取服务端时钟；`state` 为黑盒；旧 schema 版本不得覆盖新版本（409） |
 | `GET /v1/save?maxSchemaVersion=N` | 云存档下载：云端 schemaVersion 高于 N 时返回 426 `SAVE_SCHEMA_TOO_NEW`（版本护栏） |
 | `POST /v1/ledger/transactions` | 批量交易提交：幂等键去重（重复标记 `duplicate`）、经济校验整批拒绝、余额不得为负 |
@@ -134,7 +149,7 @@ AIGC 管线的云服务配置（全部可选；缺失时对应 provider 注入�
 | `POST /v1/credits/purchases` | 生成次数包购买核销入账：凭证核销通过后按订单号幂等入账（重复订单标记 `duplicate`） |
 | `GET /v1/credits/balance` | 生成次数余额（严格服务端权威，ADR-0006） |
 | `POST /v1/portraits/photos` | 最小照片上传：JSON + base64（≤3MB 二进制，落在 5MB bodyLimit 内），魔数校验后写入对象存储，返回 `photoKey`；生产接 OSS 预签名 URL 直传后退役 |
-| `POST /v1/portraits/generations` | 提交生成 job：校验照片上传引用与余额，预扣 1 次，返回 202；同幂等键重放返回同一 job（200） |
+| `POST /v1/portraits/generations` | 提交生成 job：先校验已绑定手机号（未绑定 403 `PHONE_BINDING_REQUIRED`），再校验照片上传引用与余额，预扣 1 次，返回 202；同幂等键重放返回同一 job（200） |
 | `GET /v1/portraits/generations/:jobId` | 查询 job 状态（他人 job 与不存在统一 404） |
 | `GET /v1/portraits/generations/:jobId/poses/:pose` | 读取某姿势产出图（base64 投影；确认页预览与已确认形象渲染共用） |
 | `POST /v1/portraits/generations/:jobId/confirm` | 用户确认：落定消耗并产出形象记录；重复确认幂等；非 awaiting_confirm 返回 409 |

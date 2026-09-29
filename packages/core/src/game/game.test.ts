@@ -155,6 +155,36 @@ describe('Game state', () => {
     )).toThrow(TypeError)
   })
 
+  it('家外观选择可携带 homeThemeId 与 catItems 并往返', () => {
+    const initial = createInitialGameState(1_000)
+    const themeSelection = {
+      homeThemeId: 'a-clear-sage',
+      formId: 'classic-v4',
+      finishId: 'classic-v4-watercolor',
+      pieces: {},
+      catItems: {
+        rest: 'rest-cloud-bed',
+        play: 'play-soft-tunnel',
+      },
+    }
+    const changed = setHomeCustomization(initial, themeSelection)
+    expect(changed.homeCustomization).toEqual(themeSelection)
+    expect(restoreGameState(changed, 9_000).homeCustomization)
+      .toEqual(themeSelection)
+
+    const withBadCatItems = {
+      ...createInitialGameState(1_000),
+      homeCustomization: {
+        formId: 'classic-v4',
+        finishId: 'classic-v4-watercolor',
+        pieces: {},
+        catItems: { rest: 9 },
+      },
+    }
+    expect(restoreGameState(withBadCatItems, 9_000).homeCustomization)
+      .toEqual(defaultHomeCustomization())
+  })
+
   it('恢复时保留旧存档的家外观选择，缺失或损坏时用默认预设', () => {
     const withRetiredIds = {
       ...createInitialGameState(1_000),

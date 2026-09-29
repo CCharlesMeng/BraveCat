@@ -20,6 +20,12 @@ const approval = JSON.parse(await readFile(
   resolveRepoPath('docs/art/reviews/home-v4/approval.v1.json'),
   'utf8',
 ))
+const catAnimationManifest = JSON.parse(await readFile(
+  resolveRepoPath(
+    'docs/art/candidates/home-v4/cat-animations-v03/manifest.candidate.json',
+  ),
+  'utf8',
+))
 
 if (
   manifest.shippingEligible !== false
@@ -54,14 +60,21 @@ const sha256 = (contents) => (
   createHash('sha256').update(contents).digest('hex')
 )
 
-const expectedCatAnimations = [
-  'sleep',
-  'play',
-  'eat',
-  'gaze',
-].map((activity) => (
-  `cat-animations/cat--minho--${activity}--ambient--v02.webp`
-))
+const expectedCatFrameCounts = {
+  sleep: 128,
+  play: 64,
+  eat: 64,
+  gaze: 64,
+}
+
+if (
+  JSON.stringify(catAnimationManifest.outputFrameCounts)
+    !== JSON.stringify(expectedCatFrameCounts)
+  || catAnimationManifest.fixedCanvas?.width !== 512
+  || catAnimationManifest.fixedCanvas?.height !== 512
+) {
+  throw new Error('Home cat animation candidate contract is invalid')
+}
 
 for (const [filename, expectedHash] of Object.entries(expectedFiles)) {
   const runtimePath = resolveRepoPath(previewRoot, filename)
@@ -82,40 +95,138 @@ for (const [filename, expectedHash] of Object.entries(expectedFiles)) {
   }
 }
 
-for (const filename of expectedCatAnimations) {
+const frameAnchor = (frame) => {
+  let bottom = -1
+  for (let y = 0; y < 512; y += 1) {
+    for (let x = 0; x < 512; x += 1) {
+      if (frame[(y * 512 + x) * 4 + 3] > 32) bottom = y
+    }
+  }
+  let alphaTotal = 0
+  let weightedX = 0
+  for (let y = Math.max(0, bottom - 23); y <= bottom; y += 1) {
+    for (let x = 0; x < 512; x += 1) {
+      const alpha = frame[(y * 512 + x) * 4 + 3]
+      if (alpha <= 32) continue
+      alphaTotal += alpha
+      weightedX += x * alpha
+    }
+  }
+  return { bottom, x: weightedX / alphaTotal }
+}
+
+for (const row of catAnimationManifest.rows) {
+  const filename = `cat-animations/${row.animation.file}`
   const runtimePath = resolveRepoPath(previewRoot, filename)
   const contents = await readFile(runtimePath).catch(() => {
     throw new Error(`${runtimePath} is missing`)
   })
-  const metadata = await sharp(contents).metadata()
+  if (sha256(contents) !== row.animation.sha256) {
+    throw new Error(`${runtimePath} does not match its animation candidate`)
+  }
+  const metadata = await sharp(contents, { animated: true }).metadata()
   if (
-    metadata.width !== 4096
-    || metadata.height !== 512
+    metadata.width !== 512
+    || metadata.pageHeight !== 512
+    || metadata.pages !== expectedCatFrameCounts[row.activity]
     || metadata.hasAlpha !== true
+    || metadata.delay?.reduce((sum, delay) => sum + delay, 0)
+      !== row.animation.durationMs
   ) {
-    throw new Error(`${runtimePath} must be a 4096x512 alpha sprite`)
+    throw new Error(`${runtimePath} has an invalid fixed-canvas frame count`)
   }
 
-  const frames = await Promise.all(
-    Array.from({ length: 8 }, async (_, index) => {
-      return sharp(contents)
-        .extract({ left: index * 512, top: 0, width: 512, height: 512 })
-        .ensureAlpha()
-        .raw()
-        .toBuffer()
-    }),
-  )
+  const decoded = await sharp(contents, { animated: true })
+    .ensureAlpha()
+    .raw()
+    .toBuffer()
+  const frameBytes = 512 * 512 * 4
+  const frames = Array.from({ length: metadata.pages }, (_, index) => (
+    decoded.subarray(index * frameBytes, (index + 1) * frameBytes)
+  ))
   const frameHashes = frames.map(sha256)
-  if (new Set(frameHashes).size !== frameHashes.length) {
+  if (
+    frameHashes.some((hash, index) => (
+      index > 0 && hash === frameHashes[index - 1]
+    ))
+    || new Set(frameHashes).size < frames.length / 2
+  ) {
     throw new Error(`${runtimePath} contains duplicate frames`)
   }
-  if (filename.includes('--gaze--')) {
+
+  const keyframeAnchors = frames
+    .filter((_, index) => index % 8 === 0)
+    .map(frameAnchor)
+  if (keyframeAnchors.some((anchor) => (
+    anchor.bottom !== row.registration.target.bottom
+    || Math.abs(anchor.x - row.registration.target.x) >= 1
+  ))) {
+    throw new Error(`${runtimePath} moves a keyframe off its pixel anchor`)
+  }
+
+  const posterPath = resolveRepoPath(
+    previewRoot,
+    `cat-animations/${row.poster.file}`,
+  )
+  const posterContents = await readFile(posterPath).catch(() => {
+    throw new Error(`${posterPath} is missing`)
+  })
+  if (sha256(posterContents) !== row.poster.sha256) {
+    throw new Error(`${posterPath} does not match its animation candidate`)
+  }
+  const posterMetadata = await sharp(posterContents).metadata()
+  if (
+    posterMetadata.width !== 512
+    || posterMetadata.height !== 512
+    || posterMetadata.hasAlpha !== true
+  ) {
+    throw new Error(`${posterPath} must be a 512px alpha poster`)
+  }
+  if (row.activity === 'gaze') {
     const lockedBodyStart = 170 * 512 * 4
-    const lockedBody = frames[0].subarray(lockedBodyStart)
-    if (frames.slice(1).some((frame) => (
-      !frame.subarray(lockedBodyStart).equals(lockedBody)
-    ))) {
-      throw new Error(`${runtimePath} moves the gaze body below the head`)
+    const lockedBodyAlpha = Buffer.alloc((512 - 170) * 512)
+    for (let offset = lockedBodyStart, index = 0; offset < frameBytes; offset += 4) {
+      lockedBodyAlpha[index] = frames[0][offset + 3]
+      index += 1
+    }
+    for (const frame of frames.slice(1)) {
+      let index = 0
+      for (let offset = lockedBodyStart; offset < frameBytes; offset += 4) {
+        if (frame[offset + 3] !== lockedBodyAlpha[index]) {
+          throw new Error(`${runtimePath} moves the gaze body below the head`)
+        }
+        index += 1
+      }
+    }
+  }
+  if (row.activity === 'sleep') {
+    const belly = { x: 340, y: 295, rx: 108, ry: 76 }
+    const reference = frames[0]
+    const alphaAreas = []
+    for (const frame of frames) {
+      let alphaArea = 0
+      for (let y = 0; y < 512; y += 1) {
+        for (let x = 0; x < 512; x += 1) {
+          const offset = (y * 512 + x) * 4
+          const alpha = frame[offset + 3]
+          alphaArea += alpha
+          const normalizedDistance = (
+            ((x - belly.x) / belly.rx) ** 2
+            + ((y - belly.y) / belly.ry) ** 2
+          )
+          if (
+            normalizedDistance >= 1
+            && alpha !== reference[offset + 3]
+          ) {
+            throw new Error(`${runtimePath} moves pixels outside the belly`)
+          }
+        }
+      }
+      alphaAreas.push(alphaArea)
+    }
+    const alphaRange = Math.max(...alphaAreas) - Math.min(...alphaAreas)
+    if (alphaRange / alphaAreas[0] > 0.002) {
+      throw new Error(`${runtimePath} changes the sleeping cat's whole volume`)
     }
   }
 }
@@ -219,5 +330,8 @@ for (const [startY, endY] of [[0, 100], [100, 850], [1040, 1140]]) {
 }
 
 console.log(
-  `verified ${Object.keys(expectedFiles).length} non-shipping development home-art layers and ${expectedCatAnimations.length} eight-frame cat animations`,
+  `verified ${Object.keys(expectedFiles).length} non-shipping development home-art layers and ${catAnimationManifest.rows.length} fixed-canvas cat animations`,
 )
+
+// A/B/F base-plate + Cat Item gates (sibling script keeps this file focused).
+await import('./check-base-plate-home-art.mjs')

@@ -1,15 +1,19 @@
 <!--
   Theme Lab — dev-only 家主题配置器。
-  ?themeLab 挂载；切换 HomeForm 预设、演示下架回退，并可叠加
-  slot/锚点/猫落位参考线检查动态内容重投影。仅改内存选择，不写存档。
+  ?themeLab 挂载；支持旧 form 预设与 base-plate 主题（A/B/F），
+  以及 ?catItems=slot:item,… 查询参数。仅改内存选择，不写存档。
 -->
 <script lang="ts">
   import {
+    customizationForHomeTheme,
     HOME_THEME_PRESETS,
+    listCatItems,
     listCompatiblePieces,
     listHomeFinishes,
     listHomeForms,
+    listHomeThemes,
     normalizeHomeCustomization,
+    type CatItemSlot,
     type HomeCustomization,
     type ResolvedHomeScene,
   } from '@bravecat/core/homeTheme'
@@ -21,6 +25,7 @@
   } = $props()
 
   const forms = listHomeForms()
+  const basePlateThemes = listHomeThemes()
   let showGuides = $state(true)
 
   const applyPreset = (presetId: string) => {
@@ -31,6 +36,18 @@
       formId: preset.formId,
       finishId: preset.finishId,
       pieces: preset.pieces,
+    })
+  }
+
+  const applyBasePlateTheme = (themeId: string) => {
+    const next = customizationForHomeTheme(themeId)
+    if (!next) return
+    onSelect({
+      ...next,
+      catItems: {
+        ...next.catItems,
+        ...selection.catItems,
+      },
     })
   }
 
@@ -46,7 +63,22 @@
     onSelect({
       ...selection,
       presetId: undefined,
+      homeThemeId: undefined,
       pieces: { ...selection.pieces, [socketId]: pieceId },
+    })
+  }
+
+  const applyCatItem = (slot: CatItemSlot, itemId: string) => {
+    const themeId = scene.homeThemeId ?? selection.homeThemeId
+    if (!themeId) return
+    const base = selection.homeThemeId === themeId
+      ? selection
+      : customizationForHomeTheme(themeId)
+    if (!base) return
+    onSelect({
+      ...base,
+      homeThemeId: themeId,
+      catItems: { ...base.catItems, [slot]: itemId },
     })
   }
 
@@ -54,15 +86,29 @@
     normalizeHomeCustomization(selection) !== selection,
   )
   const finishOptions = $derived(listHomeFinishes(scene.formId))
+  const catItemGroups = $derived(
+    (['rest', 'play', 'scratch', 'feed'] as const)
+      .map((slot) => ({ slot, options: listCatItems(slot) }))
+      .filter(({ options }) => options.length > 0),
+  )
 </script>
 
 <aside class="theme-lab-panel" aria-label="Theme Lab">
   <strong>Theme Lab</strong>
   <div class="theme-lab-row">
+    {#each basePlateThemes as theme (theme.id)}
+      <button
+        type="button"
+        class:active={scene.homeThemeId === theme.id}
+        onclick={() => applyBasePlateTheme(theme.id)}
+      >{theme.name}</button>
+    {/each}
+  </div>
+  <div class="theme-lab-row">
     {#each forms as form (form.id)}
       <button
         type="button"
-        class:active={scene.formId === form.id}
+        class:active={!scene.homeThemeId && scene.formId === form.id}
         onclick={() => applyPreset(form.id)}
       >{form.name}</button>
     {/each}
@@ -70,7 +116,23 @@
       模拟下架主题
     </button>
   </div>
-  {#if finishOptions.length > 1}
+  {#each catItemGroups as group (group.slot)}
+    <div class="theme-lab-socket">
+      <span class="theme-lab-socket-kind">cat · {group.slot}</span>
+      <div class="theme-lab-row">
+        {#each group.options as option (option.id)}
+          <button
+            type="button"
+            class:active={scene.catItems.some(
+              (item) => item.slot === group.slot && item.itemId === option.id,
+            )}
+            onclick={() => applyCatItem(group.slot, option.id)}
+          >{option.name}</button>
+        {/each}
+      </div>
+    </div>
+  {/each}
+  {#if !scene.homeThemeId && finishOptions.length > 1}
     <div class="theme-lab-socket">
       <span class="theme-lab-socket-kind">finish</span>
       <div class="theme-lab-row">
@@ -113,8 +175,10 @@
     显示投影参考
   </label>
   <dl>
-    <dt>form</dt>
-    <dd>{scene.formId}</dd>
+    <dt>theme / form</dt>
+    <dd>{scene.homeThemeId ?? scene.formId}</dd>
+    <dt>cat items</dt>
+    <dd>{scene.catItems.map(({ slot }) => slot).join(', ') || '—'}</dd>
     <dt>slots / anchors</dt>
     <dd>{scene.postcardDisplay.slots.length} / {scene.souvenirDisplay.anchors.length}</dd>
     <dt>backdrop / lighting</dt>
@@ -135,6 +199,9 @@
     {#each scene.souvenirDisplay.anchors as anchor, index (index)}
       <span class="guide anchor" style={anchor.style}>纪</span>
     {/each}
+    {#each scene.catItems as item (item.slot)}
+      <span class="guide cat-item" style={item.style}>{item.slot}</span>
+    {/each}
     <span class="guide treat" style={scene.treat.style}>鱼</span>
     <span class="guide cat" style={scene.cat.imageStyle}>猫</span>
   </div>
@@ -146,7 +213,9 @@
     top: 12px;
     left: 12px;
     z-index: 60;
-    width: 220px;
+    width: 240px;
+    max-height: calc(100vh - 24px);
+    overflow: auto;
     padding: 12px;
     border-radius: 12px;
     background: rgba(30, 34, 28, 0.88);
@@ -251,5 +320,11 @@
     border-color: rgba(82, 122, 82, 0.85);
     color: rgba(82, 122, 82, 0.9);
     font-size: 18px;
+  }
+
+  .guide.cat-item {
+    border-color: rgba(70, 130, 150, 0.9);
+    color: rgba(70, 130, 150, 0.95);
+    font-size: 11px;
   }
 </style>

@@ -101,3 +101,30 @@
   justify-content: space-between;
   gap: 14px;
 }
+
+.cloud-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(91, 83, 64, 0.12);
+}
+
+.phone-input {
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(91, 83, 64, 0.28);
+  background: #fff;
+  font-size: 26px;
+  box-sizing: border-box;
+}
+
+.phone-code-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .phone-input {
+    flex: 1;
+  }
+}

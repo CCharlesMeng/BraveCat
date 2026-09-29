@@ -153,6 +153,21 @@ export const registerPortraitRoutes = (
       }
       const { idempotencyKey, photoKey } = parsed.data
 
+      // 产品决策：生成专属形象前硬性要求已绑定手机号（实名合规前置）。
+      if (deps.auth.requirePhoneForGeneration) {
+        const bound = await deps.repositories.identities.listByUser(
+          request.userId,
+        )
+        if (!bound.some((identity) => identity.provider === 'phone')) {
+          return sendError(
+            reply,
+            403,
+            ErrorCode.PhoneBindingRequired,
+            '生成专属形象前需要先绑定手机号',
+          )
+        }
+      }
+
       // 提交幂等：同键重放返回既有 job，不重复预扣、不重复入队。
       const existing = await generationJobs.findByIdempotencyKey(
         request.userId,

@@ -25,10 +25,13 @@
     type HomeActivity,
   } from './lib/homeArt'
   import {
+    customizationForHomeTheme,
     HOME_THEME_PRESETS,
+    listCatItems,
     listCompatiblePieces,
     listHomeFinishes,
     listHomeForms,
+    listHomeThemes,
     resolveHomeScene,
     type HomeCustomization,
   } from '@bravecat/core/homeTheme'
@@ -50,6 +53,7 @@
   import { bridgeGameController } from './lib/gameClient.svelte'
   import { createWebCloudSync } from './lib/cloudSync.svelte'
   import PortraitStudio from './lib/PortraitStudio.svelte'
+  import PhoneAuth from './lib/PhoneAuth.svelte'
   import {
     cloudPortraitAssetPath,
     cloudPortraitName,
@@ -89,8 +93,9 @@
     globalThis.location?.search ?? '',
   )
   // dev 环境 ?themeLab 打开家主题配置器；只覆盖内存选择，不写存档。
-  // ?themeLab=<presetId> 直接预选主题；?themePieces=socket:piece,…
-  // 在预设之上覆盖单个部件，供截图与 QA 复现。
+  // ?themeLab=<presetId|homeThemeId> 直接预选；?themePieces=socket:piece,…
+  // 覆盖旧 form 部件；?catItems=slot:item,… 覆盖 base-plate 用品，
+  // 例：?themeLab=a-clear-sage&catItems=rest:rest-cloud-bed,play:play-soft-tunnel
   const themeLabSearch = new URLSearchParams(
     isDevelopment ? globalThis.location?.search ?? '' : '',
   )
@@ -99,8 +104,19 @@
   const themeLabInitialPreset = HOME_THEME_PRESETS.find(
     ({ id }) => id === themeLabParam,
   )
+  const themeLabInitialTheme = themeLabParam
+    ? customizationForHomeTheme(themeLabParam)
+    : null
   const themeLabPieceOverrides = Object.fromEntries(
     (themeLabSearch.get('themePieces') ?? '')
+      .split(',')
+      .map((entry) => entry.split(':'))
+      .filter((pair): pair is [string, string] => (
+        pair.length === 2 && pair.every(Boolean)
+      )),
+  )
+  const themeLabCatItemOverrides = Object.fromEntries(
+    (themeLabSearch.get('catItems') ?? '')
       .split(',')
       .map((entry) => entry.split(':'))
       .filter((pair): pair is [string, string] => (
@@ -116,7 +132,15 @@
           ?? themeLabInitialPreset.finishId,
         pieces: { ...themeLabInitialPreset.pieces, ...themeLabPieceOverrides },
       }
-      : null,
+      : themeLabInitialTheme
+        ? {
+          ...themeLabInitialTheme,
+          catItems: {
+            ...themeLabInitialTheme.catItems,
+            ...themeLabCatItemOverrides,
+          },
+        }
+        : null,
   )
   let wallPerspectiveBackground = $state<string | null>(null)
   onMount(() => {
@@ -275,6 +299,8 @@
   let shopNotice = $state('')
   let portraitChoicesOpen = $state(false)
   let portraitStudioOpen = $state(false)
+  // 手机号绑定弹窗；reason 为 'generation' 时头部提示生成场景。
+  let phoneAuthOpen = $state<{ reason?: 'generation' } | null>(null)
   let themeChoicesOpen = $state(false)
   let selectedWishDestinationId = $state<DestinationId>(
     controller.catalog.destinations[0].id,
@@ -325,13 +351,19 @@
   const showHomeArtPreview = $derived(
     isDevelopment && !homeScene.shippingEligible,
   )
-  // 有多于一个可选主题/风格/部件才展示「布置家」；生产环境按放行过滤。
+  // 有多于一个可选主题/风格/部件/用品才展示「布置家」；生产环境按放行过滤。
   const themeChoicesAvailable = $derived.by(() => {
     const eligiblePresets = HOME_THEME_PRESETS.filter(({ formId }) => (
       isDevelopment
       || listHomeForms().find(({ id }) => id === formId)?.shippingEligible
     ))
-    if (eligiblePresets.length > 1) return true
+    const eligibleThemes = listHomeThemes().filter(
+      (theme) => isDevelopment || theme.shippingEligible,
+    )
+    if (eligiblePresets.length + eligibleThemes.length > 1) return true
+    if (listCatItems().length > 0 && (isDevelopment || eligibleThemes.length > 0)) {
+      return true
+    }
     if (listHomeFinishes(homeScene.formId).length > 1) return true
     return homeScene.pieces.some(({ socketId }) => (
       listCompatiblePieces(homeScene.formId, socketId)
@@ -1058,12 +1090,26 @@
               alt=""
             />
           {/each}
+          {#each homeScene.catItems as item (item.slot)}
+            <img
+              class="home-art-cat-item"
+              src={item.src}
+              alt=""
+              style={item.style}
+            />
+          {/each}
           {#if !isCatAway}
             {#if homeScene.cat.sprite}
-              <div
+              <picture
                 class="home-art-cat home-art-cat-animated"
                 style={homeScene.cat.sprite.style}
-              ></div>
+              >
+                <source
+                  media="(prefers-reduced-motion: reduce)"
+                  srcset={homeScene.cat.sprite.posterSrc}
+                />
+                <img src={homeScene.cat.sprite.src} alt="" />
+              </picture>
             {:else}
               <img
                 class="home-art-cat"
@@ -1201,13 +1247,39 @@
         </section>
       {/if}
 
-      {#if showHomeArtPreview && homeScene.lighting}
-        <img
-          class="home-art-lighting"
-          src={homeScene.lighting.src}
-          alt=""
-          aria-hidden="true"
-        />
+      {#if showHomeArtPreview}
+        {#if homeScene.catItemOcclusion.length > 0}
+          <div class="home-display-canvas" aria-hidden="true">
+            {#each homeScene.catItemOcclusion as layer (layer.id)}
+              <img
+                class="home-art-cat-item-occlusion"
+                src={layer.src}
+                alt=""
+                style={layer.style}
+              />
+            {/each}
+          </div>
+        {/if}
+        {#if homeScene.catItems.length > 0}
+          <div class="home-display-canvas home-art-cat-item-hotspots">
+            {#each homeScene.catItems as item (item.slot)}
+              <button
+                type="button"
+                class="home-art-cat-item-hotspot"
+                style={item.interactionStyle}
+                aria-label={item.itemName}
+              ></button>
+            {/each}
+          </div>
+        {/if}
+        {#if homeScene.lighting}
+          <img
+            class="home-art-lighting"
+            src={homeScene.lighting.src}
+            alt=""
+            aria-hidden="true"
+          />
+        {/if}
       {/if}
 
       {#if themeLabEnabled}
@@ -1807,6 +1879,15 @@
                   <dd>{cloudSync.creditsBalance ?? '——'}</dd>
                 </div>
               </dl>
+              {#if cloudSync.maskedPhone}
+                <p class="cloud-sync-phone">已绑定 {cloudSync.maskedPhone}</p>
+              {:else}
+                <button
+                  type="button"
+                  class="cloud-sync-bind"
+                  onclick={() => phoneAuthOpen = {}}
+                >绑定手机号，换设备不丢进度</button>
+              {/if}
               {#if cloudSync.notice}
                 <p class="cloud-sync-notice" aria-live="polite">
                   {cloudSync.notice}
@@ -1832,6 +1913,14 @@
     {catName}
     onConfirmed={handlePortraitConfirmed}
     onClose={() => portraitStudioOpen = false}
+    onRequirePhoneBinding={() => phoneAuthOpen = { reason: 'generation' }}
+  />
+{/if}
+{#if phoneAuthOpen && cloudSync}
+  <PhoneAuth
+    {cloudSync}
+    reason={phoneAuthOpen.reason}
+    onClose={() => phoneAuthOpen = null}
   />
 {/if}
 {/if}

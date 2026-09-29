@@ -1,0 +1,354 @@
+{
+  "formId": "f-moonwhite-bluegray",
+  "assetRole": "furnished-base-plate",
+  "freezeLevel": "furnished-base-plate-measured-freeze-v02",
+  "runtimeEligible": false,
+  "canvas": {
+    "width": 1200,
+    "height": 1600
+  },
+  "source": "source--furnished-base-plate--imagegen-v01.png",
+  "normalization": {
+    "method": "cover-center-crop",
+    "sourceWidth": 1024,
+    "sourceHeight": 1536,
+    "outputWidth": 1200,
+    "outputHeight": 1600
+  },
+  "windowAperture": {
+    "x": 132,
+    "y": 209,
+    "width": 325,
+    "height": 523,
+    "right": 456,
+    "bottom": 731
+  },
+  "aperturePixels": 140408,
+  "postcardInnerQuads": [
+    [
+      [
+        700,
+        280
+      ],
+      [
+        790,
+        280
+      ],
+      [
+        790,
+        362
+      ],
+      [
+        700,
+        362
+      ]
+    ],
+    [
+      [
+        870,
+        280
+      ],
+      [
+        960,
+        280
+      ],
+      [
+        960,
+        362
+      ],
+      [
+        870,
+        362
+      ]
+    ],
+    [
+      [
+        700,
+        432
+      ],
+      [
+        790,
+        432
+      ],
+      [
+        790,
+        509
+      ],
+      [
+        700,
+        509
+      ]
+    ],
+    [
+      [
+        870,
+        432
+      ],
+      [
+        960,
+        432
+      ],
+      [
+        960,
+        509
+      ],
+      [
+        870,
+        509
+      ]
+    ],
+    [
+      [
+        700,
+        583
+      ],
+      [
+        790,
+        583
+      ],
+      [
+        790,
+        654
+      ],
+      [
+        700,
+        654
+      ]
+    ],
+    [
+      [
+        870,
+        583
+      ],
+      [
+        960,
+        583
+      ],
+      [
+        960,
+        654
+      ],
+      [
+        870,
+        654
+      ]
+    ]
+  ],
+  "fixedFurnitureBBoxes": {
+    "cabinet": {
+      "x": 672,
+      "y": 760,
+      "width": 455,
+      "height": 235
+    },
+    "rug": {
+      "x": 232,
+      "y": 1165,
+      "width": 790,
+      "height": 372
+    }
+  },
+  "adr": "docs/adr/0011-cat-item-slots-occupy-disjoint-frozen-zones.md",
+  "catItemSlots": {
+    "scratch": {
+      "placement": {
+        "x": 75,
+        "y": 770,
+        "width": 255,
+        "height": 285
+      },
+      "supportSurface": [
+        [
+          99,
+          810
+        ],
+        [
+          306,
+          810
+        ],
+        [
+          306,
+          1037
+        ],
+        [
+          99,
+          1037
+        ]
+      ],
+      "interactionRegion": [
+        [
+          83,
+          782
+        ],
+        [
+          322,
+          782
+        ],
+        [
+          322,
+          1047
+        ],
+        [
+          83,
+          1047
+        ]
+      ],
+      "catAnchor": {
+        "x": 200,
+        "y": 980,
+        "flip": false
+      },
+      "zBand": "cat-item-base"
+    },
+    "feed": {
+      "placement": {
+        "x": 330,
+        "y": 900,
+        "width": 300,
+        "height": 145
+      },
+      "supportSurface": [
+        [
+          370,
+          955
+        ],
+        [
+          590,
+          955
+        ],
+        [
+          590,
+          1025
+        ],
+        [
+          370,
+          1025
+        ]
+      ],
+      "interactionRegion": [
+        [
+          338,
+          912
+        ],
+        [
+          622,
+          912
+        ],
+        [
+          622,
+          1037
+        ],
+        [
+          338,
+          1037
+        ]
+      ],
+      "catAnchor": {
+        "x": 480,
+        "y": 1005,
+        "flip": false
+      },
+      "zBand": "cat-item-base"
+    },
+    "rest": {
+      "placement": {
+        "x": 45,
+        "y": 820,
+        "width": 395,
+        "height": 245
+      },
+      "supportSurface": [
+        [
+          93,
+          890
+        ],
+        [
+          392,
+          890
+        ],
+        [
+          392,
+          1037
+        ],
+        [
+          93,
+          1037
+        ]
+      ],
+      "interactionRegion": [
+        [
+          53,
+          832
+        ],
+        [
+          432,
+          832
+        ],
+        [
+          432,
+          1057
+        ],
+        [
+          53,
+          1057
+        ]
+      ],
+      "catAnchor": {
+        "x": 248,
+        "y": 980,
+        "flip": false
+      },
+      "zBand": "cat-item-base"
+    },
+    "play": {
+      "placement": {
+        "x": 340,
+        "y": 1200,
+        "width": 480,
+        "height": 280
+      },
+      "supportSurface": [
+        [
+          384,
+          1255
+        ],
+        [
+          776,
+          1255
+        ],
+        [
+          776,
+          1450
+        ],
+        [
+          384,
+          1450
+        ]
+      ],
+      "interactionRegion": [
+        [
+          348,
+          1212
+        ],
+        [
+          812,
+          1212
+        ],
+        [
+          812,
+          1472
+        ],
+        [
+          348,
+          1472
+        ]
+      ],
+      "catAnchor": {
+        "x": 580,
+        "y": 1395,
+        "flip": false
+      },
+      "zBand": "cat-item-base"
+    }
+  }
+}

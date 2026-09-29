@@ -47,9 +47,12 @@ F 的本控制图（v01，语义上取代旧竖版
 
 ## 下一步（生产顺序第 3 步）
 
-1. A 与 F 先行：按控制图生产 clean shell、窗洞 aperture alpha/遮罩与
-   逐平面 HomeFinish；逐张核验透视与边缘后实测冻结运行时坐标。
-2. B 在本控制图获用户签收后进入同一流程。
-3. 部件顺序照旧：postcard-display → scratcher → feeding-set →
-   cabinet → window-frame → rug → plant；每件 base + 必要 occlusion +
-   锚点/支撑/排除 QA 图齐备才可上架。
+2026-08-13 产品方向已改为“主题固定家具，小猫用品可换”。现有几何与实测
+坐标继续有效，但 socket 角色重新分类：
+
+1. 窗框、postcard-display、柜子、主地毯和植物成为 Home Theme 内部固定
+   图层；仍需 base/occlusion 和锚点 QA，但不进入玩家选择或存档。
+2. scratcher 与 feeding-set 迁移为 `scratch`、`feed` Cat Item adapter。
+3. 新增 `rest` 与 `play` 活动位置，分别生产猫窝与玩具；位置必须通过真实
+   `sleep/stretch/play/reach/sniff` Pose 验收。
+4. 同一 Cat Item 必须覆盖 A/B/F 三个主题 adapter 后才可上架。

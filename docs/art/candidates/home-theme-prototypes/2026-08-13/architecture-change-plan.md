@@ -1,5 +1,11 @@
 # Home Theme 架构变更规划
 
+> **已被产品方向部分取代**：原计划中的逐 socket 家具换件、兼容过滤与
+> “布置家”部件 UI 不再继续。当前迁移规划见
+> `cat-item-architecture-change-plan.md`，决策见
+> `docs/adr/0010-home-themes-fix-furniture-cat-items-vary.md`。本文保留已完成
+> 切片和历史实施事实，不应继续驱动家具换件开发。
+
 状态：规划。承接同目录 `modular-composition-contract.md` 的分层契约，
 回答"代码库需要改什么、按什么顺序改"。
 

@@ -117,3 +117,52 @@ test('相册里提供存档导出入口', async ({ page }) => {
     page.locator('.save-transfer input[type="file"]'),
   ).toBeAttached()
 })
+
+/**
+ * Theme Lab（?themeLab）只改内存选择、不写存档，不能用来验持久化。
+ * 本用例走 HomeThemePicker → applyHomeCustomization 的真实存档路径。
+ * play 槽目前仅有 play-soft-tunnel 一件可上架用品，无法「换用品」；
+ * 改为切到主题 A 后 reload，断言 homeThemeId + 默认 catItems 仍在。
+ */
+test('布置家切到主题 A 后 reload 选择仍在', async ({ page }) => {
+  await seedSave(page)
+  await page.goto('/?homeActivity=sleep')
+  await expect(page.locator('.room')).toBeVisible()
+
+  await page.getByRole('button', { name: '布置家' }).click()
+  const themePanel = page.getByLabel('布置家')
+  await expect(themePanel).toBeVisible()
+  await themePanel.getByRole('button', { name: '鼠尾草清水小屋' }).click()
+
+  await expect(
+    page.locator('.room img[src*="/dev-art/home-theme/a-clear-sage/"]'),
+  ).not.toHaveCount(0)
+  await expect(
+    page.locator(
+      '.room img[src*="cat-item--play-soft-tunnel--base.png"]',
+    ),
+  ).toHaveCount(1)
+
+  await page.reload()
+  await expect(page.locator('.room')).toBeVisible()
+  await expect(
+    page.locator(
+      '.room img[src*="/dev-art/home-theme/a-clear-sage/base-plate"]',
+    ),
+  ).toHaveCount(1)
+  await expect(
+    page.locator(
+      '.room img[src*="cat-item--rest-cloud-bed--base.png"]',
+    ),
+  ).toHaveCount(1)
+  await expect(
+    page.locator(
+      '.room img[src*="cat-item--play-soft-tunnel--base.png"]',
+    ),
+  ).toHaveCount(1)
+
+  await page.getByRole('button', { name: '布置家' }).click()
+  await expect(
+    page.getByLabel('布置家').getByRole('button', { name: '鼠尾草清水小屋' }),
+  ).toBeDisabled()
+})

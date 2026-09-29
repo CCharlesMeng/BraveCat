@@ -1,5 +1,10 @@
 # Home 场景在运行时由选择 ID 解析，存档只存 ID
 
+> Status: selection shape superseded by
+> [ADR-0010](./0010-home-themes-fix-furniture-cat-items-vary.md). “存档只存选择
+> ID、不存派生坐标”仍成立；逐 socket 家具 `pieceId` 改为按猫活动位置保存
+> `catItemId`。
+
 Home Theme（家主题）与 Home Part（家中部件）落地后，存档里的
 `homeCustomization` 只保存 `presetId`、`formId`、`finishId` 和逐
 socket 的 `pieceId`，不保存任何派生坐标、图层顺序或图片路径。渲染

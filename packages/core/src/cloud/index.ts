@@ -31,6 +31,7 @@ import {
 import type {
   ApiErrorCode,
   ApiErrorResponse,
+  AuthMeResponse,
   AuthTokenResponse,
   ConfirmGenerationResponse,
   CreditBalanceResponse,
@@ -41,10 +42,17 @@ import type {
   GetSaveResponse,
   ListPortraitsResponse,
   MetaResponse,
+  PhoneBindConflictDetails,
+  PhoneBindRequest,
+  PhoneBindResponse,
+  PhoneLoginRequest,
+  PhoneLoginResponse,
   PortraitPose,
   PortraitPoseImageResponse,
   PutSaveRequest,
   PutSaveResponse,
+  SendSmsCodeRequest,
+  SmsCodePurpose,
   SubmitGenerationRequest,
   UploadPortraitPhotoRequest,
   UploadPortraitPhotoResponse,
@@ -65,8 +73,22 @@ export type {
   PortraitPhotoContentType,
   PortraitPose,
   SaveDocument,
+  SmsCodePurpose,
   UserPortrait,
 }
+
+/** 冲突弹窗展示用的目标账号脱敏信息（409 PHONE_ALREADY_BOUND 的 details）。 */
+export type PhoneBindExistingAccount =
+  PhoneBindConflictDetails['existingAccount']
+
+export type BindPhoneResult =
+  /** 绑定成功（含幂等重绑同号）。 */
+  | { status: 'bound'; maskedPhone: string }
+  /** 手机号已属其他账号：客户端弹冲突二选一。 */
+  | { status: 'conflict'; existingAccount: PhoneBindExistingAccount }
+
+/** GET /v1/auth/me 里的单个已绑定身份（外部 id 已脱敏）。 */
+export type AuthIdentitySummary = AuthMeResponse['identities'][number]
 
 // 错误码字面量经类型注解与 contracts 对齐：contracts 改名时这里编译失败。
 // 不直接 import ErrorCode 常量，避免把 contracts 主入口的 zod 带进客户端 bundle。
@@ -74,6 +96,7 @@ const SAVE_NOT_FOUND: ApiErrorCode = 'SAVE_NOT_FOUND'
 const SAVE_SCHEMA_TOO_NEW: ApiErrorCode = 'SAVE_SCHEMA_TOO_NEW'
 const INTERNAL_ERROR: ApiErrorCode = 'INTERNAL_ERROR'
 const VALIDATION_FAILED: ApiErrorCode = 'VALIDATION_FAILED'
+const PHONE_ALREADY_BOUND: ApiErrorCode = 'PHONE_ALREADY_BOUND'
 
 const BASE64_CHARS =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
@@ -263,6 +286,118 @@ export const createCloudSyncClient = (options: CloudSyncClientOptions) => {
     }
     await options.credentials.save(credentials)
     return credentials
+  }
+
+  /**
+   * 请求发送短信验证码（无认证）。限流（60s 冷却 / 每日上限）时抛
+   * CloudSyncError（code = SMS_RATE_LIMITED），短信通道未接入时
+   * code = SMS_UNAVAILABLE（HTTP 503）。
+   */
+  const requestSmsCode = async (input: {
+    phoneNumber: string
+    purpose: SmsCodePurpose
+  }): Promise<void> => {
+    const payload: SendSmsCodeRequest = input
+    const response = await options.fetch(url('/auth/sms-code'), {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (response.status !== 204) return throwFrom(response)
+  }
+
+  /** 409 冲突 details 的防御性解析：字段缺失时给保守缺省值。 */
+  const readExistingAccount = (
+    details: unknown,
+  ): PhoneBindExistingAccount => {
+    const raw =
+      typeof details === 'object'
+      && details !== null
+      && 'existingAccount' in details
+      && typeof details.existingAccount === 'object'
+      && details.existingAccount !== null
+        ? (details.existingAccount as Partial<PhoneBindExistingAccount>)
+        : {}
+    return {
+      createdAt: typeof raw.createdAt === 'number' ? raw.createdAt : 0,
+      hasSave: raw.hasSave === true,
+      creditBalance:
+        typeof raw.creditBalance === 'number' ? raw.creditBalance : 0,
+    }
+  }
+
+  /**
+   * 把手机号绑定到当前账号（需已有凭证）。验证码用途须为 'bind'。
+   * 手机号已属其他账号时返回 conflict（不抛错），由调用方走冲突弹窗；
+   * 验证码错误等其余失败照常抛 CloudSyncError。
+   */
+  const bindPhone = async (input: {
+    phoneNumber: string
+    verificationCode: string
+  }): Promise<BindPhoneResult> => {
+    const { token } = await requireCredentials()
+    const payload: PhoneBindRequest = input
+    const response = await options.fetch(url('/auth/bind/phone'), {
+      method: 'POST',
+      headers: { ...bearer(token), 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (response.status === 200) {
+      const body = (await response.json()) as PhoneBindResponse
+      return { status: 'bound', maskedPhone: body.maskedPhone }
+    }
+    const error = await parseError(response)
+    if (response.status === 409 && error.code === PHONE_ALREADY_BOUND) {
+      return {
+        status: 'conflict',
+        existingAccount: readExistingAccount(error.details),
+      }
+    }
+    throw new CloudSyncError(
+      error.code,
+      error.message,
+      response.status,
+      error.details,
+    )
+  }
+
+  /**
+   * 手机号验证码登录（登录注册合一：查无账号自动建号）。
+   * 成功后**覆盖持久化凭证**——调用方须在调用前完成本地存档备份
+   * （换绑冲突流程的数据安全前提），并随后自行触发启动同步逻辑。
+   */
+  const loginWithPhone = async (input: {
+    phoneNumber: string
+    verificationCode: string
+  }): Promise<{ credentials: CloudCredentials; isNewUser: boolean }> => {
+    const payload: PhoneLoginRequest = input
+    const response = await options.fetch(url('/auth/login/phone'), {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (response.status !== 200) return throwFrom(response)
+    const body = (await response.json()) as PhoneLoginResponse
+    const credentials: CloudCredentials = {
+      userId: body.userId,
+      token: body.token,
+    }
+    await options.credentials.save(credentials)
+    return { credentials, isNewUser: body.isNewUser }
+  }
+
+  /** 当前账号与已绑定身份（脱敏），供「已绑定 138****8000」展示。 */
+  const getAuthIdentities = async (): Promise<{
+    userId: string
+    identities: AuthIdentitySummary[]
+  }> => {
+    const { token } = await requireCredentials()
+    const response = await options.fetch(url('/auth/me'), {
+      headers: bearer(token),
+    })
+    if (response.status !== 200) return throwFrom(response)
+    const body = (await response.json()) as AuthMeResponse
+    return { userId: body.userId, identities: body.identities }
   }
 
   /** 上传整份存档（服务端 LWW）；exportedAt 语义由调用方决定。 */
@@ -478,6 +613,10 @@ export const createCloudSyncClient = (options: CloudSyncClientOptions) => {
 
   return {
     ensureGuestAccount,
+    requestSmsCode,
+    bindPhone,
+    loginWithPhone,
+    getAuthIdentities,
     pushSave,
     pullSave,
     getCreditsBalance,

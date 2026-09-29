@@ -5,9 +5,9 @@
 ## 术语
 
 产品对用户可称“家主题”，内部 canonical term 为 `HomeTheme`。它不是单张
-背景皮肤，而是一套协调 preset；它选择房间形态、表面风格以及各物件插槽
-的默认资产。用户采用主题后仍可独立替换兼容的窗框、相框、猫爬架、碗、
-柜子和地毯。
+背景皮肤，而是一套完整固定空间；它同时规定房间形态、表面风格、窗框、
+旅行陈列、柜子、主地毯和植物。玩家不逐件替换家具，只选择会改变小猫吃饭、
+睡觉、磨爪和玩耍行为的 `CatItem`（小猫用品）。
 
 切换 Home Theme 只改变家的空间呈现，不改变猫、旅行、明信片、纪念品、
 小鱼干或行囊进度。主题属于整个 Home，不属于当前查看的某只猫。
@@ -56,40 +56,44 @@
 - 主题重点是通透、植物和昼夜天空，不复用当前“单窗奶油墙”体验。
 - `v01` 的卡片四边形为手写坐标，与右墙灭点不共面，已作废。
 
-## 分层 Home 模块
+## Home Theme 与 Cat Item 模块
 
-详细契约见 `modular-composition-contract.md`。建议把组合、兼容性与投影
-集中在一个深模块后面，而不是让 `App.svelte` 分别判断每套主题和物件。
+当前契约见 `cat-item-composition-contract.md`；旧家具换件方案
+`modular-composition-contract.md` 已否决。建议把主题合成、用品主题适配与
+投影集中在一个深模块后面，而不是让调用者判断房间尺寸或兼容性。
 
 外部接口保持很小：
 
 ```ts
-listHomeForms(): readonly HomeFormSummary[]
-listCompatiblePieces(
-  formId: HomeFormId,
-  socketId: HomeSocketId,
-): readonly HomePieceSummary[]
-resolveHomeScene(selection: HomeCustomization): ResolvedHomeScene
+listHomeThemes(): readonly HomeThemeSummary[]
+listCatItems(activity: CatItemActivity): readonly CatItemSummary[]
+resolveHomeScene(
+  themeId: HomeThemeId,
+  catItems: CatItemSelection,
+  dynamic: HomeDynamicContext,
+): ResolvedHomeScene
 ```
 
-`HomeForm` 冻结房间物理结构和类型化 socket；`HomeFinish` 提供连续表面；
-透明 `HomePiece` adapter 填充窗框、陈列、抓柱、食盆、柜子、地毯等插槽；
-`HomeThemePreset` 只是这些选择的一套默认组合。
+每个 Home Theme adapter 内部拥有完整房间、固定家具、陈列投影、活动位置和
+遮挡。Cat Item 只占用 `scratch`、`feed`、`rest`、`play` 四类猫活动位置；
+同一用品 ID 由每个主题提供适配外观。
 
 ## 切换行为
 
-- `HomeCustomization` 存在 Home 级设置中；所有猫共享。
+- `homeThemeId` 与四类 Cat Item 选择存在 Home 级设置中；所有猫共享。
 - 首次迁移默认指向现有主题，不改变任何游戏进度。
-- 选择主题 preset 后可以继续单换某个兼容 HomePiece。
-- 更换 HomeForm 时保留兼容物件，不兼容物件回退到新 form 默认值。
+- 选择主题会完整替换房间和固定家具，不迁移窗框、柜子或地毯。
+- 更换主题时保留 Cat Item ID，由新主题 adapter 提供协调且尺寸正确的外观。
 - 已收藏内容和陈列顺序始终不变，只重新投影到解析后的场景。
 - 主题选择器提供静态预览和确认，不在切换前写入存档。
-- form 或 piece 缺少 cat/display/interaction 几何时不得上架。
+- 主题缺少陈列/互动几何，或用品缺少任一上架主题 adapter 时不得上架。
 
 ## 下一步门槛
 
 1. A、B、F 已纳入备选；重新审阅 D v02 与 E v02 后决定是否继续保留。
 2. 每套先冻结结构控制图，再生成美术。
-3. 两套真实 HomeForm adapter 存在后再建立 scene resolver seam；避免只有一个实现时
-   提前抽象。
-4. 最后用 dev-only `?homeTheme=` 切换真实首屏，验证猫活动与完整陈列状态。
+3. 先把现有抓柱与食盆转为 `scratch`、`feed` 默认用品，再设计 `rest` 猫窝
+   和 `play` 隧道。
+4. 两套真实主题和同一用品的两个主题 adapter 存在后，再建立 scene resolver
+   seam；避免只有一个实现时提前抽象。
+5. 最后用真实猫 Pose 验证用品互动与完整陈列状态。

@@ -1,10 +1,12 @@
 /**
  * 家场景像素回归截图：用固定种子存档和固定 homeActivity 捕获一组
  * 确定性截图，供 homeTheme 重构前后逐像素对比。
+ * 另捕获 A/B/F base-plate + Cat Item Theme Lab 预览（内存选择，不写存档）。
  *
  * 用法：
  *   node scripts/capture-home-scene-regression.mjs \
- *     --origin http://127.0.0.1:5199/ --out /tmp/bravecat-slice0-qa/before
+ *     --origin http://127.0.0.1:5173/ \
+ *     --out docs/art/reviews/home-theme/base-plate-runtime-qa
  */
 import { spawn } from 'node:child_process'
 import { once } from 'node:events'
@@ -272,6 +274,32 @@ try {
     souvenirCount: 3,
     away: true,
   })
+
+  // A/B/F base-plate + Cat Items：Theme Lab 只改内存，适合截图基线。
+  // 推荐输出：docs/art/reviews/home-theme/base-plate-runtime-qa/
+  const basePlateThemes = [
+    'a-clear-sage',
+    'b-warm-walnut-gallery',
+    'f-moonwhite-bluegray',
+  ]
+  const themeLabUrl = (themeId, activity, extras = '') => (
+    `${origin}/?themeLab=${themeId}`
+    + '&catItems=rest:rest-cloud-bed,play:play-soft-tunnel'
+    + `&homeActivity=${activity}${extras}`
+  )
+  await seedState(0, 0)
+  await mkdir(path.join(outputRoot, 'base-plate'), { recursive: true })
+  for (const themeId of basePlateThemes) {
+    for (const activity of ['sleep', 'play']) {
+      await capture(
+        `base-plate/${themeId}--${activity}`,
+        themeLabUrl(themeId, activity),
+        { postcardCount: 0, souvenirCount: 0, away: false },
+      )
+    }
+  }
+  // 时段由游戏时钟决定（无 homeTime 查询参数）；文件名不声称 noon。
+
   socket.close()
   console.log(`done: ${outputRoot}`)
 } finally {

@@ -1,8 +1,10 @@
 import type {
+  AuthIdentityRecord,
   CreditEntry,
   GenerationJobRecord,
   LedgerEntry,
   Repositories,
+  SmsCodeRecord,
   StoredSave,
   UserPortraitRecord,
   UserRecord,
@@ -12,6 +14,8 @@ import type {
 export const createMemoryRepositories = (): Repositories => {
   const users = new Map<string, UserRecord>()
   const tokensByHash = new Map<string, string>()
+  const identities: AuthIdentityRecord[] = []
+  const smsCodes: SmsCodeRecord[] = []
   const saves = new Map<string, StoredSave>()
   const ledgerEntries: LedgerEntry[] = []
   const ledgerKeys = new Set<string>()
@@ -38,6 +42,72 @@ export const createMemoryRepositories = (): Repositories => {
         tokensByHash.set(tokenHash, userId)
       },
       findUserIdByTokenHash: async (tokenHash) => tokensByHash.get(tokenHash),
+    },
+    identities: {
+      bind: async (identity) => {
+        const conflict = identities.some(
+          (existing) =>
+            existing.provider === identity.provider
+            && existing.externalId === identity.externalId,
+        )
+        if (conflict) {
+          throw new Error(
+            `身份已绑定：${identity.provider}/${identity.externalId}`,
+          )
+        }
+        identities.push({ ...identity })
+      },
+      findUserIdByIdentity: async (provider, externalId) =>
+        identities.find(
+          (identity) =>
+            identity.provider === provider
+            && identity.externalId === externalId,
+        )?.userId,
+      listByUser: async (userId) =>
+        identities
+          .filter((identity) => identity.userId === userId)
+          .map((identity) => ({ ...identity })),
+    },
+    smsCodes: {
+      insert: async (record) => {
+        smsCodes.push({ ...record })
+      },
+      findLatest: async (phone, purpose) => {
+        const matched = smsCodes
+          .filter((record) => record.phone === phone && record.purpose === purpose)
+          .sort((left, right) => right.createdAt - left.createdAt)[0]
+        return matched ? { ...matched } : undefined
+      },
+      findLastSentAt: async (phone) =>
+        smsCodes
+          .filter((record) => record.phone === phone)
+          .reduce<number | undefined>(
+            (latest, record) =>
+              latest === undefined ? record.createdAt : Math.max(latest, record.createdAt),
+            undefined,
+          ),
+      countSentSince: async (phone, since) =>
+        smsCodes.filter(
+          (record) => record.phone === phone && record.createdAt >= since,
+        ).length,
+      incrementAttempts: async (phone, purpose) => {
+        const latest = smsCodes
+          .filter((record) => record.phone === phone && record.purpose === purpose)
+          .sort((left, right) => right.createdAt - left.createdAt)[0]
+        if (latest) {
+          latest.attempts += 1
+        }
+      },
+      deleteAll: async (phone, purpose) => {
+        for (let index = smsCodes.length - 1; index >= 0; index -= 1) {
+          if (
+            smsCodes[index].phone === phone
+            && smsCodes[index].purpose === purpose
+          ) {
+            smsCodes.splice(index, 1)
+          }
+        }
+      },
     },
     saves: {
       get: async (userId) => saves.get(userId),

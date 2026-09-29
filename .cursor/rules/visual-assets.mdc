@@ -1,0 +1,12 @@
+---
+description: Require durable approved assets for in-game visual objects
+alwaysApply: true
+---
+
+# Visual Asset Production
+
+- Do not represent a visible in-game object, fixture, prop, landmark, or collectible with CSS-drawn stand-ins when its visual design matters to the product.
+- Produce versioned image assets, keep candidates outside runtime directories, and only integrate approved assets into `public/`.
+- CSS may handle layout, responsive positioning, interaction states, and subtle effects; it must not substitute for missing game art.
+- Before integrating generated art, verify its physical structure, perspective, lighting, transparency, dimensions, and filename/version convention against the relevant art documentation.
+- When a requested visual asset has not been approved, generate and save a candidate for review rather than silently shipping a placeholder.

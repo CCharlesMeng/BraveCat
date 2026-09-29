@@ -119,12 +119,81 @@ export type HomeFinishDefinition = {
   }
 }
 
+/** 首版四个固定小猫用品活动位置。 */
+export type CatItemSlot = 'scratch' | 'feed' | 'rest' | 'play'
+
+/** 某 Cat Item 在一个 Home Theme 上的主题专属适配。 */
+export type CatItemThemeAdapter = {
+  base: string
+  foregroundOcclusion?: string
+  placement: CanvasRect
+  supportSurface: readonly CanvasPoint[]
+  interactionRegion: readonly CanvasPoint[]
+  catAnchor: { x: number, y: number, flip?: boolean }
+}
+
+/**
+ * 跨主题稳定的小猫用品定义。同一 id 在不同主题由 adapter 适配外观与落位。
+ * 缺少任一已注册 base-plate 主题的 adapter 时不得出现在 listCatItems。
+ */
+export type CatItemDefinition = {
+  id: string
+  slot: CatItemSlot
+  name: string
+  adapters: Readonly<Partial<Record<HomeThemeId, CatItemThemeAdapter>>>
+}
+
+/**
+ * base-plate 主题：固定家具烘焙在基底板上，玩家只选 Cat Item。
+ * 与旧 HomeForm（form + finish + piece）并存；resolve 按 homeThemeId 分流。
+ */
+export type HomeThemeDefinition = {
+  kind: 'base-plate'
+  id: HomeThemeId
+  name: string
+  shippingEligible: boolean
+  canvas: CanvasSize
+  basePlate: string
+  exterior: Readonly<Record<HomeTime, string>> | null
+  lighting: Readonly<Record<HomeTime, string | null>>
+  postcardDisplay: {
+    slots: readonly ProjectedDisplayRect[]
+    wallPlane: {
+      cornerX: number
+    }
+  }
+  souvenirDisplay: {
+    anchors: readonly DisplayRect[]
+    tableSkewY: number
+  }
+  treatPlacement: CanvasRect
+  /** 无对应槽位用品时的默认猫落位。 */
+  catPlacements: Readonly<Record<HomeActivity, CatPlacement>>
+  catPaintBounds: Readonly<Partial<Record<HomeActivity, PaintBounds>>>
+  catAnimationsByPortrait: Readonly<Record<
+    string,
+    Readonly<Record<HomeActivity, {
+      src: string
+      posterSrc: string
+      frameCount: number
+    }>>
+  >>
+  /** 本主题开放的 Cat Item 槽位（本轮 rest / play）。 */
+  slots: readonly CatItemSlot[]
+  /** 各槽缺省用品 id。 */
+  defaultCatItems: Readonly<Partial<Record<CatItemSlot, string>>>
+}
+
 /** 玩家的家外观选择。只含 ID，不含派生坐标或图片路径。 */
 export type HomeCustomization = {
   presetId?: HomeThemeId
+  /** base-plate 主题 id；命中注册表时走新解析路径。 */
+  homeThemeId?: HomeThemeId
   formId: HomeFormId
   finishId: HomeFinishId
   pieces: Readonly<Record<string, string>>
+  /** 按槽位选择的小猫用品；仅 base-plate 路径消费。 */
+  catItems?: Readonly<Partial<Record<CatItemSlot, string>>>
 }
 
 /** 解析场景所需的动态上下文；不属于换肤资产。 */
@@ -162,7 +231,11 @@ export type HomeFormDefinition = {
   catPaintBounds: Readonly<Partial<Record<HomeActivity, PaintBounds>>>
   catAnimationsByPortrait: Readonly<Record<
     string,
-    Readonly<Record<HomeActivity, { src: string; frameCount: number }>>
+    Readonly<Record<HomeActivity, {
+      src: string
+      posterSrc: string
+      frameCount: number
+    }>>
   >>
   treatPlacement: CanvasRect
   postcardDisplay: {
@@ -183,12 +256,24 @@ export type HomeFormDefinition = {
   }
 }
 
+/** 解析后可点击的小猫用品层（base + 热区）。 */
+export type ResolvedCatItemLayer = {
+  slot: CatItemSlot
+  itemId: string
+  itemName: string
+  src: string
+  style: string
+  interactionStyle: string
+}
+
 /**
  * 渲染层唯一消费的场景描述。调用方不拼接层、不认识具体 form 的坐标。
  */
 export type ResolvedHomeScene = {
   formId: HomeFormId
   finishId: HomeFinishId
+  /** base-plate 路径下等于主题 id；旧 form 路径为 null。 */
+  homeThemeId: HomeThemeId | null
   canvas: CanvasSize
   shippingEligible: boolean
   /** 猫与动态内容之下的静态图层，按 z 序排列；shell 层 id 固定为 'shell'。 */
@@ -202,12 +287,20 @@ export type ResolvedHomeScene = {
     pieceId: string
     pieceName: string
   }[]
+  /**
+   * Cat Item base 层（猫之下）。旧 form 路径返回空数组。
+   * 图层次序：exterior → shell/base plate → catItems → cat → …
+   */
+  catItems: readonly ResolvedCatItemLayer[]
+  /** Cat Item 前景遮挡（明信片/纪念品/Treat 之上、lighting 之下）。 */
+  catItemOcclusion: readonly (SceneImageLayer & { style: string })[]
   lighting: SceneImageLayer | null
   cat: {
     placement: CatPlacement
     imageStyle: string
     sprite: {
       src: string
+      posterSrc: string
       frameCount: number
       style: string
     } | null

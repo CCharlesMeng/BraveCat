@@ -21,6 +21,7 @@ import {
 import { createBaselinePortraitQa } from './aigc/qa.js'
 import { createInProcessJobQueue } from './aigc/queue.js'
 import { buildApp } from './app.js'
+import { createLoggingSmsProvider } from './auth/fakes.js'
 import { defaultPlatformMeta, loadConfig } from './config.js'
 import { createRateCapValidator } from './economy/validator.js'
 import { createMemoryRepositories } from './repositories/memory.js'
@@ -32,6 +33,18 @@ if (!Number.isInteger(initialCredits) || initialCredits < 0) {
   console.error(`DEV_INITIAL_CREDITS 需要是非负整数：${process.env.DEV_INITIAL_CREDITS}`)
   process.exit(1)
 }
+
+// 演示环境不真发短信：验证码固定（默认 000000）并打进日志。
+const smsFixedCode = process.env.DEV_SMS_FIXED_CODE ?? '000000'
+if (!/^\d{6}$/.test(smsFixedCode)) {
+  console.error(`DEV_SMS_FIXED_CODE 需要是 6 位数字：${process.env.DEV_SMS_FIXED_CODE}`)
+  process.exit(1)
+}
+
+// 生成前置的手机号绑定校验默认开启，本地也能演示完整绑定引导流程。
+const requirePhoneForGeneration = !['0', 'false', 'off'].includes(
+  (process.env.DEV_REQUIRE_PHONE_FOR_GENERATION ?? '').toLowerCase(),
+)
 
 const repositories = createMemoryRepositories()
 
@@ -93,6 +106,11 @@ const app = buildApp({
     queue,
     purchaseVerifier: createStubPurchaseVerifier(),
   },
+  auth: {
+    sms: createLoggingSmsProvider(),
+    generateSmsCode: () => smsFixedCode,
+    requirePhoneForGeneration,
+  },
   logger: true,
 })
 
@@ -101,7 +119,9 @@ app
   .then(() => {
     console.log(
       `bravecat api（演示模式：内存存储 + fake providers）监听 :${config.port}；` +
-        `新游客自动赠送 ${initialCredits} 次生成次数`,
+        `新游客自动赠送 ${initialCredits} 次生成次数；` +
+        `短信验证码固定为 ${smsFixedCode}；` +
+        `生成前置手机号校验${requirePhoneForGeneration ? '开启' : '关闭'}`,
     )
   })
   .catch((error) => {

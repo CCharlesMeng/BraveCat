@@ -15,6 +15,12 @@ export const ErrorCode = {
   PurchaseUnavailable: 'PURCHASE_UNAVAILABLE',
   UploadNotFound: 'UPLOAD_NOT_FOUND',
   GenerationJobNotConfirmable: 'GENERATION_JOB_NOT_CONFIRMABLE',
+  SmsRateLimited: 'SMS_RATE_LIMITED',
+  SmsCodeInvalid: 'SMS_CODE_INVALID',
+  SmsUnavailable: 'SMS_UNAVAILABLE',
+  PhoneAlreadyBound: 'PHONE_ALREADY_BOUND',
+  AccountAlreadyHasPhone: 'ACCOUNT_ALREADY_HAS_PHONE',
+  PhoneBindingRequired: 'PHONE_BINDING_REQUIRED',
   Internal: 'INTERNAL_ERROR',
 } as const
 

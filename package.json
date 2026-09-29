@@ -28,7 +28,9 @@
     "assets:check-landmark-staging": "node scripts/integrate-landmark-staging.mjs --check",
     "assets:integrate-latest-art": "node scripts/integrate-latest-art.mjs",
     "assets:check-latest-art": "node scripts/integrate-latest-art.mjs --check",
+    "assets:build-home-cat-animations": "node scripts/build-home-cat-animations.mjs",
     "assets:check-development-home-art": "node scripts/check-development-home-art.mjs",
+    "assets:check-base-plate-home-art": "node scripts/check-base-plate-home-art.mjs",
     "assets:publish": "node scripts/publish-assets-oss.mjs",
     "assets:build-home-v4-candidate": "node scripts/build-home-v4-candidate.mjs",
     "assets:integrate-home-v4": "node scripts/build-home-v4-candidate.mjs --integrate",
@@ -52,6 +54,7 @@
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1109.0",
     "@types/node": "^24.13.2",
+    "ffmpeg-static": "^5.3.0",
     "sharp": "^0.35.3"
   }
 }

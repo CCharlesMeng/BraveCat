@@ -1,5 +1,10 @@
 # Home Theme 分层合成契约
 
+> **已否决 / Superseded**：2026-08-13 决定不再向玩家开放逐件家具替换。
+> 当前契约见 `cat-item-composition-contract.md`，决策见
+> `docs/adr/0010-home-themes-fix-furniture-cat-items-vary.md`。本文只保留为
+> 方案演进证据，不得作为实现依据。
+
 状态：设计提案。目标是同时支持整体主题切换和兼容物件的独立替换，避免
 “一个主题一张整图”。代码库层面的落地路径见同目录
 `architecture-change-plan.md`。

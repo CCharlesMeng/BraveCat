@@ -62,6 +62,115 @@ export const createPostgresRepositories = (pool: pg.Pool): Repositories => ({
       return rows[0]?.user_id
     },
   },
+  identities: {
+    bind: async (identity) => {
+      // unique (provider, external_id) 兜底并发冲突：违反约束时原样抛错。
+      await pool.query(
+        `insert into auth_identities (user_id, provider, external_id, created_at)
+         values ($1, $2, $3, $4)`,
+        [
+          identity.userId,
+          identity.provider,
+          identity.externalId,
+          identity.createdAt,
+        ],
+      )
+    },
+    findUserIdByIdentity: async (provider, externalId) => {
+      const { rows } = await pool.query(
+        `select user_id from auth_identities
+         where provider = $1 and external_id = $2`,
+        [provider, externalId],
+      )
+      return rows[0]?.user_id
+    },
+    listByUser: async (userId) => {
+      const { rows } = await pool.query(
+        `select user_id, provider, external_id, created_at
+         from auth_identities where user_id = $1 order by id`,
+        [userId],
+      )
+      return rows.map((row) => ({
+        userId: row.user_id,
+        provider: row.provider,
+        externalId: row.external_id,
+        createdAt: Number(row.created_at),
+      }))
+    },
+  },
+  smsCodes: {
+    insert: async (record) => {
+      await pool.query(
+        `insert into sms_verification_codes
+           (phone, purpose, code_hash, expires_at, attempts, created_at)
+         values ($1, $2, $3, $4, $5, $6)`,
+        [
+          record.phone,
+          record.purpose,
+          record.codeHash,
+          record.expiresAt,
+          record.attempts,
+          record.createdAt,
+        ],
+      )
+    },
+    findLatest: async (phone, purpose) => {
+      const { rows } = await pool.query(
+        `select phone, purpose, code_hash, expires_at, attempts, created_at
+         from sms_verification_codes
+         where phone = $1 and purpose = $2
+         order by created_at desc, id desc limit 1`,
+        [phone, purpose],
+      )
+      const row = rows[0]
+      if (!row) {
+        return undefined
+      }
+      return {
+        phone: row.phone,
+        purpose: row.purpose,
+        codeHash: row.code_hash,
+        expiresAt: Number(row.expires_at),
+        attempts: Number(row.attempts),
+        createdAt: Number(row.created_at),
+      }
+    },
+    findLastSentAt: async (phone) => {
+      const { rows } = await pool.query(
+        `select max(created_at) as last_sent_at
+         from sms_verification_codes where phone = $1`,
+        [phone],
+      )
+      const value = rows[0]?.last_sent_at
+      return value === null || value === undefined ? undefined : Number(value)
+    },
+    countSentSince: async (phone, since) => {
+      const { rows } = await pool.query(
+        `select count(*) as sent
+         from sms_verification_codes
+         where phone = $1 and created_at >= $2`,
+        [phone, since],
+      )
+      return Number(rows[0].sent)
+    },
+    incrementAttempts: async (phone, purpose) => {
+      await pool.query(
+        `update sms_verification_codes set attempts = attempts + 1
+         where id = (
+           select id from sms_verification_codes
+           where phone = $1 and purpose = $2
+           order by created_at desc, id desc limit 1
+         )`,
+        [phone, purpose],
+      )
+    },
+    deleteAll: async (phone, purpose) => {
+      await pool.query(
+        'delete from sms_verification_codes where phone = $1 and purpose = $2',
+        [phone, purpose],
+      )
+    },
+  },
   saves: {
     get: async (userId) => {
       const { rows } = await pool.query(

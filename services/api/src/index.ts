@@ -12,6 +12,8 @@ import {
   createUnavailablePurchaseVerifier,
 } from './aigc/unavailable.js'
 import { buildApp } from './app.js'
+import { createAliyunSmsProviderFromEnv } from './auth/adapters/aliyunSms.js'
+import { createUnavailableSmsProvider } from './auth/unavailable.js'
 import { defaultPlatformMeta, loadConfig } from './config.js'
 import { createRateCapValidator } from './economy/validator.js'
 import { createPostgresRepositories } from './repositories/postgres.js'
@@ -44,6 +46,12 @@ for (const [name, configured] of [
   }
 }
 
+// 短信服务同套路：环境变量齐全用阿里云 adapter，否则发码接口回 503。
+const smsProvider = createAliyunSmsProviderFromEnv(process.env)
+if (!smsProvider) {
+  console.warn('短信服务（ALIYUN_SMS_*）未配置，使用占位实现（发码接口回 503）')
+}
+
 const storage = s3Storage ?? createMemoryAssetStorage()
 const executor = createGenerationJobExecutor({
   repositories,
@@ -67,6 +75,11 @@ const app = buildApp({
     queue,
     // 生产核销 adapter（Apple StoreKit / 微信支付）在 Phase 2/4 接入前保持 503。
     purchaseVerifier: createUnavailablePurchaseVerifier(),
+  },
+  auth: {
+    sms: smsProvider ?? createUnavailableSmsProvider(),
+    // 产品决策：生成专属形象前硬性要求已绑定手机号，生产恒开。
+    requirePhoneForGeneration: true,
   },
   logger: true,
 })

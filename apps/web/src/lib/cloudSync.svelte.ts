@@ -14,8 +14,10 @@
 import {
   createCloudSyncClient,
   decideStartupSync,
+  type BindPhoneResult,
   type CloudCredentials,
   type SaveDocument,
+  type SmsCodePurpose,
 } from '@bravecat/core/cloud'
 import type { GameState } from '@bravecat/core/game'
 
@@ -109,6 +111,8 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
   let notice = $state('')
   /** 服务端 aigcAvatar 开关；关闭时「生成专属形象」入口不出现。 */
   let aigcEnabled = $state(false)
+  /** 已绑定手机号（脱敏，如 138****8000）；null = 未绑定或未知。 */
+  let maskedPhone = $state<string | null>(null)
 
   let started = false
   /** 启动同步完成且未触发版本护栏后才允许节流推送。 */
@@ -168,6 +172,18 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
     }
   }
 
+  /** 绑定状态只是展示信息；拉取失败保留上一次的值（启动时即 null）。 */
+  const refreshIdentities = async () => {
+    try {
+      const { identities } = await client.getAuthIdentities()
+      maskedPhone = identities.find(
+        ({ provider }) => provider === 'phone',
+      )?.maskedId ?? null
+    } catch {
+      // 保留上一次的绑定状态展示。
+    }
+  }
+
   /** 启动同步；在 controller.hydrate() 完成后调用一次。 */
   const start = async () => {
     started = true
@@ -182,6 +198,8 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
 
       const credentials = await client.ensureGuestAccount()
       accountId = credentials.userId
+      // 绑定状态与同步主流程无关，凭证就绪后异步拉取即可。
+      void refreshIdentities()
 
       const decision = decideStartupSync(
         await client.pullSave(),
@@ -216,6 +234,89 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
     }
   }
 
+  /** 薄透传：发码限流与失败文案都以服务端为权威。 */
+  const requestSmsCode = (phoneNumber: string, purpose: SmsCodePurpose) =>
+    client.requestSmsCode({ phoneNumber, purpose })
+
+  /** 绑定手机号到当前账号；conflict 结果原样交回调用方走冲突弹窗。 */
+  const bindPhone = async (
+    phoneNumber: string,
+    verificationCode: string,
+  ): Promise<BindPhoneResult> => {
+    const result = await client.bindPhone({ phoneNumber, verificationCode })
+    if (result.status === 'bound') maskedPhone = result.maskedPhone
+    return result
+  }
+
+  /**
+   * 绑定冲突二选一里的「切换到已有账号」：备份本地 → 覆盖凭证 →
+   * 采用目标账号的云端进度。复用 bind 时输入的同一组验证码——
+   * 409 冲突不消费验证码，服务端接受仍有效的 bind 用途验证码登录。
+   */
+  const switchToPhoneAccount = async (
+    phoneNumber: string,
+    verificationCode: string,
+  ): Promise<{ isNewUser: boolean }> => {
+    // 数据安全优先：覆盖凭证前先把当前进度导出为下载备份。
+    const backedUp = deps.hasLocalProgress()
+    if (backedUp) deps.backupLocal(deps.exportDocument())
+
+    // 换号期间暂停节流推送，避免把游客进度推到目标账号；
+    // 登录失败（验证码错等）时凭证未被覆盖，恢复原状态继续游客同步。
+    const wasReady = ready
+    ready = false
+    let login: { credentials: CloudCredentials; isNewUser: boolean }
+    try {
+      login = await client.loginWithPhone({ phoneNumber, verificationCode })
+    } catch (error) {
+      ready = wasReady
+      throw error
+    }
+
+    // 凭证已覆盖：从这里起的失败停在 error 状态，改动仍在本地可重试。
+    accountId = login.credentials.userId
+    status = 'connecting'
+    notice = ''
+    // 新账号的余额与绑定状态只是展示信息，与同步结果无关，
+    // 先行拉取让升级护栏等提前返回的路径也能刷新。
+    void refreshCreditsBalance()
+    void refreshIdentities()
+    try {
+      const pull = await client.pullSave()
+      if (pull.status === 'schema-too-new') {
+        status = 'upgrade-required'
+        return { isNewUser: login.isNewUser }
+      }
+      if (pull.status === 'ok') {
+        // 无条件采用云端：游客进度已在上面备份，不再做新旧比较。
+        await deps.importDocument(pull.document)
+        notice = backedUp
+          ? '已切换到该手机号的账号并换用云端进度；原来的本地存档已导出为备份文件。'
+          : '已切换到该手机号的账号，并换用它的云端进度。'
+        ready = true
+        // importDocument 落盘触发 notifyLocalSaved 置位 dirty，
+        // 这里的节流推送只是回写同内容，无害。
+        if (dirty) {
+          schedulePush()
+        } else {
+          status = 'synced'
+        }
+      } else {
+        // 目标账号云端还没有存档：保留当前进度并推送上去。
+        ready = true
+        const pushOutcome = await pushNow()
+        if (pushOutcome === 'upgrade-required') {
+          return { isNewUser: login.isNewUser }
+        }
+        notice = '已切换到该手机号的账号；它的云端还没有存档，已保留当前进度。'
+      }
+      return { isNewUser: login.isNewUser }
+    } catch (error) {
+      status = 'error'
+      throw error
+    }
+  }
+
   /** controller 每次落盘后由 SaveStore 包装层调用。 */
   const notifyLocalSaved = (exportLatest: () => SaveDocument<GameState>) => {
     // hydrate 阶段的例行落盘不算玩家改动，不触发推送。
@@ -245,9 +346,16 @@ export const createWebCloudSync = (deps: WebCloudSyncDeps) => {
     get aigcEnabled() {
       return aigcEnabled
     },
+    get maskedPhone() {
+      return maskedPhone
+    },
     start,
     notifyLocalSaved,
     refreshCreditsBalance,
+    refreshIdentities,
+    requestSmsCode,
+    bindPhone,
+    switchToPhoneAccount,
     /** AIGC 形象生成闭环的客户端方法（PortraitStudio 与形象列表用）。 */
     portraits: {
       upload: client.uploadPortraitPhoto,

@@ -37,11 +37,7 @@ export const homeCatStyle = (
 export const homeCatSpriteStyle = (
   canvas: CanvasSize,
   placement: CatPlacement,
-  animationSrc: string,
-) => [
-  homeCatStyle(canvas, placement),
-  `--home-cat-animation-src: url("${animationSrc}")`,
-].join('; ')
+) => homeCatStyle(canvas, placement)
 
 export const paintedCanvasRect = (
   placement: CatPlacement,

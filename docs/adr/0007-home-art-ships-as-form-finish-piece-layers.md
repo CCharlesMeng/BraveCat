@@ -1,5 +1,10 @@
 # 家的美术按 form/finish/piece 分层出资产，不再新增整图背景变体
 
+> Status: player-facing variability superseded by
+> [ADR-0010](./0010-home-themes-fix-furniture-cat-items-vary.md). 分层合成和
+> 部件自带遮挡仍成立，但固定家具层成为 Home Theme 内部实现；玩家只替换
+> Cat Item，不再逐件替换窗框、陈列、柜子、地毯或植物。
+
 Home v4 时期的模式是给 `interior-foreground` 追加整图变体（如吃饭
 变体），任何可变细节都要重画全屋。改为三层出资产：HomeForm 冻结
 几何事实（画布、透视、socket、锚点、猫落位），HomeFinish 携带连续

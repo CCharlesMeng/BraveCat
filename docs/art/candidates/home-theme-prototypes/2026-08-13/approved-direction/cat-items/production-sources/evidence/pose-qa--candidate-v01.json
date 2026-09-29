@@ -1,0 +1,42 @@
+{
+  "method": "Composite furnished base plate + Cat Item base at frozen placement + Minho v03 first frame at catAnchor + same-master foreground occlusion; supportSurface polygon and anchor overlaid for review.",
+  "catSheets": {
+    "rest": "cat--minho--sleep--ambient--v03.webp",
+    "play": "cat--minho--play--ambient--v03.webp"
+  },
+  "geometry": "geometry--furnished-base-plate--measured-freeze-v02.json",
+  "cells": [
+    {
+      "theme": "a-clear-sage",
+      "slot": "rest",
+      "file": "qa--pose--a-clear-sage--rest--candidate-v01.png"
+    },
+    {
+      "theme": "a-clear-sage",
+      "slot": "play",
+      "file": "qa--pose--a-clear-sage--play--candidate-v01.png"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "slot": "rest",
+      "file": "qa--pose--b-warm-walnut-gallery--rest--candidate-v01.png"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "slot": "play",
+      "file": "qa--pose--b-warm-walnut-gallery--play--candidate-v01.png"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "slot": "rest",
+      "file": "qa--pose--f-moonwhite-bluegray--rest--candidate-v01.png"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "slot": "play",
+      "file": "qa--pose--f-moonwhite-bluegray--play--candidate-v01.png"
+    }
+  ],
+  "contactSheet": "qa--minho-pose--rest-play-abf-contact-sheet--candidate-v01.png",
+  "runtimeEligible": false
+}

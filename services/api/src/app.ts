@@ -2,6 +2,8 @@ import cors from '@fastify/cors'
 import fastify from 'fastify'
 import type { MetaResponse } from '@bravecat/contracts'
 import { ErrorCode } from '@bravecat/contracts'
+import { generateSmsCode } from './auth/smsCodes.js'
+import type { SmsProvider } from './auth/ports.js'
 import type { EconomyValidator } from './economy/validator.js'
 import { sendError } from './http/replies.js'
 import { createAuthenticate } from './plugins/authenticate.js'
@@ -26,6 +28,13 @@ export interface BuildAppOptions {
   platformMeta: MetaResponse['platforms']
   /** AIGC 形象管线依赖（生产接线见 index.ts，测试接线见 test/helpers.ts）。 */
   aigc: AigcDeps
+  /** 手机号认证链路依赖（短信端口 + 生成前置开关）。 */
+  auth: {
+    sms: SmsProvider
+    /** 缺省为密码学随机 6 位；dev 入口注入固定码便于演示。 */
+    generateSmsCode?: () => string
+    requirePhoneForGeneration: boolean
+  }
   /** 浏览器端（apps/web）跨域访问放行的 origin；默认只放行 localhost。 */
   corsOrigins?: readonly (string | RegExp)[]
   /** 可注入时钟，单测用；默认 Date.now。 */
@@ -55,6 +64,11 @@ export const buildApp = (options: BuildAppOptions) => {
     authenticate: createAuthenticate(options.repositories.tokens),
     now: options.now ?? Date.now,
     aigc: options.aigc,
+    auth: {
+      sms: options.auth.sms,
+      generateSmsCode: options.auth.generateSmsCode ?? generateSmsCode,
+      requirePhoneForGeneration: options.auth.requirePhoneForGeneration,
+    },
   }
 
   app.setErrorHandler((error, request, reply) => {

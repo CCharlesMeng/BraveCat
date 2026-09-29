@@ -1,14 +1,17 @@
 <!--
-  玩家侧家主题选择面板：主题预设整套采用，兼容的表面风格与部件可
-  单独替换。生产环境只提供已放行（shippingEligible）的内容；开发
-  环境展示全部预览内容。只发出选择，持久化由调用方负责。
+  玩家侧家主题选择面板：base-plate 主题与按槽位的小猫用品为当前主路径；
+  旧 form / finish / piece UI 标注 deprecated 但保留。只发出选择，持久化由调用方负责。
 -->
 <script lang="ts">
   import {
+    customizationForHomeTheme,
     HOME_THEME_PRESETS,
+    listCatItems,
     listCompatiblePieces,
     listHomeFinishes,
     listHomeForms,
+    listHomeThemes,
+    type CatItemSlot,
     type HomeCustomization,
     type ResolvedHomeScene,
   } from '@bravecat/core/homeTheme'
@@ -21,6 +24,9 @@
   } = $props()
 
   const forms = listHomeForms()
+  const basePlateThemes = listHomeThemes().filter(
+    (theme) => isDevelopment || theme.shippingEligible,
+  )
   const presetOptions = HOME_THEME_PRESETS.filter(({ formId }) => (
     isDevelopment
     || forms.find(({ id }) => id === formId)?.shippingEligible
@@ -38,9 +44,43 @@
     }))
     .filter(({ options }) => options.length > 1))
 
+  const catItemSlots: { slot: CatItemSlot, label: string }[] = [
+    { slot: 'rest', label: '睡觉' },
+    { slot: 'play', label: '玩耍' },
+    { slot: 'scratch', label: '磨爪' },
+    { slot: 'feed', label: '吃饭' },
+  ]
+  const catItemGroups = $derived(
+    catItemSlots
+      .map(({ slot, label }) => ({
+        slot,
+        label,
+        options: listCatItems(slot),
+      }))
+      .filter(({ options }) => options.length > 0),
+  )
+
+  const activeThemeId = $derived(
+    scene.homeThemeId ?? customization.homeThemeId ?? null,
+  )
+
+  const applyBasePlateTheme = (themeId: string) => {
+    if (activeThemeId === themeId) return
+    const next = customizationForHomeTheme(themeId)
+    if (!next) return
+    onApply({
+      ...next,
+      catItems: {
+        ...next.catItems,
+        // 切主题保留用品语义 ID（ADR-0010）。
+        ...customization.catItems,
+      },
+    })
+  }
+
   const applyPreset = (presetId: string) => {
     const preset = HOME_THEME_PRESETS.find(({ id }) => id === presetId)
-    if (!preset || scene.formId === preset.formId) return
+    if (!preset || (scene.formId === preset.formId && !scene.homeThemeId)) return
     onApply({
       presetId: preset.id,
       formId: preset.formId,
@@ -62,6 +102,20 @@
     })
   }
 
+  const applyCatItem = (slot: CatItemSlot, itemId: string) => {
+    if (!activeThemeId) return
+    if (customization.catItems?.[slot] === itemId) return
+    const base = customization.homeThemeId === activeThemeId
+      ? customization
+      : customizationForHomeTheme(activeThemeId)
+    if (!base) return
+    onApply({
+      ...base,
+      homeThemeId: activeThemeId,
+      catItems: { ...base.catItems, [slot]: itemId },
+    })
+  }
+
   const KIND_LABELS: Record<string, string> = {
     'window-frame': '窗框',
     'postcard-display': '画框墙',
@@ -74,24 +128,60 @@
 </script>
 
 <div class="theme-choices" aria-label="布置家">
-  {#if presetOptions.length > 1}
+  {#if basePlateThemes.length > 0}
     <section>
-      <h3>主题</h3>
+      <h3>家主题</h3>
+      <div class="theme-choice-row">
+        {#each basePlateThemes as theme (theme.id)}
+          <button
+            type="button"
+            class:active={activeThemeId === theme.id}
+            disabled={activeThemeId === theme.id}
+            onclick={() => applyBasePlateTheme(theme.id)}
+          >{theme.name}</button>
+        {/each}
+      </div>
+    </section>
+  {/if}
+
+  {#each catItemGroups as group (group.slot)}
+    <section>
+      <h3>小猫用品 · {group.label}</h3>
+      <div class="theme-choice-row">
+        {#each group.options as option (option.id)}
+          <button
+            type="button"
+            class:active={customization.catItems?.[group.slot] === option.id
+              || (scene.catItems.some(
+                (item) => item.slot === group.slot && item.itemId === option.id,
+              ))}
+            disabled={!activeThemeId
+              || customization.catItems?.[group.slot] === option.id}
+            onclick={() => applyCatItem(group.slot, option.id)}
+          >{option.name}</button>
+        {/each}
+      </div>
+    </section>
+  {/each}
+
+  {#if presetOptions.length > 1}
+    <section class="deprecated">
+      <h3>主题（旧 form，deprecated）</h3>
       <div class="theme-choice-row">
         {#each presetOptions as preset (preset.id)}
           <button
             type="button"
-            class:active={scene.formId === preset.formId}
-            disabled={scene.formId === preset.formId}
+            class:active={!scene.homeThemeId && scene.formId === preset.formId}
+            disabled={!scene.homeThemeId && scene.formId === preset.formId}
             onclick={() => applyPreset(preset.id)}
           >{presetName(preset.formId)}</button>
         {/each}
       </div>
     </section>
   {/if}
-  {#if finishOptions.length > 1}
-    <section>
-      <h3>风格</h3>
+  {#if !scene.homeThemeId && finishOptions.length > 1}
+    <section class="deprecated">
+      <h3>风格（deprecated）</h3>
       <div class="theme-choice-row">
         {#each finishOptions as finish (finish.id)}
           <button
@@ -105,8 +195,8 @@
     </section>
   {/if}
   {#each pieceRows as row (row.socketId)}
-    <section>
-      <h3>{KIND_LABELS[row.kind] ?? row.kind}</h3>
+    <section class="deprecated">
+      <h3>{KIND_LABELS[row.kind] ?? row.kind}（deprecated）</h3>
       <div class="theme-choice-row">
         {#each row.options as option (option.id)}
           <button
@@ -136,11 +226,17 @@
     border-radius: 18px;
     background: rgba(250, 247, 235, 0.96);
     box-shadow: 0 10px 26px rgba(60, 62, 48, 0.18);
+    max-height: min(52vh, 420px);
+    overflow: auto;
   }
 
   section {
     display: grid;
     gap: 5px;
+  }
+
+  section.deprecated {
+    opacity: 0.72;
   }
 
   h3 {
@@ -174,5 +270,10 @@
     border-color: rgba(90, 103, 73, 0.56);
     background: rgba(228, 234, 216, 0.92);
     cursor: default;
+  }
+
+  .theme-choice-row button:disabled:not(.active) {
+    opacity: 0.45;
+    cursor: not-allowed;
   }
 </style>

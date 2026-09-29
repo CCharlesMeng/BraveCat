@@ -57,7 +57,6 @@ describe('绑定路由骨架', () => {
   it.each([
     ['/v1/auth/bind/wechat', { code: 'wx-oauth-code' }],
     ['/v1/auth/bind/apple', { identityToken: 'apple-jwt' }],
-    ['/v1/auth/bind/phone', { phoneNumber: '13800138000', verificationCode: '123456' }],
   ])('%s 返回 501 NOT_IMPLEMENTED', async (url, payload) => {
     const { app } = createTestApp()
     const guest = await registerGuest(app)

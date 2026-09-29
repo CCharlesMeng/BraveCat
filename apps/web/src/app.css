@@ -365,7 +365,8 @@ main {
 }
 
 .home-art-layer,
-.home-art-cat {
+.home-art-cat,
+.home-art-cat-item {
   position: absolute;
   display: block;
 }
@@ -377,8 +378,32 @@ main {
   object-fit: fill;
 }
 
+.home-art-cat-item {
+  z-index: 1;
+  object-fit: fill;
+  pointer-events: none;
+}
+
 .home-art-cat {
   z-index: 2;
+}
+
+.home-art-cat-item-occlusion {
+  position: absolute;
+  z-index: 6;
+  display: block;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.home-art-cat-item-hotspot {
+  position: absolute;
+  z-index: 5;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .home-art-cat:not(.home-art-cat-animated) {
@@ -386,12 +411,14 @@ main {
 }
 
 .home-art-cat-animated {
-  background-image: var(--home-cat-animation-src);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 800% 100%;
-  animation: home-cat-sprite-loop 4s steps(1, end) infinite;
-  will-change: background-position;
+  overflow: hidden;
+}
+
+.home-art-cat-animated > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .home-art-lighting {
@@ -986,97 +1013,6 @@ main {
   animation: home-cat-eat 3.4s ease-in-out infinite;
 }
 
-.room[data-home-activity="sleep"] .home-art-cat-animated {
-  animation-duration: 5.2s;
-}
-
-.room[data-home-activity="play"] .home-art-cat-animated {
-  animation-duration: 1.4s;
-}
-
-.room[data-home-activity="eat"] .home-art-cat-animated {
-  animation-duration: 1.8s;
-}
-
-.room[data-home-activity="gaze"] .home-art-cat-animated {
-  animation-name: home-cat-gaze-sprite-loop;
-  animation-duration: 5s;
-}
-
-@keyframes home-cat-sprite-loop {
-  0% {
-    background-position: 0 0;
-  }
-
-  12.5% {
-    background-position: 14.286% 0;
-  }
-
-  25% {
-    background-position: 28.571% 0;
-  }
-
-  37.5% {
-    background-position: 42.857% 0;
-  }
-
-  50% {
-    background-position: 57.143% 0;
-  }
-
-  62.5% {
-    background-position: 71.429% 0;
-  }
-
-  75% {
-    background-position: 85.714% 0;
-  }
-
-  87.5% {
-    background-position: 100% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes home-cat-gaze-sprite-loop {
-  0%,
-  52%,
-  100% {
-    background-position: 0 0;
-  }
-
-  58% {
-    background-position: 14.286% 0;
-  }
-
-  64% {
-    background-position: 28.571% 0;
-  }
-
-  69% {
-    background-position: 42.857% 0;
-  }
-
-  72% {
-    background-position: 57.143% 0;
-  }
-
-  75% {
-    background-position: 71.429% 0;
-  }
-
-  80% {
-    background-position: 85.714% 0;
-  }
-
-  86% {
-    background-position: 100% 0;
-  }
-}
-
 @keyframes home-cat-sleep {
   0%,
   100% {
@@ -1621,6 +1557,222 @@ main {
   opacity: 0.55;
 }
 
+/* 手机号绑定弹窗：视觉语言沿用 portrait-studio；
+   z-index 更高，从「生成专属形象」的 403 引导打开时叠在其上。 */
+.phone-auth-backdrop {
+  position: fixed;
+  z-index: 32;
+  inset: 0;
+  border: 0;
+  background: rgba(62, 60, 47, 0.34);
+  cursor: pointer;
+}
+
+.phone-auth {
+  position: fixed;
+  z-index: 33;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: min(400px, calc(100vw - 32px));
+  max-height: min(86vh, 560px);
+  gap: 14px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(82, 82, 67, 0.2);
+  border-radius: 22px;
+  background:
+    radial-gradient(rgba(105, 96, 72, 0.045) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
+    var(--paper);
+  box-shadow: 0 18px 42px rgba(56, 54, 41, 0.24);
+  color: var(--ink);
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+}
+
+.phone-auth header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.phone-auth header p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.67rem;
+  letter-spacing: 0.12em;
+}
+
+.phone-auth header h2 {
+  margin: 3px 0 0;
+  font-size: 1.02rem;
+}
+
+.phone-auth-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(90, 103, 73, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.phone-auth-body {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.phone-auth-reason {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(90, 103, 73, 0.24);
+  border-radius: 12px;
+  background: rgba(228, 234, 216, 0.6);
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+
+.phone-auth-intro {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.phone-auth-field {
+  display: grid;
+  gap: 6px;
+}
+
+.phone-auth-field > span {
+  color: var(--ink-soft);
+  font-size: 0.64rem;
+}
+
+.phone-auth-field input {
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid rgba(90, 103, 73, 0.34);
+  border-radius: 12px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.phone-auth-send-row {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-auth-send-row input {
+  flex: 1;
+}
+
+.phone-auth-send-row button {
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 1px solid rgba(90, 103, 73, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.phone-auth-send-row button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.phone-auth-sent {
+  margin: 0;
+  color: #69775c;
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.phone-auth-notice {
+  margin: 0;
+  color: #a06a52;
+  font-size: 0.67rem;
+  line-height: 1.6;
+}
+
+.phone-auth-done {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.phone-auth-conflict-facts {
+  display: flex;
+  gap: 9px;
+  margin: 0;
+}
+
+.phone-auth-conflict-facts div {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid rgba(82, 82, 67, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 252, 241, 0.58);
+}
+
+.phone-auth-conflict-facts dt {
+  color: var(--ink-soft);
+  font-size: 0.6rem;
+}
+
+.phone-auth-conflict-facts dd {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.phone-auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.phone-auth-actions button {
+  min-height: 36px;
+  padding: 8px 16px;
+  border: 1px solid rgba(90, 103, 73, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.68rem;
+}
+
+.phone-auth-actions button.primary {
+  border-color: rgba(90, 103, 73, 0.46);
+  background: rgba(228, 234, 216, 0.9);
+  font-weight: 650;
+}
+
+.phone-auth-actions button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
 .room-copy p:last-child {
   color: #4f5144;
   font-size: 0.76rem;
@@ -2053,6 +2205,24 @@ main {
 
 .cloud-sync .cloud-sync-notice {
   color: #69775c;
+}
+
+.cloud-sync .cloud-sync-phone {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.cloud-sync-bind {
+  justify-self: start;
+  min-height: 34px;
+  padding: 8px 14px;
+  border: 1px solid rgba(90, 103, 73, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 252, 241, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.66rem;
 }
 
 .item-list {

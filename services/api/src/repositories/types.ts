@@ -40,6 +40,51 @@ export interface TokenRepository {
   findUserIdByTokenHash(tokenHash: string): Promise<string | undefined>
 }
 
+/** 外部身份绑定记录；external_id 为规范化后的外部标识（手机号 E.164 等）。 */
+export interface AuthIdentityRecord {
+  userId: string
+  provider: string
+  externalId: string
+  createdAt: number
+}
+
+export interface IdentityRepository {
+  /** (provider, externalId) 全局唯一；调用方先查后插，冲突时抛错兜底。 */
+  bind(identity: AuthIdentityRecord): Promise<void>
+  findUserIdByIdentity(
+    provider: string,
+    externalId: string,
+  ): Promise<string | undefined>
+  listByUser(userId: string): Promise<AuthIdentityRecord[]>
+}
+
+/** 单次发码记录；同 (phone, purpose) 中 createdAt 最新的一行是当前有效码。 */
+export interface SmsCodeRecord {
+  /** E.164 规范化手机号。 */
+  phone: string
+  purpose: string
+  /** 只存验证码哈希，明文不落库。 */
+  codeHash: string
+  expiresAt: number
+  /** 错误尝试次数；达到上限即作废。 */
+  attempts: number
+  createdAt: number
+}
+
+export interface SmsCodeRepository {
+  insert(record: SmsCodeRecord): Promise<void>
+  /** 该 (phone, purpose) 最近一次发码记录。 */
+  findLatest(phone: string, purpose: string): Promise<SmsCodeRecord | undefined>
+  /** 该手机号最近一次发码时间（跨 purpose，冷却判断用）。 */
+  findLastSentAt(phone: string): Promise<number | undefined>
+  /** 该手机号自 since 起的发码条数（跨 purpose，每日限额用）。 */
+  countSentSince(phone: string, since: number): Promise<number>
+  /** 给最近一次发码记录的错误尝试 +1；无记录时为空操作。 */
+  incrementAttempts(phone: string, purpose: string): Promise<void>
+  /** 验证通过后消费：删除该 (phone, purpose) 的全部验证码记录。 */
+  deleteAll(phone: string, purpose: string): Promise<void>
+}
+
 export interface SaveRepository {
   get(userId: string): Promise<StoredSave | undefined>
   /** 无条件覆盖（last-writer-wins），版本护栏在路由层处理。 */
@@ -129,6 +174,8 @@ export interface LedgerRepository {
 export interface Repositories {
   users: UserRepository
   tokens: TokenRepository
+  identities: IdentityRepository
+  smsCodes: SmsCodeRepository
   saves: SaveRepository
   ledger: LedgerRepository
   generationCredits: GenerationCreditRepository

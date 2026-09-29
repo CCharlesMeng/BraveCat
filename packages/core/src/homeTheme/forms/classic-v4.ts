@@ -78,20 +78,24 @@ export const CLASSIC_V4_FORM = {
   catAnimationsByPortrait: {
     minho: {
       sleep: {
-        src: `${ART_ROOT}/cat-animations/cat--minho--sleep--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${ART_ROOT}/cat-animations/cat--minho--sleep--ambient--v03.webp`,
+        posterSrc: `${ART_ROOT}/cat-animations/cat--minho--sleep--ambient--poster--v03.webp`,
+        frameCount: 128,
       },
       play: {
-        src: `${ART_ROOT}/cat-animations/cat--minho--play--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${ART_ROOT}/cat-animations/cat--minho--play--ambient--v03.webp`,
+        posterSrc: `${ART_ROOT}/cat-animations/cat--minho--play--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
       eat: {
-        src: `${ART_ROOT}/cat-animations/cat--minho--eat--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${ART_ROOT}/cat-animations/cat--minho--eat--ambient--v03.webp`,
+        posterSrc: `${ART_ROOT}/cat-animations/cat--minho--eat--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
       gaze: {
-        src: `${ART_ROOT}/cat-animations/cat--minho--gaze--ambient--v02.webp`,
-        frameCount: 8,
+        src: `${ART_ROOT}/cat-animations/cat--minho--gaze--ambient--v03.webp`,
+        posterSrc: `${ART_ROOT}/cat-animations/cat--minho--gaze--ambient--poster--v03.webp`,
+        frameCount: 64,
       },
     },
   },
