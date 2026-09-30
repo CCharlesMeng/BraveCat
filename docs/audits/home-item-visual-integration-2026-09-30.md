@@ -24,3 +24,8 @@
 - `scripts/capture-home-item-integration.mjs` 使用独立浏览器存档、生产随机选择端口及固定时间；没有使用生产禁用的 `homeActivity` URL 参数，也没有清除用户公网数据。
 
 CI、代码 SHA、Netlify 部署与公网验证以归档中的最终发布记录为准。手机是浏览器模拟，真机安装、系统分享、完整公网离线和备份往返不在本次新增验收结论内。
+
+
+## 发布结果
+
+生产代码 `ba2e6f2` 已 push main，CI/E2E 均成功；Netlify CLI 发布 `6abc7fc1e0ceac2b05b68b7b`，API 确认 ready 且原主域名指向新版。部署专属地址 147/147 公开文件指纹匹配，主域名 index/manifest/SW 也匹配。公网桌面/窄屏/短屏截图已实际打开复审；同一隔离浏览器的旧 PWA 更新保留存档，17 条可收取并将余额 12 增至 29。全部回执、指纹和证据见上述归档。

@@ -1,0 +1,25 @@
+{
+  "deployment": {
+    "deployId": "6abc7fc1e0ceac2b05b68b7b",
+    "css": "assets/index-C4b-l0yb.css",
+    "commit": "ba2e6f2801fadfc0a0d276bee522558b1f5620a9"
+  },
+  "before": {
+    "css": [
+      "https://bravecat.netlify.app/assets/index-B-hl1S2e.css"
+    ],
+    "balance": "共有 12 条小鱼干"
+  },
+  "after": {
+    "css": [
+      "https://bravecat.netlify.app/assets/index-C4b-l0yb.css"
+    ],
+    "balance": "共有 29 条小鱼干",
+    "overflow": false,
+    "imagesLoaded": true,
+    "iframes": 0
+  },
+  "storagePreserved": true,
+  "isolatedBrowser": true,
+  "simulatedDevice": true
+}

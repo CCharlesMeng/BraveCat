@@ -51,8 +51,15 @@
 
 官方配置依据：[配置文件](https://docs.netlify.com/build/configure-builds/file-based-configuration/)、[自定义响应头](https://docs.netlify.com/manage/routing/headers/)。
 
-## 2026-09-30 视觉修复发布（当前生产）
+## 2026-09-30 视觉修复发布（历史快照）
 
-当前生产部署更新为 [6abc76805fd66da6add32d1b](https://app.netlify.com/projects/bravecat/deploys/6abc76805fd66da6add32d1b)，源码 `e7d998526650e07a59cdcdeefcc02d3c26473e61`，CI/E2E 成功后手动上传完整 ZIP。旧部署与上述首次发布记录保留，域名和 v5 本机存档不变。已通过 Netlify 项目设置关闭平台徽章。
+本轮生产部署更新为 [6abc76805fd66da6add32d1b](https://app.netlify.com/projects/bravecat/deploys/6abc76805fd66da6add32d1b)，源码 `e7d998526650e07a59cdcdeefcc02d3c26473e61`，CI/E2E 成功后手动上传完整 ZIP。旧部署与上述首次发布记录保留，域名和 v5 本机存档不变。已通过 Netlify 项目设置关闭平台徽章。
 
 [本轮归档](archive/2026-09-30-visual-fixes/README.md) 记录完整包指纹、147/147 文件校验、响应头、主域名及公网桌面/手机视口截图；[逐项修复报告](../audits/web-pwa-visual-fixes-2026-09-30.md) 对应 V01–V07。旧 PWA 可能先显示旧缓存，后台更新后再次刷新进入新版；无需清理存档。
+
+
+## 2026-09-30 首页用品融合发布（当前生产）
+
+当前生产为 [6abc7fc1e0ceac2b05b68b7b](https://app.netlify.com/projects/bravecat/deploys/6abc7fc1e0ceac2b05b68b7b)，源码 `ba2e6f2801fadfc0a0d276bee522558b1f5620a9`。CI/E2E 成功后通过 Netlify CLI 上传完整冻结产物，原站点、旧部署与批准素材保留。
+
+I01–I04 的修复、截图与验证见 [修复报告](../audits/home-item-visual-integration-2026-09-30.md) 和 [本轮发布归档](archive/2026-09-30-item-integration/README.md)。同一隔离公网浏览器的旧 PWA 升级保留余额和待收鱼干，收取后余额从 12 增至 29。

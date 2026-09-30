@@ -95,7 +95,7 @@ PY
 
 ## 4. 发布现有站点
 
-在上一步的同一个 shell 中、仓库根目录执行。先检查当前版本的 `netlify deploy --help`；`--no-build` 保证直接上传刚刚验证的冻结目录，绝对路径避免 monorepo 相对目录歧义。
+在上一步的同一个 shell 中、仓库根目录执行。先检查当前版本的 `netlify deploy --help`；`--no-build` 保证直接上传刚刚验证的冻结目录，绝对路径避免 monorepo 相对目录歧义。CLI 27.10.2 实测拒绝同时传 `--context` 与 `--no-build`；冻结产物发布省略 `--context`，由 `--prod` 指定正式发布。
 
 **以下命令会更新正式站点；只在已授权的发布任务中执行，不用于单纯检查配置：**
 
@@ -103,7 +103,6 @@ PY
 netlify deploy \
   --filter @bravecat/web \
   --site 2a965a34-74ab-457c-89f6-de16a1286d87 \
-  --context production \
   --dir "$release_dir/deploy-dist" \
   --no-build --prod \
   --message "BraveCat $release_sha" \
