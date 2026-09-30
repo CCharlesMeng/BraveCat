@@ -18,3 +18,8 @@ Single-context: one `CONTEXT.md` plus `docs/adr/` at the repo root. See `docs/ag
 
 Before proposing, generating, or reviewing a cinematic four-act story, follow
 `docs/agents/cinematic-four-act-stories.md`.
+
+### Netlify operations
+
+For Netlify authentication, deployment, status checks, or rollback, follow
+`docs/releases/netlify-operations.md`. Prefer CLI/API; use the browser for visual verification.

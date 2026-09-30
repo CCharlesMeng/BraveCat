@@ -53,12 +53,6 @@
 
 ## Netlify：后续优先 CLI
 
-用户明确要求“不要每次都操作页面”。本会话已安装 `netlify-cli/27.10.2`，完成用户授权，并将 **`apps/web`** 关联到原站点 `2a965a34-74ab-457c-89f6-de16a1286d87`。认证和关联已通过 `netlify status` 验证，MCP 未配置。
-
-- 新会话先在 `apps/web` 工作目录运行 `netlify status`，确认关联及认证。根目录直接 status 会报告未关联；status 不支持 `--filter`，link 支持 `--filter @bravecat/web`。
-- `.netlify` 关联文件已被 Git 忽略，凭据仅存本机。不要输出 token 或提交凭据；授权过期才重新引导登录。
-- 发布与状态查询使用 CLI/API。部署前读当前 `netlify deploy --help`，确认 monorepo 的工作目录、仓库 `netlify.toml` 与完整构建产物路径，使用已验证产物更新现有站点，避免误建新站或重复构建不匹配版本。
-- 浏览器保留用于真实视觉验收，CLI 部署成功不等于视觉通过。平台徽章已通过官方开关关闭。
-- 旧 PWA 可能先显示旧缓存，后台更新后再次刷新才能看到新包；验证实际 CSS/JS 指纹，不清理公网用户存档来强行刷新。
+认证、关联、完整产物发布、状态查询、验收与回滚统一按 [Netlify 操作手册](../releases/netlify-operations.md) 执行。CLI 已安装授权，`apps/web` 已关联现有站点；新会话先实时核验，浏览器保留用于视觉验收。发布历史见 [发布记录](../releases/netlify-launch.md)。
 
 首发仍为免费免注册、本机 v5 存档及导入导出，保持故事、迁移和离线能力。完整发布事实与真机/公网离线等未验边界继续以发布归档为准。
