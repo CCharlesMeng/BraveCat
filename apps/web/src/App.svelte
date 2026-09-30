@@ -992,7 +992,11 @@
       <h1>咪游记</h1>
     </div>
     <div class="treat-balance" aria-label={`共有 ${treats} 条小鱼干`}>
-      <img src={asset(drawerArt.treat)} alt="" aria-hidden="true" />
+      <svg class="treat-currency-icon" viewBox="0 0 28 24" aria-hidden="true">
+        <path d="M3 12 1 6l7 3c5-6 12-5 18 3-6 8-13 9-18 3l-7 3Z" fill="#b9ac79" stroke="#696d50" stroke-width="1.5" stroke-linejoin="round" />
+        <path d="M17 7q-3 5 0 10M9 12h7" fill="none" stroke="#777653" stroke-width="1.2" />
+        <circle cx="21" cy="11" r="1.2" fill="#454b39" />
+      </svg>
       <strong>{treats}</strong>
     </div>
   </header>
@@ -1079,6 +1083,23 @@
       aria-label={`${catName}的家`}
     >
       {#if showHomeArtPreview}
+        <!-- Shared, scene-scale pigment grain; identical coordinates on base and occlusion. -->
+        <svg class="home-material-filters" aria-hidden="true" width="0" height="0">
+          <defs>
+            <filter id="home-fabric-pigment" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+              <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" seed="8" result="grain" />
+              <feColorMatrix in="grain" type="saturate" values="0" />
+              <feComponentTransfer result="pigment">
+                <feFuncR type="linear" slope="0.4" intercept="0.8" />
+                <feFuncG type="linear" slope="0.4" intercept="0.8" />
+                <feFuncB type="linear" slope="0.4" intercept="0.8" />
+                <feFuncA type="linear" slope="0" intercept="1" />
+              </feComponentTransfer>
+              <!-- Multiply RGB only; pigment alpha=1 preserves the exact pose mask. -->
+              <feComposite in="SourceGraphic" in2="pigment" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+            </filter>
+          </defs>
+        </svg>
         <div class="home-art-canvas" aria-hidden="true">
           {#each homeBackdropLayers as layer (layer.id)}
             <img
@@ -1095,6 +1116,7 @@
             />
           {/each}
           {#each homeScene.catItems as item (item.slot)}
+            <div class="home-item-contact" data-slot={item.slot} style={item.style}></div>
             <img
               class="home-art-cat-item"
               src={item.src}

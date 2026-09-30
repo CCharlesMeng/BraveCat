@@ -481,29 +481,20 @@ main {
   z-index: 9;
   right: auto;
   bottom: auto;
-  display: grid;
+  display: block;
   min-width: 44px;
   min-height: 44px;
-  place-items: center;
-  grid-template-columns: 1fr;
-  padding: clamp(3px, 0.7vw, 6px);
-  border: 1px solid rgba(83, 88, 70, 0.3);
-  border-radius: 999px;
-  background:
-    radial-gradient(rgba(91, 84, 63, 0.05) 0.7px, transparent 0.8px) 0 0 / 6px 6px,
-    rgba(250, 247, 235, 0.92);
-  box-shadow:
-    0 5px 12px rgba(64, 61, 47, 0.14),
-    inset 0 1px rgba(255, 255, 255, 0.72);
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  box-shadow: none;
   pointer-events: auto;
 }
 
-.home-art-preview .windowsill:not(:disabled):hover {
-  box-shadow:
-    0 7px 15px rgba(64, 61, 47, 0.18),
-    inset 0 1px rgba(255, 255, 255, 0.78);
-  transform: translateY(-2px);
+.home-art-preview .windowsill:not(:disabled):hover .treat-pile > strong {
+  background: #fffaf0;
+  border-color: #68765a;
 }
 
 .sunwash {
@@ -644,10 +635,32 @@ main {
 }
 
 .home-art-preview .windowsill > .treat-pile {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   margin: 0;
-  aspect-ratio: 1;
+  aspect-ratio: auto;
+}
+
+/* The fish rest on the sill; the quantity is a separate label below its edge.
+   The transparent hit area stays >=44px independently of the quantity label. */
+.home-art-preview .treat-pile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: fill;
+}
+
+.home-art-preview .treat-pile > strong {
+  top: 54%;
+  bottom: auto;
+  right: 0;
+  padding: 3px 6px;
+  font-size: 0.7rem;
 }
 
 .home-art-preview .collect-label {
@@ -2431,10 +2444,10 @@ main {
   line-height: 1.8;
 }
 
-.treat-balance img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
+.treat-currency-icon {
+  width: 26px;
+  height: 24px;
+  flex: none;
 }
 
 .pack-art {
@@ -3089,4 +3102,39 @@ main {
 
 :root[data-native-platform] .drawer {
   padding-bottom: calc(32px + var(--safe-area-bottom));
+}
+
+/* Preserve approved art and pose masks; grain is applied equally to both layers. */
+.home-material-filters {
+  position: absolute;
+  pointer-events: none;
+}
+
+.home-art-cat-item,
+.home-art-cat-item-occlusion {
+  filter: url(#home-fabric-pigment);
+}
+
+.home-item-contact {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-item-contact::after {
+  content: "";
+  position: absolute;
+  left: 9%;
+  bottom: -1%;
+  width: 82%;
+  height: 14%;
+  background: radial-gradient(ellipse, rgba(66, 49, 27, 0.42) 0%, rgba(66, 49, 27, 0.2) 42%, transparent 72%);
+}
+
+.home-item-contact[data-slot="play"]::after {
+  left: 10%;
+  bottom: 5%;
+  width: 82%;
+  height: 13%;
+  transform: rotate(-8deg);
 }

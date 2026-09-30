@@ -293,3 +293,82 @@ for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 
     }
   })
 }
+
+for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }, { width: 320, height: 568 }]) {
+  test(`鱼干不遮挡窗台承托且可收取 ${viewport.width}`, async ({ page }) => {
+    await page.setViewportSize(viewport)
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await page.addInitScript(() => {
+      crypto.getRandomValues = <T extends ArrayBufferView | null>(array: T): T => {
+        if (array instanceof Uint32Array) array.fill(3)
+        return array
+      }
+    })
+    await page.goto('/')
+    const now = Date.now()
+    const initial = adoptCat(createInitialGameState(now), { id: 'minho', name: 'Minho', portraitId: 'minho', adoptedAt: now })
+    for (const theme of ['a-clear-sage', 'b-warm-walnut-gallery', 'f-moonwhite-bluegray'] as const) {
+      for (const amount of [17, 1, 24]) {
+        const state = { ...initial, economy: { ...initial.economy, windowsillTreats: amount }, homeCustomization: { ...initial.homeCustomization, homeThemeId: theme } }
+        await page.evaluate(async value => {
+          await new Promise<void>((resolve, reject) => {
+            const request = indexedDB.open('bravecat')
+            request.onerror = () => reject(request.error)
+            request.onsuccess = () => {
+              const db = request.result
+              const tx = db.transaction('state', 'readwrite')
+              tx.objectStore('state').put({ key: 'current', state: value })
+              tx.oncomplete = () => { db.close(); resolve() }
+              tx.onerror = () => reject(tx.error)
+            }
+          })
+        }, state)
+        await page.reload()
+        await expect(page.locator('.room')).toHaveAttribute('data-home-activity', 'gaze')
+        const button = page.getByRole('button', { name: `收取窗台上的 ${amount} 条小鱼干` })
+        await expect(button).toBeVisible()
+        await page.locator('.room img').evaluateAll(async images => Promise.all(images.map(image => (image as HTMLImageElement).decode())))
+        if (amount === 17) await page.screenshot({ path: `test-results/item-integration-${theme}-${viewport.width}.png`, fullPage: true })
+        const geometry = await button.evaluate(element => {
+          const r = element.getBoundingClientRect()
+          const cat = document.querySelector<HTMLImageElement>('.home-art-cat img')!
+          const c = cat.getBoundingClientRect()
+          const canvas = document.createElement('canvas')
+          canvas.width = cat.naturalWidth; canvas.height = cat.naturalHeight
+          const ctx = canvas.getContext('2d')!
+          ctx.drawImage(cat, 0, 0)
+          const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
+          let right = 0
+          for (let y = 0; y < canvas.height; y++) for (let x = 0; x < canvas.width; x++) {
+            if (data[(y * canvas.width + x) * 4 + 3] > 32) right = Math.max(right, x)
+          }
+          const style = getComputedStyle(element)
+          return { width: r.width, height: r.height, left: r.left, catRight: c.left + right / canvas.width * c.width,
+            background: style.backgroundColor, backgroundImage: style.backgroundImage,
+            overflow: document.documentElement.scrollWidth > innerWidth }
+        })
+        expect(geometry.background).toBe('rgba(0, 0, 0, 0)')
+        expect(geometry.backgroundImage).toBe('none')
+        expect(geometry.left).toBeGreaterThan(geometry.catRight)
+        expect(geometry.width).toBeGreaterThanOrEqual(44)
+        expect(geometry.height).toBeGreaterThanOrEqual(44)
+        expect(geometry.overflow).toBe(false)
+        await button.focus()
+        await expect(button).toBeFocused()
+        if (amount === 17 && theme === 'a-clear-sage') await page.screenshot({ path: `test-results/treat-focus-${viewport.width}.png`, fullPage: true })
+        if (amount === 1) await button.click()
+        else await page.keyboard.press('Enter')
+        await expect(page.locator('.treat-balance')).toHaveAttribute('aria-label', `共有 ${12 + amount} 条小鱼干`)
+        await expect(page.locator('.windowsill')).toBeDisabled()
+        await expect(page.locator('.windowsill')).toBeHidden()
+        if (amount === 17 && theme === 'a-clear-sage') {
+          await page.screenshot({ path: `test-results/treat-collected-${viewport.width}.png`, fullPage: true })
+          if (viewport.width === 320) {
+            await page.getByRole('button', { name: /^相册/ }).scrollIntoViewIfNeeded()
+            await page.screenshot({ path: 'test-results/item-short-mobile-scrolled.png' })
+          }
+        }
+      }
+    }
+  })
+}

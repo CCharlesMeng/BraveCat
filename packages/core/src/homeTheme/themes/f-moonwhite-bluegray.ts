@@ -46,7 +46,7 @@ export const F_MOONWHITE_BLUEGRAY_THEME = {
     ],
     tableSkewY: 2,
   },
-  treatPlacement: { x: 240, y: 680, width: 110, height: 98 },
+  treatPlacement: { x: 355, y: 711, width: 155, height: 150 },
   catPlacements: {
     sleep: placementFromAnchor({ x: 248, y: 980, flip: false }),
     play: placementFromAnchor({ x: 580, y: 1395, flip: false }),

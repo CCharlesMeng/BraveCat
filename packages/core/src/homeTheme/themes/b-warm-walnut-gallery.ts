@@ -45,7 +45,7 @@ export const B_WARM_WALNUT_GALLERY_THEME = {
     ],
     tableSkewY: 3,
   },
-  treatPlacement: { x: 280, y: 790, width: 110, height: 98 },
+  treatPlacement: { x: 410, y: 841, width: 155, height: 150 },
   catPlacements: {
     sleep: placementFromAnchor({ x: 205, y: 1215, flip: false }),
     play: placementFromAnchor({ x: 620, y: 1465, flip: false }),
