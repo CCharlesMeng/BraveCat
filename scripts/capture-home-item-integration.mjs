@@ -47,7 +47,7 @@ for (const [index, activity] of ['sleep', 'play', 'eat', 'gaze'].entries()) {
     measurements.push({ theme, activity: actualActivity, time: await page.locator('.room').getAttribute('data-home-time') })
     if (activity === 'gaze' && theme === themes[0]) {
       await page.locator('.home-art-canvas').screenshot({path: path.join(output, 'composite.png')})
-      const style = await page.addStyleTag({content: '.home-art-cat,.home-art-cat-item,.home-item-contact{visibility:hidden} .home-art-cat-item-occlusion,.windowsill{visibility:hidden}'})
+      const style = await page.addStyleTag({content: '.home-art-cat,.home-art-cat-item,.home-item-contact,.home-feeding-contents{visibility:hidden} .home-art-cat-item-occlusion,.windowsill{visibility:hidden}'})
       await page.locator('.home-art-canvas').screenshot({path: path.join(output, 'background-only.png')})
       await style.evaluate(element => element.remove())
       const isolated = await page.addStyleTag({content: '.home-art-layer,.home-art-cat{visibility:hidden} .home-art-canvas{background:#f6f0df} .home-art-cat-item-occlusion{visibility:hidden}'})

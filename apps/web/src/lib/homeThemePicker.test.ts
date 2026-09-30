@@ -20,6 +20,7 @@ describe('HomeThemePicker mapping', () => {
         catItems: {
           rest: 'rest-cloud-bed',
           play: 'play-soft-tunnel',
+          feed: 'feed-daily-bowls',
         },
       })
     }
@@ -39,6 +40,7 @@ describe('HomeThemePicker mapping', () => {
     expect(normalizeHomeCustomization(switched).catItems).toEqual({
       rest: 'rest-cloud-bed',
       play: 'play-soft-tunnel',
+      feed: 'feed-daily-bowls',
     })
   })
 
@@ -46,6 +48,6 @@ describe('HomeThemePicker mapping', () => {
     expect(listCatItems('rest').map(({ id }) => id)).toEqual(['rest-cloud-bed'])
     expect(listCatItems('play').map(({ id }) => id)).toEqual(['play-soft-tunnel'])
     expect(listCatItems('scratch')).toEqual([])
-    expect(listCatItems('feed')).toEqual([])
+    expect(listCatItems('feed').map(({ id }) => id)).toEqual(['feed-daily-bowls'])
   })
 })
