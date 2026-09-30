@@ -1,0 +1,1332 @@
+{
+  "origin": "https://6abc76805fd66da6add32d1b--bravecat.netlify.app",
+  "commit": "e7d998526650e07a59cdcdeefcc02d3c26473e61",
+  "total": 147,
+  "matched": 147,
+  "missingAssetStatus": "404",
+  "results": [
+    {
+      "path": "apple-touch-icon.png",
+      "status": 200,
+      "sha256": "1db64a0f557080e6234d045e0f8ea8ff7ac710d861fdf2d0f2ae2a261912a331",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/album/empty.png",
+      "status": 200,
+      "sha256": "0c6f350527d4fe060f64563a64879f5a0bf1062c31dbd24abfe4726820cee570",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/close.svg",
+      "status": 200,
+      "sha256": "986fe8b483cf9892d62c423a6b3681f9e6d04090ec85af5056eebe5409703d2e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/export.svg",
+      "status": 200,
+      "sha256": "0b77ab177995ed05d2246fb3c18ef7f85003dfd429810a1630a4fba9a68a44da",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/import.svg",
+      "status": 200,
+      "sha256": "755086bbddd3ff769e3bb4553910eaeb0536cc5b61ea110c1dda7c0c2101729a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/lock.svg",
+      "status": 200,
+      "sha256": "54dc11d93ff77daa1978c24d5975e3acdeede61651707f5f2776d57fed1a734f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/glyphs/retry.svg",
+      "status": 200,
+      "sha256": "61e7854a40ff1e76c037c355d56dafc02ffe03762496db8a994b025797e67d3e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v01.png",
+      "status": 200,
+      "sha256": "40301a6f89e510466fa28d57e07eb819be02481987d601916ceac628596f5bc0",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v02.png",
+      "status": 200,
+      "sha256": "e11c56e978e9b539a79a500973996016825dbc8e253e6c37a50d689ccd5832d6",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--postcard-wall--v03.png",
+      "status": 200,
+      "sha256": "a4f7109c73664e12aca3506134922100b8ba9402829981e3b2ab9769aaedf12f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/display--souvenir-occlusion--v01.png",
+      "status": 200,
+      "sha256": "98c0bace2e2f7352c0d6fe5c9d24d594f1898ad01af5da166d698ae91b3d5c65",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-album.png",
+      "status": 200,
+      "sha256": "1386420c56b827cb1f474811ca6f8e924c8f0b2d509d62f1ab7eb756f2ba50c1",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-pack.png",
+      "status": 200,
+      "sha256": "1dc210c980f088878ab122c289b304794f55d8f93aa310d009f53d17332fc51b",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/home/nav-shop.png",
+      "status": 200,
+      "sha256": "558e6d85bace4daedf1e6551e69d4b197bc10951b9a0afae7fa248a59dd183aa",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/index-B-hl1S2e.css",
+      "status": 200,
+      "sha256": "9fccdf5a2a35984cb367f5190947a7c551b57ee92a0ada05195a389e684e690d",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/index-D0zE8I8q.js",
+      "status": 200,
+      "sha256": "860fdbb667c2d4890bffd5133c378e655aca8b6a8c75609a68f4b77a7b96743c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/items/item--snack--fish-biscuit--v02.png",
+      "status": 200,
+      "sha256": "5fdfc1427c15c878fd6810db05f6f5e28585b909364bb329d1a2def1d3c7534d",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--snack--travel-tin--v02.png",
+      "status": 200,
+      "sha256": "06ac51251237a801236a2e04bfd8313758b16738b37200c4ff29147b08546a9e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-bell--v02.png",
+      "status": 200,
+      "sha256": "8158e364e0360c60c2bf52a682b35c4dd337d276ca60cf61e4ccb1a86acb7cbe",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-blanket--v02.png",
+      "status": 200,
+      "sha256": "b153270a753b5abeb5c37dd5e10049042883bb8370091860658e10c5693d4c76",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-camera--v02.png",
+      "status": 200,
+      "sha256": "15ade73e54b4a0e1fff67da56ccd813af485080635ccb632afaacc90c406233e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--small-telescope--v02.png",
+      "status": 200,
+      "sha256": "0277c904b9babe7c136c2b6f73df8d3ed56f997fbdfe37477d4af36daa1b3112",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--toy--yarn-ball--v02.png",
+      "status": 200,
+      "sha256": "468a993d4f2d341173b0809ae82ad2e11c0438153da95f5e93c0660f79ee5c4e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/items/item--wish--ticket--v02.png",
+      "status": 200,
+      "sha256": "19c2ea6e45876cb3a4d5b734db01b50e1aa3835f85357fb2373e8fb6358243fe",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/base-342.png",
+      "status": 200,
+      "sha256": "eca5528396995d7ae00b45b2b37b9c6df5d6fcac34f47b8bf06327ecc0391376",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/base-382.png",
+      "status": 200,
+      "sha256": "2e6a11b5a2a19826a991a1dc7b7da3a11b1212b1c42c047af822cc1ce914cbd7",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/rim-342.png",
+      "status": 200,
+      "sha256": "ed38305baf6a35d5bcf62a379a9a0d97d5156c1fdb9e2c1f1e3d9ecdf04d28f4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/pack/rim-382.png",
+      "status": 200,
+      "sha256": "1f97a15c2b146629d7c7699449423ceca39385e9ed524198cb0d5f0e4da67812",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/souvenirs/souvenir--postmark-pin--v01.png",
+      "status": 200,
+      "sha256": "e1afc70568dafce724e5dbc79162170ffcdabdedbc0b395529ab788b8317c68a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/souvenirs/souvenir--travel-charm--v01.png",
+      "status": 200,
+      "sha256": "3f326e112df2ca5c0c3cb6a4f8f00deec710ab8502bc201743f52023c93ac0c6",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-24.png",
+      "status": 200,
+      "sha256": "e69c0004e1c8239622a21611d3c91d6ce105599553452edd145b88409357290c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-32.png",
+      "status": 200,
+      "sha256": "4b6d2a9116f0adbb4c9c6fd174f75ad1cc34d2f46cab2a0ca605349234529566",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/treat/treat-96.png",
+      "status": 200,
+      "sha256": "98e1450e16e6f531dec8ba1b9b71979444d4397f576ed22b28dcf1bad9c70de2",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "assets/web-DLFaPpOG.js",
+      "status": 200,
+      "sha256": "296cf2d4ab739157bdfddd258318c0ea8a34abbae531363eb7b4e806e4beee4c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "assets/web-DlmRDFv-.js",
+      "status": 200,
+      "sha256": "853f0649c8082cc38c0e4c50c3f25e6862ec509370378a1807af9f848401591b",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "path": "home-release/a-clear-sage/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "sha256": "3ca6a78b3d72347097e213a321c31d2ade88635f4867eadb9a7341da44b80be4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "sha256": "5c541494b1ec06db337e936b2d7d9f9072d58371b16cccf9f0bf84412b22373b",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "sha256": "b06c1254b3ee97f291971b7684071a3efc5728dfe7fe833d91b1da034b1e16b4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "sha256": "a256500f8c483a0ba23d5ac1baf8702f4fdb4ebcfd495ad885f0ae6092d9cafe",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "sha256": "c3cc8d22d80327319d0d86131d10992583b07b2d3c89350d045a76615bd6c9e0",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/exterior-noon.webp",
+      "status": 200,
+      "sha256": "0289869ed10a0cc8d6e93791ff1794b40a1f777c6b156b83d507c36459e750ac",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/a-clear-sage/lighting.webp",
+      "status": 200,
+      "sha256": "be4e8dba37e5e82e7f862b17ad03ee5084b70b64f3f93441f524ecf77b374068",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "sha256": "0c73856a92e84695813a4c5b435ff9d6c30c59aac5a1afce118ca0c20055f37f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "sha256": "bd2b6ed848c15b4a7690886a156ebb93839a1e26b9bab34b4b1a628fc3096ef9",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "sha256": "34ad0b1213809afa2d5b2810ffd5defa5f5de0ca434a614f0d7bf37b7b2ea96d",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "sha256": "98af9c957acf5768ceb60bda0eac5fe30ef5625ee92bec9982a33fa111f60908",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "sha256": "1f00ebe308ce7d78b09420fe3a2af93638aecb7ee957baf4ae8eca348e190ff4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/exterior-noon.webp",
+      "status": 200,
+      "sha256": "c61c20f5b71776f28fff891d46a5fa69b3f86fd28f9bf39aacd237d12e3c6328",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/b-warm-walnut-gallery/lighting.webp",
+      "status": 200,
+      "sha256": "f04a9f760d02df1415e53abdad0327fdb170af5a9118ddaa2deb87d60cd272d3",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/base-plate--aperture-alpha.webp",
+      "status": 200,
+      "sha256": "d057ae39b7ffc452f279035714e7b0d3b52360ea2dc5e3218c201ee93841c758",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--base.webp",
+      "status": 200,
+      "sha256": "d92a65cfb07cf457a729ad6eafd7e66f166068312f9c4db7c4e6d65d891d9cdc",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--occlusion.webp",
+      "status": 200,
+      "sha256": "124bee4293f438da611158f7ecd1c4ef76b51f4df929b10372752d7eee8c164e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--base.webp",
+      "status": 200,
+      "sha256": "77dea6f70e9a50a1654571b8a7e0645e0453a760c422148bd449595408220708",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/cat-item--rest-cloud-bed--occlusion.webp",
+      "status": 200,
+      "sha256": "daf629fbb1fc522d9c532a1b393f4a8050995bcf594dea6b9071adc2a4bc1dfe",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/exterior-noon.webp",
+      "status": 200,
+      "sha256": "2d6a47873d4b346dcd577ee0de1c00b7ac09f74b735cff3c54af2c88ad5ff0ac",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/f-moonwhite-bluegray/lighting.webp",
+      "status": 200,
+      "sha256": "4bbad33697965e48bbb1687fd4aefa3e3c67d4111e12e5106fcb159e4a35b32a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--eat--ambient--poster--v03.webp",
+      "status": 200,
+      "sha256": "1d4f348533f111dd7f681d150ae02dd835e0baac4c6652447a5b1c095bfa116e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--eat--ambient--v03.webp",
+      "status": 200,
+      "sha256": "e4258a9e0027a387174acf9ad7800a31c2d2db3752f583042254bbd3e92e69dc",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--gaze--ambient--poster--v03.webp",
+      "status": 200,
+      "sha256": "84ab229740a553d1f5ca2aab42f7ee2543b5d7b18c5af8c5cc54e40bca13ca80",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--gaze--ambient--v03.webp",
+      "status": 200,
+      "sha256": "90efef26982d9bdde70b27ee7cf84e160008354e37e3a05dca896b30d5bdd462",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--play--ambient--poster--v03.webp",
+      "status": 200,
+      "sha256": "187fd4dbf1a4c2351affabe5b69593de558d6f821af146740f1d9593dc3f9d4e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--play--ambient--v03.webp",
+      "status": 200,
+      "sha256": "342c21cdd466d136022274bb400714e2324da11e9200b22fcdeec7c92ead67b4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--sleep--ambient--poster--v03.webp",
+      "status": 200,
+      "sha256": "db825f666823d195b5ec5a5ee1a59cfd3330a43572ea5addd2e9c70cd2a385fb",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "home-release/minho/cat--minho--sleep--ambient--v03.webp",
+      "status": 200,
+      "sha256": "75167d6ef9cf2c82b8f2971770ada455b5f8ffb844e80b6e3b0f5c93cb6ee896",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "icon-192.png",
+      "status": 200,
+      "sha256": "ceca75ce5e8d8dc4fc0a29163be6d019e127b4d5e91d93ef2f393db69b21fcd5",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "icon-512.png",
+      "status": 200,
+      "sha256": "9a2727366cbf3146545cd3ff8c3b3b61fce6c9f65094d2ac22fd278113410eb2",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "icon.svg",
+      "status": 200,
+      "sha256": "cd51289ccbb7524e659a363d5318bbfcba815753526d9206bca836ad5bd82f46",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "842c4913827db79ac65c25d1cdb046088da28d8dabbda516d6e753e633c55743",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "sha256": "48c2d393c3d91ee6404c5190f4611026b9f13f0837246c4ca5daee64b1867ada",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--eat--v01.png",
+      "status": 200,
+      "sha256": "0f6d2650d63823f86905a07d27620a218316ae41fbdf2b214f121e8518c8b343",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--gaze--v01.png",
+      "status": 200,
+      "sha256": "475a30ec103f0d2fe7f97f67ae24ebd90af6e7c87cad7d26191bf11edccbd2ba",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--play--v01.png",
+      "status": 200,
+      "sha256": "d1ab06d4f8e194c09473ce28eb7bd07def4d4e47b383e7bd82b68d15f56ad016",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--sit--v01.png",
+      "status": 200,
+      "sha256": "d69eed0219f2c5d5d7377925fc6340169f803d0205798d7d6555b2d43e45840e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--sleep--v01.png",
+      "status": 200,
+      "sha256": "010674a2b3c783e7e9beedaa4e586f18f78ee6ad9b6ff6f979af8bea09b3f5d7",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "portraits/minho/portrait--minho--walk--v01.png",
+      "status": 200,
+      "sha256": "5ae423e5b4f5abf5a1619b0012b18ea86344a693a4cb01ed812568dbcb15a496",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/png",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "registerSW.js",
+      "status": 200,
+      "sha256": "9742073ef7fc795e7673d98f272992843298426a0ffd8cb3507784df5143608b",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--australia-sydney-opera-house--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "48fb153130450b705479a776a08ed9cb4799ae74721c6317b194953fd7aa873e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--australia-sydney-opera-house--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "0371f0f021eaaa36c4c935c9c093517649743a5eab40891e37c75fd0e9b8659f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--australia-sydney-opera-house--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "ebc1b1b5390dc3afb2716d241fc27771a4c9b1d613355bfd72f0cb7addd4525e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "49cedfc3638ea4c428f2b3f28731104774da4e36e98cdd69d529fc821b90a034",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--brazil-rio-de-janeiro-christ-the-redeemer--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "3f63c8206091420c5e84d9c6351bf67c6e793d65b5f710ebe18fd112a6bcc7b2",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--cambodia-siem-reap-angkor-wat--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "aab9c27fe4f859e0885c0d23ea6209fd87d15b086d06376ef02a6b5f49879f49",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--cambodia-siem-reap-angkor-wat--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "41069c8e7851e22657e7025559d05ceaaae4519f1224864a69521872557a2c8d",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--cambodia-siem-reap-angkor-wat--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "c3ae8ad5c34db53ce00bc9fd402d7678db114c94c210a085b67034a747e2fc21",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-beijing-forbidden-city-corner-tower--day-signature--v02.webp",
+      "status": 200,
+      "sha256": "d8de05bde699561c56bca25ab5950a83967e34076bc624e0af61062201f93d1c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-beijing-forbidden-city-corner-tower--golden-hour--v02.webp",
+      "status": 200,
+      "sha256": "75c8f031bd87576e6ee06615e146b1c45929fd60bbe859f7f83d318d50a23447",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-beijing-mutianyu-great-wall--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "b83e8563e77f2ec4c714944c79a241034053b310b8d7c38b42e143376b117863",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-beijing-mutianyu-great-wall--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "cc90afd1835548d145c04c505c72a9d8f9cc7b5d885ccf2b01e039a8b54a5527",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-dongguan-xiliubeipo-village--day-signature--v02.webp",
+      "status": 200,
+      "sha256": "4495c83bcaec7586a096783d66dd553ac6689235fa51671dfbfedfdcef6bd58c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-dongguan-xiliubeipo-village--golden-hour--v02.webp",
+      "status": 200,
+      "sha256": "20ec1ece503fa4042384b6edd5946fad715b03a6ca6f17e13f817e40df748007",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-guilin-elephant-trunk-hill--companion-rare--v02.webp",
+      "status": 200,
+      "sha256": "c815388ed52678b67d79fe44c2d72433af1fbbd3cf1bc9691536a93b68aa32de",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-guilin-elephant-trunk-hill--day-signature--v02.webp",
+      "status": 200,
+      "sha256": "83324528d66ead40ca7047cef793f5431ecf6b731f01afeee5aff7c5ac6674c5",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-guilin-elephant-trunk-hill--golden-hour--v02.webp",
+      "status": 200,
+      "sha256": "9b7410d8d92c8931a62069b80c008bcd24204c957c7c5aaa9ecc447daa023ecd",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "c6d756f033c0105354dd104b115df649b9a01ef2e78fd10878a3aa03bf242afe",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-hangzhou-west-lake-leifeng-pagoda--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "bd387ebc6937b561dfb10e4681bbeff5ac580bd5a85b666f8c7d170d5c298375",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-shanghai-the-bund--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "9043a239cfc690ae6c2f40799812a79e818000e987cc971ada2e16ad1b25cd38",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-shanghai-the-bund--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "0db5b61d78ab843ef915d12af5ef43e3ec333b861b89eae3403c55f5793ad7a6",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-xian-giant-wild-goose-pagoda--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "23c5a2ee4b01c8cbfa6041ee27db96f2f31fb9436c4a7e70eb695697d006e9be",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--china-xian-giant-wild-goose-pagoda--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "4f4692c2fb63a2e298c38f091751869bfda1315fba4cc6701ef48b0f92f3e779",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--egypt-giza-pyramids--companion-rare--v02.webp",
+      "status": 200,
+      "sha256": "f0c2ccfdd6739a6aabe5b59e6acc1694e628ecd417627c914d6354e950966e33",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--egypt-giza-pyramids--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "182e97b28c296b76be1c03eac67feae53f9c37fc61b30204908dfd9f647ab3e0",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--egypt-giza-pyramids--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "dc484c3833b03ffe9b6a8046c92725e5f88ea0294750eb41000d15f89e267a0e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--france-paris-eiffel-tower--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "abed437c3c193742b465e8dc289a534a82bd94304f08e12935607ab6ed6c673e",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--france-paris-eiffel-tower--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "8759dec3cdf7c295b887a7fdba5b60bec63246df3f7b7fb323e882c3b7f766c0",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--india-agra-taj-mahal--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "d34c3b933f078ac8f0d2f75c11ad122cb0551869d9c1f41b4c47bc5274254c2a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--india-agra-taj-mahal--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "fcb431aa74b51fc390174c2aabebd05984fc47483d9ff84454c395736f98bc90",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--india-agra-taj-mahal--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "8f2d2ce7d8a30cda59087388e7f7dd68603ffffbc7d811580766575c6dc68bb9",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--italy-rome-colosseum--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "296664b0a1a838c3c35f1deed566b4df8194996b73d8859d54f13c1ec7a46e24",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--italy-rome-colosseum--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "f7a88b39ce571fd14a04ee561867b241a0825caaeab787b23dd57dd59bf6d094",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--japan-kyoto-fushimi-inari-taisha--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "fbfdd7d6e27a7b304ec5949f516ccdbb0cc6d8dc330faa314f79c6b2b2c83302",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--japan-kyoto-fushimi-inari-taisha--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "d4cfb9805140785349ff0242749aa1f2ec2d16132a06233a104b5b301a75ee53",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--japan-kyoto-fushimi-inari-taisha--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "e34b27f590454d2d5c5aea70ed994c5753742aca01a73cc61869b4ff7f93e2a4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--jordan-petra-al-khazneh--day-signature--v02.webp",
+      "status": 200,
+      "sha256": "66721ae2668ff9387daf5318063f5916e7f9752e9cd5cd9ad20db4f64cdaaa1a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--jordan-petra-al-khazneh--golden-hour--v02.webp",
+      "status": 200,
+      "sha256": "91a82981979798d6f9b4d22e0fdf949abe234b1296fdb94d7d09b98586f47a85",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--mexico-yucatan-chichen-itza--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "2b140614640741cce9d56f1b520307a1ba9ff5070f07739e420a859e51bbcdb0",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--mexico-yucatan-chichen-itza--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "1c46c2a9cc9cb218d98914ef5671e402de9f9c29d0586e59cdc8c51958ba7002",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--mexico-yucatan-chichen-itza--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "dacb3602c7a67964ad1146082f23447754e414e5f5f1ad2f8c931167d0a8b3fa",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--morocco-ouarzazate-ait-benhaddou--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "ea8e174cb30a0f0baf3c515b74b07cfb8a9534c534231d88786739135f304464",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--morocco-ouarzazate-ait-benhaddou--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "651a1b6f12abb0e71ce3a634a0dd88fcc17c8e12192cda0f31b0dc03dca8e869",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--new-zealand-fiordland-milford-sound--companion-rare--v02.webp",
+      "status": 200,
+      "sha256": "cf7db40c9ead6182ebf569769eeafd9f793496fa220a9b985c701abc28c3f260",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--new-zealand-fiordland-milford-sound--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "a037baf2a0d02ee31ab33913cc6aefc41d47c601b7ec17415ebfc76e27ef4e96",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--new-zealand-fiordland-milford-sound--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "a023ab7434263d933d718d8d238a2d24fb2d63f5890e3b1f7c6750dbe04c130c",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--peru-cusco-machu-picchu--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "d1da13f1e1aaddd8c2a63b9d8f339dfe4b63d43b53cda467df4078e6761d8e49",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--peru-cusco-machu-picchu--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "aa9806b829ee4bb1292699fba24dfd9952bc468eef3dc0518864a6455702f997",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--singapore-singapore-merlion--companion-rare--v02.webp",
+      "status": 200,
+      "sha256": "e6bd5de153e7a38276d7e0eb01dee72a968a7ba7476edc07efe1d84587fa60fb",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--singapore-singapore-merlion--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "b5b60c601216fce4e054112374f5e3c4a93711a8783b15ed9ebeed84c39e0f5a",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--singapore-singapore-merlion--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "d14da1a2e9db3d843ede11a520540f1cef2fd23b4974081b800933b68d3909f4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--south-africa-cape-town-table-mountain--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "e13a863a115baf19c2820377bb93ccd8e6290368d06c0316fa44a5d59719eed9",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--south-africa-cape-town-table-mountain--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "9e9d4bdeaac0017045dda451efb0ae0e46c8a6d13eb1b4dbd667f5f926b64289",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--south-africa-cape-town-table-mountain--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "c20612573e44acc2d8d509c8e956abb31eea0288acf06c63a5d8dfe6df8e3276",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--turkey-istanbul-hagia-sophia--companion-rare--v01.webp",
+      "status": 200,
+      "sha256": "f6cd90a2689f8c102d915194f6c52133242457b93f9f6f33bfe5bc34c08d67e3",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--turkey-istanbul-hagia-sophia--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "7fd1304510c0178697b36e183cb4e23c1458ed0f7074ea4bbc8247e992dfa4bd",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--turkey-istanbul-hagia-sophia--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "3d953e98f9e59a40124b176a3d524ac13f750bfa766f91c5b883da52fcf174f1",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--united-kingdom-london-tower-bridge--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "978b674e7a617f0350e432205fea042791973b5e2d6d49ba676e278231cf21c4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--united-kingdom-london-tower-bridge--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "42df0b0705d4d4727714515bb29a0e58f8982323b8107ff9043bf8b575d91eff",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--united-states-new-york-brooklyn-bridge--day-signature--v01.webp",
+      "status": 200,
+      "sha256": "61935a2c8869c7a67d66df4bac18bf3ab587c7681188545d7694d653c748d886",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "scenes/scene--united-states-new-york-brooklyn-bridge--golden-hour--v01.webp",
+      "status": 200,
+      "sha256": "bbe5b52aa5471768509382ce334437e10b21db74efc03f3d654ca11adcd372a4",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/mist-harbor-returning-boats/v1/scene-01-sunrise-harbor.webp",
+      "status": 200,
+      "sha256": "72acd56bb78dd9d6d92cc857d989bc63c531039637c7cefec36fd06871e6a62f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/mist-harbor-returning-boats/v1/scene-02-indoor-rain-wait.webp",
+      "status": 200,
+      "sha256": "781354542b32dbbcabd5d494f62e53cc542d4e25582b56dc0ce8bd7c1723853b",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/mist-harbor-returning-boats/v1/scene-03-fisherman-fish-gift.webp",
+      "status": 200,
+      "sha256": "637806c3f2d61fc10f12700700a67c968f8c367bcd4116220afa51812a99890f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/mist-harbor-returning-boats/v1/scene-04-dried-fish-sleep.webp",
+      "status": 200,
+      "sha256": "560edcc432dd5476720a0bbd4c4b3194620a280699f9f6a210e6586596d931f1",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/night-watch-stargazing/v1/scene-01-arrival.webp",
+      "status": 200,
+      "sha256": "e30ca1bd0ecd3806fa0cfe1a275f0b11288bb6ac18d81df5aa1b6ba992652a66",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/night-watch-stargazing/v1/scene-02-ascent.webp",
+      "status": 200,
+      "sha256": "afe31e3787c9e87f23455e90af0d8753513dc000fd564065830ed497cb12c25d",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/night-watch-stargazing/v1/scene-03-stargazing.webp",
+      "status": 200,
+      "sha256": "5429e7d0ef451f42ab42c2747f8826ed9db4557f0eedcf4de904af3c2aedfd52",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "stories/night-watch-stargazing/v1/scene-04-dawn-rest.webp",
+      "status": 200,
+      "sha256": "8b8b4ae1007854cbfa3da22fbe87a2bb315bbb6c1b60a75a43dbfef9386d58e1",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "image/webp",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "sha256": "5f9cfcbff976aa93b9150a8807e72c051ae84eebe8d705b0292521e455224f6f",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "workbox-9c191d2f.js",
+      "status": 200,
+      "sha256": "04b086f1b2f4215ee4b659a7bc9c76162894abdb43fa876247bc7c0bd6fd1c37",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    }
+  ]
+}

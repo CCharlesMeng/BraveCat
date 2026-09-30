@@ -1,0 +1,9 @@
+{
+  "origin": "https://bravecat.netlify.app",
+  "matches": {
+    "index.html": true,
+    "manifest.webmanifest": true,
+    "sw.js": true
+  },
+  "manifestHeaders": "HTTP/2 200 \naccept-ranges: bytes\nage: 0\ncache-control: public,max-age=0,must-revalidate\ncache-status: \"Netlify Edge\"; fwd=miss; fwd-status=200; stored\ncontent-type: application/manifest+json; charset=utf-8\ndate: Wed, 30 Sep 2026 02:41:37 GMT\netag: \"6ecee6fc5e13ca8337538000fc4af2a9-ssl\"\nserver: Netlify\nstrict-transport-security: max-age=31536000; includeSubDomains; preload\nx-content-type-options: nosniff\nx-nf-request-id: 01M3R30QR915HK6AGXJM2KHRF4\ncontent-length: 443\n\n"
+}
