@@ -330,10 +330,13 @@ main {
 }
 
 /*
- * Candidate home art is rendered only from public/dev-art. Production retains
- * the CSS room above until the candidate set passes its shipping gate.
+ * All art and interaction layers share the complete 3:4 scene.
+ * Keep the copy in flow below it so neither furniture nor Cat Items are cropped.
  */
-.home-art-preview {
+.room.home-art-preview {
+  min-height: 0;
+  flex: none;
+  padding-top: calc(100% * 4 / 3);
   background: transparent;
 }
 
@@ -440,11 +443,16 @@ main {
 }
 
 .home-art-preview .room-copy {
-  right: 18px;
-  left: auto;
-  width: min(calc(100% - 36px), 320px);
+  position: relative;
+  inset: auto;
+  width: 100%;
+  padding: 8px 16px 10px;
+  border: 0;
+  border-radius: 0;
+  background: var(--paper);
+  box-shadow: none;
   transform: none;
-  text-align: left;
+  text-align: center;
 }
 
 .home-art-preview .sunwash,
@@ -1280,7 +1288,7 @@ main {
 }
 
 .portrait-choice-toggle {
-  min-height: 28px;
+  min-height: 44px;
   padding: 4px 9px;
   border: 1px solid rgba(90, 103, 73, 0.3);
   border-radius: 999px;
@@ -1288,7 +1296,7 @@ main {
   color: var(--ink-soft);
   cursor: pointer;
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.56rem;
+  font-size: 0.8rem;
 }
 
 .portrait-choices {
@@ -1775,7 +1783,8 @@ main {
 
 .room-copy p:last-child {
   color: #4f5144;
-  font-size: 0.76rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
@@ -2980,6 +2989,7 @@ main {
   }
 
   .app-shell {
+    width: clamp(320px, calc((100dvh - 340px) * 0.75), 670px);
     min-height: calc(100dvh - 44px);
     border: 1px solid rgba(76, 77, 63, 0.28);
     border-radius: 24px;
@@ -2997,6 +3007,31 @@ main {
     bottom: 22px;
     border-bottom: 1px solid rgba(79, 78, 64, 0.34);
     border-radius: 28px;
+  }
+}
+
+@media (min-width: 600px) and (max-height: 850px) {
+  body {
+    padding-block: 12px;
+  }
+
+  .app-shell {
+    min-height: calc(100dvh - 24px);
+  }
+
+  .topbar {
+    min-height: 64px;
+    padding: 10px 20px;
+  }
+
+  .home-nav {
+    min-height: 76px;
+    padding-block: 8px;
+  }
+
+  .nav-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 

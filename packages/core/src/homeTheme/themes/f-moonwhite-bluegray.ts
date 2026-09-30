@@ -51,7 +51,8 @@ export const F_MOONWHITE_BLUEGRAY_THEME = {
     sleep: placementFromAnchor({ x: 248, y: 980, flip: false }),
     play: placementFromAnchor({ x: 580, y: 1395, flip: false }),
     eat: placementFromAnchor({ x: 480, y: 1005, flip: false }),
-    gaze: { x: 90, y: 320, width: 320, height: 320, flip: true },
+    // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
+    gaze: { x: 90, y: 444, width: 320, height: 320, flip: true },
   },
   catPaintBounds: {
     gaze: {

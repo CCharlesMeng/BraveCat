@@ -51,7 +51,8 @@ export const A_CLEAR_SAGE_THEME = {
     sleep: placementFromAnchor({ x: 250, y: 1205, flip: false }),
     play: placementFromAnchor({ x: 690, y: 1410, flip: false }),
     eat: placementFromAnchor({ x: 375, y: 1185, flip: false }),
-    gaze: { x: 80, y: 420, width: 340, height: 340, flip: true },
+    // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
+    gaze: { x: 80, y: 555, width: 340, height: 340, flip: true },
   },
   catPaintBounds: {
     gaze: {

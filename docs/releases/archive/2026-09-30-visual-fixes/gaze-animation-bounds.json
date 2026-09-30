@@ -1,0 +1,8 @@
+{
+  "frames": 64,
+  "width": 512,
+  "height": 512,
+  "minFoot": 490,
+  "maxFoot": 490,
+  "threshold": 32
+}

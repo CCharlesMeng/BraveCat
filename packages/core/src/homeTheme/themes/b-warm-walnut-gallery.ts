@@ -50,7 +50,8 @@ export const B_WARM_WALNUT_GALLERY_THEME = {
     sleep: placementFromAnchor({ x: 205, y: 1215, flip: false }),
     play: placementFromAnchor({ x: 620, y: 1465, flip: false }),
     eat: placementFromAnchor({ x: 380, y: 1215, flip: false }),
-    gaze: { x: 100, y: 380, width: 340, height: 340, flip: true },
+    // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
+    gaze: { x: 100, y: 555, width: 340, height: 340, flip: true },
   },
   catPaintBounds: {
     gaze: {

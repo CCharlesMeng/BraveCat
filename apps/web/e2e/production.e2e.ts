@@ -220,3 +220,76 @@ test('新安装后离线首次收到普通地标，完整图片与 PNG 导出可
   expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a')
   expect(png.length).toBeGreaterThan(10000)
 })
+
+for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 }]) {
+  test(`完整首页与窗台承托 ${viewport.width}×${viewport.height}`, async ({ page }) => {
+    await page.setViewportSize(viewport)
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    // Exercise the production activity selection; no development URL override.
+    await page.addInitScript(() => {
+      crypto.getRandomValues = <T extends ArrayBufferView | null>(array: T): T => {
+        if (array instanceof Uint32Array) array.fill(3)
+        return array
+      }
+    })
+    await page.goto('/')
+    await page.getByRole('button', { name: '让它住进家里', exact: true }).click()
+    await expect(page.locator('.room')).toHaveAttribute('data-home-activity', 'gaze')
+    for (const [name, id, supportY] of [
+      ['鼠尾草', 'a-clear-sage', 880],
+      ['暖胡桃', 'b-warm-walnut-gallery', 880],
+      ['月白', 'f-moonwhite-bluegray', 750],
+    ] as const) {
+      if (id !== 'a-clear-sage') {
+        await page.getByRole('button', { name: '布置家', exact: true }).click()
+        await page.getByRole('button', { name: new RegExp(name) }).click()
+        await page.getByRole('button', { name: '布置家', exact: true }).click()
+      }
+      await page.locator('.home-art-canvas img').evaluateAll(async images => {
+        await Promise.all(images.map(image => (image as HTMLImageElement).decode()))
+      })
+      const geometry = await page.evaluate(() => {
+        const bounds = (selector: string) => {
+          const r = document.querySelector(selector)!.getBoundingClientRect()
+          return { x: r.x, y: r.y, width: r.width, height: r.height, bottom: r.bottom }
+        }
+        const cat = document.querySelector<HTMLImageElement>('.home-art-cat img')!
+        const pixels = document.createElement('canvas')
+        pixels.width = cat.naturalWidth; pixels.height = cat.naturalHeight
+        const ctx = pixels.getContext('2d')!
+        ctx.drawImage(cat, 0, 0)
+        const data = ctx.getImageData(0, 0, pixels.width, pixels.height).data
+        let foot = 0
+        for (let y = 0; y < pixels.height; y++) {
+          for (let x = 0; x < pixels.width; x++) {
+            if (data[(y * pixels.width + x) * 4 + 3] > 32) foot = y
+          }
+        }
+        const pose = bounds('.home-art-cat')
+        return {
+          canvas: bounds('.home-art-canvas'), room: bounds('.room'),
+          copy: bounds('.room-copy'), shell: bounds('.app-shell'),
+          paintBottom: pose.y + pose.height * foot / pixels.height,
+          control: bounds('.room-copy .portrait-choice-toggle'),
+          layers: [...document.querySelectorAll('.home-display-canvas, .home-art-lighting')].map(e => {
+            const r = e.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }
+          }),
+          overflow: document.documentElement.scrollWidth > innerWidth,
+        }
+      })
+      expect(Math.abs(geometry.paintBottom - (geometry.canvas.y + geometry.canvas.width * supportY / 1200))).toBeLessThan(2)
+      expect(geometry.canvas.bottom).toBeLessThanOrEqual(geometry.copy.y + 1)
+      expect(geometry.copy.bottom).toBeLessThanOrEqual(geometry.room.bottom + 1)
+      expect(geometry.control.height).toBeGreaterThanOrEqual(44)
+      expect(geometry.overflow).toBe(false)
+      for (const layer of geometry.layers) {
+        expect(Math.abs(layer.x - geometry.canvas.x)).toBeLessThan(1)
+        expect(Math.abs(layer.y - geometry.canvas.y)).toBeLessThan(1)
+        expect(Math.abs(layer.width - geometry.canvas.width)).toBeLessThan(1)
+        expect(Math.abs(layer.height - geometry.canvas.height)).toBeLessThan(1)
+      }
+      if (viewport.width === 1280) expect(geometry.shell.bottom).toBeLessThanOrEqual(viewport.height - 10)
+      await page.screenshot({ path: `test-results/home-visual-${id}-${viewport.width}.png`, fullPage: true })
+    }
+  })
+}

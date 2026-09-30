@@ -1,0 +1,34 @@
+{
+  "theme": "/home-release/a-clear-sage/exterior-noon.webp",
+  "activity": "gaze",
+  "canvas": {
+    "x": 306,
+    "y": 105,
+    "width": 668,
+    "height": 890.65625,
+    "bottom": 995.65625
+  },
+  "cat": {
+    "x": 350.53125,
+    "y": 338.796875,
+    "width": 189.265625,
+    "height": 189.25,
+    "bottom": 528.046875
+  },
+  "room": {
+    "x": 306,
+    "y": 105,
+    "width": 668,
+    "height": 510,
+    "bottom": 615
+  },
+  "shell": {
+    "x": 305,
+    "y": 22,
+    "width": 670,
+    "height": 740,
+    "bottom": 762
+  },
+  "paintBottom": 516.21875,
+  "sill": 589.3
+}
