@@ -1,0 +1,10 @@
+{
+  "site_id": "2a965a34-74ab-457c-89f6-de16a1286d87",
+  "site_name": "bravecat",
+  "deploy_id": "6abc8a3fe81507debcb94a93",
+  "deploy_url": "https://6abc8a3fe81507debcb94a93--bravecat.netlify.app",
+  "logs": "https://app.netlify.com/projects/bravecat/deploys/6abc8a3fe81507debcb94a93",
+  "function_logs": "https://app.netlify.com/projects/bravecat/logs/functions",
+  "edge_function_logs": "https://app.netlify.com/projects/bravecat/logs/edge-functions",
+  "url": "https://bravecat.netlify.app"
+}

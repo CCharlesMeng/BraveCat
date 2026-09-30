@@ -1,0 +1,36 @@
+{
+  "origin": "https://bravecat.netlify.app",
+  "commit": "d5749a6d6c91ddf778dbd4d550d9929f9d9b99c6",
+  "total": 3,
+  "matched": 3,
+  "missingAssetStatus": "404",
+  "results": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "7c8f0a00546ede7672f97061869947f306ad3f46b402682226e096014b82f27e",
+      "exact": false,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "sha256": "48c2d393c3d91ee6404c5190f4611026b9f13f0837246c4ca5daee64b1867ada",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "sha256": "3484f7c277fc2d523f3620f305f339053773c0df9ebbe2fe34e9a6932df1e0bb",
+      "exact": true,
+      "matchesAfterKnownHostingComment": true,
+      "contentType": "application/javascript; charset=utf-8",
+      "cacheControl": "public,max-age=0,must-revalidate"
+    }
+  ]
+}

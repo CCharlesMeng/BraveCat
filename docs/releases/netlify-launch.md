@@ -65,8 +65,15 @@
 I01–I04 的修复、截图与验证见 [修复报告](../audits/home-item-visual-integration-2026-09-30.md) 和 [本轮发布归档](archive/2026-09-30-item-integration/README.md)。同一隔离公网浏览器的旧 PWA 升级保留余额和待收鱼干，收取后余额从 12 增至 29。
 
 
-## 2026-09-30 常驻双碗与进食位置修复（当前生产）
+## 2026-09-30 常驻双碗与进食位置修复（历史快照）
 
 当前生产为 [6abc87e8d450ba6a139af601](https://app.netlify.com/projects/bravecat/deploys/6abc87e8d450ba6a139af601)，源码 `95451685ddbf3e72d1bb76588c00c9b6339d316f`。CI/E2E 成功后通过 Netlify CLI 上传完整冻结发行包，原站点、旧部署、已批准母版及此前归档均保留。
 
 三个主题常驻饭碗与水碗，并调整进食位置、朝向及动画内置碗的合成。详见 [修复报告](../audits/home-feeding-place-2026-09-30.md) 和 [发布归档](archive/2026-09-30-feeding-place/README.md)。公网 150/150 文件校验与旧 PWA 存档升级验证通过；真机安装和系统分享未在本轮验证。
+
+
+## 2026-09-30 用品与地毯摆放调整（当前生产）
+
+当前生产为 [6abc8a3fe81507debcb94a93](https://app.netlify.com/projects/bravecat/deploys/6abc8a3fe81507debcb94a93)，源码 `d5749a6d6c91ddf778dbd4d550d9929f9d9b99c6`。CI/E2E 成功后通过 Netlify CLI 发布完整冻结产物。猫窝与毯边分开，隧道缩小并偏置，同步猫姿势与遮挡；常驻双碗保留。素材字节不变，旧部署、母版及归档保留。
+
+[本轮归档](archive/2026-09-30-home-layout/README.md) 包含 A/B/F 前后比较、四活动与动画采样、包指纹、主域名截图及旧存档升级证据。设备截图为浏览器模拟。
