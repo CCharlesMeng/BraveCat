@@ -596,8 +596,8 @@ describe('base-plate home themes', () => {
       context,
     )
     expect(scene.cat.placement).toEqual({
-      x: 70,
-      y: 924,
+      x: 45,
+      y: 879,
       width: 360,
       height: 360,
       flip: false,

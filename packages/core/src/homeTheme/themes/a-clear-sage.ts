@@ -48,8 +48,8 @@ export const A_CLEAR_SAGE_THEME = {
   // Fish paint rests at sill y≈880; label/hit area extend below, to the right of gaze.
   treatPlacement: { x: 370, y: 841, width: 155, height: 150 },
   catPlacements: {
-    sleep: placementFromAnchor({ x: 250, y: 1205, flip: false }),
-    play: placementFromAnchor({ x: 690, y: 1410, flip: false }),
+    sleep: placementFromAnchor({ x: 225, y: 1160, flip: false }, 360),
+    play: placementFromAnchor({ x: 799, y: 1421, flip: false }, 324),
     eat: placementFromAnchor({ x: 581, y: 1122, flip: true }, 360),
     // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
     gaze: { x: 80, y: 555, width: 340, height: 340, flip: true },

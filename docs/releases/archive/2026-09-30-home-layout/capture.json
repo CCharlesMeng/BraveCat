@@ -1,0 +1,66 @@
+{
+  "url": "http://127.0.0.1:19174",
+  "measurements": [
+    {
+      "theme": "a-clear-sage",
+      "activity": "sleep",
+      "time": "noon"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "activity": "sleep",
+      "time": "noon"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "activity": "sleep",
+      "time": "noon"
+    },
+    {
+      "theme": "a-clear-sage",
+      "activity": "play",
+      "time": "noon"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "activity": "play",
+      "time": "noon"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "activity": "play",
+      "time": "noon"
+    },
+    {
+      "theme": "a-clear-sage",
+      "activity": "eat",
+      "time": "noon"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "activity": "eat",
+      "time": "noon"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "activity": "eat",
+      "time": "noon"
+    },
+    {
+      "theme": "a-clear-sage",
+      "activity": "gaze",
+      "time": "noon"
+    },
+    {
+      "theme": "b-warm-walnut-gallery",
+      "activity": "gaze",
+      "time": "noon"
+    },
+    {
+      "theme": "f-moonwhite-bluegray",
+      "activity": "gaze",
+      "time": "noon"
+    }
+  ],
+  "simulatedDevice": true
+}
