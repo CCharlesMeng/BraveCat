@@ -152,7 +152,7 @@ for (const artifact of storyManifest.artifacts) {
 }
 console.log('All 8 approved story frames verified in production and offline precache')
 const homeManifest = JSON.parse(await readFile(path.join(root, 'docs/art/production/home-release/manifest.v1.json'), 'utf8'))
-assert(homeManifest.shippingEligible === true && homeManifest.artifacts.length === 29, 'home release manifest is incomplete')
+assert(homeManifest.shippingEligible === true && homeManifest.artifacts.length === 32, 'home release manifest is incomplete')
 for (const artifact of homeManifest.artifacts) {
   const bytes = await readFile(path.join(distRoot, artifact.src))
   assert(createHash('sha256').update(bytes).digest('hex') === artifact.sha256, `home output differs: ${artifact.src}`)

@@ -137,7 +137,7 @@ const resolveBasePlateScene = (
     ? catItemFor(activeItemId)?.adapters[theme.id]
     : undefined
   const catPlacement = activeAdapter
-    ? placementFromAnchor(activeAdapter.catAnchor)
+    ? placementFromAnchor(activeAdapter.catAnchor, theme.catPlacements[activity].width)
     : theme.catPlacements[activity]
   const catAnimation = theme.catAnimationsByPortrait[portraitId]?.[activity]
   const lightingSrc = theme.lighting[time]

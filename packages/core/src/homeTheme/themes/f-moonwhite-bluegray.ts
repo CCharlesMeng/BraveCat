@@ -50,7 +50,7 @@ export const F_MOONWHITE_BLUEGRAY_THEME = {
   catPlacements: {
     sleep: placementFromAnchor({ x: 248, y: 980, flip: false }),
     play: placementFromAnchor({ x: 580, y: 1395, flip: false }),
-    eat: placementFromAnchor({ x: 480, y: 1005, flip: false }),
+    eat: placementFromAnchor({ x: 945, y: 1248, flip: true }, 360),
     // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
     gaze: { x: 90, y: 444, width: 320, height: 320, flip: true },
   },
@@ -65,8 +65,9 @@ export const F_MOONWHITE_BLUEGRAY_THEME = {
     },
   },
   catAnimationsByPortrait: { minho: MINHO_ANIMATIONS },
-  slots: ['rest', 'play'],
+  slots: ['rest', 'play', 'feed'],
   defaultCatItems: {
+    feed: 'feed-daily-bowls',
     rest: 'rest-cloud-bed',
     play: 'play-soft-tunnel',
   },

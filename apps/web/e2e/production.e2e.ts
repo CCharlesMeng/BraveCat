@@ -85,7 +85,7 @@ test('正式 PWA：离线重载补齐四幕、尾页，全部发布画面缓存�
     const homes = requests.filter(request => new URL(request.url).pathname.startsWith('/home-release/'))
     return { stories: stories.length, homes: homes.length, scenes: requests.filter(request => new URL(request.url).pathname.startsWith('/scenes/')).length }
   })
-  expect(missing).toEqual({ stories: 8, homes: 29, scenes: 61 })
+  expect(missing).toEqual({ stories: 8, homes: 32, scenes: 61 })
   await page.screenshot({ path: 'test-results/story-closing-offline.png', fullPage: true })
 })
 
@@ -248,6 +248,9 @@ for (const viewport of [{ width: 1280, height: 720 }, { width: 390, height: 844 
       await page.locator('.home-art-canvas img').evaluateAll(async images => {
         await Promise.all(images.map(image => (image as HTMLImageElement).decode()))
       })
+      // The normal production save must acquire permanent bowls without a reset.
+      await expect(page.locator('.home-art-cat-item[data-slot="feed"]')).toBeVisible()
+      await expect(page.locator('.home-feeding-contents')).toBeVisible()
       const geometry = await page.evaluate(() => {
         const bounds = (selector: string) => {
           const r = document.querySelector(selector)!.getBoundingClientRect()

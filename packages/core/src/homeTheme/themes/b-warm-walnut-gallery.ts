@@ -49,7 +49,7 @@ export const B_WARM_WALNUT_GALLERY_THEME = {
   catPlacements: {
     sleep: placementFromAnchor({ x: 205, y: 1215, flip: false }),
     play: placementFromAnchor({ x: 620, y: 1465, flip: false }),
-    eat: placementFromAnchor({ x: 380, y: 1215, flip: false }),
+    eat: placementFromAnchor({ x: 463, y: 1190, flip: true }, 300),
     // Measured sill support: A/B y=880, F y=750; poster foot y=490/512.
     gaze: { x: 100, y: 555, width: 340, height: 340, flip: true },
   },
@@ -64,8 +64,9 @@ export const B_WARM_WALNUT_GALLERY_THEME = {
     },
   },
   catAnimationsByPortrait: { minho: MINHO_ANIMATIONS },
-  slots: ['rest', 'play'],
+  slots: ['rest', 'play', 'feed'],
   defaultCatItems: {
+    feed: 'feed-daily-bowls',
     rest: 'rest-cloud-bed',
     play: 'play-soft-tunnel',
   },

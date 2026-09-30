@@ -96,7 +96,36 @@ export const PLAY_SOFT_TUNNEL = {
   },
 } as const satisfies CatItemDefinition
 
+/** 常驻饭碗与水碗；沿用已有 feed 槽，和猫窝/隧道分开落地。 */
+export const DAILY_BOWLS = {
+  id: 'feed-daily-bowls', slot: 'feed', name: '饭碗与水碗',
+  adapters: {
+    'a-clear-sage': {
+      base: '/home-release/a-clear-sage/cat-item--feed-daily-bowls--base.webp',
+      placement: { x: 600, y: 1070, width: 280, height: 105 },
+      supportSurface: [[600, 1122], [880, 1122], [880, 1175], [600, 1175]],
+      interactionRegion: [[600, 1070], [880, 1070], [880, 1175], [600, 1175]],
+      catAnchor: { x: 581, y: 1122, flip: true },
+    },
+    'b-warm-walnut-gallery': {
+      base: '/home-release/b-warm-walnut-gallery/cat-item--feed-daily-bowls--base.webp',
+      placement: { x: 490, y: 1140, width: 200, height: 83 },
+      supportSurface: [[490, 1181], [690, 1181], [690, 1223], [490, 1223]],
+      interactionRegion: [[490, 1140], [690, 1140], [690, 1223], [490, 1223]],
+      catAnchor: { x: 463, y: 1190, flip: true },
+    },
+    'f-moonwhite-bluegray': {
+      base: '/home-release/f-moonwhite-bluegray/cat-item--feed-daily-bowls--base.webp',
+      placement: { x: 990, y: 1200, width: 200, height: 83 },
+      supportSurface: [[990, 1241], [1190, 1241], [1190, 1283], [990, 1283]],
+      interactionRegion: [[990, 1200], [1190, 1200], [1190, 1283], [990, 1283]],
+      catAnchor: { x: 945, y: 1248, flip: true },
+    },
+  },
+} as const satisfies CatItemDefinition
+
 export const CAT_ITEMS: Readonly<Record<string, CatItemDefinition>> = {
+  [DAILY_BOWLS.id]: DAILY_BOWLS,
   [REST_CLOUD_BED.id]: REST_CLOUD_BED,
   [PLAY_SOFT_TUNNEL.id]: PLAY_SOFT_TUNNEL,
 }

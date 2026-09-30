@@ -5,7 +5,7 @@
     "path": "docs/art/reviews/all-existing-assets-approval-2026-09-29.json",
     "sha256": "d40fdf48f1a12cac1f1d1949bea75448c6d4305470229cd0704c27a9e9923963"
   },
-  "transformation": "lossless PNG to WebP; approved animations copied byte-for-byte",
+  "transformation": "lossless PNG to WebP; feeding sets cropped only to nontransparent bounds; approved animations copied byte-for-byte",
   "artifacts": [
     {
       "source": "apps/web/public/dev-art/home-theme/a-clear-sage/base-plate--aperture-alpha.png",
@@ -153,6 +153,45 @@
       "src": "/home-release/f-moonwhite-bluegray/cat-item--play-soft-tunnel--occlusion.webp",
       "sha256": "124bee4293f438da611158f7ecd1c4ef76b51f4df929b10372752d7eee8c164e",
       "byteLength": 125660
+    },
+    {
+      "source": "docs/art/candidates/home-theme-prototypes/2026-08-13/production/a-clear-sage/piece--feeding-set--candidate-v01.png",
+      "sourceSha256": "3eed4218c31d3bf7663f6400307faed2f05681757db7c9c7c8b447aacb4b81cf",
+      "src": "/home-release/a-clear-sage/cat-item--feed-daily-bowls--base.webp",
+      "sha256": "a589af18f8ecf40ac9d26bc5324c61fe59dedae12ea8915bb5462b5372f6ca9f",
+      "byteLength": 31518,
+      "transparentCanvasCrop": {
+        "left": 283,
+        "top": 1172,
+        "width": 274,
+        "height": 103
+      }
+    },
+    {
+      "source": "docs/art/candidates/home-theme-prototypes/2026-08-13/production/b-warm-walnut-gallery/piece--feeding-set--candidate-v01.png",
+      "sourceSha256": "078019233e6934f1aeacedee208bf5173ae63d27d94f0a8a419d7da442239d87",
+      "src": "/home-release/b-warm-walnut-gallery/cat-item--feed-daily-bowls--base.webp",
+      "sha256": "3290a9e6b4667de603a2bf90b6186ce83ce35da7272875f5d0dbe7c117e26758",
+      "byteLength": 30938,
+      "transparentCanvasCrop": {
+        "left": 290,
+        "top": 1195,
+        "width": 240,
+        "height": 100
+      }
+    },
+    {
+      "source": "docs/art/candidates/home-theme-prototypes/2026-08-13/production/f-moonwhite-bluegray/piece--feeding-set--candidate-v01.png",
+      "sourceSha256": "2fd7cc85e1dc93de9171d1792492ee2be87a259790b45aaab694aebbd0380364",
+      "src": "/home-release/f-moonwhite-bluegray/cat-item--feed-daily-bowls--base.webp",
+      "sha256": "140e57832c6e01a67e147926735429d9af6fb366243f21506b031a71dd87eb9b",
+      "byteLength": 30090,
+      "transparentCanvasCrop": {
+        "left": 379,
+        "top": 895,
+        "width": 252,
+        "height": 105
+      }
     },
     {
       "source": "apps/web/public/dev-art/home-v4/cat-animations/cat--minho--sleep--ambient--v03.webp",

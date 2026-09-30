@@ -448,7 +448,7 @@ describe('base-plate home themes', () => {
     portraitId: 'minho',
   }
 
-  it('resolves A/B/F with base plate, exterior, and both Cat Items', () => {
+  it('resolves A/B/F with base plate, exterior, and all daily Cat Items', () => {
     for (const themeId of [
       'a-clear-sage',
       'b-warm-walnut-gallery',
@@ -480,6 +480,7 @@ describe('base-plate home themes', () => {
           'play-soft-tunnel',
           `/home-release/${themeId}/cat-item--play-soft-tunnel--base.webp`,
         ],
+        ['feed', 'feed-daily-bowls', `/home-release/${themeId}/cat-item--feed-daily-bowls--base.webp`],
       ])
       expect(scene.catItemOcclusion.map(({ id, src }) => [id, src])).toEqual([
         [
@@ -509,7 +510,7 @@ describe('base-plate home themes', () => {
       'exterior-dusk',
       'shell',
     ])
-    expect(scene.catItems.map(({ slot }) => slot)).toEqual(['rest', 'play'])
+    expect(scene.catItems.map(({ slot }) => slot)).toEqual(['rest', 'play', 'feed'])
     expect(scene.catItemOcclusion.map(({ id }) => id)).toEqual([
       'cat-item-occlusion-rest',
       'cat-item-occlusion-play',
@@ -546,6 +547,7 @@ describe('base-plate home themes', () => {
       catItems: { rest: 'missing-bed', play: 'play-soft-tunnel' },
     })
     expect(unknownItem.catItems).toEqual({
+      feed: 'feed-daily-bowls',
       rest: 'rest-cloud-bed',
       play: 'play-soft-tunnel',
     })
@@ -558,6 +560,7 @@ describe('base-plate home themes', () => {
       catItems: { rest: 'play-soft-tunnel', play: 'rest-cloud-bed' },
     })
     expect(slotMismatch.catItems).toEqual({
+      feed: 'feed-daily-bowls',
       rest: 'rest-cloud-bed',
       play: 'play-soft-tunnel',
     })
@@ -571,6 +574,7 @@ describe('base-plate home themes', () => {
       'f-moonwhite-bluegray',
     ])
     expect(listCatItems().map(({ id }) => id).sort()).toEqual([
+      'feed-daily-bowls',
       'play-soft-tunnel',
       'rest-cloud-bed',
     ])
@@ -672,5 +676,28 @@ describe('base-plate home themes', () => {
       treatStyle:
         'left: 50%; top: 52.5%; width: 10.5%; height: 7.000000000000001%',
     })
+  })
+})
+
+
+describe('permanent feeding place', () => {
+  it('adds food and water bowls to old saves and keeps feeding clear of rest/play', () => {
+    for (const themeId of Object.keys(HOME_THEMES)) {
+      const oldSave = { ...customizationForHomeTheme(themeId)!, catItems: { rest: 'rest-cloud-bed', play: 'play-soft-tunnel' } }
+      const normalized = normalizeHomeCustomization(oldSave)
+      expect(normalized.catItems?.feed).toBe('feed-daily-bowls')
+      const item = CAT_ITEMS['feed-daily-bowls']!
+      const feed = item.adapters[themeId]!
+      for (const otherId of ['rest-cloud-bed', 'play-soft-tunnel']) {
+        const other = CAT_ITEMS[otherId]!.adapters[themeId]!.placement
+        const r = feed.placement
+        expect(r.x + r.width <= other.x || other.x + other.width <= r.x || r.y + r.height <= other.y || other.y + other.height <= r.y).toBe(true)
+      }
+      for (const activity of ['gaze', 'sleep', 'play', 'eat'] as const) {
+        const scene = resolveHomeScene(normalized, { time: 'noon', activity, portraitId: 'minho' })
+        expect(scene.catItems.some(layer => layer.itemId === 'feed-daily-bowls')).toBe(true)
+        if (activity === 'eat') expect(scene.cat.placement.x).toBe(feed.catAnchor.x - scene.cat.placement.width / 2)
+      }
+    }
   })
 })

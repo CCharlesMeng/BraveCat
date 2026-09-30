@@ -1080,6 +1080,7 @@
       class:home-art-preview={showHomeArtPreview}
       data-home-time={showHomeArtPreview ? homeTime : undefined}
       data-home-activity={!isCatAway ? homeActivity : undefined}
+      data-home-feeding={homeScene.catItems.some(item => item.slot === 'feed')}
       aria-label={`${catName}的家`}
     >
       {#if showHomeArtPreview}
@@ -1116,18 +1117,33 @@
             />
           {/each}
           {#each homeScene.catItems as item (item.slot)}
-            <div class="home-item-contact" data-slot={item.slot} style={item.style}></div>
+            {#if item.slot !== 'feed'}
+              <div class="home-item-contact" data-slot={item.slot} style={item.style}></div>
+            {/if}
             <img
               class="home-art-cat-item"
+              data-slot={item.slot}
               src={item.src}
               alt=""
               style={item.style}
             />
+            {#if item.itemId === 'feed-daily-bowls'}
+              <!-- Static meal/water depiction, not a new consumable or care meter. -->
+              <svg class="home-feeding-contents" style={item.style} viewBox="0 0 100 100" preserveAspectRatio="none">
+                <ellipse cx="33" cy="26" rx="9.5" ry="9" fill="#92704f" />
+                {#each [[28, 24], [33, 20], [37, 25], [31, 29], [36, 31], [26, 28], [40, 28]] as [x, y]}
+                  <ellipse cx={x} cy={y} rx="2.2" ry="2.7" fill="#baa079" stroke="#786147" stroke-width="0.5" />
+                {/each}
+                <ellipse cx="67" cy="25" rx="9.5" ry="8.5" fill="#a7bfc0" fill-opacity="0.78" />
+                <path d="M60 24q5-6 12-1" fill="none" stroke="#eef0df" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+            {/if}
           {/each}
           {#if !isCatAway}
             {#if homeScene.cat.sprite}
               <picture
                 class="home-art-cat home-art-cat-animated"
+                class:home-art-cat-baked-bowl={homeScene.cat.sprite.src.includes('cat--minho--eat--ambient')}
                 style={homeScene.cat.sprite.style}
               >
                 <source

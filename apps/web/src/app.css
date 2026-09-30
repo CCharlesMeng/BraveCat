@@ -3110,7 +3110,7 @@ main {
   pointer-events: none;
 }
 
-.home-art-cat-item,
+.home-art-cat-item:not([data-slot="feed"]),
 .home-art-cat-item-occlusion {
   filter: url(#home-fabric-pigment);
 }
@@ -3137,4 +3137,16 @@ main {
   width: 82%;
   height: 13%;
   transform: rotate(-8deg);
+}
+
+/* The legacy eat sprite includes a bowl. Keep the moving cat/muzzle, and let
+   the permanent feed item own both bowls in every activity. Source bytes stay intact. */
+.home-art-preview[data-home-feeding="true"] .home-art-cat-baked-bowl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 40% 66%, 32% 66%, 29% 73%, 15% 73%, 11% 66%, 0 66%);
+}
+
+.home-feeding-contents {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
 }
